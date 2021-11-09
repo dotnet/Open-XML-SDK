@@ -294,7 +294,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CommentEx &lt;w15:commentEx></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.CommentEx" /> <c>&lt;w15:commentEx></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -338,7 +338,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
             base.ConfigureMetadata(builder);
             builder.SetSchema(69, "commentsEx");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<CommentEx>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.CommentEx>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.CommentEx), 0, 0, version: FileFormatVersions.Office2013)
@@ -388,7 +388,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Person &lt;w15:person></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.Person" /> <c>&lt;w15:person></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -432,7 +432,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
             base.ConfigureMetadata(builder);
             builder.SetSchema(69, "people");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<Person>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.Person>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.Person), 0, 0, version: FileFormatVersions.Office2013)
@@ -482,8 +482,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SectionTitle &lt;w15:sectionTitle></description></item>
-    ///   <item><description>DoNotAllowInsertDeleteSection &lt;w15:doNotAllowInsertDeleteSection></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.SectionTitle" /> <c>&lt;w15:sectionTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection" /> <c>&lt;w15:doNotAllowInsertDeleteSection></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -527,8 +527,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
             base.ConfigureMetadata(builder);
             builder.SetSchema(69, "repeatingSection");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<SectionTitle>();
-            builder.AddChild<DoNotAllowInsertDeleteSection>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.SectionTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.SectionTitle), 0, 1, version: FileFormatVersions.Office2013),
@@ -991,7 +991,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PresenceInfo &lt;w15:presenceInfo></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.PresenceInfo" /> <c>&lt;w15:presenceInfo></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1054,7 +1054,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
             base.ConfigureMetadata(builder);
             builder.SetSchema(69, "person");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<PresenceInfo>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.PresenceInfo>();
             builder.AddElement<Person>()
 .AddAttribute(69, "author", a => a.Author, aBuilder =>
 {

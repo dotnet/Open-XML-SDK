@@ -23,10 +23,10 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>KeyMapCustomizations &lt;wne:keymaps></description></item>
-    ///   <item><description>MismatchedKeyMapCustomization &lt;wne:keymapsBad></description></item>
-    ///   <item><description>Toolbars &lt;wne:toolbars></description></item>
-    ///   <item><description>AllocatedCommands &lt;wne:acds></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.KeyMapCustomizations" /> <c>&lt;wne:keymaps></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.MismatchedKeyMapCustomization" /> <c>&lt;wne:keymapsBad></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Toolbars" /> <c>&lt;wne:toolbars></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.AllocatedCommands" /> <c>&lt;wne:acds></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -69,10 +69,10 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "tcg");
-            builder.AddChild<KeyMapCustomizations>();
-            builder.AddChild<MismatchedKeyMapCustomization>();
-            builder.AddChild<Toolbars>();
-            builder.AddChild<AllocatedCommands>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.KeyMapCustomizations>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.MismatchedKeyMapCustomization>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Toolbars>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.AllocatedCommands>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.KeyMapCustomizations), 0, 0),
@@ -125,7 +125,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Mcd &lt;wne:mcd></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Mcd" /> <c>&lt;wne:mcd></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -168,7 +168,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "mcds");
-            builder.AddChild<Mcd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Mcd>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Mcd), 0, 0)
@@ -187,8 +187,8 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocEvents &lt;wne:docEvents></description></item>
-    ///   <item><description>Mcds &lt;wne:mcds></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.DocEvents" /> <c>&lt;wne:docEvents></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Mcds" /> <c>&lt;wne:mcds></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -231,8 +231,8 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "vbaSuppData");
-            builder.AddChild<DocEvents>();
-            builder.AddChild<Mcds>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.DocEvents>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Mcds>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.DocEvents), 0, 1),
@@ -309,7 +309,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SingleDataSourceRecord &lt;wne:recipientData></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.SingleDataSourceRecord" /> <c>&lt;wne:recipientData></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -352,7 +352,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "recipients");
-            builder.AddChild<SingleDataSourceRecord>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.SingleDataSourceRecord>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.SingleDataSourceRecord), 1, 0)
@@ -707,11 +707,11 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>FixedCommandKeyboardCustomization &lt;wne:fci></description></item>
-    ///   <item><description>MacroKeyboardCustomization &lt;wne:macro></description></item>
-    ///   <item><description>AllocatedCommandKeyboardCustomization &lt;wne:acd></description></item>
-    ///   <item><description>WllMacroKeyboardCustomization &lt;wne:wll></description></item>
-    ///   <item><description>CharacterInsertion &lt;wne:wch></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.FixedCommandKeyboardCustomization" /> <c>&lt;wne:fci></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.MacroKeyboardCustomization" /> <c>&lt;wne:macro></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.AllocatedCommandKeyboardCustomization" /> <c>&lt;wne:acd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.WllMacroKeyboardCustomization" /> <c>&lt;wne:wll></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.CharacterInsertion" /> <c>&lt;wne:wch></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -849,11 +849,11 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "keymap");
-            builder.AddChild<FixedCommandKeyboardCustomization>();
-            builder.AddChild<MacroKeyboardCustomization>();
-            builder.AddChild<AllocatedCommandKeyboardCustomization>();
-            builder.AddChild<WllMacroKeyboardCustomization>();
-            builder.AddChild<CharacterInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.FixedCommandKeyboardCustomization>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.MacroKeyboardCustomization>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.AllocatedCommandKeyboardCustomization>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.WllMacroKeyboardCustomization>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.CharacterInsertion>();
             builder.AddElement<KeyMapEntry>()
 .AddAttribute(33, "chmPrimary", a => a.CharacterMapPrimary, aBuilder =>
 {
@@ -1727,19 +1727,19 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>EventDocNewXsdString &lt;wne:eventDocNew></description></item>
-    ///   <item><description>EventDocOpenXsdString &lt;wne:eventDocOpen></description></item>
-    ///   <item><description>EventDocCloseXsdString &lt;wne:eventDocClose></description></item>
-    ///   <item><description>EventDocSyncXsdString &lt;wne:eventDocSync></description></item>
-    ///   <item><description>EventDocXmlAfterInsertXsdString &lt;wne:eventDocXmlAfterInsert></description></item>
-    ///   <item><description>EventDocXmlBeforeDeleteXsdString &lt;wne:eventDocXmlBeforeDelete></description></item>
-    ///   <item><description>EventDocContentControlAfterInsertXsdString &lt;wne:eventDocContentControlAfterInsert></description></item>
-    ///   <item><description>EventDocContentControlBeforeDeleteXsdString &lt;wne:eventDocContentControlBeforeDelete></description></item>
-    ///   <item><description>EventDocContentControlOnExistXsdString &lt;wne:eventDocContentControlOnExit></description></item>
-    ///   <item><description>EventDocContentControlOnEnterXsdString &lt;wne:eventDocContentControlOnEnter></description></item>
-    ///   <item><description>EventDocStoreUpdateXsdString &lt;wne:eventDocStoreUpdate></description></item>
-    ///   <item><description>EventDocContentControlUpdateXsdString &lt;wne:eventDocContentControlContentUpdate></description></item>
-    ///   <item><description>EventDocBuildingBlockAfterInsertXsdString &lt;wne:eventDocBuildingBlockAfterInsert></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocNewXsdString" /> <c>&lt;wne:eventDocNew></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocOpenXsdString" /> <c>&lt;wne:eventDocOpen></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocCloseXsdString" /> <c>&lt;wne:eventDocClose></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocSyncXsdString" /> <c>&lt;wne:eventDocSync></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocXmlAfterInsertXsdString" /> <c>&lt;wne:eventDocXmlAfterInsert></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocXmlBeforeDeleteXsdString" /> <c>&lt;wne:eventDocXmlBeforeDelete></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocContentControlAfterInsertXsdString" /> <c>&lt;wne:eventDocContentControlAfterInsert></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocContentControlBeforeDeleteXsdString" /> <c>&lt;wne:eventDocContentControlBeforeDelete></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocContentControlOnExistXsdString" /> <c>&lt;wne:eventDocContentControlOnExit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocContentControlOnEnterXsdString" /> <c>&lt;wne:eventDocContentControlOnEnter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocStoreUpdateXsdString" /> <c>&lt;wne:eventDocStoreUpdate></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocContentControlUpdateXsdString" /> <c>&lt;wne:eventDocContentControlContentUpdate></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocBuildingBlockAfterInsertXsdString" /> <c>&lt;wne:eventDocBuildingBlockAfterInsert></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1782,19 +1782,19 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "docEvents");
-            builder.AddChild<EventDocNewXsdString>();
-            builder.AddChild<EventDocOpenXsdString>();
-            builder.AddChild<EventDocCloseXsdString>();
-            builder.AddChild<EventDocSyncXsdString>();
-            builder.AddChild<EventDocXmlAfterInsertXsdString>();
-            builder.AddChild<EventDocXmlBeforeDeleteXsdString>();
-            builder.AddChild<EventDocContentControlAfterInsertXsdString>();
-            builder.AddChild<EventDocContentControlBeforeDeleteXsdString>();
-            builder.AddChild<EventDocContentControlOnExistXsdString>();
-            builder.AddChild<EventDocContentControlOnEnterXsdString>();
-            builder.AddChild<EventDocStoreUpdateXsdString>();
-            builder.AddChild<EventDocContentControlUpdateXsdString>();
-            builder.AddChild<EventDocBuildingBlockAfterInsertXsdString>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocNewXsdString>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocOpenXsdString>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocCloseXsdString>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocSyncXsdString>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocXmlAfterInsertXsdString>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocXmlBeforeDeleteXsdString>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocContentControlAfterInsertXsdString>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocContentControlBeforeDeleteXsdString>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocContentControlOnExistXsdString>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocContentControlOnEnterXsdString>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocStoreUpdateXsdString>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocContentControlUpdateXsdString>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocBuildingBlockAfterInsertXsdString>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocNewXsdString), 0, 1),
@@ -1994,7 +1994,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>AllocatedCommandManifestEntry &lt;wne:acdEntry></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifestEntry" /> <c>&lt;wne:acdEntry></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2037,7 +2037,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "acdManifest");
-            builder.AddChild<AllocatedCommandManifestEntry>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifestEntry>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifestEntry), 0, 0)
@@ -2107,7 +2107,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>KeyMapEntry &lt;wne:keymap></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.KeyMapEntry" /> <c>&lt;wne:keymap></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2150,6 +2150,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "keymaps");
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.KeyMapEntry>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.KeyMapEntry), 0, 0)
@@ -2168,7 +2169,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>KeyMapEntry &lt;wne:keymap></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.KeyMapEntry" /> <c>&lt;wne:keymap></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2211,6 +2212,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "keymapsBad");
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.KeyMapEntry>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.KeyMapEntry), 0, 0)
@@ -2226,12 +2228,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>KeyMapEntry &lt;wne:keymap></description></item>
-    /// </list>
-    /// </remark>
     public abstract partial class KeymapsType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2268,7 +2264,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<KeyMapEntry>();
         }
     }
 
@@ -2280,8 +2275,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>AllocatedCommandManifest &lt;wne:acdManifest></description></item>
-    ///   <item><description>ToolbarData &lt;wne:toolbarData></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifest" /> <c>&lt;wne:acdManifest></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.ToolbarData" /> <c>&lt;wne:toolbarData></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2324,8 +2319,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "toolbars");
-            builder.AddChild<AllocatedCommandManifest>();
-            builder.AddChild<ToolbarData>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifest>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.ToolbarData>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifest), 0, 0),
@@ -2345,7 +2340,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>AllocatedCommand &lt;wne:acd></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.AllocatedCommand" /> <c>&lt;wne:acd></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2388,7 +2383,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "acds");
-            builder.AddChild<AllocatedCommand>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.AllocatedCommand>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommand), 0, 0)
@@ -2506,8 +2501,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RecordIncluded &lt;wne:active></description></item>
-    ///   <item><description>RecordHashCode &lt;wne:hash></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.RecordIncluded" /> <c>&lt;wne:active></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.RecordHashCode" /> <c>&lt;wne:hash></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2550,8 +2545,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "recipientData");
-            builder.AddChild<RecordIncluded>();
-            builder.AddChild<RecordHashCode>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.RecordIncluded>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.RecordHashCode>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.RecordIncluded), 0, 1),

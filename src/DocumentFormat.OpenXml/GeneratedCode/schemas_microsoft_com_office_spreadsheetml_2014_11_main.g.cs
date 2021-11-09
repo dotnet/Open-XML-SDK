@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ModelTimeGrouping &lt;x16:modelTimeGrouping></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGrouping" /> <c>&lt;x16:modelTimeGrouping></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
             base.ConfigureMetadata(builder);
             builder.SetSchema(84, "modelTimeGroupings");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<ModelTimeGrouping>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGrouping>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGrouping), 1, 0, version: FileFormatVersions.Office2016)
@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CalculatedTimeColumn &lt;x16:calculatedTimeColumn></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.ExcelAc.CalculatedTimeColumn" /> <c>&lt;x16:calculatedTimeColumn></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -178,7 +178,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
             base.ConfigureMetadata(builder);
             builder.SetSchema(84, "modelTimeGrouping");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<CalculatedTimeColumn>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.ExcelAc.CalculatedTimeColumn>();
             builder.AddElement<ModelTimeGrouping>()
 .AddAttribute(0, "tableName", a => a.TableName, aBuilder =>
 {

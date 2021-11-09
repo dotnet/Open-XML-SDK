@@ -22,12 +22,12 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PublishDate &lt;cppr:PublishDate></description></item>
-    ///   <item><description>DocumentAbstract &lt;cppr:Abstract></description></item>
-    ///   <item><description>CompanyAddress &lt;cppr:CompanyAddress></description></item>
-    ///   <item><description>CompanyPhoneNumber &lt;cppr:CompanyPhone></description></item>
-    ///   <item><description>CompanyFaxNumber &lt;cppr:CompanyFax></description></item>
-    ///   <item><description>CompanyEmailAddress &lt;cppr:CompanyEmail></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CoverPageProps.PublishDate" /> <c>&lt;cppr:PublishDate></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CoverPageProps.DocumentAbstract" /> <c>&lt;cppr:Abstract></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CoverPageProps.CompanyAddress" /> <c>&lt;cppr:CompanyAddress></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CoverPageProps.CompanyPhoneNumber" /> <c>&lt;cppr:CompanyPhone></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CoverPageProps.CompanyFaxNumber" /> <c>&lt;cppr:CompanyFax></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CoverPageProps.CompanyEmailAddress" /> <c>&lt;cppr:CompanyEmail></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -70,12 +70,12 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(36, "CoverPageProperties");
-            builder.AddChild<PublishDate>();
-            builder.AddChild<DocumentAbstract>();
-            builder.AddChild<CompanyAddress>();
-            builder.AddChild<CompanyPhoneNumber>();
-            builder.AddChild<CompanyFaxNumber>();
-            builder.AddChild<CompanyEmailAddress>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.CoverPageProps.PublishDate>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.CoverPageProps.DocumentAbstract>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.CoverPageProps.CompanyAddress>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.CoverPageProps.CompanyPhoneNumber>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.CoverPageProps.CompanyFaxNumber>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.CoverPageProps.CompanyEmailAddress>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.PublishDate), 1, 1),

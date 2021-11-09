@@ -23,33 +23,33 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.SheetProperties &lt;x:sheetPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.SheetDimension &lt;x:dimension></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.SheetViews &lt;x:sheetViews></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties &lt;x:sheetFormatPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Columns &lt;x:cols></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.SheetData &lt;x:sheetData></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.SheetProtection &lt;x:sheetProtection></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.AutoFilter &lt;x:autoFilter></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.SortState &lt;x:sortState></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.DataConsolidate &lt;x:dataConsolidate></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews &lt;x:customSheetViews></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties &lt;x:phoneticPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatting &lt;x:conditionalFormatting></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.PrintOptions &lt;x:printOptions></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.PageMargins &lt;x:pageMargins></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.PageSetup &lt;x:pageSetup></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.HeaderFooter &lt;x:headerFooter></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.RowBreaks &lt;x:rowBreaks></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks &lt;x:colBreaks></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.CustomProperties &lt;x:customProperties></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Drawing &lt;x:drawing></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing &lt;x:legacyDrawing></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter &lt;x:legacyDrawingHF></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Picture &lt;x:picture></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.OleObjects &lt;x:oleObjects></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter &lt;x:drawingHF></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetProperties" /> <c>&lt;x:sheetPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetDimension" /> <c>&lt;x:dimension></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetViews" /> <c>&lt;x:sheetViews></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties" /> <c>&lt;x:sheetFormatPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Columns" /> <c>&lt;x:cols></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetData" /> <c>&lt;x:sheetData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetProtection" /> <c>&lt;x:sheetProtection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.AutoFilter" /> <c>&lt;x:autoFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortState" /> <c>&lt;x:sortState></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataConsolidate" /> <c>&lt;x:dataConsolidate></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews" /> <c>&lt;x:customSheetViews></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties" /> <c>&lt;x:phoneticPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatting" /> <c>&lt;x:conditionalFormatting></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PrintOptions" /> <c>&lt;x:printOptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PageMargins" /> <c>&lt;x:pageMargins></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PageSetup" /> <c>&lt;x:pageSetup></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.HeaderFooter" /> <c>&lt;x:headerFooter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RowBreaks" /> <c>&lt;x:rowBreaks></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks" /> <c>&lt;x:colBreaks></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomProperties" /> <c>&lt;x:customProperties></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Drawing" /> <c>&lt;x:drawing></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing" /> <c>&lt;x:legacyDrawing></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter" /> <c>&lt;x:legacyDrawingHF></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Picture" /> <c>&lt;x:picture></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OleObjects" /> <c>&lt;x:oleObjects></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter" /> <c>&lt;x:drawingHF></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -246,8 +246,8 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RowSortMap &lt;xne:rowSortMap></description></item>
-    ///   <item><description>ColumnSortMap &lt;xne:colSortMap></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.RowSortMap" /> <c>&lt;xne:rowSortMap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ColumnSortMap" /> <c>&lt;xne:colSortMap></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -290,8 +290,8 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(32, "worksheetSortMap");
-            builder.AddChild<RowSortMap>();
-            builder.AddChild<ColumnSortMap>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.RowSortMap>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ColumnSortMap>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.RowSortMap), 0, 1),
@@ -451,7 +451,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RowSortMapItem &lt;xne:row></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.RowSortMapItem" /> <c>&lt;xne:row></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -526,7 +526,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(32, "rowSortMap");
-            builder.AddChild<RowSortMapItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.RowSortMapItem>();
             builder.AddElement<RowSortMap>()
 .AddAttribute(0, "ref", a => a.Ref, aBuilder =>
 {
@@ -554,7 +554,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ColumnSortMapItem &lt;xne:col></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ColumnSortMapItem" /> <c>&lt;xne:col></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -629,7 +629,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(32, "colSortMap");
-            builder.AddChild<ColumnSortMapItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ColumnSortMapItem>();
             builder.AddElement<ColumnSortMap>()
 .AddAttribute(0, "ref", a => a.Ref, aBuilder =>
 {

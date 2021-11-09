@@ -22,9 +22,9 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ShowOnOpen &lt;cdip:showOnOpen></description></item>
-    ///   <item><description>DefaultPropertyEditorNamespace &lt;cdip:defaultPropertyEditorNamespace></description></item>
-    ///   <item><description>CustomPropertyEditor &lt;cdip:customPropertyEditor></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen" /> <c>&lt;cdip:showOnOpen></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace" /> <c>&lt;cdip:defaultPropertyEditorNamespace></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.CustomPropertyEditor" /> <c>&lt;cdip:customPropertyEditor></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -67,9 +67,9 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(37, "customPropertyEditors");
-            builder.AddChild<ShowOnOpen>();
-            builder.AddChild<DefaultPropertyEditorNamespace>();
-            builder.AddChild<CustomPropertyEditor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.CustomPropertyEditor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen), 1, 1),
@@ -279,8 +279,8 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PropertyEditorNamespace &lt;cdip:XMLNamespace></description></item>
-    ///   <item><description>XsnFileLocation &lt;cdip:XSNLocation></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.PropertyEditorNamespace" /> <c>&lt;cdip:XMLNamespace></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.XsnFileLocation" /> <c>&lt;cdip:XSNLocation></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -323,8 +323,8 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(37, "customPropertyEditor");
-            builder.AddChild<PropertyEditorNamespace>();
-            builder.AddChild<XsnFileLocation>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.PropertyEditorNamespace>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.XsnFileLocation>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.PropertyEditorNamespace), 1, 1),

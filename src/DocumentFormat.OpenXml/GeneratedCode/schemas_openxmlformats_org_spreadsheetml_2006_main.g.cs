@@ -105,8 +105,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CalculationCell &lt;x:c></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CalculationCell" /> <c>&lt;x:c></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -149,8 +149,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "calcChain");
-            builder.AddChild<CalculationCell>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CalculationCell>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculationCell), 1, 0),
@@ -201,9 +201,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Authors &lt;x:authors></description></item>
-    ///   <item><description>CommentList &lt;x:commentList></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Authors" /> <c>&lt;x:authors></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CommentList" /> <c>&lt;x:commentList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -246,9 +246,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "comments");
-            builder.AddChild<Authors>();
-            builder.AddChild<CommentList>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Authors>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CommentList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Authors), 1, 1),
@@ -339,8 +339,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Schema &lt;x:Schema></description></item>
-    ///   <item><description>Map &lt;x:Map></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Schema" /> <c>&lt;x:Schema></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Map" /> <c>&lt;x:Map></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -399,8 +399,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "MapInfo");
-            builder.AddChild<Schema>();
-            builder.AddChild<Map>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Schema>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Map>();
             builder.AddElement<MapInfo>()
 .AddAttribute(0, "SelectionNamespaces", a => a.SelectionNamespaces, aBuilder =>
 {
@@ -456,7 +456,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Connection &lt;x:connection></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Connection" /> <c>&lt;x:connection></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -499,7 +499,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "connections");
-            builder.AddChild<Connection>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Connection>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Connection), 1, 0)
@@ -549,17 +549,17 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CacheSource &lt;x:cacheSource></description></item>
-    ///   <item><description>CacheFields &lt;x:cacheFields></description></item>
-    ///   <item><description>CacheHierarchies &lt;x:cacheHierarchies></description></item>
-    ///   <item><description>Kpis &lt;x:kpis></description></item>
-    ///   <item><description>TupleCache &lt;x:tupleCache></description></item>
-    ///   <item><description>CalculatedItems &lt;x:calculatedItems></description></item>
-    ///   <item><description>CalculatedMembers &lt;x:calculatedMembers></description></item>
-    ///   <item><description>Dimensions &lt;x:dimensions></description></item>
-    ///   <item><description>MeasureGroups &lt;x:measureGroups></description></item>
-    ///   <item><description>Maps &lt;x:maps></description></item>
-    ///   <item><description>PivotCacheDefinitionExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CacheSource" /> <c>&lt;x:cacheSource></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CacheFields" /> <c>&lt;x:cacheFields></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CacheHierarchies" /> <c>&lt;x:cacheHierarchies></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Kpis" /> <c>&lt;x:kpis></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TupleCache" /> <c>&lt;x:tupleCache></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CalculatedItems" /> <c>&lt;x:calculatedItems></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CalculatedMembers" /> <c>&lt;x:calculatedMembers></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Dimensions" /> <c>&lt;x:dimensions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MeasureGroups" /> <c>&lt;x:measureGroups></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Maps" /> <c>&lt;x:maps></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -909,17 +909,17 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pivotCacheDefinition");
-            builder.AddChild<CacheSource>();
-            builder.AddChild<CacheFields>();
-            builder.AddChild<CacheHierarchies>();
-            builder.AddChild<Kpis>();
-            builder.AddChild<TupleCache>();
-            builder.AddChild<CalculatedItems>();
-            builder.AddChild<CalculatedMembers>();
-            builder.AddChild<Dimensions>();
-            builder.AddChild<MeasureGroups>();
-            builder.AddChild<Maps>();
-            builder.AddChild<PivotCacheDefinitionExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CacheSource>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CacheFields>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CacheHierarchies>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Kpis>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TupleCache>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CalculatedItems>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CalculatedMembers>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Dimensions>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MeasureGroups>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Maps>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtensionList>();
             builder.AddElement<PivotCacheDefinition>()
 .AddAttribute(19, "id", a => a.Id)
 .AddAttribute(0, "invalid", a => a.Invalid)
@@ -1143,8 +1143,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PivotCacheRecord &lt;x:r></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotCacheRecord" /> <c>&lt;x:r></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1203,8 +1203,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pivotCacheRecords");
-            builder.AddChild<PivotCacheRecord>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotCacheRecord>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<PivotCacheRecords>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -1257,23 +1257,23 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Location &lt;x:location></description></item>
-    ///   <item><description>PivotFields &lt;x:pivotFields></description></item>
-    ///   <item><description>RowFields &lt;x:rowFields></description></item>
-    ///   <item><description>RowItems &lt;x:rowItems></description></item>
-    ///   <item><description>ColumnFields &lt;x:colFields></description></item>
-    ///   <item><description>ColumnItems &lt;x:colItems></description></item>
-    ///   <item><description>PageFields &lt;x:pageFields></description></item>
-    ///   <item><description>DataFields &lt;x:dataFields></description></item>
-    ///   <item><description>Formats &lt;x:formats></description></item>
-    ///   <item><description>ConditionalFormats &lt;x:conditionalFormats></description></item>
-    ///   <item><description>ChartFormats &lt;x:chartFormats></description></item>
-    ///   <item><description>PivotHierarchies &lt;x:pivotHierarchies></description></item>
-    ///   <item><description>PivotTableStyle &lt;x:pivotTableStyleInfo></description></item>
-    ///   <item><description>PivotFilters &lt;x:filters></description></item>
-    ///   <item><description>RowHierarchiesUsage &lt;x:rowHierarchiesUsage></description></item>
-    ///   <item><description>ColumnHierarchiesUsage &lt;x:colHierarchiesUsage></description></item>
-    ///   <item><description>PivotTableDefinitionExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Location" /> <c>&lt;x:location></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotFields" /> <c>&lt;x:pivotFields></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RowFields" /> <c>&lt;x:rowFields></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RowItems" /> <c>&lt;x:rowItems></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ColumnFields" /> <c>&lt;x:colFields></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ColumnItems" /> <c>&lt;x:colItems></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PageFields" /> <c>&lt;x:pageFields></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataFields" /> <c>&lt;x:dataFields></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Formats" /> <c>&lt;x:formats></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats" /> <c>&lt;x:conditionalFormats></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ChartFormats" /> <c>&lt;x:chartFormats></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies" /> <c>&lt;x:pivotHierarchies></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle" /> <c>&lt;x:pivotTableStyleInfo></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotFilters" /> <c>&lt;x:filters></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage" /> <c>&lt;x:rowHierarchiesUsage></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage" /> <c>&lt;x:colHierarchiesUsage></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2404,23 +2404,23 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pivotTableDefinition");
-            builder.AddChild<Location>();
-            builder.AddChild<PivotFields>();
-            builder.AddChild<RowFields>();
-            builder.AddChild<RowItems>();
-            builder.AddChild<ColumnFields>();
-            builder.AddChild<ColumnItems>();
-            builder.AddChild<PageFields>();
-            builder.AddChild<DataFields>();
-            builder.AddChild<Formats>();
-            builder.AddChild<ConditionalFormats>();
-            builder.AddChild<ChartFormats>();
-            builder.AddChild<PivotHierarchies>();
-            builder.AddChild<PivotTableStyle>();
-            builder.AddChild<PivotFilters>();
-            builder.AddChild<RowHierarchiesUsage>();
-            builder.AddChild<ColumnHierarchiesUsage>();
-            builder.AddChild<PivotTableDefinitionExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Location>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotFields>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowFields>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowItems>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColumnFields>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColumnItems>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageFields>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataFields>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formats>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ChartFormats>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotFilters>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList>();
             builder.AddElement<PivotTableDefinition>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -2798,8 +2798,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>QueryTableRefresh &lt;x:queryTableRefresh></description></item>
-    ///   <item><description>QueryTableExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.QueryTableRefresh" /> <c>&lt;x:queryTableRefresh></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.QueryTableExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3194,8 +3194,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "queryTable");
-            builder.AddChild<QueryTableRefresh>();
-            builder.AddChild<QueryTableExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.QueryTableRefresh>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.QueryTableExtensionList>();
             builder.AddElement<QueryTable>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -3305,8 +3305,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SharedStringItem &lt;x:si></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SharedStringItem" /> <c>&lt;x:si></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3381,8 +3381,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sst");
-            builder.AddChild<SharedStringItem>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SharedStringItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<SharedStringTable>()
 .AddAttribute(0, "count", a => a.Count)
 .AddAttribute(0, "uniqueCount", a => a.UniqueCount);
@@ -3438,7 +3438,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Header &lt;x:header></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Header" /> <c>&lt;x:header></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3673,7 +3673,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "headers");
-            builder.AddChild<Header>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Header>();
             builder.AddElement<Headers>()
 .AddAttribute(0, "guid", a => a.Guid, aBuilder =>
 {
@@ -3747,18 +3747,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RevisionRowColumn &lt;x:rrc></description></item>
-    ///   <item><description>RevisionMove &lt;x:rm></description></item>
-    ///   <item><description>RevisionCustomView &lt;x:rcv></description></item>
-    ///   <item><description>RevisionSheetName &lt;x:rsnm></description></item>
-    ///   <item><description>RevisionInsertSheet &lt;x:ris></description></item>
-    ///   <item><description>RevisionCellChange &lt;x:rcc></description></item>
-    ///   <item><description>RevisionFormat &lt;x:rfmt></description></item>
-    ///   <item><description>RevisionAutoFormat &lt;x:raf></description></item>
-    ///   <item><description>RevisionDefinedName &lt;x:rdn></description></item>
-    ///   <item><description>RevisionComment &lt;x:rcmt></description></item>
-    ///   <item><description>RevisionQueryTable &lt;x:rqt></description></item>
-    ///   <item><description>RevisionConflict &lt;x:rcft></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RevisionRowColumn" /> <c>&lt;x:rrc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RevisionMove" /> <c>&lt;x:rm></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RevisionCustomView" /> <c>&lt;x:rcv></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RevisionSheetName" /> <c>&lt;x:rsnm></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RevisionInsertSheet" /> <c>&lt;x:ris></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RevisionCellChange" /> <c>&lt;x:rcc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RevisionFormat" /> <c>&lt;x:rfmt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RevisionAutoFormat" /> <c>&lt;x:raf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RevisionDefinedName" /> <c>&lt;x:rdn></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RevisionComment" /> <c>&lt;x:rcmt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RevisionQueryTable" /> <c>&lt;x:rqt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RevisionConflict" /> <c>&lt;x:rcft></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3801,18 +3801,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "revisions");
-            builder.AddChild<RevisionRowColumn>();
-            builder.AddChild<RevisionMove>();
-            builder.AddChild<RevisionCustomView>();
-            builder.AddChild<RevisionSheetName>();
-            builder.AddChild<RevisionInsertSheet>();
-            builder.AddChild<RevisionCellChange>();
-            builder.AddChild<RevisionFormat>();
-            builder.AddChild<RevisionAutoFormat>();
-            builder.AddChild<RevisionDefinedName>();
-            builder.AddChild<RevisionComment>();
-            builder.AddChild<RevisionQueryTable>();
-            builder.AddChild<RevisionConflict>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionRowColumn>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionMove>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionCustomView>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionSheetName>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionInsertSheet>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionCellChange>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionAutoFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionDefinedName>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionComment>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionQueryTable>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionConflict>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionRowColumn), 0, 0),
@@ -3873,7 +3873,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>UserInfo &lt;x:userInfo></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.UserInfo" /> <c>&lt;x:userInfo></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3932,7 +3932,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "users");
-            builder.AddChild<UserInfo>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.UserInfo>();
             builder.AddElement<Users>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -3985,44 +3985,44 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SheetProperties &lt;x:sheetPr></description></item>
-    ///   <item><description>SheetDimension &lt;x:dimension></description></item>
-    ///   <item><description>SheetViews &lt;x:sheetViews></description></item>
-    ///   <item><description>SheetFormatProperties &lt;x:sheetFormatPr></description></item>
-    ///   <item><description>Columns &lt;x:cols></description></item>
-    ///   <item><description>SheetData &lt;x:sheetData></description></item>
-    ///   <item><description>SheetCalculationProperties &lt;x:sheetCalcPr></description></item>
-    ///   <item><description>SheetProtection &lt;x:sheetProtection></description></item>
-    ///   <item><description>ProtectedRanges &lt;x:protectedRanges></description></item>
-    ///   <item><description>Scenarios &lt;x:scenarios></description></item>
-    ///   <item><description>AutoFilter &lt;x:autoFilter></description></item>
-    ///   <item><description>SortState &lt;x:sortState></description></item>
-    ///   <item><description>DataConsolidate &lt;x:dataConsolidate></description></item>
-    ///   <item><description>CustomSheetViews &lt;x:customSheetViews></description></item>
-    ///   <item><description>MergeCells &lt;x:mergeCells></description></item>
-    ///   <item><description>PhoneticProperties &lt;x:phoneticPr></description></item>
-    ///   <item><description>ConditionalFormatting &lt;x:conditionalFormatting></description></item>
-    ///   <item><description>DataValidations &lt;x:dataValidations></description></item>
-    ///   <item><description>Hyperlinks &lt;x:hyperlinks></description></item>
-    ///   <item><description>PrintOptions &lt;x:printOptions></description></item>
-    ///   <item><description>PageMargins &lt;x:pageMargins></description></item>
-    ///   <item><description>PageSetup &lt;x:pageSetup></description></item>
-    ///   <item><description>HeaderFooter &lt;x:headerFooter></description></item>
-    ///   <item><description>RowBreaks &lt;x:rowBreaks></description></item>
-    ///   <item><description>ColumnBreaks &lt;x:colBreaks></description></item>
-    ///   <item><description>CustomProperties &lt;x:customProperties></description></item>
-    ///   <item><description>CellWatches &lt;x:cellWatches></description></item>
-    ///   <item><description>IgnoredErrors &lt;x:ignoredErrors></description></item>
-    ///   <item><description>Drawing &lt;x:drawing></description></item>
-    ///   <item><description>LegacyDrawing &lt;x:legacyDrawing></description></item>
-    ///   <item><description>LegacyDrawingHeaderFooter &lt;x:legacyDrawingHF></description></item>
-    ///   <item><description>DrawingHeaderFooter &lt;x:drawingHF></description></item>
-    ///   <item><description>Picture &lt;x:picture></description></item>
-    ///   <item><description>OleObjects &lt;x:oleObjects></description></item>
-    ///   <item><description>Controls &lt;x:controls></description></item>
-    ///   <item><description>WebPublishItems &lt;x:webPublishItems></description></item>
-    ///   <item><description>TableParts &lt;x:tableParts></description></item>
-    ///   <item><description>WorksheetExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetProperties" /> <c>&lt;x:sheetPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetDimension" /> <c>&lt;x:dimension></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetViews" /> <c>&lt;x:sheetViews></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties" /> <c>&lt;x:sheetFormatPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Columns" /> <c>&lt;x:cols></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetData" /> <c>&lt;x:sheetData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetCalculationProperties" /> <c>&lt;x:sheetCalcPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetProtection" /> <c>&lt;x:sheetProtection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ProtectedRanges" /> <c>&lt;x:protectedRanges></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Scenarios" /> <c>&lt;x:scenarios></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.AutoFilter" /> <c>&lt;x:autoFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortState" /> <c>&lt;x:sortState></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataConsolidate" /> <c>&lt;x:dataConsolidate></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews" /> <c>&lt;x:customSheetViews></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MergeCells" /> <c>&lt;x:mergeCells></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties" /> <c>&lt;x:phoneticPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatting" /> <c>&lt;x:conditionalFormatting></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataValidations" /> <c>&lt;x:dataValidations></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Hyperlinks" /> <c>&lt;x:hyperlinks></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PrintOptions" /> <c>&lt;x:printOptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PageMargins" /> <c>&lt;x:pageMargins></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PageSetup" /> <c>&lt;x:pageSetup></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.HeaderFooter" /> <c>&lt;x:headerFooter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RowBreaks" /> <c>&lt;x:rowBreaks></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks" /> <c>&lt;x:colBreaks></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomProperties" /> <c>&lt;x:customProperties></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellWatches" /> <c>&lt;x:cellWatches></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.IgnoredErrors" /> <c>&lt;x:ignoredErrors></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Drawing" /> <c>&lt;x:drawing></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing" /> <c>&lt;x:legacyDrawing></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter" /> <c>&lt;x:legacyDrawingHF></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter" /> <c>&lt;x:drawingHF></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Picture" /> <c>&lt;x:picture></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OleObjects" /> <c>&lt;x:oleObjects></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Controls" /> <c>&lt;x:controls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WebPublishItems" /> <c>&lt;x:webPublishItems></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableParts" /> <c>&lt;x:tableParts></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WorksheetExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4065,44 +4065,44 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "worksheet");
-            builder.AddChild<SheetProperties>();
-            builder.AddChild<SheetDimension>();
-            builder.AddChild<SheetViews>();
-            builder.AddChild<SheetFormatProperties>();
-            builder.AddChild<Columns>();
-            builder.AddChild<SheetData>();
-            builder.AddChild<SheetCalculationProperties>();
-            builder.AddChild<SheetProtection>();
-            builder.AddChild<ProtectedRanges>();
-            builder.AddChild<Scenarios>();
-            builder.AddChild<AutoFilter>();
-            builder.AddChild<SortState>();
-            builder.AddChild<DataConsolidate>();
-            builder.AddChild<CustomSheetViews>();
-            builder.AddChild<MergeCells>();
-            builder.AddChild<PhoneticProperties>();
-            builder.AddChild<ConditionalFormatting>();
-            builder.AddChild<DataValidations>();
-            builder.AddChild<Hyperlinks>();
-            builder.AddChild<PrintOptions>();
-            builder.AddChild<PageMargins>();
-            builder.AddChild<PageSetup>();
-            builder.AddChild<HeaderFooter>();
-            builder.AddChild<RowBreaks>();
-            builder.AddChild<ColumnBreaks>();
-            builder.AddChild<CustomProperties>();
-            builder.AddChild<CellWatches>();
-            builder.AddChild<IgnoredErrors>();
-            builder.AddChild<Drawing>();
-            builder.AddChild<LegacyDrawing>();
-            builder.AddChild<LegacyDrawingHeaderFooter>();
-            builder.AddChild<DrawingHeaderFooter>();
-            builder.AddChild<Picture>();
-            builder.AddChild<OleObjects>();
-            builder.AddChild<Controls>();
-            builder.AddChild<WebPublishItems>();
-            builder.AddChild<TableParts>();
-            builder.AddChild<WorksheetExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetDimension>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetViews>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Columns>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetData>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetCalculationProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetProtection>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ProtectedRanges>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Scenarios>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.AutoFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortState>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataConsolidate>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MergeCells>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatting>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataValidations>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Hyperlinks>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PrintOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageMargins>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageSetup>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowBreaks>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellWatches>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.IgnoredErrors>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Drawing>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Picture>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OleObjects>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Controls>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WebPublishItems>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableParts>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorksheetExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetProperties), 0, 1),
@@ -4241,20 +4241,20 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ChartSheetProperties &lt;x:sheetPr></description></item>
-    ///   <item><description>ChartSheetViews &lt;x:sheetViews></description></item>
-    ///   <item><description>ChartSheetProtection &lt;x:sheetProtection></description></item>
-    ///   <item><description>CustomChartsheetViews &lt;x:customSheetViews></description></item>
-    ///   <item><description>PageMargins &lt;x:pageMargins></description></item>
-    ///   <item><description>ChartSheetPageSetup &lt;x:pageSetup></description></item>
-    ///   <item><description>HeaderFooter &lt;x:headerFooter></description></item>
-    ///   <item><description>Drawing &lt;x:drawing></description></item>
-    ///   <item><description>LegacyDrawing &lt;x:legacyDrawing></description></item>
-    ///   <item><description>LegacyDrawingHeaderFooter &lt;x:legacyDrawingHF></description></item>
-    ///   <item><description>DrawingHeaderFooter &lt;x:drawingHF></description></item>
-    ///   <item><description>Picture &lt;x:picture></description></item>
-    ///   <item><description>WebPublishItems &lt;x:webPublishItems></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ChartSheetProperties" /> <c>&lt;x:sheetPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ChartSheetViews" /> <c>&lt;x:sheetViews></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ChartSheetProtection" /> <c>&lt;x:sheetProtection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomChartsheetViews" /> <c>&lt;x:customSheetViews></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PageMargins" /> <c>&lt;x:pageMargins></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup" /> <c>&lt;x:pageSetup></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.HeaderFooter" /> <c>&lt;x:headerFooter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Drawing" /> <c>&lt;x:drawing></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing" /> <c>&lt;x:legacyDrawing></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter" /> <c>&lt;x:legacyDrawingHF></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter" /> <c>&lt;x:drawingHF></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Picture" /> <c>&lt;x:picture></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WebPublishItems" /> <c>&lt;x:webPublishItems></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4297,20 +4297,20 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "chartsheet");
-            builder.AddChild<ChartSheetProperties>();
-            builder.AddChild<ChartSheetViews>();
-            builder.AddChild<ChartSheetProtection>();
-            builder.AddChild<CustomChartsheetViews>();
-            builder.AddChild<PageMargins>();
-            builder.AddChild<ChartSheetPageSetup>();
-            builder.AddChild<HeaderFooter>();
-            builder.AddChild<Drawing>();
-            builder.AddChild<LegacyDrawing>();
-            builder.AddChild<LegacyDrawingHeaderFooter>();
-            builder.AddChild<DrawingHeaderFooter>();
-            builder.AddChild<Picture>();
-            builder.AddChild<WebPublishItems>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ChartSheetProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ChartSheetViews>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ChartSheetProtection>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomChartsheetViews>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageMargins>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Drawing>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Picture>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WebPublishItems>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ChartSheetProperties), 0, 1),
@@ -4555,22 +4555,22 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SheetProperties &lt;x:sheetPr></description></item>
-    ///   <item><description>SheetViews &lt;x:sheetViews></description></item>
-    ///   <item><description>SheetFormatProperties &lt;x:sheetFormatPr></description></item>
-    ///   <item><description>SheetProtection &lt;x:sheetProtection></description></item>
-    ///   <item><description>CustomSheetViews &lt;x:customSheetViews></description></item>
-    ///   <item><description>PrintOptions &lt;x:printOptions></description></item>
-    ///   <item><description>PageMargins &lt;x:pageMargins></description></item>
-    ///   <item><description>PageSetup &lt;x:pageSetup></description></item>
-    ///   <item><description>HeaderFooter &lt;x:headerFooter></description></item>
-    ///   <item><description>Drawing &lt;x:drawing></description></item>
-    ///   <item><description>LegacyDrawing &lt;x:legacyDrawing></description></item>
-    ///   <item><description>LegacyDrawingHeaderFooter &lt;x:legacyDrawingHF></description></item>
-    ///   <item><description>DrawingHeaderFooter &lt;x:drawingHF></description></item>
-    ///   <item><description>OleObjects &lt;x:oleObjects></description></item>
-    ///   <item><description>Controls &lt;x:controls></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetProperties" /> <c>&lt;x:sheetPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetViews" /> <c>&lt;x:sheetViews></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties" /> <c>&lt;x:sheetFormatPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetProtection" /> <c>&lt;x:sheetProtection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews" /> <c>&lt;x:customSheetViews></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PrintOptions" /> <c>&lt;x:printOptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PageMargins" /> <c>&lt;x:pageMargins></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PageSetup" /> <c>&lt;x:pageSetup></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.HeaderFooter" /> <c>&lt;x:headerFooter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Drawing" /> <c>&lt;x:drawing></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing" /> <c>&lt;x:legacyDrawing></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter" /> <c>&lt;x:legacyDrawingHF></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter" /> <c>&lt;x:drawingHF></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OleObjects" /> <c>&lt;x:oleObjects></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Controls" /> <c>&lt;x:controls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4613,22 +4613,22 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dialogsheet");
-            builder.AddChild<SheetProperties>();
-            builder.AddChild<SheetViews>();
-            builder.AddChild<SheetFormatProperties>();
-            builder.AddChild<SheetProtection>();
-            builder.AddChild<CustomSheetViews>();
-            builder.AddChild<PrintOptions>();
-            builder.AddChild<PageMargins>();
-            builder.AddChild<PageSetup>();
-            builder.AddChild<HeaderFooter>();
-            builder.AddChild<Drawing>();
-            builder.AddChild<LegacyDrawing>();
-            builder.AddChild<LegacyDrawingHeaderFooter>();
-            builder.AddChild<DrawingHeaderFooter>();
-            builder.AddChild<OleObjects>();
-            builder.AddChild<Controls>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetViews>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetProtection>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PrintOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageMargins>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageSetup>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Drawing>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OleObjects>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Controls>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetProperties), 0, 1),
@@ -4901,13 +4901,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>MetadataTypes &lt;x:metadataTypes></description></item>
-    ///   <item><description>MetadataStrings &lt;x:metadataStrings></description></item>
-    ///   <item><description>MdxMetadata &lt;x:mdxMetadata></description></item>
-    ///   <item><description>FutureMetadata &lt;x:futureMetadata></description></item>
-    ///   <item><description>CellMetadata &lt;x:cellMetadata></description></item>
-    ///   <item><description>ValueMetadata &lt;x:valueMetadata></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MetadataTypes" /> <c>&lt;x:metadataTypes></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MetadataStrings" /> <c>&lt;x:metadataStrings></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MdxMetadata" /> <c>&lt;x:mdxMetadata></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FutureMetadata" /> <c>&lt;x:futureMetadata></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellMetadata" /> <c>&lt;x:cellMetadata></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ValueMetadata" /> <c>&lt;x:valueMetadata></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4950,13 +4950,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "metadata");
-            builder.AddChild<MetadataTypes>();
-            builder.AddChild<MetadataStrings>();
-            builder.AddChild<MdxMetadata>();
-            builder.AddChild<FutureMetadata>();
-            builder.AddChild<CellMetadata>();
-            builder.AddChild<ValueMetadata>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MetadataTypes>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MetadataStrings>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MdxMetadata>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FutureMetadata>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellMetadata>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ValueMetadata>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataTypes), 0, 1),
@@ -5051,7 +5051,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SingleXmlCell &lt;x:singleXmlCell></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SingleXmlCell" /> <c>&lt;x:singleXmlCell></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5094,7 +5094,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "singleXmlCells");
-            builder.AddChild<SingleXmlCell>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SingleXmlCell>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SingleXmlCell), 1, 0)
@@ -5144,17 +5144,17 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NumberingFormats &lt;x:numFmts></description></item>
-    ///   <item><description>Fonts &lt;x:fonts></description></item>
-    ///   <item><description>Fills &lt;x:fills></description></item>
-    ///   <item><description>Borders &lt;x:borders></description></item>
-    ///   <item><description>CellStyleFormats &lt;x:cellStyleXfs></description></item>
-    ///   <item><description>CellFormats &lt;x:cellXfs></description></item>
-    ///   <item><description>CellStyles &lt;x:cellStyles></description></item>
-    ///   <item><description>DifferentialFormats &lt;x:dxfs></description></item>
-    ///   <item><description>TableStyles &lt;x:tableStyles></description></item>
-    ///   <item><description>Colors &lt;x:colors></description></item>
-    ///   <item><description>StylesheetExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormats" /> <c>&lt;x:numFmts></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Fonts" /> <c>&lt;x:fonts></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Fills" /> <c>&lt;x:fills></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Borders" /> <c>&lt;x:borders></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellStyleFormats" /> <c>&lt;x:cellStyleXfs></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellFormats" /> <c>&lt;x:cellXfs></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellStyles" /> <c>&lt;x:cellStyles></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DifferentialFormats" /> <c>&lt;x:dxfs></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableStyles" /> <c>&lt;x:tableStyles></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Colors" /> <c>&lt;x:colors></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.StylesheetExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5197,17 +5197,17 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "styleSheet");
-            builder.AddChild<NumberingFormats>();
-            builder.AddChild<Fonts>();
-            builder.AddChild<Fills>();
-            builder.AddChild<Borders>();
-            builder.AddChild<CellStyleFormats>();
-            builder.AddChild<CellFormats>();
-            builder.AddChild<CellStyles>();
-            builder.AddChild<DifferentialFormats>();
-            builder.AddChild<TableStyles>();
-            builder.AddChild<Colors>();
-            builder.AddChild<StylesheetExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormats>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Fonts>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Fills>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Borders>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellStyleFormats>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellFormats>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellStyles>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DifferentialFormats>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableStyles>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Colors>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.StylesheetExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberingFormats), 0, 1),
@@ -5410,10 +5410,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExternalBook &lt;x:externalBook></description></item>
-    ///   <item><description>DdeLink &lt;x:ddeLink></description></item>
-    ///   <item><description>OleLink &lt;x:oleLink></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExternalBook" /> <c>&lt;x:externalBook></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DdeLink" /> <c>&lt;x:ddeLink></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OleLink" /> <c>&lt;x:oleLink></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5456,10 +5456,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "externalLink");
-            builder.AddChild<ExternalBook>();
-            builder.AddChild<DdeLink>();
-            builder.AddChild<OleLink>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExternalBook>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DdeLink>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OleLink>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -5515,11 +5515,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>AutoFilter &lt;x:autoFilter></description></item>
-    ///   <item><description>SortState &lt;x:sortState></description></item>
-    ///   <item><description>TableColumns &lt;x:tableColumns></description></item>
-    ///   <item><description>TableStyleInfo &lt;x:tableStyleInfo></description></item>
-    ///   <item><description>TableExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.AutoFilter" /> <c>&lt;x:autoFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortState" /> <c>&lt;x:sortState></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableColumns" /> <c>&lt;x:tableColumns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableStyleInfo" /> <c>&lt;x:tableStyleInfo></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5914,11 +5914,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "table");
-            builder.AddChild<AutoFilter>();
-            builder.AddChild<SortState>();
-            builder.AddChild<TableColumns>();
-            builder.AddChild<TableStyleInfo>();
-            builder.AddChild<TableExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.AutoFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortState>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableColumns>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableStyleInfo>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableExtensionList>();
             builder.AddElement<Table>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -6084,8 +6084,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>VolatileType &lt;x:volType></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.VolatileType" /> <c>&lt;x:volType></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6128,8 +6128,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "volTypes");
-            builder.AddChild<VolatileType>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.VolatileType>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.VolatileType), 1, 0),
@@ -6180,24 +6180,24 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>FileVersion &lt;x:fileVersion></description></item>
-    ///   <item><description>FileSharing &lt;x:fileSharing></description></item>
-    ///   <item><description>WorkbookProperties &lt;x:workbookPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath &lt;x15ac:absPath></description></item>
-    ///   <item><description>WorkbookProtection &lt;x:workbookProtection></description></item>
-    ///   <item><description>BookViews &lt;x:bookViews></description></item>
-    ///   <item><description>Sheets &lt;x:sheets></description></item>
-    ///   <item><description>FunctionGroups &lt;x:functionGroups></description></item>
-    ///   <item><description>ExternalReferences &lt;x:externalReferences></description></item>
-    ///   <item><description>DefinedNames &lt;x:definedNames></description></item>
-    ///   <item><description>CalculationProperties &lt;x:calcPr></description></item>
-    ///   <item><description>OleSize &lt;x:oleSize></description></item>
-    ///   <item><description>CustomWorkbookViews &lt;x:customWorkbookViews></description></item>
-    ///   <item><description>PivotCaches &lt;x:pivotCaches></description></item>
-    ///   <item><description>WebPublishing &lt;x:webPublishing></description></item>
-    ///   <item><description>FileRecoveryProperties &lt;x:fileRecoveryPr></description></item>
-    ///   <item><description>WebPublishObjects &lt;x:webPublishObjects></description></item>
-    ///   <item><description>WorkbookExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FileVersion" /> <c>&lt;x:fileVersion></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FileSharing" /> <c>&lt;x:fileSharing></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WorkbookProperties" /> <c>&lt;x:workbookPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath" /> <c>&lt;x15ac:absPath></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WorkbookProtection" /> <c>&lt;x:workbookProtection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.BookViews" /> <c>&lt;x:bookViews></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Sheets" /> <c>&lt;x:sheets></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FunctionGroups" /> <c>&lt;x:functionGroups></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExternalReferences" /> <c>&lt;x:externalReferences></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DefinedNames" /> <c>&lt;x:definedNames></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CalculationProperties" /> <c>&lt;x:calcPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OleSize" /> <c>&lt;x:oleSize></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookViews" /> <c>&lt;x:customWorkbookViews></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotCaches" /> <c>&lt;x:pivotCaches></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WebPublishing" /> <c>&lt;x:webPublishing></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FileRecoveryProperties" /> <c>&lt;x:fileRecoveryPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WebPublishObjects" /> <c>&lt;x:webPublishObjects></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WorkbookExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6256,24 +6256,24 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "workbook");
-            builder.AddChild<FileVersion>();
-            builder.AddChild<FileSharing>();
-            builder.AddChild<WorkbookProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FileVersion>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FileSharing>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorkbookProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath>();
-            builder.AddChild<WorkbookProtection>();
-            builder.AddChild<BookViews>();
-            builder.AddChild<Sheets>();
-            builder.AddChild<FunctionGroups>();
-            builder.AddChild<ExternalReferences>();
-            builder.AddChild<DefinedNames>();
-            builder.AddChild<CalculationProperties>();
-            builder.AddChild<OleSize>();
-            builder.AddChild<CustomWorkbookViews>();
-            builder.AddChild<PivotCaches>();
-            builder.AddChild<WebPublishing>();
-            builder.AddChild<FileRecoveryProperties>();
-            builder.AddChild<WebPublishObjects>();
-            builder.AddChild<WorkbookExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorkbookProtection>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.BookViews>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Sheets>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FunctionGroups>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExternalReferences>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DefinedNames>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CalculationProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OleSize>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookViews>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotCaches>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WebPublishing>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FileRecoveryProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WebPublishObjects>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorkbookExtensionList>();
             builder.AddElement<Workbook>()
 .AddAttribute(0, "conformance", a => a.Conformance);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -6537,15 +6537,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Filters &lt;x:filters></description></item>
-    ///   <item><description>Top10 &lt;x:top10></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.CustomFilters &lt;x14:customFilters></description></item>
-    ///   <item><description>CustomFilters &lt;x:customFilters></description></item>
-    ///   <item><description>DynamicFilter &lt;x:dynamicFilter></description></item>
-    ///   <item><description>ColorFilter &lt;x:colorFilter></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.IconFilter &lt;x14:iconFilter></description></item>
-    ///   <item><description>IconFilter &lt;x:iconFilter></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Filters" /> <c>&lt;x:filters></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Top10" /> <c>&lt;x:top10></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.CustomFilters" /> <c>&lt;x14:customFilters></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomFilters" /> <c>&lt;x:customFilters></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DynamicFilter" /> <c>&lt;x:dynamicFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ColorFilter" /> <c>&lt;x:colorFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.IconFilter" /> <c>&lt;x14:iconFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.IconFilter" /> <c>&lt;x:iconFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6636,15 +6636,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "filterColumn");
-            builder.AddChild<Filters>();
-            builder.AddChild<Top10>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Filters>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Top10>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.CustomFilters>();
-            builder.AddChild<CustomFilters>();
-            builder.AddChild<DynamicFilter>();
-            builder.AddChild<ColorFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomFilters>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DynamicFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColorFilter>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.IconFilter>();
-            builder.AddChild<IconFilter>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.IconFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<FilterColumn>()
 .AddAttribute(0, "colId", a => a.ColumnId, aBuilder =>
 {
@@ -6795,9 +6795,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.SortCondition &lt;x14:sortCondition></description></item>
-    ///   <item><description>SortCondition &lt;x:sortCondition></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SortCondition" /> <c>&lt;x14:sortCondition></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortCondition" /> <c>&lt;x:sortCondition></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6905,8 +6905,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sortState");
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SortCondition>();
-            builder.AddChild<SortCondition>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortCondition>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<SortState>()
 .AddAttribute(0, "columnSort", a => a.ColumnSort)
 .AddAttribute(0, "caseSensitive", a => a.CaseSensitive)
@@ -6938,7 +6938,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Extension &lt;x:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6981,7 +6981,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.AddChild<Extension>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -7204,7 +7204,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Author &lt;x:author></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Author" /> <c>&lt;x:author></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7247,7 +7247,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "authors");
-            builder.AddChild<Author>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Author>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Author), 0, 0)
@@ -7266,7 +7266,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Comment &lt;x:comment></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Comment" /> <c>&lt;x:comment></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7309,7 +7309,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "commentList");
-            builder.AddChild<Comment>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Comment>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Comment), 0, 0)
@@ -7328,8 +7328,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CommentText &lt;x:text></description></item>
-    ///   <item><description>CommentProperties &lt;x:commentPr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CommentText" /> <c>&lt;x:text></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CommentProperties" /> <c>&lt;x:commentPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7436,8 +7436,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "comment");
-            builder.AddChild<CommentText>();
-            builder.AddChild<CommentProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CommentText>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CommentProperties>();
             builder.AddElement<Comment>()
 .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
 {
@@ -8270,7 +8270,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DataBinding &lt;x:DataBinding></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataBinding" /> <c>&lt;x:DataBinding></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8457,7 +8457,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "Map");
-            builder.AddChild<DataBinding>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataBinding>();
             builder.AddElement<Map>()
 .AddAttribute(0, "ID", a => a.ID, aBuilder =>
 {
@@ -8683,12 +8683,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DatabaseProperties &lt;x:dbPr></description></item>
-    ///   <item><description>OlapProperties &lt;x:olapPr></description></item>
-    ///   <item><description>WebQueryProperties &lt;x:webPr></description></item>
-    ///   <item><description>TextProperties &lt;x:textPr></description></item>
-    ///   <item><description>Parameters &lt;x:parameters></description></item>
-    ///   <item><description>ConnectionExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DatabaseProperties" /> <c>&lt;x:dbPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OlapProperties" /> <c>&lt;x:olapPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WebQueryProperties" /> <c>&lt;x:webPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TextProperties" /> <c>&lt;x:textPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Parameters" /> <c>&lt;x:parameters></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ConnectionExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -9051,12 +9051,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "connection");
-            builder.AddChild<DatabaseProperties>();
-            builder.AddChild<OlapProperties>();
-            builder.AddChild<WebQueryProperties>();
-            builder.AddChild<TextProperties>();
-            builder.AddChild<Parameters>();
-            builder.AddChild<ConnectionExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DatabaseProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OlapProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WebQueryProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Parameters>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConnectionExtensionList>();
             builder.AddElement<Connection>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -9194,9 +9194,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>MissingTable &lt;x:m></description></item>
-    ///   <item><description>CharacterValue &lt;x:s></description></item>
-    ///   <item><description>FieldItem &lt;x:x></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MissingTable" /> <c>&lt;x:m></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CharacterValue" /> <c>&lt;x:s></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FieldItem" /> <c>&lt;x:x></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -9255,9 +9255,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "tables");
-            builder.AddChild<MissingTable>();
-            builder.AddChild<CharacterValue>();
-            builder.AddChild<FieldItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MissingTable>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CharacterValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FieldItem>();
             builder.AddElement<Tables>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
@@ -9669,10 +9669,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SharedItems &lt;x:sharedItems></description></item>
-    ///   <item><description>FieldGroup &lt;x:fieldGroup></description></item>
-    ///   <item><description>MemberPropertiesMap &lt;x:mpMap></description></item>
-    ///   <item><description>CacheFieldExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SharedItems" /> <c>&lt;x:sharedItems></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FieldGroup" /> <c>&lt;x:fieldGroup></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberPropertiesMap" /> <c>&lt;x:mpMap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CacheFieldExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -9923,10 +9923,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cacheField");
-            builder.AddChild<SharedItems>();
-            builder.AddChild<FieldGroup>();
-            builder.AddChild<MemberPropertiesMap>();
-            builder.AddChild<CacheFieldExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SharedItems>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FieldGroup>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberPropertiesMap>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CacheFieldExtensionList>();
             builder.AddElement<CacheField>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -9992,7 +9992,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Page &lt;x:page></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Page" /> <c>&lt;x:page></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -10051,7 +10051,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pages");
-            builder.AddChild<Page>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Page>();
             builder.AddElement<Pages>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -10072,7 +10072,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RangeSet &lt;x:rangeSet></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RangeSet" /> <c>&lt;x:rangeSet></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -10131,7 +10131,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rangeSets");
-            builder.AddChild<RangeSet>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RangeSet>();
             builder.AddElement<RangeSets>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -10152,7 +10152,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PageItem &lt;x:pageItem></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PageItem" /> <c>&lt;x:pageItem></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -10211,7 +10211,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "page");
-            builder.AddChild<PageItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageItem>();
             builder.AddElement<Page>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -10449,8 +10449,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Tuples &lt;x:tpls></description></item>
-    ///   <item><description>MemberPropertyIndex &lt;x:x></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Tuples" /> <c>&lt;x:tpls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex" /> <c>&lt;x:x></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -10669,8 +10669,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "m");
-            builder.AddChild<Tuples>();
-            builder.AddChild<MemberPropertyIndex>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Tuples>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex>();
             builder.AddElement<MissingItem>()
 .AddAttribute(0, "u", a => a.Unused)
 .AddAttribute(0, "f", a => a.Calculated)
@@ -10710,8 +10710,8 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Tuples &lt;x:tpls></description></item>
-    ///   <item><description>MemberPropertyIndex &lt;x:x></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Tuples" /> <c>&lt;x:tpls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex" /> <c>&lt;x:x></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -10946,8 +10946,8 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "n");
-            builder.AddChild<Tuples>();
-            builder.AddChild<MemberPropertyIndex>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Tuples>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex>();
             builder.AddElement<NumberItem>()
 .AddAttribute(0, "v", a => a.Val, aBuilder =>
 {
@@ -10992,7 +10992,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>MemberPropertyIndex &lt;x:x></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex" /> <c>&lt;x:x></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -11115,7 +11115,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "b");
-            builder.AddChild<MemberPropertyIndex>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex>();
             builder.AddElement<BooleanItem>()
 .AddAttribute(0, "v", a => a.Val, aBuilder =>
 {
@@ -11144,8 +11144,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Tuples &lt;x:tpls></description></item>
-    ///   <item><description>MemberPropertyIndex &lt;x:x></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Tuples" /> <c>&lt;x:tpls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex" /> <c>&lt;x:x></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -11380,8 +11380,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "e");
-            builder.AddChild<Tuples>();
-            builder.AddChild<MemberPropertyIndex>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Tuples>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex>();
             builder.AddElement<ErrorItem>()
 .AddAttribute(0, "v", a => a.Val, aBuilder =>
 {
@@ -11438,8 +11438,8 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Tuples &lt;x:tpls></description></item>
-    ///   <item><description>MemberPropertyIndex &lt;x:x></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Tuples" /> <c>&lt;x:tpls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex" /> <c>&lt;x:x></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -11674,8 +11674,8 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "s");
-            builder.AddChild<Tuples>();
-            builder.AddChild<MemberPropertyIndex>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Tuples>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex>();
             builder.AddElement<StringItem>()
 .AddAttribute(0, "v", a => a.Val, aBuilder =>
 {
@@ -11719,7 +11719,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>MemberPropertyIndex &lt;x:x></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex" /> <c>&lt;x:x></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -11842,7 +11842,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "d");
-            builder.AddChild<MemberPropertyIndex>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex>();
             builder.AddElement<DateTimeItem>()
 .AddAttribute(0, "v", a => a.Val, aBuilder =>
 {
@@ -11871,7 +11871,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Tuple &lt;x:tpl></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Tuple" /> <c>&lt;x:tpl></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -11914,6 +11914,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "tpls");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Tuple>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuple), 1, 0)
@@ -11932,7 +11933,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Tuple &lt;x:tpl></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Tuple" /> <c>&lt;x:tpl></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -11975,6 +11976,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sortByTuple");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Tuple>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuple), 1, 0)
@@ -11990,12 +11992,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>Tuple &lt;x:tpl></description></item>
-    /// </list>
-    /// </remark>
     public abstract partial class TuplesType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12048,9 +12044,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<Tuple>();
             builder.AddElement<TuplesType>()
- .AddAttribute(0, "c", a => a.MemberNameCount);
+                           .AddAttribute(0, "c", a => a.MemberNameCount);
         }
     }
 
@@ -12155,13 +12150,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>MissingItem &lt;x:m></description></item>
-    ///   <item><description>NumberItem &lt;x:n></description></item>
-    ///   <item><description>BooleanItem &lt;x:b></description></item>
-    ///   <item><description>ErrorItem &lt;x:e></description></item>
-    ///   <item><description>StringItem &lt;x:s></description></item>
-    ///   <item><description>DateTimeItem &lt;x:d></description></item>
-    ///   <item><description>FieldItem &lt;x:x></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MissingItem" /> <c>&lt;x:m></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberItem" /> <c>&lt;x:n></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.BooleanItem" /> <c>&lt;x:b></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ErrorItem" /> <c>&lt;x:e></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.StringItem" /> <c>&lt;x:s></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DateTimeItem" /> <c>&lt;x:d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FieldItem" /> <c>&lt;x:x></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -12204,13 +12199,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "r");
-            builder.AddChild<MissingItem>();
-            builder.AddChild<NumberItem>();
-            builder.AddChild<BooleanItem>();
-            builder.AddChild<ErrorItem>();
-            builder.AddChild<StringItem>();
-            builder.AddChild<DateTimeItem>();
-            builder.AddChild<FieldItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MissingItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.BooleanItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ErrorItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.StringItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DateTimeItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FieldItem>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MissingItem), 1, 1),
@@ -12502,8 +12497,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Groups &lt;x:groups></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Groups" /> <c>&lt;x:groups></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -12610,8 +12605,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "groupLevel");
-            builder.AddChild<Groups>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Groups>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<GroupLevel>()
 .AddAttribute(0, "uniqueName", a => a.UniqueName, aBuilder =>
 {
@@ -12669,7 +12664,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Group &lt;x:group></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Group" /> <c>&lt;x:group></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -12728,7 +12723,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "groups");
-            builder.AddChild<Group>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Group>();
             builder.AddElement<Groups>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -12749,7 +12744,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>GroupMembers &lt;x:groupMembers></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.GroupMembers" /> <c>&lt;x:groupMembers></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -12872,7 +12867,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "group");
-            builder.AddChild<GroupMembers>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.GroupMembers>();
             builder.AddElement<Group>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -12923,7 +12918,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>GroupMember &lt;x:groupMember></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.GroupMember" /> <c>&lt;x:groupMember></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -12982,7 +12977,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "groupMembers");
-            builder.AddChild<GroupMember>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.GroupMember>();
             builder.AddElement<GroupMembers>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -13070,10 +13065,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>MissingItem &lt;x:m></description></item>
-    ///   <item><description>NumberItem &lt;x:n></description></item>
-    ///   <item><description>ErrorItem &lt;x:e></description></item>
-    ///   <item><description>StringItem &lt;x:s></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MissingItem" /> <c>&lt;x:m></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberItem" /> <c>&lt;x:n></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ErrorItem" /> <c>&lt;x:e></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.StringItem" /> <c>&lt;x:s></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -13132,10 +13127,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "entries");
-            builder.AddChild<MissingItem>();
-            builder.AddChild<NumberItem>();
-            builder.AddChild<ErrorItem>();
-            builder.AddChild<StringItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MissingItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ErrorItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.StringItem>();
             builder.AddElement<Entries>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
@@ -13159,7 +13154,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TupleSet &lt;x:set></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TupleSet" /> <c>&lt;x:set></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -13218,7 +13213,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sets");
-            builder.AddChild<TupleSet>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TupleSet>();
             builder.AddElement<Sets>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -13239,7 +13234,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Query &lt;x:query></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Query" /> <c>&lt;x:query></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -13298,7 +13293,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "queryCache");
-            builder.AddChild<Query>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Query>();
             builder.AddElement<QueryCache>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -13319,7 +13314,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ServerFormat &lt;x:serverFormat></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ServerFormat" /> <c>&lt;x:serverFormat></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -13378,7 +13373,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "serverFormats");
-            builder.AddChild<ServerFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ServerFormat>();
             builder.AddElement<ServerFormats>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -13549,8 +13544,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Tuples &lt;x:tpls></description></item>
-    ///   <item><description>SortByTuple &lt;x:sortByTuple></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Tuples" /> <c>&lt;x:tpls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortByTuple" /> <c>&lt;x:sortByTuple></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -13673,8 +13668,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "set");
-            builder.AddChild<Tuples>();
-            builder.AddChild<SortByTuple>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Tuples>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortByTuple>();
             builder.AddElement<TupleSet>()
 .AddAttribute(0, "count", a => a.Count)
 .AddAttribute(0, "maxRank", a => a.MaxRank, aBuilder =>
@@ -13708,7 +13703,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Tuples &lt;x:tpls></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Tuples" /> <c>&lt;x:tpls></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -13767,7 +13762,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "query");
-            builder.AddChild<Tuples>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Tuples>();
             builder.AddElement<Query>()
 .AddAttribute(0, "mdx", a => a.Mdx, aBuilder =>
 {
@@ -13805,8 +13800,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PivotArea &lt;x:pivotArea></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotArea" /> <c>&lt;x:pivotArea></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -13881,8 +13876,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "calculatedItem");
-            builder.AddChild<PivotArea>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<CalculatedItem>()
 .AddAttribute(0, "field", a => a.Field)
 .AddAttribute(0, "formula", a => a.Formula);
@@ -13931,8 +13926,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PivotAreaReferences &lt;x:references></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences" /> <c>&lt;x:references></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -14167,8 +14162,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pivotArea");
-            builder.AddChild<PivotAreaReferences>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<PivotArea>()
 .AddAttribute(0, "field", a => a.Field)
 .AddAttribute(0, "type", a => a.Type)
@@ -14228,7 +14223,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CalculatedMemberExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -14383,7 +14378,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "calculatedMember");
-            builder.AddChild<CalculatedMemberExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtensionList>();
             builder.AddElement<CalculatedMember>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -14438,9 +14433,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Items &lt;x:items></description></item>
-    ///   <item><description>AutoSortScope &lt;x:autoSortScope></description></item>
-    ///   <item><description>PivotFieldExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Items" /> <c>&lt;x:items></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.AutoSortScope" /> <c>&lt;x:autoSortScope></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -15251,9 +15246,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pivotField");
-            builder.AddChild<Items>();
-            builder.AddChild<AutoSortScope>();
-            builder.AddChild<PivotFieldExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Items>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.AutoSortScope>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtensionList>();
             builder.AddElement<PivotField>()
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "axis", a => a.Axis)
@@ -15581,7 +15576,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DataFieldExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataFieldExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -15736,7 +15731,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dataField");
-            builder.AddChild<DataFieldExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataFieldExtensionList>();
             builder.AddElement<DataField>()
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "fld", a => a.Field, aBuilder =>
@@ -15780,7 +15775,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>MemberPropertyIndex &lt;x:x></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex" /> <c>&lt;x:x></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -15871,7 +15866,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "i");
-            builder.AddChild<MemberPropertyIndex>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex>();
             builder.AddElement<RowItem>()
 .AddAttribute(0, "t", a => a.ItemType)
 .AddAttribute(0, "r", a => a.RepeatedItemCount)
@@ -15944,8 +15939,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PivotArea &lt;x:pivotArea></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotArea" /> <c>&lt;x:pivotArea></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -16020,8 +16015,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "format");
-            builder.AddChild<PivotArea>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<Format>()
 .AddAttribute(0, "action", a => a.Action)
 .AddAttribute(0, "dxfId", a => a.FormatId);
@@ -16071,8 +16066,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PivotAreas &lt;x:pivotAreas></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotAreas" /> <c>&lt;x:pivotAreas></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -16163,8 +16158,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "conditionalFormat");
-            builder.AddChild<PivotAreas>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotAreas>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<ConditionalFormat>()
 .AddAttribute(0, "scope", a => a.Scope)
 .AddAttribute(0, "type", a => a.Type)
@@ -16218,7 +16213,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PivotArea &lt;x:pivotArea></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotArea" /> <c>&lt;x:pivotArea></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -16277,7 +16272,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pivotAreas");
-            builder.AddChild<PivotArea>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
             builder.AddElement<PivotAreas>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -16298,7 +16293,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PivotArea &lt;x:pivotArea></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotArea" /> <c>&lt;x:pivotArea></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -16389,7 +16384,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "chartFormat");
-            builder.AddChild<PivotArea>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
             builder.AddElement<ChartFormat>()
 .AddAttribute(0, "chart", a => a.Chart, aBuilder =>
 {
@@ -16431,9 +16426,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>MemberProperties &lt;x:mps></description></item>
-    ///   <item><description>Members &lt;x:members></description></item>
-    ///   <item><description>PivotHierarchyExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberProperties" /> <c>&lt;x:mps></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Members" /> <c>&lt;x:members></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotHierarchyExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -16652,9 +16647,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pivotHierarchy");
-            builder.AddChild<MemberProperties>();
-            builder.AddChild<Members>();
-            builder.AddChild<PivotHierarchyExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Members>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotHierarchyExtensionList>();
             builder.AddElement<PivotHierarchy>()
 .AddAttribute(0, "outline", a => a.Outline)
 .AddAttribute(0, "multipleItemSelectionAllowed", a => a.MultipleItemSelectionAllowed)
@@ -17276,8 +17271,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>AutoFilter &lt;x:autoFilter></description></item>
-    ///   <item><description>PivotFilterExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.AutoFilter" /> <c>&lt;x:autoFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -17496,8 +17491,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "filter");
-            builder.AddChild<AutoFilter>();
-            builder.AddChild<PivotFilterExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.AutoFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtensionList>();
             builder.AddElement<PivotFilter>()
 .AddAttribute(0, "fld", a => a.Field, aBuilder =>
 {
@@ -17568,9 +17563,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>FieldsUsage &lt;x:fieldsUsage></description></item>
-    ///   <item><description>GroupLevels &lt;x:groupLevels></description></item>
-    ///   <item><description>CacheHierarchyExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FieldsUsage" /> <c>&lt;x:fieldsUsage></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.GroupLevels" /> <c>&lt;x:groupLevels></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -17965,9 +17960,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cacheHierarchy");
-            builder.AddChild<FieldsUsage>();
-            builder.AddChild<GroupLevels>();
-            builder.AddChild<CacheHierarchyExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FieldsUsage>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.GroupLevels>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtensionList>();
             builder.AddElement<CacheHierarchy>()
 .AddAttribute(0, "uniqueName", a => a.UniqueName, aBuilder =>
 {
@@ -18227,7 +18222,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>FieldItem &lt;x:x></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FieldItem" /> <c>&lt;x:x></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -18286,7 +18281,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "discretePr");
-            builder.AddChild<FieldItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FieldItem>();
             builder.AddElement<DiscreteProperties>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -18307,12 +18302,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>MissingItem &lt;x:m></description></item>
-    ///   <item><description>NumberItem &lt;x:n></description></item>
-    ///   <item><description>BooleanItem &lt;x:b></description></item>
-    ///   <item><description>ErrorItem &lt;x:e></description></item>
-    ///   <item><description>StringItem &lt;x:s></description></item>
-    ///   <item><description>DateTimeItem &lt;x:d></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MissingItem" /> <c>&lt;x:m></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberItem" /> <c>&lt;x:n></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.BooleanItem" /> <c>&lt;x:b></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ErrorItem" /> <c>&lt;x:e></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.StringItem" /> <c>&lt;x:s></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DateTimeItem" /> <c>&lt;x:d></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -18371,12 +18366,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "groupItems");
-            builder.AddChild<MissingItem>();
-            builder.AddChild<NumberItem>();
-            builder.AddChild<BooleanItem>();
-            builder.AddChild<ErrorItem>();
-            builder.AddChild<StringItem>();
-            builder.AddChild<DateTimeItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MissingItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.BooleanItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ErrorItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.StringItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DateTimeItem>();
             builder.AddElement<GroupItems>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
@@ -18402,7 +18397,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -18525,7 +18520,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pageField");
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<PageField>()
 .AddAttribute(0, "fld", a => a.Field, aBuilder =>
 {
@@ -18568,7 +18563,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PivotAreaReference &lt;x:reference></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotAreaReference" /> <c>&lt;x:reference></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -18627,7 +18622,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "references");
-            builder.AddChild<PivotAreaReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotAreaReference>();
             builder.AddElement<PivotAreaReferences>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -18648,8 +18643,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>FieldItem &lt;x:x></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FieldItem" /> <c>&lt;x:x></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -18964,8 +18959,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "reference");
-            builder.AddChild<FieldItem>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FieldItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<PivotAreaReference>()
 .AddAttribute(0, "field", a => a.Field)
 .AddAttribute(0, "count", a => a.Count)
@@ -19003,7 +18998,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>QueryTableField &lt;x:queryTableField></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.QueryTableField" /> <c>&lt;x:queryTableField></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -19062,7 +19057,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "queryTableFields");
-            builder.AddChild<QueryTableField>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.QueryTableField>();
             builder.AddElement<QueryTableFields>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -19083,7 +19078,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DeletedField &lt;x:deletedField></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DeletedField" /> <c>&lt;x:deletedField></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -19142,7 +19137,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "queryTableDeletedFields");
-            builder.AddChild<DeletedField>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DeletedField>();
             builder.AddElement<QueryTableDeletedFields>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -19212,7 +19207,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -19367,7 +19362,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "queryTableField");
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<QueryTableField>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -19416,10 +19411,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Text &lt;x:t></description></item>
-    ///   <item><description>Run &lt;x:r></description></item>
-    ///   <item><description>PhoneticRun &lt;x:rPh></description></item>
-    ///   <item><description>PhoneticProperties &lt;x:phoneticPr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Text" /> <c>&lt;x:t></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Run" /> <c>&lt;x:r></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PhoneticRun" /> <c>&lt;x:rPh></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties" /> <c>&lt;x:phoneticPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -19462,6 +19457,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "si");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Text>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Run>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PhoneticRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Text), 0, 1),
@@ -19483,10 +19482,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Text &lt;x:t></description></item>
-    ///   <item><description>Run &lt;x:r></description></item>
-    ///   <item><description>PhoneticRun &lt;x:rPh></description></item>
-    ///   <item><description>PhoneticProperties &lt;x:phoneticPr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Text" /> <c>&lt;x:t></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Run" /> <c>&lt;x:r></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PhoneticRun" /> <c>&lt;x:rPh></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties" /> <c>&lt;x:phoneticPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -19529,6 +19528,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "is");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Text>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Run>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PhoneticRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Text), 0, 1),
@@ -19550,10 +19553,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Text &lt;x:t></description></item>
-    ///   <item><description>Run &lt;x:r></description></item>
-    ///   <item><description>PhoneticRun &lt;x:rPh></description></item>
-    ///   <item><description>PhoneticProperties &lt;x:phoneticPr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Text" /> <c>&lt;x:t></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Run" /> <c>&lt;x:r></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PhoneticRun" /> <c>&lt;x:rPh></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties" /> <c>&lt;x:phoneticPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -19596,6 +19599,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "text");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Text>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Run>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PhoneticRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Text), 0, 1),
@@ -19614,15 +19621,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>Text &lt;x:t></description></item>
-    ///   <item><description>Run &lt;x:r></description></item>
-    ///   <item><description>PhoneticRun &lt;x:rPh></description></item>
-    ///   <item><description>PhoneticProperties &lt;x:phoneticPr></description></item>
-    /// </list>
-    /// </remark>
     public abstract partial class RstType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19659,10 +19657,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<Text>();
-            builder.AddChild<Run>();
-            builder.AddChild<PhoneticRun>();
-            builder.AddChild<PhoneticProperties>();
         }
 
         /// <summary>
@@ -20474,21 +20468,21 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Bold &lt;x:b></description></item>
-    ///   <item><description>Italic &lt;x:i></description></item>
-    ///   <item><description>Strike &lt;x:strike></description></item>
-    ///   <item><description>Condense &lt;x:condense></description></item>
-    ///   <item><description>Extend &lt;x:extend></description></item>
-    ///   <item><description>Outline &lt;x:outline></description></item>
-    ///   <item><description>Shadow &lt;x:shadow></description></item>
-    ///   <item><description>Underline &lt;x:u></description></item>
-    ///   <item><description>VerticalTextAlignment &lt;x:vertAlign></description></item>
-    ///   <item><description>FontSize &lt;x:sz></description></item>
-    ///   <item><description>Color &lt;x:color></description></item>
-    ///   <item><description>RunFont &lt;x:rFont></description></item>
-    ///   <item><description>FontFamily &lt;x:family></description></item>
-    ///   <item><description>RunPropertyCharSet &lt;x:charset></description></item>
-    ///   <item><description>FontScheme &lt;x:scheme></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Bold" /> <c>&lt;x:b></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Italic" /> <c>&lt;x:i></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Strike" /> <c>&lt;x:strike></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Condense" /> <c>&lt;x:condense></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extend" /> <c>&lt;x:extend></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Outline" /> <c>&lt;x:outline></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Shadow" /> <c>&lt;x:shadow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Underline" /> <c>&lt;x:u></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment" /> <c>&lt;x:vertAlign></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FontSize" /> <c>&lt;x:sz></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RunFont" /> <c>&lt;x:rFont></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FontFamily" /> <c>&lt;x:family></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RunPropertyCharSet" /> <c>&lt;x:charset></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FontScheme" /> <c>&lt;x:scheme></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -20531,21 +20525,21 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rPr");
-            builder.AddChild<Bold>();
-            builder.AddChild<Italic>();
-            builder.AddChild<Strike>();
-            builder.AddChild<Condense>();
-            builder.AddChild<Extend>();
-            builder.AddChild<Outline>();
-            builder.AddChild<Shadow>();
-            builder.AddChild<Underline>();
-            builder.AddChild<VerticalTextAlignment>();
-            builder.AddChild<FontSize>();
-            builder.AddChild<Color>();
-            builder.AddChild<RunFont>();
-            builder.AddChild<FontFamily>();
-            builder.AddChild<RunPropertyCharSet>();
-            builder.AddChild<FontScheme>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Bold>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Italic>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Strike>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Condense>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extend>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Outline>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Shadow>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Underline>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FontSize>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RunFont>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FontFamily>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RunPropertyCharSet>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FontScheme>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Bold), 0, 1),
@@ -20578,8 +20572,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RunProperties &lt;x:rPr></description></item>
-    ///   <item><description>Text &lt;x:t></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RunProperties" /> <c>&lt;x:rPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Text" /> <c>&lt;x:t></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -20622,8 +20616,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "r");
-            builder.AddChild<RunProperties>();
-            builder.AddChild<Text>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RunProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Text>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RunProperties), 0, 1),
@@ -20669,7 +20663,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Text &lt;x:t></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Text" /> <c>&lt;x:t></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -20744,7 +20738,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rPh");
-            builder.AddChild<Text>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Text>();
             builder.AddElement<PhoneticRun>()
 .AddAttribute(0, "sb", a => a.BaseTextStartIndex, aBuilder =>
 {
@@ -20869,9 +20863,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SheetIdMap &lt;x:sheetIdMap></description></item>
-    ///   <item><description>ReviewedList &lt;x:reviewedList></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetIdMap" /> <c>&lt;x:sheetIdMap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ReviewedList" /> <c>&lt;x:reviewedList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -21029,9 +21023,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "header");
-            builder.AddChild<SheetIdMap>();
-            builder.AddChild<ReviewedList>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetIdMap>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ReviewedList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<Header>()
 .AddAttribute(0, "guid", a => a.Guid, aBuilder =>
 {
@@ -21118,9 +21112,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Undo &lt;x:undo></description></item>
-    ///   <item><description>RevisionCellChange &lt;x:rcc></description></item>
-    ///   <item><description>RevisionFormat &lt;x:rfmt></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Undo" /> <c>&lt;x:undo></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RevisionCellChange" /> <c>&lt;x:rcc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RevisionFormat" /> <c>&lt;x:rfmt></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -21291,9 +21285,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rrc");
-            builder.AddChild<Undo>();
-            builder.AddChild<RevisionCellChange>();
-            builder.AddChild<RevisionFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Undo>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionCellChange>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionFormat>();
             builder.AddElement<RevisionRowColumn>()
 .AddAttribute(0, "rId", a => a.RevisionId, aBuilder =>
 {
@@ -21336,9 +21330,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Undo &lt;x:undo></description></item>
-    ///   <item><description>RevisionCellChange &lt;x:rcc></description></item>
-    ///   <item><description>RevisionFormat &lt;x:rfmt></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Undo" /> <c>&lt;x:undo></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RevisionCellChange" /> <c>&lt;x:rcc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RevisionFormat" /> <c>&lt;x:rfmt></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -21493,9 +21487,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rm");
-            builder.AddChild<Undo>();
-            builder.AddChild<RevisionCellChange>();
-            builder.AddChild<RevisionFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Undo>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionCellChange>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionFormat>();
             builder.AddElement<RevisionMove>()
 .AddAttribute(0, "rId", a => a.RevisionId, aBuilder =>
 {
@@ -21607,7 +21601,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -21746,7 +21740,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rsnm");
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<RevisionSheetName>()
 .AddAttribute(0, "rId", a => a.RevisionId, aBuilder =>
 {
@@ -21942,11 +21936,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OldCell &lt;x:oc></description></item>
-    ///   <item><description>NewCell &lt;x:nc></description></item>
-    ///   <item><description>OldDifferentialFormat &lt;x:odxf></description></item>
-    ///   <item><description>NewDifferentialFormat &lt;x:ndxf></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OldCell" /> <c>&lt;x:oc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NewCell" /> <c>&lt;x:nc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OldDifferentialFormat" /> <c>&lt;x:odxf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NewDifferentialFormat" /> <c>&lt;x:ndxf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -22213,11 +22207,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rcc");
-            builder.AddChild<OldCell>();
-            builder.AddChild<NewCell>();
-            builder.AddChild<OldDifferentialFormat>();
-            builder.AddChild<NewDifferentialFormat>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OldCell>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NewCell>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OldDifferentialFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NewDifferentialFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<RevisionCellChange>()
 .AddAttribute(0, "rId", a => a.RevisionId, aBuilder =>
 {
@@ -22327,8 +22321,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DifferentialFormat &lt;x:dxf></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat" /> <c>&lt;x:dxf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -22467,8 +22461,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rfmt");
-            builder.AddChild<DifferentialFormat>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<RevisionFormat>()
 .AddAttribute(0, "sheetId", a => a.SheetId, aBuilder =>
 {
@@ -22717,9 +22711,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Formula &lt;x:formula></description></item>
-    ///   <item><description>OldFormula &lt;x:oldFormula></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Formula" /> <c>&lt;x:formula></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OldFormula" /> <c>&lt;x:oldFormula></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -23146,9 +23140,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rdn");
-            builder.AddChild<Formula>();
-            builder.AddChild<OldFormula>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formula>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OldFormula>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<RevisionDefinedName>()
 .AddAttribute(0, "rId", a => a.RevisionId, aBuilder =>
 {
@@ -23671,7 +23665,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SheetId &lt;x:sheetId></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetId" /> <c>&lt;x:sheetId></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -23730,7 +23724,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetIdMap");
-            builder.AddChild<SheetId>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetId>();
             builder.AddElement<SheetIdMap>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -23751,7 +23745,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Reviewed &lt;x:reviewed></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Reviewed" /> <c>&lt;x:reviewed></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -23810,7 +23804,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "reviewedList");
-            builder.AddChild<Reviewed>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Reviewed>();
             builder.AddElement<ReviewedList>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -24108,10 +24102,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CellFormula &lt;x:f></description></item>
-    ///   <item><description>CellValue &lt;x:v></description></item>
-    ///   <item><description>InlineString &lt;x:is></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellFormula" /> <c>&lt;x:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellValue" /> <c>&lt;x:v></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.InlineString" /> <c>&lt;x:is></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -24154,6 +24148,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "oc");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellFormula>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.InlineString>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormula), 0, 1),
@@ -24178,10 +24176,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CellFormula &lt;x:f></description></item>
-    ///   <item><description>CellValue &lt;x:v></description></item>
-    ///   <item><description>InlineString &lt;x:is></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellFormula" /> <c>&lt;x:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellValue" /> <c>&lt;x:v></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.InlineString" /> <c>&lt;x:is></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -24224,6 +24222,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "c");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellFormula>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.InlineString>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormula), 0, 1),
@@ -24248,15 +24250,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>CellFormula &lt;x:f></description></item>
-    ///   <item><description>CellValue &lt;x:v></description></item>
-    ///   <item><description>InlineString &lt;x:is></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
-    /// </list>
-    /// </remark>
     public abstract partial class CellType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -24389,17 +24382,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<CellFormula>();
-            builder.AddChild<CellValue>();
-            builder.AddChild<InlineString>();
-            builder.AddChild<ExtensionList>();
             builder.AddElement<CellType>()
-.AddAttribute(0, "r", a => a.CellReference)
-.AddAttribute(0, "s", a => a.StyleIndex)
-.AddAttribute(0, "t", a => a.DataType)
-.AddAttribute(0, "cm", a => a.CellMetaIndex)
-.AddAttribute(0, "vm", a => a.ValueMetaIndex)
-.AddAttribute(0, "ph", a => a.ShowPhonetic);
+                           .AddAttribute(0, "r", a => a.CellReference)
+                           .AddAttribute(0, "s", a => a.StyleIndex)
+                           .AddAttribute(0, "t", a => a.DataType)
+                           .AddAttribute(0, "cm", a => a.CellMetaIndex)
+                           .AddAttribute(0, "vm", a => a.ValueMetaIndex)
+                           .AddAttribute(0, "ph", a => a.ShowPhonetic);
         }
 
         /// <summary>
@@ -24463,10 +24452,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CellFormula &lt;x:f></description></item>
-    ///   <item><description>CellValue &lt;x:v></description></item>
-    ///   <item><description>InlineString &lt;x:is></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellFormula" /> <c>&lt;x:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellValue" /> <c>&lt;x:v></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.InlineString" /> <c>&lt;x:is></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -24605,10 +24594,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "nc");
-            builder.AddChild<CellFormula>();
-            builder.AddChild<CellValue>();
-            builder.AddChild<InlineString>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellFormula>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.InlineString>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<NewCell>()
 .AddAttribute(0, "r", a => a.CellReference, aBuilder =>
 {
@@ -24695,13 +24684,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Font &lt;x:font></description></item>
-    ///   <item><description>NumberingFormat &lt;x:numFmt></description></item>
-    ///   <item><description>Fill &lt;x:fill></description></item>
-    ///   <item><description>Alignment &lt;x:alignment></description></item>
-    ///   <item><description>Border &lt;x:border></description></item>
-    ///   <item><description>Protection &lt;x:protection></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Fill" /> <c>&lt;x:fill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Alignment" /> <c>&lt;x:alignment></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Protection" /> <c>&lt;x:protection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -24744,6 +24733,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "odxf");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Font>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Fill>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Border>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Protection>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0, 1),
@@ -24768,13 +24764,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Font &lt;x:font></description></item>
-    ///   <item><description>NumberingFormat &lt;x:numFmt></description></item>
-    ///   <item><description>Fill &lt;x:fill></description></item>
-    ///   <item><description>Alignment &lt;x:alignment></description></item>
-    ///   <item><description>Border &lt;x:border></description></item>
-    ///   <item><description>Protection &lt;x:protection></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Fill" /> <c>&lt;x:fill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Alignment" /> <c>&lt;x:alignment></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Protection" /> <c>&lt;x:protection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -24817,6 +24813,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ndxf");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Font>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Fill>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Border>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Protection>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0, 1),
@@ -24841,13 +24844,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Font &lt;x:font></description></item>
-    ///   <item><description>NumberingFormat &lt;x:numFmt></description></item>
-    ///   <item><description>Fill &lt;x:fill></description></item>
-    ///   <item><description>Alignment &lt;x:alignment></description></item>
-    ///   <item><description>Border &lt;x:border></description></item>
-    ///   <item><description>Protection &lt;x:protection></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Fill" /> <c>&lt;x:fill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Alignment" /> <c>&lt;x:alignment></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Protection" /> <c>&lt;x:protection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -24890,6 +24893,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dxf");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Font>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Fill>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Border>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Protection>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0, 1),
@@ -24911,18 +24921,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>Font &lt;x:font></description></item>
-    ///   <item><description>NumberingFormat &lt;x:numFmt></description></item>
-    ///   <item><description>Fill &lt;x:fill></description></item>
-    ///   <item><description>Alignment &lt;x:alignment></description></item>
-    ///   <item><description>Border &lt;x:border></description></item>
-    ///   <item><description>Protection &lt;x:protection></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
-    /// </list>
-    /// </remark>
     public abstract partial class DifferentialFormatType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -24959,13 +24957,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<Font>();
-            builder.AddChild<NumberingFormat>();
-            builder.AddChild<Fill>();
-            builder.AddChild<Alignment>();
-            builder.AddChild<Border>();
-            builder.AddChild<Protection>();
-            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -25384,7 +25375,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -25491,7 +25482,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "userInfo");
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<UserInfo>()
 .AddAttribute(0, "guid", a => a.Guid, aBuilder =>
 {
@@ -25541,8 +25532,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Cell &lt;x:c></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Cell" /> <c>&lt;x:c></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -25796,8 +25787,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "row");
-            builder.AddChild<Cell>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Cell>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<Row>()
 .AddAttribute(0, "r", a => a.RowIndex)
 .AddAttribute(0, "spans", a => a.Spans)
@@ -26416,7 +26407,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PivotArea &lt;x:pivotArea></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotArea" /> <c>&lt;x:pivotArea></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -26734,7 +26725,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pivotSelection");
-            builder.AddChild<PivotArea>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
             builder.AddElement<PivotSelection>()
 .AddAttribute(0, "pane", a => a.Pane)
 .AddAttribute(0, "showHeader", a => a.ShowHeader)
@@ -27005,7 +26996,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Break &lt;x:brk></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Break" /> <c>&lt;x:brk></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -27048,6 +27039,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rowBreaks");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Break>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Break), 0, 0)
@@ -27068,7 +27060,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Break &lt;x:brk></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Break" /> <c>&lt;x:brk></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -27111,6 +27103,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "colBreaks");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Break>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Break), 0, 0)
@@ -27128,12 +27121,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>Break &lt;x:brk></description></item>
-    /// </list>
-    /// </remark>
     public abstract partial class PageBreakType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -27202,10 +27189,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<Break>();
             builder.AddElement<PageBreakType>()
- .AddAttribute(0, "count", a => a.Count)
- .AddAttribute(0, "manualBreakCount", a => a.ManualBreakCount);
+                           .AddAttribute(0, "count", a => a.Count)
+                           .AddAttribute(0, "manualBreakCount", a => a.ManualBreakCount);
         }
     }
 
@@ -27809,12 +27795,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OddHeader &lt;x:oddHeader></description></item>
-    ///   <item><description>OddFooter &lt;x:oddFooter></description></item>
-    ///   <item><description>EvenHeader &lt;x:evenHeader></description></item>
-    ///   <item><description>EvenFooter &lt;x:evenFooter></description></item>
-    ///   <item><description>FirstHeader &lt;x:firstHeader></description></item>
-    ///   <item><description>FirstFooter &lt;x:firstFooter></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OddHeader" /> <c>&lt;x:oddHeader></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OddFooter" /> <c>&lt;x:oddFooter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.EvenHeader" /> <c>&lt;x:evenHeader></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.EvenFooter" /> <c>&lt;x:evenFooter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FirstHeader" /> <c>&lt;x:firstHeader></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FirstFooter" /> <c>&lt;x:firstFooter></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -27921,12 +27907,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "headerFooter");
-            builder.AddChild<OddHeader>();
-            builder.AddChild<OddFooter>();
-            builder.AddChild<EvenHeader>();
-            builder.AddChild<EvenFooter>();
-            builder.AddChild<FirstHeader>();
-            builder.AddChild<FirstFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OddHeader>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OddFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.EvenHeader>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.EvenFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FirstHeader>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FirstFooter>();
             builder.AddElement<HeaderFooter>()
 .AddAttribute(0, "differentOddEven", a => a.DifferentOddEven)
 .AddAttribute(0, "differentFirst", a => a.DifferentFirst)
@@ -28033,9 +28019,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>FilterColumn &lt;x:filterColumn></description></item>
-    ///   <item><description>SortState &lt;x:sortState></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FilterColumn" /> <c>&lt;x:filterColumn></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortState" /> <c>&lt;x:sortState></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -28094,9 +28080,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "autoFilter");
-            builder.AddChild<FilterColumn>();
-            builder.AddChild<SortState>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FilterColumn>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortState>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<AutoFilter>()
 .AddAttribute(0, "ref", a => a.Reference);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -28119,11 +28105,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Formula &lt;x:formula></description></item>
-    ///   <item><description>ColorScale &lt;x:colorScale></description></item>
-    ///   <item><description>DataBar &lt;x:dataBar></description></item>
-    ///   <item><description>IconSet &lt;x:iconSet></description></item>
-    ///   <item><description>ConditionalFormattingRuleExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Formula" /> <c>&lt;x:formula></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ColorScale" /> <c>&lt;x:colorScale></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataBar" /> <c>&lt;x:dataBar></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.IconSet" /> <c>&lt;x:iconSet></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRuleExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -28374,11 +28360,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cfRule");
-            builder.AddChild<Formula>();
-            builder.AddChild<ColorScale>();
-            builder.AddChild<DataBar>();
-            builder.AddChild<IconSet>();
-            builder.AddChild<ConditionalFormattingRuleExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formula>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColorScale>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataBar>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.IconSet>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRuleExtensionList>();
             builder.AddElement<ConditionalFormattingRule>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
@@ -28547,7 +28533,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -28638,7 +28624,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cfvo");
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<ConditionalFormatValueObject>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
@@ -28677,7 +28663,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>InputCells &lt;x:inputCells></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.InputCells" /> <c>&lt;x:inputCells></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -28816,7 +28802,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "scenario");
-            builder.AddChild<InputCells>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.InputCells>();
             builder.AddElement<Scenario>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -29602,7 +29588,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -29709,7 +29695,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetView");
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<ChartSheetView>()
 .AddAttribute(0, "tabSelected", a => a.TabSelected)
 .AddAttribute(0, "zoomScale", a => a.ZoomScale)
@@ -29751,9 +29737,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PageMargins &lt;x:pageMargins></description></item>
-    ///   <item><description>ChartSheetPageSetup &lt;x:pageSetup></description></item>
-    ///   <item><description>HeaderFooter &lt;x:headerFooter></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PageMargins" /> <c>&lt;x:pageMargins></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup" /> <c>&lt;x:pageSetup></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.HeaderFooter" /> <c>&lt;x:headerFooter></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -29860,9 +29846,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "customSheetView");
-            builder.AddChild<PageMargins>();
-            builder.AddChild<ChartSheetPageSetup>();
-            builder.AddChild<HeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageMargins>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>();
             builder.AddElement<CustomChartsheetView>()
 .AddAttribute(0, "guid", a => a.Guid, aBuilder =>
 {
@@ -30052,7 +30038,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ControlProperties &lt;x:controlPr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ControlProperties" /> <c>&lt;x:controlPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -30146,7 +30132,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "control");
-            builder.AddChild<ControlProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ControlProperties>();
             builder.AddElement<Control>()
 .AddAttribute(0, "shapeId", a => a.ShapeId, aBuilder =>
 {
@@ -30441,9 +30427,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.ExcelAc.List &lt;x12ac:list></description></item>
-    ///   <item><description>Formula1 &lt;x:formula1></description></item>
-    ///   <item><description>Formula2 &lt;x:formula2></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.ExcelAc.List" /> <c>&lt;x12ac:list></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Formula1" /> <c>&lt;x:formula1></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Formula2" /> <c>&lt;x:formula2></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -30695,8 +30681,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dataValidation");
             builder.AddChild<DocumentFormat.OpenXml.Office2010.ExcelAc.List>();
-            builder.AddChild<Formula1>();
-            builder.AddChild<Formula2>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formula1>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formula2>();
             builder.AddElement<DataValidation>()
 .AddAttribute(0, "type", a => a.Type)
 .AddAttribute(0, "errorStyle", a => a.ErrorStyle)
@@ -30776,10 +30762,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Pane &lt;x:pane></description></item>
-    ///   <item><description>Selection &lt;x:selection></description></item>
-    ///   <item><description>PivotSelection &lt;x:pivotSelection></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Pane" /> <c>&lt;x:pane></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Selection" /> <c>&lt;x:selection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotSelection" /> <c>&lt;x:pivotSelection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -31126,10 +31112,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetView");
-            builder.AddChild<Pane>();
-            builder.AddChild<Selection>();
-            builder.AddChild<PivotSelection>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Pane>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Selection>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotSelection>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<SheetView>()
 .AddAttribute(0, "windowProtection", a => a.WindowProtection)
 .AddAttribute(0, "showFormulas", a => a.ShowFormulas)
@@ -31192,16 +31178,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Pane &lt;x:pane></description></item>
-    ///   <item><description>Selection &lt;x:selection></description></item>
-    ///   <item><description>RowBreaks &lt;x:rowBreaks></description></item>
-    ///   <item><description>ColumnBreaks &lt;x:colBreaks></description></item>
-    ///   <item><description>PageMargins &lt;x:pageMargins></description></item>
-    ///   <item><description>PrintOptions &lt;x:printOptions></description></item>
-    ///   <item><description>PageSetup &lt;x:pageSetup></description></item>
-    ///   <item><description>HeaderFooter &lt;x:headerFooter></description></item>
-    ///   <item><description>AutoFilter &lt;x:autoFilter></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Pane" /> <c>&lt;x:pane></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Selection" /> <c>&lt;x:selection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RowBreaks" /> <c>&lt;x:rowBreaks></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks" /> <c>&lt;x:colBreaks></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PageMargins" /> <c>&lt;x:pageMargins></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PrintOptions" /> <c>&lt;x:printOptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PageSetup" /> <c>&lt;x:pageSetup></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.HeaderFooter" /> <c>&lt;x:headerFooter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.AutoFilter" /> <c>&lt;x:autoFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -31564,16 +31550,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "customSheetView");
-            builder.AddChild<Pane>();
-            builder.AddChild<Selection>();
-            builder.AddChild<RowBreaks>();
-            builder.AddChild<ColumnBreaks>();
-            builder.AddChild<PageMargins>();
-            builder.AddChild<PrintOptions>();
-            builder.AddChild<PageSetup>();
-            builder.AddChild<HeaderFooter>();
-            builder.AddChild<AutoFilter>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Pane>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Selection>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowBreaks>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageMargins>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PrintOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageSetup>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.AutoFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<CustomSheetView>()
 .AddAttribute(0, "guid", a => a.Guid, aBuilder =>
 {
@@ -31758,7 +31744,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>EmbeddedObjectProperties &lt;x:objectPr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.EmbeddedObjectProperties" /> <c>&lt;x:objectPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -31916,7 +31902,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "oleObject");
-            builder.AddChild<EmbeddedObjectProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.EmbeddedObjectProperties>();
             builder.AddElement<OleObject>()
 .AddAttribute(0, "progId", a => a.ProgId)
 .AddAttribute(0, "dvAspect", a => a.DataOrViewAspect)
@@ -31962,7 +31948,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>MetadataType &lt;x:metadataType></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MetadataType" /> <c>&lt;x:metadataType></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -32021,7 +32007,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "metadataTypes");
-            builder.AddChild<MetadataType>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MetadataType>();
             builder.AddElement<MetadataTypes>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -32043,7 +32029,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CharacterValue &lt;x:s></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CharacterValue" /> <c>&lt;x:s></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -32102,7 +32088,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "metadataStrings");
-            builder.AddChild<CharacterValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CharacterValue>();
             builder.AddElement<MetadataStrings>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -32124,7 +32110,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Mdx &lt;x:mdx></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Mdx" /> <c>&lt;x:mdx></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -32183,7 +32169,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "mdxMetadata");
-            builder.AddChild<Mdx>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Mdx>();
             builder.AddElement<MdxMetadata>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -32205,8 +32191,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>FutureMetadataBlock &lt;x:bk></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FutureMetadataBlock" /> <c>&lt;x:bk></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -32281,8 +32267,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "futureMetadata");
-            builder.AddChild<FutureMetadataBlock>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FutureMetadataBlock>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<FutureMetadata>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -32312,7 +32298,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>MetadataBlock &lt;x:bk></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MetadataBlock" /> <c>&lt;x:bk></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -32355,6 +32341,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cellMetadata");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MetadataBlock>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataBlock), 1, 0)
@@ -32374,7 +32361,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>MetadataBlock &lt;x:bk></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MetadataBlock" /> <c>&lt;x:bk></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -32417,6 +32404,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "valueMetadata");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MetadataBlock>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataBlock), 1, 0)
@@ -32433,12 +32421,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>MetadataBlock &lt;x:bk></description></item>
-    /// </list>
-    /// </remark>
     public abstract partial class MetadataBlocksType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -32491,9 +32473,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<MetadataBlock>();
             builder.AddElement<MetadataBlocksType>()
-.AddAttribute(0, "count", a => a.Count);
+                           .AddAttribute(0, "count", a => a.Count);
         }
     }
 
@@ -33017,7 +32998,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>MetadataRecord &lt;x:rc></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MetadataRecord" /> <c>&lt;x:rc></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -33060,7 +33041,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "bk");
-            builder.AddChild<MetadataRecord>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MetadataRecord>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataRecord), 1, 0)
@@ -33149,7 +33130,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -33192,7 +33173,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "bk");
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -33224,10 +33205,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>MdxTuple &lt;x:t></description></item>
-    ///   <item><description>MdxSet &lt;x:ms></description></item>
-    ///   <item><description>MdxMemberProp &lt;x:p></description></item>
-    ///   <item><description>MdxKpi &lt;x:k></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MdxTuple" /> <c>&lt;x:t></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MdxSet" /> <c>&lt;x:ms></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MdxMemberProp" /> <c>&lt;x:p></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MdxKpi" /> <c>&lt;x:k></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -33302,10 +33283,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "mdx");
-            builder.AddChild<MdxTuple>();
-            builder.AddChild<MdxSet>();
-            builder.AddChild<MdxMemberProp>();
-            builder.AddChild<MdxKpi>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MdxTuple>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MdxSet>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MdxMemberProp>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MdxKpi>();
             builder.AddElement<Mdx>()
 .AddAttribute(0, "n", a => a.NameIndex, aBuilder =>
 {
@@ -33390,7 +33371,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameIndex &lt;x:n></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NameIndex" /> <c>&lt;x:n></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -33593,7 +33574,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "t");
-            builder.AddChild<NameIndex>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NameIndex>();
             builder.AddElement<MdxTuple>()
 .AddAttribute(0, "c", a => a.MemberIndexCount)
 .AddAttribute(0, "ct", a => a.CultureCurrency)
@@ -33633,7 +33614,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameIndex &lt;x:n></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NameIndex" /> <c>&lt;x:n></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -33724,7 +33705,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ms");
-            builder.AddChild<NameIndex>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NameIndex>();
             builder.AddElement<MdxSet>()
 .AddAttribute(0, "ns", a => a.SetDefinitionIndex, aBuilder =>
 {
@@ -33984,8 +33965,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>XmlCellProperties &lt;x:xmlCellPr></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.XmlCellProperties" /> <c>&lt;x:xmlCellPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -34076,8 +34057,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "singleXmlCell");
-            builder.AddChild<XmlCellProperties>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.XmlCellProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<SingleXmlCell>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -34139,8 +34120,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>XmlProperties &lt;x:xmlPr></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.XmlProperties" /> <c>&lt;x:xmlPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -34215,8 +34196,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "xmlCellPr");
-            builder.AddChild<XmlProperties>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.XmlProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<XmlCellProperties>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -34274,7 +34255,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -34365,7 +34346,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "xmlPr");
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<XmlProperties>()
 .AddAttribute(0, "mapId", a => a.MapId, aBuilder =>
 {
@@ -34412,8 +34393,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ForegroundColor &lt;x:fgColor></description></item>
-    ///   <item><description>BackgroundColor &lt;x:bgColor></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ForegroundColor" /> <c>&lt;x:fgColor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.BackgroundColor" /> <c>&lt;x:bgColor></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -34472,8 +34453,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "patternFill");
-            builder.AddChild<ForegroundColor>();
-            builder.AddChild<BackgroundColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ForegroundColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.BackgroundColor>();
             builder.AddElement<PatternFill>()
 .AddAttribute(0, "patternType", a => a.PatternType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -34521,7 +34502,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>GradientStop &lt;x:stop></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.GradientStop" /> <c>&lt;x:stop></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -34660,7 +34641,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "gradientFill");
-            builder.AddChild<GradientStop>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.GradientStop>();
             builder.AddElement<GradientFill>()
 .AddAttribute(0, "type", a => a.Type)
 .AddAttribute(0, "degree", a => a.Degree)
@@ -34691,7 +34672,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Color &lt;x:color></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -34750,7 +34731,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "stop");
-            builder.AddChild<Color>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
             builder.AddElement<GradientStop>()
 .AddAttribute(0, "position", a => a.Position, aBuilder =>
 {
@@ -35120,21 +35101,21 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Bold &lt;x:b></description></item>
-    ///   <item><description>Italic &lt;x:i></description></item>
-    ///   <item><description>Strike &lt;x:strike></description></item>
-    ///   <item><description>Condense &lt;x:condense></description></item>
-    ///   <item><description>Extend &lt;x:extend></description></item>
-    ///   <item><description>Outline &lt;x:outline></description></item>
-    ///   <item><description>Shadow &lt;x:shadow></description></item>
-    ///   <item><description>Underline &lt;x:u></description></item>
-    ///   <item><description>VerticalTextAlignment &lt;x:vertAlign></description></item>
-    ///   <item><description>FontSize &lt;x:sz></description></item>
-    ///   <item><description>Color &lt;x:color></description></item>
-    ///   <item><description>FontName &lt;x:name></description></item>
-    ///   <item><description>FontFamilyNumbering &lt;x:family></description></item>
-    ///   <item><description>FontCharSet &lt;x:charset></description></item>
-    ///   <item><description>FontScheme &lt;x:scheme></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Bold" /> <c>&lt;x:b></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Italic" /> <c>&lt;x:i></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Strike" /> <c>&lt;x:strike></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Condense" /> <c>&lt;x:condense></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extend" /> <c>&lt;x:extend></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Outline" /> <c>&lt;x:outline></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Shadow" /> <c>&lt;x:shadow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Underline" /> <c>&lt;x:u></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment" /> <c>&lt;x:vertAlign></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FontSize" /> <c>&lt;x:sz></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FontName" /> <c>&lt;x:name></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FontFamilyNumbering" /> <c>&lt;x:family></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FontCharSet" /> <c>&lt;x:charset></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FontScheme" /> <c>&lt;x:scheme></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -35177,21 +35158,21 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "font");
-            builder.AddChild<Bold>();
-            builder.AddChild<Italic>();
-            builder.AddChild<Strike>();
-            builder.AddChild<Condense>();
-            builder.AddChild<Extend>();
-            builder.AddChild<Outline>();
-            builder.AddChild<Shadow>();
-            builder.AddChild<Underline>();
-            builder.AddChild<VerticalTextAlignment>();
-            builder.AddChild<FontSize>();
-            builder.AddChild<Color>();
-            builder.AddChild<FontName>();
-            builder.AddChild<FontFamilyNumbering>();
-            builder.AddChild<FontCharSet>();
-            builder.AddChild<FontScheme>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Bold>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Italic>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Strike>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Condense>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extend>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Outline>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Shadow>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Underline>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FontSize>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FontName>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FontFamilyNumbering>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FontCharSet>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FontScheme>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Bold), 0, 1),
@@ -35419,8 +35400,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PatternFill &lt;x:patternFill></description></item>
-    ///   <item><description>GradientFill &lt;x:gradientFill></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PatternFill" /> <c>&lt;x:patternFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.GradientFill" /> <c>&lt;x:gradientFill></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -35463,8 +35444,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "fill");
-            builder.AddChild<PatternFill>();
-            builder.AddChild<GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.GradientFill>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PatternFill), 0, 1),
@@ -35510,15 +35491,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>StartBorder &lt;x:start></description></item>
-    ///   <item><description>EndBorder &lt;x:end></description></item>
-    ///   <item><description>LeftBorder &lt;x:left></description></item>
-    ///   <item><description>RightBorder &lt;x:right></description></item>
-    ///   <item><description>TopBorder &lt;x:top></description></item>
-    ///   <item><description>BottomBorder &lt;x:bottom></description></item>
-    ///   <item><description>DiagonalBorder &lt;x:diagonal></description></item>
-    ///   <item><description>VerticalBorder &lt;x:vertical></description></item>
-    ///   <item><description>HorizontalBorder &lt;x:horizontal></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.StartBorder" /> <c>&lt;x:start></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.EndBorder" /> <c>&lt;x:end></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.LeftBorder" /> <c>&lt;x:left></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RightBorder" /> <c>&lt;x:right></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TopBorder" /> <c>&lt;x:top></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.BottomBorder" /> <c>&lt;x:bottom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DiagonalBorder" /> <c>&lt;x:diagonal></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.VerticalBorder" /> <c>&lt;x:vertical></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.HorizontalBorder" /> <c>&lt;x:horizontal></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -35609,15 +35590,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "border");
-            builder.AddChild<StartBorder>();
-            builder.AddChild<EndBorder>();
-            builder.AddChild<LeftBorder>();
-            builder.AddChild<RightBorder>();
-            builder.AddChild<TopBorder>();
-            builder.AddChild<BottomBorder>();
-            builder.AddChild<DiagonalBorder>();
-            builder.AddChild<VerticalBorder>();
-            builder.AddChild<HorizontalBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.StartBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.EndBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.LeftBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RightBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TopBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.BottomBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DiagonalBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.VerticalBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.HorizontalBorder>();
             builder.AddElement<Border>()
 .AddAttribute(0, "diagonalUp", a => a.DiagonalUp)
 .AddAttribute(0, "diagonalDown", a => a.DiagonalDown)
@@ -35765,7 +35746,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RgbColor &lt;x:rgbColor></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RgbColor" /> <c>&lt;x:rgbColor></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -35808,7 +35789,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "indexedColors");
-            builder.AddChild<RgbColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RgbColor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RgbColor), 1, 64)
@@ -35827,7 +35808,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Color &lt;x:color></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -35870,7 +35851,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "mruColors");
-            builder.AddChild<Color>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 1, 10)
@@ -35889,7 +35870,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TableStyleElement &lt;x:tableStyleElement></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableStyleElement" /> <c>&lt;x:tableStyleElement></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -35996,7 +35977,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "tableStyle");
-            builder.AddChild<TableStyleElement>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableStyleElement>();
             builder.AddElement<TableStyle>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -36072,7 +36053,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -36211,7 +36192,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cellStyle");
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<CellStyle>()
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "xfId", a => a.FormatId, aBuilder =>
@@ -36258,9 +36239,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Alignment &lt;x:alignment></description></item>
-    ///   <item><description>Protection &lt;x:protection></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Alignment" /> <c>&lt;x:alignment></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Protection" /> <c>&lt;x:protection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -36511,9 +36492,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "xf");
-            builder.AddChild<Alignment>();
-            builder.AddChild<Protection>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Protection>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<CellFormat>()
 .AddAttribute(0, "numFmtId", a => a.NumberFormatId)
 .AddAttribute(0, "fontId", a => a.FontId)
@@ -36824,7 +36805,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SheetName &lt;x:sheetName></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetName" /> <c>&lt;x:sheetName></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -36867,7 +36848,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetNames");
-            builder.AddChild<SheetName>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetName>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetName), 1, 65534)
@@ -36886,7 +36867,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExternalDefinedName &lt;x:definedName></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedName" /> <c>&lt;x:definedName></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -36929,7 +36910,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "definedNames");
-            builder.AddChild<ExternalDefinedName>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedName>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedName), 0, 0)
@@ -36948,7 +36929,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExternalSheetData &lt;x:sheetData></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExternalSheetData" /> <c>&lt;x:sheetData></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -36991,7 +36972,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetDataSet");
-            builder.AddChild<ExternalSheetData>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExternalSheetData>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalSheetData), 1, 0)
@@ -37093,7 +37074,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExternalRow &lt;x:row></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExternalRow" /> <c>&lt;x:row></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -37168,7 +37149,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetData");
-            builder.AddChild<ExternalRow>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExternalRow>();
             builder.AddElement<ExternalSheetData>()
 .AddAttribute(0, "sheetId", a => a.SheetId, aBuilder =>
 {
@@ -37194,7 +37175,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExternalCell &lt;x:cell></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExternalCell" /> <c>&lt;x:cell></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -37253,7 +37234,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "row");
-            builder.AddChild<ExternalCell>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExternalCell>();
             builder.AddElement<ExternalRow>()
 .AddAttribute(0, "r", a => a.RowIndex, aBuilder =>
 {
@@ -37278,7 +37259,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Xstring &lt;x:v></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Xstring" /> <c>&lt;x:v></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -37369,7 +37350,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cell");
-            builder.AddChild<Xstring>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Xstring>();
             builder.AddElement<ExternalCell>()
 .AddAttribute(0, "r", a => a.CellReference, aBuilder =>
 {
@@ -37410,7 +37391,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DdeItem &lt;x:ddeItem></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DdeItem" /> <c>&lt;x:ddeItem></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -37453,7 +37434,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ddeItems");
-            builder.AddChild<DdeItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DdeItem>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DdeItem), 0, 0)
@@ -37472,7 +37453,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Values &lt;x:values></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Values" /> <c>&lt;x:values></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -37579,7 +37560,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ddeItem");
-            builder.AddChild<Values>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Values>();
             builder.AddElement<DdeItem>()
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "ole", a => a.UseOle)
@@ -37618,7 +37599,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Value &lt;x:value></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Value" /> <c>&lt;x:value></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -37693,7 +37674,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "values");
-            builder.AddChild<Value>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Value>();
             builder.AddElement<Values>()
 .AddAttribute(0, "rows", a => a.Rows)
 .AddAttribute(0, "cols", a => a.Columns);
@@ -37717,7 +37698,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DdeLinkValue &lt;x:val></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DdeLinkValue" /> <c>&lt;x:val></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -37776,7 +37757,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "value");
-            builder.AddChild<DdeLinkValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DdeLinkValue>();
             builder.AddElement<Value>()
 .AddAttribute(0, "t", a => a.ValueType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -37810,8 +37791,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OleItem &lt;x:oleItem></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.OleItem &lt;x14:oleItem></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OleItem" /> <c>&lt;x:oleItem></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OleItem" /> <c>&lt;x14:oleItem></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -37854,7 +37835,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "oleItems");
-            builder.AddChild<OleItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OleItem>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OleItem>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
@@ -37875,9 +37856,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SheetNames &lt;x:sheetNames></description></item>
-    ///   <item><description>ExternalDefinedNames &lt;x:definedNames></description></item>
-    ///   <item><description>SheetDataSet &lt;x:sheetDataSet></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetNames" /> <c>&lt;x:sheetNames></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedNames" /> <c>&lt;x:definedNames></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetDataSet" /> <c>&lt;x:sheetDataSet></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -37939,9 +37920,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "externalBook");
-            builder.AddChild<SheetNames>();
-            builder.AddChild<ExternalDefinedNames>();
-            builder.AddChild<SheetDataSet>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetNames>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedNames>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetDataSet>();
             builder.AddElement<ExternalBook>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
@@ -38006,7 +37987,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DdeItems &lt;x:ddeItems></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DdeItems" /> <c>&lt;x:ddeItems></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -38081,7 +38062,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ddeLink");
-            builder.AddChild<DdeItems>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DdeItems>();
             builder.AddElement<DdeLink>()
 .AddAttribute(0, "ddeService", a => a.DdeService, aBuilder =>
 {
@@ -38124,7 +38105,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OleItems &lt;x:oleItems></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OleItems" /> <c>&lt;x:oleItems></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -38202,7 +38183,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "oleLink");
-            builder.AddChild<OleItems>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OleItems>();
             builder.AddElement<OleLink>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
@@ -38330,10 +38311,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CalculatedColumnFormula &lt;x:calculatedColumnFormula></description></item>
-    ///   <item><description>TotalsRowFormula &lt;x:totalsRowFormula></description></item>
-    ///   <item><description>XmlColumnProperties &lt;x:xmlColumnPr></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CalculatedColumnFormula" /> <c>&lt;x:calculatedColumnFormula></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TotalsRowFormula" /> <c>&lt;x:totalsRowFormula></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.XmlColumnProperties" /> <c>&lt;x:xmlColumnPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -38568,10 +38549,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "tableColumn");
-            builder.AddChild<CalculatedColumnFormula>();
-            builder.AddChild<TotalsRowFormula>();
-            builder.AddChild<XmlColumnProperties>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CalculatedColumnFormula>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TotalsRowFormula>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.XmlColumnProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<TableColumn>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -38829,7 +38810,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -38936,7 +38917,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "xmlColumnPr");
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<XmlColumnProperties>()
 .AddAttribute(0, "mapId", a => a.MapId, aBuilder =>
 {
@@ -38985,7 +38966,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Main &lt;x:main></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Main" /> <c>&lt;x:main></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -39044,7 +39025,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "volType");
-            builder.AddChild<Main>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Main>();
             builder.AddElement<VolatileType>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
@@ -39068,7 +39049,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Topic &lt;x:tp></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Topic" /> <c>&lt;x:tp></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -39127,7 +39108,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "main");
-            builder.AddChild<Topic>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Topic>();
             builder.AddElement<Main>()
 .AddAttribute(0, "first", a => a.First, aBuilder =>
 {
@@ -39152,9 +39133,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Xstring &lt;x:v></description></item>
-    ///   <item><description>Subtopic &lt;x:stp></description></item>
-    ///   <item><description>TopicReferences &lt;x:tr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Xstring" /> <c>&lt;x:v></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Subtopic" /> <c>&lt;x:stp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TopicReferences" /> <c>&lt;x:tr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -39213,9 +39194,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "tp");
-            builder.AddChild<Xstring>();
-            builder.AddChild<Subtopic>();
-            builder.AddChild<TopicReferences>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Xstring>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Subtopic>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TopicReferences>();
             builder.AddElement<Topic>()
 .AddAttribute(0, "t", a => a.ValueType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -39588,7 +39569,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -40015,7 +39996,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "customWorkbookView");
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<CustomWorkbookView>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -40202,7 +40183,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -40453,7 +40434,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "workbookView");
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<WorkbookView>()
 .AddAttribute(0, "visibility", a => a.Visibility)
 .AddAttribute(0, "minimized", a => a.Minimized)
@@ -40854,7 +40835,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.Table &lt;x14:table></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Table" /> <c>&lt;x14:table></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -40939,8 +40920,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>FromMarker &lt;x:from></description></item>
-    ///   <item><description>ToMarker &lt;x:to></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FromMarker" /> <c>&lt;x:from></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ToMarker" /> <c>&lt;x:to></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -41032,8 +41013,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "anchor");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<FromMarker>();
-            builder.AddChild<ToMarker>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FromMarker>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ToMarker>();
             builder.AddElement<ObjectAnchor>()
 .AddAttribute(0, "moveWithCells", a => a.MoveWithCells)
 .AddAttribute(0, "sizeWithCells", a => a.SizeWithCells)
@@ -41083,10 +41064,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId &lt;xdr:col></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset &lt;xdr:colOff></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId &lt;xdr:row></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset &lt;xdr:rowOff></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId" /> <c>&lt;xdr:col></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset" /> <c>&lt;xdr:colOff></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId" /> <c>&lt;xdr:row></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset" /> <c>&lt;xdr:rowOff></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -41130,6 +41111,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "from");
             builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId), 1, 1),
@@ -41151,10 +41136,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId &lt;xdr:col></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset &lt;xdr:colOff></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId &lt;xdr:row></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset &lt;xdr:rowOff></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId" /> <c>&lt;xdr:col></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset" /> <c>&lt;xdr:colOff></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId" /> <c>&lt;xdr:row></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset" /> <c>&lt;xdr:rowOff></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -41198,6 +41183,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "to");
             builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId), 1, 1),
@@ -41216,15 +41205,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId &lt;xdr:col></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset &lt;xdr:colOff></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId &lt;xdr:row></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset &lt;xdr:rowOff></description></item>
-    /// </list>
-    /// </remark>
     public abstract partial class MarkerType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41261,10 +41241,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset>();
         }
 
         /// <summary>
@@ -41328,7 +41304,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.Id &lt;x14:id></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Id" /> <c>&lt;x14:id></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -41413,7 +41389,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.PivotHierarchy &lt;x14:pivotHierarchy></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotHierarchy" /> <c>&lt;x14:pivotHierarchy></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -41498,7 +41474,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.PivotField &lt;x14:pivotField></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotField" /> <c>&lt;x14:pivotField></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -41583,7 +41559,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.SourceConnection &lt;x14:sourceConnection></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SourceConnection" /> <c>&lt;x14:sourceConnection></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -41668,7 +41644,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TableColumn &lt;x:tableColumn></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableColumn" /> <c>&lt;x:tableColumn></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -41727,7 +41703,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "tableColumns");
-            builder.AddChild<TableColumn>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableColumn>();
             builder.AddElement<TableColumns>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -41862,7 +41838,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TableExtension &lt;x:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -41905,7 +41881,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.AddChild<TableExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableExtension), 0, 0)
@@ -42025,7 +42001,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Color &lt;x:color></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -42069,6 +42045,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "start");
             builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
@@ -42087,7 +42064,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Color &lt;x:color></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -42131,6 +42108,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "end");
             builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
@@ -42149,7 +42127,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Color &lt;x:color></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -42192,6 +42170,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "left");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
@@ -42210,7 +42189,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Color &lt;x:color></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -42253,6 +42232,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "right");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
@@ -42271,7 +42251,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Color &lt;x:color></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -42314,6 +42294,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "top");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
@@ -42332,7 +42313,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Color &lt;x:color></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -42375,6 +42356,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "bottom");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
@@ -42393,7 +42375,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Color &lt;x:color></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -42436,6 +42418,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "diagonal");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
@@ -42454,7 +42437,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Color &lt;x:color></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -42497,6 +42480,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "vertical");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
@@ -42515,7 +42499,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Color &lt;x:color></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -42558,6 +42542,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "horizontal");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
@@ -42573,12 +42558,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>Color &lt;x:color></description></item>
-    /// </list>
-    /// </remark>
     public abstract partial class BorderPropertiesType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42631,9 +42610,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<Color>();
             builder.AddElement<BorderPropertiesType>()
- .AddAttribute(0, "style", a => a.Style);
+                           .AddAttribute(0, "style", a => a.Style);
         }
 
         /// <summary>
@@ -42658,7 +42636,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ObjectAnchor &lt;x:anchor></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor" /> <c>&lt;x:anchor></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -42945,7 +42923,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "controlPr");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<ObjectAnchor>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor>();
             builder.AddElement<ControlProperties>()
 .AddAttribute(0, "locked", a => a.Locked)
 .AddAttribute(0, "defaultSize", a => a.DefaultSize)
@@ -42993,7 +42971,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ObjectAnchor &lt;x:anchor></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor" /> <c>&lt;x:anchor></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -43232,7 +43210,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "objectPr");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<ObjectAnchor>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor>();
             builder.AddElement<EmbeddedObjectProperties>()
 .AddAttribute(0, "locked", a => a.Locked)
 .AddAttribute(0, "defaultSize", a => a.DefaultSize)
@@ -43277,7 +43255,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TabColor &lt;x:tabColor></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TabColor" /> <c>&lt;x:tabColor></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -43352,7 +43330,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetPr");
-            builder.AddChild<TabColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TabColor>();
             builder.AddElement<ChartSheetProperties>()
 .AddAttribute(0, "published", a => a.Published)
 .AddAttribute(0, "codeName", a => a.CodeName);
@@ -43389,8 +43367,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ChartSheetView &lt;x:sheetView></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ChartSheetView" /> <c>&lt;x:sheetView></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -43433,8 +43411,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetViews");
-            builder.AddChild<ChartSheetView>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ChartSheetView>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ChartSheetView), 1, 0),
@@ -43604,7 +43582,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CustomChartsheetView &lt;x:customSheetView></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomChartsheetView" /> <c>&lt;x:customSheetView></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -43647,7 +43625,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "customSheetViews");
-            builder.AddChild<CustomChartsheetView>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomChartsheetView>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomChartsheetView), 0, 0)
@@ -44225,7 +44203,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>WebPublishItem &lt;x:webPublishItem></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WebPublishItem" /> <c>&lt;x:webPublishItem></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -44284,7 +44262,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "webPublishItems");
-            builder.AddChild<WebPublishItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WebPublishItem>();
             builder.AddElement<WebPublishItems>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -44305,8 +44283,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ConditionalFormatValueObject &lt;x:cfvo></description></item>
-    ///   <item><description>Color &lt;x:color></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject" /> <c>&lt;x:cfvo></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -44349,8 +44327,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "colorScale");
-            builder.AddChild<ConditionalFormatValueObject>();
-            builder.AddChild<Color>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject), 2, 3),
@@ -44370,8 +44348,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ConditionalFormatValueObject &lt;x:cfvo></description></item>
-    ///   <item><description>Color &lt;x:color></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject" /> <c>&lt;x:cfvo></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -44462,8 +44440,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dataBar");
-            builder.AddChild<ConditionalFormatValueObject>();
-            builder.AddChild<Color>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
             builder.AddElement<DataBar>()
 .AddAttribute(0, "minLength", a => a.MinLength)
 .AddAttribute(0, "maxLength", a => a.MaxLength)
@@ -44489,7 +44467,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ConditionalFormatValueObject &lt;x:cfvo></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject" /> <c>&lt;x:cfvo></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -44596,7 +44574,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "iconSet");
-            builder.AddChild<ConditionalFormatValueObject>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject>();
             builder.AddElement<IconSet>()
 .AddAttribute(0, "iconSet", a => a.IconSetValue)
 .AddAttribute(0, "showValue", a => a.ShowValue)
@@ -44620,7 +44598,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ConditionalFormattingRuleExtension &lt;x:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRuleExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -44663,7 +44641,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.AddChild<ConditionalFormattingRuleExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRuleExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRuleExtension), 0, 0)
@@ -44682,7 +44660,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DataReference &lt;x:dataRef></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataReference" /> <c>&lt;x:dataRef></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -44741,7 +44719,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dataRefs");
-            builder.AddChild<DataReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataReference>();
             builder.AddElement<DataReferences>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -44762,9 +44740,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TabColor &lt;x:tabColor></description></item>
-    ///   <item><description>OutlineProperties &lt;x:outlinePr></description></item>
-    ///   <item><description>PageSetupProperties &lt;x:pageSetUpPr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TabColor" /> <c>&lt;x:tabColor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OutlineProperties" /> <c>&lt;x:outlinePr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PageSetupProperties" /> <c>&lt;x:pageSetUpPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -44951,9 +44929,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetPr");
-            builder.AddChild<TabColor>();
-            builder.AddChild<OutlineProperties>();
-            builder.AddChild<PageSetupProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TabColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OutlineProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageSetupProperties>();
             builder.AddElement<SheetProperties>()
 .AddAttribute(0, "syncHorizontal", a => a.SyncHorizontal)
 .AddAttribute(0, "syncVertical", a => a.SyncVertical)
@@ -45024,8 +45002,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SheetView &lt;x:sheetView></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetView" /> <c>&lt;x:sheetView></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -45068,8 +45046,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetViews");
-            builder.AddChild<SheetView>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetView>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetView), 1, 0),
@@ -45688,7 +45666,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CustomSheetView &lt;x:customSheetView></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomSheetView" /> <c>&lt;x:customSheetView></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -45731,7 +45709,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "customSheetViews");
-            builder.AddChild<CustomSheetView>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomSheetView>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomSheetView), 1, 0)
@@ -45750,7 +45728,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OleObject &lt;x:oleObject></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OleObject" /> <c>&lt;x:oleObject></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -45793,7 +45771,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "oleObjects");
-            builder.AddChild<OleObject>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OleObject>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleObject), 1, 65535)
@@ -45812,7 +45790,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Control &lt;x:control></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Control" /> <c>&lt;x:control></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -45855,7 +45833,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "controls");
-            builder.AddChild<Control>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Control>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Control), 1, 65535)
@@ -45922,7 +45900,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Column &lt;x:col></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Column" /> <c>&lt;x:col></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -45965,7 +45943,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cols");
-            builder.AddChild<Column>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Column>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Column), 1, 0)
@@ -45984,7 +45962,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Row &lt;x:row></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Row" /> <c>&lt;x:row></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -46027,7 +46005,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetData");
-            builder.AddChild<Row>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Row>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Row), 0, 0)
@@ -46046,7 +46024,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DataReferences &lt;x:dataRefs></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataReferences" /> <c>&lt;x:dataRefs></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -46169,7 +46147,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dataConsolidate");
-            builder.AddChild<DataReferences>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataReferences>();
             builder.AddElement<DataConsolidate>()
 .AddAttribute(0, "function", a => a.Function)
 .AddAttribute(0, "leftLabels", a => a.LeftLabels)
@@ -46210,8 +46188,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ConditionalFormattingRule &lt;x:cfRule></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRule" /> <c>&lt;x:cfRule></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -46286,8 +46264,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "conditionalFormatting");
-            builder.AddChild<ConditionalFormattingRule>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRule>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<ConditionalFormatting>()
 .AddAttribute(0, "pivot", a => a.Pivot)
 .AddAttribute(0, "sqref", a => a.SequenceOfReferences);
@@ -46311,7 +46289,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CustomProperty &lt;x:customPr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomProperty" /> <c>&lt;x:customPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -46354,7 +46332,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "customProperties");
-            builder.AddChild<CustomProperty>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomProperty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomProperty), 1, 0)
@@ -46373,7 +46351,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>MemberProperty &lt;x:mp></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberProperty" /> <c>&lt;x:mp></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -46432,7 +46410,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "mps");
-            builder.AddChild<MemberProperty>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberProperty>();
             builder.AddElement<MemberProperties>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -46453,7 +46431,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Member &lt;x:member></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Member" /> <c>&lt;x:member></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -46528,7 +46506,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "members");
-            builder.AddChild<Member>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Member>();
             builder.AddElement<Members>()
 .AddAttribute(0, "count", a => a.Count)
 .AddAttribute(0, "level", a => a.Level);
@@ -46550,7 +46528,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PivotHierarchyExtension &lt;x:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotHierarchyExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -46593,7 +46571,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.AddChild<PivotHierarchyExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotHierarchyExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotHierarchyExtension), 0, 0)
@@ -46612,7 +46590,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Item &lt;x:item></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Item" /> <c>&lt;x:item></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -46671,7 +46649,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "items");
-            builder.AddChild<Item>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Item>();
             builder.AddElement<Items>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -46692,7 +46670,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PivotArea &lt;x:pivotArea></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotArea" /> <c>&lt;x:pivotArea></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -46735,7 +46713,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "autoSortScope");
-            builder.AddChild<PivotArea>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 1, 1)
@@ -46767,7 +46745,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PivotFieldExtension &lt;x:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -46810,7 +46788,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.AddChild<PivotFieldExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtension), 0, 0)
@@ -46931,8 +46909,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Pages &lt;x:pages></description></item>
-    ///   <item><description>RangeSets &lt;x:rangeSets></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Pages" /> <c>&lt;x:pages></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RangeSets" /> <c>&lt;x:rangeSets></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -46991,8 +46969,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "consolidation");
-            builder.AddChild<Pages>();
-            builder.AddChild<RangeSets>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Pages>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RangeSets>();
             builder.AddElement<Consolidation>()
 .AddAttribute(0, "autoPage", a => a.AutoPage);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -47040,7 +47018,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CacheSourceExtension &lt;x:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -47083,7 +47061,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.AddChild<CacheSourceExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtension), 0, 0)
@@ -47102,7 +47080,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ObjectAnchor &lt;x:anchor></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor" /> <c>&lt;x:anchor></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -47386,7 +47364,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "commentPr");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<ObjectAnchor>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor>();
             builder.AddElement<CommentProperties>()
 .AddAttribute(0, "locked", a => a.Locked)
 .AddAttribute(0, "defaultSize", a => a.DefaultSize)
@@ -47791,9 +47769,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.Filter &lt;x14:filter></description></item>
-    ///   <item><description>Filter &lt;x:filter></description></item>
-    ///   <item><description>DateGroupItem &lt;x:dateGroupItem></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Filter" /> <c>&lt;x14:filter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Filter" /> <c>&lt;x:filter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DateGroupItem" /> <c>&lt;x:dateGroupItem></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -47869,8 +47847,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "filters");
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Filter>();
-            builder.AddChild<Filter>();
-            builder.AddChild<DateGroupItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Filter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DateGroupItem>();
             builder.AddElement<Filters>()
 .AddAttribute(0, "blank", a => a.Blank)
 .AddAttribute(0, "calendarType", a => a.CalendarType);
@@ -47993,7 +47971,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CustomFilter &lt;x:customFilter></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomFilter" /> <c>&lt;x:customFilter></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -48052,7 +48030,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "customFilters");
-            builder.AddChild<CustomFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomFilter>();
             builder.AddElement<CustomFilters>()
 .AddAttribute(0, "and", a => a.And);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -48326,9 +48304,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Excel.SlicerCachePivotTables &lt;x15:slicerCachePivotTables></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Excel.TableSlicerCache &lt;x15:tableSlicerCache></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Excel.SlicerCacheHideItemsWithNoData &lt;x15:slicerCacheHideItemsWithNoData></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.SlicerCachePivotTables" /> <c>&lt;x15:slicerCachePivotTables></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TableSlicerCache" /> <c>&lt;x15:tableSlicerCache></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.SlicerCacheHideItemsWithNoData" /> <c>&lt;x15:slicerCacheHideItemsWithNoData></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -48417,8 +48395,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Excel.PivotFilter &lt;x15:pivotFilter></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState &lt;x15:movingPeriodState></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotFilter" /> <c>&lt;x15:pivotFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState" /> <c>&lt;x15:movingPeriodState></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -48505,7 +48483,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Excel.QueryTable &lt;x15:queryTable></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.QueryTable" /> <c>&lt;x15:queryTable></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -48873,7 +48851,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Tables &lt;x:tables></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Tables" /> <c>&lt;x:tables></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -49124,7 +49102,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "webPr");
-            builder.AddChild<Tables>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Tables>();
             builder.AddElement<WebQueryProperties>()
 .AddAttribute(0, "xml", a => a.XmlSource)
 .AddAttribute(0, "sourceData", a => a.SourceData)
@@ -49171,7 +49149,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TextFields &lt;x:textFields></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TextFields" /> <c>&lt;x:textFields></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -49470,7 +49448,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "textPr");
-            builder.AddChild<TextFields>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TextFields>();
             builder.AddElement<TextProperties>()
 .AddAttribute(0, "prompt", a => a.Prompt)
 .AddAttribute(0, "fileType", a => a.FileType)
@@ -49524,7 +49502,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Parameter &lt;x:parameter></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Parameter" /> <c>&lt;x:parameter></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -49583,7 +49561,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "parameters");
-            builder.AddChild<Parameter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Parameter>();
             builder.AddElement<Parameters>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -49604,7 +49582,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ConnectionExtension &lt;x:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ConnectionExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -49647,7 +49625,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.AddChild<ConnectionExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConnectionExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConnectionExtension), 0, 0)
@@ -49666,8 +49644,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.Connection &lt;x14:connection></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Excel.Connection &lt;x15:connection></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Connection" /> <c>&lt;x14:connection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.Connection" /> <c>&lt;x15:connection></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -49754,7 +49732,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TextField &lt;x:textField></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TextField" /> <c>&lt;x:textField></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -49813,7 +49791,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "textFields");
-            builder.AddChild<TextField>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TextField>();
             builder.AddElement<TextFields>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -49834,9 +49812,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>WorksheetSource &lt;x:worksheetSource></description></item>
-    ///   <item><description>Consolidation &lt;x:consolidation></description></item>
-    ///   <item><description>CacheSourceExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WorksheetSource" /> <c>&lt;x:worksheetSource></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Consolidation" /> <c>&lt;x:consolidation></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -49911,9 +49889,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cacheSource");
-            builder.AddChild<WorksheetSource>();
-            builder.AddChild<Consolidation>();
-            builder.AddChild<CacheSourceExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorksheetSource>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Consolidation>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtensionList>();
             builder.AddElement<CacheSource>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
@@ -49981,7 +49959,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CacheField &lt;x:cacheField></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CacheField" /> <c>&lt;x:cacheField></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -50040,7 +50018,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cacheFields");
-            builder.AddChild<CacheField>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CacheField>();
             builder.AddElement<CacheFields>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -50061,7 +50039,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CacheHierarchy &lt;x:cacheHierarchy></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CacheHierarchy" /> <c>&lt;x:cacheHierarchy></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -50120,7 +50098,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cacheHierarchies");
-            builder.AddChild<CacheHierarchy>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CacheHierarchy>();
             builder.AddElement<CacheHierarchies>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -50141,7 +50119,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Kpi &lt;x:kpi></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Kpi" /> <c>&lt;x:kpi></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -50200,7 +50178,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "kpis");
-            builder.AddChild<Kpi>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Kpi>();
             builder.AddElement<Kpis>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -50221,11 +50199,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Entries &lt;x:entries></description></item>
-    ///   <item><description>Sets &lt;x:sets></description></item>
-    ///   <item><description>QueryCache &lt;x:queryCache></description></item>
-    ///   <item><description>ServerFormats &lt;x:serverFormats></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Entries" /> <c>&lt;x:entries></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Sets" /> <c>&lt;x:sets></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.QueryCache" /> <c>&lt;x:queryCache></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ServerFormats" /> <c>&lt;x:serverFormats></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -50268,11 +50246,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "tupleCache");
-            builder.AddChild<Entries>();
-            builder.AddChild<Sets>();
-            builder.AddChild<QueryCache>();
-            builder.AddChild<ServerFormats>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Entries>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Sets>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.QueryCache>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ServerFormats>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Entries), 0, 1),
@@ -50360,7 +50338,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CalculatedItem &lt;x:calculatedItem></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CalculatedItem" /> <c>&lt;x:calculatedItem></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -50419,7 +50397,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "calculatedItems");
-            builder.AddChild<CalculatedItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CalculatedItem>();
             builder.AddElement<CalculatedItems>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -50440,7 +50418,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CalculatedMember &lt;x:calculatedMember></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CalculatedMember" /> <c>&lt;x:calculatedMember></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -50499,7 +50477,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "calculatedMembers");
-            builder.AddChild<CalculatedMember>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CalculatedMember>();
             builder.AddElement<CalculatedMembers>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -50520,7 +50498,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Dimension &lt;x:dimension></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Dimension" /> <c>&lt;x:dimension></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -50579,7 +50557,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dimensions");
-            builder.AddChild<Dimension>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Dimension>();
             builder.AddElement<Dimensions>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -50600,7 +50578,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>MeasureGroup &lt;x:measureGroup></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MeasureGroup" /> <c>&lt;x:measureGroup></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -50659,7 +50637,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "measureGroups");
-            builder.AddChild<MeasureGroup>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MeasureGroup>();
             builder.AddElement<MeasureGroups>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -50680,7 +50658,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>MeasureDimensionMap &lt;x:map></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MeasureDimensionMap" /> <c>&lt;x:map></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -50739,7 +50717,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "maps");
-            builder.AddChild<MeasureDimensionMap>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MeasureDimensionMap>();
             builder.AddElement<Maps>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -50760,7 +50738,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PivotCacheDefinitionExtension &lt;x:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -50803,7 +50781,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.AddChild<PivotCacheDefinitionExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtension), 0, 0)
@@ -50822,10 +50800,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.PivotCacheDefinition &lt;x14:pivotCacheDefinition></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Excel.PivotCacheDecoupled &lt;x15:pivotCacheDecoupled></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Excel.TimelinePivotCacheDefinition &lt;x15:timelinePivotCacheDefinition></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion &lt;x15:pivotCacheIdVersion></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotCacheDefinition" /> <c>&lt;x14:pivotCacheDefinition></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotCacheDecoupled" /> <c>&lt;x15:pivotCacheDecoupled></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelinePivotCacheDefinition" /> <c>&lt;x15:timelinePivotCacheDefinition></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion" /> <c>&lt;x15:pivotCacheIdVersion></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -50916,12 +50894,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>MissingItem &lt;x:m></description></item>
-    ///   <item><description>NumberItem &lt;x:n></description></item>
-    ///   <item><description>BooleanItem &lt;x:b></description></item>
-    ///   <item><description>ErrorItem &lt;x:e></description></item>
-    ///   <item><description>StringItem &lt;x:s></description></item>
-    ///   <item><description>DateTimeItem &lt;x:d></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MissingItem" /> <c>&lt;x:m></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberItem" /> <c>&lt;x:n></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.BooleanItem" /> <c>&lt;x:b></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ErrorItem" /> <c>&lt;x:e></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.StringItem" /> <c>&lt;x:s></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DateTimeItem" /> <c>&lt;x:d></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -51188,12 +51166,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sharedItems");
-            builder.AddChild<MissingItem>();
-            builder.AddChild<NumberItem>();
-            builder.AddChild<BooleanItem>();
-            builder.AddChild<ErrorItem>();
-            builder.AddChild<StringItem>();
-            builder.AddChild<DateTimeItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MissingItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.BooleanItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ErrorItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.StringItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DateTimeItem>();
             builder.AddElement<SharedItems>()
 .AddAttribute(0, "containsSemiMixedTypes", a => a.ContainsSemiMixedTypes)
 .AddAttribute(0, "containsNonDate", a => a.ContainsNonDate)
@@ -51235,9 +51213,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RangeProperties &lt;x:rangePr></description></item>
-    ///   <item><description>DiscreteProperties &lt;x:discretePr></description></item>
-    ///   <item><description>GroupItems &lt;x:groupItems></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RangeProperties" /> <c>&lt;x:rangePr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DiscreteProperties" /> <c>&lt;x:discretePr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.GroupItems" /> <c>&lt;x:groupItems></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -51312,9 +51290,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "fieldGroup");
-            builder.AddChild<RangeProperties>();
-            builder.AddChild<DiscreteProperties>();
-            builder.AddChild<GroupItems>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RangeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DiscreteProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.GroupItems>();
             builder.AddElement<FieldGroup>()
 .AddAttribute(0, "par", a => a.ParentId)
 .AddAttribute(0, "base", a => a.Base);
@@ -51341,7 +51319,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CacheFieldExtension &lt;x:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CacheFieldExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -51384,7 +51362,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.AddChild<CacheFieldExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CacheFieldExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheFieldExtension), 0, 0)
@@ -51403,8 +51381,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.CacheField &lt;x14:cacheField></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueNames &lt;x15:cachedUniqueNames></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.CacheField" /> <c>&lt;x14:cacheField></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueNames" /> <c>&lt;x15:cachedUniqueNames></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -51491,7 +51469,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>FieldUsage &lt;x:fieldUsage></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FieldUsage" /> <c>&lt;x:fieldUsage></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -51550,7 +51528,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "fieldsUsage");
-            builder.AddChild<FieldUsage>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FieldUsage>();
             builder.AddElement<FieldsUsage>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -51571,7 +51549,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>GroupLevel &lt;x:groupLevel></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.GroupLevel" /> <c>&lt;x:groupLevel></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -51630,7 +51608,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "groupLevels");
-            builder.AddChild<GroupLevel>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.GroupLevel>();
             builder.AddElement<GroupLevels>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -51651,7 +51629,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CacheHierarchyExtension &lt;x:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -51694,7 +51672,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.AddChild<CacheHierarchyExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtension), 0, 0)
@@ -51713,8 +51691,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.CacheHierarchy &lt;x14:cacheHierarchy></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Excel.CacheHierarchy &lt;x15:cacheHierarchy></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.CacheHierarchy" /> <c>&lt;x14:cacheHierarchy></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.CacheHierarchy" /> <c>&lt;x15:cacheHierarchy></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -51801,7 +51779,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CalculatedMemberExtension &lt;x:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -51844,7 +51822,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.AddChild<CalculatedMemberExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtension), 0, 0)
@@ -51863,8 +51841,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.CalculatedMember &lt;x14:calculatedMember></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Excel.CalculatedMember &lt;x15:calculatedMember></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.CalculatedMember" /> <c>&lt;x14:calculatedMember></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.CalculatedMember" /> <c>&lt;x15:calculatedMember></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -52093,7 +52071,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PivotField &lt;x:pivotField></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotField" /> <c>&lt;x:pivotField></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -52152,7 +52130,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pivotFields");
-            builder.AddChild<PivotField>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotField>();
             builder.AddElement<PivotFields>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -52173,7 +52151,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Field &lt;x:field></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Field" /> <c>&lt;x:field></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -52232,7 +52210,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rowFields");
-            builder.AddChild<Field>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Field>();
             builder.AddElement<RowFields>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -52253,7 +52231,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RowItem &lt;x:i></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RowItem" /> <c>&lt;x:i></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -52312,7 +52290,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rowItems");
-            builder.AddChild<RowItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowItem>();
             builder.AddElement<RowItems>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -52333,7 +52311,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Field &lt;x:field></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Field" /> <c>&lt;x:field></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -52392,7 +52370,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "colFields");
-            builder.AddChild<Field>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Field>();
             builder.AddElement<ColumnFields>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -52413,7 +52391,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RowItem &lt;x:i></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RowItem" /> <c>&lt;x:i></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -52472,7 +52450,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "colItems");
-            builder.AddChild<RowItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowItem>();
             builder.AddElement<ColumnItems>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -52493,7 +52471,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PageField &lt;x:pageField></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PageField" /> <c>&lt;x:pageField></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -52552,7 +52530,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pageFields");
-            builder.AddChild<PageField>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageField>();
             builder.AddElement<PageFields>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -52573,7 +52551,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DataField &lt;x:dataField></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataField" /> <c>&lt;x:dataField></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -52632,7 +52610,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dataFields");
-            builder.AddChild<DataField>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataField>();
             builder.AddElement<DataFields>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -52653,7 +52631,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Format &lt;x:format></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Format" /> <c>&lt;x:format></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -52712,7 +52690,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "formats");
-            builder.AddChild<Format>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Format>();
             builder.AddElement<Formats>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -52733,7 +52711,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ConditionalFormat &lt;x:conditionalFormat></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ConditionalFormat" /> <c>&lt;x:conditionalFormat></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -52792,7 +52770,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "conditionalFormats");
-            builder.AddChild<ConditionalFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormat>();
             builder.AddElement<ConditionalFormats>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -52813,7 +52791,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ChartFormat &lt;x:chartFormat></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ChartFormat" /> <c>&lt;x:chartFormat></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -52872,7 +52850,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "chartFormats");
-            builder.AddChild<ChartFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ChartFormat>();
             builder.AddElement<ChartFormats>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -52893,7 +52871,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PivotHierarchy &lt;x:pivotHierarchy></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotHierarchy" /> <c>&lt;x:pivotHierarchy></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -52952,7 +52930,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pivotHierarchies");
-            builder.AddChild<PivotHierarchy>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotHierarchy>();
             builder.AddElement<PivotHierarchies>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -53104,7 +53082,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PivotFilter &lt;x:filter></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotFilter" /> <c>&lt;x:filter></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -53163,7 +53141,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "filters");
-            builder.AddChild<PivotFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotFilter>();
             builder.AddElement<PivotFilters>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -53184,7 +53162,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RowHierarchyUsage &lt;x:rowHierarchyUsage></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RowHierarchyUsage" /> <c>&lt;x:rowHierarchyUsage></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -53243,7 +53221,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rowHierarchiesUsage");
-            builder.AddChild<RowHierarchyUsage>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowHierarchyUsage>();
             builder.AddElement<RowHierarchiesUsage>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -53264,7 +53242,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ColumnHierarchyUsage &lt;x:colHierarchyUsage></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchyUsage" /> <c>&lt;x:colHierarchyUsage></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -53323,7 +53301,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "colHierarchiesUsage");
-            builder.AddChild<ColumnHierarchyUsage>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchyUsage>();
             builder.AddElement<ColumnHierarchiesUsage>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -53344,7 +53322,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PivotTableDefinitionExtension &lt;x:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -53387,7 +53365,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.AddChild<PivotTableDefinitionExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtension), 0, 0)
@@ -53406,9 +53384,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.PivotTableDefinition &lt;x14:pivotTableDefinition></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Excel.PivotTableData &lt;x15:pivotTableData></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Excel.PivotTableUISettings &lt;x15:pivotTableUISettings></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotTableDefinition" /> <c>&lt;x14:pivotTableDefinition></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotTableData" /> <c>&lt;x15:pivotTableData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotTableUISettings" /> <c>&lt;x15:pivotTableUISettings></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -53497,7 +53475,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DataFieldExtension &lt;x:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataFieldExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -53540,7 +53518,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.AddChild<DataFieldExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataFieldExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataFieldExtension), 0, 0)
@@ -53559,8 +53537,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.DataField &lt;x14:dataField></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Excel.DataField &lt;x15:dataField></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DataField" /> <c>&lt;x14:dataField></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.DataField" /> <c>&lt;x15:dataField></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -53647,7 +53625,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PivotFilterExtension &lt;x:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -53690,7 +53668,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.AddChild<PivotFilterExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtension), 0, 0)
@@ -53709,10 +53687,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>QueryTableFields &lt;x:queryTableFields></description></item>
-    ///   <item><description>QueryTableDeletedFields &lt;x:queryTableDeletedFields></description></item>
-    ///   <item><description>SortState &lt;x:sortState></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.QueryTableFields" /> <c>&lt;x:queryTableFields></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.QueryTableDeletedFields" /> <c>&lt;x:queryTableDeletedFields></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortState" /> <c>&lt;x:sortState></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -53867,10 +53845,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "queryTableRefresh");
-            builder.AddChild<QueryTableFields>();
-            builder.AddChild<QueryTableDeletedFields>();
-            builder.AddChild<SortState>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.QueryTableFields>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.QueryTableDeletedFields>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortState>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<QueryTableRefresh>()
 .AddAttribute(0, "preserveSortFilterLayout", a => a.PreserveSortFilterLayout)
 .AddAttribute(0, "fieldIdWrapped", a => a.FieldIdWrapped)
@@ -53956,7 +53934,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>QueryTableExtension &lt;x:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.QueryTableExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -53999,7 +53977,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.AddChild<QueryTableExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.QueryTableExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryTableExtension), 0, 0)
@@ -54063,7 +54041,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ProtectedRange &lt;x:protectedRange></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ProtectedRange" /> <c>&lt;x:protectedRange></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -54106,7 +54084,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "protectedRanges");
-            builder.AddChild<ProtectedRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ProtectedRange>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ProtectedRange), 1, 0)
@@ -54125,7 +54103,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Scenario &lt;x:scenario></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Scenario" /> <c>&lt;x:scenario></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -54216,7 +54194,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "scenarios");
-            builder.AddChild<Scenario>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Scenario>();
             builder.AddElement<Scenarios>()
 .AddAttribute(0, "current", a => a.Current)
 .AddAttribute(0, "show", a => a.Show)
@@ -54239,7 +54217,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>MergeCell &lt;x:mergeCell></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MergeCell" /> <c>&lt;x:mergeCell></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -54298,7 +54276,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "mergeCells");
-            builder.AddChild<MergeCell>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MergeCell>();
             builder.AddElement<MergeCells>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -54319,7 +54297,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DataValidation &lt;x:dataValidation></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataValidation" /> <c>&lt;x:dataValidation></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -54426,7 +54404,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dataValidations");
-            builder.AddChild<DataValidation>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataValidation>();
             builder.AddElement<DataValidations>()
 .AddAttribute(0, "disablePrompts", a => a.DisablePrompts)
 .AddAttribute(0, "xWindow", a => a.XWindow)
@@ -54453,7 +54431,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Hyperlink &lt;x:hyperlink></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Hyperlink" /> <c>&lt;x:hyperlink></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -54496,7 +54474,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "hyperlinks");
-            builder.AddChild<Hyperlink>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Hyperlink>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Hyperlink), 1, 0)
@@ -54515,7 +54493,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CellWatch &lt;x:cellWatch></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellWatch" /> <c>&lt;x:cellWatch></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -54558,7 +54536,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cellWatches");
-            builder.AddChild<CellWatch>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellWatch>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellWatch), 1, 0)
@@ -54577,8 +54555,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>IgnoredError &lt;x:ignoredError></description></item>
-    ///   <item><description>ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.IgnoredError" /> <c>&lt;x:ignoredError></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -54621,8 +54599,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ignoredErrors");
-            builder.AddChild<IgnoredError>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.IgnoredError>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.IgnoredError), 1, 9),
@@ -54642,7 +54620,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TablePart &lt;x:tablePart></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TablePart" /> <c>&lt;x:tablePart></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -54701,7 +54679,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "tableParts");
-            builder.AddChild<TablePart>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TablePart>();
             builder.AddElement<TableParts>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -54722,7 +54700,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>WorksheetExtension &lt;x:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WorksheetExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -54765,7 +54743,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.AddChild<WorksheetExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorksheetExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorksheetExtension), 0, 0)
@@ -54784,14 +54762,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattings &lt;x14:conditionalFormattings></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.DataValidations &lt;x14:dataValidations></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.SparklineGroups &lt;x14:sparklineGroups></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.SlicerList &lt;x14:slicerList></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.ProtectedRanges &lt;x14:protectedRanges></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.IgnoredErrors &lt;x14:ignoredErrors></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Excel.WebExtensions &lt;x15:webExtensions></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Excel.TimelineReferences &lt;x15:timelineRefs></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattings" /> <c>&lt;x14:conditionalFormattings></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DataValidations" /> <c>&lt;x14:dataValidations></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SparklineGroups" /> <c>&lt;x14:sparklineGroups></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerList" /> <c>&lt;x14:slicerList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ProtectedRanges" /> <c>&lt;x14:protectedRanges></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.IgnoredErrors" /> <c>&lt;x14:ignoredErrors></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.WebExtensions" /> <c>&lt;x15:webExtensions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineReferences" /> <c>&lt;x15:timelineRefs></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -54890,7 +54868,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NumberingFormat &lt;x:numFmt></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -54949,7 +54927,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "numFmts");
-            builder.AddChild<NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
             builder.AddElement<NumberingFormats>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -54970,7 +54948,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Font &lt;x:font></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -55048,7 +55026,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "fonts");
-            builder.AddChild<Font>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Font>();
             builder.AddElement<Fonts>()
 .AddAttribute(0, "count", a => a.Count)
 .AddAttribute(55, "knownFonts", a => a.KnownFonts, aBuilder =>
@@ -55073,7 +55051,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Fill &lt;x:fill></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Fill" /> <c>&lt;x:fill></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -55132,7 +55110,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "fills");
-            builder.AddChild<Fill>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Fill>();
             builder.AddElement<Fills>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -55153,7 +55131,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Border &lt;x:border></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -55212,7 +55190,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "borders");
-            builder.AddChild<Border>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Border>();
             builder.AddElement<Borders>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -55233,7 +55211,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CellFormat &lt;x:xf></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellFormat" /> <c>&lt;x:xf></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -55292,7 +55270,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cellStyleXfs");
-            builder.AddChild<CellFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellFormat>();
             builder.AddElement<CellStyleFormats>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -55313,7 +55291,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CellFormat &lt;x:xf></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellFormat" /> <c>&lt;x:xf></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -55372,7 +55350,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cellXfs");
-            builder.AddChild<CellFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellFormat>();
             builder.AddElement<CellFormats>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -55393,7 +55371,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CellStyle &lt;x:cellStyle></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellStyle" /> <c>&lt;x:cellStyle></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -55452,7 +55430,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cellStyles");
-            builder.AddChild<CellStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellStyle>();
             builder.AddElement<CellStyles>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -55473,7 +55451,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DifferentialFormat &lt;x:dxf></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat" /> <c>&lt;x:dxf></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -55532,7 +55510,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dxfs");
-            builder.AddChild<DifferentialFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat>();
             builder.AddElement<DifferentialFormats>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -55553,7 +55531,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TableStyle &lt;x:tableStyle></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableStyle" /> <c>&lt;x:tableStyle></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -55644,7 +55622,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "tableStyles");
-            builder.AddChild<TableStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableStyle>();
             builder.AddElement<TableStyles>()
 .AddAttribute(0, "count", a => a.Count)
 .AddAttribute(0, "defaultTableStyle", a => a.DefaultTableStyle)
@@ -55668,8 +55646,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>IndexedColors &lt;x:indexedColors></description></item>
-    ///   <item><description>MruColors &lt;x:mruColors></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.IndexedColors" /> <c>&lt;x:indexedColors></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MruColors" /> <c>&lt;x:mruColors></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -55712,8 +55690,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "colors");
-            builder.AddChild<IndexedColors>();
-            builder.AddChild<MruColors>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.IndexedColors>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MruColors>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.IndexedColors), 0, 1),
@@ -55759,7 +55737,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>StylesheetExtension &lt;x:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.StylesheetExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -55802,7 +55780,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.AddChild<StylesheetExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.StylesheetExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.StylesheetExtension), 0, 0)
@@ -55821,10 +55799,10 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.DifferentialFormats &lt;x14:dxfs></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.SlicerStyles &lt;x14:slicerStyles></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Excel.DifferentialFormats &lt;x15:dxfs></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Excel.TimelineStyles &lt;x15:timelineStyles></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DifferentialFormats" /> <c>&lt;x14:dxfs></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerStyles" /> <c>&lt;x14:slicerStyles></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.DifferentialFormats" /> <c>&lt;x15:dxfs></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineStyles" /> <c>&lt;x15:timelineStyles></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -56795,7 +56773,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>WorkbookView &lt;x:workbookView></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WorkbookView" /> <c>&lt;x:workbookView></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -56838,7 +56816,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "bookViews");
-            builder.AddChild<WorkbookView>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorkbookView>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorkbookView), 1, 0)
@@ -56857,7 +56835,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Sheet &lt;x:sheet></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Sheet" /> <c>&lt;x:sheet></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -56900,7 +56878,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheets");
-            builder.AddChild<Sheet>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Sheet>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Sheet), 1, 32767)
@@ -56919,7 +56897,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>FunctionGroup &lt;x:functionGroup></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FunctionGroup" /> <c>&lt;x:functionGroup></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -56978,7 +56956,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "functionGroups");
-            builder.AddChild<FunctionGroup>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FunctionGroup>();
             builder.AddElement<FunctionGroups>()
 .AddAttribute(0, "builtInGroupCount", a => a.BuiltInGroupCount);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 0)
@@ -57000,7 +56978,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExternalReference &lt;x:externalReference></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExternalReference" /> <c>&lt;x:externalReference></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -57043,7 +57021,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "externalReferences");
-            builder.AddChild<ExternalReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExternalReference>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalReference), 1, 65534)
@@ -57062,7 +57040,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DefinedName &lt;x:definedName></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DefinedName" /> <c>&lt;x:definedName></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -57105,7 +57083,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "definedNames");
-            builder.AddChild<DefinedName>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DefinedName>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DefinedName), 0, 0)
@@ -57421,7 +57399,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CustomWorkbookView &lt;x:customWorkbookView></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookView" /> <c>&lt;x:customWorkbookView></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -57464,7 +57442,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "customWorkbookViews");
-            builder.AddChild<CustomWorkbookView>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookView>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookView), 1, 0)
@@ -57483,7 +57461,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PivotCache &lt;x:pivotCache></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotCache" /> <c>&lt;x:pivotCache></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -57526,7 +57504,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pivotCaches");
-            builder.AddChild<PivotCache>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotCache>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCache), 1, 0)
@@ -57822,7 +57800,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>WebPublishObject &lt;x:webPublishObject></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WebPublishObject" /> <c>&lt;x:webPublishObject></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -57881,7 +57859,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "webPublishObjects");
-            builder.AddChild<WebPublishObject>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WebPublishObject>();
             builder.AddElement<WebPublishObjects>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -57902,7 +57880,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>WorkbookExtension &lt;x:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WorkbookExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -57945,7 +57923,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.AddChild<WorkbookExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorkbookExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorkbookExtension), 0, 0)
@@ -57964,17 +57942,17 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.DefinedNames &lt;x14:definedNames></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.PivotCaches &lt;x14:pivotCaches></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.SlicerCaches &lt;x14:slicerCaches></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Excel.SlicerCaches &lt;x15:slicerCaches></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.WorkbookProperties &lt;x14:workbookPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Excel.PivotCaches &lt;x15:pivotCaches></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Excel.PivotTableReferences &lt;x15:pivotTableReferences></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotCaches &lt;x15:timelineCachePivotCaches></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReferences &lt;x15:timelineCacheRefs></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties &lt;x15:workbookPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Excel.DataModel &lt;x15:dataModel></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DefinedNames" /> <c>&lt;x14:definedNames></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotCaches" /> <c>&lt;x14:pivotCaches></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCaches" /> <c>&lt;x14:slicerCaches></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.SlicerCaches" /> <c>&lt;x15:slicerCaches></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.WorkbookProperties" /> <c>&lt;x14:workbookPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotCaches" /> <c>&lt;x15:pivotCaches></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotTableReferences" /> <c>&lt;x15:pivotTableReferences></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotCaches" /> <c>&lt;x15:timelineCachePivotCaches></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReferences" /> <c>&lt;x15:timelineCacheRefs></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties" /> <c>&lt;x15:workbookPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.DataModel" /> <c>&lt;x15:dataModel></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete

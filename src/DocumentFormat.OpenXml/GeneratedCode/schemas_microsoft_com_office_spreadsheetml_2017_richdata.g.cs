@@ -72,8 +72,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RichValue &lt;xlrd:rv></description></item>
-    ///   <item><description>ExtensionList &lt;xlrd:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValue" /> <c>&lt;xlrd:rv></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData.ExtensionList" /> <c>&lt;xlrd:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -133,8 +133,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(102, "rvData");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<RichValue>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData.ExtensionList>();
             builder.AddElement<RichValueData>()
 .AddAttribute(0, "count", a => a.Count, aBuilder =>
 {
@@ -190,8 +190,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RichValueStructure &lt;xlrd:s></description></item>
-    ///   <item><description>ExtensionList &lt;xlrd:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueStructure" /> <c>&lt;xlrd:s></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData.ExtensionList" /> <c>&lt;xlrd:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -251,8 +251,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(102, "rvStructures");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<RichValueStructure>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueStructure>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData.ExtensionList>();
             builder.AddElement<RichValueStructures>()
 .AddAttribute(0, "count", a => a.Count, aBuilder =>
 {
@@ -308,8 +308,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RichValueFallback &lt;xlrd:fb></description></item>
-    ///   <item><description>Value &lt;xlrd:v></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueFallback" /> <c>&lt;xlrd:fb></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData.Value" /> <c>&lt;xlrd:v></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -369,8 +369,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(102, "rv");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<RichValueFallback>();
-            builder.AddChild<Value>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueFallback>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData.Value>();
             builder.AddElement<RichValue>()
 .AddAttribute(0, "s", a => a.S, aBuilder =>
 {
@@ -408,7 +408,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Extension &lt;x:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -577,7 +577,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Key &lt;xlrd:k></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData.Key" /> <c>&lt;xlrd:k></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -637,7 +637,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(102, "s");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<Key>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData.Key>();
             builder.AddElement<RichValueStructure>()
 .AddAttribute(0, "t", a => a.T, aBuilder =>
 {

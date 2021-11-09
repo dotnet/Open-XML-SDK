@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Source &lt;b:Source></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Source" /> <c>&lt;b:Source></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -113,7 +113,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Sources");
-            builder.AddChild<Source>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Source>();
             builder.AddElement<Sources>()
 .AddAttribute(0, "SelectedStyle", a => a.SelectedStyle, aBuilder =>
 {
@@ -145,9 +145,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Last &lt;b:Last></description></item>
-    ///   <item><description>First &lt;b:First></description></item>
-    ///   <item><description>Middle &lt;b:Middle></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Last" /> <c>&lt;b:Last></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.First" /> <c>&lt;b:First></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Middle" /> <c>&lt;b:Middle></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -190,9 +190,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Person");
-            builder.AddChild<Last>();
-            builder.AddChild<First>();
-            builder.AddChild<Middle>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Last>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.First>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Middle>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Last), 0, 0),
@@ -2427,7 +2427,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Person &lt;b:Person></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Person" /> <c>&lt;b:Person></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2470,7 +2470,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "NameList");
-            builder.AddChild<Person>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Person>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Person), 1, 0)
@@ -2489,7 +2489,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2532,6 +2532,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Artist");
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.NameList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2550,7 +2551,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2593,6 +2594,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "BookAuthor");
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.NameList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2611,7 +2613,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2654,6 +2656,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Compiler");
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.NameList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2672,7 +2675,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2715,6 +2718,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Composer");
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.NameList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2733,7 +2737,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2776,6 +2780,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Conductor");
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.NameList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2794,7 +2799,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2837,6 +2842,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Counsel");
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.NameList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2855,7 +2861,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2898,6 +2904,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Director");
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.NameList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2916,7 +2923,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2959,6 +2966,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Editor");
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.NameList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2977,7 +2985,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3020,6 +3028,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Interviewee");
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.NameList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -3038,7 +3047,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3081,6 +3090,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Interviewer");
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.NameList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -3099,7 +3109,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3142,6 +3152,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Inventor");
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.NameList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -3160,7 +3171,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3203,6 +3214,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "ProducerName");
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.NameList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -3221,7 +3233,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3264,6 +3276,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Translator");
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.NameList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -3282,7 +3295,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3325,6 +3338,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Writer");
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.NameList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -3340,12 +3354,6 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
-    /// </list>
-    /// </remark>
     public abstract partial class NameType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3382,7 +3390,6 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<NameList>();
         }
 
         /// <summary>
@@ -3407,8 +3414,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
-    ///   <item><description>Corporate &lt;b:Corporate></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Corporate" /> <c>&lt;b:Corporate></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3451,6 +3458,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Author");
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.NameList>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Corporate>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
@@ -3473,8 +3482,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
-    ///   <item><description>Corporate &lt;b:Corporate></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Corporate" /> <c>&lt;b:Corporate></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3517,6 +3526,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Performer");
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.NameList>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Corporate>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
@@ -3536,13 +3547,6 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
-    ///   <item><description>Corporate &lt;b:Corporate></description></item>
-    /// </list>
-    /// </remark>
     public abstract partial class NameOrCorporateType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3579,8 +3583,6 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<NameList>();
-            builder.AddChild<Corporate>();
         }
 
         /// <summary>
@@ -3618,22 +3620,22 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Artist &lt;b:Artist></description></item>
-    ///   <item><description>Author &lt;b:Author></description></item>
-    ///   <item><description>BookAuthor &lt;b:BookAuthor></description></item>
-    ///   <item><description>Compiler &lt;b:Compiler></description></item>
-    ///   <item><description>Composer &lt;b:Composer></description></item>
-    ///   <item><description>Conductor &lt;b:Conductor></description></item>
-    ///   <item><description>Counsel &lt;b:Counsel></description></item>
-    ///   <item><description>Director &lt;b:Director></description></item>
-    ///   <item><description>Editor &lt;b:Editor></description></item>
-    ///   <item><description>Interviewee &lt;b:Interviewee></description></item>
-    ///   <item><description>Interviewer &lt;b:Interviewer></description></item>
-    ///   <item><description>Inventor &lt;b:Inventor></description></item>
-    ///   <item><description>Performer &lt;b:Performer></description></item>
-    ///   <item><description>ProducerName &lt;b:ProducerName></description></item>
-    ///   <item><description>Translator &lt;b:Translator></description></item>
-    ///   <item><description>Writer &lt;b:Writer></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Artist" /> <c>&lt;b:Artist></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Author" /> <c>&lt;b:Author></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.BookAuthor" /> <c>&lt;b:BookAuthor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Compiler" /> <c>&lt;b:Compiler></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Composer" /> <c>&lt;b:Composer></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Conductor" /> <c>&lt;b:Conductor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Counsel" /> <c>&lt;b:Counsel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Director" /> <c>&lt;b:Director></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Editor" /> <c>&lt;b:Editor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Interviewee" /> <c>&lt;b:Interviewee></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Interviewer" /> <c>&lt;b:Interviewer></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Inventor" /> <c>&lt;b:Inventor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Performer" /> <c>&lt;b:Performer></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.ProducerName" /> <c>&lt;b:ProducerName></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Translator" /> <c>&lt;b:Translator></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Writer" /> <c>&lt;b:Writer></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3676,22 +3678,22 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Author");
-            builder.AddChild<Artist>();
-            builder.AddChild<Author>();
-            builder.AddChild<BookAuthor>();
-            builder.AddChild<Compiler>();
-            builder.AddChild<Composer>();
-            builder.AddChild<Conductor>();
-            builder.AddChild<Counsel>();
-            builder.AddChild<Director>();
-            builder.AddChild<Editor>();
-            builder.AddChild<Interviewee>();
-            builder.AddChild<Interviewer>();
-            builder.AddChild<Inventor>();
-            builder.AddChild<Performer>();
-            builder.AddChild<ProducerName>();
-            builder.AddChild<Translator>();
-            builder.AddChild<Writer>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Artist>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Author>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.BookAuthor>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Compiler>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Composer>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Conductor>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Counsel>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Director>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Editor>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Interviewee>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Interviewer>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Inventor>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Performer>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.ProducerName>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Translator>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Writer>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
@@ -3977,58 +3979,58 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>AbbreviatedCaseNumber &lt;b:AbbreviatedCaseNumber></description></item>
-    ///   <item><description>AlbumTitle &lt;b:AlbumTitle></description></item>
-    ///   <item><description>AuthorList &lt;b:Author></description></item>
-    ///   <item><description>BookTitle &lt;b:BookTitle></description></item>
-    ///   <item><description>Broadcaster &lt;b:Broadcaster></description></item>
-    ///   <item><description>BroadcastTitle &lt;b:BroadcastTitle></description></item>
-    ///   <item><description>CaseNumber &lt;b:CaseNumber></description></item>
-    ///   <item><description>ChapterNumber &lt;b:ChapterNumber></description></item>
-    ///   <item><description>City &lt;b:City></description></item>
-    ///   <item><description>Comments &lt;b:Comments></description></item>
-    ///   <item><description>ConferenceName &lt;b:ConferenceName></description></item>
-    ///   <item><description>CountryRegion &lt;b:CountryRegion></description></item>
-    ///   <item><description>Court &lt;b:Court></description></item>
-    ///   <item><description>Day &lt;b:Day></description></item>
-    ///   <item><description>DayAccessed &lt;b:DayAccessed></description></item>
-    ///   <item><description>Department &lt;b:Department></description></item>
-    ///   <item><description>Distributor &lt;b:Distributor></description></item>
-    ///   <item><description>Edition &lt;b:Edition></description></item>
-    ///   <item><description>GuidString &lt;b:Guid></description></item>
-    ///   <item><description>Institution &lt;b:Institution></description></item>
-    ///   <item><description>InternetSiteTitle &lt;b:InternetSiteTitle></description></item>
-    ///   <item><description>Issue &lt;b:Issue></description></item>
-    ///   <item><description>JournalName &lt;b:JournalName></description></item>
-    ///   <item><description>LcId &lt;b:LCID></description></item>
-    ///   <item><description>Medium &lt;b:Medium></description></item>
-    ///   <item><description>Month &lt;b:Month></description></item>
-    ///   <item><description>MonthAccessed &lt;b:MonthAccessed></description></item>
-    ///   <item><description>NumberVolumes &lt;b:NumberVolumes></description></item>
-    ///   <item><description>Pages &lt;b:Pages></description></item>
-    ///   <item><description>PatentNumber &lt;b:PatentNumber></description></item>
-    ///   <item><description>PeriodicalTitle &lt;b:PeriodicalTitle></description></item>
-    ///   <item><description>ProductionCompany &lt;b:ProductionCompany></description></item>
-    ///   <item><description>PublicationTitle &lt;b:PublicationTitle></description></item>
-    ///   <item><description>Publisher &lt;b:Publisher></description></item>
-    ///   <item><description>RecordingNumber &lt;b:RecordingNumber></description></item>
-    ///   <item><description>ReferenceOrder &lt;b:RefOrder></description></item>
-    ///   <item><description>Reporter &lt;b:Reporter></description></item>
-    ///   <item><description>SourceType &lt;b:SourceType></description></item>
-    ///   <item><description>ShortTitle &lt;b:ShortTitle></description></item>
-    ///   <item><description>StandardNumber &lt;b:StandardNumber></description></item>
-    ///   <item><description>StateProvince &lt;b:StateProvince></description></item>
-    ///   <item><description>Station &lt;b:Station></description></item>
-    ///   <item><description>Tag &lt;b:Tag></description></item>
-    ///   <item><description>Theater &lt;b:Theater></description></item>
-    ///   <item><description>ThesisType &lt;b:ThesisType></description></item>
-    ///   <item><description>Title &lt;b:Title></description></item>
-    ///   <item><description>PatentType &lt;b:Type></description></item>
-    ///   <item><description>UrlString &lt;b:URL></description></item>
-    ///   <item><description>Version &lt;b:Version></description></item>
-    ///   <item><description>Volume &lt;b:Volume></description></item>
-    ///   <item><description>Year &lt;b:Year></description></item>
-    ///   <item><description>YearAccessed &lt;b:YearAccessed></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber" /> <c>&lt;b:AbbreviatedCaseNumber></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.AlbumTitle" /> <c>&lt;b:AlbumTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.AuthorList" /> <c>&lt;b:Author></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.BookTitle" /> <c>&lt;b:BookTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Broadcaster" /> <c>&lt;b:Broadcaster></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.BroadcastTitle" /> <c>&lt;b:BroadcastTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.CaseNumber" /> <c>&lt;b:CaseNumber></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.ChapterNumber" /> <c>&lt;b:ChapterNumber></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.City" /> <c>&lt;b:City></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Comments" /> <c>&lt;b:Comments></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.ConferenceName" /> <c>&lt;b:ConferenceName></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.CountryRegion" /> <c>&lt;b:CountryRegion></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Court" /> <c>&lt;b:Court></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Day" /> <c>&lt;b:Day></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.DayAccessed" /> <c>&lt;b:DayAccessed></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Department" /> <c>&lt;b:Department></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Distributor" /> <c>&lt;b:Distributor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Edition" /> <c>&lt;b:Edition></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.GuidString" /> <c>&lt;b:Guid></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Institution" /> <c>&lt;b:Institution></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.InternetSiteTitle" /> <c>&lt;b:InternetSiteTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Issue" /> <c>&lt;b:Issue></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.JournalName" /> <c>&lt;b:JournalName></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.LcId" /> <c>&lt;b:LCID></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Medium" /> <c>&lt;b:Medium></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Month" /> <c>&lt;b:Month></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.MonthAccessed" /> <c>&lt;b:MonthAccessed></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NumberVolumes" /> <c>&lt;b:NumberVolumes></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Pages" /> <c>&lt;b:Pages></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.PatentNumber" /> <c>&lt;b:PatentNumber></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.PeriodicalTitle" /> <c>&lt;b:PeriodicalTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.ProductionCompany" /> <c>&lt;b:ProductionCompany></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.PublicationTitle" /> <c>&lt;b:PublicationTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Publisher" /> <c>&lt;b:Publisher></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.RecordingNumber" /> <c>&lt;b:RecordingNumber></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.ReferenceOrder" /> <c>&lt;b:RefOrder></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Reporter" /> <c>&lt;b:Reporter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.SourceType" /> <c>&lt;b:SourceType></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.ShortTitle" /> <c>&lt;b:ShortTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.StandardNumber" /> <c>&lt;b:StandardNumber></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.StateProvince" /> <c>&lt;b:StateProvince></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Station" /> <c>&lt;b:Station></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Tag" /> <c>&lt;b:Tag></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Theater" /> <c>&lt;b:Theater></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.ThesisType" /> <c>&lt;b:ThesisType></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Title" /> <c>&lt;b:Title></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.PatentType" /> <c>&lt;b:Type></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.UrlString" /> <c>&lt;b:URL></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Version" /> <c>&lt;b:Version></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Volume" /> <c>&lt;b:Volume></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Year" /> <c>&lt;b:Year></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.YearAccessed" /> <c>&lt;b:YearAccessed></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4071,58 +4073,58 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Source");
-            builder.AddChild<AbbreviatedCaseNumber>();
-            builder.AddChild<AlbumTitle>();
-            builder.AddChild<AuthorList>();
-            builder.AddChild<BookTitle>();
-            builder.AddChild<Broadcaster>();
-            builder.AddChild<BroadcastTitle>();
-            builder.AddChild<CaseNumber>();
-            builder.AddChild<ChapterNumber>();
-            builder.AddChild<City>();
-            builder.AddChild<Comments>();
-            builder.AddChild<ConferenceName>();
-            builder.AddChild<CountryRegion>();
-            builder.AddChild<Court>();
-            builder.AddChild<Day>();
-            builder.AddChild<DayAccessed>();
-            builder.AddChild<Department>();
-            builder.AddChild<Distributor>();
-            builder.AddChild<Edition>();
-            builder.AddChild<GuidString>();
-            builder.AddChild<Institution>();
-            builder.AddChild<InternetSiteTitle>();
-            builder.AddChild<Issue>();
-            builder.AddChild<JournalName>();
-            builder.AddChild<LcId>();
-            builder.AddChild<Medium>();
-            builder.AddChild<Month>();
-            builder.AddChild<MonthAccessed>();
-            builder.AddChild<NumberVolumes>();
-            builder.AddChild<Pages>();
-            builder.AddChild<PatentNumber>();
-            builder.AddChild<PeriodicalTitle>();
-            builder.AddChild<ProductionCompany>();
-            builder.AddChild<PublicationTitle>();
-            builder.AddChild<Publisher>();
-            builder.AddChild<RecordingNumber>();
-            builder.AddChild<ReferenceOrder>();
-            builder.AddChild<Reporter>();
-            builder.AddChild<SourceType>();
-            builder.AddChild<ShortTitle>();
-            builder.AddChild<StandardNumber>();
-            builder.AddChild<StateProvince>();
-            builder.AddChild<Station>();
-            builder.AddChild<Tag>();
-            builder.AddChild<Theater>();
-            builder.AddChild<ThesisType>();
-            builder.AddChild<Title>();
-            builder.AddChild<PatentType>();
-            builder.AddChild<UrlString>();
-            builder.AddChild<Version>();
-            builder.AddChild<Volume>();
-            builder.AddChild<Year>();
-            builder.AddChild<YearAccessed>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.AlbumTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.AuthorList>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.BookTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Broadcaster>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.BroadcastTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.CaseNumber>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.ChapterNumber>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.City>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Comments>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.ConferenceName>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.CountryRegion>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Court>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Day>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.DayAccessed>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Department>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Distributor>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Edition>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.GuidString>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Institution>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.InternetSiteTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Issue>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.JournalName>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.LcId>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Medium>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Month>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.MonthAccessed>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.NumberVolumes>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Pages>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.PatentNumber>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.PeriodicalTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.ProductionCompany>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.PublicationTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Publisher>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.RecordingNumber>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.ReferenceOrder>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Reporter>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.SourceType>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.ShortTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.StandardNumber>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.StateProvince>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Station>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Tag>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Theater>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.ThesisType>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Title>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.PatentType>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.UrlString>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Version>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Volume>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Year>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.YearAccessed>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)

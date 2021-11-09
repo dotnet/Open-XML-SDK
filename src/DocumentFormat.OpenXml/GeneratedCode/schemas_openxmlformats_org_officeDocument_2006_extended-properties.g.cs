@@ -23,33 +23,33 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Template &lt;ap:Template></description></item>
-    ///   <item><description>Manager &lt;ap:Manager></description></item>
-    ///   <item><description>Company &lt;ap:Company></description></item>
-    ///   <item><description>Pages &lt;ap:Pages></description></item>
-    ///   <item><description>Words &lt;ap:Words></description></item>
-    ///   <item><description>Characters &lt;ap:Characters></description></item>
-    ///   <item><description>PresentationFormat &lt;ap:PresentationFormat></description></item>
-    ///   <item><description>Lines &lt;ap:Lines></description></item>
-    ///   <item><description>Paragraphs &lt;ap:Paragraphs></description></item>
-    ///   <item><description>Slides &lt;ap:Slides></description></item>
-    ///   <item><description>Notes &lt;ap:Notes></description></item>
-    ///   <item><description>TotalTime &lt;ap:TotalTime></description></item>
-    ///   <item><description>HiddenSlides &lt;ap:HiddenSlides></description></item>
-    ///   <item><description>MultimediaClips &lt;ap:MMClips></description></item>
-    ///   <item><description>ScaleCrop &lt;ap:ScaleCrop></description></item>
-    ///   <item><description>HeadingPairs &lt;ap:HeadingPairs></description></item>
-    ///   <item><description>TitlesOfParts &lt;ap:TitlesOfParts></description></item>
-    ///   <item><description>LinksUpToDate &lt;ap:LinksUpToDate></description></item>
-    ///   <item><description>CharactersWithSpaces &lt;ap:CharactersWithSpaces></description></item>
-    ///   <item><description>SharedDocument &lt;ap:SharedDoc></description></item>
-    ///   <item><description>HyperlinkBase &lt;ap:HyperlinkBase></description></item>
-    ///   <item><description>HyperlinkList &lt;ap:HLinks></description></item>
-    ///   <item><description>HyperlinksChanged &lt;ap:HyperlinksChanged></description></item>
-    ///   <item><description>DigitalSignature &lt;ap:DigSig></description></item>
-    ///   <item><description>Application &lt;ap:Application></description></item>
-    ///   <item><description>ApplicationVersion &lt;ap:AppVersion></description></item>
-    ///   <item><description>DocumentSecurity &lt;ap:DocSecurity></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.Template" /> <c>&lt;ap:Template></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.Manager" /> <c>&lt;ap:Manager></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.Company" /> <c>&lt;ap:Company></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.Pages" /> <c>&lt;ap:Pages></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.Words" /> <c>&lt;ap:Words></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.Characters" /> <c>&lt;ap:Characters></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.PresentationFormat" /> <c>&lt;ap:PresentationFormat></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.Lines" /> <c>&lt;ap:Lines></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.Paragraphs" /> <c>&lt;ap:Paragraphs></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.Slides" /> <c>&lt;ap:Slides></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.Notes" /> <c>&lt;ap:Notes></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.TotalTime" /> <c>&lt;ap:TotalTime></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.HiddenSlides" /> <c>&lt;ap:HiddenSlides></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.MultimediaClips" /> <c>&lt;ap:MMClips></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.ScaleCrop" /> <c>&lt;ap:ScaleCrop></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.HeadingPairs" /> <c>&lt;ap:HeadingPairs></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts" /> <c>&lt;ap:TitlesOfParts></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.LinksUpToDate" /> <c>&lt;ap:LinksUpToDate></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.CharactersWithSpaces" /> <c>&lt;ap:CharactersWithSpaces></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.SharedDocument" /> <c>&lt;ap:SharedDoc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.HyperlinkBase" /> <c>&lt;ap:HyperlinkBase></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.HyperlinkList" /> <c>&lt;ap:HLinks></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.HyperlinksChanged" /> <c>&lt;ap:HyperlinksChanged></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.DigitalSignature" /> <c>&lt;ap:DigSig></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.Application" /> <c>&lt;ap:Application></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.ApplicationVersion" /> <c>&lt;ap:AppVersion></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.DocumentSecurity" /> <c>&lt;ap:DocSecurity></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -92,33 +92,33 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(3, "Properties");
-            builder.AddChild<Template>();
-            builder.AddChild<Manager>();
-            builder.AddChild<Company>();
-            builder.AddChild<Pages>();
-            builder.AddChild<Words>();
-            builder.AddChild<Characters>();
-            builder.AddChild<PresentationFormat>();
-            builder.AddChild<Lines>();
-            builder.AddChild<Paragraphs>();
-            builder.AddChild<Slides>();
-            builder.AddChild<Notes>();
-            builder.AddChild<TotalTime>();
-            builder.AddChild<HiddenSlides>();
-            builder.AddChild<MultimediaClips>();
-            builder.AddChild<ScaleCrop>();
-            builder.AddChild<HeadingPairs>();
-            builder.AddChild<TitlesOfParts>();
-            builder.AddChild<LinksUpToDate>();
-            builder.AddChild<CharactersWithSpaces>();
-            builder.AddChild<SharedDocument>();
-            builder.AddChild<HyperlinkBase>();
-            builder.AddChild<HyperlinkList>();
-            builder.AddChild<HyperlinksChanged>();
-            builder.AddChild<DigitalSignature>();
-            builder.AddChild<Application>();
-            builder.AddChild<ApplicationVersion>();
-            builder.AddChild<DocumentSecurity>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Template>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Manager>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Company>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Pages>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Words>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Characters>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.PresentationFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Lines>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Paragraphs>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Slides>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Notes>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.TotalTime>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.HiddenSlides>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.MultimediaClips>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.ScaleCrop>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.HeadingPairs>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.LinksUpToDate>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.CharactersWithSpaces>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.SharedDocument>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.HyperlinkBase>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.HyperlinkList>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.HyperlinksChanged>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.DigitalSignature>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Application>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.ApplicationVersion>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.DocumentSecurity>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.All, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.Template), 0, 1),
@@ -1481,7 +1481,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.VariantTypes.VTVector &lt;vt:vector></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTVector" /> <c>&lt;vt:vector></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1524,6 +1524,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(3, "HeadingPairs");
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTVector>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1, 1)
@@ -1542,7 +1543,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.VariantTypes.VTVector &lt;vt:vector></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTVector" /> <c>&lt;vt:vector></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1585,6 +1586,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(3, "HLinks");
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTVector>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1, 1)
@@ -1600,12 +1602,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.VariantTypes.VTVector &lt;vt:vector></description></item>
-    /// </list>
-    /// </remark>
     public abstract partial class VectorVariantType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1642,7 +1638,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTVector>();
         }
 
         /// <summary>
@@ -1667,7 +1662,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.VariantTypes.VTVector &lt;vt:vector></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTVector" /> <c>&lt;vt:vector></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1742,7 +1737,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.VariantTypes.VTBlob &lt;vt:blob></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTBlob" /> <c>&lt;vt:blob></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete

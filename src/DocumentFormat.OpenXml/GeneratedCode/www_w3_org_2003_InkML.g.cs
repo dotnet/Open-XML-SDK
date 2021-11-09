@@ -23,13 +23,13 @@ namespace DocumentFormat.OpenXml.InkML
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Annotation &lt;inkml:annotation></description></item>
-    ///   <item><description>AnnotationXml &lt;inkml:annotationXML></description></item>
-    ///   <item><description>Definitions &lt;inkml:definitions></description></item>
-    ///   <item><description>Context &lt;inkml:context></description></item>
-    ///   <item><description>Trace &lt;inkml:trace></description></item>
-    ///   <item><description>TraceGroup &lt;inkml:traceGroup></description></item>
-    ///   <item><description>TraceView &lt;inkml:traceView></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Annotation" /> <c>&lt;inkml:annotation></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.AnnotationXml" /> <c>&lt;inkml:annotationXML></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Definitions" /> <c>&lt;inkml:definitions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Context" /> <c>&lt;inkml:context></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Trace" /> <c>&lt;inkml:trace></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceGroup" /> <c>&lt;inkml:traceGroup></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceView" /> <c>&lt;inkml:traceView></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -88,13 +88,13 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "ink");
-            builder.AddChild<Annotation>();
-            builder.AddChild<AnnotationXml>();
-            builder.AddChild<Definitions>();
-            builder.AddChild<Context>();
-            builder.AddChild<Trace>();
-            builder.AddChild<TraceGroup>();
-            builder.AddChild<TraceView>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Annotation>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.AnnotationXml>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Definitions>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Context>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Trace>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceGroup>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceView>();
             builder.AddElement<Ink>()
 .AddAttribute(0, "documentID", a => a.DocumentId, aBuilder =>
 {
@@ -376,10 +376,10 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Bind &lt;inkml:bind></description></item>
-    ///   <item><description>Table &lt;inkml:table></description></item>
-    ///   <item><description>Matrix &lt;inkml:matrix></description></item>
-    ///   <item><description>Mapping &lt;inkml:mapping></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Bind" /> <c>&lt;inkml:bind></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Table" /> <c>&lt;inkml:table></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Matrix" /> <c>&lt;inkml:matrix></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Mapping" /> <c>&lt;inkml:mapping></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -473,10 +473,10 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "mapping");
-            builder.AddChild<Bind>();
-            builder.AddChild<Table>();
-            builder.AddChild<Matrix>();
-            builder.AddChild<Mapping>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Bind>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Table>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Matrix>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Mapping>();
             builder.AddElement<Mapping>()
 .AddAttribute(1, "id", a => a.Id)
 .AddAttribute(0, "type", a => a.Type)
@@ -514,7 +514,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Mapping &lt;inkml:mapping></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Mapping" /> <c>&lt;inkml:mapping></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -704,7 +704,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "channel");
-            builder.AddChild<Mapping>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Mapping>();
             builder.AddElement<Channel>()
 .AddAttribute(1, "id", a => a.Id)
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
@@ -768,7 +768,7 @@ union.AddValidator(StringValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Channel &lt;inkml:channel></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Channel" /> <c>&lt;inkml:channel></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -811,7 +811,7 @@ union.AddValidator(StringValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "intermittentChannels");
-            builder.AddChild<Channel>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Channel>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Channel), 0, 0)
@@ -962,8 +962,8 @@ union.AddValidator(StringValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Channel &lt;inkml:channel></description></item>
-    ///   <item><description>IntermittentChannels &lt;inkml:intermittentChannels></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Channel" /> <c>&lt;inkml:channel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.IntermittentChannels" /> <c>&lt;inkml:intermittentChannels></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1025,8 +1025,8 @@ union.AddValidator(StringValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "traceFormat");
-            builder.AddChild<Channel>();
-            builder.AddChild<IntermittentChannels>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Channel>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.IntermittentChannels>();
             builder.AddElement<TraceFormat>()
 .AddAttribute(1, "id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -1376,7 +1376,7 @@ union.AddValidator(StringValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ChannelProperty &lt;inkml:channelProperty></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.ChannelProperty" /> <c>&lt;inkml:channelProperty></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1419,7 +1419,7 @@ union.AddValidator(StringValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "channelProperties");
-            builder.AddChild<ChannelProperty>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.ChannelProperty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.ChannelProperty), 0, 0)
@@ -1513,7 +1513,7 @@ union.AddValidator(StringValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.EMMA.Emma &lt;emma:emma></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Emma" /> <c>&lt;emma:emma></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1643,8 +1643,8 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Annotation &lt;inkml:annotation></description></item>
-    ///   <item><description>AnnotationXml &lt;inkml:annotationXML></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Annotation" /> <c>&lt;inkml:annotation></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.AnnotationXml" /> <c>&lt;inkml:annotationXML></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1735,8 +1735,8 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "brushProperty");
-            builder.AddChild<Annotation>();
-            builder.AddChild<AnnotationXml>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Annotation>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.AnnotationXml>();
             builder.AddElement<BrushProperty>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -1796,7 +1796,7 @@ union.AddValidator(StringValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TraceFormat &lt;inkml:traceFormat></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceFormat" /> <c>&lt;inkml:traceFormat></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1874,7 +1874,7 @@ union.AddValidator(StringValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "canvas");
-            builder.AddChild<TraceFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceFormat>();
             builder.AddElement<Canvas>()
 .AddAttribute(1, "id", a => a.Id)
 .AddAttribute(0, "traceFormatRef", a => a.TraceFormatRef, aBuilder =>
@@ -1912,7 +1912,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Mapping &lt;inkml:mapping></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Mapping" /> <c>&lt;inkml:mapping></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1990,7 +1990,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "canvasTransform");
-            builder.AddChild<Mapping>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Mapping>();
             builder.AddElement<CanvasTransform>()
 .AddAttribute(1, "id", a => a.Id)
 .AddAttribute(0, "invertible", a => a.Invertible);
@@ -2012,12 +2012,12 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TraceFormat &lt;inkml:traceFormat></description></item>
-    ///   <item><description>SampleRate &lt;inkml:sampleRate></description></item>
-    ///   <item><description>Latency &lt;inkml:latency></description></item>
-    ///   <item><description>ActiveArea &lt;inkml:activeArea></description></item>
-    ///   <item><description>SourceProperty &lt;inkml:srcProperty></description></item>
-    ///   <item><description>ChannelProperties &lt;inkml:channelProperties></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceFormat" /> <c>&lt;inkml:traceFormat></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.SampleRate" /> <c>&lt;inkml:sampleRate></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Latency" /> <c>&lt;inkml:latency></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.ActiveArea" /> <c>&lt;inkml:activeArea></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.SourceProperty" /> <c>&lt;inkml:srcProperty></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.ChannelProperties" /> <c>&lt;inkml:channelProperties></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2159,12 +2159,12 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "inkSource");
-            builder.AddChild<TraceFormat>();
-            builder.AddChild<SampleRate>();
-            builder.AddChild<Latency>();
-            builder.AddChild<ActiveArea>();
-            builder.AddChild<SourceProperty>();
-            builder.AddChild<ChannelProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.SampleRate>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Latency>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.ActiveArea>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.SourceProperty>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.ChannelProperties>();
             builder.AddElement<InkSource>()
 .AddAttribute(1, "id", a => a.Id, aBuilder =>
 {
@@ -2253,9 +2253,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Annotation &lt;inkml:annotation></description></item>
-    ///   <item><description>AnnotationXml &lt;inkml:annotationXML></description></item>
-    ///   <item><description>BrushProperty &lt;inkml:brushProperty></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Annotation" /> <c>&lt;inkml:annotation></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.AnnotationXml" /> <c>&lt;inkml:annotationXML></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.BrushProperty" /> <c>&lt;inkml:brushProperty></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2333,9 +2333,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "brush");
-            builder.AddChild<Annotation>();
-            builder.AddChild<AnnotationXml>();
-            builder.AddChild<BrushProperty>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Annotation>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.AnnotationXml>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.BrushProperty>();
             builder.AddElement<Brush>()
 .AddAttribute(1, "id", a => a.Id)
 .AddAttribute(0, "brushRef", a => a.BrushRef, aBuilder =>
@@ -2673,10 +2673,10 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Annotation &lt;inkml:annotation></description></item>
-    ///   <item><description>AnnotationXml &lt;inkml:annotationXML></description></item>
-    ///   <item><description>Trace &lt;inkml:trace></description></item>
-    ///   <item><description>TraceGroup &lt;inkml:traceGroup></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Annotation" /> <c>&lt;inkml:annotation></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.AnnotationXml" /> <c>&lt;inkml:annotationXML></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Trace" /> <c>&lt;inkml:trace></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceGroup" /> <c>&lt;inkml:traceGroup></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2770,10 +2770,10 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "traceGroup");
-            builder.AddChild<Annotation>();
-            builder.AddChild<AnnotationXml>();
-            builder.AddChild<Trace>();
-            builder.AddChild<TraceGroup>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Annotation>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.AnnotationXml>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Trace>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceGroup>();
             builder.AddElement<TraceGroup>()
 .AddAttribute(1, "id", a => a.Id)
 .AddAttribute(0, "contextRef", a => a.ContextRef, aBuilder =>
@@ -2805,9 +2805,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Annotation &lt;inkml:annotation></description></item>
-    ///   <item><description>AnnotationXml &lt;inkml:annotationXML></description></item>
-    ///   <item><description>TraceView &lt;inkml:traceView></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Annotation" /> <c>&lt;inkml:annotation></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.AnnotationXml" /> <c>&lt;inkml:annotationXML></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceView" /> <c>&lt;inkml:traceView></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2933,9 +2933,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "traceView");
-            builder.AddChild<Annotation>();
-            builder.AddChild<AnnotationXml>();
-            builder.AddChild<TraceView>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Annotation>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.AnnotationXml>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceView>();
             builder.AddElement<TraceView>()
 .AddAttribute(1, "id", a => a.Id)
 .AddAttribute(0, "contextRef", a => a.ContextRef, aBuilder =>
@@ -2968,12 +2968,12 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Canvas &lt;inkml:canvas></description></item>
-    ///   <item><description>CanvasTransform &lt;inkml:canvasTransform></description></item>
-    ///   <item><description>TraceFormat &lt;inkml:traceFormat></description></item>
-    ///   <item><description>InkSource &lt;inkml:inkSource></description></item>
-    ///   <item><description>Brush &lt;inkml:brush></description></item>
-    ///   <item><description>Timestamp &lt;inkml:timestamp></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Canvas" /> <c>&lt;inkml:canvas></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.CanvasTransform" /> <c>&lt;inkml:canvasTransform></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceFormat" /> <c>&lt;inkml:traceFormat></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.InkSource" /> <c>&lt;inkml:inkSource></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Brush" /> <c>&lt;inkml:brush></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Timestamp" /> <c>&lt;inkml:timestamp></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3147,12 +3147,12 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "context");
-            builder.AddChild<Canvas>();
-            builder.AddChild<CanvasTransform>();
-            builder.AddChild<TraceFormat>();
-            builder.AddChild<InkSource>();
-            builder.AddChild<Brush>();
-            builder.AddChild<Timestamp>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Canvas>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.CanvasTransform>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.InkSource>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Brush>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Timestamp>();
             builder.AddElement<Context>()
 .AddAttribute(1, "id", a => a.Id)
 .AddAttribute(0, "contextRef", a => a.ContextRef, aBuilder =>
@@ -3284,17 +3284,17 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Brush &lt;inkml:brush></description></item>
-    ///   <item><description>Canvas &lt;inkml:canvas></description></item>
-    ///   <item><description>CanvasTransform &lt;inkml:canvasTransform></description></item>
-    ///   <item><description>Context &lt;inkml:context></description></item>
-    ///   <item><description>InkSource &lt;inkml:inkSource></description></item>
-    ///   <item><description>Mapping &lt;inkml:mapping></description></item>
-    ///   <item><description>Timestamp &lt;inkml:timestamp></description></item>
-    ///   <item><description>Trace &lt;inkml:trace></description></item>
-    ///   <item><description>TraceFormat &lt;inkml:traceFormat></description></item>
-    ///   <item><description>TraceGroup &lt;inkml:traceGroup></description></item>
-    ///   <item><description>TraceView &lt;inkml:traceView></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Brush" /> <c>&lt;inkml:brush></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Canvas" /> <c>&lt;inkml:canvas></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.CanvasTransform" /> <c>&lt;inkml:canvasTransform></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Context" /> <c>&lt;inkml:context></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.InkSource" /> <c>&lt;inkml:inkSource></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Mapping" /> <c>&lt;inkml:mapping></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Timestamp" /> <c>&lt;inkml:timestamp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Trace" /> <c>&lt;inkml:trace></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceFormat" /> <c>&lt;inkml:traceFormat></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceGroup" /> <c>&lt;inkml:traceGroup></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceView" /> <c>&lt;inkml:traceView></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3337,17 +3337,17 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "definitions");
-            builder.AddChild<Brush>();
-            builder.AddChild<Canvas>();
-            builder.AddChild<CanvasTransform>();
-            builder.AddChild<Context>();
-            builder.AddChild<InkSource>();
-            builder.AddChild<Mapping>();
-            builder.AddChild<Timestamp>();
-            builder.AddChild<Trace>();
-            builder.AddChild<TraceFormat>();
-            builder.AddChild<TraceGroup>();
-            builder.AddChild<TraceView>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Brush>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Canvas>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.CanvasTransform>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Context>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.InkSource>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Mapping>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Timestamp>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Trace>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceGroup>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceView>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Brush), 0, 1),

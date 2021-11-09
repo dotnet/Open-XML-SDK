@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LongProperty &lt;lp:LongProp></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.LongProperties.LongProperty" /> <c>&lt;lp:LongProp></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(40, "LongProperties");
-            builder.AddChild<LongProperty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.LongProperties.LongProperty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.LongProperties.LongProperty), 0, 0)

@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Schema &lt;sl:schema></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema" /> <c>&lt;sl:schema></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(25, "schemaLibrary");
-            builder.AddChild<Schema>();
+            builder.AddChild<DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema), 0, 0)

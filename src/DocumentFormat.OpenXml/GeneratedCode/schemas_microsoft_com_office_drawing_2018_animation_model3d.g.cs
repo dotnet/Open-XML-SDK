@@ -24,8 +24,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>AnimationProperties &lt;a3danim:animPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;a3danim:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties" /> <c>&lt;a3danim:animPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.OfficeArtExtensionList" /> <c>&lt;a3danim:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -85,8 +85,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema(114, "embedAnim");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<AnimationProperties>();
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.OfficeArtExtensionList>();
             builder.AddElement<EmbeddedAnimation>()
 .AddAttribute(0, "animId", a => a.AnimId, aBuilder =>
 {
@@ -206,7 +206,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList &lt;aanim:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList" /> <c>&lt;aanim:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -412,7 +412,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Animation
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete

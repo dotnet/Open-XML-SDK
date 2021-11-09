@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SchemaReferences &lt;ds:schemaRefs></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences" /> <c>&lt;ds:schemaRefs></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(20, "datastoreItem");
-            builder.AddChild<SchemaReferences>();
+            builder.AddChild<DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences>();
             builder.AddElement<DataStoreItem>()
 .AddAttribute(20, "itemID", a => a.ItemId, aBuilder =>
 {
@@ -204,7 +204,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SchemaReference &lt;ds:schemaRef></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReference" /> <c>&lt;ds:schemaRef></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -247,7 +247,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(20, "schemaRefs");
-            builder.AddChild<SchemaReference>();
+            builder.AddChild<DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReference>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReference), 0, 0)

@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OfficeArtExtensionList &lt;thm15:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList" /> <c>&lt;thm15:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -116,7 +116,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
             base.ConfigureMetadata(builder);
             builder.SetSchema(73, "themeFamily");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList>();
             builder.AddElement<ThemeFamily>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -164,7 +164,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -233,7 +233,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OfficeArtExtensionList &lt;thm15:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList" /> <c>&lt;thm15:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -360,7 +360,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(73, "themeVariant");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList>();
             builder.AddElement<ThemeVariant>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -416,7 +416,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ThemeVariant &lt;thm15:themeVariant></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Theme.ThemeVariant" /> <c>&lt;thm15:themeVariant></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -460,7 +460,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(73, "themeVariantLst");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<ThemeVariant>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Theme.ThemeVariant>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Theme.ThemeVariant), 1, 0, version: FileFormatVersions.Office2013)

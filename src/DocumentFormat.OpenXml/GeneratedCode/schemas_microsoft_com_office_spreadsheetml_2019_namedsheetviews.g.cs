@@ -25,8 +25,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NamedSheetView &lt;xnsv:namedSheetView></description></item>
-    ///   <item><description>ExtensionList &lt;xnsv:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NamedSheetView" /> <c>&lt;xnsv:namedSheetView></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList" /> <c>&lt;xnsv:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -70,8 +70,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             base.ConfigureMetadata(builder);
             builder.SetSchema(129, "namedSheetViews");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<NamedSheetView>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NamedSheetView>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NamedSheetView), 0, 0, version: FileFormatVersions.Office2021),
@@ -122,8 +122,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NsvFilter &lt;xnsv:nsvFilter></description></item>
-    ///   <item><description>ExtensionList &lt;xnsv:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NsvFilter" /> <c>&lt;xnsv:nsvFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList" /> <c>&lt;xnsv:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -199,8 +199,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             base.ConfigureMetadata(builder);
             builder.SetSchema(129, "namedSheetView");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<NsvFilter>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NsvFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList>();
             builder.AddElement<NamedSheetView>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -230,7 +230,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Extension &lt;x:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -299,9 +299,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ColumnFilter &lt;xnsv:columnFilter></description></item>
-    ///   <item><description>SortRules &lt;xnsv:sortRules></description></item>
-    ///   <item><description>ExtensionList &lt;xnsv:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ColumnFilter" /> <c>&lt;xnsv:columnFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRules" /> <c>&lt;xnsv:sortRules></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList" /> <c>&lt;xnsv:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -393,9 +393,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(129, "nsvFilter");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<ColumnFilter>();
-            builder.AddChild<SortRules>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ColumnFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRules>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList>();
             builder.AddElement<NsvFilter>()
 .AddAttribute(0, "filterId", a => a.FilterId, aBuilder =>
 {
@@ -424,9 +424,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DifferentialFormatType &lt;xnsv:dxf></description></item>
-    ///   <item><description>FilterColumn &lt;xnsv:filter></description></item>
-    ///   <item><description>ExtensionList &lt;xnsv:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType" /> <c>&lt;xnsv:dxf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.FilterColumn" /> <c>&lt;xnsv:filter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList" /> <c>&lt;xnsv:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -502,9 +502,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(129, "columnFilter");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DifferentialFormatType>();
-            builder.AddChild<FilterColumn>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.FilterColumn>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList>();
             builder.AddElement<ColumnFilter>()
 .AddAttribute(0, "colId", a => a.ColId, aBuilder =>
 {
@@ -547,8 +547,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SortRule &lt;xnsv:sortRule></description></item>
-    ///   <item><description>ExtensionList &lt;xnsv:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRule" /> <c>&lt;xnsv:sortRule></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList" /> <c>&lt;xnsv:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -624,8 +624,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(129, "sortRules");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<SortRule>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRule>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList>();
             builder.AddElement<SortRules>()
 .AddAttribute(0, "sortMethod", a => a.SortMethod)
 .AddAttribute(0, "caseSensitive", a => a.CaseSensitive);
@@ -648,13 +648,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Font &lt;x:font></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.NumberingFormat &lt;x:numFmt></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Fill &lt;x:fill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Alignment &lt;x:alignment></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Border &lt;x:border></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Protection &lt;x:protection></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Fill" /> <c>&lt;x:fill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Alignment" /> <c>&lt;x:alignment></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Protection" /> <c>&lt;x:protection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -820,15 +820,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Filters &lt;x:filters></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Top10 &lt;x:top10></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.CustomFilters &lt;x14:customFilters></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.CustomFilters &lt;x:customFilters></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.DynamicFilter &lt;x:dynamicFilter></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.ColorFilter &lt;x:colorFilter></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.IconFilter &lt;x14:iconFilter></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.IconFilter &lt;x:iconFilter></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Filters" /> <c>&lt;x:filters></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Top10" /> <c>&lt;x:top10></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.CustomFilters" /> <c>&lt;x14:customFilters></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomFilters" /> <c>&lt;x:customFilters></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DynamicFilter" /> <c>&lt;x:dynamicFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ColorFilter" /> <c>&lt;x:colorFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.IconFilter" /> <c>&lt;x14:iconFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.IconFilter" /> <c>&lt;x:iconFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1079,9 +1079,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DifferentialFormatType &lt;xnsv:dxf></description></item>
-    ///   <item><description>SortCondition &lt;xnsv:sortCondition></description></item>
-    ///   <item><description>RichSortCondition &lt;xnsv:richSortCondition></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType" /> <c>&lt;xnsv:dxf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortCondition" /> <c>&lt;xnsv:sortCondition></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.RichSortCondition" /> <c>&lt;xnsv:richSortCondition></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1157,9 +1157,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(129, "sortRule");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DifferentialFormatType>();
-            builder.AddChild<SortCondition>();
-            builder.AddChild<RichSortCondition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortCondition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.RichSortCondition>();
             builder.AddElement<SortRule>()
 .AddAttribute(0, "colId", a => a.ColId, aBuilder =>
 {

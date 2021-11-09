@@ -324,7 +324,7 @@ namespace DocumentFormat.OpenXml.Vml
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Formula &lt;v:f></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Formula" /> <c>&lt;v:f></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -367,7 +367,7 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "formulas");
-            builder.AddChild<Formula>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Formula>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formula), 0, 128)
@@ -386,7 +386,7 @@ namespace DocumentFormat.OpenXml.Vml
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ShapeHandle &lt;v:h></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.ShapeHandle" /> <c>&lt;v:h></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -429,7 +429,7 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "handles");
-            builder.AddChild<ShapeHandle>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandle>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandle), 0, 4)
@@ -448,7 +448,7 @@ namespace DocumentFormat.OpenXml.Vml
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties &lt;o:fill></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties" /> <c>&lt;o:fill></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -991,11 +991,11 @@ namespace DocumentFormat.OpenXml.Vml
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.LeftStroke &lt;o:left></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.TopStroke &lt;o:top></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.RightStroke &lt;o:right></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.BottomStroke &lt;o:bottom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.ColumnStroke &lt;o:column></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.LeftStroke" /> <c>&lt;o:left></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.TopStroke" /> <c>&lt;o:top></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.RightStroke" /> <c>&lt;o:right></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.BottomStroke" /> <c>&lt;o:bottom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ColumnStroke" /> <c>&lt;o:column></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1843,7 +1843,7 @@ namespace DocumentFormat.OpenXml.Vml
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.TextBoxContent &lt;w:txbxContent></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextBoxContent" /> <c>&lt;w:txbxContent></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2521,31 +2521,31 @@ namespace DocumentFormat.OpenXml.Vml
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Path &lt;v:path></description></item>
-    ///   <item><description>Formulas &lt;v:formulas></description></item>
-    ///   <item><description>ShapeHandles &lt;v:handles></description></item>
-    ///   <item><description>Fill &lt;v:fill></description></item>
-    ///   <item><description>Stroke &lt;v:stroke></description></item>
-    ///   <item><description>Shadow &lt;v:shadow></description></item>
-    ///   <item><description>TextBox &lt;v:textbox></description></item>
-    ///   <item><description>TextPath &lt;v:textpath></description></item>
-    ///   <item><description>ImageData &lt;v:imagedata></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Skew &lt;o:skew></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Extrusion &lt;o:extrusion></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Callout &lt;o:callout></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Lock &lt;o:lock></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.ClipPath &lt;o:clippath></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.SignatureLine &lt;o:signatureline></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap &lt;w10:wrap></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock &lt;w10:anchorlock></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder &lt;w10:bordertop></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder &lt;w10:borderbottom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder &lt;w10:borderleft></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder &lt;w10:borderright></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData &lt;xvml:ClientData></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Ink &lt;o:ink></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag &lt;pvml:iscomment></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Path" /> <c>&lt;v:path></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Formulas" /> <c>&lt;v:formulas></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.ShapeHandles" /> <c>&lt;v:handles></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Fill" /> <c>&lt;v:fill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Stroke" /> <c>&lt;v:stroke></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Shadow" /> <c>&lt;v:shadow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.TextBox" /> <c>&lt;v:textbox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.TextPath" /> <c>&lt;v:textpath></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.ImageData" /> <c>&lt;v:imagedata></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Skew" /> <c>&lt;o:skew></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Extrusion" /> <c>&lt;o:extrusion></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Callout" /> <c>&lt;o:callout></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Lock" /> <c>&lt;o:lock></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ClipPath" /> <c>&lt;o:clippath></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.SignatureLine" /> <c>&lt;o:signatureline></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap" /> <c>&lt;w10:wrap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock" /> <c>&lt;w10:anchorlock></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder" /> <c>&lt;w10:bordertop></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder" /> <c>&lt;w10:borderbottom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder" /> <c>&lt;w10:borderleft></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder" /> <c>&lt;w10:borderright></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData" /> <c>&lt;xvml:ClientData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Presentation.TextData" /> <c>&lt;pvml:textdata></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Ink" /> <c>&lt;o:ink></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag" /> <c>&lt;pvml:iscomment></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3589,15 +3589,15 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "shape");
-            builder.AddChild<Path>();
-            builder.AddChild<Formulas>();
-            builder.AddChild<ShapeHandles>();
-            builder.AddChild<Fill>();
-            builder.AddChild<Stroke>();
-            builder.AddChild<Shadow>();
-            builder.AddChild<TextBox>();
-            builder.AddChild<TextPath>();
-            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
@@ -3725,30 +3725,30 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Path &lt;v:path></description></item>
-    ///   <item><description>Formulas &lt;v:formulas></description></item>
-    ///   <item><description>ShapeHandles &lt;v:handles></description></item>
-    ///   <item><description>Fill &lt;v:fill></description></item>
-    ///   <item><description>Stroke &lt;v:stroke></description></item>
-    ///   <item><description>Shadow &lt;v:shadow></description></item>
-    ///   <item><description>TextBox &lt;v:textbox></description></item>
-    ///   <item><description>TextPath &lt;v:textpath></description></item>
-    ///   <item><description>ImageData &lt;v:imagedata></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Skew &lt;o:skew></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Extrusion &lt;o:extrusion></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Callout &lt;o:callout></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Lock &lt;o:lock></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.ClipPath &lt;o:clippath></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.SignatureLine &lt;o:signatureline></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap &lt;w10:wrap></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock &lt;w10:anchorlock></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder &lt;w10:bordertop></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder &lt;w10:borderbottom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder &lt;w10:borderleft></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder &lt;w10:borderright></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData &lt;xvml:ClientData></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Complex &lt;o:complex></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Path" /> <c>&lt;v:path></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Formulas" /> <c>&lt;v:formulas></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.ShapeHandles" /> <c>&lt;v:handles></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Fill" /> <c>&lt;v:fill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Stroke" /> <c>&lt;v:stroke></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Shadow" /> <c>&lt;v:shadow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.TextBox" /> <c>&lt;v:textbox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.TextPath" /> <c>&lt;v:textpath></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.ImageData" /> <c>&lt;v:imagedata></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Skew" /> <c>&lt;o:skew></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Extrusion" /> <c>&lt;o:extrusion></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Callout" /> <c>&lt;o:callout></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Lock" /> <c>&lt;o:lock></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ClipPath" /> <c>&lt;o:clippath></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.SignatureLine" /> <c>&lt;o:signatureline></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap" /> <c>&lt;w10:wrap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock" /> <c>&lt;w10:anchorlock></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder" /> <c>&lt;w10:bordertop></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder" /> <c>&lt;w10:borderbottom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder" /> <c>&lt;w10:borderleft></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder" /> <c>&lt;w10:borderright></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData" /> <c>&lt;xvml:ClientData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Presentation.TextData" /> <c>&lt;pvml:textdata></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Complex" /> <c>&lt;o:complex></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4760,15 +4760,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "shapetype");
-            builder.AddChild<Path>();
-            builder.AddChild<Formulas>();
-            builder.AddChild<ShapeHandles>();
-            builder.AddChild<Fill>();
-            builder.AddChild<Stroke>();
-            builder.AddChild<Shadow>();
-            builder.AddChild<TextBox>();
-            builder.AddChild<TextPath>();
-            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
@@ -4892,23 +4892,23 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Group &lt;v:group></description></item>
-    ///   <item><description>Shape &lt;v:shape></description></item>
-    ///   <item><description>Shapetype &lt;v:shapetype></description></item>
-    ///   <item><description>Arc &lt;v:arc></description></item>
-    ///   <item><description>Curve &lt;v:curve></description></item>
-    ///   <item><description>ImageFile &lt;v:image></description></item>
-    ///   <item><description>Line &lt;v:line></description></item>
-    ///   <item><description>Oval &lt;v:oval></description></item>
-    ///   <item><description>PolyLine &lt;v:polyline></description></item>
-    ///   <item><description>Rectangle &lt;v:rect></description></item>
-    ///   <item><description>RoundRectangle &lt;v:roundrect></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Diagram &lt;o:diagram></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Lock &lt;o:lock></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.ClipPath &lt;o:clippath></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap &lt;w10:wrap></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock &lt;w10:anchorlock></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData &lt;xvml:ClientData></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Group" /> <c>&lt;v:group></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Shape" /> <c>&lt;v:shape></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Shapetype" /> <c>&lt;v:shapetype></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Arc" /> <c>&lt;v:arc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Curve" /> <c>&lt;v:curve></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.ImageFile" /> <c>&lt;v:image></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Line" /> <c>&lt;v:line></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Oval" /> <c>&lt;v:oval></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.PolyLine" /> <c>&lt;v:polyline></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Rectangle" /> <c>&lt;v:rect></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.RoundRectangle" /> <c>&lt;v:roundrect></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Diagram" /> <c>&lt;o:diagram></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Lock" /> <c>&lt;o:lock></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ClipPath" /> <c>&lt;o:clippath></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap" /> <c>&lt;w10:wrap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock" /> <c>&lt;w10:anchorlock></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData" /> <c>&lt;xvml:ClientData></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5561,17 +5561,17 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "group");
-            builder.AddChild<Group>();
-            builder.AddChild<Shape>();
-            builder.AddChild<Shapetype>();
-            builder.AddChild<Arc>();
-            builder.AddChild<Curve>();
-            builder.AddChild<ImageFile>();
-            builder.AddChild<Line>();
-            builder.AddChild<Oval>();
-            builder.AddChild<PolyLine>();
-            builder.AddChild<Rectangle>();
-            builder.AddChild<RoundRectangle>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Group>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Shape>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Shapetype>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Arc>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Curve>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageFile>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Line>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Oval>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.PolyLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Rectangle>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.RoundRectangle>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Diagram>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
@@ -5651,7 +5651,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Fill &lt;v:fill></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Fill" /> <c>&lt;v:fill></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5818,7 +5818,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "background");
-            builder.AddChild<Fill>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
             builder.AddElement<Background>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -5862,29 +5862,29 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Path &lt;v:path></description></item>
-    ///   <item><description>Formulas &lt;v:formulas></description></item>
-    ///   <item><description>ShapeHandles &lt;v:handles></description></item>
-    ///   <item><description>Fill &lt;v:fill></description></item>
-    ///   <item><description>Stroke &lt;v:stroke></description></item>
-    ///   <item><description>Shadow &lt;v:shadow></description></item>
-    ///   <item><description>TextBox &lt;v:textbox></description></item>
-    ///   <item><description>TextPath &lt;v:textpath></description></item>
-    ///   <item><description>ImageData &lt;v:imagedata></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Skew &lt;o:skew></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Extrusion &lt;o:extrusion></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Callout &lt;o:callout></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Lock &lt;o:lock></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.ClipPath &lt;o:clippath></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.SignatureLine &lt;o:signatureline></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap &lt;w10:wrap></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock &lt;w10:anchorlock></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder &lt;w10:bordertop></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder &lt;w10:borderbottom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder &lt;w10:borderleft></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder &lt;w10:borderright></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData &lt;xvml:ClientData></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Path" /> <c>&lt;v:path></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Formulas" /> <c>&lt;v:formulas></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.ShapeHandles" /> <c>&lt;v:handles></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Fill" /> <c>&lt;v:fill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Stroke" /> <c>&lt;v:stroke></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Shadow" /> <c>&lt;v:shadow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.TextBox" /> <c>&lt;v:textbox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.TextPath" /> <c>&lt;v:textpath></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.ImageData" /> <c>&lt;v:imagedata></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Skew" /> <c>&lt;o:skew></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Extrusion" /> <c>&lt;o:extrusion></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Callout" /> <c>&lt;o:callout></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Lock" /> <c>&lt;o:lock></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ClipPath" /> <c>&lt;o:clippath></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.SignatureLine" /> <c>&lt;o:signatureline></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap" /> <c>&lt;w10:wrap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock" /> <c>&lt;w10:anchorlock></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder" /> <c>&lt;w10:bordertop></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder" /> <c>&lt;w10:borderbottom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder" /> <c>&lt;w10:borderleft></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder" /> <c>&lt;w10:borderright></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData" /> <c>&lt;xvml:ClientData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Presentation.TextData" /> <c>&lt;pvml:textdata></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6880,15 +6880,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "arc");
-            builder.AddChild<Path>();
-            builder.AddChild<Formulas>();
-            builder.AddChild<ShapeHandles>();
-            builder.AddChild<Fill>();
-            builder.AddChild<Stroke>();
-            builder.AddChild<Shadow>();
-            builder.AddChild<TextBox>();
-            builder.AddChild<TextPath>();
-            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
@@ -7015,29 +7015,29 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Path &lt;v:path></description></item>
-    ///   <item><description>Formulas &lt;v:formulas></description></item>
-    ///   <item><description>ShapeHandles &lt;v:handles></description></item>
-    ///   <item><description>Fill &lt;v:fill></description></item>
-    ///   <item><description>Stroke &lt;v:stroke></description></item>
-    ///   <item><description>Shadow &lt;v:shadow></description></item>
-    ///   <item><description>TextBox &lt;v:textbox></description></item>
-    ///   <item><description>TextPath &lt;v:textpath></description></item>
-    ///   <item><description>ImageData &lt;v:imagedata></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Skew &lt;o:skew></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Extrusion &lt;o:extrusion></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Callout &lt;o:callout></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Lock &lt;o:lock></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.ClipPath &lt;o:clippath></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.SignatureLine &lt;o:signatureline></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap &lt;w10:wrap></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock &lt;w10:anchorlock></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder &lt;w10:bordertop></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder &lt;w10:borderbottom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder &lt;w10:borderleft></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder &lt;w10:borderright></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData &lt;xvml:ClientData></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Path" /> <c>&lt;v:path></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Formulas" /> <c>&lt;v:formulas></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.ShapeHandles" /> <c>&lt;v:handles></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Fill" /> <c>&lt;v:fill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Stroke" /> <c>&lt;v:stroke></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Shadow" /> <c>&lt;v:shadow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.TextBox" /> <c>&lt;v:textbox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.TextPath" /> <c>&lt;v:textpath></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.ImageData" /> <c>&lt;v:imagedata></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Skew" /> <c>&lt;o:skew></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Extrusion" /> <c>&lt;o:extrusion></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Callout" /> <c>&lt;o:callout></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Lock" /> <c>&lt;o:lock></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ClipPath" /> <c>&lt;o:clippath></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.SignatureLine" /> <c>&lt;o:signatureline></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap" /> <c>&lt;w10:wrap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock" /> <c>&lt;w10:anchorlock></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder" /> <c>&lt;w10:bordertop></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder" /> <c>&lt;w10:borderbottom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder" /> <c>&lt;w10:borderleft></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder" /> <c>&lt;w10:borderright></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData" /> <c>&lt;xvml:ClientData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Presentation.TextData" /> <c>&lt;pvml:textdata></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8081,15 +8081,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "curve");
-            builder.AddChild<Path>();
-            builder.AddChild<Formulas>();
-            builder.AddChild<ShapeHandles>();
-            builder.AddChild<Fill>();
-            builder.AddChild<Stroke>();
-            builder.AddChild<Shadow>();
-            builder.AddChild<TextBox>();
-            builder.AddChild<TextPath>();
-            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
@@ -8214,29 +8214,29 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Path &lt;v:path></description></item>
-    ///   <item><description>Formulas &lt;v:formulas></description></item>
-    ///   <item><description>ShapeHandles &lt;v:handles></description></item>
-    ///   <item><description>Fill &lt;v:fill></description></item>
-    ///   <item><description>Stroke &lt;v:stroke></description></item>
-    ///   <item><description>Shadow &lt;v:shadow></description></item>
-    ///   <item><description>TextBox &lt;v:textbox></description></item>
-    ///   <item><description>TextPath &lt;v:textpath></description></item>
-    ///   <item><description>ImageData &lt;v:imagedata></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Skew &lt;o:skew></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Extrusion &lt;o:extrusion></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Callout &lt;o:callout></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Lock &lt;o:lock></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.ClipPath &lt;o:clippath></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.SignatureLine &lt;o:signatureline></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap &lt;w10:wrap></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock &lt;w10:anchorlock></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder &lt;w10:bordertop></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder &lt;w10:borderbottom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder &lt;w10:borderleft></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder &lt;w10:borderright></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData &lt;xvml:ClientData></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Path" /> <c>&lt;v:path></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Formulas" /> <c>&lt;v:formulas></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.ShapeHandles" /> <c>&lt;v:handles></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Fill" /> <c>&lt;v:fill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Stroke" /> <c>&lt;v:stroke></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Shadow" /> <c>&lt;v:shadow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.TextBox" /> <c>&lt;v:textbox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.TextPath" /> <c>&lt;v:textpath></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.ImageData" /> <c>&lt;v:imagedata></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Skew" /> <c>&lt;o:skew></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Extrusion" /> <c>&lt;o:extrusion></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Callout" /> <c>&lt;o:callout></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Lock" /> <c>&lt;o:lock></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ClipPath" /> <c>&lt;o:clippath></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.SignatureLine" /> <c>&lt;o:signatureline></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap" /> <c>&lt;w10:wrap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock" /> <c>&lt;w10:anchorlock></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder" /> <c>&lt;w10:bordertop></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder" /> <c>&lt;w10:borderbottom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder" /> <c>&lt;w10:borderleft></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder" /> <c>&lt;w10:borderright></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData" /> <c>&lt;xvml:ClientData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Presentation.TextData" /> <c>&lt;pvml:textdata></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -9360,15 +9360,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "image");
-            builder.AddChild<Path>();
-            builder.AddChild<Formulas>();
-            builder.AddChild<ShapeHandles>();
-            builder.AddChild<Fill>();
-            builder.AddChild<Stroke>();
-            builder.AddChild<Shadow>();
-            builder.AddChild<TextBox>();
-            builder.AddChild<TextPath>();
-            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
@@ -9498,29 +9498,29 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Path &lt;v:path></description></item>
-    ///   <item><description>Formulas &lt;v:formulas></description></item>
-    ///   <item><description>ShapeHandles &lt;v:handles></description></item>
-    ///   <item><description>Fill &lt;v:fill></description></item>
-    ///   <item><description>Stroke &lt;v:stroke></description></item>
-    ///   <item><description>Shadow &lt;v:shadow></description></item>
-    ///   <item><description>TextBox &lt;v:textbox></description></item>
-    ///   <item><description>TextPath &lt;v:textpath></description></item>
-    ///   <item><description>ImageData &lt;v:imagedata></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Skew &lt;o:skew></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Extrusion &lt;o:extrusion></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Callout &lt;o:callout></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Lock &lt;o:lock></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.ClipPath &lt;o:clippath></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.SignatureLine &lt;o:signatureline></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap &lt;w10:wrap></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock &lt;w10:anchorlock></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder &lt;w10:bordertop></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder &lt;w10:borderbottom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder &lt;w10:borderleft></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder &lt;w10:borderright></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData &lt;xvml:ClientData></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Path" /> <c>&lt;v:path></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Formulas" /> <c>&lt;v:formulas></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.ShapeHandles" /> <c>&lt;v:handles></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Fill" /> <c>&lt;v:fill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Stroke" /> <c>&lt;v:stroke></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Shadow" /> <c>&lt;v:shadow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.TextBox" /> <c>&lt;v:textbox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.TextPath" /> <c>&lt;v:textpath></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.ImageData" /> <c>&lt;v:imagedata></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Skew" /> <c>&lt;o:skew></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Extrusion" /> <c>&lt;o:extrusion></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Callout" /> <c>&lt;o:callout></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Lock" /> <c>&lt;o:lock></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ClipPath" /> <c>&lt;o:clippath></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.SignatureLine" /> <c>&lt;o:signatureline></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap" /> <c>&lt;w10:wrap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock" /> <c>&lt;w10:anchorlock></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder" /> <c>&lt;w10:bordertop></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder" /> <c>&lt;w10:borderbottom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder" /> <c>&lt;w10:borderleft></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder" /> <c>&lt;w10:borderright></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData" /> <c>&lt;xvml:ClientData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Presentation.TextData" /> <c>&lt;pvml:textdata></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -10532,15 +10532,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "line");
-            builder.AddChild<Path>();
-            builder.AddChild<Formulas>();
-            builder.AddChild<ShapeHandles>();
-            builder.AddChild<Fill>();
-            builder.AddChild<Stroke>();
-            builder.AddChild<Shadow>();
-            builder.AddChild<TextBox>();
-            builder.AddChild<TextPath>();
-            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
@@ -10661,29 +10661,29 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Path &lt;v:path></description></item>
-    ///   <item><description>Formulas &lt;v:formulas></description></item>
-    ///   <item><description>ShapeHandles &lt;v:handles></description></item>
-    ///   <item><description>Fill &lt;v:fill></description></item>
-    ///   <item><description>Stroke &lt;v:stroke></description></item>
-    ///   <item><description>Shadow &lt;v:shadow></description></item>
-    ///   <item><description>TextBox &lt;v:textbox></description></item>
-    ///   <item><description>TextPath &lt;v:textpath></description></item>
-    ///   <item><description>ImageData &lt;v:imagedata></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Skew &lt;o:skew></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Extrusion &lt;o:extrusion></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Callout &lt;o:callout></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Lock &lt;o:lock></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.ClipPath &lt;o:clippath></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.SignatureLine &lt;o:signatureline></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap &lt;w10:wrap></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock &lt;w10:anchorlock></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder &lt;w10:bordertop></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder &lt;w10:borderbottom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder &lt;w10:borderleft></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder &lt;w10:borderright></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData &lt;xvml:ClientData></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Path" /> <c>&lt;v:path></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Formulas" /> <c>&lt;v:formulas></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.ShapeHandles" /> <c>&lt;v:handles></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Fill" /> <c>&lt;v:fill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Stroke" /> <c>&lt;v:stroke></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Shadow" /> <c>&lt;v:shadow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.TextBox" /> <c>&lt;v:textbox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.TextPath" /> <c>&lt;v:textpath></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.ImageData" /> <c>&lt;v:imagedata></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Skew" /> <c>&lt;o:skew></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Extrusion" /> <c>&lt;o:extrusion></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Callout" /> <c>&lt;o:callout></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Lock" /> <c>&lt;o:lock></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ClipPath" /> <c>&lt;o:clippath></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.SignatureLine" /> <c>&lt;o:signatureline></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap" /> <c>&lt;w10:wrap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock" /> <c>&lt;w10:anchorlock></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder" /> <c>&lt;w10:bordertop></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder" /> <c>&lt;w10:borderbottom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder" /> <c>&lt;w10:borderleft></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder" /> <c>&lt;w10:borderright></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData" /> <c>&lt;xvml:ClientData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Presentation.TextData" /> <c>&lt;pvml:textdata></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -11663,15 +11663,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "oval");
-            builder.AddChild<Path>();
-            builder.AddChild<Formulas>();
-            builder.AddChild<ShapeHandles>();
-            builder.AddChild<Fill>();
-            builder.AddChild<Stroke>();
-            builder.AddChild<Shadow>();
-            builder.AddChild<TextBox>();
-            builder.AddChild<TextPath>();
-            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
@@ -11792,30 +11792,30 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Path &lt;v:path></description></item>
-    ///   <item><description>Formulas &lt;v:formulas></description></item>
-    ///   <item><description>ShapeHandles &lt;v:handles></description></item>
-    ///   <item><description>Fill &lt;v:fill></description></item>
-    ///   <item><description>Stroke &lt;v:stroke></description></item>
-    ///   <item><description>Shadow &lt;v:shadow></description></item>
-    ///   <item><description>TextBox &lt;v:textbox></description></item>
-    ///   <item><description>TextPath &lt;v:textpath></description></item>
-    ///   <item><description>ImageData &lt;v:imagedata></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Skew &lt;o:skew></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Extrusion &lt;o:extrusion></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Callout &lt;o:callout></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Lock &lt;o:lock></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.ClipPath &lt;o:clippath></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.SignatureLine &lt;o:signatureline></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap &lt;w10:wrap></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock &lt;w10:anchorlock></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder &lt;w10:bordertop></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder &lt;w10:borderbottom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder &lt;w10:borderleft></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder &lt;w10:borderright></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData &lt;xvml:ClientData></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Ink &lt;o:ink></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Path" /> <c>&lt;v:path></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Formulas" /> <c>&lt;v:formulas></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.ShapeHandles" /> <c>&lt;v:handles></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Fill" /> <c>&lt;v:fill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Stroke" /> <c>&lt;v:stroke></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Shadow" /> <c>&lt;v:shadow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.TextBox" /> <c>&lt;v:textbox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.TextPath" /> <c>&lt;v:textpath></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.ImageData" /> <c>&lt;v:imagedata></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Skew" /> <c>&lt;o:skew></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Extrusion" /> <c>&lt;o:extrusion></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Callout" /> <c>&lt;o:callout></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Lock" /> <c>&lt;o:lock></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ClipPath" /> <c>&lt;o:clippath></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.SignatureLine" /> <c>&lt;o:signatureline></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap" /> <c>&lt;w10:wrap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock" /> <c>&lt;w10:anchorlock></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder" /> <c>&lt;w10:bordertop></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder" /> <c>&lt;w10:borderbottom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder" /> <c>&lt;w10:borderleft></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder" /> <c>&lt;w10:borderright></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData" /> <c>&lt;xvml:ClientData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Presentation.TextData" /> <c>&lt;pvml:textdata></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Ink" /> <c>&lt;o:ink></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -12811,15 +12811,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "polyline");
-            builder.AddChild<Path>();
-            builder.AddChild<Formulas>();
-            builder.AddChild<ShapeHandles>();
-            builder.AddChild<Fill>();
-            builder.AddChild<Stroke>();
-            builder.AddChild<Shadow>();
-            builder.AddChild<TextBox>();
-            builder.AddChild<TextPath>();
-            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
@@ -12942,29 +12942,29 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Path &lt;v:path></description></item>
-    ///   <item><description>Formulas &lt;v:formulas></description></item>
-    ///   <item><description>ShapeHandles &lt;v:handles></description></item>
-    ///   <item><description>Fill &lt;v:fill></description></item>
-    ///   <item><description>Stroke &lt;v:stroke></description></item>
-    ///   <item><description>Shadow &lt;v:shadow></description></item>
-    ///   <item><description>TextBox &lt;v:textbox></description></item>
-    ///   <item><description>TextPath &lt;v:textpath></description></item>
-    ///   <item><description>ImageData &lt;v:imagedata></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Skew &lt;o:skew></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Extrusion &lt;o:extrusion></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Callout &lt;o:callout></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Lock &lt;o:lock></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.ClipPath &lt;o:clippath></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.SignatureLine &lt;o:signatureline></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap &lt;w10:wrap></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock &lt;w10:anchorlock></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder &lt;w10:bordertop></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder &lt;w10:borderbottom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder &lt;w10:borderleft></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder &lt;w10:borderright></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData &lt;xvml:ClientData></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Path" /> <c>&lt;v:path></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Formulas" /> <c>&lt;v:formulas></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.ShapeHandles" /> <c>&lt;v:handles></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Fill" /> <c>&lt;v:fill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Stroke" /> <c>&lt;v:stroke></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Shadow" /> <c>&lt;v:shadow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.TextBox" /> <c>&lt;v:textbox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.TextPath" /> <c>&lt;v:textpath></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.ImageData" /> <c>&lt;v:imagedata></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Skew" /> <c>&lt;o:skew></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Extrusion" /> <c>&lt;o:extrusion></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Callout" /> <c>&lt;o:callout></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Lock" /> <c>&lt;o:lock></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ClipPath" /> <c>&lt;o:clippath></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.SignatureLine" /> <c>&lt;o:signatureline></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap" /> <c>&lt;w10:wrap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock" /> <c>&lt;w10:anchorlock></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder" /> <c>&lt;w10:bordertop></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder" /> <c>&lt;w10:borderbottom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder" /> <c>&lt;w10:borderleft></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder" /> <c>&lt;w10:borderright></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData" /> <c>&lt;xvml:ClientData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Presentation.TextData" /> <c>&lt;pvml:textdata></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -13944,15 +13944,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "rect");
-            builder.AddChild<Path>();
-            builder.AddChild<Formulas>();
-            builder.AddChild<ShapeHandles>();
-            builder.AddChild<Fill>();
-            builder.AddChild<Stroke>();
-            builder.AddChild<Shadow>();
-            builder.AddChild<TextBox>();
-            builder.AddChild<TextPath>();
-            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
@@ -14073,29 +14073,29 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Path &lt;v:path></description></item>
-    ///   <item><description>Formulas &lt;v:formulas></description></item>
-    ///   <item><description>ShapeHandles &lt;v:handles></description></item>
-    ///   <item><description>Fill &lt;v:fill></description></item>
-    ///   <item><description>Stroke &lt;v:stroke></description></item>
-    ///   <item><description>Shadow &lt;v:shadow></description></item>
-    ///   <item><description>TextBox &lt;v:textbox></description></item>
-    ///   <item><description>TextPath &lt;v:textpath></description></item>
-    ///   <item><description>ImageData &lt;v:imagedata></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Skew &lt;o:skew></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Extrusion &lt;o:extrusion></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Callout &lt;o:callout></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Lock &lt;o:lock></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.ClipPath &lt;o:clippath></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Office.SignatureLine &lt;o:signatureline></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap &lt;w10:wrap></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock &lt;w10:anchorlock></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder &lt;w10:bordertop></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder &lt;w10:borderbottom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder &lt;w10:borderleft></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder &lt;w10:borderright></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData &lt;xvml:ClientData></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Path" /> <c>&lt;v:path></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Formulas" /> <c>&lt;v:formulas></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.ShapeHandles" /> <c>&lt;v:handles></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Fill" /> <c>&lt;v:fill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Stroke" /> <c>&lt;v:stroke></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Shadow" /> <c>&lt;v:shadow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.TextBox" /> <c>&lt;v:textbox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.TextPath" /> <c>&lt;v:textpath></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.ImageData" /> <c>&lt;v:imagedata></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Skew" /> <c>&lt;o:skew></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Extrusion" /> <c>&lt;o:extrusion></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Callout" /> <c>&lt;o:callout></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Lock" /> <c>&lt;o:lock></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ClipPath" /> <c>&lt;o:clippath></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.SignatureLine" /> <c>&lt;o:signatureline></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap" /> <c>&lt;w10:wrap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock" /> <c>&lt;w10:anchorlock></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder" /> <c>&lt;w10:bordertop></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder" /> <c>&lt;w10:borderbottom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder" /> <c>&lt;w10:borderleft></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder" /> <c>&lt;w10:borderright></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData" /> <c>&lt;xvml:ClientData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Presentation.TextData" /> <c>&lt;pvml:textdata></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -15075,15 +15075,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "roundrect");
-            builder.AddChild<Path>();
-            builder.AddChild<Formulas>();
-            builder.AddChild<ShapeHandles>();
-            builder.AddChild<Fill>();
-            builder.AddChild<Stroke>();
-            builder.AddChild<Shadow>();
-            builder.AddChild<TextBox>();
-            builder.AddChild<TextPath>();
-            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();

@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DesignerTag &lt;p202:designTag></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTag" /> <c>&lt;p202:designTag></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
             base.ConfigureMetadata(builder);
             builder.SetSchema(124, "designTagLst");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DesignerTag>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTag>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTag), 0, 0, version: FileFormatVersions.Office2021)
@@ -87,8 +87,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DesignerTagList &lt;p202:designTagLst></description></item>
-    ///   <item><description>ExtensionList &lt;p202:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList" /> <c>&lt;p202:designTagLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.ExtensionList" /> <c>&lt;p202:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -148,8 +148,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
             base.ConfigureMetadata(builder);
             builder.SetSchema(124, "designPr");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DesignerTagList>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.ExtensionList>();
             builder.AddElement<DesignerDrawingProps>()
 .AddAttribute(0, "edtDesignElem", a => a.EdtDesignElem);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -266,7 +266,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Presentation.Extension &lt;p:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete

@@ -26,62 +26,62 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.SdtRun &lt;w:sdt></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.ProofError &lt;w:proofErr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.PermStart &lt;w:permStart></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.PermEnd &lt;w:permEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.BookmarkStart &lt;w:bookmarkStart></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd &lt;w:bookmarkEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart &lt;w:commentRangeStart></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd &lt;w:commentRangeEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart &lt;w:moveFromRangeStart></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd &lt;w:moveFromRangeEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart &lt;w:moveToRangeStart></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd &lt;w:moveToRangeEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart &lt;w:customXmlInsRangeStart></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd &lt;w:customXmlInsRangeEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart &lt;w:customXmlDelRangeStart></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd &lt;w:customXmlDelRangeEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart &lt;w:customXmlMoveFromRangeStart></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd &lt;w:customXmlMoveFromRangeEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart &lt;w:customXmlMoveToRangeStart></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd &lt;w:customXmlMoveToRangeEnd></description></item>
-    ///   <item><description>CustomXmlConflictInsertionRangeStart &lt;w14:customXmlConflictInsRangeStart></description></item>
-    ///   <item><description>CustomXmlConflictInsertionRangeEnd &lt;w14:customXmlConflictInsRangeEnd></description></item>
-    ///   <item><description>CustomXmlConflictDeletionRangeStart &lt;w14:customXmlConflictDelRangeStart></description></item>
-    ///   <item><description>CustomXmlConflictDeletionRangeEnd &lt;w14:customXmlConflictDelRangeEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.InsertedRun &lt;w:ins></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.DeletedRun &lt;w:del></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.MoveFromRun &lt;w:moveFrom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.MoveToRun &lt;w:moveTo></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.ContentPart &lt;w:contentPart></description></item>
-    ///   <item><description>RunConflictInsertion &lt;w14:conflictIns></description></item>
-    ///   <item><description>RunConflictDeletion &lt;w14:conflictDel></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Paragraph &lt;m:oMathPara></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.OfficeMath &lt;m:oMath></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Accent &lt;m:acc></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Bar &lt;m:bar></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Box &lt;m:box></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.BorderBox &lt;m:borderBox></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Delimiter &lt;m:d></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.EquationArray &lt;m:eqArr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Fraction &lt;m:f></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.MathFunction &lt;m:func></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.GroupChar &lt;m:groupChr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.LimitLower &lt;m:limLow></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.LimitUpper &lt;m:limUpp></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Matrix &lt;m:m></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Nary &lt;m:nary></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Phantom &lt;m:phant></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Radical &lt;m:rad></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.PreSubSuper &lt;m:sPre></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Subscript &lt;m:sSub></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.SubSuperscript &lt;m:sSubSup></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Superscript &lt;m:sSup></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Run &lt;m:r></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.Run &lt;w:r></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride &lt;w:bdo></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding &lt;w:dir></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtRun" /> <c>&lt;w:sdt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ProofError" /> <c>&lt;w:proofErr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PermStart" /> <c>&lt;w:permStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PermEnd" /> <c>&lt;w:permEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkStart" /> <c>&lt;w:bookmarkStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart" /> <c>&lt;w:moveFromRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd" /> <c>&lt;w:moveFromRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart" /> <c>&lt;w:moveToRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd" /> <c>&lt;w:moveToRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd" /> <c>&lt;w:customXmlInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.InsertedRun" /> <c>&lt;w:ins></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ContentPart" /> <c>&lt;w:contentPart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Paragraph" /> <c>&lt;m:oMathPara></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.OfficeMath" /> <c>&lt;m:oMath></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Bar" /> <c>&lt;m:bar></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Box" /> <c>&lt;m:box></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.BorderBox" /> <c>&lt;m:borderBox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Delimiter" /> <c>&lt;m:d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.EquationArray" /> <c>&lt;m:eqArr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Fraction" /> <c>&lt;m:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.MathFunction" /> <c>&lt;m:func></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.GroupChar" /> <c>&lt;m:groupChr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.LimitLower" /> <c>&lt;m:limLow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.LimitUpper" /> <c>&lt;m:limUpp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Matrix" /> <c>&lt;m:m></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Nary" /> <c>&lt;m:nary></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Phantom" /> <c>&lt;m:phant></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Radical" /> <c>&lt;m:rad></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.PreSubSuper" /> <c>&lt;m:sPre></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Subscript" /> <c>&lt;m:sSub></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.SubSuperscript" /> <c>&lt;m:sSubSup></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Superscript" /> <c>&lt;m:sSup></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Run" /> <c>&lt;m:r></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Run" /> <c>&lt;w:r></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride" /> <c>&lt;w:bdo></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding" /> <c>&lt;w:dir></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -125,6 +125,62 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(52, "conflictIns");
             builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Run>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
@@ -279,62 +335,62 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.SdtRun &lt;w:sdt></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.ProofError &lt;w:proofErr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.PermStart &lt;w:permStart></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.PermEnd &lt;w:permEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.BookmarkStart &lt;w:bookmarkStart></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd &lt;w:bookmarkEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart &lt;w:commentRangeStart></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd &lt;w:commentRangeEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart &lt;w:moveFromRangeStart></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd &lt;w:moveFromRangeEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart &lt;w:moveToRangeStart></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd &lt;w:moveToRangeEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart &lt;w:customXmlInsRangeStart></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd &lt;w:customXmlInsRangeEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart &lt;w:customXmlDelRangeStart></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd &lt;w:customXmlDelRangeEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart &lt;w:customXmlMoveFromRangeStart></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd &lt;w:customXmlMoveFromRangeEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart &lt;w:customXmlMoveToRangeStart></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd &lt;w:customXmlMoveToRangeEnd></description></item>
-    ///   <item><description>CustomXmlConflictInsertionRangeStart &lt;w14:customXmlConflictInsRangeStart></description></item>
-    ///   <item><description>CustomXmlConflictInsertionRangeEnd &lt;w14:customXmlConflictInsRangeEnd></description></item>
-    ///   <item><description>CustomXmlConflictDeletionRangeStart &lt;w14:customXmlConflictDelRangeStart></description></item>
-    ///   <item><description>CustomXmlConflictDeletionRangeEnd &lt;w14:customXmlConflictDelRangeEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.InsertedRun &lt;w:ins></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.DeletedRun &lt;w:del></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.MoveFromRun &lt;w:moveFrom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.MoveToRun &lt;w:moveTo></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.ContentPart &lt;w:contentPart></description></item>
-    ///   <item><description>RunConflictInsertion &lt;w14:conflictIns></description></item>
-    ///   <item><description>RunConflictDeletion &lt;w14:conflictDel></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Paragraph &lt;m:oMathPara></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.OfficeMath &lt;m:oMath></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Accent &lt;m:acc></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Bar &lt;m:bar></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Box &lt;m:box></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.BorderBox &lt;m:borderBox></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Delimiter &lt;m:d></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.EquationArray &lt;m:eqArr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Fraction &lt;m:f></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.MathFunction &lt;m:func></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.GroupChar &lt;m:groupChr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.LimitLower &lt;m:limLow></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.LimitUpper &lt;m:limUpp></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Matrix &lt;m:m></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Nary &lt;m:nary></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Phantom &lt;m:phant></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Radical &lt;m:rad></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.PreSubSuper &lt;m:sPre></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Subscript &lt;m:sSub></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.SubSuperscript &lt;m:sSubSup></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Superscript &lt;m:sSup></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Run &lt;m:r></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.Run &lt;w:r></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride &lt;w:bdo></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding &lt;w:dir></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtRun" /> <c>&lt;w:sdt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ProofError" /> <c>&lt;w:proofErr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PermStart" /> <c>&lt;w:permStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PermEnd" /> <c>&lt;w:permEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkStart" /> <c>&lt;w:bookmarkStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart" /> <c>&lt;w:moveFromRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd" /> <c>&lt;w:moveFromRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart" /> <c>&lt;w:moveToRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd" /> <c>&lt;w:moveToRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd" /> <c>&lt;w:customXmlInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.InsertedRun" /> <c>&lt;w:ins></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ContentPart" /> <c>&lt;w:contentPart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Paragraph" /> <c>&lt;m:oMathPara></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.OfficeMath" /> <c>&lt;m:oMath></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Bar" /> <c>&lt;m:bar></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Box" /> <c>&lt;m:box></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.BorderBox" /> <c>&lt;m:borderBox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Delimiter" /> <c>&lt;m:d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.EquationArray" /> <c>&lt;m:eqArr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Fraction" /> <c>&lt;m:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.MathFunction" /> <c>&lt;m:func></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.GroupChar" /> <c>&lt;m:groupChr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.LimitLower" /> <c>&lt;m:limLow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.LimitUpper" /> <c>&lt;m:limUpp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Matrix" /> <c>&lt;m:m></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Nary" /> <c>&lt;m:nary></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Phantom" /> <c>&lt;m:phant></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Radical" /> <c>&lt;m:rad></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.PreSubSuper" /> <c>&lt;m:sPre></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Subscript" /> <c>&lt;m:sSub></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.SubSuperscript" /> <c>&lt;m:sSubSup></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Superscript" /> <c>&lt;m:sSup></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Run" /> <c>&lt;m:r></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Run" /> <c>&lt;w:r></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride" /> <c>&lt;w:bdo></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding" /> <c>&lt;w:dir></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -378,6 +434,62 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(52, "conflictDel");
             builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Run>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
@@ -529,67 +641,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.SdtRun &lt;w:sdt></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.ProofError &lt;w:proofErr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.PermStart &lt;w:permStart></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.PermEnd &lt;w:permEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.BookmarkStart &lt;w:bookmarkStart></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd &lt;w:bookmarkEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart &lt;w:commentRangeStart></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd &lt;w:commentRangeEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart &lt;w:moveFromRangeStart></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd &lt;w:moveFromRangeEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart &lt;w:moveToRangeStart></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd &lt;w:moveToRangeEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart &lt;w:customXmlInsRangeStart></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd &lt;w:customXmlInsRangeEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart &lt;w:customXmlDelRangeStart></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd &lt;w:customXmlDelRangeEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart &lt;w:customXmlMoveFromRangeStart></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd &lt;w:customXmlMoveFromRangeEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart &lt;w:customXmlMoveToRangeStart></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd &lt;w:customXmlMoveToRangeEnd></description></item>
-    ///   <item><description>CustomXmlConflictInsertionRangeStart &lt;w14:customXmlConflictInsRangeStart></description></item>
-    ///   <item><description>CustomXmlConflictInsertionRangeEnd &lt;w14:customXmlConflictInsRangeEnd></description></item>
-    ///   <item><description>CustomXmlConflictDeletionRangeStart &lt;w14:customXmlConflictDelRangeStart></description></item>
-    ///   <item><description>CustomXmlConflictDeletionRangeEnd &lt;w14:customXmlConflictDelRangeEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.InsertedRun &lt;w:ins></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.DeletedRun &lt;w:del></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.MoveFromRun &lt;w:moveFrom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.MoveToRun &lt;w:moveTo></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.ContentPart &lt;w:contentPart></description></item>
-    ///   <item><description>RunConflictInsertion &lt;w14:conflictIns></description></item>
-    ///   <item><description>RunConflictDeletion &lt;w14:conflictDel></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Paragraph &lt;m:oMathPara></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.OfficeMath &lt;m:oMath></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Accent &lt;m:acc></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Bar &lt;m:bar></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Box &lt;m:box></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.BorderBox &lt;m:borderBox></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Delimiter &lt;m:d></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.EquationArray &lt;m:eqArr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Fraction &lt;m:f></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.MathFunction &lt;m:func></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.GroupChar &lt;m:groupChr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.LimitLower &lt;m:limLow></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.LimitUpper &lt;m:limUpp></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Matrix &lt;m:m></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Nary &lt;m:nary></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Phantom &lt;m:phant></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Radical &lt;m:rad></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.PreSubSuper &lt;m:sPre></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Subscript &lt;m:sSub></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.SubSuperscript &lt;m:sSubSup></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Superscript &lt;m:sSup></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Math.Run &lt;m:r></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.Run &lt;w:r></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride &lt;w:bdo></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding &lt;w:dir></description></item>
-    /// </list>
-    /// </remark>
     public abstract partial class RunTrackChangeType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -683,78 +734,22 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<CustomXmlConflictDeletionRangeStart>();
-            builder.AddChild<CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<RunConflictInsertion>();
-            builder.AddChild<RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding>();
             builder.AddElement<RunTrackChangeType>()
-.AddAttribute(23, "author", a => a.Author, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
-})
-.AddAttribute(23, "date", a => a.Date)
-.AddAttribute(23, "id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
-union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
-});
-});
+                           .AddAttribute(23, "author", a => a.Author, aBuilder =>
+                           {
+                               aBuilder.AddValidator(RequiredValidator.Instance);
+                               aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
+                           })
+                           .AddAttribute(23, "date", a => a.Date)
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(RequiredValidator.Instance);
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
+                                   union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
+                               });
+                           });
         }
     }
 
@@ -1368,16 +1363,16 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Tint &lt;w14:tint></description></item>
-    ///   <item><description>Shade &lt;w14:shade></description></item>
-    ///   <item><description>Alpha &lt;w14:alpha></description></item>
-    ///   <item><description>HueModulation &lt;w14:hueMod></description></item>
-    ///   <item><description>Saturation &lt;w14:sat></description></item>
-    ///   <item><description>SaturationOffset &lt;w14:satOff></description></item>
-    ///   <item><description>SaturationModulation &lt;w14:satMod></description></item>
-    ///   <item><description>Luminance &lt;w14:lum></description></item>
-    ///   <item><description>LuminanceOffset &lt;w14:lumOff></description></item>
-    ///   <item><description>LuminanceModulation &lt;w14:lumMod></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Tint" /> <c>&lt;w14:tint></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Shade" /> <c>&lt;w14:shade></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Alpha" /> <c>&lt;w14:alpha></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.HueModulation" /> <c>&lt;w14:hueMod></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Saturation" /> <c>&lt;w14:sat></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.SaturationOffset" /> <c>&lt;w14:satOff></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.SaturationModulation" /> <c>&lt;w14:satMod></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Luminance" /> <c>&lt;w14:lum></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.LuminanceOffset" /> <c>&lt;w14:lumOff></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.LuminanceModulation" /> <c>&lt;w14:lumMod></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1440,16 +1435,16 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(52, "srgbClr");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<Tint>();
-            builder.AddChild<Shade>();
-            builder.AddChild<Alpha>();
-            builder.AddChild<HueModulation>();
-            builder.AddChild<Saturation>();
-            builder.AddChild<SaturationOffset>();
-            builder.AddChild<SaturationModulation>();
-            builder.AddChild<Luminance>();
-            builder.AddChild<LuminanceOffset>();
-            builder.AddChild<LuminanceModulation>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Tint>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Shade>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Alpha>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.HueModulation>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Saturation>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SaturationOffset>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SaturationModulation>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Luminance>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.LuminanceOffset>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.LuminanceModulation>();
             builder.AddElement<RgbColorModelHex>()
 .AddAttribute(52, "val", a => a.Val, aBuilder =>
 {
@@ -1490,16 +1485,16 @@ aBuilder.AddValidator(new StringValidator() { Length = (3L) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Tint &lt;w14:tint></description></item>
-    ///   <item><description>Shade &lt;w14:shade></description></item>
-    ///   <item><description>Alpha &lt;w14:alpha></description></item>
-    ///   <item><description>HueModulation &lt;w14:hueMod></description></item>
-    ///   <item><description>Saturation &lt;w14:sat></description></item>
-    ///   <item><description>SaturationOffset &lt;w14:satOff></description></item>
-    ///   <item><description>SaturationModulation &lt;w14:satMod></description></item>
-    ///   <item><description>Luminance &lt;w14:lum></description></item>
-    ///   <item><description>LuminanceOffset &lt;w14:lumOff></description></item>
-    ///   <item><description>LuminanceModulation &lt;w14:lumMod></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Tint" /> <c>&lt;w14:tint></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Shade" /> <c>&lt;w14:shade></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Alpha" /> <c>&lt;w14:alpha></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.HueModulation" /> <c>&lt;w14:hueMod></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Saturation" /> <c>&lt;w14:sat></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.SaturationOffset" /> <c>&lt;w14:satOff></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.SaturationModulation" /> <c>&lt;w14:satMod></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Luminance" /> <c>&lt;w14:lum></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.LuminanceOffset" /> <c>&lt;w14:lumOff></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.LuminanceModulation" /> <c>&lt;w14:lumMod></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1562,16 +1557,16 @@ aBuilder.AddValidator(new StringValidator() { Length = (3L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(52, "schemeClr");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<Tint>();
-            builder.AddChild<Shade>();
-            builder.AddChild<Alpha>();
-            builder.AddChild<HueModulation>();
-            builder.AddChild<Saturation>();
-            builder.AddChild<SaturationOffset>();
-            builder.AddChild<SaturationModulation>();
-            builder.AddChild<Luminance>();
-            builder.AddChild<LuminanceOffset>();
-            builder.AddChild<LuminanceModulation>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Tint>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Shade>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Alpha>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.HueModulation>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Saturation>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SaturationOffset>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SaturationModulation>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Luminance>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.LuminanceOffset>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.LuminanceModulation>();
             builder.AddElement<SchemeColor>()
 .AddAttribute(52, "val", a => a.Val, aBuilder =>
 {
@@ -1687,7 +1682,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>FillToRectangle &lt;w14:fillToRect></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.FillToRectangle" /> <c>&lt;w14:fillToRect></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1750,7 +1745,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema(52, "path");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<FillToRectangle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.FillToRectangle>();
             builder.AddElement<PathShadeProperties>()
 .AddAttribute(52, "path", a => a.Path, aBuilder =>
 {
@@ -1919,8 +1914,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RgbColorModelHex &lt;w14:srgbClr></description></item>
-    ///   <item><description>SchemeColor &lt;w14:schemeClr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex" /> <c>&lt;w14:srgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.SchemeColor" /> <c>&lt;w14:schemeClr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1964,8 +1959,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema(52, "solidFill");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<RgbColorModelHex>();
-            builder.AddChild<SchemeColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SchemeColor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
@@ -2017,9 +2012,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>GradientStopList &lt;w14:gsLst></description></item>
-    ///   <item><description>LinearShadeProperties &lt;w14:lin></description></item>
-    ///   <item><description>PathShadeProperties &lt;w14:path></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.GradientStopList" /> <c>&lt;w14:gsLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.LinearShadeProperties" /> <c>&lt;w14:lin></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.PathShadeProperties" /> <c>&lt;w14:path></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2063,9 +2058,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema(52, "gradFill");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<GradientStopList>();
-            builder.AddChild<LinearShadeProperties>();
-            builder.AddChild<PathShadeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.GradientStopList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.LinearShadeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.PathShadeProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.GradientStopList), 0, 1, version: FileFormatVersions.Office2010),
@@ -2210,8 +2205,8 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RgbColorModelHex &lt;w14:srgbClr></description></item>
-    ///   <item><description>SchemeColor &lt;w14:schemeClr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex" /> <c>&lt;w14:srgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.SchemeColor" /> <c>&lt;w14:schemeClr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2274,8 +2269,8 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(52, "glow");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<RgbColorModelHex>();
-            builder.AddChild<SchemeColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SchemeColor>();
             builder.AddElement<Glow>()
 .AddAttribute(52, "rad", a => a.GlowRadius, aBuilder =>
 {
@@ -2333,8 +2328,8 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RgbColorModelHex &lt;w14:srgbClr></description></item>
-    ///   <item><description>SchemeColor &lt;w14:schemeClr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex" /> <c>&lt;w14:srgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.SchemeColor" /> <c>&lt;w14:schemeClr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2530,8 +2525,8 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             base.ConfigureMetadata(builder);
             builder.SetSchema(52, "shadow");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<RgbColorModelHex>();
-            builder.AddChild<SchemeColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SchemeColor>();
             builder.AddElement<Shadow>()
 .AddAttribute(52, "blurRad", a => a.BlurRadius, aBuilder =>
 {
@@ -2959,13 +2954,13 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NoFillEmpty &lt;w14:noFill></description></item>
-    ///   <item><description>SolidColorFillProperties &lt;w14:solidFill></description></item>
-    ///   <item><description>GradientFillProperties &lt;w14:gradFill></description></item>
-    ///   <item><description>PresetLineDashProperties &lt;w14:prstDash></description></item>
-    ///   <item><description>RoundEmpty &lt;w14:round></description></item>
-    ///   <item><description>BevelEmpty &lt;w14:bevel></description></item>
-    ///   <item><description>LineJoinMiterProperties &lt;w14:miter></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.NoFillEmpty" /> <c>&lt;w14:noFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.SolidColorFillProperties" /> <c>&lt;w14:solidFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.GradientFillProperties" /> <c>&lt;w14:gradFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.PresetLineDashProperties" /> <c>&lt;w14:prstDash></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RoundEmpty" /> <c>&lt;w14:round></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.BevelEmpty" /> <c>&lt;w14:bevel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.LineJoinMiterProperties" /> <c>&lt;w14:miter></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3085,13 +3080,13 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema(52, "textOutline");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<NoFillEmpty>();
-            builder.AddChild<SolidColorFillProperties>();
-            builder.AddChild<GradientFillProperties>();
-            builder.AddChild<PresetLineDashProperties>();
-            builder.AddChild<RoundEmpty>();
-            builder.AddChild<BevelEmpty>();
-            builder.AddChild<LineJoinMiterProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NoFillEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SolidColorFillProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.GradientFillProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.PresetLineDashProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RoundEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.BevelEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.LineJoinMiterProperties>();
             builder.AddElement<TextOutlineEffect>()
 .AddAttribute(52, "w", a => a.LineWidth, aBuilder =>
 {
@@ -3152,9 +3147,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NoFillEmpty &lt;w14:noFill></description></item>
-    ///   <item><description>SolidColorFillProperties &lt;w14:solidFill></description></item>
-    ///   <item><description>GradientFillProperties &lt;w14:gradFill></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.NoFillEmpty" /> <c>&lt;w14:noFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.SolidColorFillProperties" /> <c>&lt;w14:solidFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.GradientFillProperties" /> <c>&lt;w14:gradFill></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3198,9 +3193,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema(52, "textFill");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<NoFillEmpty>();
-            builder.AddChild<SolidColorFillProperties>();
-            builder.AddChild<GradientFillProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NoFillEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SolidColorFillProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.GradientFillProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
@@ -3266,8 +3261,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Camera &lt;w14:camera></description></item>
-    ///   <item><description>LightRig &lt;w14:lightRig></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Camera" /> <c>&lt;w14:camera></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.LightRig" /> <c>&lt;w14:lightRig></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3311,8 +3306,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema(52, "scene3d");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<Camera>();
-            builder.AddChild<LightRig>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Camera>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.LightRig>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Camera), 1, 1, version: FileFormatVersions.Office2010),
@@ -3358,10 +3353,10 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>BevelTop &lt;w14:bevelT></description></item>
-    ///   <item><description>BevelBottom &lt;w14:bevelB></description></item>
-    ///   <item><description>ExtrusionColor &lt;w14:extrusionClr></description></item>
-    ///   <item><description>ContourColor &lt;w14:contourClr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.BevelTop" /> <c>&lt;w14:bevelT></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.BevelBottom" /> <c>&lt;w14:bevelB></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.ExtrusionColor" /> <c>&lt;w14:extrusionClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.ContourColor" /> <c>&lt;w14:contourClr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3462,10 +3457,10 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema(52, "props3d");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<BevelTop>();
-            builder.AddChild<BevelBottom>();
-            builder.AddChild<ExtrusionColor>();
-            builder.AddChild<ContourColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.BevelTop>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.BevelBottom>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ExtrusionColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ContourColor>();
             builder.AddElement<Properties3D>()
 .AddAttribute(52, "extrusionH", a => a.ExtrusionHeight, aBuilder =>
 {
@@ -3714,7 +3709,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>StyleSet &lt;w14:styleSet></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.StyleSet" /> <c>&lt;w14:styleSet></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3758,7 +3753,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema(52, "stylisticSets");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<StyleSet>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.StyleSet>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.StyleSet), 0, 0, version: FileFormatVersions.Office2010)
@@ -3933,9 +3928,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>WordNonVisualContentPartShapeProperties &lt;w14:nvContentPartPr></description></item>
-    ///   <item><description>Transform2D &lt;w14:xfrm></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;w14:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.WordNonVisualContentPartShapeProperties" /> <c>&lt;w14:nvContentPartPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Transform2D" /> <c>&lt;w14:xfrm></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.OfficeArtExtensionList" /> <c>&lt;w14:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4017,9 +4012,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema(52, "contentPart");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<WordNonVisualContentPartShapeProperties>();
-            builder.AddChild<Transform2D>();
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.WordNonVisualContentPartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Transform2D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.OfficeArtExtensionList>();
             builder.AddElement<ContentPart>()
 .AddAttribute(52, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
@@ -4302,9 +4297,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Checked &lt;w14:checked></description></item>
-    ///   <item><description>CheckedState &lt;w14:checkedState></description></item>
-    ///   <item><description>UncheckedState &lt;w14:uncheckedState></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Checked" /> <c>&lt;w14:checked></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CheckedState" /> <c>&lt;w14:checkedState></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.UncheckedState" /> <c>&lt;w14:uncheckedState></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4348,9 +4343,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema(52, "checkbox");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<Checked>();
-            builder.AddChild<CheckedState>();
-            builder.AddChild<UncheckedState>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Checked>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CheckedState>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.UncheckedState>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Checked), 0, 1, version: FileFormatVersions.Office2010),
@@ -4410,8 +4405,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RgbColorModelHex &lt;w14:srgbClr></description></item>
-    ///   <item><description>SchemeColor &lt;w14:schemeClr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex" /> <c>&lt;w14:srgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.SchemeColor" /> <c>&lt;w14:schemeClr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4474,8 +4469,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema(52, "gs");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<RgbColorModelHex>();
-            builder.AddChild<SchemeColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SchemeColor>();
             builder.AddElement<GradientStop>()
 .AddAttribute(52, "pos", a => a.StopPosition, aBuilder =>
 {
@@ -4655,7 +4650,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>GradientStop &lt;w14:gs></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.GradientStop" /> <c>&lt;w14:gs></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4699,7 +4694,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema(52, "gsLst");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<GradientStop>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.GradientStop>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.GradientStop), 2, 10, version: FileFormatVersions.Office2010)
@@ -4876,7 +4871,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SphereCoordinates &lt;w14:rot></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.SphereCoordinates" /> <c>&lt;w14:rot></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4958,7 +4953,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(52, "lightRig");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<SphereCoordinates>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SphereCoordinates>();
             builder.AddElement<LightRig>()
 .AddAttribute(52, "rig", a => a.LightRigType, aBuilder =>
 {
@@ -5152,8 +5147,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RgbColorModelHex &lt;w14:srgbClr></description></item>
-    ///   <item><description>SchemeColor &lt;w14:schemeClr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex" /> <c>&lt;w14:srgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.SchemeColor" /> <c>&lt;w14:schemeClr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5197,6 +5192,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(52, "extrusionClr");
             builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SchemeColor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
@@ -5222,8 +5219,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RgbColorModelHex &lt;w14:srgbClr></description></item>
-    ///   <item><description>SchemeColor &lt;w14:schemeClr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex" /> <c>&lt;w14:srgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.SchemeColor" /> <c>&lt;w14:schemeClr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5267,6 +5264,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(52, "contourClr");
             builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SchemeColor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
@@ -5289,13 +5288,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>RgbColorModelHex &lt;w14:srgbClr></description></item>
-    ///   <item><description>SchemeColor &lt;w14:schemeClr></description></item>
-    /// </list>
-    /// </remark>
     public abstract partial class ColorType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5332,8 +5324,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<RgbColorModelHex>();
-            builder.AddChild<SchemeColor>();
         }
 
         /// <summary>
@@ -5572,9 +5562,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HyperlinkOnClick &lt;a:hlinkClick></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HyperlinkOnHover &lt;a:hlinkHover></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnClick" /> <c>&lt;a:hlinkClick></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnHover" /> <c>&lt;a:hlinkHover></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5772,8 +5762,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks &lt;a14:cpLocks></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList &lt;a14:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks" /> <c>&lt;a14:cpLocks></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList" /> <c>&lt;a14:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5882,8 +5872,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NonVisualDrawingProperties &lt;w14:cNvPr></description></item>
-    ///   <item><description>NonVisualInkContentPartProperties &lt;w14:cNvContentPartPr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.NonVisualDrawingProperties" /> <c>&lt;w14:cNvPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.NonVisualInkContentPartProperties" /> <c>&lt;w14:cNvContentPartPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5927,8 +5917,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(52, "nvContentPartPr");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<NonVisualDrawingProperties>();
-            builder.AddChild<NonVisualInkContentPartProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NonVisualDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NonVisualInkContentPartProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.NonVisualDrawingProperties), 0, 1, version: FileFormatVersions.Office2010),
@@ -5974,8 +5964,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Offset &lt;a:off></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Extents &lt;a:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Offset" /> <c>&lt;a:off></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6118,7 +6108,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete

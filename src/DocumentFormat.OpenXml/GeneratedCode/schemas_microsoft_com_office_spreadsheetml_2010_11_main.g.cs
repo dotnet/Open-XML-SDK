@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.PivotCache &lt;x:pivotCache></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotCache" /> <c>&lt;x:pivotCache></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -70,6 +70,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "pivotCaches");
             builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotCache>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCache), 1, 0)
@@ -88,7 +89,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.PivotCache &lt;x:pivotCache></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotCache" /> <c>&lt;x:pivotCache></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -132,6 +133,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "timelineCachePivotCaches");
             builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotCache>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCache), 1, 0)
@@ -147,12 +149,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.PivotCache &lt;x:pivotCache></description></item>
-    /// </list>
-    /// </remark>
     public abstract partial class OpenXmlPivotCachesElement : OpenXmlCompositeElement
     {
         /// <summary>
@@ -189,7 +185,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotCache>();
         }
     }
 
@@ -201,7 +196,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PivotTableReference &lt;x15:pivotTableReference></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotTableReference" /> <c>&lt;x15:pivotTableReference></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -245,7 +240,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "pivotTableReferences");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<PivotTableReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotTableReference>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotTableReference), 1, 0, version: FileFormatVersions.Office2013)
@@ -344,7 +339,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>WebExtension &lt;x15:webExtension></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.WebExtension" /> <c>&lt;x15:webExtension></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -388,7 +383,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "webExtensions");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<WebExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.WebExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.WebExtension), 1, 0, version: FileFormatVersions.Office2013)
@@ -407,7 +402,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TimelineCacheReference &lt;x15:timelineCacheRef></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReference" /> <c>&lt;x15:timelineCacheRef></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -451,7 +446,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "timelineCacheRefs");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<TimelineCacheReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReference>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReference), 1, 0, version: FileFormatVersions.Office2013)
@@ -470,7 +465,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TimelineReference &lt;x15:timelineRef></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineReference" /> <c>&lt;x15:timelineRef></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -514,7 +509,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "timelineRefs");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<TimelineReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineReference>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineReference), 1, 0, version: FileFormatVersions.Office2013)
@@ -579,7 +574,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TimelineStyle &lt;x15:timelineStyle></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineStyle" /> <c>&lt;x15:timelineStyle></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -639,7 +634,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "timelineStyles");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<TimelineStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineStyle>();
             builder.AddElement<TimelineStyles>()
 .AddAttribute(0, "defaultTimelineStyle", a => a.DefaultTimelineStyle, aBuilder =>
 {
@@ -663,7 +658,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat &lt;x:dxf></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat" /> <c>&lt;x:dxf></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -744,11 +739,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TextProperties &lt;x15:textPr></description></item>
-    ///   <item><description>ModelTextProperties &lt;x15:modelTextPr></description></item>
-    ///   <item><description>RangeProperties &lt;x15:rangePr></description></item>
-    ///   <item><description>OleDbPrpoperties &lt;x15:oledbPr></description></item>
-    ///   <item><description>DataFeedProperties &lt;x15:dataFeedPr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TextProperties" /> <c>&lt;x15:textPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ModelTextProperties" /> <c>&lt;x15:modelTextPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.RangeProperties" /> <c>&lt;x15:rangePr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.OleDbPrpoperties" /> <c>&lt;x15:oledbPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.DataFeedProperties" /> <c>&lt;x15:dataFeedPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -872,11 +867,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "connection");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<TextProperties>();
-            builder.AddChild<ModelTextProperties>();
-            builder.AddChild<RangeProperties>();
-            builder.AddChild<OleDbPrpoperties>();
-            builder.AddChild<DataFeedProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ModelTextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.RangeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.OleDbPrpoperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.DataFeedProperties>();
             builder.AddElement<Connection>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -1053,8 +1048,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>FieldListActiveTabTopLevelEntity &lt;x15:activeTabTopLevelEntity></description></item>
-    ///   <item><description>ExtensionList &lt;x15:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.FieldListActiveTabTopLevelEntity" /> <c>&lt;x15:activeTabTopLevelEntity></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1130,8 +1125,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "pivotTableUISettings");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<FieldListActiveTabTopLevelEntity>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.FieldListActiveTabTopLevelEntity>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
             builder.AddElement<PivotTableUISettings>()
 .AddAttribute(0, "sourceDataName", a => a.SourceDataName)
 .AddAttribute(0, "relNeededHidden", a => a.RelNeededHidden);
@@ -1203,7 +1198,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CachedUniqueName &lt;x15:cachedUniqueName></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueName" /> <c>&lt;x15:cachedUniqueName></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1247,7 +1242,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "cachedUniqueNames");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<CachedUniqueName>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueName>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueName), 1, 0, version: FileFormatVersions.Office2013)
@@ -1430,9 +1425,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ModelTables &lt;x15:modelTables></description></item>
-    ///   <item><description>ModelRelationships &lt;x15:modelRelationships></description></item>
-    ///   <item><description>ExtensionList &lt;x15:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ModelTables" /> <c>&lt;x15:modelTables></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ModelRelationships" /> <c>&lt;x15:modelRelationships></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1492,9 +1487,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "dataModel");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<ModelTables>();
-            builder.AddChild<ModelRelationships>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ModelTables>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ModelRelationships>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
             builder.AddElement<DataModel>()
 .AddAttribute(0, "minVersionLoad", a => a.MinVersionLoad);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -1556,7 +1551,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PivotRow &lt;x15:pivotRow></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotRow" /> <c>&lt;x15:pivotRow></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1648,7 +1643,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "pivotTableData");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<PivotRow>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotRow>();
             builder.AddElement<PivotTableData>()
 .AddAttribute(0, "rowCount", a => a.RowCount)
 .AddAttribute(0, "columnCount", a => a.ColumnCount)
@@ -1898,7 +1893,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.SlicerCache &lt;x14:slicerCache></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCache" /> <c>&lt;x14:slicerCache></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1961,7 +1956,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;x15:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2085,7 +2080,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "tableSlicerCache");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
             builder.AddElement<TableSlicerCache>()
 .AddAttribute(0, "tableId", a => a.TableId, aBuilder =>
 {
@@ -2129,7 +2124,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SlicerCacheOlapLevelName &lt;x15:slicerCacheOlapLevelName></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.SlicerCacheOlapLevelName" /> <c>&lt;x15:slicerCacheOlapLevelName></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2189,7 +2184,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "slicerCacheHideItemsWithNoData");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<SlicerCacheOlapLevelName>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.SlicerCacheOlapLevelName>();
             builder.AddElement<SlicerCacheHideItemsWithNoData>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -2210,7 +2205,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable &lt;x14:pivotTable></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable" /> <c>&lt;x14:pivotTable></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2273,11 +2268,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SurveyPrSurveyElementPr &lt;x15:surveyPr></description></item>
-    ///   <item><description>TitlePrSurveyElementPr &lt;x15:titlePr></description></item>
-    ///   <item><description>DescriptionPrSurveyElementPr &lt;x15:descriptionPr></description></item>
-    ///   <item><description>SurveyQuestions &lt;x15:questions></description></item>
-    ///   <item><description>ExtensionList &lt;x15:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.SurveyPrSurveyElementPr" /> <c>&lt;x15:surveyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TitlePrSurveyElementPr" /> <c>&lt;x15:titlePr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.DescriptionPrSurveyElementPr" /> <c>&lt;x15:descriptionPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestions" /> <c>&lt;x15:questions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2385,11 +2380,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "survey");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<SurveyPrSurveyElementPr>();
-            builder.AddChild<TitlePrSurveyElementPr>();
-            builder.AddChild<DescriptionPrSurveyElementPr>();
-            builder.AddChild<SurveyQuestions>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.SurveyPrSurveyElementPr>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TitlePrSurveyElementPr>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.DescriptionPrSurveyElementPr>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
             builder.AddElement<Survey>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -2489,7 +2484,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Timeline &lt;x15:timeline></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.Timeline" /> <c>&lt;x15:timeline></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2533,7 +2528,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "timelines");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<Timeline>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.Timeline>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.Timeline), 1, 0, version: FileFormatVersions.Office2013)
@@ -2583,9 +2578,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TimelineCachePivotTables &lt;x15:pivotTables></description></item>
-    ///   <item><description>TimelineState &lt;x15:state></description></item>
-    ///   <item><description>ExtensionList &lt;x15:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotTables" /> <c>&lt;x15:pivotTables></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineState" /> <c>&lt;x15:state></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2661,9 +2656,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "timelineCacheDefinition");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<TimelineCachePivotTables>();
-            builder.AddChild<TimelineState>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotTables>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineState>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
             builder.AddElement<TimelineCacheDefinition>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -2815,7 +2810,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office.Excel.Formula &lt;xne:f></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3016,7 +3011,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TimelineStyleElements &lt;x15:timelineStyleElements></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElements" /> <c>&lt;x15:timelineStyleElements></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3076,7 +3071,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "timelineStyle");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<TimelineStyleElements>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElements>();
             builder.AddElement<TimelineStyle>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -3179,7 +3174,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TimelineStyleElement &lt;x15:timelineStyleElement></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElement" /> <c>&lt;x15:timelineStyleElement></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3223,7 +3218,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "timelineStyleElements");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<TimelineStyleElement>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElement>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElement), 1, 0, version: FileFormatVersions.Office2013)
@@ -3291,7 +3286,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DbTable &lt;x15:dbTable></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.DbTable" /> <c>&lt;x15:dbTable></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3335,7 +3330,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "dbTables");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DbTable>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.DbTable>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.DbTable), 1, 0, version: FileFormatVersions.Office2013)
@@ -3403,7 +3398,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.TextFields &lt;x:textFields></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TextFields" /> <c>&lt;x:textFields></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3847,8 +3842,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DbTables &lt;x15:dbTables></description></item>
-    ///   <item><description>DbCommand &lt;x15:dbCommand></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.DbTables" /> <c>&lt;x15:dbTables></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.DbCommand" /> <c>&lt;x15:dbCommand></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3908,8 +3903,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "oledbPr");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DbTables>();
-            builder.AddChild<DbCommand>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.DbTables>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.DbCommand>();
             builder.AddElement<OleDbPrpoperties>()
 .AddAttribute(0, "connection", a => a.Connection);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -3957,7 +3952,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DbTables &lt;x15:dbTables></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.DbTables" /> <c>&lt;x15:dbTables></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4017,7 +4012,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "dataFeedPr");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DbTables>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.DbTables>();
             builder.AddElement<DataFeedProperties>()
 .AddAttribute(0, "connection", a => a.Connection, aBuilder =>
 {
@@ -4120,7 +4115,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Extension &lt;x:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4456,7 +4451,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ModelTable &lt;x15:modelTable></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ModelTable" /> <c>&lt;x15:modelTable></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4500,7 +4495,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "modelTables");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<ModelTable>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ModelTable>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ModelTable), 1, 0, version: FileFormatVersions.Office2013)
@@ -4519,7 +4514,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ModelRelationship &lt;x15:modelRelationship></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ModelRelationship" /> <c>&lt;x15:modelRelationship></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4563,7 +4558,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "modelRelationships");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<ModelRelationship>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ModelRelationship>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ModelRelationship), 1, 0, version: FileFormatVersions.Office2013)
@@ -4582,8 +4577,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Xstring &lt;x15:v></description></item>
-    ///   <item><description>PivotValueCellExtra &lt;x15:x></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.Xstring" /> <c>&lt;x15:v></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotValueCellExtra" /> <c>&lt;x15:x></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4659,8 +4654,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "c");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<Xstring>();
-            builder.AddChild<PivotValueCellExtra>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.Xstring>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotValueCellExtra>();
             builder.AddElement<PivotValueCell>()
 .AddAttribute(0, "i", a => a.Item)
 .AddAttribute(0, "t", a => a.Text);
@@ -4904,7 +4899,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ServerFormat &lt;x15:serverFormat></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ServerFormat" /> <c>&lt;x15:serverFormat></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4964,7 +4959,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "pivotTableServerFormats");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<ServerFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ServerFormat>();
             builder.AddElement<PivotTableServerFormats>()
 .AddAttribute(0, "count", a => a.Count, aBuilder =>
 {
@@ -5120,7 +5115,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;x15:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5164,6 +5159,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "surveyPr");
             builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
@@ -5182,7 +5178,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;x15:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5226,6 +5222,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "titlePr");
             builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
@@ -5244,7 +5241,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;x15:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5288,6 +5285,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "descriptionPr");
             builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
@@ -5306,7 +5304,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;x15:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5350,6 +5348,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "questionsPr");
             builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
@@ -5368,7 +5367,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;x15:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5412,6 +5411,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "questionPr");
             builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
@@ -5427,12 +5427,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;x15:extLst></description></item>
-    /// </list>
-    /// </remark>
     public abstract partial class OpenXmlSurveyElementPrElement : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5597,16 +5591,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<ExtensionList>();
             builder.AddElement<OpenXmlSurveyElementPrElement>()
-.AddAttribute(0, "cssClass", a => a.CssClass)
-.AddAttribute(0, "bottom", a => a.Bottom)
-.AddAttribute(0, "top", a => a.Top)
-.AddAttribute(0, "left", a => a.Left)
-.AddAttribute(0, "right", a => a.Right)
-.AddAttribute(0, "width", a => a.Width)
-.AddAttribute(0, "height", a => a.Height)
-.AddAttribute(0, "position", a => a.Position);
+                           .AddAttribute(0, "cssClass", a => a.CssClass)
+                           .AddAttribute(0, "bottom", a => a.Bottom)
+                           .AddAttribute(0, "top", a => a.Top)
+                           .AddAttribute(0, "left", a => a.Left)
+                           .AddAttribute(0, "right", a => a.Right)
+                           .AddAttribute(0, "width", a => a.Width)
+                           .AddAttribute(0, "height", a => a.Height)
+                           .AddAttribute(0, "position", a => a.Position);
         }
 
         /// <summary>
@@ -5631,8 +5624,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>QuestionsPrSurveyElementPr &lt;x15:questionsPr></description></item>
-    ///   <item><description>SurveyQuestion &lt;x15:question></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.QuestionsPrSurveyElementPr" /> <c>&lt;x15:questionsPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestion" /> <c>&lt;x15:question></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5676,8 +5669,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "questions");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<QuestionsPrSurveyElementPr>();
-            builder.AddChild<SurveyQuestion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.QuestionsPrSurveyElementPr>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestion>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.QuestionsPrSurveyElementPr), 0, 1, version: FileFormatVersions.Office2013),
@@ -5710,8 +5703,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>QuestionPrSurveyElementPr &lt;x15:questionPr></description></item>
-    ///   <item><description>ExtensionList &lt;x15:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.QuestionPrSurveyElementPr" /> <c>&lt;x15:questionPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5899,8 +5892,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "question");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<QuestionPrSurveyElementPr>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.QuestionPrSurveyElementPr>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
             builder.AddElement<SurveyQuestion>()
 .AddAttribute(0, "binding", a => a.Binding, aBuilder =>
 {
@@ -5959,7 +5952,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;x15:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6179,7 +6172,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "timeline");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
             builder.AddElement<Timeline>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -6422,9 +6415,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.FilterColumn &lt;x:filterColumn></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.SortState &lt;x:sortState></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FilterColumn" /> <c>&lt;x:filterColumn></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortState" /> <c>&lt;x:sortState></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6509,7 +6502,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TimelineCachePivotTable &lt;x15:pivotTable></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotTable" /> <c>&lt;x15:pivotTable></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6553,7 +6546,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "pivotTables");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<TimelineCachePivotTable>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotTable>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotTable), 1, 0, version: FileFormatVersions.Office2013)
@@ -6572,10 +6565,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SelectionTimelineRange &lt;x15:selection></description></item>
-    ///   <item><description>BoundsTimelineRange &lt;x15:bounds></description></item>
-    ///   <item><description>MovingPeriodState &lt;x15:movingPeriodState></description></item>
-    ///   <item><description>ExtensionList &lt;x15:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.SelectionTimelineRange" /> <c>&lt;x15:selection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.BoundsTimelineRange" /> <c>&lt;x15:bounds></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState" /> <c>&lt;x15:movingPeriodState></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6747,10 +6740,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "state");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<SelectionTimelineRange>();
-            builder.AddChild<BoundsTimelineRange>();
-            builder.AddChild<MovingPeriodState>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.SelectionTimelineRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.BoundsTimelineRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
             builder.AddElement<TimelineState>()
 .AddAttribute(0, "singleRangeFilterState", a => a.SingleRangeFilterState)
 .AddAttribute(0, "minimalRefreshVersion", a => a.MinimalRefreshVersion, aBuilder =>
@@ -6845,7 +6838,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PivotValueCell &lt;x15:c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotValueCell" /> <c>&lt;x15:c></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6921,7 +6914,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "pivotRow");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<PivotValueCell>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotValueCell>();
             builder.AddElement<PivotRow>()
 .AddAttribute(0, "r", a => a.Reference)
 .AddAttribute(0, "count", a => a.Count, aBuilder =>

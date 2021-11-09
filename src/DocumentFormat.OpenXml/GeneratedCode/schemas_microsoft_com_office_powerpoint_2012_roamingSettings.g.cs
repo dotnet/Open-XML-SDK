@@ -104,8 +104,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Key &lt;pRoam:key></description></item>
-    ///   <item><description>Value &lt;pRoam:value></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Key" /> <c>&lt;pRoam:key></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Value" /> <c>&lt;pRoam:value></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -149,8 +149,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
             base.ConfigureMetadata(builder);
             builder.SetSchema(76, "props");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<Key>();
-            builder.AddChild<Value>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Key>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Value>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Key), 1, 1, version: FileFormatVersions.Office2013),

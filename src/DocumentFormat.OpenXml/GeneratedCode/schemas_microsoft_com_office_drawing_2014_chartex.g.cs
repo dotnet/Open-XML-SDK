@@ -24,13 +24,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ChartData &lt;cx:chartData></description></item>
-    ///   <item><description>Chart &lt;cx:chart></description></item>
-    ///   <item><description>ShapeProperties &lt;cx:spPr></description></item>
-    ///   <item><description>TxPrTextBody &lt;cx:txPr></description></item>
-    ///   <item><description>ColorMappingType &lt;cx:clrMapOvr></description></item>
-    ///   <item><description>PrintSettings &lt;cx:printSettings></description></item>
-    ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartData" /> <c>&lt;cx:chartData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Chart" /> <c>&lt;cx:chart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody" /> <c>&lt;cx:txPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ColorMappingType" /> <c>&lt;cx:clrMapOvr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PrintSettings" /> <c>&lt;cx:printSettings></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -74,13 +74,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "chartSpace");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<ChartData>();
-            builder.AddChild<Chart>();
-            builder.AddChild<ShapeProperties>();
-            builder.AddChild<TxPrTextBody>();
-            builder.AddChild<ColorMappingType>();
-            builder.AddChild<PrintSettings>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartData>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Chart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ColorMappingType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PrintSettings>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartData), 1, 1, version: FileFormatVersions.Office2016),
@@ -470,8 +470,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Formula &lt;cx:f></description></item>
-    ///   <item><description>NumericLevel &lt;cx:lvl></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Formula" /> <c>&lt;cx:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericLevel" /> <c>&lt;cx:lvl></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -531,8 +531,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "numDim");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<Formula>();
-            builder.AddChild<NumericLevel>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Formula>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericLevel>();
             builder.AddElement<NumericDimension>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
@@ -560,8 +560,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Formula &lt;cx:f></description></item>
-    ///   <item><description>StringLevel &lt;cx:lvl></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Formula" /> <c>&lt;cx:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringLevel" /> <c>&lt;cx:lvl></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -621,8 +621,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "strDim");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<Formula>();
-            builder.AddChild<StringLevel>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Formula>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringLevel>();
             builder.AddElement<StringDimension>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
@@ -650,7 +650,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Extension2 &lt;cx:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Extension2" /> <c>&lt;cx:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -694,7 +694,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "extLst");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<Extension2>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Extension2>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Extension2), 0, 0, version: FileFormatVersions.Office2016)
@@ -788,9 +788,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2016))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NumericDimension &lt;cx:numDim></description></item>
-    ///   <item><description>StringDimension &lt;cx:strDim></description></item>
-    ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericDimension" /> <c>&lt;cx:numDim></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringDimension" /> <c>&lt;cx:strDim></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -850,9 +850,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2016))
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "data");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<NumericDimension>();
-            builder.AddChild<StringDimension>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericDimension>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringDimension>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             builder.AddElement<Data>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -881,8 +881,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Formula &lt;cx:f></description></item>
-    ///   <item><description>VXsdstring &lt;cx:v></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Formula" /> <c>&lt;cx:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.VXsdstring" /> <c>&lt;cx:v></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -926,8 +926,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "txData");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<Formula>();
-            builder.AddChild<VXsdstring>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Formula>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.VXsdstring>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -950,9 +950,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BodyProperties &lt;a:bodyPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ListStyle &lt;a:lstStyle></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Paragraph &lt;a:p></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BodyProperties" /> <c>&lt;a:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ListStyle" /> <c>&lt;a:lstStyle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -996,6 +996,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "rich");
             builder.Availability = FileFormatVersions.Office2016;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BodyProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ListStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Paragraph>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
@@ -1016,9 +1019,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BodyProperties &lt;a:bodyPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ListStyle &lt;a:lstStyle></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Paragraph &lt;a:p></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BodyProperties" /> <c>&lt;a:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ListStyle" /> <c>&lt;a:lstStyle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1062,6 +1065,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "txPr");
             builder.Availability = FileFormatVersions.Office2016;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BodyProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ListStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Paragraph>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
@@ -1079,14 +1085,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BodyProperties &lt;a:bodyPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ListStyle &lt;a:lstStyle></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Paragraph &lt;a:p></description></item>
-    /// </list>
-    /// </remark>
     public abstract partial class TextBodyType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1123,9 +1121,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BodyProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ListStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Paragraph>();
         }
 
         /// <summary>
@@ -1163,8 +1158,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TextData &lt;cx:txData></description></item>
-    ///   <item><description>RichTextBody &lt;cx:rich></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TextData" /> <c>&lt;cx:txData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.RichTextBody" /> <c>&lt;cx:rich></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1208,8 +1203,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "tx");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<TextData>();
-            builder.AddChild<RichTextBody>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TextData>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.RichTextBody>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -1258,21 +1253,21 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Transform2D &lt;a:xfrm></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.CustomGeometry &lt;a:custGeom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetGeometry &lt;a:prstGeom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.NoFill &lt;a:noFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SolidFill &lt;a:solidFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GradientFill &lt;a:gradFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BlipFill &lt;a:blipFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PatternFill &lt;a:pattFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GroupFill &lt;a:grpFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Outline &lt;a:ln></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectList &lt;a:effectLst></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectDag &lt;a:effectDag></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Scene3DType &lt;a:scene3d></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Shape3DType &lt;a:sp3d></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.CustomGeometry" /> <c>&lt;a:custGeom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetGeometry" /> <c>&lt;a:prstGeom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoFill" /> <c>&lt;a:noFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GradientFill" /> <c>&lt;a:gradFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GroupFill" /> <c>&lt;a:grpFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Outline" /> <c>&lt;a:ln></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectList" /> <c>&lt;a:effectLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectDag" /> <c>&lt;a:effectDag></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Scene3DType" /> <c>&lt;a:scene3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Shape3DType" /> <c>&lt;a:sp3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1415,10 +1410,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Text &lt;cx:tx></description></item>
-    ///   <item><description>ShapeProperties &lt;cx:spPr></description></item>
-    ///   <item><description>TxPrTextBody &lt;cx:txPr></description></item>
-    ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text" /> <c>&lt;cx:tx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody" /> <c>&lt;cx:txPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1462,10 +1457,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "unitsLabel");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<Text>();
-            builder.AddChild<ShapeProperties>();
-            builder.AddChild<TxPrTextBody>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text), 0, 1, version: FileFormatVersions.Office2016),
@@ -1717,10 +1712,10 @@ union.AddValidator(StringValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Text &lt;cx:tx></description></item>
-    ///   <item><description>ShapeProperties &lt;cx:spPr></description></item>
-    ///   <item><description>TxPrTextBody &lt;cx:txPr></description></item>
-    ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text" /> <c>&lt;cx:tx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody" /> <c>&lt;cx:txPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1764,10 +1759,10 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "title");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<Text>();
-            builder.AddChild<ShapeProperties>();
-            builder.AddChild<TxPrTextBody>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text), 0, 1, version: FileFormatVersions.Office2016),
@@ -1841,8 +1836,8 @@ union.AddValidator(StringValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>AxisUnitsLabel &lt;cx:unitsLabel></description></item>
-    ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnitsLabel" /> <c>&lt;cx:unitsLabel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1902,8 +1897,8 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "units");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<AxisUnitsLabel>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnitsLabel>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             builder.AddElement<AxisUnits>()
 .AddAttribute(0, "unit", a => a.Unit);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -1951,8 +1946,8 @@ union.AddValidator(StringValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ShapeProperties &lt;cx:spPr></description></item>
-    ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1996,6 +1991,8 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "majorGridlines");
             builder.Availability = FileFormatVersions.Office2016;
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties), 0, 1, version: FileFormatVersions.Office2016),
@@ -2015,8 +2012,8 @@ union.AddValidator(StringValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ShapeProperties &lt;cx:spPr></description></item>
-    ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2060,6 +2057,8 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "minorGridlines");
             builder.Availability = FileFormatVersions.Office2016;
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties), 0, 1, version: FileFormatVersions.Office2016),
@@ -2076,13 +2075,6 @@ union.AddValidator(StringValidator.Instance);
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>ShapeProperties &lt;cx:spPr></description></item>
-    ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
-    /// </list>
-    /// </remark>
     public abstract partial class OpenXmlGridlinesElement : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2119,8 +2111,6 @@ union.AddValidator(StringValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<ShapeProperties>();
-            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -2158,7 +2148,7 @@ union.AddValidator(StringValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2202,6 +2192,7 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "majorTickMarks");
             builder.Availability = FileFormatVersions.Office2016;
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList), 0, 1, version: FileFormatVersions.Office2016)
@@ -2220,7 +2211,7 @@ union.AddValidator(StringValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2264,6 +2255,7 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "minorTickMarks");
             builder.Availability = FileFormatVersions.Office2016;
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList), 0, 1, version: FileFormatVersions.Office2016)
@@ -2279,12 +2271,6 @@ union.AddValidator(StringValidator.Instance);
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
-    /// </list>
-    /// </remark>
     public abstract partial class OpenXmlTickMarksElement : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2337,9 +2323,8 @@ union.AddValidator(StringValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<ExtensionList>();
             builder.AddElement<OpenXmlTickMarksElement>()
-.AddAttribute(0, "type", a => a.Type);
+                           .AddAttribute(0, "type", a => a.Type);
         }
 
         /// <summary>
@@ -2364,7 +2349,7 @@ union.AddValidator(StringValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2408,7 +2393,7 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "tickLabels");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList), 0, 1, version: FileFormatVersions.Office2016)
@@ -2739,8 +2724,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Xsddouble &lt;cx:binSize></description></item>
-    ///   <item><description>BinCountXsdunsignedInt &lt;cx:binCount></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Xsddouble" /> <c>&lt;cx:binSize></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.BinCountXsdunsignedInt" /> <c>&lt;cx:binCount></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2832,8 +2817,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "binning");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<Xsddouble>();
-            builder.AddChild<BinCountXsdunsignedInt>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Xsddouble>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.BinCountXsdunsignedInt>();
             builder.AddElement<Binning>()
 .AddAttribute(0, "intervalClosed", a => a.IntervalClosed)
 .AddAttribute(0, "underflow", a => a.Underflow, aBuilder =>
@@ -2943,7 +2928,7 @@ union.AddValidator(StringValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>UnsignedIntegerType &lt;cx:idx></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.UnsignedIntegerType" /> <c>&lt;cx:idx></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2987,7 +2972,7 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "subtotals");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<UnsignedIntegerType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.UnsignedIntegerType>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.UnsignedIntegerType), 0, 0, version: FileFormatVersions.Office2016)
@@ -3414,12 +3399,12 @@ union.AddValidator(StringValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NumberFormat &lt;cx:numFmt></description></item>
-    ///   <item><description>ShapeProperties &lt;cx:spPr></description></item>
-    ///   <item><description>TxPrTextBody &lt;cx:txPr></description></item>
-    ///   <item><description>DataLabelVisibilities &lt;cx:visibility></description></item>
-    ///   <item><description>SeparatorXsdstring &lt;cx:separator></description></item>
-    ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat" /> <c>&lt;cx:numFmt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody" /> <c>&lt;cx:txPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelVisibilities" /> <c>&lt;cx:visibility></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeparatorXsdstring" /> <c>&lt;cx:separator></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3495,12 +3480,12 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "dataLabel");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<NumberFormat>();
-            builder.AddChild<ShapeProperties>();
-            builder.AddChild<TxPrTextBody>();
-            builder.AddChild<DataLabelVisibilities>();
-            builder.AddChild<SeparatorXsdstring>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelVisibilities>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeparatorXsdstring>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             builder.AddElement<DataLabel>()
 .AddAttribute(0, "idx", a => a.Idx, aBuilder =>
 {
@@ -3657,8 +3642,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ShapeProperties &lt;cx:spPr></description></item>
-    ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3718,8 +3703,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "dataPt");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<ShapeProperties>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             builder.AddElement<DataPoint>()
 .AddAttribute(0, "idx", a => a.Idx, aBuilder =>
 {
@@ -3770,14 +3755,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NumberFormat &lt;cx:numFmt></description></item>
-    ///   <item><description>ShapeProperties &lt;cx:spPr></description></item>
-    ///   <item><description>TxPrTextBody &lt;cx:txPr></description></item>
-    ///   <item><description>DataLabelVisibilities &lt;cx:visibility></description></item>
-    ///   <item><description>SeparatorXsdstring &lt;cx:separator></description></item>
-    ///   <item><description>DataLabel &lt;cx:dataLabel></description></item>
-    ///   <item><description>DataLabelHidden &lt;cx:dataLabelHidden></description></item>
-    ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat" /> <c>&lt;cx:numFmt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody" /> <c>&lt;cx:txPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelVisibilities" /> <c>&lt;cx:visibility></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeparatorXsdstring" /> <c>&lt;cx:separator></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabel" /> <c>&lt;cx:dataLabel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelHidden" /> <c>&lt;cx:dataLabelHidden></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3837,14 +3822,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "dataLabels");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<NumberFormat>();
-            builder.AddChild<ShapeProperties>();
-            builder.AddChild<TxPrTextBody>();
-            builder.AddChild<DataLabelVisibilities>();
-            builder.AddChild<SeparatorXsdstring>();
-            builder.AddChild<DataLabel>();
-            builder.AddChild<DataLabelHidden>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelVisibilities>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeparatorXsdstring>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabel>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelHidden>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             builder.AddElement<DataLabels>()
 .AddAttribute(0, "pos", a => a.Pos);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -3986,13 +3971,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ParentLabelLayout &lt;cx:parentLabelLayout></description></item>
-    ///   <item><description>SeriesElementVisibilities &lt;cx:visibility></description></item>
-    ///   <item><description>Aggregation &lt;cx:aggregation></description></item>
-    ///   <item><description>Binning &lt;cx:binning></description></item>
-    ///   <item><description>Statistics &lt;cx:statistics></description></item>
-    ///   <item><description>Subtotals &lt;cx:subtotals></description></item>
-    ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ParentLabelLayout" /> <c>&lt;cx:parentLabelLayout></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeriesElementVisibilities" /> <c>&lt;cx:visibility></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Aggregation" /> <c>&lt;cx:aggregation></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Binning" /> <c>&lt;cx:binning></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Statistics" /> <c>&lt;cx:statistics></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Subtotals" /> <c>&lt;cx:subtotals></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4036,13 +4021,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "layoutPr");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<ParentLabelLayout>();
-            builder.AddChild<SeriesElementVisibilities>();
-            builder.AddChild<Aggregation>();
-            builder.AddChild<Binning>();
-            builder.AddChild<Statistics>();
-            builder.AddChild<Subtotals>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ParentLabelLayout>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeriesElementVisibilities>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Aggregation>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Binning>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Statistics>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Subtotals>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ParentLabelLayout), 0, 1, version: FileFormatVersions.Office2016),
@@ -4138,8 +4123,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ShapeProperties &lt;cx:spPr></description></item>
-    ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4183,8 +4168,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "plotSurface");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<ShapeProperties>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties), 0, 1, version: FileFormatVersions.Office2016),
@@ -4230,14 +4215,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Text &lt;cx:tx></description></item>
-    ///   <item><description>ShapeProperties &lt;cx:spPr></description></item>
-    ///   <item><description>DataPoint &lt;cx:dataPt></description></item>
-    ///   <item><description>DataLabels &lt;cx:dataLabels></description></item>
-    ///   <item><description>DataId &lt;cx:dataId></description></item>
-    ///   <item><description>SeriesLayoutProperties &lt;cx:layoutPr></description></item>
-    ///   <item><description>AxisId &lt;cx:axisId></description></item>
-    ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text" /> <c>&lt;cx:tx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataPoint" /> <c>&lt;cx:dataPt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabels" /> <c>&lt;cx:dataLabels></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataId" /> <c>&lt;cx:dataId></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeriesLayoutProperties" /> <c>&lt;cx:layoutPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisId" /> <c>&lt;cx:axisId></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4361,14 +4346,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "series");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<Text>();
-            builder.AddChild<ShapeProperties>();
-            builder.AddChild<DataPoint>();
-            builder.AddChild<DataLabels>();
-            builder.AddChild<DataId>();
-            builder.AddChild<SeriesLayoutProperties>();
-            builder.AddChild<AxisId>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataId>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeriesLayoutProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisId>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             builder.AddElement<Series>()
 .AddAttribute(0, "layoutId", a => a.LayoutId, aBuilder =>
 {
@@ -4429,9 +4414,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PlotSurface &lt;cx:plotSurface></description></item>
-    ///   <item><description>Series &lt;cx:series></description></item>
-    ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotSurface" /> <c>&lt;cx:plotSurface></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Series" /> <c>&lt;cx:series></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4475,9 +4460,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "plotAreaRegion");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<PlotSurface>();
-            builder.AddChild<Series>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotSurface>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Series>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotSurface), 0, 1, version: FileFormatVersions.Office2016),
@@ -4511,19 +4496,19 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CategoryAxisScaling &lt;cx:catScaling></description></item>
-    ///   <item><description>ValueAxisScaling &lt;cx:valScaling></description></item>
-    ///   <item><description>AxisTitle &lt;cx:title></description></item>
-    ///   <item><description>AxisUnits &lt;cx:units></description></item>
-    ///   <item><description>MajorGridlinesGridlines &lt;cx:majorGridlines></description></item>
-    ///   <item><description>MinorGridlinesGridlines &lt;cx:minorGridlines></description></item>
-    ///   <item><description>MajorTickMarksTickMarks &lt;cx:majorTickMarks></description></item>
-    ///   <item><description>MinorTickMarksTickMarks &lt;cx:minorTickMarks></description></item>
-    ///   <item><description>TickLabels &lt;cx:tickLabels></description></item>
-    ///   <item><description>NumberFormat &lt;cx:numFmt></description></item>
-    ///   <item><description>ShapeProperties &lt;cx:spPr></description></item>
-    ///   <item><description>TxPrTextBody &lt;cx:txPr></description></item>
-    ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.CategoryAxisScaling" /> <c>&lt;cx:catScaling></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueAxisScaling" /> <c>&lt;cx:valScaling></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisTitle" /> <c>&lt;cx:title></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnits" /> <c>&lt;cx:units></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MajorGridlinesGridlines" /> <c>&lt;cx:majorGridlines></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinorGridlinesGridlines" /> <c>&lt;cx:minorGridlines></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MajorTickMarksTickMarks" /> <c>&lt;cx:majorTickMarks></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinorTickMarksTickMarks" /> <c>&lt;cx:minorTickMarks></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TickLabels" /> <c>&lt;cx:tickLabels></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat" /> <c>&lt;cx:numFmt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody" /> <c>&lt;cx:txPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4599,19 +4584,19 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "axis");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<CategoryAxisScaling>();
-            builder.AddChild<ValueAxisScaling>();
-            builder.AddChild<AxisTitle>();
-            builder.AddChild<AxisUnits>();
-            builder.AddChild<MajorGridlinesGridlines>();
-            builder.AddChild<MinorGridlinesGridlines>();
-            builder.AddChild<MajorTickMarksTickMarks>();
-            builder.AddChild<MinorTickMarksTickMarks>();
-            builder.AddChild<TickLabels>();
-            builder.AddChild<NumberFormat>();
-            builder.AddChild<ShapeProperties>();
-            builder.AddChild<TxPrTextBody>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.CategoryAxisScaling>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueAxisScaling>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnits>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MajorGridlinesGridlines>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinorGridlinesGridlines>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MajorTickMarksTickMarks>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinorTickMarksTickMarks>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TickLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             builder.AddElement<Axis>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -4651,10 +4636,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Text &lt;cx:tx></description></item>
-    ///   <item><description>ShapeProperties &lt;cx:spPr></description></item>
-    ///   <item><description>TxPrTextBody &lt;cx:txPr></description></item>
-    ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text" /> <c>&lt;cx:tx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody" /> <c>&lt;cx:txPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4746,10 +4731,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "title");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<Text>();
-            builder.AddChild<ShapeProperties>();
-            builder.AddChild<TxPrTextBody>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             builder.AddElement<ChartTitle>()
 .AddAttribute(0, "pos", a => a.Pos)
 .AddAttribute(0, "align", a => a.Align)
@@ -4827,10 +4812,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PlotAreaRegion &lt;cx:plotAreaRegion></description></item>
-    ///   <item><description>Axis &lt;cx:axis></description></item>
-    ///   <item><description>ShapeProperties &lt;cx:spPr></description></item>
-    ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotAreaRegion" /> <c>&lt;cx:plotAreaRegion></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Axis" /> <c>&lt;cx:axis></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4874,10 +4859,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "plotArea");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<PlotAreaRegion>();
-            builder.AddChild<Axis>();
-            builder.AddChild<ShapeProperties>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotAreaRegion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Axis>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotAreaRegion), 1, 1, version: FileFormatVersions.Office2016),
@@ -4912,9 +4897,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ShapeProperties &lt;cx:spPr></description></item>
-    ///   <item><description>TxPrTextBody &lt;cx:txPr></description></item>
-    ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody" /> <c>&lt;cx:txPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5006,9 +4991,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "legend");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<ShapeProperties>();
-            builder.AddChild<TxPrTextBody>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             builder.AddElement<Legend>()
 .AddAttribute(0, "pos", a => a.Pos)
 .AddAttribute(0, "align", a => a.Align)
@@ -5072,12 +5057,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OddHeaderXsdstring &lt;cx:oddHeader></description></item>
-    ///   <item><description>OddFooterXsdstring &lt;cx:oddFooter></description></item>
-    ///   <item><description>EvenHeaderXsdstring &lt;cx:evenHeader></description></item>
-    ///   <item><description>EvenFooterXsdstring &lt;cx:evenFooter></description></item>
-    ///   <item><description>FirstHeaderXsdstring &lt;cx:firstHeader></description></item>
-    ///   <item><description>FirstFooterXsdstring &lt;cx:firstFooter></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.OddHeaderXsdstring" /> <c>&lt;cx:oddHeader></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.OddFooterXsdstring" /> <c>&lt;cx:oddFooter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EvenHeaderXsdstring" /> <c>&lt;cx:evenHeader></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EvenFooterXsdstring" /> <c>&lt;cx:evenFooter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FirstHeaderXsdstring" /> <c>&lt;cx:firstHeader></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FirstFooterXsdstring" /> <c>&lt;cx:firstFooter></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5169,12 +5154,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "headerFooter");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<OddHeaderXsdstring>();
-            builder.AddChild<OddFooterXsdstring>();
-            builder.AddChild<EvenHeaderXsdstring>();
-            builder.AddChild<EvenFooterXsdstring>();
-            builder.AddChild<FirstHeaderXsdstring>();
-            builder.AddChild<FirstFooterXsdstring>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.OddHeaderXsdstring>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.OddFooterXsdstring>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EvenHeaderXsdstring>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EvenFooterXsdstring>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FirstHeaderXsdstring>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FirstFooterXsdstring>();
             builder.AddElement<HeaderFooter>()
 .AddAttribute(0, "alignWithMargins", a => a.AlignWithMargins)
 .AddAttribute(0, "differentOddEven", a => a.DifferentOddEven)
@@ -5611,9 +5596,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExternalData &lt;cx:externalData></description></item>
-    ///   <item><description>Data &lt;cx:data></description></item>
-    ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExternalData" /> <c>&lt;cx:externalData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Data" /> <c>&lt;cx:data></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5657,9 +5642,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "chartData");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<ExternalData>();
-            builder.AddChild<Data>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExternalData>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Data>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExternalData), 0, 1, version: FileFormatVersions.Office2016),
@@ -5693,10 +5678,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ChartTitle &lt;cx:title></description></item>
-    ///   <item><description>PlotArea &lt;cx:plotArea></description></item>
-    ///   <item><description>Legend &lt;cx:legend></description></item>
-    ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartTitle" /> <c>&lt;cx:title></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotArea" /> <c>&lt;cx:plotArea></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Legend" /> <c>&lt;cx:legend></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5740,10 +5725,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "chart");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<ChartTitle>();
-            builder.AddChild<PlotArea>();
-            builder.AddChild<Legend>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotArea>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Legend>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartTitle), 0, 1, version: FileFormatVersions.Office2016),
@@ -5817,7 +5802,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6146,9 +6131,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>HeaderFooter &lt;cx:headerFooter></description></item>
-    ///   <item><description>PageMargins &lt;cx:pageMargins></description></item>
-    ///   <item><description>PageSetup &lt;cx:pageSetup></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.HeaderFooter" /> <c>&lt;cx:headerFooter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageMargins" /> <c>&lt;cx:pageMargins></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageSetup" /> <c>&lt;cx:pageSetup></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6192,9 +6177,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "printSettings");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<HeaderFooter>();
-            builder.AddChild<PageMargins>();
-            builder.AddChild<PageSetup>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.HeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageMargins>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageSetup>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.HeaderFooter), 0, 1, version: FileFormatVersions.Office2016),
@@ -6313,7 +6298,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ChartStringValue &lt;cx:pt></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartStringValue" /> <c>&lt;cx:pt></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6373,7 +6358,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "lvl");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<ChartStringValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartStringValue>();
             builder.AddElement<StringLevel>()
 .AddAttribute(0, "ptCount", a => a.PtCount, aBuilder =>
 {
@@ -6397,7 +6382,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NumericValue &lt;cx:pt></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericValue" /> <c>&lt;cx:pt></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6473,7 +6458,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "lvl");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<NumericValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericValue>();
             builder.AddElement<NumericLevel>()
 .AddAttribute(0, "ptCount", a => a.PtCount, aBuilder =>
 {

@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CalcFeature &lt;xcalcf:feature></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures.CalcFeature" /> <c>&lt;xcalcf:feature></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures
             base.ConfigureMetadata(builder);
             builder.SetSchema(103, "calcFeatures");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<CalcFeature>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures.CalcFeature>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures.CalcFeature), 1, 0, version: FileFormatVersions.Office2019)

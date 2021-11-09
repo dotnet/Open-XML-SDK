@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OfficeArtExtensionList &lt;tsle:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.OfficeArtExtensionList" /> <c>&lt;tsle:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -83,7 +83,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
             base.ConfigureMetadata(builder);
             builder.SetSchema(77, "timeslicer");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.OfficeArtExtensionList>();
             builder.AddElement<TimeSlicer>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -120,7 +120,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete

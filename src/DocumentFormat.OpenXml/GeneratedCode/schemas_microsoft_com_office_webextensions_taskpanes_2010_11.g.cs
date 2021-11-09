@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>WebExtensionTaskpane &lt;wetp:taskpane></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionTaskpane" /> <c>&lt;wetp:taskpane></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
             base.ConfigureMetadata(builder);
             builder.SetSchema(70, "taskpanes");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<WebExtensionTaskpane>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionTaskpane>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionTaskpane), 0, 0, version: FileFormatVersions.Office2013)
@@ -172,7 +172,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -241,8 +241,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>WebExtensionPartReference &lt;wetp:webextensionref></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;wetp:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionPartReference" /> <c>&lt;wetp:webextensionref></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtentionPane.OfficeArtExtensionList" /> <c>&lt;wetp:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -366,8 +366,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(70, "taskpane");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<WebExtensionPartReference>();
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionPartReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtentionPane.OfficeArtExtensionList>();
             builder.AddElement<WebExtensionTaskpane>()
 .AddAttribute(0, "dockstate", a => a.DockState, aBuilder =>
 {
