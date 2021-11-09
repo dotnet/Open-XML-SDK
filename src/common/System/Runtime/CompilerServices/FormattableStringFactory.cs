@@ -3,11 +3,11 @@
 
 namespace System.Runtime.CompilerServices
 {
-	internal static class FormattableStringFactory
-	{
-		public static FormattableString Create(string format, params object[] arguments)
-		{
-			return new FormattableString(format, arguments);
-		}
-	}
+    internal static class FormattableStringFactory
+    {
+        public static FormattableString Create(string format, params object[] arguments)
+        {
+            return new FormattableString(format, arguments);
+        }
+    }
 }

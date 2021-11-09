@@ -46,7 +46,6 @@ namespace DocumentFormat.OpenXml.Features
         /// <param name="shared">Shared collection feature.</param>
         /// <param name="doc">Document to register with shared paragraph collection.</param>
         /// <returns></returns>
-        /// <exception cref="InvalidOperationException"></exception>
         public static ISharedFeature<IParagraphIdCollectionFeature> Add(this ISharedFeature<IParagraphIdCollectionFeature> shared, WordprocessingDocument doc)
         {
             doc.AddPackageEventsFeature();

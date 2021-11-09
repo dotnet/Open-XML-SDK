@@ -2,6 +2,7 @@
 <Project>
   <PropertyGroup>
     <IsShipped>false</IsShipped>
+    <NoWarn>$(NoWarn);SA0001</NoWarn>
     <SystemIOPackagingVersion>4.7.0</SystemIOPackagingVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
 
@@ -143,8 +144,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <LangVersion>9.0</LangVersion>
-    <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)\rules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>10.0</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup>

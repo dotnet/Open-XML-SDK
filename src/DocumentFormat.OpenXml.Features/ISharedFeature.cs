@@ -6,6 +6,7 @@ namespace DocumentFormat.OpenXml.Features
     /// <summary>
     /// A feature to create a composite feature if shared among multiple instances.
     /// </summary>
+    /// <typeparam name="T">Type of shared feature.</typeparam>
     public interface ISharedFeature<T>
     {
         /// <summary>

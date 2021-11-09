@@ -15,12 +15,12 @@ namespace DocumentFormat.OpenXml.Packaging
                 ImagePartType.Png => "image/png",
                 ImagePartType.Tiff => "image/tiff",
 
-                //ImagePartType.Xbm => "image/xbm",
+                // ImagePartType.Xbm => "image/xbm",
                 ImagePartType.Icon => "image/x-icon",
                 ImagePartType.Pcx => "image/x-pcx",
 
-                //ImagePartType.Pcz => "image/x-pcz",
-                //ImagePartType.Pict => "image/pict",
+                // ImagePartType.Pcz => "image/x-pcz",
+                // ImagePartType.Pict => "image/pict",
                 ImagePartType.Jpeg => "image/jpeg",
                 ImagePartType.Emf => "image/x-emf",
                 ImagePartType.Wmf => "image/x-wmf",
@@ -36,12 +36,12 @@ namespace DocumentFormat.OpenXml.Packaging
                 ImagePartType.Png => ".png",
                 ImagePartType.Tiff => ".tiff",
 
-                //ImagePartType.Xbm => ".xbm",
+                // ImagePartType.Xbm => ".xbm",
                 ImagePartType.Icon => ".ico",
                 ImagePartType.Pcx => ".pcx",
 
-                //ImagePartType.Pcz => ".pcz",
-                //ImagePartType.Pict => ".pict",
+                // ImagePartType.Pcz => ".pcz",
+                // ImagePartType.Pict => ".pict",
                 ImagePartType.Jpeg => ".jpg",
                 ImagePartType.Emf => ".emf",
                 ImagePartType.Wmf => ".wmf",

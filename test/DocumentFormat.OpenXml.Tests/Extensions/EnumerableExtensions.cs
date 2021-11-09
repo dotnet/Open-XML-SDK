@@ -25,8 +25,8 @@ namespace DocumentFormat.OpenXml.Tests
             return chosenElement;
 
             // This used to return a random element.  Bad idea for a test suite.
-            //int index = new Random ().Next(source.Count());
-            //return source.ElementAtOrDefault(index);
+            // int index = new Random ().Next(source.Count());
+            // return source.ElementAtOrDefault(index);
         }
 
         /// <summary> Pick an element from source collection randomly. </summary>

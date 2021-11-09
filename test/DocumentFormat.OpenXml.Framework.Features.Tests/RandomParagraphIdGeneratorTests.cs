@@ -126,7 +126,7 @@ namespace DocumentFormat.OpenXml.Features
             var endnotesPart = mainDocumentPart.AddNewPart<EndnotesPart>();
             endnotesPart.Endnotes = endnotes;
 
-            return 3 * count + 2;
+            return (3 * count) + 2;
         }
 
         [Fact]

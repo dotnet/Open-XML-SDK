@@ -9,8 +9,8 @@ namespace DocumentFormat.OpenXml
     {
         internal List<OpenXmlAttribute>? ExtendedAttributesField { get; set; }
 
-        internal MarkupCompatibilityAttributes? _mcAttributes { get; set; }
+        internal MarkupCompatibilityAttributes? McAttributes { get; set; }
 
-        internal List<KeyValuePair<string, string>>? _nsMappings { get; set; }
+        internal List<KeyValuePair<string, string>>? NsMappings { get; set; }
     }
 }

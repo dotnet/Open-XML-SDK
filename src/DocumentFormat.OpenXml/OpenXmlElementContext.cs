@@ -13,8 +13,8 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class OpenXmlElementContext
     {
-        internal const string xmlnsUri = @"http://www.w3.org/2000/xmlns/";
-        internal const string xmlnsPrefix = "xmlns";
+        internal const string XmlnsUri = @"http://www.w3.org/2000/xmlns/";
+        internal const string XmlnsPrefix = "xmlns";
 
         private MarkupCompatibilityProcessSettings? _mcSettings;
 
@@ -92,7 +92,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>Returns true if nsUri equals @"http://www.w3.org/2000/xmlns/".</returns>
         internal bool IsXmlnsUri(string nsUri)
         {
-            return string.Equals(XmlReaderSettings.NameTable?.Get(nsUri), xmlnsUri, StringComparison.Ordinal);
+            return string.Equals(XmlReaderSettings.NameTable?.Get(nsUri), XmlnsUri, StringComparison.Ordinal);
         }
 
         /// <summary>

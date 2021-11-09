@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         public override int GetHashCode()
         {
-            var hashcode = new HashCode();
+            var hashcode = default(HashCode);
 
             hashcode.Add(Namespace);
             hashcode.Add(Name, StringComparer.Ordinal);

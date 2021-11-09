@@ -9,9 +9,9 @@ using Xunit;
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
-    ///This is a test class for CompositeParticleValidatorTest and is intended
-    ///to contain all CompositeParticleValidatorTest Unit Tests
-    ///</summary>
+    /// This is a test class for CompositeParticleValidatorTest and is intended
+    /// to contain all CompositeParticleValidatorTest Unit Tests
+    /// </summary>
     public class CompositeParticleValidatorTest
     {
         private const FileFormatVersions Version = FileFormatVersions.Office2007;
@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Tests
             validationContext.Stack.Push(element: pPr);
             var expected = pPr;
 
-            //<xsd:complexType name="CT_PPr">
+            // <xsd:complexType name="CT_PPr">
             //  <xsd:complexContent>
             //    <xsd:extension base="CT_PPrBase">
             //      <xsd:sequence>
@@ -38,9 +38,9 @@ namespace DocumentFormat.OpenXml.Tests
             //      </xsd:sequence>
             //    </xsd:extension>
             //  </xsd:complexContent>
-            //</xsd:complexType>
+            // </xsd:complexType>
 
-            //<xsd:complexType name="CT_PPrBase">
+            // <xsd:complexType name="CT_PPrBase">
             //  <xsd:sequence>
             //    <xsd:element name="pStyle" type="CT_String" minOccurs="0">
             //    <xsd:element name="keepNext" type="CT_OnOff" minOccurs="0">
@@ -76,7 +76,7 @@ namespace DocumentFormat.OpenXml.Tests
             //    <xsd:element name="divId" type="CT_DecimalNumber" minOccurs="0">
             //    <xsd:element name="cnfStyle" type="CT_Cnf" minOccurs="0" maxOccurs="1">
             //  </xsd:sequence>
-            //</xsd:complexType>
+            // </xsd:complexType>
 
             // ***** good case ******
 
@@ -126,7 +126,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(expected, validationContext.Errors[0].Node);
             Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
             Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", validationContext.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
+            Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, validationContext.Errors[0].Description);
             pPr.RemoveChild(errorChild);
 
             validationContext.Clear();
@@ -141,7 +141,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
             Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", validationContext.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
+            Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, validationContext.Errors[0].Description);
             pPr.RemoveChild(pPr.FirstChild);
         }
 
@@ -157,49 +157,49 @@ namespace DocumentFormat.OpenXml.Tests
             validationContext.Stack.Push(element: body);
             var expected = body;
 
-            //<xsd:complexType name="CT_Body">
+            // <xsd:complexType name="CT_Body">
             //  <xsd:sequence>
             //    <xsd:group ref="EG_BlockLevelElts" minOccurs="0" maxOccurs="unbounded" />
             //    <xsd:element name="sectPr" minOccurs="0" maxOccurs="1" type="CT_SectPr">
             //  </xsd:sequence>
-            //</xsd:complexType>
+            // </xsd:complexType>
 
-            //<xs:group name="EG_BlockLevelEltsBase">
+            // <xs:group name="EG_BlockLevelEltsBase">
             //  <xs:choice>
             //    <xs:element name="altChunk" type="CT_AltChunk" minOccurs="0" maxOccurs="unbounded"></xs:element>
             //  </xs:choice>
-            //</xs:group>
+            // </xs:group>
 
-            //<xs:group name="EG_BlockLevelElts">
+            // <xs:group name="EG_BlockLevelElts">
             //  <xs:choice>
             //    <xs:group ref="EG_BlockLevelEltsBase" minOccurs="0" maxOccurs="unbounded" />
             //    <xs:group ref="EG_BlockLevelChunkElts" minOccurs="0" maxOccurs="unbounded" />
             //  </xs:choice>
-            //</xs:group>
+            // </xs:group>
 
-            //<xsd:group name="EG_BlockLevelChunkElts">
+            // <xsd:group name="EG_BlockLevelChunkElts">
             //  <xsd:choice>
             //    <xsd:group ref="EG_ContentBlockContent" minOccurs="0" maxOccurs="unbounded" />
             //  </xsd:choice>
-            //</xsd:group>
+            // </xsd:group>
 
-            //<xs:group name="EG_ContentBlockContent">
+            // <xs:group name="EG_ContentBlockContent">
             //  <xs:choice>
             //    <xs:group ref="EG_ContentBlockContentBase" minOccurs="0" maxOccurs="unbounded" />
             //    <xs:group ref="EG_RunLevelElts" minOccurs="0" maxOccurs="unbounded" />
             //  </xs:choice>
-            //</xs:group>
+            // </xs:group>
 
-            //<xs:group name="EG_ContentBlockContentBase">
+            // <xs:group name="EG_ContentBlockContentBase">
             //  <xs:choice>
             //    <xs:element name="customXml" type="CT_CustomXmlBlock"></xs:element>
             //    <xs:element name="sdt" type="CT_SdtBlock"></xs:element>
             //    <xs:element name="p" type="CT_P" minOccurs="0" maxOccurs="unbounded"></xs:element>
             //    <xs:element name="tbl" type="CT_Tbl" minOccurs="0" maxOccurs="unbounded"></xs:element>
             //  </xs:choice>
-            //</xs:group>
+            // </xs:group>
 
-            //<xs:group name="EG_RunLevelElts">
+            // <xs:group name="EG_RunLevelElts">
             //  <xs:choice>
             //    <xs:group ref="EG_RunLevelEltsBase" minOccurs="0" maxOccurs="unbounded" />
             //    <xs:group ref="EG_RangeMarkupElements" minOccurs="0" maxOccurs="unbounded"></xs:group>
@@ -210,17 +210,17 @@ namespace DocumentFormat.OpenXml.Tests
             //    <xs:element name="contentPart" type="CT_ContentPart" minOccurs="0" maxOccurs="unbounded" ofapi:available="o14" />
             //    <xs:group ref="w14:EG_RunLevelConflicts" minOccurs="0" />
             //  </xs:choice>
-            //</xs:group>
+            // </xs:group>
 
-            //<xs:group name="EG_RunLevelEltsBase">
+            // <xs:group name="EG_RunLevelEltsBase">
             //  <xs:choice>
             //    <xs:element name="proofErr" minOccurs="0" type="CT_ProofErr"></xs:element>
             //    <xs:element name="permStart" minOccurs="0" type="CT_PermStart"></xs:element>
             //    <xs:element name="permEnd" minOccurs="0" type="CT_Perm"></xs:element>
             //  </xs:choice>
-            //</xs:group>
+            // </xs:group>
 
-            //<xs:group name="EG_RangeMarkupElements">
+            // <xs:group name="EG_RangeMarkupElements">
             //  <xs:choice>
             //    <xs:group ref="EG_RangeMarkupElementsNoRev" minOccurs="0" maxOccurs="unbounded" />
             //    <xs:group ref="EG_RangeMarkupElementsRev" minOccurs="0" maxOccurs="unbounded" />
@@ -229,14 +229,14 @@ namespace DocumentFormat.OpenXml.Tests
             //    <xs:element ref="w14:customXmlConflictDelRangeStart" minOccurs="0" />
             //    <xs:element ref="w14:customXmlConflictDelRangeEnd" minOccurs="0" />
             //  </xs:choice>
-            //</xs:group>
+            // </xs:group>
 
-            //<xsd:group name="EG_MathContent">
+            // <xsd:group name="EG_MathContent">
             //  <xsd:choice>
             //    <xsd:element ref="m:oMathPara"></xsd:element>
             //    <xsd:element ref="m:oMath"></xsd:element>
             //  </xsd:choice>
-            //</xsd:group>
+            // </xsd:group>
 
             // ################ the above schema has been changed by EcmaD ##############
 
@@ -294,7 +294,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
             Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", validationContext.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
+            Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, validationContext.Errors[0].Description);
             body.RemoveChild(body.FirstChild);
 
             validationContext.Clear();
@@ -308,7 +308,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
             Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", validationContext.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
+            Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, validationContext.Errors[0].Description);
             body.RemoveChild(errorChild);
 
             validationContext.Clear();
@@ -322,7 +322,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
             Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", validationContext.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
+            Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, validationContext.Errors[0].Description);
             body.RemoveChild(errorChild);
 
             validationContext.Clear();
@@ -350,7 +350,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", validationContext.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
+            Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, validationContext.Errors[0].Description);
             body.RemoveChild(errorChild);
         }
 
@@ -366,7 +366,7 @@ namespace DocumentFormat.OpenXml.Tests
             validationContext.Stack.Push(element: blip);
             var expected = blip;
 
-            //<xsd:complexType name="CT_Blip">
+            // <xsd:complexType name="CT_Blip">
             //  <xsd:sequence>
             //    <xsd:choice minOccurs="0" maxOccurs="unbounded">
             //      <xsd:element name="alphaBiLevel" type="CT_AlphaBiLevelEffect" minOccurs="1" maxOccurs="1">
@@ -391,7 +391,7 @@ namespace DocumentFormat.OpenXml.Tests
             //  </xsd:sequence>
             //  <xsd:attributeGroup ref="AG_Blob"></xsd:attributeGroup>
             //  <xsd:attribute name="cstate" type="ST_BlipCompression" use="optional" default="none">
-            //</xsd:complexType>
+            // </xsd:complexType>
             // ***** good case ******
 
             // empty is ok
@@ -433,7 +433,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
             Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", validationContext.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
+            Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, validationContext.Errors[0].Description);
             blip.RemoveChild(blip.FirstChild);
 
             validationContext.Clear();
@@ -447,7 +447,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
             Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", validationContext.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
+            Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, validationContext.Errors[0].Description);
             blip.RemoveChild(errorChild);
         }
     }

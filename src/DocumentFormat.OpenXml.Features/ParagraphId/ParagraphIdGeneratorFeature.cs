@@ -27,10 +27,12 @@ namespace DocumentFormat.OpenXml.Features
                 do
                 {
                     _randomNumber.GetBytes(bytes);
-                } while (bytes[0] >= 0x80 || bytes[0] == 0 && bytes[1] == 0 && bytes[2] == 0 && bytes[3] == 0);
+                }
+                while (bytes[0] >= 0x80 || (bytes[0] == 0 && bytes[1] == 0 && bytes[2] == 0 && bytes[3] == 0));
 
                 str = HexStringFactory.Create(bytes);
-            } while (collection.Contains(str));
+            }
+            while (collection.Contains(str));
 
             return str;
         }

@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             var attribute = element.ParsedState.Attributes[_rIdAttribute];
 
-            //if the attribute is omitted, semantic validation will do nothing
+            // if the attribute is omitted, semantic validation will do nothing
             if (attribute.Value is null || attribute.Value.InnerText.IsNullOrEmpty())
             {
                 return null;

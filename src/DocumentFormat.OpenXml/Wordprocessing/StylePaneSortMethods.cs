@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     {
         private const string StrictTranslationLocalName = "val";
 
-        private static readonly Dictionary<string, string> s_attributeMap = new Dictionary<string, string>(StringComparer.Ordinal)
+        private static readonly Dictionary<string, string> AttributeMap = new Dictionary<string, string>(StringComparer.Ordinal)
         {
             { "name", "0000" },
             { "priority", "0001" },
@@ -22,14 +22,14 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             { "type", "0005" },
         };
 
-        internal static IEnumerable<string> Values => s_attributeMap.Values.Concat(s_attributeMap.Keys);
+        internal static IEnumerable<string> Values => AttributeMap.Values.Concat(AttributeMap.Keys);
 
         /// <remarks>
         /// See §14.11.5 of ISO/IEC 29500-4 for details on this translation
         /// </remarks>
         private protected override bool StrictTranslateAttribute(in OpenXmlQualifiedName qname, string? value)
         {
-            if (string.Equals(StrictTranslationLocalName, qname.Name, StringComparison.Ordinal) && value is not null && s_attributeMap.TryGetValue(value, out var result))
+            if (string.Equals(StrictTranslationLocalName, qname.Name, StringComparison.Ordinal) && value is not null && AttributeMap.TryGetValue(value, out var result))
             {
                 value = result;
             }

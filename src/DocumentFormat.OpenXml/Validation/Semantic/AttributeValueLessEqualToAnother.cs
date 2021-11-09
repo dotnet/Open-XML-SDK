@@ -53,7 +53,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            if (val < otherVal && !_canEqual || val <= otherVal && _canEqual)
+            if ((val < otherVal && !_canEqual) || (val <= otherVal && _canEqual))
             {
                 return null;
             }

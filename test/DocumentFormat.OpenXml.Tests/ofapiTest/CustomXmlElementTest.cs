@@ -20,9 +20,9 @@ namespace DocumentFormat.OpenXml.Tests
         private string uri = "urn:customXmlSample";
         private string element = "elementName";
 
-        ///<summary>
-        ///CustomXmlElementTests.
-        ///</summary>
+        /// <summary>
+        /// CustomXmlElementTests.
+        /// </summary>
         [Fact]
         public void CustomXmlElementTests()
         {
@@ -50,7 +50,7 @@ namespace DocumentFormat.OpenXml.Tests
             ValidateCustomXmlElement(cxCell);
 
             // Test loading and modification on DOM tree
-            using (var stream = GetStream(TestFiles.simpleSdt))
+            using (var stream = GetStream(TestFiles.SimpleSdt))
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 // find customXml
@@ -76,9 +76,9 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(element, e.Element.Value);
         }
 
-        ///<summary>
-        ///SdtBaseClassTest
-        ///</summary>
+        /// <summary>
+        /// SdtBaseClassTest
+        /// </summary>
         [Fact]
         public void SdtBaseClassTest()
         {
@@ -88,7 +88,7 @@ namespace DocumentFormat.OpenXml.Tests
             // Test loading and modification
             SdtRun sdtRun = new SdtRun();
 
-            using (var stream = GetStream(TestFiles.simpleSdt))
+            using (var stream = GetStream(TestFiles.SimpleSdt))
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 // find sdt

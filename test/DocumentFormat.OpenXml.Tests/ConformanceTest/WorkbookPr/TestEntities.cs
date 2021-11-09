@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
 {
     public class TestEntities
     {
-        private string workbookPrExtUri { get; set; }
+        private string WorkbookPrExtUri { get; set; }
 
         private string AbsolutePathUri { get; set; }
 
@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
                 }
 
                 WorkbookExtension workbookExtension = (WorkbookExtension)workbookProperties.Parent;
-                workbookPrExtUri = workbookExtension.Uri;
+                WorkbookPrExtUri = workbookExtension.Uri;
 
                 X15ac.AbsolutePath absolutePath = package.WorkbookPart.Workbook.AbsolutePath;
                 if (absolutePath is null)
@@ -95,7 +95,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
                 X15.WorkbookProperties workbookProperties = workbookExtensionList.Descendants<X15.WorkbookProperties>().Single();
                 workbookProperties.Remove();
 
-                WorkbookExtension workbookExtension = workbookExtensionList.Descendants<WorkbookExtension>().Where(e => e.Uri == workbookPrExtUri).Single();
+                WorkbookExtension workbookExtension = workbookExtensionList.Descendants<WorkbookExtension>().Where(e => e.Uri == WorkbookPrExtUri).Single();
                 workbookExtension.Remove();
 
                 log.Pass("Deleted workbookPr element.");
@@ -115,7 +115,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
         {
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, false, new OpenSettings() { MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013) }))
             {
-                int workbookExtensionNum = package.WorkbookPart.Workbook.Descendants<WorkbookExtension>().Where(e => e.Uri == workbookPrExtUri).Count();
+                int workbookExtensionNum = package.WorkbookPart.Workbook.Descendants<WorkbookExtension>().Where(e => e.Uri == WorkbookPrExtUri).Count();
                 log.Verify(workbookExtensionNum == 0, "WorkbookExtension element is not deleted.");
 
                 int workbookPrCount = package.WorkbookPart.Workbook.Descendants<X15.WorkbookProperties>().Count();
@@ -151,7 +151,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
                 log.Pass("Added AlternateContentChoice element.");
 
                 WorkbookExtensionList workbookExtensionList = package.WorkbookPart.Workbook.Descendants<WorkbookExtensionList>().Single();
-                WorkbookExtension workbookExtension = new WorkbookExtension() { Uri = workbookPrExtUri };
+                WorkbookExtension workbookExtension = new WorkbookExtension() { Uri = WorkbookPrExtUri };
                 workbookExtension.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
 
                 X15.WorkbookProperties workbookProperties = new X15.WorkbookProperties();

@@ -16,7 +16,7 @@ namespace System
             _arguments = arguments;
         }
 
-        string IFormattable.ToString(string _, IFormatProvider formatProvider) => ToString(formatProvider);
+        string IFormattable.ToString(string format, IFormatProvider formatProvider) => ToString(formatProvider);
 
         public string ToString(IFormatProvider formatProvider) => string.Format(formatProvider, _format, _arguments);
 

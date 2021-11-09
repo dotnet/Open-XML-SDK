@@ -113,7 +113,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             if (_elementTypes is not null || _xsdanyNamespaces is not null)
             {
-                Debug.Assert(_elementTypes is not null && _elementTypes.Count > 0 || _xsdanyNamespaces is not null && _xsdanyNamespaces.Count > 0);
+                Debug.Assert((_elementTypes is not null && _elementTypes.Count > 0) || (_xsdanyNamespaces is not null && _xsdanyNamespaces.Count > 0));
 
                 var childrenNames = new List<string>();
 

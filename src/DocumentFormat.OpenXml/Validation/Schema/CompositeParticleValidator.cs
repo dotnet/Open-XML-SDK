@@ -28,7 +28,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// Be called on root particle of complex type.
         /// </summary>
         /// <param name="validationContext"></param>
-        /// <returns></returns>
         internal override void Validate(ValidationContext validationContext)
         {
             if (validationContext.Stack.Current?.Element is not OpenXmlCompositeElement element)
@@ -92,7 +91,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         }
                         else
                         {
-                            //Debug.Assert(result.Valid == true);
+                            // Debug.Assert(result.Valid == true);
                         }
                     }
 

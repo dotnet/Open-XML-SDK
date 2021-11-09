@@ -175,7 +175,7 @@ namespace DocumentFormat.OpenXml
             {
                 foreach (var item in namespaceDeclarations)
                 {
-                    _xmlWriter.WriteAttributeString(OpenXmlElementContext.xmlnsPrefix, item.Key, OpenXmlElementContext.xmlnsUri, item.Value);
+                    _xmlWriter.WriteAttributeString(OpenXmlElementContext.XmlnsPrefix, item.Key, OpenXmlElementContext.XmlnsUri, item.Value);
                 }
             }
 
@@ -278,7 +278,7 @@ namespace DocumentFormat.OpenXml
             {
                 foreach (var item in namespaceDeclarations)
                 {
-                    _xmlWriter.WriteAttributeString(OpenXmlElementContext.xmlnsPrefix, item.Key, OpenXmlElementContext.xmlnsUri, item.Value);
+                    _xmlWriter.WriteAttributeString(OpenXmlElementContext.XmlnsPrefix, item.Key, OpenXmlElementContext.XmlnsUri, item.Value);
                 }
             }
 

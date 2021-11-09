@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
 {
     public partial class Indentation
     {
-        private static readonly Dictionary<string, string> s_attributeMap = new Dictionary<string, string>(StringComparer.Ordinal)
+        private static readonly Dictionary<string, string> AttributeMap = new Dictionary<string, string>(StringComparer.Ordinal)
         {
             { "left", "start" },
             { "leftChars", "startChars" },
@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// </remarks>
         private protected override bool StrictTranslateAttribute(in OpenXmlQualifiedName qname, string? value)
         {
-            if (s_attributeMap.TryGetValue(qname.Name, out var result))
+            if (AttributeMap.TryGetValue(qname.Name, out var result))
             {
                 return base.StrictTranslateAttribute(new OpenXmlQualifiedName(qname.Namespace, result), value);
             }

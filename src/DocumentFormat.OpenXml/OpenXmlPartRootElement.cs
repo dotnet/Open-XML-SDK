@@ -151,7 +151,7 @@ namespace DocumentFormat.OpenXml
                     || xmlReader.NodeType != XmlNodeType.Element
                     || !xmlReader.IsStartElement())
                 {
-                    //the stream does NOT contains any xml element.
+                    // the stream does NOT contains any xml element.
                     return false;
                 }
 
@@ -292,17 +292,17 @@ namespace DocumentFormat.OpenXml
 
             if (XmlParsed)
             {
-                //check the namespace mapping defined in this node first. because till now xmlWriter don't know the mapping defined in the current node.
+                // check the namespace mapping defined in this node first. because till now xmlWriter don't know the mapping defined in the current node.
                 var prefix = LookupNamespaceLocal(NamespaceUri);
 
-                //if not defined in the current node, try the xmlWriter
+                // if not defined in the current node, try the xmlWriter
                 if (Parent is not null && prefix.IsNullOrEmpty())
                 {
                     prefix = xmlWriter.LookupPrefix(NamespaceUri);
                 }
 
-                //if xmlWriter didn't find it, it means the node is constructed by user and is not in the tree yet
-                //in this case, we use the predefined prefix
+                // if xmlWriter didn't find it, it means the node is constructed by user and is not in the tree yet
+                // in this case, we use the predefined prefix
                 if (prefix.IsNullOrEmpty())
                 {
                     prefix = QName.Namespace.Prefix;
@@ -358,7 +358,7 @@ namespace DocumentFormat.OpenXml
                             string.IsNullOrEmpty(LookupPrefixLocal(namespacePair.Value)) &&
                             string.IsNullOrEmpty(LookupNamespaceLocal(namespacePair.Key)))
                         {
-                            xmlWrite.WriteAttributeString(OpenXmlElementContext.xmlnsPrefix, namespacePair.Key, OpenXmlElementContext.xmlnsUri, namespacePair.Value);
+                            xmlWrite.WriteAttributeString(OpenXmlElementContext.XmlnsPrefix, namespacePair.Key, OpenXmlElementContext.XmlnsUri, namespacePair.Value);
                         }
                     }
                 }

@@ -12,9 +12,9 @@ namespace DocumentFormat.OpenXml.Tests
 {
     public class M4Conformance
     {
-        ///<summary>
-        ///O14OnlyElesInO12.
-        ///</summary>
+        /// <summary>
+        /// O14OnlyElesInO12.
+        /// </summary>
         [Fact]
         public void O14OnlyElesInO12()
         {
@@ -25,9 +25,9 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.True(eb.Metadata.Availability == FileFormatVersions.Office2010);
         }
 
-        ///<summary>
-        ///O14ElesInO14.
-        ///</summary>
+        /// <summary>
+        /// O14ElesInO14.
+        /// </summary>
         [Fact]
         public void O14ElesInO14()
         {
@@ -38,13 +38,13 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.True(eb.Metadata.Availability == FileFormatVersions.Office2010);
         }
 
-        ///<summary>
-        ///LoadExt.
-        ///</summary>
+        /// <summary>
+        /// LoadExt.
+        /// </summary>
         [Fact]
         public void LoadExt()
         {
-            using (var stream = GetStream(TestFiles.excel14))
+            using (var stream = GetStream(TestFiles.Excel14))
             using (var doc = SpreadsheetDocument.Open(stream, false))
             {
                 var ele14 = doc.WorkbookPart.RootElement.LastChild.First().First();
@@ -55,7 +55,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void LoadExt2()
         {
-            using (var stream = GetStream(TestFiles.extlst))
+            using (var stream = GetStream(TestFiles.Extlst))
             using (var doc = SpreadsheetDocument.Open(stream, false))
             {
                 var ele14 = doc.WorkbookPart.GetPartById("rId1").GetPartById("rId2").GetPartById("rId1").RootElement.LastChild.FirstChild.FirstChild;

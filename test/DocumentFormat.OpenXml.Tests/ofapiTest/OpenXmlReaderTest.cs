@@ -9,14 +9,14 @@ using Xunit;
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
-    ///This is a test class for OpenXmlReaderTest and is intended
-    ///to contain all OpenXmlReaderTest Unit Tests
-    ///</summary>
+    /// This is a test class for OpenXmlReaderTest and is intended
+    /// to contain all OpenXmlReaderTest Unit Tests
+    /// </summary>
     public class OpenXmlReaderTest
     {
         /// <summary>
-        ///A test for OpenXmlDomReader
-        ///</summary>
+        /// A test for OpenXmlDomReader
+        /// </summary>
         [Fact]
         public void DomReaderBasicTest()
         {
@@ -68,14 +68,14 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///A test for OpenXmlDomReader operations on root element.
-        ///</summary>
+        /// A test for OpenXmlDomReader operations on root element.
+        /// </summary>
         [Fact]
         public void DomReaderRootCaseTest()
         {
             Body body = new Body(new Paragraph(new ParagraphProperties(), new Run(new Text("test"))));
 
-            //======== new test with a new reader ========
+            // ======== new test with a new reader ========
             using (OpenXmlReader reader = OpenXmlReader.Create(body))
             {
                 Assert.False(reader.EOF);
@@ -94,7 +94,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.True(reader.EOF);
             }
 
-            //======== new test with a new reader ========
+            // ======== new test with a new reader ========
             using (var reader = OpenXmlReader.Create(body))
             {
                 Assert.False(reader.EOF);
@@ -124,7 +124,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.True(reader.EOF); // should be EOF now.
             }
 
-            //======== new test with a new reader ========
+            // ======== new test with a new reader ========
             using (var reader = OpenXmlReader.Create(body))
             {
                 Assert.False(reader.EOF);
@@ -137,7 +137,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.True(reader.EOF);
             }
 
-            //======== new test with a new reader ========
+            // ======== new test with a new reader ========
             using (var reader = OpenXmlReader.Create(body))
             {
                 Assert.False(reader.EOF);
@@ -158,7 +158,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.True(reader.EOF);
             }
 
-            //======== new test with a new reader ========
+            // ======== new test with a new reader ========
             using (var reader = OpenXmlReader.Create(body))
             {
                 Assert.False(reader.EOF);
@@ -188,15 +188,15 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///A test for OpenXmlDomReader on misc node
-        ///</summary>
+        /// A test for OpenXmlDomReader on misc node
+        /// </summary>
         [Fact]
         public void DomReaderMiscNodeTest()
         {
             Body body = new Body(new Paragraph(new ParagraphProperties(), new Run(new Text("test"))));
             body.PrependChild(new OpenXmlMiscNode(System.Xml.XmlNodeType.Comment, "<!-- start body -->"));
 
-            //======== new test with a new reader ========
+            // ======== new test with a new reader ========
             using (OpenXmlReader reader = OpenXmlReader.Create(body, true)) // read misc node
             {
                 Assert.False(reader.EOF);
@@ -338,8 +338,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///A test for OpenXmlPartReader on misc node
-        ///</summary>
+        /// A test for OpenXmlPartReader on misc node
+        /// </summary>
         [Fact]
         public void PartReaderMiscNodeTest()
         {
@@ -353,7 +353,7 @@ namespace DocumentFormat.OpenXml.Tests
             UTF8Encoding utf8Encoding = new UTF8Encoding();
             Stream stream = new MemoryStream(utf8Encoding.GetBytes(partText), false);
 
-            //======== new test with a new reader ========
+            // ======== new test with a new reader ========
             OpenXmlReader reader = OpenXmlReader.Create(stream, true); // read misc nodes
             Assert.False(reader.EOF);
 
@@ -386,8 +386,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///A test for OpenXmlPartReader to test the ignoreWhitespace option
-        ///</summary>
+        /// A test for OpenXmlPartReader to test the ignoreWhitespace option
+        /// </summary>
         [Theory]
         [InlineData(true)]
         [InlineData(false)]
@@ -426,11 +426,12 @@ namespace DocumentFormat.OpenXml.Tests
 
         /// <summary>
         /// Test that the OpenXmlReader can handle formatted xml.
-        ///</summary>
+        /// </summary>
         [Theory]
         [InlineData(true)]
         [InlineData(false)]
-        public void TestIgnoreWhitespaceWithFormattedXml(bool ignoreWhitespace) {
+        public void TestIgnoreWhitespaceWithFormattedXml(bool ignoreWhitespace)
+        {
             const string PartText = @"
     <w:document xmlns:v=""urn:schemas-microsoft-com:vml"" xmlns:w=""http://schemas.openxmlformats.org/wordprocessingml/2006/main"">
       <w:body>
@@ -479,15 +480,16 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.True(reader.EOF);
 
             reader.Close();
-    }
+        }
 
         /// <summary>
         /// Test that the OpenXmlReader can handle a whitespace after the last element.
-        ///</summary>
+        /// </summary>
         [Theory]
         [InlineData(true)]
         [InlineData(false)]
-        public void TestIgnoreWhitespaceWhitespaceAfterLastElement(bool ignoreWhitespace) {
+        public void TestIgnoreWhitespaceWhitespaceAfterLastElement(bool ignoreWhitespace)
+        {
             const string PartText = @"
     <w:document xmlns:v=""urn:schemas-microsoft-com:vml"" xmlns:w=""http://schemas.openxmlformats.org/wordprocessingml/2006/main"">
       <w:body>
@@ -525,9 +527,10 @@ namespace DocumentFormat.OpenXml.Tests
 
         /// <summary>
         /// Test that the OpenXmlReader can handle a misc node after the last element.
-        ///</summary>
+        /// </summary>
         [Fact]
-        public void TestMiscNodeAfterDocument() {
+        public void TestMiscNodeAfterDocument()
+        {
             const string PartText = @"
     <w:document xmlns:v=""urn:schemas-microsoft-com:vml"" xmlns:w=""http://schemas.openxmlformats.org/wordprocessingml/2006/main"">
       <w:body>
@@ -565,8 +568,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///A test for OpenXmlPartReader
-        ///</summary>
+        /// A test for OpenXmlPartReader
+        /// </summary>
         [Fact]
         public void PartReaderBasicTest()
         {
@@ -640,9 +643,9 @@ namespace DocumentFormat.OpenXml.Tests
             targetReader.Close();
         }
 
-        ///<summary>
-        ///TestReaderOnPragraph.
-        ///</summary>
+        /// <summary>
+        /// TestReaderOnPragraph.
+        /// </summary>
         private void TestReaderOnParagraph(OpenXmlReader targetReader)
         {
             bool moved = false;

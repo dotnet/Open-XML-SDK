@@ -660,7 +660,7 @@ namespace DocumentFormat.OpenXml
                         mcContextPushed = PushMcContext(xmlReader);
                     }
 
-                    //Process the element according to the MC behavior
+                    // Process the element according to the MC behavior
                     var action = ElementAction.Normal;
                     if (OpenXmlElementContext is not null && OpenXmlElementContext.MCSettings.ProcessMode != DocumentFormat.OpenXml.Packaging.MarkupCompatibilityProcessMode.NoProcess)
                     {
@@ -731,7 +731,7 @@ namespace DocumentFormat.OpenXml
                                     }
                                     else
                                     {
-                                        //append the original node
+                                        // append the original node
                                         AddANode(node);
                                     }
                                 }

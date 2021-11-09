@@ -20,10 +20,10 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public abstract class OpenXmlPartContainer
     {
-        private IFeatureCollection? _features;
-
         private readonly PartDictionary _childrenPartsDictionary;
         private readonly LinkedList<ReferenceRelationship> _referenceRelationships = new LinkedList<ReferenceRelationship>();
+
+        private IFeatureCollection? _features;
 
         /// <summary>
         /// Initializes OpenXmlPartContainer.
@@ -891,10 +891,10 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            //if (part is null)
-            //{
+            // if (part is null)
+            // {
             //    throw new ArgumentNullException(nameof(part));
-            //}
+            // }
             if (part is null)
             {
                 return false;
@@ -1106,7 +1106,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            //validate id
+            // validate id
             if (id is not null)
             {
                 if (id.Length == 0)
@@ -1224,17 +1224,17 @@ namespace DocumentFormat.OpenXml.Packaging
                 return;
             }
 
-            //else if (newPart is ExtensionPart)
-            //{
+            // else if (newPart is ExtensionPart)
+            // {
             //    newPart.CreateInternal(this.InternalOpenXmlPackage, this.ThisOpenXmlPart, contentType, null);
 
-            //    // add it and get the id
+            // // add it and get the id
             //    string relationshipId = this.AttachChild(newPart);
 
-            //    this.ChildParts.Add(relationshipId, newPart);
+            // this.ChildParts.Add(relationshipId, newPart);
 
-            //    return;
-            //}
+            // return;
+            // }
             else
             {
                 throw new ArgumentOutOfRangeException(nameof(newPart));
@@ -1330,14 +1330,14 @@ namespace DocumentFormat.OpenXml.Packaging
 
             // only one part has the same relationshipType allowed
             // delete the old one
-            //OpenXmlPart child = this.GetSubPart(part.RelationshipType);
+            // OpenXmlPart child = this.GetSubPart(part.RelationshipType);
 
-            //if (child is not null)
-            //{
+            // if (child is not null)
+            // {
             //    // already have one, remove
             //    // TODO: should we throw?
             //    this.DeletePart(child);
-            //}
+            // }
             return AddSubPart(part, rId);
         }
 
@@ -1417,14 +1417,14 @@ namespace DocumentFormat.OpenXml.Packaging
                 // try to keep the same name
                 child.CreateInternal2(InternalOpenXmlPackage, ThisOpenXmlPart, part.ContentType, part.Uri);
 
-                //if (keepIdAndUri)
-                //{
+                // if (keepIdAndUri)
+                // {
                 //    child.CreateInternal2(this.InternalOpenXmlPackage, this.ThisOpenXmlPart, part.ContentType, part.Uri);
-                //}
-                //else
-                //{
+                // }
+                // else
+                // {
                 //    child.CreateInternal(this.InternalOpenXmlPackage, this.ThisOpenXmlPart, part.ContentType, null);
-                //}
+                // }
 
                 // copy the stream
                 using (var stream = part.GetStream())
@@ -1884,21 +1884,21 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the internal OpenXmlPackage instance
         /// </summary>
-        abstract internal OpenXmlPackage InternalOpenXmlPackage { get; }
+        internal abstract OpenXmlPackage InternalOpenXmlPackage { get; }
 
-        abstract internal OpenXmlPart? ThisOpenXmlPart { get; }
+        internal abstract OpenXmlPart? ThisOpenXmlPart { get; }
 
         /// <summary>
         /// Test whether the object is already disposed.
         /// </summary>
-        abstract protected void ThrowIfObjectDisposed();
+        protected abstract void ThrowIfObjectDisposed();
 
         /// <summary>
         /// Create the object of strong typed class according the relationshipType
         /// </summary>
         /// <param name="relationshipType">The relationship type of the class.</param>
         /// <returns>A new object of strong typed class.</returns>
-        virtual internal OpenXmlPart CreatePartCore(string relationshipType)
+        internal virtual OpenXmlPart CreatePartCore(string relationshipType)
         {
             if (relationshipType is null)
             {
@@ -1910,16 +1910,16 @@ namespace DocumentFormat.OpenXml.Packaging
             return new ExtendedPart(relationshipType);
         }
 
-        abstract internal OpenXmlPart NewPart(string relationshipType, string contentType);
+        internal abstract OpenXmlPart NewPart(string relationshipType, string contentType);
 
-        abstract internal void DeleteRelationship(string id);
+        internal abstract void DeleteRelationship(string id);
 
-        abstract internal PackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType);
+        internal abstract PackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType);
 
-        abstract internal PackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType, string id);
+        internal abstract PackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType, string id);
 
         // find all reachable parts from the package root, the dictionary also used for cycle reference defense
-        abstract internal void FindAllReachableParts(IDictionary<OpenXmlPart, bool> reachableParts);
+        internal abstract void FindAllReachableParts(IDictionary<OpenXmlPart, bool> reachableParts);
 
         #endregion
 

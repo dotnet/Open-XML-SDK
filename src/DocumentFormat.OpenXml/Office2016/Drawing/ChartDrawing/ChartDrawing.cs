@@ -18,7 +18,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <summary>
         /// Initializes a new instance of the IdxXsdunsignedInt class.
         /// </summary>
-        public IdxXsdunsignedInt() : base()
+        public IdxXsdunsignedInt()
+            : base()
         {
         }
 
@@ -26,7 +27,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// Initializes a new instance of the IdxXsdunsignedInt class with the specified text content.
         /// </summary>
         /// <param name="text">Specifies the text content of the element.</param>
-        public IdxXsdunsignedInt(string text) : base(text)
+        public IdxXsdunsignedInt(string text)
+            : base(text)
         {
         }
 

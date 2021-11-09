@@ -13,18 +13,18 @@ using static DocumentFormat.OpenXml.Tests.TestAssets;
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
-    ///This is a test class for OpenXmlPartTest and is intended
-    ///to contain all OpenXmlPartTest Unit Tests
-    ///</summary>
+    /// This is a test class for OpenXmlPartTest and is intended
+    /// to contain all OpenXmlPartTest Unit Tests
+    /// </summary>
     public class OpenXmlPartTest
     {
         /// <summary>
-        ///A test for RootElement
-        ///</summary>
+        /// A test for RootElement
+        /// </summary>
         [Fact]
         public void RootElementTest()
         {
-            using (var stream = GetStream(TestFiles.complex0docx))
+            using (var stream = GetStream(TestFiles.Complex0docx))
             using (var testDocument = WordprocessingDocument.Open(stream, false))
             {
                 OpenXmlPart target = testDocument.MainDocumentPart;
@@ -63,9 +63,9 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        ///<summary>
-        ///HyperlinkRelationshipTest.
-        ///</summary>
+        /// <summary>
+        /// HyperlinkRelationshipTest.
+        /// </summary>
         [Fact]
         public void HyperlinkRelationshipTest()
         {
@@ -176,7 +176,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var body = mainPart.Document.AppendChild(new Body());
 
                     var link = mainPart.AddHyperlinkRelationship(new System.Uri(string.Empty, System.UriKind.RelativeOrAbsolute), true);
-                    body.AppendChild(new Paragraph(new Hyperlink(new Run(new Text("empty URI link"))) {Id = link.Id}));
+                    body.AppendChild(new Paragraph(new Hyperlink(new Run(new Text("empty URI link"))) { Id = link.Id }));
 
                     var validator = new OpenXmlValidator();
                     var errors = validator.Validate(testDocument);
@@ -201,9 +201,9 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        ///<summary>
-        ///ChangePartIdTest.
-        ///</summary>
+        /// <summary>
+        /// ChangePartIdTest.
+        /// </summary>
         [Fact]
         public void ChangePartIdTest()
         {
@@ -245,9 +245,9 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        ///<summary>
-        ///AddPartTest.
-        ///</summary>
+        /// <summary>
+        /// AddPartTest.
+        /// </summary>
         [Fact]
         public void AddPartTest()
         {

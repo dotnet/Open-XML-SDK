@@ -8,9 +8,9 @@ using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests.Common.OutputHelperExtensions
 {
-    public static class ITestOutputHelperExtenstion
+    public static class ITestOutputHelperExtenstions
     {
-        static public void WriteObjectToTempFile(this ITestOutputHelper output, object obj)
+        public static void WriteObjectToTempFile(this ITestOutputHelper output, object obj)
         {
             var tmp = Path.GetTempFileName();
 

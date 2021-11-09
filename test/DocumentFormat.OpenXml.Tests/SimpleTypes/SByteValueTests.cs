@@ -11,9 +11,9 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
 
         public SByteValueTests()
         {
-            SmallValue1 = new SByteValue((sbyte) 10);
-            SmallValue2 = new SByteValue((sbyte) 10);
-            LargeValue = new SByteValue((sbyte) 20);
+            SmallValue1 = new SByteValue((sbyte)10);
+            SmallValue2 = new SByteValue((sbyte)10);
+            LargeValue = new SByteValue((sbyte)20);
         }
     }
 }

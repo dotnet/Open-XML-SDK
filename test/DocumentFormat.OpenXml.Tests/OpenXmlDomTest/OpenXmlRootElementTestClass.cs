@@ -10,7 +10,7 @@ namespace DocumentFormat.OpenXml.Tests
 {
     public class OpenXmlRootElementTestClass
     {
-        [InlineData(TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR)]
+        [InlineData(TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.Complex1NOR)]
         [InlineData(TestDataStorage.V2FxTestFiles.AsSources.Spreadsheet.SharedWorkbook)]
         [InlineData(TestDataStorage.V2FxTestFiles.AsSources.Spreadsheet.SheetViewsFSB)]
         [InlineData(TestDataStorage.V2FxTestFiles.AsSources.Spreadsheet.SST)]

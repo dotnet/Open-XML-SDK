@@ -274,7 +274,7 @@ namespace DocumentFormat.OpenXml
             foreach (var qn in stack)
             {
                 if (qn == qname ||
-                    qn.Name == "*" && qn.Namespace == input.Namespace.Uri)
+                    (qn.Name == "*" && qn.Namespace == input.Namespace.Uri))
                 {
                     return true;
                 }
@@ -403,25 +403,25 @@ namespace DocumentFormat.OpenXml
             {
                 if (choice.Requires is null)
                 {
-                    //should we throw exception here?
+                    // should we throw exception here?
                     continue;
                 }
 
                 var reqs = choice.Requires.InnerText?.Trim();
                 if (reqs.IsNullOrEmpty())
                 {
-                    //should we throw exception here?
+                    // should we throw exception here?
                     continue;
                 }
 
                 bool chooce = true;
                 foreach (var req in reqs.Split(new char[] { ' ' }))
                 {
-                    //fix bug 537858
-                    //the LookupNamespaceDeleget is from xmlReader
-                    //bug when we try to GetContentFromACBlock, the reader has already moved to the next element of ACB
-                    //so we should use the element's LookupNamespace function to find it
-                    //string ns = LookupNamespaceDelegate(req);
+                    // fix bug 537858
+                    // the LookupNamespaceDeleget is from xmlReader
+                    // bug when we try to GetContentFromACBlock, the reader has already moved to the next element of ACB
+                    // so we should use the element's LookupNamespace function to find it
+                    // string ns = LookupNamespaceDelegate(req);
                     var ns = new OpenXmlNamespace(choice.LookupNamespace(req));
 
                     if (ns.IsEmpty)

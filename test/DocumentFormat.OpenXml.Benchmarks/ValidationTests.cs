@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Benchmarks
         [GlobalSetup]
         public void SetupFile()
         {
-            using (var stream = TestAssets.GetStream(TestAssets.TestFiles.complex0docx))
+            using (var stream = TestAssets.GetStream(TestAssets.TestFiles.Complex0docx))
             using (var ms = new MemoryStream())
             {
                 stream.CopyTo(ms);

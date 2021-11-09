@@ -9,9 +9,9 @@ using Xunit;
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
-    ///This is a test class for AnyParticleValidatorTest and is intended
-    ///to contain all AnyParticleValidatorTest Unit Tests
-    ///</summary>
+    /// This is a test class for AnyParticleValidatorTest and is intended
+    /// to contain all AnyParticleValidatorTest Unit Tests
+    /// </summary>
     public class AnyParticleValidatorTest
     {
         [Fact]
@@ -26,12 +26,12 @@ namespace DocumentFormat.OpenXml.Tests
             validationContext.Stack.Push(element: textBox);
             var expected = textBox;
 
-            //<xsd:complexType name="CT_Textbox">
+            // <xsd:complexType name="CT_Textbox">
             //  <xsd:choice>
             //    <xsd:element ref="w:txbxContent" minOccurs="0" />
             //    <xsd:any namespace="##local" processContents="skip" />
             //  </xsd:choice>
-            //</xsd:complexType>
+            // </xsd:complexType>
 
             // ***** good case ******
 
@@ -103,7 +103,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", validationContext.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
+            Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, validationContext.Errors[0].Description);
             textBox.RemoveAllChildren();
 
             validationContext.Clear();
@@ -118,7 +118,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", validationContext.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
+            Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, validationContext.Errors[0].Description);
             textBox.RemoveAllChildren();
         }
     }

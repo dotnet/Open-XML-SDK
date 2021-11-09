@@ -221,7 +221,7 @@ namespace DocumentFormat.OpenXml.Validation
                             errorInfo.Description = SR.Format(ValidationResources.Pkg_PartIsNotAllowed, name, e.DataPartReferenceRelationship!.Uri);
                             break;
 
-                        case "Pkg_InvalidContentTypePart":  // won't get this error.
+                        case "Pkg_InvalidContentTypePart": // won't get this error.
                         default:
                             Debug.Assert(false, "Invalid package validation event.");
                             break;

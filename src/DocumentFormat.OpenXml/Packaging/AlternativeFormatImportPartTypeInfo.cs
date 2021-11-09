@@ -10,12 +10,12 @@ namespace DocumentFormat.OpenXml.Packaging
         internal static string GetContentType(AlternativeFormatImportPartType partType)
             => partType switch
             {
-                //AlternativeFormatImportPartType.Text => "application/text/plain",
+                // AlternativeFormatImportPartType.Text => "application/text/plain",
                 AlternativeFormatImportPartType.Xhtml => "application/xhtml+xml",
                 AlternativeFormatImportPartType.Mht => "message/rfc822",
                 AlternativeFormatImportPartType.Xml => "application/xml",
 
-                //AlternativeFormatImportPartType.TextXml => "text/xml",
+                // AlternativeFormatImportPartType.TextXml => "text/xml",
                 AlternativeFormatImportPartType.TextPlain => "text/plain",
                 AlternativeFormatImportPartType.WordprocessingML => "application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml",
                 AlternativeFormatImportPartType.OfficeWordMacroEnabled => "application/vnd.ms-word.document.macroEnabled.main+xml",
@@ -29,12 +29,12 @@ namespace DocumentFormat.OpenXml.Packaging
         internal static string GetTargetExtension(AlternativeFormatImportPartType imageType)
             => imageType switch
             {
-                //AlternativeFormatImportPartType.Text => ".txt",
+                // AlternativeFormatImportPartType.Text => ".txt",
                 AlternativeFormatImportPartType.Xhtml => ".xhtml",
                 AlternativeFormatImportPartType.Mht => ".mht",
                 AlternativeFormatImportPartType.Xml => ".xml",
 
-                //AlternativeFormatImportPartType.TextXml => ".xml",
+                // AlternativeFormatImportPartType.TextXml => ".xml",
                 AlternativeFormatImportPartType.TextPlain => ".txt",
                 AlternativeFormatImportPartType.WordprocessingML => ".docx",
                 AlternativeFormatImportPartType.OfficeWordMacroEnabled => ".docm",

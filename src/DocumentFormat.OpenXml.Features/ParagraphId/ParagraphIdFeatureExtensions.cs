@@ -44,7 +44,6 @@ namespace DocumentFormat.OpenXml.Features
         /// Adds a <see cref="IParagraphIdGeneratorFeature"/> if not already available.
         /// </summary>
         /// <param name="doc">Document to add generator to.</param>
-        /// <returns>True if feature was added.</returns>
         public static void AddParagraphIdGeneratorFeature(this WordprocessingDocument doc)
         {
             if (doc.Features.Get<IParagraphIdGeneratorFeature>() is null)

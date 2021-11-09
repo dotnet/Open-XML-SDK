@@ -18,7 +18,8 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Initializes a new instance of the OpenXmlLeafTextElement class.
         /// </summary>
-        protected OpenXmlLeafTextElement() : base()
+        protected OpenXmlLeafTextElement()
+            : base()
         {
         }
 
@@ -144,7 +145,7 @@ namespace DocumentFormat.OpenXml
             LoadAttributes(xmlReader);
 
             if (!xmlReader.IsEmptyElement)
-            {   // only when element is not empty (not  <element />).
+            { // only when element is not empty (not  <element />).
                 xmlReader.Read(); // read this element
 
                 RawInnerText = string.Empty;

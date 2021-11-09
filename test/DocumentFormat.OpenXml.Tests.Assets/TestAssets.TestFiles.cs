@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#pragma warning disable SA1310 // Field names should not contain underscore
+
 namespace DocumentFormat.OpenXml.Tests
 {
     public partial class TestAssets
@@ -20,21 +22,21 @@ namespace DocumentFormat.OpenXml.Tests
 
             public const string Algn_tab_TabAlignment = "TestFiles.Algn_tab_TabAlignment.pptx";
 
-            public const string animation = "TestFiles.animation.pptx";
+            public const string Animation = "TestFiles.animation.pptx";
 
             public const string AnnotationRef = "TestFiles.AnnotationRef.docx";
 
-            public const string autosave = "TestFiles.autosave.pptx";
+            public const string Autosave = "TestFiles.autosave.pptx";
 
-            public const string basicspreadsheet = "TestFiles.basicspreadsheet.xlsx";
+            public const string Basicspreadsheet = "TestFiles.basicspreadsheet.xlsx";
 
             public const string Comments = "TestFiles.Comments.xlsx";
 
             public const string CommentsDocx = "TestFiles.Comments.docx";
 
-            public const string complex0docx = "TestFiles.complex0.docx";
+            public const string Complex0docx = "TestFiles.complex0.docx";
 
-            public const string complex2010docx = "TestFiles.complex2010.docx";
+            public const string Complex2010docx = "TestFiles.complex2010.docx";
 
             public const string DataBoundContentControls = "TestFiles.Data-Bound-Content-Controls.docx";
 
@@ -42,9 +44,9 @@ namespace DocumentFormat.OpenXml.Tests
 
             public const string DocPropertiesPath = "TestFiles.DocProperties.xml";
 
-            public const string excel14 = "TestFiles.excel14.xlsx";
+            public const string Excel14 = "TestFiles.excel14.xlsx";
 
-            public const string extlst = "TestFiles.extlst.xlsx";
+            public const string Extlst = "TestFiles.extlst.xlsx";
 
             public const string HelloO14 = "TestFiles.HelloO14.docx";
 
@@ -52,23 +54,23 @@ namespace DocumentFormat.OpenXml.Tests
 
             public const string Image = "TestFiles.Image.png";
 
-            public const string mailmerge = "TestFiles.mailmerge.docx";
+            public const string Mailmerge = "TestFiles.mailmerge.docx";
 
-            public const string malformed_uri_xlsx = "TestFiles.malformed_uri.xlsx";
+            public const string Malformed_uri_xlsx = "TestFiles.malformed_uri.xlsx";
 
-            public const string malformed_uri_long_xlsx = "TestFiles.malformed_uri_long.xlsx";
+            public const string Malformed_uri_long_xlsx = "TestFiles.malformed_uri_long.xlsx";
 
             public const string May_12_04 = "TestFiles.May_12_04.docx";
 
-            public const string mcdoc = "TestFiles.mcdoc.docx";
+            public const string Mcdoc = "TestFiles.mcdoc.docx";
 
             public const string MCExecl = "TestFiles.MCExecl.xlsx";
 
-            public const string mcppt = "TestFiles.mcppt.pptx";
+            public const string Mcppt = "TestFiles.mcppt.pptx";
 
-            public const string mediareference = "TestFiles.mediareference.pptx";
+            public const string Mediareference = "TestFiles.mediareference.pptx";
 
-            public const string o09_Performance_typical_pptx = "TestFiles.o09_Performance_typical.pptx";
+            public const string O09_Performance_typical_pptx = "TestFiles.o09_Performance_typical.pptx";
 
             public const string Plain = "TestFiles.Plain.docx";
 
@@ -76,7 +78,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             public const string Revision___NameCommentChange = "TestFiles.Revision_NameCommentChange.xlsx";
 
-            public const string simpleSdt = "TestFiles.simpleSdt.docx";
+            public const string SimpleSdt = "TestFiles.simpleSdt.docx";
 
             public const string Svg = "TestFiles.svg.docx";
 
@@ -84,7 +86,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             public const string Strict01 = "TestFiles.Strict01.docx";
 
-            public const string vmldrawingroot = "TestFiles.vmldrawingroot.xlsx";
+            public const string Vmldrawingroot = "TestFiles.vmldrawingroot.xlsx";
 
             public const string UnknownElement = "TestFiles.UnknownElement.docx";
 

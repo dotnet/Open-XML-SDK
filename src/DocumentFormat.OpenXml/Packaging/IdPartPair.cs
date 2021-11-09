@@ -53,7 +53,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public override int GetHashCode()
         {
-            var code = new HashCode();
+            var code = default(HashCode);
 
             code.Add(RelationshipId, StringComparer.Ordinal);
 
@@ -63,7 +63,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public bool Equals(IdPartPair? value)
         {
-            //Check for null
+            // Check for null
             if (value is null)
             {
                 return false;

@@ -180,8 +180,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="fileFormat">The specified FileFormatVersions.</param>
         /// <param name="parameterName">The name of the parameter for ArgumentOutOfRangeException.</param>
-        /// <remarks>
-        /// </remarks>
         internal static void ThrowExceptionIfFileFormatNotSupported(this FileFormatVersions fileFormat, string parameterName)
         {
             if (!fileFormat.Any())

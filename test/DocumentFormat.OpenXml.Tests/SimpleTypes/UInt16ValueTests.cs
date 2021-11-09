@@ -11,9 +11,9 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
 
         public UInt16ValueTests()
         {
-            SmallValue1 = new UInt16Value((ushort) 10);
-            SmallValue2 = new UInt16Value((ushort) 10);
-            LargeValue = new UInt16Value((ushort) 20);
+            SmallValue1 = new UInt16Value((ushort)10);
+            SmallValue2 = new UInt16Value((ushort)10);
+            LargeValue = new UInt16Value((ushort)20);
         }
     }
 }

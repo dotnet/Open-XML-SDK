@@ -26,7 +26,8 @@ namespace DocumentFormat.OpenXml
         /// value.
         /// </summary>
         /// <param name="source">The source <see cref="OpenXmlComparableSimpleReference{T}"/> instance.</param>
-        private protected OpenXmlComparableSimpleReference(OpenXmlComparableSimpleReference<T> source) : base(source)
+        private protected OpenXmlComparableSimpleReference(OpenXmlComparableSimpleReference<T> source)
+            : base(source)
         {
         }
 

@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             ac.AddNamespaceDeclaration("o15", "http://o15.com");
 
-            //ac.NamespaceDeclarations
+            // ac.NamespaceDeclarations
             ac.AppendChild(new AlternateContentChoice() { Requires = "o15" });
             errors = validator.Validate(ac);
             Assert.Empty(errors);

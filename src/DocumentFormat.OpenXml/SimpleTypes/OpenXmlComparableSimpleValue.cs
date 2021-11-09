@@ -25,7 +25,8 @@ namespace DocumentFormat.OpenXml
         /// Creates a new instance of <see cref="OpenXmlComparableSimpleValue{T}"/>.
         /// </summary>
         /// <param name="value">The value in type T.</param>
-        private protected OpenXmlComparableSimpleValue(T value) : base(value)
+        private protected OpenXmlComparableSimpleValue(T value)
+            : base(value)
         {
         }
 
@@ -35,14 +36,15 @@ namespace DocumentFormat.OpenXml
         /// value.
         /// </summary>
         /// <param name="source">The source <see cref="OpenXmlComparableSimpleValue{T}"/> instance.</param>
-        private protected OpenXmlComparableSimpleValue(OpenXmlComparableSimpleValue<T> source) : base(source)
+        private protected OpenXmlComparableSimpleValue(OpenXmlComparableSimpleValue<T> source)
+            : base(source)
         {
         }
 
         /// <inheritdoc />
         public int CompareTo(object? obj)
         {
-            if(obj is null || !HasValue)
+            if (obj is null || !HasValue)
             {
                 return 1;
             }

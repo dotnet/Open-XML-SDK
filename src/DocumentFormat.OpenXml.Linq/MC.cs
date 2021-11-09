@@ -12,7 +12,11 @@ namespace DocumentFormat.OpenXml.Linq
     /// </summary>
     public static class MC
     {
+#pragma warning disable SA1307 // Accessible fields should begin with upper-case letter
+#pragma warning disable SA1311 // Static readonly fields should begin with upper-case letter
         public static readonly XNamespace mc = "http://schemas.openxmlformats.org/markup-compatibility/2006";
+#pragma warning restore SA1311 // Static readonly fields should begin with upper-case letter
+#pragma warning restore SA1307 // Accessible fields should begin with upper-case letter
 
         public static readonly XName AlternateContent = mc + "AlternateContent";
         public static readonly XName Choice = mc + "Choice";

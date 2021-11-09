@@ -36,8 +36,8 @@ namespace DocumentFormat.OpenXml.Tests.TimeLine
         private const string TileLine20 = "DeliveryDate 13";
 
         // TimeLine Style Names
-        private const string timelineStyleName2 = "TimeSlicerStyleLight2";
-        private const string timelineStyleName3 = "TimeSlicerStyleLight3";
+        private const string TimelineStyleName2 = "TimeSlicerStyleLight2";
+        private const string TimelineStyleName3 = "TimeSlicerStyleLight3";
 
         /// <summary>
         /// URI attribute value of PresentationExtension.(Parent of TimelineStyles element)
@@ -48,7 +48,7 @@ namespace DocumentFormat.OpenXml.Tests.TimeLine
         {
             using (var package = SpreadsheetDocument.Open(stream, false))
             {
-                //Get Extension Uri value
+                // Get Extension Uri value
                 var timelineStyles = package.WorkbookPart.WorkbookStylesPart.Stylesheet.StylesheetExtensionList.Descendants<TimelineStyles>().Single();
                 var stylesheetExtension = (StylesheetExtension)timelineStyles.Parent;
 
@@ -65,47 +65,47 @@ namespace DocumentFormat.OpenXml.Tests.TimeLine
         {
             using (var package = SpreadsheetDocument.Open(stream, true))
             {
-                //ShowTimeLevel
+                // ShowTimeLevel
                 GetTimeLine(package.WorkbookPart, TileLine01).ShowTimeLevel = true;
                 GetTimeLine(package.WorkbookPart, TileLine02).ShowTimeLevel = false;
 
-                //Cache
+                // Cache
                 GetTimeLine(package.WorkbookPart, TileLine03).Cache = "NativeTimeline_Date";
                 GetTimeLine(package.WorkbookPart, TileLine04).Cache = "NativeTimeline_DeliveryDate";
 
-                //ShowSelectionLabel
+                // ShowSelectionLabel
                 GetTimeLine(package.WorkbookPart, TileLine05).ShowSelectionLabel = true;
                 GetTimeLine(package.WorkbookPart, TileLine06).ShowSelectionLabel = false;
 
-                //ShowHeader
+                // ShowHeader
                 GetTimeLine(package.WorkbookPart, TileLine07).ShowHeader = true;
                 GetTimeLine(package.WorkbookPart, TileLine08).ShowHeader = false;
 
-                //Style
+                // Style
                 GetTimeLine(package.WorkbookPart, TileLine09).Style = "TimeSlicerStyleLight2";
                 GetTimeLine(package.WorkbookPart, TileLine10).Style = null;
 
-                //Caption
+                // Caption
                 GetTimeLine(package.WorkbookPart, TileLine11).Caption = null;
                 GetTimeLine(package.WorkbookPart, TileLine12).Caption = "0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789";
 
-                //ScrollPosition
+                // ScrollPosition
                 GetTimeLine(package.WorkbookPart, TileLine13).ScrollPosition = DateTime.Parse("1900-01-01");
                 GetTimeLine(package.WorkbookPart, TileLine14).ScrollPosition = DateTime.Parse("2010-12-31");
 
-                //Level
+                // Level
                 GetTimeLine(package.WorkbookPart, TileLine15).Level.Value = 0U;
                 GetTimeLine(package.WorkbookPart, TileLine16).Level.Value = 1U;
                 GetTimeLine(package.WorkbookPart, TileLine17).Level.Value = 2U;
                 GetTimeLine(package.WorkbookPart, TileLine18).Level.Value = 3U;
 
-                //ShowHorizontalScrollbar
+                // ShowHorizontalScrollbar
                 GetTimeLine(package.WorkbookPart, TileLine19).ShowHorizontalScrollbar = true;
                 GetTimeLine(package.WorkbookPart, TileLine20).ShowHorizontalScrollbar = false;
 
-                //DefaultTimelineStyle attribute in TimelineStyle element
+                // DefaultTimelineStyle attribute in TimelineStyle element
                 var timelineStyles = package.WorkbookPart.WorkbookStylesPart.Stylesheet.StylesheetExtensionList.Descendants<TimelineStyles>().Single();
-                timelineStyles.DefaultTimelineStyle.Value = timelineStyleName2;
+                timelineStyles.DefaultTimelineStyle.Value = TimelineStyleName2;
             }
         }
 
@@ -116,47 +116,47 @@ namespace DocumentFormat.OpenXml.Tests.TimeLine
         {
             using (var package = SpreadsheetDocument.Open(stream, false))
             {
-                //verify ShowTimeLevel
+                // verify ShowTimeLevel
                 Assert.True(GetTimeLine(package.WorkbookPart, TileLine01).ShowTimeLevel);
                 Assert.False(GetTimeLine(package.WorkbookPart, TileLine02).ShowTimeLevel);
 
-                //Verify Cache
+                // Verify Cache
                 Assert.Equal("NativeTimeline_Date", GetTimeLine(package.WorkbookPart, TileLine03).Cache);
                 Assert.Equal("NativeTimeline_DeliveryDate", GetTimeLine(package.WorkbookPart, TileLine04).Cache);
 
-                //Verify ShowSelectionLabel
+                // Verify ShowSelectionLabel
                 Assert.True(GetTimeLine(package.WorkbookPart, TileLine05).ShowSelectionLabel);
                 Assert.False(GetTimeLine(package.WorkbookPart, TileLine06).ShowSelectionLabel);
 
-                //Verify ShowHeader
+                // Verify ShowHeader
                 Assert.True(GetTimeLine(package.WorkbookPart, TileLine07).ShowHeader);
                 Assert.False(GetTimeLine(package.WorkbookPart, TileLine08).ShowHeader);
 
-                //Verify Style
+                // Verify Style
                 Assert.Equal("TimeSlicerStyleLight2", GetTimeLine(package.WorkbookPart, TileLine09).Style);
                 Assert.Null(GetTimeLine(package.WorkbookPart, TileLine10).Style);
 
-                //Verify Caption
+                // Verify Caption
                 Assert.Null(GetTimeLine(package.WorkbookPart, TileLine11).Caption);
                 Assert.Equal("0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789", GetTimeLine(package.WorkbookPart, TileLine12).Caption);
 
-                //Verify ScrollPosition
+                // Verify ScrollPosition
                 Assert.Equal(DateTime.Parse("1900-01-01"), GetTimeLine(package.WorkbookPart, TileLine13).ScrollPosition.Value);
                 Assert.Equal(DateTime.Parse("2010-12-31"), GetTimeLine(package.WorkbookPart, TileLine14).ScrollPosition.Value);
 
-                //Verify Level
+                // Verify Level
                 Assert.Equal(0U, GetTimeLine(package.WorkbookPart, TileLine15).Level.Value);
                 Assert.Equal(1U, GetTimeLine(package.WorkbookPart, TileLine16).Level.Value);
                 Assert.Equal(2U, GetTimeLine(package.WorkbookPart, TileLine17).Level.Value);
                 Assert.Equal(3U, GetTimeLine(package.WorkbookPart, TileLine18).Level.Value);
 
-                //Verify ShowHorizontalScrollbar
+                // Verify ShowHorizontalScrollbar
                 Assert.True(GetTimeLine(package.WorkbookPart, TileLine19).ShowHorizontalScrollbar);
                 Assert.False(GetTimeLine(package.WorkbookPart, TileLine20).ShowHorizontalScrollbar);
 
-                //Verify DefaultTimelineStyle attribute in TimelineStyle element
+                // Verify DefaultTimelineStyle attribute in TimelineStyle element
                 var timelineStyles = package.WorkbookPart.WorkbookStylesPart.Stylesheet.StylesheetExtensionList.Descendants<TimelineStyles>().Single();
-                Assert.Equal(timelineStyleName2, timelineStyles.DefaultTimelineStyle);
+                Assert.Equal(TimelineStyleName2, timelineStyles.DefaultTimelineStyle);
             }
         }
 
@@ -165,7 +165,7 @@ namespace DocumentFormat.OpenXml.Tests.TimeLine
         /// </summary>
         public void DeleteTimelineStyle(Stream stream)
         {
-            //Delete TimelineStyle
+            // Delete TimelineStyle
             using (var package = SpreadsheetDocument.Open(stream, true))
             {
                 var timelineStyles = package.WorkbookPart.WorkbookStylesPart.Stylesheet.StylesheetExtensionList.Descendants<TimelineStyles>().Single();
@@ -181,7 +181,7 @@ namespace DocumentFormat.OpenXml.Tests.TimeLine
         /// </summary>
         public void VerifyDeletedTimelineStyle(Stream stream)
         {
-            //Verify TimelineStyle Deleted
+            // Verify TimelineStyle Deleted
             using (var package = SpreadsheetDocument.Open(stream, false))
             {
                 var stylesheetExtensions = package.WorkbookPart.WorkbookStylesPart.Stylesheet.StylesheetExtensionList.Descendants<StylesheetExtension>().Where(e => e.Uri == _stylesheetExtensionUri);
@@ -197,11 +197,11 @@ namespace DocumentFormat.OpenXml.Tests.TimeLine
         /// </summary>
         public void AddTimelineStyle(Stream stream)
         {
-            //Add TimelineStyle
+            // Add TimelineStyle
             using (var package = SpreadsheetDocument.Open(stream, true))
             {
                 var stylesheetExtension = new StylesheetExtension() { Uri = _stylesheetExtensionUri };
-                stylesheetExtension.AppendChild(new TimelineStyles() { DefaultTimelineStyle = timelineStyleName3 });
+                stylesheetExtension.AppendChild(new TimelineStyles() { DefaultTimelineStyle = TimelineStyleName3 });
                 package.WorkbookPart.WorkbookStylesPart.Stylesheet.StylesheetExtensionList.AppendChild<StylesheetExtension>(stylesheetExtension);
             }
         }
@@ -211,14 +211,14 @@ namespace DocumentFormat.OpenXml.Tests.TimeLine
         /// </summary>
         public void VerifyAddedTimelineStyle(Stream stream)
         {
-            //Verify TimelineStyle added
+            // Verify TimelineStyle added
             using (var package = SpreadsheetDocument.Open(stream, false))
             {
                 var stylesheetExtensions = package.WorkbookPart.WorkbookStylesPart.Stylesheet.StylesheetExtensionList.Descendants<StylesheetExtension>().Where(e => e.Uri == _stylesheetExtensionUri);
                 Assert.NotEmpty(stylesheetExtensions);
 
                 var timelineStyles = package.WorkbookPart.WorkbookStylesPart.Stylesheet.StylesheetExtensionList.Descendants<TimelineStyles>().Single();
-                Assert.Equal(timelineStyleName3, timelineStyles.DefaultTimelineStyle.Value);
+                Assert.Equal(TimelineStyleName3, timelineStyles.DefaultTimelineStyle.Value);
             }
         }
 

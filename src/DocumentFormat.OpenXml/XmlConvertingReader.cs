@@ -176,12 +176,12 @@ namespace DocumentFormat.OpenXml
         {
             if (StrictRelationshipFound)
             {
-                if (ns.TryGetTransitionalNamespace( out var transitionalNamespace))
+                if (ns.TryGetTransitionalNamespace(out var transitionalNamespace))
                 {
                     return transitionalNamespace.Uri;
                 }
             }
-            else if (ns.TryGetExtendedNamespace( out var extendedNamespace))
+            else if (ns.TryGetExtendedNamespace(out var extendedNamespace))
             {
                 return extendedNamespace.Uri;
             }

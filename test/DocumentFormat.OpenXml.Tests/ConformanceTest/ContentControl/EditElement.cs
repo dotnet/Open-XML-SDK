@@ -25,8 +25,8 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                     switch (tag.Val.Value)
                     {
-                        //Tag is "Test1.1.1"
-                        //Edit run style(value="PlaceholderText") element is remove
+                        // Tag is "Test1.1.1"
+                        // Edit run style(value="PlaceholderText") element is remove
                         case ConstStr.TestTagStrings.TagContent01:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
 
@@ -36,8 +36,8 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                             log.Pass(string.Format("Edit Content Control string and string style of target tag=[{0}], Remove is style(value=\"PlaceholderText\") element.", ConstStr.TestTagStrings.TagContent01));
                             break;
 
-                        //Tag is "Test1.1.2"
-                        //Edit run style(value="PlaceholderText") element is append child
+                        // Tag is "Test1.1.2"
+                        // Edit run style(value="PlaceholderText") element is append child
                         case ConstStr.TestTagStrings.TagContent02:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
 
@@ -50,8 +50,8 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                             log.Pass(string.Format("Edit Content Control string and string style of target tag=[{0}], Remove is style(value=\"PlaceholderText\") element.", ConstStr.TestTagStrings.TagContent02));
                             break;
 
-                        //Tag is "Test1.2.1"
-                        //Edit Appearance element in attribute. It's value "Tag"
+                        // Tag is "Test1.2.1"
+                        // Edit Appearance element in attribute. It's value "Tag"
                         case ConstStr.TestTagStrings.TagContent03:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
 
@@ -73,8 +73,8 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                             break;
 
-                        //Tag is "Test1.2.2"
-                        //Edit Appearance element in attribute. It's value "Hidden"
+                        // Tag is "Test1.2.2"
+                        // Edit Appearance element in attribute. It's value "Hidden"
                         case ConstStr.TestTagStrings.TagContent04:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
 
@@ -96,8 +96,8 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                             break;
 
-                        //Tag is "Test1.2.3"
-                        //Edit Appearance element in attribute. It's value "BoundingBox"
+                        // Tag is "Test1.2.3"
+                        // Edit Appearance element in attribute. It's value "BoundingBox"
                         case ConstStr.TestTagStrings.TagContent05:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
 
@@ -119,8 +119,8 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                             break;
 
-                        //Tag is "Test1.3.1"
-                        //Edit Color element. The value of its element, make changes or value added.
+                        // Tag is "Test1.3.1"
+                        // Edit Color element. The value of its element, make changes or value added.
                         case ConstStr.TestTagStrings.TagContent06:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
 
@@ -135,7 +135,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                             }
                             else
                             {
-                                W15.Color color =  sdtBlock.SdtProperties.Descendants<W15.Color>().First();
+                                W15.Color color = sdtBlock.SdtProperties.Descendants<W15.Color>().First();
                                 color.Val = ConstStr.TestColorValues.TestColor;
 
                                 log.Pass(string.Format("Edit Content Control a color element of target tag=[{0}], Change a Color element value={1}.", ConstStr.TestTagStrings.TagContent06, ConstStr.TestColorValues.TestColor));
@@ -143,8 +143,8 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                             break;
 
-                        //Tag is "Test1.3.2"
-                        //Edit Color element. Removes the element.
+                        // Tag is "Test1.3.2"
+                        // Edit Color element. Removes the element.
                         case ConstStr.TestTagStrings.TagContent07:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
 
@@ -161,8 +161,8 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                             break;
 
-                        //Tag is "Test1.4.3"
-                        //Edit DoNotAllowInsertDeleteSection element. The value of its element, make changes or value added.
+                        // Tag is "Test1.4.3"
+                        // Edit DoNotAllowInsertDeleteSection element. The value of its element, make changes or value added.
                         case ConstStr.TestTagStrings.TagContent10:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
 
@@ -184,8 +184,8 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                             break;
 
-                        //Tag is "Test1.4.4"
-                        //Edit sectionTitle element. The value of its element, make changes or value added.
+                        // Tag is "Test1.4.4"
+                        // Edit sectionTitle element. The value of its element, make changes or value added.
                         case ConstStr.TestTagStrings.TagContent11:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
 

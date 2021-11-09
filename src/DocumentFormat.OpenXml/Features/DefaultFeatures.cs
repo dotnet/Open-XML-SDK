@@ -10,10 +10,10 @@ namespace DocumentFormat.OpenXml.Features
 {
     internal class DefaultFeatures : IFeatureCollection
     {
+        private readonly object _sync = new();
+
         private IRootElementFactory? _rootElementFactory;
         private IPartMetadataFeature? _partMetadata;
-
-        private readonly object _sync = new();
 
         public static IFeatureCollection Shared { get; } = new DefaultFeatures();
 

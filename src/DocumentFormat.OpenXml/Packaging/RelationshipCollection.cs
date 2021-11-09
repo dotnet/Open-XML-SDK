@@ -63,8 +63,8 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        abstract internal void ReplaceRelationship(Uri targetUri, TargetMode targetMode, string strRelationshipType, string strId);
+        internal abstract void ReplaceRelationship(Uri targetUri, TargetMode targetMode, string strRelationshipType, string strId);
 
-        abstract internal Package GetPackage();
+        internal abstract Package GetPackage();
     }
 }

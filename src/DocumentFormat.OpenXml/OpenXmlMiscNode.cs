@@ -15,12 +15,12 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class OpenXmlMiscNode : OpenXmlElement
     {
-        private const string strCDataSectionName = "#cdata-section";
-        private const string strCommentName = "#comment";
-        private const string strTextName = "#text";
-        private const string strNonSignificantWhitespaceName = "#whitespace";
-        private const string strSignificantWhitespaceName = "#significant-whitespace";
-        private const string strXmlDeclaration = "xml-declaration";
+        private const string StrCDataSectionName = "#cdata-section";
+        private const string StrCommentName = "#comment";
+        private const string StrTextName = "#text";
+        private const string StrNonSignificantWhitespaceName = "#whitespace";
+        private const string StrSignificantWhitespaceName = "#significant-whitespace";
+        private const string StrXmlDeclaration = "xml-declaration";
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlMiscNode class using the
@@ -109,11 +109,11 @@ namespace DocumentFormat.OpenXml
                 switch (XmlNodeType)
                 {
                     case XmlNodeType.CDATA:
-                        localName = strCDataSectionName;
+                        localName = StrCDataSectionName;
                         break;
 
                     case XmlNodeType.Comment:
-                        localName = strCommentName;
+                        localName = StrCommentName;
                         break;
 
                     case XmlNodeType.ProcessingInstruction:
@@ -138,19 +138,19 @@ namespace DocumentFormat.OpenXml
                         break;
 
                     case XmlNodeType.Text:
-                        localName = strTextName;
+                        localName = StrTextName;
                         break;
 
                     case XmlNodeType.Whitespace:
-                        localName = strNonSignificantWhitespaceName;
+                        localName = StrNonSignificantWhitespaceName;
                         break;
 
                     case XmlNodeType.SignificantWhitespace:
-                        localName = strSignificantWhitespaceName;
+                        localName = StrSignificantWhitespaceName;
                         break;
 
                     case XmlNodeType.XmlDeclaration:
-                        localName = strXmlDeclaration;
+                        localName = StrXmlDeclaration;
                         break;
 
                     case XmlNodeType.Element:

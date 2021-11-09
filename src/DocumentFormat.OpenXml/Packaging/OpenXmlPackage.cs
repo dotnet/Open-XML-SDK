@@ -68,13 +68,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Loads the package. This method must be called in the constructor of a derived class.
         /// </summary>
         [MemberNotNull(nameof(_mainPartContentType))]
-        private void Load(Package _package)
+        private void Load(Package package)
         {
             try
             {
                 var loadedParts = new Dictionary<Uri, OpenXmlPart>();
                 var hasMainPart = false;
-                var relationshipCollection = new PackageRelationshipPropertyCollection(_package);
+                var relationshipCollection = new PackageRelationshipPropertyCollection(package);
 
                 // relationCollection.StrictRelationshipFound is true when this collection contains Transitional relationships converted from Strict.
                 StrictRelationshipFound = relationshipCollection.StrictRelationshipFound;
@@ -86,11 +86,11 @@ namespace DocumentFormat.OpenXml.Packaging
                 // AutoSave must be false when opening ISO Strict doc as editable.
                 // (Attention: #2545529. Now we disable this code until we finally decide to go with this. Instead, we take an alternative approach that is added in the SavePartContents() method
                 // which we ignore AutoSave when this.StrictRelationshipFound is true to keep consistency in the document.)
-                //if (this.StrictRelationshipFound && (this._accessMode == FileAccess.ReadWrite || this._accessMode == FileAccess.Write) && !this.AutoSave)
-                //{
+                // if (this.StrictRelationshipFound && (this._accessMode == FileAccess.ReadWrite || this._accessMode == FileAccess.Write) && !this.AutoSave)
+                // {
                 //    OpenXmlPackageException exception = new OpenXmlPackageException(ExceptionMessages.StrictEditNeedsAutoSave);
                 //    throw exception;
-                //}
+                // }
 
                 // auto detect document type (main part type for Transitional)
                 foreach (var relationship in relationshipCollection)
@@ -456,7 +456,8 @@ namespace DocumentFormat.OpenXml.Packaging
             do
             {
                 partUri = _partUriHelper.GetUniquePartUri(contentType, parentUri, targetPath, targetName, targetExt);
-            } while (_package.PartExists(partUri));
+            }
+            while (_package.PartExists(partUri));
 
             return partUri;
         }
@@ -479,7 +480,8 @@ namespace DocumentFormat.OpenXml.Packaging
             do
             {
                 partUri = _partUriHelper.GetUniquePartUri(contentType, parentUri, targetUri);
-            } while (_package.PartExists(partUri));
+            }
+            while (_package.PartExists(partUri));
 
             return partUri;
         }
@@ -564,8 +566,8 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        //internal FileFormatVersions MCTargetFormat
-        //{
+        // internal FileFormatVersions MCTargetFormat
+        // {
         //    get
         //    {
         //        if (MarkupCompatibilityProcessSettings.ProcessMode == MarkupCompatibilityProcessMode.NoProcess)
@@ -575,15 +577,15 @@ namespace DocumentFormat.OpenXml.Packaging
         //            return MarkupCompatibilityProcessSettings.TargetFileFormatVersions;
         //        }
         //    }
-        //}
+        // }
 
-        //internal bool ProcessMCInWholePackage
-        //{
+        // internal bool ProcessMCInWholePackage
+        // {
         //    get
         //    {
         //        return MarkupCompatibilityProcessSettings.ProcessMode == MarkupCompatibilityProcessMode.ProcessAllParts;
         //    }
-        //}
+        // }
         #endregion
 
         #region Auto-Save functions

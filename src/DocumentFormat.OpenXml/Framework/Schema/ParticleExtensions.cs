@@ -39,7 +39,8 @@ namespace DocumentFormat.OpenXml.Framework
                 }
 
                 child = child.Next;
-            } while (child is not null && child != element.FirstChild);
+            }
+            while (child is not null && child != element.FirstChild);
 
             return null;
         }

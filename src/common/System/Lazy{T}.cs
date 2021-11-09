@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                lock(_sync)
+                lock (_sync)
                 {
                     return _isValueCreated;
                 }
@@ -42,11 +42,11 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if(!_isValueCreated)
+                if (!_isValueCreated)
                 {
-                    lock(_sync)
+                    lock (_sync)
                     {
-                        if(!_isValueCreated && _factory is not null)
+                        if (!_isValueCreated && _factory is not null)
                         {
                             _value = _factory();
                             _isValueCreated = true;

@@ -938,8 +938,7 @@ namespace DocumentFormat.OpenXml.Tests
                                                  {
                                                      Uri =
                                                        "{28A0092B-C50C-407E-A947-70E740481C1C}",
-                                                 })
-                                         )
+                                                 }))
                                          {
                                              Embed = relationshipId,
                                              CompressionState =
@@ -952,12 +951,9 @@ namespace DocumentFormat.OpenXml.Tests
                                              new A.Offset() { X = 0L, Y = 0L },
                                              new A.Extents() { Cx = 990000L, Cy = 792000L }),
                                          new A.PresetGeometry(
-                                             new A.AdjustValueList()
-                                         )
-                                         { Preset = A.ShapeTypeValues.Rectangle }))
-                             )
-                             { Uri = "http://schemas.openxmlformats.org/drawingml/2006/picture" })
-                     )
+                                             new A.AdjustValueList())
+                                         { Preset = A.ShapeTypeValues.Rectangle })))
+                             { Uri = "http://schemas.openxmlformats.org/drawingml/2006/picture" }))
                      {
                          DistanceFromTop = 0U,
                          DistanceFromBottom = 0U,

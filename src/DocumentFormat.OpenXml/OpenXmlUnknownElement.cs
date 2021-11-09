@@ -134,7 +134,8 @@ namespace DocumentFormat.OpenXml
                             OuterXml = outerXml,
                         };
                     }
-                } while (xmlReader.NodeType == XmlNodeType.Whitespace);
+                }
+                while (xmlReader.NodeType == XmlNodeType.Whitespace);
 
                 // This method always expects an Element NodeType is passed, and there may be one or more preceding Whitespace NodeTypes before the Element.
                 // If it's not the case, then throw an exception.

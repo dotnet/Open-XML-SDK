@@ -45,7 +45,7 @@ namespace DocumentFormat.OpenXml
         {
         }
 
-        override internal bool IsEnum => true;
+        internal override bool IsEnum => true;
 
         /// <summary>
         /// Implicitly converts the specified value to an enum.

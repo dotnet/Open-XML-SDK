@@ -14,10 +14,10 @@ namespace DocumentFormat.OpenXml.Packaging
     [EditorBrowsable(EditorBrowsableState.Never)]
     public sealed class OpenXmlPackageValidationEventArgs : EventArgs
     {
-        private string? _message;
-
         [NonSerialized]
         private readonly object _sender;
+
+        private string? _message;
 
         [NonSerialized]
         private OpenXmlPart? _subPart;

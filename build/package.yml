@@ -7,10 +7,16 @@ jobs:
       vmImage: 'windows-2019' # Needed for PEVerify
     steps:
     - task: UseDotNet@2
-      displayName: 'Install SDK'
+      displayName: 'Install global.json SDK'
       inputs:
         packageType: 'sdk'
         useGlobalJson: true
+
+    - task: UseDotNet@2
+      displayName: 'Install .NET 5 SDK'
+      inputs:
+        packageType: 'sdk'
+        version: 5.x 
 
     - task: PowerShell@2
       displayName: 'Update version'

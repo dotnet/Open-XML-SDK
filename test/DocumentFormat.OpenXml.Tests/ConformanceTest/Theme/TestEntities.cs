@@ -10,9 +10,9 @@ namespace DocumentFormat.OpenXml.Tests.Theme
 {
     public class TestEntities
     {
-        //Theme ID values
-        private readonly string ThemeId1 = "{BBB17459-96FE-44C7-A45E-966A49711E99}";
-        private readonly string ThemeId2 = "{E13D3DE1-D0A1-4459-9464-6F999792E799}";
+        // Theme ID values
+        private const string ThemeId1 = "{BBB17459-96FE-44C7-A45E-966A49711E99}";
+        private const string ThemeId2 = "{E13D3DE1-D0A1-4459-9464-6F999792E799}";
 
         /// <summary>
         /// Editing theme id attribute

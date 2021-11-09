@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     internal class AttributeValueRangeConstraint : SemanticConstraint
     {
         private readonly byte _attribute;
-        private readonly bool _isValidRange; //"true" means attribute value must in range. And the meaning of "false" is opposite.
+        private readonly bool _isValidRange; // "true" means attribute value must in range. And the meaning of "false" is opposite.
         private readonly double _minValue;
         private readonly double _maxValue;
         private readonly bool _minInclusive;
@@ -47,8 +47,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            //If value cannot be converted into double, that means attribute type is not correct.
-            //That's job of schema validation, semantic validation will do nothing to avoid throw duplicated error.
+            // If value cannot be converted into double, that means attribute type is not correct.
+            // That's job of schema validation, semantic validation will do nothing to avoid throw duplicated error.
             if (!GetAttrNumVal(attribute.Value, out double value))
             {
                 return null;

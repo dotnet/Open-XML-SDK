@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ThemeAsPartRootClassTest()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm))
             using (var package = WordprocessingDocument.Open(stream, false))
             {
                 var themePart = package.MainDocumentPart.ThemePart;
@@ -56,7 +56,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ThemeAsClassWithFixedOrderChildTest()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm))
             using (var package = WordprocessingDocument.Open(stream, false))
             {
                 var themePart = package.MainDocumentPart.ThemePart;
@@ -64,19 +64,19 @@ namespace DocumentFormat.OpenXml.Tests
                 var xThemeFromFile = ConvertToXElement(themePart, theme);
                 var xTheme = ConvertToXElement(themePart, theme);
 
-                //doc.ExtraColorSchemeList;
+                // doc.ExtraColorSchemeList;
                 var ecsl = theme.ExtraColorSchemeList;
                 Assert.NotNull(ecsl);
                 var xecsl = xTheme.Element(ecsl.GetXName());
                 Assert.True(xecsl.Compare(ecsl.ToXElement()));
 
-                //doc.ObjectDefaults;
+                // doc.ObjectDefaults;
                 var od = theme.ObjectDefaults;
                 Assert.NotNull(od);
                 var xod = xTheme.Element(od.GetXName());
                 Assert.True(xod.Compare(od.ToXElement()));
 
-                //doc.ThemeElements;
+                // doc.ThemeElements;
                 var te = theme.ThemeElements;
                 Assert.NotNull(te);
                 var xte = xTheme.Element(te.GetXName());
@@ -87,7 +87,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ColorAsLeafElementTest()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm))
             using (var package = WordprocessingDocument.Open(stream, false))
             {
                 var mainPart = package.MainDocumentPart;
@@ -113,7 +113,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void FieldCodeAsLeafTextElement()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm))
             using (var package = WordprocessingDocument.Open(stream, false))
             {
                 var mainPart = package.MainDocumentPart;

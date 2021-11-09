@@ -10,9 +10,9 @@ using W = DocumentFormat.OpenXml.Wordprocessing;
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
-    ///This is a test class for OpenXmlCompositeElementTest and is intended
-    ///to contain all OpenXmlCompositeElementTest Unit Tests
-    ///</summary>
+    /// This is a test class for OpenXmlCompositeElementTest and is intended
+    /// to contain all OpenXmlCompositeElementTest Unit Tests
+    /// </summary>
     public class OpenXmlCompositeElementTest
     {
         /// <summary>

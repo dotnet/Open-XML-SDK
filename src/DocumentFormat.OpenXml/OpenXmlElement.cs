@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml
                 }
                 else
                 {
-                    return MiscAttrContainer._mcAttributes;
+                    return MiscAttrContainer.McAttributes;
                 }
             }
 
@@ -95,7 +95,7 @@ namespace DocumentFormat.OpenXml
                     MiscAttrContainer = new MiscAttrContainer();
                 }
 
-                MiscAttrContainer._mcAttributes = value;
+                MiscAttrContainer.McAttributes = value;
             }
         }
 
@@ -109,7 +109,7 @@ namespace DocumentFormat.OpenXml
                 }
                 else
                 {
-                    return MiscAttrContainer._nsMappings;
+                    return MiscAttrContainer.NsMappings;
                 }
             }
 
@@ -120,7 +120,7 @@ namespace DocumentFormat.OpenXml
                     MiscAttrContainer = new MiscAttrContainer();
                 }
 
-                MiscAttrContainer._nsMappings = value;
+                MiscAttrContainer.NsMappings = value;
             }
         }
 
@@ -577,7 +577,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentOutOfRangeException(nameof(openXmlAttribute), ExceptionMessages.LocalNameIsNull);
             }
 
-            if (openXmlAttribute.Prefix == OpenXmlElementContext.xmlnsPrefix)
+            if (openXmlAttribute.Prefix == OpenXmlElementContext.XmlnsPrefix)
             {
                 throw new InvalidOperationException(ExceptionMessages.CannotSetAttribute);
             }
@@ -676,7 +676,7 @@ namespace DocumentFormat.OpenXml
                     }
                 }
 
-                //try remove MC attribute
+                // try remove MC attribute
                 if (qname.Namespace.Uri == AlternateContent.MarkupCompatibilityNamespace)
                 {
                     RemoveMCAttribute(qname.Name);
@@ -1053,17 +1053,17 @@ namespace DocumentFormat.OpenXml
 
             if (XmlParsed)
             {
-                //check the namespace mapping defined in this node first. because till now xmlWriter don't know the mapping defined in the current node.
+                // check the namespace mapping defined in this node first. because till now xmlWriter don't know the mapping defined in the current node.
                 var prefix = LookupPrefixLocal(NamespaceUri);
 
-                //if not defined in the current node, try the xmlWriter
+                // if not defined in the current node, try the xmlWriter
                 if (string.IsNullOrEmpty(prefix))
                 {
                     prefix = xmlWriter.LookupPrefix(NamespaceUri);
                 }
 
-                //if xmlWriter didn't find it, it means the node is constructed by user and is not in the tree yet
-                //in this case, we use the predefined prefix
+                // if xmlWriter didn't find it, it means the node is constructed by user and is not in the tree yet
+                // in this case, we use the predefined prefix
                 if (string.IsNullOrEmpty(prefix))
                 {
                     prefix = QName.Namespace.Prefix;
@@ -1427,12 +1427,12 @@ namespace DocumentFormat.OpenXml
 
         private protected virtual void WriteAttributesTo(XmlWriter xmlWriter)
         {
-            //write the namespace declaration first, so the inner attribute will get the right prefix
+            // write the namespace declaration first, so the inner attribute will get the right prefix
             if (NamespaceDeclField is not null)
             {
                 foreach (var item in NamespaceDeclField)
                 {
-                    xmlWriter.WriteAttributeString(OpenXmlElementContext.xmlnsPrefix, item.Key, OpenXmlElementContext.xmlnsUri, item.Value);
+                    xmlWriter.WriteAttributeString(OpenXmlElementContext.XmlnsPrefix, item.Key, OpenXmlElementContext.XmlnsUri, item.Value);
                 }
             }
 
@@ -1532,12 +1532,12 @@ namespace DocumentFormat.OpenXml
                                 continue;
                             }
 
-                            //if we cannot recognize the local name with the mc prefix, load it as extended properties
+                            // if we cannot recognize the local name with the mc prefix, load it as extended properties
                         }
 
                         // a attribute is (xmlns:nnn=".....")
-                        //bool attributeIsXmlnsDefination = this.IsXmlnsUri(xmlReader.NamespaceURI);
-                        var attributeIsXmlnsDefination = xmlReader.NamespaceURI == OpenXmlElementContext.xmlnsUri;
+                        // bool attributeIsXmlnsDefination = this.IsXmlnsUri(xmlReader.NamespaceURI);
+                        var attributeIsXmlnsDefination = xmlReader.NamespaceURI == OpenXmlElementContext.XmlnsUri;
 
                         if (!attributeIsXmlnsDefination)
                         {
@@ -1551,7 +1551,7 @@ namespace DocumentFormat.OpenXml
                         }
                         else
                         {
-                            //don't add declaration for case like xmlns="global namespace uri"
+                            // don't add declaration for case like xmlns="global namespace uri"
                             if (!string.IsNullOrEmpty(xmlReader.Prefix))
                             {
                                 if (NamespaceDeclField is null)
@@ -1567,7 +1567,7 @@ namespace DocumentFormat.OpenXml
 
                 RemoveAttributesBasedonMC();
 
-                //  Moves the reader back to the element node.
+                // Moves the reader back to the element node.
                 xmlReader.MoveToElement();
             }
         }
@@ -1758,9 +1758,9 @@ namespace DocumentFormat.OpenXml
 
         private protected XmlReader CreateXmlReader(string outerXml)
         {
-            //This StringReader should not be in a using statement, because it is passed to XmlConvertingReaderFactory
-            //and we delegate the responsibility of disposing to XmlConvertingReader.
-            //We do not want the using statement here, as we risk this exception being thrown: System.ObjectDisposedException Cannot read from a closed TextReader.
+            // This StringReader should not be in a using statement, because it is passed to XmlConvertingReaderFactory
+            // and we delegate the responsibility of disposing to XmlConvertingReader.
+            // We do not want the using statement here, as we risk this exception being thrown: System.ObjectDisposedException Cannot read from a closed TextReader.
             var stringReader = new StringReader(outerXml);
 
             if (OpenXmlElementContext is not null)
@@ -2022,7 +2022,7 @@ namespace DocumentFormat.OpenXml
             }
             else
             {
-                return nsUri == OpenXmlElementContext.xmlnsUri;
+                return nsUri == OpenXmlElementContext.XmlnsUri;
             }
         }
 
@@ -2057,7 +2057,8 @@ namespace DocumentFormat.OpenXml
                             return string.Equals(namespaceURI, xmlReader.NamespaceURI, StringComparison.Ordinal) && string.Equals(localName, xmlReader.LocalName, StringComparison.Ordinal);
                         }
                     }
-                } while (xmlReader.NodeType == XmlNodeType.Whitespace);
+                }
+                while (xmlReader.NodeType == XmlNodeType.Whitespace);
             }
 
             return false;
@@ -2187,7 +2188,7 @@ namespace DocumentFormat.OpenXml
                     }
                 }
 
-                //  Moves the reader back to the element node.
+                // Moves the reader back to the element node.
                 xmlReader.MoveToElement();
             }
 

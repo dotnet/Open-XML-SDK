@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     internal class AttributeValueSetConstraint : SemanticConstraint
     {
         private readonly byte _attribute;
-        private readonly bool _isValidValueSet; //"true" means attribute value must in range. And the meaning of "false" is opposite.
+        private readonly bool _isValidValueSet; // "true" means attribute value must in range. And the meaning of "false" is opposite.
         private readonly string[] _valueSet;
 
         public AttributeValueSetConstraint(byte attribute, bool isValid, string[] valueSet)
@@ -36,7 +36,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             var attribute = element.ParsedState.Attributes[_attribute];
 
-            //if the attribute is omitted, semantic validation will do nothing
+            // if the attribute is omitted, semantic validation will do nothing
             if (attribute.Value is null || string.IsNullOrEmpty(attribute.Value.InnerText))
             {
                 return null;

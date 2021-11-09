@@ -15,13 +15,13 @@ namespace DocumentFormat.OpenXml.Tests
     public class MCSupport
     {
         /// <summary>
-        ///Load MC attribute
-        ///set attributes
-        ///</summary>
+        /// Load MC attribute
+        /// set attributes
+        /// </summary>
         [Fact]
         public void LoadAttributeTest()
         {
-            using (var stream = GetStream(TestFiles.mcdoc, true))
+            using (var stream = GetStream(TestFiles.Mcdoc, true))
             {
                 using (var testDocument = WordprocessingDocument.Open(stream, true))
                 {
@@ -31,14 +31,14 @@ namespace DocumentFormat.OpenXml.Tests
 
                     Assert.NotNull(actual.MCAttributes.Ignorable);
 
-                    //get attribute, no exception thrown
+                    // get attribute, no exception thrown
                     OpenXmlAttribute attr = actual.GetAttribute("Ignorable", AlternateContent.MarkupCompatibilityNamespace);
                     Assert.Equal("w14 wp14", attr.Value);
 
                     var list = actual.GetAttributes();
                     Assert.True(list.Contains(attr));
 
-                    //set attribute
+                    // set attribute
                     actual.MCAttributes = null;
 
                     actual.FirstChild.MCAttributes = new MarkupCompatibilityAttributes();
@@ -64,7 +64,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                     Assert.True(actual.FirstChild.HasChildren);
 
-                    //get attribute, no exception thrown
+                    // get attribute, no exception thrown
                     OpenXmlAttribute attr = actual.FirstChild.GetAttribute("PreserveAttributes", AlternateContent.MarkupCompatibilityNamespace);
                     Assert.Equal("w14:editId", attr.Value);
 
@@ -75,9 +75,9 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///Load Ignorable attribute
-        ///set attributes
-        ///</summary>
+        /// Load Ignorable attribute
+        /// set attributes
+        /// </summary>
         [Fact]
         public void LoadIgnorable()
         {
@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml.Tests
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007),
             };
 
-            using (var stream = GetStream(TestFiles.mcdoc))
+            using (var stream = GetStream(TestFiles.Mcdoc))
             using (var testDocument = WordprocessingDocument.Open(stream, false, settings))
             {
                 var target = testDocument.MainDocumentPart;
@@ -101,9 +101,9 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///Load Preserve attribute
-        ///set attributes
-        ///</summary>
+        /// Load Preserve attribute
+        /// set attributes
+        /// </summary>
         [Fact]
         public void LoadPreserveAttr()
         {
@@ -112,7 +112,7 @@ namespace DocumentFormat.OpenXml.Tests
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007),
             };
 
-            using (var stream = GetStream(TestFiles.mcdoc))
+            using (var stream = GetStream(TestFiles.Mcdoc))
             using (var testDocument = WordprocessingDocument.Open(stream, false, settings))
             {
                 OpenXmlPart target = testDocument.MainDocumentPart;
@@ -141,8 +141,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///Load ProcessContent
-        ///</summary>
+        /// Load ProcessContent
+        /// </summary>
         [Fact]
         public void LoadProcessContent()
         {
@@ -172,8 +172,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///Load ACB
-        ///</summary>
+        /// Load ACB
+        /// </summary>
         [Fact]
         public void LoadACB()
         {
@@ -182,7 +182,7 @@ namespace DocumentFormat.OpenXml.Tests
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007),
             };
 
-            using (var stream = GetStream(TestFiles.mcdoc, true))
+            using (var stream = GetStream(TestFiles.Mcdoc, true))
             using (var testDocument = WordprocessingDocument.Open(stream, true, settings))
             {
                 OpenXmlPart target = testDocument.MainDocumentPart;
@@ -198,8 +198,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///Load ACB
-        ///</summary>
+        /// Load ACB
+        /// </summary>
         [Fact]
         public void LoadACB2()
         {
@@ -208,7 +208,7 @@ namespace DocumentFormat.OpenXml.Tests
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007),
             };
 
-            using (var stream = GetStream(TestFiles.mcppt))
+            using (var stream = GetStream(TestFiles.Mcppt))
             using (var doc = PresentationDocument.Open(stream, false, settings))
             {
                 OpenXmlPart target = doc.PresentationPart.TableStylesPart;
@@ -241,8 +241,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///Save other parts
-        ///</summary>
+        /// Save other parts
+        /// </summary>
         [Fact]
         public void MCSave()
         {
@@ -252,7 +252,7 @@ namespace DocumentFormat.OpenXml.Tests
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007),
             };
 
-            using (var stream = GetStream(TestFiles.mcdoc, true))
+            using (var stream = GetStream(TestFiles.Mcdoc, true))
             {
                 using (var testDocument = WordprocessingDocument.Open(stream, true, settings))
                 {
@@ -270,7 +270,7 @@ namespace DocumentFormat.OpenXml.Tests
                     OpenXmlElement p1 = null;
                     p1 = root.FirstChild.FirstChild;
 
-                    //should throw exception
+                    // should throw exception
                     var attrs = p1.GetAttributes();
                     Assert.Equal(3, attrs.Count);
 
@@ -310,9 +310,9 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        ///<summary>
-        ///MCMustUnderstand.
-        ///</summary>
+        /// <summary>
+        /// MCMustUnderstand.
+        /// </summary>
         [Fact]
         public void MCMustUnderstand()
         {
@@ -321,7 +321,7 @@ namespace DocumentFormat.OpenXml.Tests
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007),
             };
 
-            using (var stream = GetStream(TestFiles.mcdoc, true))
+            using (var stream = GetStream(TestFiles.Mcdoc, true))
             {
                 using (var testDocument = WordprocessingDocument.Open(stream, true, settings))
                 {
@@ -344,7 +344,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     OpenXmlPart target = testDocument.MainDocumentPart;
 
-                    //should throw exception here
+                    // should throw exception here
                     Assert.Throws<NamespaceNotUnderstandException>(() =>
                     {
                         OpenXmlPartRootElement root = target.RootElement;
@@ -353,9 +353,9 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        ///<summary>
-        ///ParticalProperty.
-        ///</summary>
+        /// <summary>
+        /// ParticalProperty.
+        /// </summary>
         [Fact]
         public void ParticalProperty()
         {
@@ -364,7 +364,7 @@ namespace DocumentFormat.OpenXml.Tests
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007),
             };
 
-            using (var stream = GetStream(TestFiles.simpleSdt, true))
+            using (var stream = GetStream(TestFiles.SimpleSdt, true))
             {
                 using (var testDocument = WordprocessingDocument.Open(stream, true, settings))
                 {
@@ -395,8 +395,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///Write out extra xmlns attribute when the mc defined some prefix bug xmlwriter ignored its declaration
-        ///</summary>
+        /// Write out extra xmlns attribute when the mc defined some prefix bug xmlwriter ignored its declaration
+        /// </summary>
         [Fact]
         public void WriteExtraAttr()
         {
@@ -431,9 +431,9 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        ///<summary>
-        ///Bug718314.
-        ///</summary>
+        /// <summary>
+        /// Bug718314.
+        /// </summary>
         [Fact]
         public void Bug718314()
         {
@@ -459,9 +459,9 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        ///<summary>
-        ///Bug718316.
-        ///</summary>
+        /// <summary>
+        /// Bug718316.
+        /// </summary>
         [Fact]
         public void Bug718316()
         {

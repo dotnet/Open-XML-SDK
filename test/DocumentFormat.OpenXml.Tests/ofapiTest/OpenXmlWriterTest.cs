@@ -8,14 +8,14 @@ using Xunit;
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
-    ///This is a test class for OpenXmlPartWriterTest and is intended
-    ///to contain all OpenXmlPartWriterTest Unit Tests
-    ///</summary>
+    /// This is a test class for OpenXmlPartWriterTest and is intended
+    /// to contain all OpenXmlPartWriterTest Unit Tests
+    /// </summary>
     public class OpenXmlWriterTest
     {
         /// <summary>
-        ///A test for WriteString
-        ///</summary>
+        /// A test for WriteString
+        /// </summary>
         [Fact]
         public void WriteStringTest()
         {
@@ -63,8 +63,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///A test for WriteString
-        ///</summary>
+        /// A test for WriteString
+        /// </summary>
         [Fact]
         public void WriteStringExceptionTest()
         {
@@ -84,8 +84,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///A test for WriteString
-        ///</summary>
+        /// A test for WriteString
+        /// </summary>
         [Fact]
         public void WriteStringExceptionTest2()
         {
@@ -107,8 +107,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///A test for WriteString
-        ///</summary>
+        /// A test for WriteString
+        /// </summary>
         [Fact]
         public void WriteStringExceptionTest3()
         {
@@ -132,8 +132,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///A test for WriteString
-        ///</summary>
+        /// A test for WriteString
+        /// </summary>
         [Fact]
         public void WriteStringExceptionTest4()
         {
@@ -164,8 +164,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///A test for WriteString
-        ///</summary>
+        /// A test for WriteString
+        /// </summary>
         [Fact]
         public void WriteStringExceptionTest5()
         {
@@ -193,8 +193,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///A test for WriteString
-        ///</summary>
+        /// A test for WriteString
+        /// </summary>
         [Fact]
         public void WriteStringExceptionTest6()
         {
@@ -218,8 +218,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///A test for WriteString
-        ///</summary>
+        /// A test for WriteString
+        /// </summary>
         [Fact]
         public void WriteStringExceptionTest7()
         {
