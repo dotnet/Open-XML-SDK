@@ -176,7 +176,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ParentCommentIdentifier &lt;p15:parentCm></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier" /> <c>&lt;p15:parentCm></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -236,7 +236,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(68, "threadingInfo");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<ParentCommentIdentifier>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier>();
             builder.AddElement<ThreadingInfo>()
 .AddAttribute(0, "timeZoneBias", a => a.TimeZoneBias);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -252,9 +252,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p15 = http://schemas.microsoft.com/office/powerpoint/2012/main
         /// </remark>
-        public ParentCommentIdentifier? ParentCommentIdentifier
+        public DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier? ParentCommentIdentifier
         {
-            get => GetElement<ParentCommentIdentifier>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier>();
             set => SetElement(value);
         }
 
@@ -270,8 +270,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtendedGuide &lt;p15:guide></description></item>
-    ///   <item><description>ExtensionList &lt;p15:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList" /> <c>&lt;p15:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ExtendedGuide" /> <c>&lt;p15:guide></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -334,8 +334,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtendedGuide &lt;p15:guide></description></item>
-    ///   <item><description>ExtensionList &lt;p15:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList" /> <c>&lt;p15:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ExtendedGuide" /> <c>&lt;p15:guide></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -398,8 +398,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtendedGuide &lt;p15:guide></description></item>
-    ///   <item><description>ExtensionList &lt;p15:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList" /> <c>&lt;p15:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ExtendedGuide" /> <c>&lt;p15:guide></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class ExtendedGuideList : OpenXmlCompositeElement
@@ -438,8 +438,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<ExtendedGuide>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.ExtendedGuide>();
         }
     }
 
@@ -563,12 +563,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage" /> <c>&lt;a:scrgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -612,12 +612,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(68, "clr");
             builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -725,7 +725,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Presentation.Extension &lt;p:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -794,8 +794,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ColorType &lt;p15:clr></description></item>
-    ///   <item><description>ExtensionList &lt;p15:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType" /> <c>&lt;p15:clr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList" /> <c>&lt;p15:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -919,8 +919,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(68, "guide");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<ColorType>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList>();
             builder.AddElement<ExtendedGuide>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -947,9 +947,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p15 = http://schemas.microsoft.com/office/powerpoint/2012/main
         /// </remark>
-        public ColorType? ColorType
+        public DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType? ColorType
         {
-            get => GetElement<ColorType>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType>();
             set => SetElement(value);
         }
 
@@ -960,9 +960,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p15 = http://schemas.microsoft.com/office/powerpoint/2012/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList>();
             set => SetElement(value);
         }
 

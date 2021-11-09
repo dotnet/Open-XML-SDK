@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;xda:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList" /> <c>&lt;xda:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -99,7 +99,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
             base.ConfigureMetadata(builder);
             builder.SetSchema(106, "dynamicArrayProperties");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList>();
             builder.AddElement<DynamicArrayProperties>()
 .AddAttribute(0, "fDynamic", a => a.FDynamic)
 .AddAttribute(0, "fCollapsed", a => a.FCollapsed);
@@ -116,9 +116,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
         /// <remark>
         /// xmlns:xda = http://schemas.microsoft.com/office/spreadsheetml/2017/dynamicarray
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -134,7 +134,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Extension &lt;x:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete

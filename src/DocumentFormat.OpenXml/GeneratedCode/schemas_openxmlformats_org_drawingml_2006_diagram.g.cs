@@ -26,11 +26,11 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ColorDefinitionTitle &lt;dgm:title></description></item>
-    ///   <item><description>ColorTransformDescription &lt;dgm:desc></description></item>
-    ///   <item><description>ColorTransformCategories &lt;dgm:catLst></description></item>
-    ///   <item><description>ColorTransformStyleLabel &lt;dgm:styleLbl></description></item>
-    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformCategories" /> <c>&lt;dgm:catLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformDescription" /> <c>&lt;dgm:desc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorDefinitionTitle" /> <c>&lt;dgm:title></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformStyleLabel" /> <c>&lt;dgm:styleLbl></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -105,11 +105,11 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "colorsDef");
-            builder.AddChild<ColorDefinitionTitle>();
-            builder.AddChild<ColorTransformDescription>();
-            builder.AddChild<ColorTransformCategories>();
-            builder.AddChild<ColorTransformStyleLabel>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformCategories>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformDescription>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ColorDefinitionTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformStyleLabel>();
             builder.AddElement<ColorsDefinition>()
 .AddAttribute(0, "uniqueId", a => a.UniqueId)
 .AddAttribute(0, "minVer", a => a.MinVersion);
@@ -167,10 +167,10 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ColorDefinitionTitle &lt;dgm:title></description></item>
-    ///   <item><description>ColorTransformDescription &lt;dgm:desc></description></item>
-    ///   <item><description>ColorTransformCategories &lt;dgm:catLst></description></item>
-    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformCategories" /> <c>&lt;dgm:catLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformDescription" /> <c>&lt;dgm:desc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorDefinitionTitle" /> <c>&lt;dgm:title></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -261,10 +261,10 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "colorsDefHdr");
-            builder.AddChild<ColorDefinitionTitle>();
-            builder.AddChild<ColorTransformDescription>();
-            builder.AddChild<ColorTransformCategories>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformCategories>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformDescription>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ColorDefinitionTitle>();
             builder.AddElement<ColorsDefinitionHeader>()
 .AddAttribute(0, "uniqueId", a => a.UniqueId, aBuilder =>
 {
@@ -293,7 +293,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ColorsDefinitionHeader &lt;dgm:colorsDefHdr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorsDefinitionHeader" /> <c>&lt;dgm:colorsDefHdr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -336,7 +336,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "colorsDefHdrLst");
-            builder.AddChild<ColorsDefinitionHeader>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ColorsDefinitionHeader>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorsDefinitionHeader), 0, 0)
@@ -355,11 +355,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PointList &lt;dgm:ptLst></description></item>
-    ///   <item><description>ConnectionList &lt;dgm:cxnLst></description></item>
-    ///   <item><description>Background &lt;dgm:bg></description></item>
-    ///   <item><description>Whole &lt;dgm:whole></description></item>
-    ///   <item><description>DataModelExtensionList &lt;dgm:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Background" /> <c>&lt;dgm:bg></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.DataModelExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Whole" /> <c>&lt;dgm:whole></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionList" /> <c>&lt;dgm:cxnLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.PointList" /> <c>&lt;dgm:ptLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -402,11 +402,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "dataModel");
-            builder.AddChild<PointList>();
-            builder.AddChild<ConnectionList>();
-            builder.AddChild<Background>();
-            builder.AddChild<Whole>();
-            builder.AddChild<DataModelExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Background>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.DataModelExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Whole>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.PointList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.PointList), 1, 1),
@@ -424,9 +424,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public PointList? PointList
+        public DocumentFormat.OpenXml.Drawing.Diagrams.PointList? PointList
         {
-            get => GetElement<PointList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.PointList>();
             set => SetElement(value);
         }
 
@@ -437,9 +437,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public ConnectionList? ConnectionList
+        public DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionList? ConnectionList
         {
-            get => GetElement<ConnectionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionList>();
             set => SetElement(value);
         }
 
@@ -450,9 +450,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public Background? Background
+        public DocumentFormat.OpenXml.Drawing.Diagrams.Background? Background
         {
-            get => GetElement<Background>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.Background>();
             set => SetElement(value);
         }
 
@@ -463,9 +463,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public Whole? Whole
+        public DocumentFormat.OpenXml.Drawing.Diagrams.Whole? Whole
         {
-            get => GetElement<Whole>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.Whole>();
             set => SetElement(value);
         }
 
@@ -476,9 +476,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public DataModelExtensionList? DataModelExtensionList
+        public DocumentFormat.OpenXml.Drawing.Diagrams.DataModelExtensionList? DataModelExtensionList
         {
-            get => GetElement<DataModelExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.DataModelExtensionList>();
             set => SetElement(value);
         }
 
@@ -525,14 +525,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Title &lt;dgm:title></description></item>
-    ///   <item><description>Description &lt;dgm:desc></description></item>
-    ///   <item><description>CategoryList &lt;dgm:catLst></description></item>
-    ///   <item><description>SampleData &lt;dgm:sampData></description></item>
-    ///   <item><description>StyleData &lt;dgm:styleData></description></item>
-    ///   <item><description>ColorData &lt;dgm:clrData></description></item>
-    ///   <item><description>LayoutNode &lt;dgm:layoutNode></description></item>
-    ///   <item><description>DiagramDefinitionExtensionList &lt;dgm:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.CategoryList" /> <c>&lt;dgm:catLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Description" /> <c>&lt;dgm:desc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.DiagramDefinitionExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.LayoutNode" /> <c>&lt;dgm:layoutNode></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Title" /> <c>&lt;dgm:title></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.SampleData" /> <c>&lt;dgm:sampData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.StyleData" /> <c>&lt;dgm:styleData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorData" /> <c>&lt;dgm:clrData></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -623,14 +623,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "layoutDef");
-            builder.AddChild<Title>();
-            builder.AddChild<Description>();
-            builder.AddChild<CategoryList>();
-            builder.AddChild<SampleData>();
-            builder.AddChild<StyleData>();
-            builder.AddChild<ColorData>();
-            builder.AddChild<LayoutNode>();
-            builder.AddChild<DiagramDefinitionExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.CategoryList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Description>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.DiagramDefinitionExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.LayoutNode>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Title>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.SampleData>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.StyleData>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ColorData>();
             builder.AddElement<LayoutDefinition>()
 .AddAttribute(0, "uniqueId", a => a.UniqueId)
 .AddAttribute(0, "minVer", a => a.MinVersion)
@@ -691,10 +691,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Title &lt;dgm:title></description></item>
-    ///   <item><description>Description &lt;dgm:desc></description></item>
-    ///   <item><description>CategoryList &lt;dgm:catLst></description></item>
-    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.CategoryList" /> <c>&lt;dgm:catLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Description" /> <c>&lt;dgm:desc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Title" /> <c>&lt;dgm:title></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -801,10 +801,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "layoutDefHdr");
-            builder.AddChild<Title>();
-            builder.AddChild<Description>();
-            builder.AddChild<CategoryList>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.CategoryList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Description>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Title>();
             builder.AddElement<LayoutDefinitionHeader>()
 .AddAttribute(0, "uniqueId", a => a.UniqueId, aBuilder =>
 {
@@ -834,7 +834,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LayoutDefinitionHeader &lt;dgm:layoutDefHdr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.LayoutDefinitionHeader" /> <c>&lt;dgm:layoutDefHdr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -877,7 +877,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "layoutDefHdrLst");
-            builder.AddChild<LayoutDefinitionHeader>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.LayoutDefinitionHeader>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.LayoutDefinitionHeader), 0, 0)
@@ -1021,12 +1021,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>StyleDefinitionTitle &lt;dgm:title></description></item>
-    ///   <item><description>StyleLabelDescription &lt;dgm:desc></description></item>
-    ///   <item><description>StyleDisplayCategories &lt;dgm:catLst></description></item>
-    ///   <item><description>Scene3D &lt;dgm:scene3d></description></item>
-    ///   <item><description>StyleLabel &lt;dgm:styleLbl></description></item>
-    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Scene3D" /> <c>&lt;dgm:scene3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.StyleDisplayCategories" /> <c>&lt;dgm:catLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.StyleLabelDescription" /> <c>&lt;dgm:desc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionTitle" /> <c>&lt;dgm:title></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.StyleLabel" /> <c>&lt;dgm:styleLbl></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1101,12 +1101,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "styleDef");
-            builder.AddChild<StyleDefinitionTitle>();
-            builder.AddChild<StyleLabelDescription>();
-            builder.AddChild<StyleDisplayCategories>();
-            builder.AddChild<Scene3D>();
-            builder.AddChild<StyleLabel>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Scene3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.StyleDisplayCategories>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.StyleLabelDescription>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.StyleLabel>();
             builder.AddElement<StyleDefinition>()
 .AddAttribute(0, "uniqueId", a => a.UniqueId)
 .AddAttribute(0, "minVer", a => a.MinVersion);
@@ -1164,10 +1164,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>StyleDefinitionTitle &lt;dgm:title></description></item>
-    ///   <item><description>StyleLabelDescription &lt;dgm:desc></description></item>
-    ///   <item><description>StyleDisplayCategories &lt;dgm:catLst></description></item>
-    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.StyleDisplayCategories" /> <c>&lt;dgm:catLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.StyleLabelDescription" /> <c>&lt;dgm:desc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionTitle" /> <c>&lt;dgm:title></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1258,10 +1258,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "styleDefHdr");
-            builder.AddChild<StyleDefinitionTitle>();
-            builder.AddChild<StyleLabelDescription>();
-            builder.AddChild<StyleDisplayCategories>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.StyleDisplayCategories>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.StyleLabelDescription>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionTitle>();
             builder.AddElement<StyleDefinitionHeader>()
 .AddAttribute(0, "uniqueId", a => a.UniqueId, aBuilder =>
 {
@@ -1290,7 +1290,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>StyleDefinitionHeader &lt;dgm:styleDefHdr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionHeader" /> <c>&lt;dgm:styleDefHdr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1333,7 +1333,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "styleDefHdrLst");
-            builder.AddChild<StyleDefinitionHeader>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionHeader>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionHeader), 0, 0)
@@ -1421,12 +1421,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage" /> <c>&lt;a:scrgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1498,12 +1498,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage" /> <c>&lt;a:scrgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1575,12 +1575,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage" /> <c>&lt;a:scrgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1652,12 +1652,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage" /> <c>&lt;a:scrgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1729,12 +1729,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage" /> <c>&lt;a:scrgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1806,12 +1806,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage" /> <c>&lt;a:scrgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1883,12 +1883,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage" /> <c>&lt;a:scrgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class ColorsType : OpenXmlCompositeElement
@@ -1959,12 +1959,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
             builder.AddElement<ColorsType>()
 .AddAttribute(0, "meth", a => a.Method, aBuilder =>
 {
@@ -1985,7 +1985,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2183,7 +2183,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ColorTransformCategory &lt;dgm:cat></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformCategory" /> <c>&lt;dgm:cat></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2226,7 +2226,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "catLst");
-            builder.AddChild<ColorTransformCategory>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformCategory>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformCategory), 0, 0)
@@ -2245,13 +2245,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>FillColorList &lt;dgm:fillClrLst></description></item>
-    ///   <item><description>LineColorList &lt;dgm:linClrLst></description></item>
-    ///   <item><description>EffectColorList &lt;dgm:effectClrLst></description></item>
-    ///   <item><description>TextLineColorList &lt;dgm:txLinClrLst></description></item>
-    ///   <item><description>TextFillColorList &lt;dgm:txFillClrLst></description></item>
-    ///   <item><description>TextEffectColorList &lt;dgm:txEffectClrLst></description></item>
-    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.FillColorList" /> <c>&lt;dgm:fillClrLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.LineColorList" /> <c>&lt;dgm:linClrLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.EffectColorList" /> <c>&lt;dgm:effectClrLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.TextLineColorList" /> <c>&lt;dgm:txLinClrLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.TextFillColorList" /> <c>&lt;dgm:txFillClrLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.TextEffectColorList" /> <c>&lt;dgm:txEffectClrLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2310,13 +2310,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "styleLbl");
-            builder.AddChild<FillColorList>();
-            builder.AddChild<LineColorList>();
-            builder.AddChild<EffectColorList>();
-            builder.AddChild<TextLineColorList>();
-            builder.AddChild<TextFillColorList>();
-            builder.AddChild<TextEffectColorList>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.FillColorList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.LineColorList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.EffectColorList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.TextLineColorList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.TextFillColorList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.TextEffectColorList>();
             builder.AddElement<ColorTransformStyleLabel>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -2341,9 +2341,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public FillColorList? FillColorList
+        public DocumentFormat.OpenXml.Drawing.Diagrams.FillColorList? FillColorList
         {
-            get => GetElement<FillColorList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.FillColorList>();
             set => SetElement(value);
         }
 
@@ -2354,9 +2354,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public LineColorList? LineColorList
+        public DocumentFormat.OpenXml.Drawing.Diagrams.LineColorList? LineColorList
         {
-            get => GetElement<LineColorList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.LineColorList>();
             set => SetElement(value);
         }
 
@@ -2367,9 +2367,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public EffectColorList? EffectColorList
+        public DocumentFormat.OpenXml.Drawing.Diagrams.EffectColorList? EffectColorList
         {
-            get => GetElement<EffectColorList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.EffectColorList>();
             set => SetElement(value);
         }
 
@@ -2380,9 +2380,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public TextLineColorList? TextLineColorList
+        public DocumentFormat.OpenXml.Drawing.Diagrams.TextLineColorList? TextLineColorList
         {
-            get => GetElement<TextLineColorList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.TextLineColorList>();
             set => SetElement(value);
         }
 
@@ -2393,9 +2393,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public TextFillColorList? TextFillColorList
+        public DocumentFormat.OpenXml.Drawing.Diagrams.TextFillColorList? TextFillColorList
         {
-            get => GetElement<TextFillColorList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.TextFillColorList>();
             set => SetElement(value);
         }
 
@@ -2406,9 +2406,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public TextEffectColorList? TextEffectColorList
+        public DocumentFormat.OpenXml.Drawing.Diagrams.TextEffectColorList? TextEffectColorList
         {
-            get => GetElement<TextEffectColorList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.TextEffectColorList>();
             set => SetElement(value);
         }
 
@@ -2419,9 +2419,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -2437,10 +2437,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PropertySet &lt;dgm:prSet></description></item>
-    ///   <item><description>ShapeProperties &lt;dgm:spPr></description></item>
-    ///   <item><description>TextBody &lt;dgm:t></description></item>
-    ///   <item><description>PtExtensionList &lt;dgm:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.PtExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ShapeProperties" /> <c>&lt;dgm:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.TextBody" /> <c>&lt;dgm:t></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.PropertySet" /> <c>&lt;dgm:prSet></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2531,10 +2531,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "pt");
-            builder.AddChild<PropertySet>();
-            builder.AddChild<ShapeProperties>();
-            builder.AddChild<TextBody>();
-            builder.AddChild<PtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.PtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.TextBody>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.PropertySet>();
             builder.AddElement<Point>()
 .AddAttribute(0, "modelId", a => a.ModelId, aBuilder =>
 {
@@ -2573,9 +2573,9 @@ union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public PropertySet? PropertySet
+        public DocumentFormat.OpenXml.Drawing.Diagrams.PropertySet? PropertySet
         {
-            get => GetElement<PropertySet>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.PropertySet>();
             set => SetElement(value);
         }
 
@@ -2586,9 +2586,9 @@ union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Diagrams.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -2599,9 +2599,9 @@ union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public TextBody? TextBody
+        public DocumentFormat.OpenXml.Drawing.Diagrams.TextBody? TextBody
         {
-            get => GetElement<TextBody>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.TextBody>();
             set => SetElement(value);
         }
 
@@ -2612,9 +2612,9 @@ union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public PtExtensionList? PtExtensionList
+        public DocumentFormat.OpenXml.Drawing.Diagrams.PtExtensionList? PtExtensionList
         {
-            get => GetElement<PtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.PtExtensionList>();
             set => SetElement(value);
         }
 
@@ -2630,7 +2630,7 @@ union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2817,7 +2817,7 @@ union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "cxn");
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
             builder.AddElement<Connection>()
 .AddAttribute(0, "modelId", a => a.ModelId, aBuilder =>
 {
@@ -2890,9 +2890,9 @@ union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -2908,7 +2908,7 @@ union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3127,7 +3127,7 @@ union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "constr");
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
             builder.AddElement<Constraint>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
@@ -3175,9 +3175,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -3193,7 +3193,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3348,7 +3348,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "rule");
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
             builder.AddElement<Rule>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
@@ -3380,9 +3380,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -3467,7 +3467,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Adjust &lt;dgm:adj></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Adjust" /> <c>&lt;dgm:adj></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3510,7 +3510,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "adjLst");
-            builder.AddChild<Adjust>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Adjust>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Adjust), 0, 0)
@@ -3636,8 +3636,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Parameter &lt;dgm:param></description></item>
-    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Parameter" /> <c>&lt;dgm:param></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3712,8 +3712,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "alg");
-            builder.AddChild<Parameter>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Parameter>();
             builder.AddElement<Algorithm>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
@@ -3740,8 +3740,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>AdjustList &lt;dgm:adjLst></description></item>
-    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.AdjustList" /> <c>&lt;dgm:adjLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3899,8 +3899,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "shape");
-            builder.AddChild<AdjustList>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.AdjustList>();
             builder.AddElement<Shape>()
 .AddAttribute(0, "rot", a => a.Rotation)
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
@@ -3932,9 +3932,9 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShape
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public AdjustList? AdjustList
+        public DocumentFormat.OpenXml.Drawing.Diagrams.AdjustList? AdjustList
         {
-            get => GetElement<AdjustList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.AdjustList>();
             set => SetElement(value);
         }
 
@@ -3945,9 +3945,9 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShape
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -3963,7 +3963,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShape
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4102,7 +4102,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShape
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "presOf");
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
             builder.AddElement<PresentationOf>()
 .AddAttribute(0, "axis", a => a.Axis)
 .AddAttribute(0, "ptType", a => a.PointType)
@@ -4123,9 +4123,9 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShape
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -4141,7 +4141,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShape
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Constraint &lt;dgm:constr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Constraint" /> <c>&lt;dgm:constr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4184,7 +4184,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShape
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "constrLst");
-            builder.AddChild<Constraint>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Constraint>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Constraint), 0, 0)
@@ -4203,7 +4203,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShape
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Rule &lt;dgm:rule></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Rule" /> <c>&lt;dgm:rule></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4246,7 +4246,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShape
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "ruleLst");
-            builder.AddChild<Rule>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Rule>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Rule), 0, 0)
@@ -4265,15 +4265,15 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShape
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OrganizationChart &lt;dgm:orgChart></description></item>
-    ///   <item><description>MaxNumberOfChildren &lt;dgm:chMax></description></item>
-    ///   <item><description>PreferredNumberOfChildren &lt;dgm:chPref></description></item>
-    ///   <item><description>BulletEnabled &lt;dgm:bulletEnabled></description></item>
-    ///   <item><description>Direction &lt;dgm:dir></description></item>
-    ///   <item><description>HierarchyBranch &lt;dgm:hierBranch></description></item>
-    ///   <item><description>AnimateOneByOne &lt;dgm:animOne></description></item>
-    ///   <item><description>AnimationLevel &lt;dgm:animLvl></description></item>
-    ///   <item><description>ResizeHandles &lt;dgm:resizeHandles></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevel" /> <c>&lt;dgm:animLvl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOne" /> <c>&lt;dgm:animOne></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.BulletEnabled" /> <c>&lt;dgm:bulletEnabled></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.MaxNumberOfChildren" /> <c>&lt;dgm:chMax></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.PreferredNumberOfChildren" /> <c>&lt;dgm:chPref></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Direction" /> <c>&lt;dgm:dir></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranch" /> <c>&lt;dgm:hierBranch></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.OrganizationChart" /> <c>&lt;dgm:orgChart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandles" /> <c>&lt;dgm:resizeHandles></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4342,15 +4342,15 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShape
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OrganizationChart &lt;dgm:orgChart></description></item>
-    ///   <item><description>MaxNumberOfChildren &lt;dgm:chMax></description></item>
-    ///   <item><description>PreferredNumberOfChildren &lt;dgm:chPref></description></item>
-    ///   <item><description>BulletEnabled &lt;dgm:bulletEnabled></description></item>
-    ///   <item><description>Direction &lt;dgm:dir></description></item>
-    ///   <item><description>HierarchyBranch &lt;dgm:hierBranch></description></item>
-    ///   <item><description>AnimateOneByOne &lt;dgm:animOne></description></item>
-    ///   <item><description>AnimationLevel &lt;dgm:animLvl></description></item>
-    ///   <item><description>ResizeHandles &lt;dgm:resizeHandles></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevel" /> <c>&lt;dgm:animLvl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOne" /> <c>&lt;dgm:animOne></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.BulletEnabled" /> <c>&lt;dgm:bulletEnabled></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.MaxNumberOfChildren" /> <c>&lt;dgm:chMax></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.PreferredNumberOfChildren" /> <c>&lt;dgm:chPref></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Direction" /> <c>&lt;dgm:dir></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranch" /> <c>&lt;dgm:hierBranch></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.OrganizationChart" /> <c>&lt;dgm:orgChart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandles" /> <c>&lt;dgm:resizeHandles></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4419,15 +4419,15 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShape
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OrganizationChart &lt;dgm:orgChart></description></item>
-    ///   <item><description>MaxNumberOfChildren &lt;dgm:chMax></description></item>
-    ///   <item><description>PreferredNumberOfChildren &lt;dgm:chPref></description></item>
-    ///   <item><description>BulletEnabled &lt;dgm:bulletEnabled></description></item>
-    ///   <item><description>Direction &lt;dgm:dir></description></item>
-    ///   <item><description>HierarchyBranch &lt;dgm:hierBranch></description></item>
-    ///   <item><description>AnimateOneByOne &lt;dgm:animOne></description></item>
-    ///   <item><description>AnimationLevel &lt;dgm:animLvl></description></item>
-    ///   <item><description>ResizeHandles &lt;dgm:resizeHandles></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevel" /> <c>&lt;dgm:animLvl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOne" /> <c>&lt;dgm:animOne></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.BulletEnabled" /> <c>&lt;dgm:bulletEnabled></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.MaxNumberOfChildren" /> <c>&lt;dgm:chMax></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.PreferredNumberOfChildren" /> <c>&lt;dgm:chPref></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Direction" /> <c>&lt;dgm:dir></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranch" /> <c>&lt;dgm:hierBranch></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.OrganizationChart" /> <c>&lt;dgm:orgChart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandles" /> <c>&lt;dgm:resizeHandles></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class LayoutVariablePropertySetType : OpenXmlCompositeElement
@@ -4466,15 +4466,15 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShape
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<OrganizationChart>();
-            builder.AddChild<MaxNumberOfChildren>();
-            builder.AddChild<PreferredNumberOfChildren>();
-            builder.AddChild<BulletEnabled>();
-            builder.AddChild<Direction>();
-            builder.AddChild<HierarchyBranch>();
-            builder.AddChild<AnimateOneByOne>();
-            builder.AddChild<AnimationLevel>();
-            builder.AddChild<ResizeHandles>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevel>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOne>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.BulletEnabled>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.MaxNumberOfChildren>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.PreferredNumberOfChildren>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Direction>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranch>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.OrganizationChart>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandles>();
         }
 
         /// <summary>
@@ -4484,9 +4484,9 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShape
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public OrganizationChart? OrganizationChart
+        public DocumentFormat.OpenXml.Drawing.Diagrams.OrganizationChart? OrganizationChart
         {
-            get => GetElement<OrganizationChart>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.OrganizationChart>();
             set => SetElement(value);
         }
 
@@ -4497,9 +4497,9 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShape
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public MaxNumberOfChildren? MaxNumberOfChildren
+        public DocumentFormat.OpenXml.Drawing.Diagrams.MaxNumberOfChildren? MaxNumberOfChildren
         {
-            get => GetElement<MaxNumberOfChildren>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.MaxNumberOfChildren>();
             set => SetElement(value);
         }
 
@@ -4510,9 +4510,9 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShape
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public PreferredNumberOfChildren? PreferredNumberOfChildren
+        public DocumentFormat.OpenXml.Drawing.Diagrams.PreferredNumberOfChildren? PreferredNumberOfChildren
         {
-            get => GetElement<PreferredNumberOfChildren>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.PreferredNumberOfChildren>();
             set => SetElement(value);
         }
 
@@ -4523,9 +4523,9 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShape
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public BulletEnabled? BulletEnabled
+        public DocumentFormat.OpenXml.Drawing.Diagrams.BulletEnabled? BulletEnabled
         {
-            get => GetElement<BulletEnabled>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.BulletEnabled>();
             set => SetElement(value);
         }
 
@@ -4536,9 +4536,9 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShape
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public Direction? Direction
+        public DocumentFormat.OpenXml.Drawing.Diagrams.Direction? Direction
         {
-            get => GetElement<Direction>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.Direction>();
             set => SetElement(value);
         }
 
@@ -4549,9 +4549,9 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShape
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public HierarchyBranch? HierarchyBranch
+        public DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranch? HierarchyBranch
         {
-            get => GetElement<HierarchyBranch>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranch>();
             set => SetElement(value);
         }
 
@@ -4562,9 +4562,9 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShape
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public AnimateOneByOne? AnimateOneByOne
+        public DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOne? AnimateOneByOne
         {
-            get => GetElement<AnimateOneByOne>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOne>();
             set => SetElement(value);
         }
 
@@ -4575,9 +4575,9 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShape
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public AnimationLevel? AnimationLevel
+        public DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevel? AnimationLevel
         {
-            get => GetElement<AnimationLevel>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevel>();
             set => SetElement(value);
         }
 
@@ -4588,9 +4588,9 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShape
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public ResizeHandles? ResizeHandles
+        public DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandles? ResizeHandles
         {
-            get => GetElement<ResizeHandles>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandles>();
             set => SetElement(value);
         }
     }
@@ -4603,15 +4603,15 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShape
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Algorithm &lt;dgm:alg></description></item>
-    ///   <item><description>Shape &lt;dgm:shape></description></item>
-    ///   <item><description>PresentationOf &lt;dgm:presOf></description></item>
-    ///   <item><description>Constraints &lt;dgm:constrLst></description></item>
-    ///   <item><description>RuleList &lt;dgm:ruleLst></description></item>
-    ///   <item><description>ForEach &lt;dgm:forEach></description></item>
-    ///   <item><description>LayoutNode &lt;dgm:layoutNode></description></item>
-    ///   <item><description>Choose &lt;dgm:choose></description></item>
-    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Algorithm" /> <c>&lt;dgm:alg></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Choose" /> <c>&lt;dgm:choose></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Constraints" /> <c>&lt;dgm:constrLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ForEach" /> <c>&lt;dgm:forEach></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.LayoutNode" /> <c>&lt;dgm:layoutNode></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.PresentationOf" /> <c>&lt;dgm:presOf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.RuleList" /> <c>&lt;dgm:ruleLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Shape" /> <c>&lt;dgm:shape></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4782,15 +4782,15 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShape
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "forEach");
-            builder.AddChild<Algorithm>();
-            builder.AddChild<Shape>();
-            builder.AddChild<PresentationOf>();
-            builder.AddChild<Constraints>();
-            builder.AddChild<RuleList>();
-            builder.AddChild<ForEach>();
-            builder.AddChild<LayoutNode>();
-            builder.AddChild<Choose>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Algorithm>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Choose>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Constraints>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ForEach>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.LayoutNode>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.PresentationOf>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.RuleList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Shape>();
             builder.AddElement<ForEach>()
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "ref", a => a.Reference)
@@ -4827,16 +4827,16 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShape
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Algorithm &lt;dgm:alg></description></item>
-    ///   <item><description>Shape &lt;dgm:shape></description></item>
-    ///   <item><description>PresentationOf &lt;dgm:presOf></description></item>
-    ///   <item><description>Constraints &lt;dgm:constrLst></description></item>
-    ///   <item><description>RuleList &lt;dgm:ruleLst></description></item>
-    ///   <item><description>VariableList &lt;dgm:varLst></description></item>
-    ///   <item><description>ForEach &lt;dgm:forEach></description></item>
-    ///   <item><description>LayoutNode &lt;dgm:layoutNode></description></item>
-    ///   <item><description>Choose &lt;dgm:choose></description></item>
-    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Algorithm" /> <c>&lt;dgm:alg></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Choose" /> <c>&lt;dgm:choose></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Constraints" /> <c>&lt;dgm:constrLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ForEach" /> <c>&lt;dgm:forEach></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.LayoutNode" /> <c>&lt;dgm:layoutNode></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.VariableList" /> <c>&lt;dgm:varLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.PresentationOf" /> <c>&lt;dgm:presOf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.RuleList" /> <c>&lt;dgm:ruleLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Shape" /> <c>&lt;dgm:shape></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4943,16 +4943,16 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShape
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "layoutNode");
-            builder.AddChild<Algorithm>();
-            builder.AddChild<Shape>();
-            builder.AddChild<PresentationOf>();
-            builder.AddChild<Constraints>();
-            builder.AddChild<RuleList>();
-            builder.AddChild<VariableList>();
-            builder.AddChild<ForEach>();
-            builder.AddChild<LayoutNode>();
-            builder.AddChild<Choose>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Algorithm>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Choose>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Constraints>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ForEach>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.LayoutNode>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.VariableList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.PresentationOf>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.RuleList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Shape>();
             builder.AddElement<LayoutNode>()
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "styleLbl", a => a.StyleLabel)
@@ -4989,8 +4989,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DiagramChooseIf &lt;dgm:if></description></item>
-    ///   <item><description>DiagramChooseElse &lt;dgm:else></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.DiagramChooseElse" /> <c>&lt;dgm:else></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.DiagramChooseIf" /> <c>&lt;dgm:if></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5049,8 +5049,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "choose");
-            builder.AddChild<DiagramChooseIf>();
-            builder.AddChild<DiagramChooseElse>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.DiagramChooseElse>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.DiagramChooseIf>();
             builder.AddElement<Choose>()
 .AddAttribute(0, "name", a => a.Name);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -5073,15 +5073,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Algorithm &lt;dgm:alg></description></item>
-    ///   <item><description>Shape &lt;dgm:shape></description></item>
-    ///   <item><description>PresentationOf &lt;dgm:presOf></description></item>
-    ///   <item><description>Constraints &lt;dgm:constrLst></description></item>
-    ///   <item><description>RuleList &lt;dgm:ruleLst></description></item>
-    ///   <item><description>ForEach &lt;dgm:forEach></description></item>
-    ///   <item><description>LayoutNode &lt;dgm:layoutNode></description></item>
-    ///   <item><description>Choose &lt;dgm:choose></description></item>
-    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Algorithm" /> <c>&lt;dgm:alg></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Choose" /> <c>&lt;dgm:choose></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Constraints" /> <c>&lt;dgm:constrLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ForEach" /> <c>&lt;dgm:forEach></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.LayoutNode" /> <c>&lt;dgm:layoutNode></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.PresentationOf" /> <c>&lt;dgm:presOf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.RuleList" /> <c>&lt;dgm:ruleLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Shape" /> <c>&lt;dgm:shape></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5300,15 +5300,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "if");
-            builder.AddChild<Algorithm>();
-            builder.AddChild<Shape>();
-            builder.AddChild<PresentationOf>();
-            builder.AddChild<Constraints>();
-            builder.AddChild<RuleList>();
-            builder.AddChild<ForEach>();
-            builder.AddChild<LayoutNode>();
-            builder.AddChild<Choose>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Algorithm>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Choose>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Constraints>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ForEach>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.LayoutNode>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.PresentationOf>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.RuleList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Shape>();
             builder.AddElement<DiagramChooseIf>()
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "axis", a => a.Axis)
@@ -5375,15 +5375,15 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandl
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Algorithm &lt;dgm:alg></description></item>
-    ///   <item><description>Shape &lt;dgm:shape></description></item>
-    ///   <item><description>PresentationOf &lt;dgm:presOf></description></item>
-    ///   <item><description>Constraints &lt;dgm:constrLst></description></item>
-    ///   <item><description>RuleList &lt;dgm:ruleLst></description></item>
-    ///   <item><description>ForEach &lt;dgm:forEach></description></item>
-    ///   <item><description>LayoutNode &lt;dgm:layoutNode></description></item>
-    ///   <item><description>Choose &lt;dgm:choose></description></item>
-    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Algorithm" /> <c>&lt;dgm:alg></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Choose" /> <c>&lt;dgm:choose></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Constraints" /> <c>&lt;dgm:constrLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ForEach" /> <c>&lt;dgm:forEach></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.LayoutNode" /> <c>&lt;dgm:layoutNode></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.PresentationOf" /> <c>&lt;dgm:presOf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.RuleList" /> <c>&lt;dgm:ruleLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Shape" /> <c>&lt;dgm:shape></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5442,15 +5442,15 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandl
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "else");
-            builder.AddChild<Algorithm>();
-            builder.AddChild<Shape>();
-            builder.AddChild<PresentationOf>();
-            builder.AddChild<Constraints>();
-            builder.AddChild<RuleList>();
-            builder.AddChild<ForEach>();
-            builder.AddChild<LayoutNode>();
-            builder.AddChild<Choose>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Algorithm>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Choose>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Constraints>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ForEach>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.LayoutNode>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.PresentationOf>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.RuleList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Shape>();
             builder.AddElement<DiagramChooseElse>()
 .AddAttribute(0, "name", a => a.Name);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
@@ -5480,11 +5480,11 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandl
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PointList &lt;dgm:ptLst></description></item>
-    ///   <item><description>ConnectionList &lt;dgm:cxnLst></description></item>
-    ///   <item><description>Background &lt;dgm:bg></description></item>
-    ///   <item><description>Whole &lt;dgm:whole></description></item>
-    ///   <item><description>DataModelExtensionList &lt;dgm:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Background" /> <c>&lt;dgm:bg></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.DataModelExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Whole" /> <c>&lt;dgm:whole></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionList" /> <c>&lt;dgm:cxnLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.PointList" /> <c>&lt;dgm:ptLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5527,11 +5527,11 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandl
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "dataModel");
-            builder.AddChild<PointList>();
-            builder.AddChild<ConnectionList>();
-            builder.AddChild<Background>();
-            builder.AddChild<Whole>();
-            builder.AddChild<DataModelExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Background>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.DataModelExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Whole>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.PointList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.PointList), 1, 1),
@@ -5549,9 +5549,9 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandl
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public PointList? PointList
+        public DocumentFormat.OpenXml.Drawing.Diagrams.PointList? PointList
         {
-            get => GetElement<PointList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.PointList>();
             set => SetElement(value);
         }
 
@@ -5562,9 +5562,9 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandl
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public ConnectionList? ConnectionList
+        public DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionList? ConnectionList
         {
-            get => GetElement<ConnectionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionList>();
             set => SetElement(value);
         }
 
@@ -5575,9 +5575,9 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandl
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public Background? Background
+        public DocumentFormat.OpenXml.Drawing.Diagrams.Background? Background
         {
-            get => GetElement<Background>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.Background>();
             set => SetElement(value);
         }
 
@@ -5588,9 +5588,9 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandl
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public Whole? Whole
+        public DocumentFormat.OpenXml.Drawing.Diagrams.Whole? Whole
         {
-            get => GetElement<Whole>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.Whole>();
             set => SetElement(value);
         }
 
@@ -5601,9 +5601,9 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandl
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public DataModelExtensionList? DataModelExtensionList
+        public DocumentFormat.OpenXml.Drawing.Diagrams.DataModelExtensionList? DataModelExtensionList
         {
-            get => GetElement<DataModelExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.DataModelExtensionList>();
             set => SetElement(value);
         }
 
@@ -5818,7 +5818,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandl
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Category &lt;dgm:cat></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Category" /> <c>&lt;dgm:cat></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5861,7 +5861,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandl
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "catLst");
-            builder.AddChild<Category>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Category>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Category), 0, 0)
@@ -5880,10 +5880,10 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandl
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.LineReference &lt;a:lnRef></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.FillReference &lt;a:fillRef></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectReference &lt;a:effectRef></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.FontReference &lt;a:fontRef></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.FontReference" /> <c>&lt;a:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.LineReference" /> <c>&lt;a:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.FillReference" /> <c>&lt;a:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectReference" /> <c>&lt;a:effectRef></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5926,10 +5926,10 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandl
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "style");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.FontReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.LineReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.FillReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.FontReference>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineReference), 1, 1),
@@ -6498,10 +6498,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Camera &lt;a:camera></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.LightRig &lt;a:lightRig></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Backdrop &lt;a:backdrop></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Backdrop" /> <c>&lt;a:backdrop></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Camera" /> <c>&lt;a:camera></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.LightRig" /> <c>&lt;a:lightRig></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6544,9 +6544,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "scene3d");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Backdrop>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Camera>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.LightRig>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Backdrop>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -6621,11 +6621,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BevelTop &lt;a:bevelT></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BevelBottom &lt;a:bevelB></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtrusionColor &lt;a:extrusionClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ContourColor &lt;a:contourClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BevelTop" /> <c>&lt;a:bevelT></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BevelBottom" /> <c>&lt;a:bevelB></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtrusionColor" /> <c>&lt;a:extrusionClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ContourColor" /> <c>&lt;a:contourClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6841,8 +6841,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Shape3DType &lt;a:sp3d></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.FlatText &lt;a:flatTx></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.FlatText" /> <c>&lt;a:flatTx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Shape3DType" /> <c>&lt;a:sp3d></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6885,8 +6885,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "txPr");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.FlatText>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -7068,7 +7068,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>StyleDisplayCategory &lt;dgm:cat></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.StyleDisplayCategory" /> <c>&lt;dgm:cat></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7111,7 +7111,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "catLst");
-            builder.AddChild<StyleDisplayCategory>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.StyleDisplayCategory>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleDisplayCategory), 0, 0)
@@ -7130,11 +7130,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Scene3D &lt;dgm:scene3d></description></item>
-    ///   <item><description>Shape3D &lt;dgm:sp3d></description></item>
-    ///   <item><description>TextProperties &lt;dgm:txPr></description></item>
-    ///   <item><description>Style &lt;dgm:style></description></item>
-    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Scene3D" /> <c>&lt;dgm:scene3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Shape3D" /> <c>&lt;dgm:sp3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Style" /> <c>&lt;dgm:style></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.TextProperties" /> <c>&lt;dgm:txPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7193,11 +7193,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "styleLbl");
-            builder.AddChild<Scene3D>();
-            builder.AddChild<Shape3D>();
-            builder.AddChild<TextProperties>();
-            builder.AddChild<Style>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Scene3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Shape3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Style>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.TextProperties>();
             builder.AddElement<StyleLabel>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -7220,9 +7220,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public Scene3D? Scene3D
+        public DocumentFormat.OpenXml.Drawing.Diagrams.Scene3D? Scene3D
         {
-            get => GetElement<Scene3D>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.Scene3D>();
             set => SetElement(value);
         }
 
@@ -7233,9 +7233,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public Shape3D? Shape3D
+        public DocumentFormat.OpenXml.Drawing.Diagrams.Shape3D? Shape3D
         {
-            get => GetElement<Shape3D>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.Shape3D>();
             set => SetElement(value);
         }
 
@@ -7246,9 +7246,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public TextProperties? TextProperties
+        public DocumentFormat.OpenXml.Drawing.Diagrams.TextProperties? TextProperties
         {
-            get => GetElement<TextProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.TextProperties>();
             set => SetElement(value);
         }
 
@@ -7259,9 +7259,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public Style? Style
+        public DocumentFormat.OpenXml.Drawing.Diagrams.Style? Style
         {
-            get => GetElement<Style>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.Style>();
             set => SetElement(value);
         }
 
@@ -7272,9 +7272,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -7290,7 +7290,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Point &lt;dgm:pt></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Point" /> <c>&lt;dgm:pt></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7333,7 +7333,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "ptLst");
-            builder.AddChild<Point>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Point>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Point), 0, 0)
@@ -7352,7 +7352,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Connection &lt;dgm:cxn></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Connection" /> <c>&lt;dgm:cxn></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7395,7 +7395,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "cxnLst");
-            builder.AddChild<Connection>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Connection>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Connection), 0, 0)
@@ -7414,14 +7414,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.NoFill &lt;a:noFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SolidFill &lt;a:solidFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GradientFill &lt;a:gradFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BlipFill &lt;a:blipFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PatternFill &lt;a:pattFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GroupFill &lt;a:grpFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectList &lt;a:effectLst></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectDag &lt;a:effectDag></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectDag" /> <c>&lt;a:effectDag></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectList" /> <c>&lt;a:effectLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GradientFill" /> <c>&lt;a:gradFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GroupFill" /> <c>&lt;a:grpFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoFill" /> <c>&lt;a:noFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7464,14 +7464,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "bg");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -7509,9 +7509,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Outline &lt;a:ln></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectList &lt;a:effectLst></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectDag &lt;a:effectDag></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectDag" /> <c>&lt;a:effectDag></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectList" /> <c>&lt;a:effectLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Outline" /> <c>&lt;a:ln></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7554,9 +7554,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "whole");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
@@ -7596,7 +7596,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.DataModelExtension &lt;a:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.DataModelExtension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7658,8 +7658,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PresentationLayoutVariables &lt;dgm:presLayoutVars></description></item>
-    ///   <item><description>Style &lt;dgm:style></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Style" /> <c>&lt;dgm:style></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.PresentationLayoutVariables" /> <c>&lt;dgm:presLayoutVars></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8150,8 +8150,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "prSet");
-            builder.AddChild<PresentationLayoutVariables>();
-            builder.AddChild<Style>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.Style>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.PresentationLayoutVariables>();
             builder.AddElement<PropertySet>()
 .AddAttribute(0, "presAssocID", a => a.PresentationElementId, aBuilder =>
 {
@@ -8202,9 +8202,9 @@ union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public PresentationLayoutVariables? PresentationLayoutVariables
+        public DocumentFormat.OpenXml.Drawing.Diagrams.PresentationLayoutVariables? PresentationLayoutVariables
         {
-            get => GetElement<PresentationLayoutVariables>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.PresentationLayoutVariables>();
             set => SetElement(value);
         }
 
@@ -8215,9 +8215,9 @@ union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public Style? Style
+        public DocumentFormat.OpenXml.Drawing.Diagrams.Style? Style
         {
-            get => GetElement<Style>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.Style>();
             set => SetElement(value);
         }
 
@@ -8233,21 +8233,21 @@ union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Transform2D &lt;a:xfrm></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.CustomGeometry &lt;a:custGeom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetGeometry &lt;a:prstGeom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.NoFill &lt;a:noFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SolidFill &lt;a:solidFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GradientFill &lt;a:gradFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BlipFill &lt;a:blipFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PatternFill &lt;a:pattFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GroupFill &lt;a:grpFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Outline &lt;a:ln></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectList &lt;a:effectLst></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectDag &lt;a:effectDag></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Scene3DType &lt;a:scene3d></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Shape3DType &lt;a:sp3d></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.CustomGeometry" /> <c>&lt;a:custGeom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectDag" /> <c>&lt;a:effectDag></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectList" /> <c>&lt;a:effectLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GradientFill" /> <c>&lt;a:gradFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GroupFill" /> <c>&lt;a:grpFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Outline" /> <c>&lt;a:ln></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoFill" /> <c>&lt;a:noFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetGeometry" /> <c>&lt;a:prstGeom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Scene3DType" /> <c>&lt;a:scene3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Shape3DType" /> <c>&lt;a:sp3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8306,21 +8306,21 @@ union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "spPr");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddElement<ShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
@@ -8389,9 +8389,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BodyProperties &lt;a:bodyPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ListStyle &lt;a:lstStyle></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Paragraph &lt;a:p></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BodyProperties" /> <c>&lt;a:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ListStyle" /> <c>&lt;a:lstStyle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8483,7 +8483,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PtExtension &lt;a:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PtExtension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8545,8 +8545,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfoList &lt;dgm1611:autoBuNodeInfoLst></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2019.Drawing.Diagram12.TextListStyleType &lt;dgm1612:lstStyle></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Diagram12.TextListStyleType" /> <c>&lt;dgm1612:lstStyle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfoList" /> <c>&lt;dgm1611:autoBuNodeInfoLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8605,8 +8605,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfoList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Diagram12.TextListStyleType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfoList>();
             builder.AddElement<DiagramDefinitionExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -8633,7 +8633,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DataModel &lt;dgm:dataModel></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.DataModel" /> <c>&lt;dgm:dataModel></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8694,7 +8694,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DataModel &lt;dgm:dataModel></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.DataModel" /> <c>&lt;dgm:dataModel></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8755,7 +8755,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DataModel &lt;dgm:dataModel></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.DataModel" /> <c>&lt;dgm:dataModel></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8816,7 +8816,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DataModel &lt;dgm:dataModel></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.DataModel" /> <c>&lt;dgm:dataModel></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class SampleDataType : OpenXmlCompositeElement
@@ -8871,7 +8871,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DataModel>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.DataModel>();
             builder.AddElement<SampleDataType>()
 .AddAttribute(0, "useDef", a => a.UseDefault);
         }
@@ -8883,9 +8883,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
         /// </remark>
-        public DataModel? DataModel
+        public DocumentFormat.OpenXml.Drawing.Diagrams.DataModel? DataModel
         {
-            get => GetElement<DataModel>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.DataModel>();
             set => SetElement(value);
         }
     }
@@ -8898,7 +8898,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DiagramDefinitionExtension &lt;dgm:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.DiagramDefinitionExtension" /> <c>&lt;dgm:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8941,7 +8941,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "extLst");
-            builder.AddChild<DiagramDefinitionExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.DiagramDefinitionExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DiagramDefinitionExtension), 0, 0)

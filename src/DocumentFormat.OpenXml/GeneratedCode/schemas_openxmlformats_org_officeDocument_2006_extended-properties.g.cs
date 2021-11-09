@@ -23,33 +23,33 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Template &lt;ap:Template></description></item>
-    ///   <item><description>Manager &lt;ap:Manager></description></item>
-    ///   <item><description>Company &lt;ap:Company></description></item>
-    ///   <item><description>Pages &lt;ap:Pages></description></item>
-    ///   <item><description>Words &lt;ap:Words></description></item>
-    ///   <item><description>Characters &lt;ap:Characters></description></item>
-    ///   <item><description>PresentationFormat &lt;ap:PresentationFormat></description></item>
-    ///   <item><description>Lines &lt;ap:Lines></description></item>
-    ///   <item><description>Paragraphs &lt;ap:Paragraphs></description></item>
-    ///   <item><description>Slides &lt;ap:Slides></description></item>
-    ///   <item><description>Notes &lt;ap:Notes></description></item>
-    ///   <item><description>TotalTime &lt;ap:TotalTime></description></item>
-    ///   <item><description>HiddenSlides &lt;ap:HiddenSlides></description></item>
-    ///   <item><description>MultimediaClips &lt;ap:MMClips></description></item>
-    ///   <item><description>ScaleCrop &lt;ap:ScaleCrop></description></item>
-    ///   <item><description>HeadingPairs &lt;ap:HeadingPairs></description></item>
-    ///   <item><description>TitlesOfParts &lt;ap:TitlesOfParts></description></item>
-    ///   <item><description>LinksUpToDate &lt;ap:LinksUpToDate></description></item>
-    ///   <item><description>CharactersWithSpaces &lt;ap:CharactersWithSpaces></description></item>
-    ///   <item><description>SharedDocument &lt;ap:SharedDoc></description></item>
-    ///   <item><description>HyperlinkBase &lt;ap:HyperlinkBase></description></item>
-    ///   <item><description>HyperlinkList &lt;ap:HLinks></description></item>
-    ///   <item><description>HyperlinksChanged &lt;ap:HyperlinksChanged></description></item>
-    ///   <item><description>DigitalSignature &lt;ap:DigSig></description></item>
-    ///   <item><description>Application &lt;ap:Application></description></item>
-    ///   <item><description>ApplicationVersion &lt;ap:AppVersion></description></item>
-    ///   <item><description>DocumentSecurity &lt;ap:DocSecurity></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.DigitalSignature" /> <c>&lt;ap:DigSig></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts" /> <c>&lt;ap:TitlesOfParts></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.HeadingPairs" /> <c>&lt;ap:HeadingPairs></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.HyperlinkList" /> <c>&lt;ap:HLinks></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.ScaleCrop" /> <c>&lt;ap:ScaleCrop></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.LinksUpToDate" /> <c>&lt;ap:LinksUpToDate></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.SharedDocument" /> <c>&lt;ap:SharedDoc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.HyperlinksChanged" /> <c>&lt;ap:HyperlinksChanged></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.Pages" /> <c>&lt;ap:Pages></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.Words" /> <c>&lt;ap:Words></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.Characters" /> <c>&lt;ap:Characters></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.Lines" /> <c>&lt;ap:Lines></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.Paragraphs" /> <c>&lt;ap:Paragraphs></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.Slides" /> <c>&lt;ap:Slides></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.Notes" /> <c>&lt;ap:Notes></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.TotalTime" /> <c>&lt;ap:TotalTime></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.HiddenSlides" /> <c>&lt;ap:HiddenSlides></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.MultimediaClips" /> <c>&lt;ap:MMClips></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.CharactersWithSpaces" /> <c>&lt;ap:CharactersWithSpaces></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.DocumentSecurity" /> <c>&lt;ap:DocSecurity></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.Template" /> <c>&lt;ap:Template></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.Manager" /> <c>&lt;ap:Manager></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.Company" /> <c>&lt;ap:Company></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.PresentationFormat" /> <c>&lt;ap:PresentationFormat></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.HyperlinkBase" /> <c>&lt;ap:HyperlinkBase></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.Application" /> <c>&lt;ap:Application></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.ApplicationVersion" /> <c>&lt;ap:AppVersion></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -92,33 +92,33 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(3, "Properties");
-            builder.AddChild<Template>();
-            builder.AddChild<Manager>();
-            builder.AddChild<Company>();
-            builder.AddChild<Pages>();
-            builder.AddChild<Words>();
-            builder.AddChild<Characters>();
-            builder.AddChild<PresentationFormat>();
-            builder.AddChild<Lines>();
-            builder.AddChild<Paragraphs>();
-            builder.AddChild<Slides>();
-            builder.AddChild<Notes>();
-            builder.AddChild<TotalTime>();
-            builder.AddChild<HiddenSlides>();
-            builder.AddChild<MultimediaClips>();
-            builder.AddChild<ScaleCrop>();
-            builder.AddChild<HeadingPairs>();
-            builder.AddChild<TitlesOfParts>();
-            builder.AddChild<LinksUpToDate>();
-            builder.AddChild<CharactersWithSpaces>();
-            builder.AddChild<SharedDocument>();
-            builder.AddChild<HyperlinkBase>();
-            builder.AddChild<HyperlinkList>();
-            builder.AddChild<HyperlinksChanged>();
-            builder.AddChild<DigitalSignature>();
-            builder.AddChild<Application>();
-            builder.AddChild<ApplicationVersion>();
-            builder.AddChild<DocumentSecurity>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.DigitalSignature>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.HeadingPairs>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.HyperlinkList>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.ScaleCrop>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.LinksUpToDate>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.SharedDocument>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.HyperlinksChanged>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Pages>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Words>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Characters>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Lines>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Paragraphs>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Slides>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Notes>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.TotalTime>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.HiddenSlides>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.MultimediaClips>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.CharactersWithSpaces>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.DocumentSecurity>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Template>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Manager>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Company>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.PresentationFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.HyperlinkBase>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Application>();
+            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.ApplicationVersion>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.All, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.Template), 0, 1),
@@ -158,9 +158,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public Template? Template
+        public DocumentFormat.OpenXml.ExtendedProperties.Template? Template
         {
-            get => GetElement<Template>();
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Template>();
             set => SetElement(value);
         }
 
@@ -171,9 +171,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public Manager? Manager
+        public DocumentFormat.OpenXml.ExtendedProperties.Manager? Manager
         {
-            get => GetElement<Manager>();
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Manager>();
             set => SetElement(value);
         }
 
@@ -184,9 +184,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public Company? Company
+        public DocumentFormat.OpenXml.ExtendedProperties.Company? Company
         {
-            get => GetElement<Company>();
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Company>();
             set => SetElement(value);
         }
 
@@ -197,9 +197,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public Pages? Pages
+        public DocumentFormat.OpenXml.ExtendedProperties.Pages? Pages
         {
-            get => GetElement<Pages>();
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Pages>();
             set => SetElement(value);
         }
 
@@ -210,9 +210,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public Words? Words
+        public DocumentFormat.OpenXml.ExtendedProperties.Words? Words
         {
-            get => GetElement<Words>();
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Words>();
             set => SetElement(value);
         }
 
@@ -223,9 +223,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public Characters? Characters
+        public DocumentFormat.OpenXml.ExtendedProperties.Characters? Characters
         {
-            get => GetElement<Characters>();
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Characters>();
             set => SetElement(value);
         }
 
@@ -236,9 +236,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public PresentationFormat? PresentationFormat
+        public DocumentFormat.OpenXml.ExtendedProperties.PresentationFormat? PresentationFormat
         {
-            get => GetElement<PresentationFormat>();
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.PresentationFormat>();
             set => SetElement(value);
         }
 
@@ -249,9 +249,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public Lines? Lines
+        public DocumentFormat.OpenXml.ExtendedProperties.Lines? Lines
         {
-            get => GetElement<Lines>();
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Lines>();
             set => SetElement(value);
         }
 
@@ -262,9 +262,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public Paragraphs? Paragraphs
+        public DocumentFormat.OpenXml.ExtendedProperties.Paragraphs? Paragraphs
         {
-            get => GetElement<Paragraphs>();
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Paragraphs>();
             set => SetElement(value);
         }
 
@@ -275,9 +275,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public Slides? Slides
+        public DocumentFormat.OpenXml.ExtendedProperties.Slides? Slides
         {
-            get => GetElement<Slides>();
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Slides>();
             set => SetElement(value);
         }
 
@@ -288,9 +288,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public Notes? Notes
+        public DocumentFormat.OpenXml.ExtendedProperties.Notes? Notes
         {
-            get => GetElement<Notes>();
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Notes>();
             set => SetElement(value);
         }
 
@@ -301,9 +301,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public TotalTime? TotalTime
+        public DocumentFormat.OpenXml.ExtendedProperties.TotalTime? TotalTime
         {
-            get => GetElement<TotalTime>();
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.TotalTime>();
             set => SetElement(value);
         }
 
@@ -314,9 +314,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public HiddenSlides? HiddenSlides
+        public DocumentFormat.OpenXml.ExtendedProperties.HiddenSlides? HiddenSlides
         {
-            get => GetElement<HiddenSlides>();
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.HiddenSlides>();
             set => SetElement(value);
         }
 
@@ -327,9 +327,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public MultimediaClips? MultimediaClips
+        public DocumentFormat.OpenXml.ExtendedProperties.MultimediaClips? MultimediaClips
         {
-            get => GetElement<MultimediaClips>();
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.MultimediaClips>();
             set => SetElement(value);
         }
 
@@ -340,9 +340,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public ScaleCrop? ScaleCrop
+        public DocumentFormat.OpenXml.ExtendedProperties.ScaleCrop? ScaleCrop
         {
-            get => GetElement<ScaleCrop>();
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.ScaleCrop>();
             set => SetElement(value);
         }
 
@@ -353,9 +353,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public HeadingPairs? HeadingPairs
+        public DocumentFormat.OpenXml.ExtendedProperties.HeadingPairs? HeadingPairs
         {
-            get => GetElement<HeadingPairs>();
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.HeadingPairs>();
             set => SetElement(value);
         }
 
@@ -366,9 +366,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public TitlesOfParts? TitlesOfParts
+        public DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts? TitlesOfParts
         {
-            get => GetElement<TitlesOfParts>();
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts>();
             set => SetElement(value);
         }
 
@@ -379,9 +379,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public LinksUpToDate? LinksUpToDate
+        public DocumentFormat.OpenXml.ExtendedProperties.LinksUpToDate? LinksUpToDate
         {
-            get => GetElement<LinksUpToDate>();
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.LinksUpToDate>();
             set => SetElement(value);
         }
 
@@ -392,9 +392,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public CharactersWithSpaces? CharactersWithSpaces
+        public DocumentFormat.OpenXml.ExtendedProperties.CharactersWithSpaces? CharactersWithSpaces
         {
-            get => GetElement<CharactersWithSpaces>();
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.CharactersWithSpaces>();
             set => SetElement(value);
         }
 
@@ -405,9 +405,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public SharedDocument? SharedDocument
+        public DocumentFormat.OpenXml.ExtendedProperties.SharedDocument? SharedDocument
         {
-            get => GetElement<SharedDocument>();
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.SharedDocument>();
             set => SetElement(value);
         }
 
@@ -418,9 +418,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public HyperlinkBase? HyperlinkBase
+        public DocumentFormat.OpenXml.ExtendedProperties.HyperlinkBase? HyperlinkBase
         {
-            get => GetElement<HyperlinkBase>();
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.HyperlinkBase>();
             set => SetElement(value);
         }
 
@@ -431,9 +431,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public HyperlinkList? HyperlinkList
+        public DocumentFormat.OpenXml.ExtendedProperties.HyperlinkList? HyperlinkList
         {
-            get => GetElement<HyperlinkList>();
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.HyperlinkList>();
             set => SetElement(value);
         }
 
@@ -444,9 +444,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public HyperlinksChanged? HyperlinksChanged
+        public DocumentFormat.OpenXml.ExtendedProperties.HyperlinksChanged? HyperlinksChanged
         {
-            get => GetElement<HyperlinksChanged>();
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.HyperlinksChanged>();
             set => SetElement(value);
         }
 
@@ -457,9 +457,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public DigitalSignature? DigitalSignature
+        public DocumentFormat.OpenXml.ExtendedProperties.DigitalSignature? DigitalSignature
         {
-            get => GetElement<DigitalSignature>();
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.DigitalSignature>();
             set => SetElement(value);
         }
 
@@ -470,9 +470,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public Application? Application
+        public DocumentFormat.OpenXml.ExtendedProperties.Application? Application
         {
-            get => GetElement<Application>();
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Application>();
             set => SetElement(value);
         }
 
@@ -483,9 +483,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public ApplicationVersion? ApplicationVersion
+        public DocumentFormat.OpenXml.ExtendedProperties.ApplicationVersion? ApplicationVersion
         {
-            get => GetElement<ApplicationVersion>();
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.ApplicationVersion>();
             set => SetElement(value);
         }
 
@@ -496,9 +496,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public DocumentSecurity? DocumentSecurity
+        public DocumentFormat.OpenXml.ExtendedProperties.DocumentSecurity? DocumentSecurity
         {
-            get => GetElement<DocumentSecurity>();
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.DocumentSecurity>();
             set => SetElement(value);
         }
 
@@ -1481,7 +1481,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.VariantTypes.VTVector &lt;vt:vector></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTVector" /> <c>&lt;vt:vector></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1542,7 +1542,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.VariantTypes.VTVector &lt;vt:vector></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTVector" /> <c>&lt;vt:vector></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1603,7 +1603,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.VariantTypes.VTVector &lt;vt:vector></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTVector" /> <c>&lt;vt:vector></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class VectorVariantType : OpenXmlCompositeElement
@@ -1667,7 +1667,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.VariantTypes.VTVector &lt;vt:vector></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTVector" /> <c>&lt;vt:vector></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1742,7 +1742,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.VariantTypes.VTBlob &lt;vt:blob></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTBlob" /> <c>&lt;vt:blob></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete

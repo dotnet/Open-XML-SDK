@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Source &lt;b:Source></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Source" /> <c>&lt;b:Source></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -113,7 +113,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Sources");
-            builder.AddChild<Source>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Source>();
             builder.AddElement<Sources>()
 .AddAttribute(0, "SelectedStyle", a => a.SelectedStyle, aBuilder =>
 {
@@ -145,9 +145,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Last &lt;b:Last></description></item>
-    ///   <item><description>First &lt;b:First></description></item>
-    ///   <item><description>Middle &lt;b:Middle></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Last" /> <c>&lt;b:Last></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.First" /> <c>&lt;b:First></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Middle" /> <c>&lt;b:Middle></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -190,9 +190,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Person");
-            builder.AddChild<Last>();
-            builder.AddChild<First>();
-            builder.AddChild<Middle>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Last>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.First>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Middle>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Last), 0, 0),
@@ -2427,7 +2427,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Person &lt;b:Person></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Person" /> <c>&lt;b:Person></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2470,7 +2470,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "NameList");
-            builder.AddChild<Person>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Person>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Person), 1, 0)
@@ -2489,7 +2489,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2550,7 +2550,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2611,7 +2611,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2672,7 +2672,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2733,7 +2733,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2794,7 +2794,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2855,7 +2855,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2916,7 +2916,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2977,7 +2977,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3038,7 +3038,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3099,7 +3099,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3160,7 +3160,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3221,7 +3221,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3282,7 +3282,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3343,7 +3343,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class NameType : OpenXmlCompositeElement
@@ -3382,7 +3382,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<NameList>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.NameList>();
         }
 
         /// <summary>
@@ -3392,9 +3392,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public NameList? NameList
+        public DocumentFormat.OpenXml.Bibliography.NameList? NameList
         {
-            get => GetElement<NameList>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.NameList>();
             set => SetElement(value);
         }
     }
@@ -3407,8 +3407,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
-    ///   <item><description>Corporate &lt;b:Corporate></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Corporate" /> <c>&lt;b:Corporate></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3473,8 +3473,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
-    ///   <item><description>Corporate &lt;b:Corporate></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Corporate" /> <c>&lt;b:Corporate></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3539,8 +3539,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NameList &lt;b:NameList></description></item>
-    ///   <item><description>Corporate &lt;b:Corporate></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Corporate" /> <c>&lt;b:Corporate></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class NameOrCorporateType : OpenXmlCompositeElement
@@ -3579,8 +3579,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<NameList>();
-            builder.AddChild<Corporate>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.NameList>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Corporate>();
         }
 
         /// <summary>
@@ -3590,9 +3590,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public NameList? NameList
+        public DocumentFormat.OpenXml.Bibliography.NameList? NameList
         {
-            get => GetElement<NameList>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.NameList>();
             set => SetElement(value);
         }
 
@@ -3603,9 +3603,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Corporate? Corporate
+        public DocumentFormat.OpenXml.Bibliography.Corporate? Corporate
         {
-            get => GetElement<Corporate>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Corporate>();
             set => SetElement(value);
         }
     }
@@ -3618,22 +3618,22 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Artist &lt;b:Artist></description></item>
-    ///   <item><description>Author &lt;b:Author></description></item>
-    ///   <item><description>BookAuthor &lt;b:BookAuthor></description></item>
-    ///   <item><description>Compiler &lt;b:Compiler></description></item>
-    ///   <item><description>Composer &lt;b:Composer></description></item>
-    ///   <item><description>Conductor &lt;b:Conductor></description></item>
-    ///   <item><description>Counsel &lt;b:Counsel></description></item>
-    ///   <item><description>Director &lt;b:Director></description></item>
-    ///   <item><description>Editor &lt;b:Editor></description></item>
-    ///   <item><description>Interviewee &lt;b:Interviewee></description></item>
-    ///   <item><description>Interviewer &lt;b:Interviewer></description></item>
-    ///   <item><description>Inventor &lt;b:Inventor></description></item>
-    ///   <item><description>Performer &lt;b:Performer></description></item>
-    ///   <item><description>ProducerName &lt;b:ProducerName></description></item>
-    ///   <item><description>Translator &lt;b:Translator></description></item>
-    ///   <item><description>Writer &lt;b:Writer></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Author" /> <c>&lt;b:Author></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Performer" /> <c>&lt;b:Performer></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Artist" /> <c>&lt;b:Artist></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.BookAuthor" /> <c>&lt;b:BookAuthor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Compiler" /> <c>&lt;b:Compiler></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Composer" /> <c>&lt;b:Composer></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Conductor" /> <c>&lt;b:Conductor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Counsel" /> <c>&lt;b:Counsel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Director" /> <c>&lt;b:Director></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Editor" /> <c>&lt;b:Editor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Interviewee" /> <c>&lt;b:Interviewee></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Interviewer" /> <c>&lt;b:Interviewer></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Inventor" /> <c>&lt;b:Inventor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.ProducerName" /> <c>&lt;b:ProducerName></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Translator" /> <c>&lt;b:Translator></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Writer" /> <c>&lt;b:Writer></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3676,22 +3676,22 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Author");
-            builder.AddChild<Artist>();
-            builder.AddChild<Author>();
-            builder.AddChild<BookAuthor>();
-            builder.AddChild<Compiler>();
-            builder.AddChild<Composer>();
-            builder.AddChild<Conductor>();
-            builder.AddChild<Counsel>();
-            builder.AddChild<Director>();
-            builder.AddChild<Editor>();
-            builder.AddChild<Interviewee>();
-            builder.AddChild<Interviewer>();
-            builder.AddChild<Inventor>();
-            builder.AddChild<Performer>();
-            builder.AddChild<ProducerName>();
-            builder.AddChild<Translator>();
-            builder.AddChild<Writer>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Author>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Performer>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Artist>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.BookAuthor>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Compiler>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Composer>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Conductor>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Counsel>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Director>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Editor>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Interviewee>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Interviewer>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Inventor>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.ProducerName>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Translator>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Writer>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
@@ -3723,9 +3723,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Artist? Artist
+        public DocumentFormat.OpenXml.Bibliography.Artist? Artist
         {
-            get => GetElement<Artist>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Artist>();
             set => SetElement(value);
         }
 
@@ -3736,9 +3736,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Author? Author
+        public DocumentFormat.OpenXml.Bibliography.Author? Author
         {
-            get => GetElement<Author>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Author>();
             set => SetElement(value);
         }
 
@@ -3749,9 +3749,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public BookAuthor? BookAuthor
+        public DocumentFormat.OpenXml.Bibliography.BookAuthor? BookAuthor
         {
-            get => GetElement<BookAuthor>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.BookAuthor>();
             set => SetElement(value);
         }
 
@@ -3762,9 +3762,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Compiler? Compiler
+        public DocumentFormat.OpenXml.Bibliography.Compiler? Compiler
         {
-            get => GetElement<Compiler>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Compiler>();
             set => SetElement(value);
         }
 
@@ -3775,9 +3775,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Composer? Composer
+        public DocumentFormat.OpenXml.Bibliography.Composer? Composer
         {
-            get => GetElement<Composer>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Composer>();
             set => SetElement(value);
         }
 
@@ -3788,9 +3788,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Conductor? Conductor
+        public DocumentFormat.OpenXml.Bibliography.Conductor? Conductor
         {
-            get => GetElement<Conductor>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Conductor>();
             set => SetElement(value);
         }
 
@@ -3801,9 +3801,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Counsel? Counsel
+        public DocumentFormat.OpenXml.Bibliography.Counsel? Counsel
         {
-            get => GetElement<Counsel>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Counsel>();
             set => SetElement(value);
         }
 
@@ -3814,9 +3814,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Director? Director
+        public DocumentFormat.OpenXml.Bibliography.Director? Director
         {
-            get => GetElement<Director>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Director>();
             set => SetElement(value);
         }
 
@@ -3827,9 +3827,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Editor? Editor
+        public DocumentFormat.OpenXml.Bibliography.Editor? Editor
         {
-            get => GetElement<Editor>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Editor>();
             set => SetElement(value);
         }
 
@@ -3840,9 +3840,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Interviewee? Interviewee
+        public DocumentFormat.OpenXml.Bibliography.Interviewee? Interviewee
         {
-            get => GetElement<Interviewee>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Interviewee>();
             set => SetElement(value);
         }
 
@@ -3853,9 +3853,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Interviewer? Interviewer
+        public DocumentFormat.OpenXml.Bibliography.Interviewer? Interviewer
         {
-            get => GetElement<Interviewer>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Interviewer>();
             set => SetElement(value);
         }
 
@@ -3866,9 +3866,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Inventor? Inventor
+        public DocumentFormat.OpenXml.Bibliography.Inventor? Inventor
         {
-            get => GetElement<Inventor>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Inventor>();
             set => SetElement(value);
         }
 
@@ -3879,9 +3879,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Performer? Performer
+        public DocumentFormat.OpenXml.Bibliography.Performer? Performer
         {
-            get => GetElement<Performer>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Performer>();
             set => SetElement(value);
         }
 
@@ -3892,9 +3892,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public ProducerName? ProducerName
+        public DocumentFormat.OpenXml.Bibliography.ProducerName? ProducerName
         {
-            get => GetElement<ProducerName>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.ProducerName>();
             set => SetElement(value);
         }
 
@@ -3905,9 +3905,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Translator? Translator
+        public DocumentFormat.OpenXml.Bibliography.Translator? Translator
         {
-            get => GetElement<Translator>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Translator>();
             set => SetElement(value);
         }
 
@@ -3918,9 +3918,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Writer? Writer
+        public DocumentFormat.OpenXml.Bibliography.Writer? Writer
         {
-            get => GetElement<Writer>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Writer>();
             set => SetElement(value);
         }
 
@@ -3977,58 +3977,58 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>AbbreviatedCaseNumber &lt;b:AbbreviatedCaseNumber></description></item>
-    ///   <item><description>AlbumTitle &lt;b:AlbumTitle></description></item>
-    ///   <item><description>AuthorList &lt;b:Author></description></item>
-    ///   <item><description>BookTitle &lt;b:BookTitle></description></item>
-    ///   <item><description>Broadcaster &lt;b:Broadcaster></description></item>
-    ///   <item><description>BroadcastTitle &lt;b:BroadcastTitle></description></item>
-    ///   <item><description>CaseNumber &lt;b:CaseNumber></description></item>
-    ///   <item><description>ChapterNumber &lt;b:ChapterNumber></description></item>
-    ///   <item><description>City &lt;b:City></description></item>
-    ///   <item><description>Comments &lt;b:Comments></description></item>
-    ///   <item><description>ConferenceName &lt;b:ConferenceName></description></item>
-    ///   <item><description>CountryRegion &lt;b:CountryRegion></description></item>
-    ///   <item><description>Court &lt;b:Court></description></item>
-    ///   <item><description>Day &lt;b:Day></description></item>
-    ///   <item><description>DayAccessed &lt;b:DayAccessed></description></item>
-    ///   <item><description>Department &lt;b:Department></description></item>
-    ///   <item><description>Distributor &lt;b:Distributor></description></item>
-    ///   <item><description>Edition &lt;b:Edition></description></item>
-    ///   <item><description>GuidString &lt;b:Guid></description></item>
-    ///   <item><description>Institution &lt;b:Institution></description></item>
-    ///   <item><description>InternetSiteTitle &lt;b:InternetSiteTitle></description></item>
-    ///   <item><description>Issue &lt;b:Issue></description></item>
-    ///   <item><description>JournalName &lt;b:JournalName></description></item>
-    ///   <item><description>LcId &lt;b:LCID></description></item>
-    ///   <item><description>Medium &lt;b:Medium></description></item>
-    ///   <item><description>Month &lt;b:Month></description></item>
-    ///   <item><description>MonthAccessed &lt;b:MonthAccessed></description></item>
-    ///   <item><description>NumberVolumes &lt;b:NumberVolumes></description></item>
-    ///   <item><description>Pages &lt;b:Pages></description></item>
-    ///   <item><description>PatentNumber &lt;b:PatentNumber></description></item>
-    ///   <item><description>PeriodicalTitle &lt;b:PeriodicalTitle></description></item>
-    ///   <item><description>ProductionCompany &lt;b:ProductionCompany></description></item>
-    ///   <item><description>PublicationTitle &lt;b:PublicationTitle></description></item>
-    ///   <item><description>Publisher &lt;b:Publisher></description></item>
-    ///   <item><description>RecordingNumber &lt;b:RecordingNumber></description></item>
-    ///   <item><description>ReferenceOrder &lt;b:RefOrder></description></item>
-    ///   <item><description>Reporter &lt;b:Reporter></description></item>
-    ///   <item><description>SourceType &lt;b:SourceType></description></item>
-    ///   <item><description>ShortTitle &lt;b:ShortTitle></description></item>
-    ///   <item><description>StandardNumber &lt;b:StandardNumber></description></item>
-    ///   <item><description>StateProvince &lt;b:StateProvince></description></item>
-    ///   <item><description>Station &lt;b:Station></description></item>
-    ///   <item><description>Tag &lt;b:Tag></description></item>
-    ///   <item><description>Theater &lt;b:Theater></description></item>
-    ///   <item><description>ThesisType &lt;b:ThesisType></description></item>
-    ///   <item><description>Title &lt;b:Title></description></item>
-    ///   <item><description>PatentType &lt;b:Type></description></item>
-    ///   <item><description>UrlString &lt;b:URL></description></item>
-    ///   <item><description>Version &lt;b:Version></description></item>
-    ///   <item><description>Volume &lt;b:Volume></description></item>
-    ///   <item><description>Year &lt;b:Year></description></item>
-    ///   <item><description>YearAccessed &lt;b:YearAccessed></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.AuthorList" /> <c>&lt;b:Author></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.SourceType" /> <c>&lt;b:SourceType></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber" /> <c>&lt;b:AbbreviatedCaseNumber></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.AlbumTitle" /> <c>&lt;b:AlbumTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.BookTitle" /> <c>&lt;b:BookTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Broadcaster" /> <c>&lt;b:Broadcaster></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.BroadcastTitle" /> <c>&lt;b:BroadcastTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.CaseNumber" /> <c>&lt;b:CaseNumber></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.ChapterNumber" /> <c>&lt;b:ChapterNumber></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.City" /> <c>&lt;b:City></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Comments" /> <c>&lt;b:Comments></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.ConferenceName" /> <c>&lt;b:ConferenceName></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.CountryRegion" /> <c>&lt;b:CountryRegion></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Court" /> <c>&lt;b:Court></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Day" /> <c>&lt;b:Day></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.DayAccessed" /> <c>&lt;b:DayAccessed></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Department" /> <c>&lt;b:Department></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Distributor" /> <c>&lt;b:Distributor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Edition" /> <c>&lt;b:Edition></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.GuidString" /> <c>&lt;b:Guid></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Institution" /> <c>&lt;b:Institution></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.InternetSiteTitle" /> <c>&lt;b:InternetSiteTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Issue" /> <c>&lt;b:Issue></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.JournalName" /> <c>&lt;b:JournalName></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.LcId" /> <c>&lt;b:LCID></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Medium" /> <c>&lt;b:Medium></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Month" /> <c>&lt;b:Month></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.MonthAccessed" /> <c>&lt;b:MonthAccessed></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NumberVolumes" /> <c>&lt;b:NumberVolumes></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Pages" /> <c>&lt;b:Pages></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.PatentNumber" /> <c>&lt;b:PatentNumber></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.PeriodicalTitle" /> <c>&lt;b:PeriodicalTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.ProductionCompany" /> <c>&lt;b:ProductionCompany></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.PublicationTitle" /> <c>&lt;b:PublicationTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Publisher" /> <c>&lt;b:Publisher></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.RecordingNumber" /> <c>&lt;b:RecordingNumber></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.ReferenceOrder" /> <c>&lt;b:RefOrder></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Reporter" /> <c>&lt;b:Reporter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.ShortTitle" /> <c>&lt;b:ShortTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.StandardNumber" /> <c>&lt;b:StandardNumber></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.StateProvince" /> <c>&lt;b:StateProvince></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Station" /> <c>&lt;b:Station></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Tag" /> <c>&lt;b:Tag></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Theater" /> <c>&lt;b:Theater></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.ThesisType" /> <c>&lt;b:ThesisType></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Title" /> <c>&lt;b:Title></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.PatentType" /> <c>&lt;b:Type></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.UrlString" /> <c>&lt;b:URL></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Version" /> <c>&lt;b:Version></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Volume" /> <c>&lt;b:Volume></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Year" /> <c>&lt;b:Year></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.YearAccessed" /> <c>&lt;b:YearAccessed></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4071,58 +4071,58 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Source");
-            builder.AddChild<AbbreviatedCaseNumber>();
-            builder.AddChild<AlbumTitle>();
-            builder.AddChild<AuthorList>();
-            builder.AddChild<BookTitle>();
-            builder.AddChild<Broadcaster>();
-            builder.AddChild<BroadcastTitle>();
-            builder.AddChild<CaseNumber>();
-            builder.AddChild<ChapterNumber>();
-            builder.AddChild<City>();
-            builder.AddChild<Comments>();
-            builder.AddChild<ConferenceName>();
-            builder.AddChild<CountryRegion>();
-            builder.AddChild<Court>();
-            builder.AddChild<Day>();
-            builder.AddChild<DayAccessed>();
-            builder.AddChild<Department>();
-            builder.AddChild<Distributor>();
-            builder.AddChild<Edition>();
-            builder.AddChild<GuidString>();
-            builder.AddChild<Institution>();
-            builder.AddChild<InternetSiteTitle>();
-            builder.AddChild<Issue>();
-            builder.AddChild<JournalName>();
-            builder.AddChild<LcId>();
-            builder.AddChild<Medium>();
-            builder.AddChild<Month>();
-            builder.AddChild<MonthAccessed>();
-            builder.AddChild<NumberVolumes>();
-            builder.AddChild<Pages>();
-            builder.AddChild<PatentNumber>();
-            builder.AddChild<PeriodicalTitle>();
-            builder.AddChild<ProductionCompany>();
-            builder.AddChild<PublicationTitle>();
-            builder.AddChild<Publisher>();
-            builder.AddChild<RecordingNumber>();
-            builder.AddChild<ReferenceOrder>();
-            builder.AddChild<Reporter>();
-            builder.AddChild<SourceType>();
-            builder.AddChild<ShortTitle>();
-            builder.AddChild<StandardNumber>();
-            builder.AddChild<StateProvince>();
-            builder.AddChild<Station>();
-            builder.AddChild<Tag>();
-            builder.AddChild<Theater>();
-            builder.AddChild<ThesisType>();
-            builder.AddChild<Title>();
-            builder.AddChild<PatentType>();
-            builder.AddChild<UrlString>();
-            builder.AddChild<Version>();
-            builder.AddChild<Volume>();
-            builder.AddChild<Year>();
-            builder.AddChild<YearAccessed>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.AuthorList>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.SourceType>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.AlbumTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.BookTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Broadcaster>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.BroadcastTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.CaseNumber>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.ChapterNumber>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.City>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Comments>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.ConferenceName>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.CountryRegion>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Court>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Day>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.DayAccessed>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Department>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Distributor>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Edition>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.GuidString>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Institution>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.InternetSiteTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Issue>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.JournalName>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.LcId>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Medium>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Month>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.MonthAccessed>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.NumberVolumes>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Pages>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.PatentNumber>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.PeriodicalTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.ProductionCompany>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.PublicationTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Publisher>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.RecordingNumber>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.ReferenceOrder>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Reporter>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.ShortTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.StandardNumber>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.StateProvince>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Station>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Tag>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Theater>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.ThesisType>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Title>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.PatentType>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.UrlString>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Version>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Volume>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Year>();
+            builder.AddChild<DocumentFormat.OpenXml.Bibliography.YearAccessed>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
@@ -4190,9 +4190,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public AbbreviatedCaseNumber? AbbreviatedCaseNumber
+        public DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber? AbbreviatedCaseNumber
         {
-            get => GetElement<AbbreviatedCaseNumber>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber>();
             set => SetElement(value);
         }
 
@@ -4203,9 +4203,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public AlbumTitle? AlbumTitle
+        public DocumentFormat.OpenXml.Bibliography.AlbumTitle? AlbumTitle
         {
-            get => GetElement<AlbumTitle>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.AlbumTitle>();
             set => SetElement(value);
         }
 
@@ -4216,9 +4216,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public AuthorList? AuthorList
+        public DocumentFormat.OpenXml.Bibliography.AuthorList? AuthorList
         {
-            get => GetElement<AuthorList>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.AuthorList>();
             set => SetElement(value);
         }
 
@@ -4229,9 +4229,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public BookTitle? BookTitle
+        public DocumentFormat.OpenXml.Bibliography.BookTitle? BookTitle
         {
-            get => GetElement<BookTitle>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.BookTitle>();
             set => SetElement(value);
         }
 
@@ -4242,9 +4242,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Broadcaster? Broadcaster
+        public DocumentFormat.OpenXml.Bibliography.Broadcaster? Broadcaster
         {
-            get => GetElement<Broadcaster>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Broadcaster>();
             set => SetElement(value);
         }
 
@@ -4255,9 +4255,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public BroadcastTitle? BroadcastTitle
+        public DocumentFormat.OpenXml.Bibliography.BroadcastTitle? BroadcastTitle
         {
-            get => GetElement<BroadcastTitle>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.BroadcastTitle>();
             set => SetElement(value);
         }
 
@@ -4268,9 +4268,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public CaseNumber? CaseNumber
+        public DocumentFormat.OpenXml.Bibliography.CaseNumber? CaseNumber
         {
-            get => GetElement<CaseNumber>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.CaseNumber>();
             set => SetElement(value);
         }
 
@@ -4281,9 +4281,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public ChapterNumber? ChapterNumber
+        public DocumentFormat.OpenXml.Bibliography.ChapterNumber? ChapterNumber
         {
-            get => GetElement<ChapterNumber>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.ChapterNumber>();
             set => SetElement(value);
         }
 
@@ -4294,9 +4294,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public City? City
+        public DocumentFormat.OpenXml.Bibliography.City? City
         {
-            get => GetElement<City>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.City>();
             set => SetElement(value);
         }
 
@@ -4307,9 +4307,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Comments? Comments
+        public DocumentFormat.OpenXml.Bibliography.Comments? Comments
         {
-            get => GetElement<Comments>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Comments>();
             set => SetElement(value);
         }
 
@@ -4320,9 +4320,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public ConferenceName? ConferenceName
+        public DocumentFormat.OpenXml.Bibliography.ConferenceName? ConferenceName
         {
-            get => GetElement<ConferenceName>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.ConferenceName>();
             set => SetElement(value);
         }
 
@@ -4333,9 +4333,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public CountryRegion? CountryRegion
+        public DocumentFormat.OpenXml.Bibliography.CountryRegion? CountryRegion
         {
-            get => GetElement<CountryRegion>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.CountryRegion>();
             set => SetElement(value);
         }
 
@@ -4346,9 +4346,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Court? Court
+        public DocumentFormat.OpenXml.Bibliography.Court? Court
         {
-            get => GetElement<Court>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Court>();
             set => SetElement(value);
         }
 
@@ -4359,9 +4359,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Day? Day
+        public DocumentFormat.OpenXml.Bibliography.Day? Day
         {
-            get => GetElement<Day>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Day>();
             set => SetElement(value);
         }
 
@@ -4372,9 +4372,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DayAccessed? DayAccessed
+        public DocumentFormat.OpenXml.Bibliography.DayAccessed? DayAccessed
         {
-            get => GetElement<DayAccessed>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.DayAccessed>();
             set => SetElement(value);
         }
 
@@ -4385,9 +4385,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Department? Department
+        public DocumentFormat.OpenXml.Bibliography.Department? Department
         {
-            get => GetElement<Department>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Department>();
             set => SetElement(value);
         }
 
@@ -4398,9 +4398,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Distributor? Distributor
+        public DocumentFormat.OpenXml.Bibliography.Distributor? Distributor
         {
-            get => GetElement<Distributor>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Distributor>();
             set => SetElement(value);
         }
 
@@ -4411,9 +4411,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Edition? Edition
+        public DocumentFormat.OpenXml.Bibliography.Edition? Edition
         {
-            get => GetElement<Edition>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Edition>();
             set => SetElement(value);
         }
 
@@ -4424,9 +4424,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public GuidString? GuidString
+        public DocumentFormat.OpenXml.Bibliography.GuidString? GuidString
         {
-            get => GetElement<GuidString>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.GuidString>();
             set => SetElement(value);
         }
 
@@ -4437,9 +4437,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Institution? Institution
+        public DocumentFormat.OpenXml.Bibliography.Institution? Institution
         {
-            get => GetElement<Institution>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Institution>();
             set => SetElement(value);
         }
 
@@ -4450,9 +4450,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public InternetSiteTitle? InternetSiteTitle
+        public DocumentFormat.OpenXml.Bibliography.InternetSiteTitle? InternetSiteTitle
         {
-            get => GetElement<InternetSiteTitle>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.InternetSiteTitle>();
             set => SetElement(value);
         }
 
@@ -4463,9 +4463,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Issue? Issue
+        public DocumentFormat.OpenXml.Bibliography.Issue? Issue
         {
-            get => GetElement<Issue>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Issue>();
             set => SetElement(value);
         }
 
@@ -4476,9 +4476,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public JournalName? JournalName
+        public DocumentFormat.OpenXml.Bibliography.JournalName? JournalName
         {
-            get => GetElement<JournalName>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.JournalName>();
             set => SetElement(value);
         }
 
@@ -4489,9 +4489,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public LcId? LcId
+        public DocumentFormat.OpenXml.Bibliography.LcId? LcId
         {
-            get => GetElement<LcId>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.LcId>();
             set => SetElement(value);
         }
 
@@ -4502,9 +4502,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Medium? Medium
+        public DocumentFormat.OpenXml.Bibliography.Medium? Medium
         {
-            get => GetElement<Medium>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Medium>();
             set => SetElement(value);
         }
 
@@ -4515,9 +4515,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Month? Month
+        public DocumentFormat.OpenXml.Bibliography.Month? Month
         {
-            get => GetElement<Month>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Month>();
             set => SetElement(value);
         }
 
@@ -4528,9 +4528,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public MonthAccessed? MonthAccessed
+        public DocumentFormat.OpenXml.Bibliography.MonthAccessed? MonthAccessed
         {
-            get => GetElement<MonthAccessed>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.MonthAccessed>();
             set => SetElement(value);
         }
 
@@ -4541,9 +4541,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public NumberVolumes? NumberVolumes
+        public DocumentFormat.OpenXml.Bibliography.NumberVolumes? NumberVolumes
         {
-            get => GetElement<NumberVolumes>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.NumberVolumes>();
             set => SetElement(value);
         }
 
@@ -4554,9 +4554,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Pages? Pages
+        public DocumentFormat.OpenXml.Bibliography.Pages? Pages
         {
-            get => GetElement<Pages>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Pages>();
             set => SetElement(value);
         }
 
@@ -4567,9 +4567,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public PatentNumber? PatentNumber
+        public DocumentFormat.OpenXml.Bibliography.PatentNumber? PatentNumber
         {
-            get => GetElement<PatentNumber>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.PatentNumber>();
             set => SetElement(value);
         }
 
@@ -4580,9 +4580,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public PeriodicalTitle? PeriodicalTitle
+        public DocumentFormat.OpenXml.Bibliography.PeriodicalTitle? PeriodicalTitle
         {
-            get => GetElement<PeriodicalTitle>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.PeriodicalTitle>();
             set => SetElement(value);
         }
 
@@ -4593,9 +4593,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public ProductionCompany? ProductionCompany
+        public DocumentFormat.OpenXml.Bibliography.ProductionCompany? ProductionCompany
         {
-            get => GetElement<ProductionCompany>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.ProductionCompany>();
             set => SetElement(value);
         }
 
@@ -4606,9 +4606,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public PublicationTitle? PublicationTitle
+        public DocumentFormat.OpenXml.Bibliography.PublicationTitle? PublicationTitle
         {
-            get => GetElement<PublicationTitle>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.PublicationTitle>();
             set => SetElement(value);
         }
 
@@ -4619,9 +4619,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Publisher? Publisher
+        public DocumentFormat.OpenXml.Bibliography.Publisher? Publisher
         {
-            get => GetElement<Publisher>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Publisher>();
             set => SetElement(value);
         }
 
@@ -4632,9 +4632,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public RecordingNumber? RecordingNumber
+        public DocumentFormat.OpenXml.Bibliography.RecordingNumber? RecordingNumber
         {
-            get => GetElement<RecordingNumber>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.RecordingNumber>();
             set => SetElement(value);
         }
 
@@ -4645,9 +4645,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public ReferenceOrder? ReferenceOrder
+        public DocumentFormat.OpenXml.Bibliography.ReferenceOrder? ReferenceOrder
         {
-            get => GetElement<ReferenceOrder>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.ReferenceOrder>();
             set => SetElement(value);
         }
 
@@ -4658,9 +4658,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Reporter? Reporter
+        public DocumentFormat.OpenXml.Bibliography.Reporter? Reporter
         {
-            get => GetElement<Reporter>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Reporter>();
             set => SetElement(value);
         }
 
@@ -4671,9 +4671,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public SourceType? SourceType
+        public DocumentFormat.OpenXml.Bibliography.SourceType? SourceType
         {
-            get => GetElement<SourceType>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.SourceType>();
             set => SetElement(value);
         }
 
@@ -4684,9 +4684,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public ShortTitle? ShortTitle
+        public DocumentFormat.OpenXml.Bibliography.ShortTitle? ShortTitle
         {
-            get => GetElement<ShortTitle>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.ShortTitle>();
             set => SetElement(value);
         }
 
@@ -4697,9 +4697,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public StandardNumber? StandardNumber
+        public DocumentFormat.OpenXml.Bibliography.StandardNumber? StandardNumber
         {
-            get => GetElement<StandardNumber>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.StandardNumber>();
             set => SetElement(value);
         }
 
@@ -4710,9 +4710,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public StateProvince? StateProvince
+        public DocumentFormat.OpenXml.Bibliography.StateProvince? StateProvince
         {
-            get => GetElement<StateProvince>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.StateProvince>();
             set => SetElement(value);
         }
 
@@ -4723,9 +4723,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Station? Station
+        public DocumentFormat.OpenXml.Bibliography.Station? Station
         {
-            get => GetElement<Station>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Station>();
             set => SetElement(value);
         }
 
@@ -4736,9 +4736,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Tag? Tag
+        public DocumentFormat.OpenXml.Bibliography.Tag? Tag
         {
-            get => GetElement<Tag>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Tag>();
             set => SetElement(value);
         }
 
@@ -4749,9 +4749,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Theater? Theater
+        public DocumentFormat.OpenXml.Bibliography.Theater? Theater
         {
-            get => GetElement<Theater>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Theater>();
             set => SetElement(value);
         }
 
@@ -4762,9 +4762,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public ThesisType? ThesisType
+        public DocumentFormat.OpenXml.Bibliography.ThesisType? ThesisType
         {
-            get => GetElement<ThesisType>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.ThesisType>();
             set => SetElement(value);
         }
 
@@ -4775,9 +4775,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Title? Title
+        public DocumentFormat.OpenXml.Bibliography.Title? Title
         {
-            get => GetElement<Title>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Title>();
             set => SetElement(value);
         }
 
@@ -4788,9 +4788,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public PatentType? PatentType
+        public DocumentFormat.OpenXml.Bibliography.PatentType? PatentType
         {
-            get => GetElement<PatentType>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.PatentType>();
             set => SetElement(value);
         }
 
@@ -4801,9 +4801,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public UrlString? UrlString
+        public DocumentFormat.OpenXml.Bibliography.UrlString? UrlString
         {
-            get => GetElement<UrlString>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.UrlString>();
             set => SetElement(value);
         }
 
@@ -4814,9 +4814,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Version? Version
+        public DocumentFormat.OpenXml.Bibliography.Version? Version
         {
-            get => GetElement<Version>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Version>();
             set => SetElement(value);
         }
 
@@ -4827,9 +4827,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Volume? Volume
+        public DocumentFormat.OpenXml.Bibliography.Volume? Volume
         {
-            get => GetElement<Volume>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Volume>();
             set => SetElement(value);
         }
 
@@ -4840,9 +4840,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Year? Year
+        public DocumentFormat.OpenXml.Bibliography.Year? Year
         {
-            get => GetElement<Year>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Year>();
             set => SetElement(value);
         }
 
@@ -4853,9 +4853,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public YearAccessed? YearAccessed
+        public DocumentFormat.OpenXml.Bibliography.YearAccessed? YearAccessed
         {
-            get => GetElement<YearAccessed>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.YearAccessed>();
             set => SetElement(value);
         }
 

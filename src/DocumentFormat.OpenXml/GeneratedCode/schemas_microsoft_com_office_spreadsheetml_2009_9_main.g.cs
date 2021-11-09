@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ConditionalFormatting &lt;x14:conditionalFormatting></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormatting" /> <c>&lt;x14:conditionalFormatting></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "conditionalFormattings");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<ConditionalFormatting>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormatting>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormatting), 1, 0, version: FileFormatVersions.Office2010)
@@ -88,7 +88,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DataValidation &lt;x14:dataValidation></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DataValidation" /> <c>&lt;x14:dataValidation></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -196,7 +196,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "dataValidations");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DataValidation>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DataValidation>();
             builder.AddElement<DataValidations>()
 .AddAttribute(0, "disablePrompts", a => a.DisablePrompts)
 .AddAttribute(0, "xWindow", a => a.XWindow)
@@ -222,7 +222,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SparklineGroup &lt;x14:sparklineGroup></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SparklineGroup" /> <c>&lt;x14:sparklineGroup></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -266,7 +266,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "sparklineGroups");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<SparklineGroup>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SparklineGroup>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SparklineGroup), 1, 0, version: FileFormatVersions.Office2010)
@@ -285,7 +285,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SlicerRef &lt;x14:slicer></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerRef" /> <c>&lt;x14:slicer></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -329,7 +329,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "slicerList");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<SlicerRef>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerRef>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerRef), 1, 0, version: FileFormatVersions.Office2010)
@@ -348,7 +348,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ProtectedRange &lt;x14:protectedRange></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ProtectedRange" /> <c>&lt;x14:protectedRange></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -392,7 +392,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "protectedRanges");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<ProtectedRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ProtectedRange>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ProtectedRange), 1, 0, version: FileFormatVersions.Office2010)
@@ -411,8 +411,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>IgnoredError &lt;x14:ignoredError></description></item>
-    ///   <item><description>ExtensionList &lt;x14:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.IgnoredError" /> <c>&lt;x14:ignoredError></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -456,8 +456,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "ignoredErrors");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<IgnoredError>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.IgnoredError>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.IgnoredError), 0, 0, version: FileFormatVersions.Office2010),
@@ -477,7 +477,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DefinedName &lt;x14:definedName></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DefinedName" /> <c>&lt;x14:definedName></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -521,7 +521,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "definedNames");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DefinedName>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DefinedName>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DefinedName), 1, 0, version: FileFormatVersions.Office2010)
@@ -540,7 +540,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.PivotCache &lt;x:pivotCache></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotCache" /> <c>&lt;x:pivotCache></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -603,7 +603,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SlicerCache &lt;x14:slicerCache></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCache" /> <c>&lt;x14:slicerCache></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -647,7 +647,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "slicerCaches");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<SlicerCache>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerCache>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerCache), 1, 0, version: FileFormatVersions.Office2010)
@@ -747,7 +747,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TupleSet &lt;x14:tupleSet></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleSet" /> <c>&lt;x14:tupleSet></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -871,7 +871,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "calculatedMember");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<TupleSet>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TupleSet>();
             builder.AddElement<CalculatedMember>()
 .AddAttribute(0, "displayFolder", a => a.DisplayFolder)
 .AddAttribute(0, "flattenHierarchies", a => a.FlattenHierarchies)
@@ -893,9 +893,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public TupleSet? TupleSet
+        public DocumentFormat.OpenXml.Office2010.Excel.TupleSet? TupleSet
         {
-            get => GetElement<TupleSet>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.TupleSet>();
             set => SetElement(value);
         }
 
@@ -911,7 +911,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SetLevels &lt;x14:setLevels></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SetLevels" /> <c>&lt;x14:setLevels></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1019,7 +1019,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "cacheHierarchy");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<SetLevels>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SetLevels>();
             builder.AddElement<CacheHierarchy>()
 .AddAttribute(0, "flattenHierarchies", a => a.FlattenHierarchies)
 .AddAttribute(0, "measuresSet", a => a.MeasuresSet)
@@ -1041,9 +1041,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public SetLevels? SetLevels
+        public DocumentFormat.OpenXml.Office2010.Excel.SetLevels? SetLevels
         {
-            get => GetElement<SetLevels>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.SetLevels>();
             set => SetElement(value);
         }
 
@@ -1204,9 +1204,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PivotEdits &lt;x14:pivotEdits></description></item>
-    ///   <item><description>PivotChanges &lt;x14:pivotChanges></description></item>
-    ///   <item><description>ConditionalFormats &lt;x14:conditionalFormats></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormats" /> <c>&lt;x14:conditionalFormats></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotChanges" /> <c>&lt;x14:pivotChanges></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotEdits" /> <c>&lt;x14:pivotEdits></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1410,9 +1410,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotTableDefinition");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<PivotEdits>();
-            builder.AddChild<PivotChanges>();
-            builder.AddChild<ConditionalFormats>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormats>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotChanges>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotEdits>();
             builder.AddElement<PivotTableDefinition>()
 .AddAttribute(0, "fillDownLabelsDefault", a => a.FillDownLabelsDefault)
 .AddAttribute(0, "visualTotalsForSets", a => a.VisualTotalsForSets)
@@ -1442,9 +1442,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public PivotEdits? PivotEdits
+        public DocumentFormat.OpenXml.Office2010.Excel.PivotEdits? PivotEdits
         {
-            get => GetElement<PivotEdits>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.PivotEdits>();
             set => SetElement(value);
         }
 
@@ -1455,9 +1455,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public PivotChanges? PivotChanges
+        public DocumentFormat.OpenXml.Office2010.Excel.PivotChanges? PivotChanges
         {
-            get => GetElement<PivotChanges>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.PivotChanges>();
             set => SetElement(value);
         }
 
@@ -1468,9 +1468,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public ConditionalFormats? ConditionalFormats
+        public DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormats? ConditionalFormats
         {
-            get => GetElement<ConditionalFormats>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormats>();
             set => SetElement(value);
         }
 
@@ -1600,7 +1600,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CalculatedMembers &lt;x14:calculatedMembers></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.CalculatedMembers" /> <c>&lt;x14:calculatedMembers></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1676,7 +1676,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "connection");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<CalculatedMembers>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.CalculatedMembers>();
             builder.AddElement<Connection>()
 .AddAttribute(0, "culture", a => a.Culture)
 .AddAttribute(0, "embeddedDataId", a => a.EmbeddedDataId);
@@ -1695,9 +1695,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public CalculatedMembers? CalculatedMembers
+        public DocumentFormat.OpenXml.Office2010.Excel.CalculatedMembers? CalculatedMembers
         {
-            get => GetElement<CalculatedMembers>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.CalculatedMembers>();
             set => SetElement(value);
         }
 
@@ -1778,7 +1778,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SlicerStyle &lt;x14:slicerStyle></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerStyle" /> <c>&lt;x14:slicerStyle></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1838,7 +1838,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "slicerStyles");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<SlicerStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerStyle>();
             builder.AddElement<SlicerStyles>()
 .AddAttribute(0, "defaultSlicerStyle", a => a.DefaultSlicerStyle, aBuilder =>
 {
@@ -1863,7 +1863,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat &lt;x:dxf></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat" /> <c>&lt;x:dxf></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1944,7 +1944,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DdeValues &lt;x14:values></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DdeValues" /> <c>&lt;x14:values></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2052,7 +2052,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "oleItem");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DdeValues>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DdeValues>();
             builder.AddElement<OleItem>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -2074,9 +2074,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public DdeValues? DdeValues
+        public DocumentFormat.OpenXml.Office2010.Excel.DdeValues? DdeValues
         {
-            get => GetElement<DdeValues>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.DdeValues>();
             set => SetElement(value);
         }
 
@@ -2341,7 +2341,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CustomFilter &lt;x14:customFilter></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.CustomFilter" /> <c>&lt;x14:customFilter></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2401,7 +2401,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "customFilters");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<CustomFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.CustomFilter>();
             builder.AddElement<CustomFilters>()
 .AddAttribute(0, "and", a => a.And);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -2625,7 +2625,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;x14:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2685,7 +2685,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "datastoreItem");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             builder.AddElement<DatastoreItem>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -2705,9 +2705,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2010.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -2754,8 +2754,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ListItems &lt;x14:itemLst></description></item>
-    ///   <item><description>ExtensionList &lt;x14:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ListItems" /> <c>&lt;x14:itemLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3295,8 +3295,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "formControlPr");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<ListItems>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ListItems>();
             builder.AddElement<FormControlProperties>()
 .AddAttribute(0, "objectType", a => a.ObjectType, aBuilder =>
 {
@@ -3363,9 +3363,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public ListItems? ListItems
+        public DocumentFormat.OpenXml.Office2010.Excel.ListItems? ListItems
         {
-            get => GetElement<ListItems>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ListItems>();
             set => SetElement(value);
         }
 
@@ -3376,9 +3376,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2010.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -3425,7 +3425,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Slicer &lt;x14:slicer></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Slicer" /> <c>&lt;x14:slicer></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3469,7 +3469,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "slicers");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<Slicer>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Slicer>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Slicer), 1, 0, version: FileFormatVersions.Office2010)
@@ -3519,9 +3519,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SlicerCachePivotTables &lt;x14:pivotTables></description></item>
-    ///   <item><description>SlicerCacheData &lt;x14:data></description></item>
-    ///   <item><description>SlicerCacheDefinitionExtensionList &lt;x14:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheDefinitionExtensionList" /> <c>&lt;x14:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheData" /> <c>&lt;x14:data></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTables" /> <c>&lt;x14:pivotTables></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3597,9 +3597,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "slicerCacheDefinition");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<SlicerCachePivotTables>();
-            builder.AddChild<SlicerCacheData>();
-            builder.AddChild<SlicerCacheDefinitionExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheDefinitionExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheData>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTables>();
             builder.AddElement<SlicerCacheDefinition>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -3624,9 +3624,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public SlicerCachePivotTables? SlicerCachePivotTables
+        public DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTables? SlicerCachePivotTables
         {
-            get => GetElement<SlicerCachePivotTables>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTables>();
             set => SetElement(value);
         }
 
@@ -3637,9 +3637,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public SlicerCacheData? SlicerCacheData
+        public DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheData? SlicerCacheData
         {
-            get => GetElement<SlicerCacheData>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheData>();
             set => SetElement(value);
         }
 
@@ -3650,9 +3650,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public SlicerCacheDefinitionExtensionList? SlicerCacheDefinitionExtensionList
+        public DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheDefinitionExtensionList? SlicerCacheDefinitionExtensionList
         {
-            get => GetElement<SlicerCacheDefinitionExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheDefinitionExtensionList>();
             set => SetElement(value);
         }
 
@@ -3699,9 +3699,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ConditionalFormattingRule &lt;x14:cfRule></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office.Excel.ReferenceSequence &lt;xne:sqref></description></item>
-    ///   <item><description>ExtensionList &lt;x14:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingRule" /> <c>&lt;x14:cfRule></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3761,9 +3761,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "conditionalFormatting");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<ConditionalFormattingRule>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingRule>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
-            builder.AddChild<ExtensionList>();
             builder.AddElement<ConditionalFormatting>()
 .AddAttribute(0, "pivot", a => a.Pivot);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -3786,12 +3786,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office.Excel.Formula &lt;xne:f></description></item>
-    ///   <item><description>ColorScale &lt;x14:colorScale></description></item>
-    ///   <item><description>DataBar &lt;x14:dataBar></description></item>
-    ///   <item><description>IconSet &lt;x14:iconSet></description></item>
-    ///   <item><description>DifferentialType &lt;x14:dxf></description></item>
-    ///   <item><description>ExtensionList &lt;x14:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DifferentialType" /> <c>&lt;x14:dxf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ColorScale" /> <c>&lt;x14:colorScale></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DataBar" /> <c>&lt;x14:dataBar></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.IconSet" /> <c>&lt;x14:iconSet></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4059,12 +4059,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "cfRule");
             builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DifferentialType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
-            builder.AddChild<ColorScale>();
-            builder.AddChild<DataBar>();
-            builder.AddChild<IconSet>();
-            builder.AddChild<DifferentialType>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ColorScale>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DataBar>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.IconSet>();
             builder.AddElement<ConditionalFormattingRule>()
 .AddAttribute(0, "type", a => a.Type)
 .AddAttribute(0, "priority", a => a.Priority)
@@ -4115,7 +4115,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Extension &lt;x:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4184,9 +4184,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DataValidationForumla1 &lt;x14:formula1></description></item>
-    ///   <item><description>DataValidationForumla2 &lt;x14:formula2></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office.Excel.ReferenceSequence &lt;xne:sqref></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla1" /> <c>&lt;x14:formula1></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla2" /> <c>&lt;x14:formula2></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4422,8 +4422,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "dataValidation");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DataValidationForumla1>();
-            builder.AddChild<DataValidationForumla2>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla1>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla2>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
             builder.AddElement<DataValidation>()
 .AddAttribute(0, "type", a => a.Type)
@@ -4456,9 +4456,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public DataValidationForumla1? DataValidationForumla1
+        public DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla1? DataValidationForumla1
         {
-            get => GetElement<DataValidationForumla1>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla1>();
             set => SetElement(value);
         }
 
@@ -4469,9 +4469,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public DataValidationForumla2? DataValidationForumla2
+        public DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla2? DataValidationForumla2
         {
-            get => GetElement<DataValidationForumla2>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla2>();
             set => SetElement(value);
         }
 
@@ -4500,7 +4500,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office.Excel.Formula &lt;xne:f></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4562,7 +4562,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office.Excel.Formula &lt;xne:f></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4624,7 +4624,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office.Excel.Formula &lt;xne:f></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class DataValidationFormulaType : OpenXmlCompositeElement
@@ -4688,16 +4688,16 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SeriesColor &lt;x14:colorSeries></description></item>
-    ///   <item><description>NegativeColor &lt;x14:colorNegative></description></item>
-    ///   <item><description>AxisColor &lt;x14:colorAxis></description></item>
-    ///   <item><description>MarkersColor &lt;x14:colorMarkers></description></item>
-    ///   <item><description>FirstMarkerColor &lt;x14:colorFirst></description></item>
-    ///   <item><description>LastMarkerColor &lt;x14:colorLast></description></item>
-    ///   <item><description>HighMarkerColor &lt;x14:colorHigh></description></item>
-    ///   <item><description>LowMarkerColor &lt;x14:colorLow></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office.Excel.Formula &lt;xne:f></description></item>
-    ///   <item><description>Sparklines &lt;x14:sparklines></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SeriesColor" /> <c>&lt;x14:colorSeries></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.NegativeColor" /> <c>&lt;x14:colorNegative></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.AxisColor" /> <c>&lt;x14:colorAxis></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.MarkersColor" /> <c>&lt;x14:colorMarkers></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor" /> <c>&lt;x14:colorFirst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor" /> <c>&lt;x14:colorLast></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor" /> <c>&lt;x14:colorHigh></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor" /> <c>&lt;x14:colorLow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Sparklines" /> <c>&lt;x14:sparklines></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5013,16 +5013,16 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "sparklineGroup");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<SeriesColor>();
-            builder.AddChild<NegativeColor>();
-            builder.AddChild<AxisColor>();
-            builder.AddChild<MarkersColor>();
-            builder.AddChild<FirstMarkerColor>();
-            builder.AddChild<LastMarkerColor>();
-            builder.AddChild<HighMarkerColor>();
-            builder.AddChild<LowMarkerColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SeriesColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.NegativeColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.AxisColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.MarkersColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
-            builder.AddChild<Sparklines>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Sparklines>();
             builder.AddElement<SparklineGroup>()
 .AddAttribute(0, "manualMax", a => a.ManualMax)
 .AddAttribute(0, "manualMin", a => a.ManualMin)
@@ -5065,9 +5065,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public SeriesColor? SeriesColor
+        public DocumentFormat.OpenXml.Office2010.Excel.SeriesColor? SeriesColor
         {
-            get => GetElement<SeriesColor>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.SeriesColor>();
             set => SetElement(value);
         }
 
@@ -5078,9 +5078,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public NegativeColor? NegativeColor
+        public DocumentFormat.OpenXml.Office2010.Excel.NegativeColor? NegativeColor
         {
-            get => GetElement<NegativeColor>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.NegativeColor>();
             set => SetElement(value);
         }
 
@@ -5091,9 +5091,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public AxisColor? AxisColor
+        public DocumentFormat.OpenXml.Office2010.Excel.AxisColor? AxisColor
         {
-            get => GetElement<AxisColor>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.AxisColor>();
             set => SetElement(value);
         }
 
@@ -5104,9 +5104,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public MarkersColor? MarkersColor
+        public DocumentFormat.OpenXml.Office2010.Excel.MarkersColor? MarkersColor
         {
-            get => GetElement<MarkersColor>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.MarkersColor>();
             set => SetElement(value);
         }
 
@@ -5117,9 +5117,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public FirstMarkerColor? FirstMarkerColor
+        public DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor? FirstMarkerColor
         {
-            get => GetElement<FirstMarkerColor>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor>();
             set => SetElement(value);
         }
 
@@ -5130,9 +5130,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public LastMarkerColor? LastMarkerColor
+        public DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor? LastMarkerColor
         {
-            get => GetElement<LastMarkerColor>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor>();
             set => SetElement(value);
         }
 
@@ -5143,9 +5143,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public HighMarkerColor? HighMarkerColor
+        public DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor? HighMarkerColor
         {
-            get => GetElement<HighMarkerColor>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor>();
             set => SetElement(value);
         }
 
@@ -5156,9 +5156,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public LowMarkerColor? LowMarkerColor
+        public DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor? LowMarkerColor
         {
-            get => GetElement<LowMarkerColor>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor>();
             set => SetElement(value);
         }
 
@@ -5182,9 +5182,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public Sparklines? Sparklines
+        public DocumentFormat.OpenXml.Office2010.Excel.Sparklines? Sparklines
         {
-            get => GetElement<Sparklines>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Sparklines>();
             set => SetElement(value);
         }
 
@@ -5708,7 +5708,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Sparkline &lt;x14:sparkline></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Sparkline" /> <c>&lt;x14:sparkline></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5752,7 +5752,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "sparklines");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<Sparkline>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Sparkline>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Sparkline), 1, 0, version: FileFormatVersions.Office2010)
@@ -5771,8 +5771,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office.Excel.Formula &lt;xne:f></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office.Excel.ReferenceSequence &lt;xne:sqref></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5969,7 +5969,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ArgumentDescriptions &lt;x14:argumentDescriptions></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescriptions" /> <c>&lt;x14:argumentDescriptions></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6029,7 +6029,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "definedName");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<ArgumentDescriptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescriptions>();
             builder.AddElement<DefinedName>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -6049,9 +6049,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public ArgumentDescriptions? ArgumentDescriptions
+        public DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescriptions? ArgumentDescriptions
         {
-            get => GetElement<ArgumentDescriptions>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescriptions>();
             set => SetElement(value);
         }
 
@@ -6067,7 +6067,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ArgumentDescription &lt;x14:argumentDescription></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescription" /> <c>&lt;x14:argumentDescription></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6127,7 +6127,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "argumentDescriptions");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<ArgumentDescription>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescription>();
             builder.AddElement<ArgumentDescriptions>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -6211,8 +6211,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TupleSetHeaders &lt;x14:headers></description></item>
-    ///   <item><description>TupleSetRows &lt;x14:rows></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleSetHeaders" /> <c>&lt;x14:headers></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleSetRows" /> <c>&lt;x14:rows></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6288,8 +6288,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "tupleSet");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<TupleSetHeaders>();
-            builder.AddChild<TupleSetRows>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TupleSetHeaders>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TupleSetRows>();
             builder.AddElement<TupleSet>()
 .AddAttribute(0, "rowCount", a => a.RowCount)
 .AddAttribute(0, "columnCount", a => a.ColumnCount);
@@ -6307,9 +6307,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public TupleSetHeaders? TupleSetHeaders
+        public DocumentFormat.OpenXml.Office2010.Excel.TupleSetHeaders? TupleSetHeaders
         {
-            get => GetElement<TupleSetHeaders>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.TupleSetHeaders>();
             set => SetElement(value);
         }
 
@@ -6320,9 +6320,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public TupleSetRows? TupleSetRows
+        public DocumentFormat.OpenXml.Office2010.Excel.TupleSetRows? TupleSetRows
         {
-            get => GetElement<TupleSetRows>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.TupleSetRows>();
             set => SetElement(value);
         }
 
@@ -6338,7 +6338,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TupleSetHeader &lt;x14:header></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleSetHeader" /> <c>&lt;x14:header></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6382,7 +6382,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "headers");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<TupleSetHeader>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TupleSetHeader>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.TupleSetHeader), 1, 0, version: FileFormatVersions.Office2010)
@@ -6401,7 +6401,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TupleSetRow &lt;x14:row></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleSetRow" /> <c>&lt;x14:row></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6445,7 +6445,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "rows");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<TupleSetRow>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TupleSetRow>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.TupleSetRow), 1, 0, version: FileFormatVersions.Office2010)
@@ -6529,7 +6529,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TupleSetRowItem &lt;x14:rowItem></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleSetRowItem" /> <c>&lt;x14:rowItem></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6573,7 +6573,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "row");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<TupleSetRowItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TupleSetRowItem>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.TupleSetRowItem), 1, 0, version: FileFormatVersions.Office2010)
@@ -6707,7 +6707,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SetLevel &lt;x14:setLevel></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SetLevel" /> <c>&lt;x14:setLevel></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6767,7 +6767,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "setLevels");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<SetLevel>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SetLevel>();
             builder.AddElement<SetLevels>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -6788,8 +6788,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ConditionalFormattingValueObject &lt;x14:cfvo></description></item>
-    ///   <item><description>Color &lt;x14:color></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Color" /> <c>&lt;x14:color></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject" /> <c>&lt;x14:cfvo></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6833,8 +6833,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "colorScale");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<ConditionalFormattingValueObject>();
-            builder.AddChild<Color>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Color>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject), 2, 0, version: FileFormatVersions.Office2010),
@@ -6854,12 +6854,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ConditionalFormattingValueObject &lt;x14:cfvo></description></item>
-    ///   <item><description>FillColor &lt;x14:fillColor></description></item>
-    ///   <item><description>BorderColor &lt;x14:borderColor></description></item>
-    ///   <item><description>NegativeFillColor &lt;x14:negativeFillColor></description></item>
-    ///   <item><description>NegativeBorderColor &lt;x14:negativeBorderColor></description></item>
-    ///   <item><description>BarAxisColor &lt;x14:axisColor></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.FillColor" /> <c>&lt;x14:fillColor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.BorderColor" /> <c>&lt;x14:borderColor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.NegativeFillColor" /> <c>&lt;x14:negativeFillColor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.NegativeBorderColor" /> <c>&lt;x14:negativeBorderColor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.BarAxisColor" /> <c>&lt;x14:axisColor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject" /> <c>&lt;x14:cfvo></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7047,12 +7047,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "dataBar");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<ConditionalFormattingValueObject>();
-            builder.AddChild<FillColor>();
-            builder.AddChild<BorderColor>();
-            builder.AddChild<NegativeFillColor>();
-            builder.AddChild<NegativeBorderColor>();
-            builder.AddChild<BarAxisColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.FillColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.BorderColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.NegativeFillColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.NegativeBorderColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.BarAxisColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject>();
             builder.AddElement<DataBar>()
 .AddAttribute(0, "minLength", a => a.MinLength)
 .AddAttribute(0, "maxLength", a => a.MaxLength)
@@ -7088,8 +7088,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ConditionalFormattingValueObject &lt;x14:cfvo></description></item>
-    ///   <item><description>ConditionalFormattingIcon &lt;x14:cfIcon></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingIcon" /> <c>&lt;x14:cfIcon></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject" /> <c>&lt;x14:cfvo></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7213,8 +7213,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "iconSet");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<ConditionalFormattingValueObject>();
-            builder.AddChild<ConditionalFormattingIcon>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingIcon>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject>();
             builder.AddElement<IconSet>()
 .AddAttribute(0, "iconSet", a => a.IconSetTypes)
 .AddAttribute(0, "showValue", a => a.ShowValue)
@@ -7240,13 +7240,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Font &lt;x:font></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.NumberingFormat &lt;x:numFmt></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Fill &lt;x:fill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Alignment &lt;x:alignment></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Border &lt;x:border></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Protection &lt;x:protection></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Alignment" /> <c>&lt;x:alignment></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Protection" /> <c>&lt;x:protection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Fill" /> <c>&lt;x:fill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7290,13 +7290,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "dxf");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Font>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Border>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Protection>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Fill>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Font>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0, 1),
@@ -7412,8 +7412,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office.Excel.Formula &lt;xne:f></description></item>
-    ///   <item><description>ExtensionList &lt;x14:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7489,8 +7489,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "cfvo");
             builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
-            builder.AddChild<ExtensionList>();
             builder.AddElement<ConditionalFormattingValueObject>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
@@ -7524,9 +7524,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2010.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -7611,7 +7611,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PivotEdit &lt;x14:pivotEdit></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotEdit" /> <c>&lt;x14:pivotEdit></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7655,7 +7655,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotEdits");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<PivotEdit>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotEdit>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotEdit), 1, 0, version: FileFormatVersions.Office2010)
@@ -7674,7 +7674,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PivotChange &lt;x14:pivotChange></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotChange" /> <c>&lt;x14:pivotChange></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7718,7 +7718,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotChanges");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<PivotChange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotChange>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotChange), 1, 0, version: FileFormatVersions.Office2010)
@@ -7737,7 +7737,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ConditionalFormat &lt;x14:conditionalFormat></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormat" /> <c>&lt;x14:conditionalFormat></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7797,7 +7797,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "conditionalFormats");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<ConditionalFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormat>();
             builder.AddElement<ConditionalFormats>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -7818,7 +7818,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.CalculatedMember &lt;x:calculatedMember></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CalculatedMember" /> <c>&lt;x:calculatedMember></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7899,10 +7899,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PivotUserEdit &lt;x14:userEdit></description></item>
-    ///   <item><description>TupleItems &lt;x14:tupleItems></description></item>
-    ///   <item><description>PivotArea &lt;x14:pivotArea></description></item>
-    ///   <item><description>ExtensionList &lt;x14:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotArea" /> <c>&lt;x14:pivotArea></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotUserEdit" /> <c>&lt;x14:userEdit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleItems" /> <c>&lt;x14:tupleItems></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7946,10 +7946,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotEdit");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<PivotUserEdit>();
-            builder.AddChild<TupleItems>();
-            builder.AddChild<PivotArea>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotArea>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotUserEdit>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TupleItems>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotUserEdit), 1, 1, version: FileFormatVersions.Office2010),
@@ -7966,9 +7966,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public PivotUserEdit? PivotUserEdit
+        public DocumentFormat.OpenXml.Office2010.Excel.PivotUserEdit? PivotUserEdit
         {
-            get => GetElement<PivotUserEdit>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.PivotUserEdit>();
             set => SetElement(value);
         }
 
@@ -7979,9 +7979,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public TupleItems? TupleItems
+        public DocumentFormat.OpenXml.Office2010.Excel.TupleItems? TupleItems
         {
-            get => GetElement<TupleItems>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.TupleItems>();
             set => SetElement(value);
         }
 
@@ -7992,9 +7992,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public PivotArea? PivotArea
+        public DocumentFormat.OpenXml.Office2010.Excel.PivotArea? PivotArea
         {
-            get => GetElement<PivotArea>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.PivotArea>();
             set => SetElement(value);
         }
 
@@ -8005,9 +8005,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2010.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -8023,8 +8023,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office.Excel.Formula &lt;xne:f></description></item>
-    ///   <item><description>PivotEditValue &lt;x14:editValue></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue" /> <c>&lt;x14:editValue></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8069,7 +8069,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema(53, "userEdit");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
-            builder.AddChild<PivotEditValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Formula), 1, 1),
@@ -8097,9 +8097,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public PivotEditValue? PivotEditValue
+        public DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue? PivotEditValue
         {
-            get => GetElement<PivotEditValue>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue>();
             set => SetElement(value);
         }
 
@@ -8115,7 +8115,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Xstring &lt;x14:tupleItem></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Xstring" /> <c>&lt;x14:tupleItem></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8159,7 +8159,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "tupleItems");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<Xstring>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Xstring>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Xstring), 1, 0, version: FileFormatVersions.Office2010)
@@ -8178,8 +8178,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences &lt;x:references></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences" /> <c>&lt;x:references></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8415,8 +8415,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotArea");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences>();
             builder.AddElement<PivotArea>()
 .AddAttribute(0, "field", a => a.Field)
 .AddAttribute(0, "type", a => a.Type)
@@ -8475,9 +8475,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PivotEditValue &lt;x14:editValue></description></item>
-    ///   <item><description>TupleItems &lt;x14:tupleItems></description></item>
-    ///   <item><description>ExtensionList &lt;x14:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue" /> <c>&lt;x14:editValue></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleItems" /> <c>&lt;x14:tupleItems></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8553,9 +8553,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotChange");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<PivotEditValue>();
-            builder.AddChild<TupleItems>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TupleItems>();
             builder.AddElement<PivotChange>()
 .AddAttribute(0, "allocationMethod", a => a.AllocationMethod)
 .AddAttribute(0, "weightExpression", a => a.WeightExpression);
@@ -8575,9 +8575,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public PivotEditValue? PivotEditValue
+        public DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue? PivotEditValue
         {
-            get => GetElement<PivotEditValue>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue>();
             set => SetElement(value);
         }
 
@@ -8588,9 +8588,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public TupleItems? TupleItems
+        public DocumentFormat.OpenXml.Office2010.Excel.TupleItems? TupleItems
         {
-            get => GetElement<TupleItems>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.TupleItems>();
             set => SetElement(value);
         }
 
@@ -8601,9 +8601,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2010.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -8723,7 +8723,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SlicerStyleElement &lt;x14:slicerStyleElement></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElement" /> <c>&lt;x14:slicerStyleElement></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8767,7 +8767,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "slicerStyleElements");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<SlicerStyleElement>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElement>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElement), 1, 0, version: FileFormatVersions.Office2010)
@@ -8786,7 +8786,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Value &lt;x:value></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Value" /> <c>&lt;x:value></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8884,8 +8884,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PivotAreas &lt;x14:pivotAreas></description></item>
-    ///   <item><description>ExtensionList &lt;x14:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotAreas" /> <c>&lt;x14:pivotAreas></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8993,8 +8993,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "conditionalFormat");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<PivotAreas>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotAreas>();
             builder.AddElement<ConditionalFormat>()
 .AddAttribute(0, "scope", a => a.Scope)
 .AddAttribute(0, "type", a => a.Type)
@@ -9021,9 +9021,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public PivotAreas? PivotAreas
+        public DocumentFormat.OpenXml.Office2010.Excel.PivotAreas? PivotAreas
         {
-            get => GetElement<PivotAreas>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.PivotAreas>();
             set => SetElement(value);
         }
 
@@ -9034,9 +9034,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2010.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -9052,7 +9052,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.PivotArea &lt;x:pivotArea></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotArea" /> <c>&lt;x:pivotArea></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -9133,7 +9133,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SlicerStyleElements &lt;x14:slicerStyleElements></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElements" /> <c>&lt;x14:slicerStyleElements></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -9193,7 +9193,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "slicerStyle");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<SlicerStyleElements>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElements>();
             builder.AddElement<SlicerStyle>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -9215,9 +9215,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public SlicerStyleElements? SlicerStyleElements
+        public DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElements? SlicerStyleElements
         {
-            get => GetElement<SlicerStyleElements>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElements>();
             set => SetElement(value);
         }
 
@@ -9301,7 +9301,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office.Excel.ReferenceSequence &lt;xne:sqref></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -9531,7 +9531,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office.Excel.ReferenceSequence &lt;xne:sqref></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -9848,8 +9848,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ListItem &lt;x14:item></description></item>
-    ///   <item><description>ExtensionList &lt;x14:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ListItem" /> <c>&lt;x14:item></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -9893,8 +9893,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "itemLst");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<ListItem>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ListItem>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ListItem), 0, 0, version: FileFormatVersions.Office2010),
@@ -9914,7 +9914,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;x14:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -10118,7 +10118,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "slicer");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             builder.AddElement<Slicer>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -10156,9 +10156,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2010.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -10174,9 +10174,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OlapSlicerCacheLevelsData &lt;x14:levels></description></item>
-    ///   <item><description>OlapSlicerCacheSelections &lt;x14:selections></description></item>
-    ///   <item><description>ExtensionList &lt;x14:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheLevelsData" /> <c>&lt;x14:levels></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSelections" /> <c>&lt;x14:selections></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -10236,9 +10236,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "olap");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<OlapSlicerCacheLevelsData>();
-            builder.AddChild<OlapSlicerCacheSelections>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheLevelsData>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSelections>();
             builder.AddElement<OlapSlicerCache>()
 .AddAttribute(0, "pivotCacheId", a => a.PivotCacheId, aBuilder =>
 {
@@ -10259,9 +10259,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public OlapSlicerCacheLevelsData? OlapSlicerCacheLevelsData
+        public DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheLevelsData? OlapSlicerCacheLevelsData
         {
-            get => GetElement<OlapSlicerCacheLevelsData>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheLevelsData>();
             set => SetElement(value);
         }
 
@@ -10272,9 +10272,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public OlapSlicerCacheSelections? OlapSlicerCacheSelections
+        public DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSelections? OlapSlicerCacheSelections
         {
-            get => GetElement<OlapSlicerCacheSelections>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSelections>();
             set => SetElement(value);
         }
 
@@ -10285,9 +10285,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2010.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -10303,8 +10303,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TabularSlicerCacheItems &lt;x14:items></description></item>
-    ///   <item><description>ExtensionList &lt;x14:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItems" /> <c>&lt;x14:items></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -10428,8 +10428,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "tabular");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<TabularSlicerCacheItems>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItems>();
             builder.AddElement<TabularSlicerCache>()
 .AddAttribute(0, "pivotCacheId", a => a.PivotCacheId, aBuilder =>
 {
@@ -10453,9 +10453,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public TabularSlicerCacheItems? TabularSlicerCacheItems
+        public DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItems? TabularSlicerCacheItems
         {
-            get => GetElement<TabularSlicerCacheItems>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItems>();
             set => SetElement(value);
         }
 
@@ -10466,9 +10466,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2010.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -10603,7 +10603,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OlapSlicerCacheItemParent &lt;x14:p></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItemParent" /> <c>&lt;x14:p></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -10695,7 +10695,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "i");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<OlapSlicerCacheItemParent>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItemParent>();
             builder.AddElement<OlapSlicerCacheItem>()
 .AddAttribute(0, "n", a => a.Name, aBuilder =>
 {
@@ -10721,7 +10721,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OlapSlicerCacheItem &lt;x14:i></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItem" /> <c>&lt;x14:i></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -10781,7 +10781,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "range");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<OlapSlicerCacheItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItem>();
             builder.AddElement<OlapSlicerCacheRange>()
 .AddAttribute(0, "startItem", a => a.StartItem, aBuilder =>
 {
@@ -10806,7 +10806,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OlapSlicerCacheRange &lt;x14:range></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRange" /> <c>&lt;x14:range></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -10850,7 +10850,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "ranges");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<OlapSlicerCacheRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRange>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRange), 0, 0, version: FileFormatVersions.Office2010)
@@ -10869,7 +10869,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OlapSlicerCacheRanges &lt;x14:ranges></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRanges" /> <c>&lt;x14:ranges></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -10993,7 +10993,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "level");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<OlapSlicerCacheRanges>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRanges>();
             builder.AddElement<OlapSlicerCacheLevelData>()
 .AddAttribute(0, "uniqueName", a => a.UniqueName, aBuilder =>
 {
@@ -11020,9 +11020,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public OlapSlicerCacheRanges? OlapSlicerCacheRanges
+        public DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRanges? OlapSlicerCacheRanges
         {
-            get => GetElement<OlapSlicerCacheRanges>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRanges>();
             set => SetElement(value);
         }
 
@@ -11038,7 +11038,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OlapSlicerCacheLevelData &lt;x14:level></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheLevelData" /> <c>&lt;x14:level></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -11098,7 +11098,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "levels");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<OlapSlicerCacheLevelData>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheLevelData>();
             builder.AddElement<OlapSlicerCacheLevelsData>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -11119,7 +11119,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OlapSlicerCacheSelection &lt;x14:selection></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSelection" /> <c>&lt;x14:selection></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -11179,7 +11179,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "selections");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<OlapSlicerCacheSelection>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSelection>();
             builder.AddElement<OlapSlicerCacheSelections>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -11200,7 +11200,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OlapSlicerCacheItemParent &lt;x14:p></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItemParent" /> <c>&lt;x14:p></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -11260,7 +11260,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "selection");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<OlapSlicerCacheItemParent>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItemParent>();
             builder.AddElement<OlapSlicerCacheSelection>()
 .AddAttribute(0, "n", a => a.Name, aBuilder =>
 {
@@ -11284,7 +11284,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TabularSlicerCacheItem &lt;x14:i></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItem" /> <c>&lt;x14:i></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -11344,7 +11344,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "items");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<TabularSlicerCacheItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItem>();
             builder.AddElement<TabularSlicerCacheItems>()
 .AddAttribute(0, "count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -11449,7 +11449,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SlicerCachePivotTable &lt;x14:pivotTable></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable" /> <c>&lt;x14:pivotTable></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -11493,7 +11493,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotTables");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<SlicerCachePivotTable>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable), 1, 0, version: FileFormatVersions.Office2010)
@@ -11512,8 +11512,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OlapSlicerCache &lt;x14:olap></description></item>
-    ///   <item><description>TabularSlicerCache &lt;x14:tabular></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCache" /> <c>&lt;x14:olap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCache" /> <c>&lt;x14:tabular></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -11557,8 +11557,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "data");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<OlapSlicerCache>();
-            builder.AddChild<TabularSlicerCache>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCache>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCache>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCache), 1, 1, version: FileFormatVersions.Office2010),
@@ -11573,9 +11573,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public OlapSlicerCache? OlapSlicerCache
+        public DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCache? OlapSlicerCache
         {
-            get => GetElement<OlapSlicerCache>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCache>();
             set => SetElement(value);
         }
 
@@ -11586,9 +11586,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public TabularSlicerCache? TabularSlicerCache
+        public DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCache? TabularSlicerCache
         {
-            get => GetElement<TabularSlicerCache>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCache>();
             set => SetElement(value);
         }
 
@@ -11604,7 +11604,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.SlicerCacheDefinitionExtension &lt;x:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SlicerCacheDefinitionExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete

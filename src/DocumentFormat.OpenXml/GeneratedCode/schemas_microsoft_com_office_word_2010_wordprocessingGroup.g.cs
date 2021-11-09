@@ -26,15 +26,15 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NonVisualDrawingProperties &lt;wpg:cNvPr></description></item>
-    ///   <item><description>NonVisualGroupDrawingShapeProperties &lt;wpg:cNvGrpSpPr></description></item>
-    ///   <item><description>GroupShapeProperties &lt;wpg:grpSpPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape &lt;wps:wsp></description></item>
-    ///   <item><description>GroupShape &lt;wpg:grpSp></description></item>
-    ///   <item><description>GraphicFrame &lt;wpg:graphicFrame></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Pictures.Picture &lt;pic:pic></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.ContentPart &lt;w14:contentPart></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;wpg:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GroupShapeProperties" /> <c>&lt;wpg:grpSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties" /> <c>&lt;wpg:cNvPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGroupDrawingShapeProperties" /> <c>&lt;wpg:cNvGrpSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList" /> <c>&lt;wpg:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Pictures.Picture" /> <c>&lt;pic:pic></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.ContentPart" /> <c>&lt;w14:contentPart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GraphicFrame" /> <c>&lt;wpg:graphicFrame></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GroupShape" /> <c>&lt;wpg:grpSp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape" /> <c>&lt;wps:wsp></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -107,15 +107,15 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NonVisualDrawingProperties &lt;wpg:cNvPr></description></item>
-    ///   <item><description>NonVisualGroupDrawingShapeProperties &lt;wpg:cNvGrpSpPr></description></item>
-    ///   <item><description>GroupShapeProperties &lt;wpg:grpSpPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape &lt;wps:wsp></description></item>
-    ///   <item><description>GroupShape &lt;wpg:grpSp></description></item>
-    ///   <item><description>GraphicFrame &lt;wpg:graphicFrame></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Pictures.Picture &lt;pic:pic></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.ContentPart &lt;w14:contentPart></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;wpg:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GroupShapeProperties" /> <c>&lt;wpg:grpSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties" /> <c>&lt;wpg:cNvPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGroupDrawingShapeProperties" /> <c>&lt;wpg:cNvGrpSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList" /> <c>&lt;wpg:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Pictures.Picture" /> <c>&lt;pic:pic></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.ContentPart" /> <c>&lt;w14:contentPart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GraphicFrame" /> <c>&lt;wpg:graphicFrame></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GroupShape" /> <c>&lt;wpg:grpSp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape" /> <c>&lt;wps:wsp></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -188,15 +188,15 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NonVisualDrawingProperties &lt;wpg:cNvPr></description></item>
-    ///   <item><description>NonVisualGroupDrawingShapeProperties &lt;wpg:cNvGrpSpPr></description></item>
-    ///   <item><description>GroupShapeProperties &lt;wpg:grpSpPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape &lt;wps:wsp></description></item>
-    ///   <item><description>GroupShape &lt;wpg:grpSp></description></item>
-    ///   <item><description>GraphicFrame &lt;wpg:graphicFrame></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Pictures.Picture &lt;pic:pic></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.ContentPart &lt;w14:contentPart></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;wpg:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GroupShapeProperties" /> <c>&lt;wpg:grpSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties" /> <c>&lt;wpg:cNvPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGroupDrawingShapeProperties" /> <c>&lt;wpg:cNvGrpSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList" /> <c>&lt;wpg:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Pictures.Picture" /> <c>&lt;pic:pic></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.ContentPart" /> <c>&lt;w14:contentPart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GraphicFrame" /> <c>&lt;wpg:graphicFrame></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GroupShape" /> <c>&lt;wpg:grpSp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape" /> <c>&lt;wps:wsp></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class WordprocessingGroupType : OpenXmlCompositeElement
@@ -235,15 +235,15 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<NonVisualDrawingProperties>();
-            builder.AddChild<NonVisualGroupDrawingShapeProperties>();
-            builder.AddChild<GroupShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape>();
-            builder.AddChild<GroupShape>();
-            builder.AddChild<GraphicFrame>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GroupShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGroupDrawingShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Pictures.Picture>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ContentPart>();
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GraphicFrame>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GroupShape>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape>();
         }
 
         /// <summary>
@@ -253,9 +253,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// <remark>
         /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
         /// </remark>
-        public NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -266,9 +266,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// <remark>
         /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
         /// </remark>
-        public NonVisualGroupDrawingShapeProperties? NonVisualGroupDrawingShapeProperties
+        public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGroupDrawingShapeProperties? NonVisualGroupDrawingShapeProperties
         {
-            get => GetElement<NonVisualGroupDrawingShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGroupDrawingShapeProperties>();
             set => SetElement(value);
         }
 
@@ -279,9 +279,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// <remark>
         /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
         /// </remark>
-        public GroupShapeProperties? GroupShapeProperties
+        public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GroupShapeProperties? GroupShapeProperties
         {
-            get => GetElement<GroupShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GroupShapeProperties>();
             set => SetElement(value);
         }
     }
@@ -294,9 +294,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HyperlinkOnClick &lt;a:hlinkClick></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HyperlinkOnHover &lt;a:hlinkHover></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnClick" /> <c>&lt;a:hlinkClick></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnHover" /> <c>&lt;a:hlinkHover></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -494,8 +494,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GraphicFrameLocks &lt;a:graphicFrameLocks></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GraphicFrameLocks" /> <c>&lt;a:graphicFrameLocks></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -586,8 +586,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Offset &lt;a:off></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Extents &lt;a:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Offset" /> <c>&lt;a:off></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -730,7 +730,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -799,8 +799,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GroupShapeLocks &lt;a:grpSpLocks></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GroupShapeLocks" /> <c>&lt;a:grpSpLocks></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -891,17 +891,17 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.TransformGroup &lt;a:xfrm></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.NoFill &lt;a:noFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SolidFill &lt;a:solidFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GradientFill &lt;a:gradFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BlipFill &lt;a:blipFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PatternFill &lt;a:pattFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GroupFill &lt;a:grpFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectList &lt;a:effectLst></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectDag &lt;a:effectDag></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Scene3DType &lt;a:scene3d></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectDag" /> <c>&lt;a:effectDag></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectList" /> <c>&lt;a:effectLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GradientFill" /> <c>&lt;a:gradFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GroupFill" /> <c>&lt;a:grpFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TransformGroup" /> <c>&lt;a:xfrm></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoFill" /> <c>&lt;a:noFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Scene3DType" /> <c>&lt;a:scene3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -961,17 +961,17 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(60, "grpSpPr");
             builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.TransformGroup>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddElement<GroupShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
@@ -1030,11 +1030,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NonVisualDrawingProperties &lt;wpg:cNvPr></description></item>
-    ///   <item><description>NonVisualGraphicFrameProperties &lt;wpg:cNvFrPr></description></item>
-    ///   <item><description>Transform2D &lt;wpg:xfrm></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Graphic &lt;a:graphic></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;wpg:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Graphic" /> <c>&lt;a:graphic></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties" /> <c>&lt;wpg:cNvPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties" /> <c>&lt;wpg:cNvFrPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList" /> <c>&lt;wpg:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D" /> <c>&lt;wpg:xfrm></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1078,11 +1078,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(60, "graphicFrame");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<NonVisualDrawingProperties>();
-            builder.AddChild<NonVisualGraphicFrameProperties>();
-            builder.AddChild<Transform2D>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Graphic>();
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties), 1, 1, version: FileFormatVersions.Office2010),
@@ -1100,9 +1100,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
         /// </remark>
-        public NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -1113,9 +1113,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
         /// </remark>
-        public NonVisualGraphicFrameProperties? NonVisualGraphicFrameProperties
+        public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties? NonVisualGraphicFrameProperties
         {
-            get => GetElement<NonVisualGraphicFrameProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties>();
             set => SetElement(value);
         }
 
@@ -1126,9 +1126,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
         /// </remark>
-        public Transform2D? Transform2D
+        public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D? Transform2D
         {
-            get => GetElement<Transform2D>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D>();
             set => SetElement(value);
         }
 
@@ -1152,9 +1152,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 

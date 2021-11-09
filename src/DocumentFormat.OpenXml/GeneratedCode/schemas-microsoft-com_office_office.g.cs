@@ -24,17 +24,17 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Fill &lt;v:fill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.ImageData &lt;v:imagedata></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Stroke &lt;v:stroke></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.TextBox &lt;v:textbox></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Vml.Shadow &lt;v:shadow></description></item>
-    ///   <item><description>Skew &lt;o:skew></description></item>
-    ///   <item><description>Extrusion &lt;o:extrusion></description></item>
-    ///   <item><description>Callout &lt;o:callout></description></item>
-    ///   <item><description>Lock &lt;o:lock></description></item>
-    ///   <item><description>ColorMostRecentlyUsed &lt;o:colormru></description></item>
-    ///   <item><description>ColorMenu &lt;o:colormenu></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Callout" /> <c>&lt;o:callout></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ColorMenu" /> <c>&lt;o:colormenu></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ColorMostRecentlyUsed" /> <c>&lt;o:colormru></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Extrusion" /> <c>&lt;o:extrusion></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Lock" /> <c>&lt;o:lock></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Skew" /> <c>&lt;o:skew></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Fill" /> <c>&lt;v:fill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.ImageData" /> <c>&lt;v:imagedata></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Shadow" /> <c>&lt;v:shadow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Stroke" /> <c>&lt;v:stroke></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.TextBox" /> <c>&lt;v:textbox></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -249,17 +249,17 @@ namespace DocumentFormat.OpenXml.Vml.Office
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "shapedefaults");
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ColorMenu>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ColorMostRecentlyUsed>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
-            builder.AddChild<Skew>();
-            builder.AddChild<Extrusion>();
-            builder.AddChild<Callout>();
-            builder.AddChild<Lock>();
-            builder.AddChild<ColorMostRecentlyUsed>();
-            builder.AddChild<ColorMenu>();
             builder.AddElement<ShapeDefaults>()
 .AddAttribute(26, "ext", a => a.Extension)
 .AddAttribute(0, "spidmax", a => a.MaxShapeId)
@@ -359,9 +359,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public Skew? Skew
+        public DocumentFormat.OpenXml.Vml.Office.Skew? Skew
         {
-            get => GetElement<Skew>();
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.Skew>();
             set => SetElement(value);
         }
 
@@ -372,9 +372,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public Extrusion? Extrusion
+        public DocumentFormat.OpenXml.Vml.Office.Extrusion? Extrusion
         {
-            get => GetElement<Extrusion>();
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
             set => SetElement(value);
         }
 
@@ -385,9 +385,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public Callout? Callout
+        public DocumentFormat.OpenXml.Vml.Office.Callout? Callout
         {
-            get => GetElement<Callout>();
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.Callout>();
             set => SetElement(value);
         }
 
@@ -398,9 +398,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public Lock? Lock
+        public DocumentFormat.OpenXml.Vml.Office.Lock? Lock
         {
-            get => GetElement<Lock>();
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.Lock>();
             set => SetElement(value);
         }
 
@@ -411,9 +411,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public ColorMostRecentlyUsed? ColorMostRecentlyUsed
+        public DocumentFormat.OpenXml.Vml.Office.ColorMostRecentlyUsed? ColorMostRecentlyUsed
         {
-            get => GetElement<ColorMostRecentlyUsed>();
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.ColorMostRecentlyUsed>();
             set => SetElement(value);
         }
 
@@ -424,9 +424,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public ColorMenu? ColorMenu
+        public DocumentFormat.OpenXml.Vml.Office.ColorMenu? ColorMenu
         {
-            get => GetElement<ColorMenu>();
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.ColorMenu>();
             set => SetElement(value);
         }
 
@@ -442,9 +442,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ShapeIdMap &lt;o:idmap></description></item>
-    ///   <item><description>RegroupTable &lt;o:regrouptable></description></item>
-    ///   <item><description>Rules &lt;o:rules></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ShapeIdMap" /> <c>&lt;o:idmap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.RegroupTable" /> <c>&lt;o:regrouptable></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Rules" /> <c>&lt;o:rules></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -506,9 +506,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "shapelayout");
-            builder.AddChild<ShapeIdMap>();
-            builder.AddChild<RegroupTable>();
-            builder.AddChild<Rules>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ShapeIdMap>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.RegroupTable>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Rules>();
             builder.AddElement<ShapeLayout>()
 .AddAttribute(26, "ext", a => a.Extension);
             builder.Particle = new CompositeParticle.Builder(ParticleType.All, 1, 1)
@@ -526,9 +526,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public ShapeIdMap? ShapeIdMap
+        public DocumentFormat.OpenXml.Vml.Office.ShapeIdMap? ShapeIdMap
         {
-            get => GetElement<ShapeIdMap>();
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.ShapeIdMap>();
             set => SetElement(value);
         }
 
@@ -539,9 +539,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public RegroupTable? RegroupTable
+        public DocumentFormat.OpenXml.Vml.Office.RegroupTable? RegroupTable
         {
-            get => GetElement<RegroupTable>();
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.RegroupTable>();
             set => SetElement(value);
         }
 
@@ -552,9 +552,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public Rules? Rules
+        public DocumentFormat.OpenXml.Vml.Office.Rules? Rules
         {
-            get => GetElement<Rules>();
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.Rules>();
             set => SetElement(value);
         }
 
@@ -900,7 +900,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RelationTable &lt;o:relationtable></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.RelationTable" /> <c>&lt;o:relationtable></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1106,7 +1106,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "diagram");
-            builder.AddChild<RelationTable>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.RelationTable>();
             builder.AddElement<Diagram>()
 .AddAttribute(26, "ext", a => a.Extension)
 .AddAttribute(0, "dgmstyle", a => a.Style)
@@ -1131,9 +1131,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public RelationTable? RelationTable
+        public DocumentFormat.OpenXml.Vml.Office.RelationTable? RelationTable
         {
-            get => GetElement<RelationTable>();
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.RelationTable>();
             set => SetElement(value);
         }
 
@@ -2349,9 +2349,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LinkType &lt;o:LinkType></description></item>
-    ///   <item><description>LockedField &lt;o:LockedField></description></item>
-    ///   <item><description>FieldCodes &lt;o:FieldCodes></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.LinkType" /> <c>&lt;o:LinkType></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.LockedField" /> <c>&lt;o:LockedField></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.FieldCodes" /> <c>&lt;o:FieldCodes></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2509,9 +2509,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "OLEObject");
-            builder.AddChild<LinkType>();
-            builder.AddChild<LockedField>();
-            builder.AddChild<FieldCodes>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.LinkType>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.LockedField>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.FieldCodes>();
             builder.AddElement<OleObject>()
 .AddAttribute(0, "Type", a => a.Type)
 .AddAttribute(0, "ProgID", a => a.ProgId)
@@ -2537,9 +2537,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public LinkType? LinkType
+        public DocumentFormat.OpenXml.Vml.Office.LinkType? LinkType
         {
-            get => GetElement<LinkType>();
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.LinkType>();
             set => SetElement(value);
         }
 
@@ -2550,9 +2550,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public LockedField? LockedField
+        public DocumentFormat.OpenXml.Vml.Office.LockedField? LockedField
         {
-            get => GetElement<LockedField>();
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.LockedField>();
             set => SetElement(value);
         }
 
@@ -2563,9 +2563,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public FieldCodes? FieldCodes
+        public DocumentFormat.OpenXml.Vml.Office.FieldCodes? FieldCodes
         {
-            get => GetElement<FieldCodes>();
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.FieldCodes>();
             set => SetElement(value);
         }
 
@@ -3443,7 +3443,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Entry &lt;o:entry></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Entry" /> <c>&lt;o:entry></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3505,7 +3505,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "regrouptable");
-            builder.AddChild<Entry>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Entry>();
             builder.AddElement<RegroupTable>()
 .AddAttribute(26, "ext", a => a.Extension);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -3526,7 +3526,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Rule &lt;o:r></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Rule" /> <c>&lt;o:r></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3588,7 +3588,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "rules");
-            builder.AddChild<Rule>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Rule>();
             builder.AddElement<Rules>()
 .AddAttribute(26, "ext", a => a.Extension);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -3671,7 +3671,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Proxy &lt;o:proxy></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Proxy" /> <c>&lt;o:proxy></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3778,7 +3778,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "r");
-            builder.AddChild<Proxy>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Proxy>();
             builder.AddElement<Rule>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -3808,7 +3808,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Relation &lt;o:rel></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Relation" /> <c>&lt;o:rel></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3870,7 +3870,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "relationtable");
-            builder.AddChild<Relation>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Relation>();
             builder.AddElement<RelationTable>()
 .AddAttribute(26, "ext", a => a.Extension);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)

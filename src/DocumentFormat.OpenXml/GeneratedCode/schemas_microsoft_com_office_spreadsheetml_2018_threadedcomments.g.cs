@@ -23,8 +23,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Person &lt;xltc:person></description></item>
-    ///   <item><description>ExtensionList &lt;xltc:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList" /> <c>&lt;xltc:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Person" /> <c>&lt;xltc:person></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -68,8 +68,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
             base.ConfigureMetadata(builder);
             builder.SetSchema(104, "personList");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<Person>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Person>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Person), 0, 0, version: FileFormatVersions.Office2019),
@@ -120,8 +120,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ThreadedComment &lt;xltc:threadedComment></description></item>
-    ///   <item><description>ExtensionList &lt;xltc:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList" /> <c>&lt;xltc:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedComment" /> <c>&lt;xltc:threadedComment></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -165,8 +165,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
             base.ConfigureMetadata(builder);
             builder.SetSchema(104, "ThreadedComments");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<ThreadedComment>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedComment>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedComment), 0, 0, version: FileFormatVersions.Office2019),
@@ -217,7 +217,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;xltc:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList" /> <c>&lt;xltc:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -325,7 +325,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
             base.ConfigureMetadata(builder);
             builder.SetSchema(104, "person");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList>();
             builder.AddElement<Person>()
 .AddAttribute(0, "displayName", a => a.DisplayName, aBuilder =>
 {
@@ -351,9 +351,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:xltc = http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -369,7 +369,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Extension &lt;x:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -438,9 +438,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ThreadedCommentText &lt;xltc:text></description></item>
-    ///   <item><description>ThreadedCommentMentions &lt;xltc:mentions></description></item>
-    ///   <item><description>ExtensionList &lt;xltc:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList" /> <c>&lt;xltc:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentText" /> <c>&lt;xltc:text></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions" /> <c>&lt;xltc:mentions></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -580,9 +580,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(104, "threadedComment");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<ThreadedCommentText>();
-            builder.AddChild<ThreadedCommentMentions>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentText>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions>();
             builder.AddElement<ThreadedComment>()
 .AddAttribute(0, "ref", a => a.Ref)
 .AddAttribute(0, "dT", a => a.DT)
@@ -616,9 +616,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:xltc = http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments
         /// </remark>
-        public ThreadedCommentText? ThreadedCommentText
+        public DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentText? ThreadedCommentText
         {
-            get => GetElement<ThreadedCommentText>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentText>();
             set => SetElement(value);
         }
 
@@ -629,9 +629,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:xltc = http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments
         /// </remark>
-        public ThreadedCommentMentions? ThreadedCommentMentions
+        public DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions? ThreadedCommentMentions
         {
-            get => GetElement<ThreadedCommentMentions>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions>();
             set => SetElement(value);
         }
 
@@ -642,9 +642,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:xltc = http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -701,7 +701,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Mention &lt;xltc:mention></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Mention" /> <c>&lt;xltc:mention></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -745,7 +745,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(104, "mentions");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<Mention>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Mention>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Mention), 0, 0, version: FileFormatVersions.Office2019)

@@ -23,21 +23,21 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Transform2D &lt;a:xfrm></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.CustomGeometry &lt;a:custGeom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetGeometry &lt;a:prstGeom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.NoFill &lt;a:noFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SolidFill &lt;a:solidFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GradientFill &lt;a:gradFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BlipFill &lt;a:blipFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PatternFill &lt;a:pattFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GroupFill &lt;a:grpFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Outline &lt;a:ln></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectList &lt;a:effectLst></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectDag &lt;a:effectDag></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Scene3DType &lt;a:scene3d></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Shape3DType &lt;a:sp3d></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.CustomGeometry" /> <c>&lt;a:custGeom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectDag" /> <c>&lt;a:effectDag></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectList" /> <c>&lt;a:effectLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GradientFill" /> <c>&lt;a:gradFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GroupFill" /> <c>&lt;a:grpFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Outline" /> <c>&lt;a:ln></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoFill" /> <c>&lt;a:noFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetGeometry" /> <c>&lt;a:prstGeom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Scene3DType" /> <c>&lt;a:scene3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Shape3DType" /> <c>&lt;a:sp3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -97,21 +97,21 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
             base.ConfigureMetadata(builder);
             builder.SetSchema(109, "spPr");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddElement<ShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
@@ -180,17 +180,17 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties &lt;a:defPPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties &lt;a:lvl1pPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties &lt;a:lvl2pPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties &lt;a:lvl3pPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties &lt;a:lvl4pPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties &lt;a:lvl5pPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties &lt;a:lvl6pPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties &lt;a:lvl7pPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties &lt;a:lvl8pPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties &lt;a:lvl9pPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties" /> <c>&lt;a:defPPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties" /> <c>&lt;a:lvl1pPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties" /> <c>&lt;a:lvl2pPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties" /> <c>&lt;a:lvl3pPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties" /> <c>&lt;a:lvl4pPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties" /> <c>&lt;a:lvl5pPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties" /> <c>&lt;a:lvl6pPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties" /> <c>&lt;a:lvl7pPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties" /> <c>&lt;a:lvl8pPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties" /> <c>&lt;a:lvl9pPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -234,6 +234,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(109, "lstStyle");
             builder.Availability = FileFormatVersions.Office2019;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties>();
@@ -244,7 +245,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),

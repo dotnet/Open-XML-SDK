@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RevExHeader &lt;xr:hdr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExHeader" /> <c>&lt;xr:hdr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -135,7 +135,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "revHdrs");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<RevExHeader>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExHeader>();
             builder.AddElement<RevExHeaders>()
 .AddAttribute(0, "minRev", a => a.MinRev, aBuilder =>
 {
@@ -171,20 +171,20 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RevExFuture &lt;xr:xrrftr></description></item>
-    ///   <item><description>RevExUnsupported &lt;xr:xrrUspt></description></item>
-    ///   <item><description>RevExTrimmed &lt;xr:xrrTrim></description></item>
-    ///   <item><description>RevExRowColumn &lt;xr:xrrrc></description></item>
-    ///   <item><description>RevExMove &lt;xr:xrrm></description></item>
-    ///   <item><description>RevExChangeCell &lt;xr:xrrc></description></item>
-    ///   <item><description>RevExFormatting &lt;xr:xrrf></description></item>
-    ///   <item><description>RevExDefinedName &lt;xr:xrrDefName></description></item>
-    ///   <item><description>RevExDelObj &lt;xr:xrrdo></description></item>
-    ///   <item><description>RevExChgObj &lt;xr:xrrco></description></item>
-    ///   <item><description>RevExSheetOp &lt;xr:xrrSheet></description></item>
-    ///   <item><description>RevisionList &lt;xr:xrrList></description></item>
-    ///   <item><description>RevListAutoExpandRw &lt;xr:xrrListExpR></description></item>
-    ///   <item><description>RevGroup &lt;xr:xrrg></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExChangeCell" /> <c>&lt;xr:xrrc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExChgObj" /> <c>&lt;xr:xrrco></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExDefinedName" /> <c>&lt;xr:xrrDefName></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExDelObj" /> <c>&lt;xr:xrrdo></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExFormatting" /> <c>&lt;xr:xrrf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExFuture" /> <c>&lt;xr:xrrftr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExMove" /> <c>&lt;xr:xrrm></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExRowColumn" /> <c>&lt;xr:xrrrc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExSheetOp" /> <c>&lt;xr:xrrSheet></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExTrimmed" /> <c>&lt;xr:xrrTrim></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExUnsupported" /> <c>&lt;xr:xrrUspt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevGroup" /> <c>&lt;xr:xrrg></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevisionList" /> <c>&lt;xr:xrrList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevListAutoExpandRw" /> <c>&lt;xr:xrrListExpR></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -228,20 +228,20 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "revStream");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<RevExFuture>();
-            builder.AddChild<RevExUnsupported>();
-            builder.AddChild<RevExTrimmed>();
-            builder.AddChild<RevExRowColumn>();
-            builder.AddChild<RevExMove>();
-            builder.AddChild<RevExChangeCell>();
-            builder.AddChild<RevExFormatting>();
-            builder.AddChild<RevExDefinedName>();
-            builder.AddChild<RevExDelObj>();
-            builder.AddChild<RevExChgObj>();
-            builder.AddChild<RevExSheetOp>();
-            builder.AddChild<RevisionList>();
-            builder.AddChild<RevListAutoExpandRw>();
-            builder.AddChild<RevGroup>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExChangeCell>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExChgObj>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExDefinedName>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExDelObj>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExFormatting>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExFuture>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExMove>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExRowColumn>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExSheetOp>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExTrimmed>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExUnsupported>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevGroup>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevisionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevListAutoExpandRw>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExFuture), 0, 0, version: FileFormatVersions.Office2016),
@@ -273,13 +273,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Font &lt;x:font></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.NumberingFormat &lt;x:numFmt></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Fill &lt;x:fill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Alignment &lt;x:alignment></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Border &lt;x:border></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Protection &lt;x:protection></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Alignment" /> <c>&lt;x:alignment></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Protection" /> <c>&lt;x:protection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Fill" /> <c>&lt;x:fill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -323,13 +323,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "dxf");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Font>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Border>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Protection>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Fill>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Font>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0, 1),
@@ -514,12 +514,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DataValidation &lt;xr:dataValidation></description></item>
-    ///   <item><description>Hyperlink &lt;xr:hyperlink></description></item>
-    ///   <item><description>SparklineGroup &lt;xr:sparklineGroup></description></item>
-    ///   <item><description>Comments &lt;xr:comments></description></item>
-    ///   <item><description>AutoFilter &lt;xr:autoFilter></description></item>
-    ///   <item><description>pivotTableDefinition &lt;xr:pivotTableDefinition></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.AutoFilter" /> <c>&lt;xr:autoFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.Comments" /> <c>&lt;xr:comments></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.DataValidation" /> <c>&lt;xr:dataValidation></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.Hyperlink" /> <c>&lt;xr:hyperlink></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.pivotTableDefinition" /> <c>&lt;xr:pivotTableDefinition></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.SparklineGroup" /> <c>&lt;xr:sparklineGroup></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -563,12 +563,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "objectState");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DataValidation>();
-            builder.AddChild<Hyperlink>();
-            builder.AddChild<SparklineGroup>();
-            builder.AddChild<Comments>();
-            builder.AddChild<AutoFilter>();
-            builder.AddChild<pivotTableDefinition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.AutoFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.Comments>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.DataValidation>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.Hyperlink>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.pivotTableDefinition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.SparklineGroup>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.DataValidation), 1, 1, version: FileFormatVersions.Office2016),
@@ -587,9 +587,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public DataValidation? DataValidation
+        public DocumentFormat.OpenXml.Office2016.Excel.DataValidation? DataValidation
         {
-            get => GetElement<DataValidation>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.DataValidation>();
             set => SetElement(value);
         }
 
@@ -600,9 +600,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public Hyperlink? Hyperlink
+        public DocumentFormat.OpenXml.Office2016.Excel.Hyperlink? Hyperlink
         {
-            get => GetElement<Hyperlink>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.Hyperlink>();
             set => SetElement(value);
         }
 
@@ -613,9 +613,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public SparklineGroup? SparklineGroup
+        public DocumentFormat.OpenXml.Office2016.Excel.SparklineGroup? SparklineGroup
         {
-            get => GetElement<SparklineGroup>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.SparklineGroup>();
             set => SetElement(value);
         }
 
@@ -626,9 +626,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public Comments? Comments
+        public DocumentFormat.OpenXml.Office2016.Excel.Comments? Comments
         {
-            get => GetElement<Comments>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.Comments>();
             set => SetElement(value);
         }
 
@@ -639,9 +639,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public AutoFilter? AutoFilter
+        public DocumentFormat.OpenXml.Office2016.Excel.AutoFilter? AutoFilter
         {
-            get => GetElement<AutoFilter>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.AutoFilter>();
             set => SetElement(value);
         }
 
@@ -652,9 +652,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public pivotTableDefinition? pivotTableDefinition
+        public DocumentFormat.OpenXml.Office2016.Excel.pivotTableDefinition? pivotTableDefinition
         {
-            get => GetElement<pivotTableDefinition>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.pivotTableDefinition>();
             set => SetElement(value);
         }
 
@@ -776,7 +776,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RevExTest &lt;xr:xrrtest></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExTest" /> <c>&lt;xr:xrrtest></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -916,7 +916,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "xrrftr");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<RevExTest>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExTest>();
             builder.AddElement<RevExFuture>()
 .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
 {
@@ -1585,8 +1585,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RevCell &lt;xr:c></description></item>
-    ///   <item><description>ChangeCellSubEdit &lt;xr:ccse></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.ChangeCellSubEdit" /> <c>&lt;xr:ccse></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevCell" /> <c>&lt;xr:c></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1790,8 +1790,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "xrrc");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<RevCell>();
-            builder.AddChild<ChangeCellSubEdit>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.ChangeCellSubEdit>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevCell>();
             builder.AddElement<RevExChangeCell>()
 .AddAttribute(0, "listUid", a => a.ListUid, aBuilder =>
 {
@@ -1842,8 +1842,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DifferentialFormatType &lt;xr:dxf></description></item>
-    ///   <item><description>ExtensionList &lt;xr:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType" /> <c>&lt;xr:dxf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.ExtensionList" /> <c>&lt;xr:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2191,8 +2191,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "xrrf");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DifferentialFormatType>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.ExtensionList>();
             builder.AddElement<RevExFormatting>()
 .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
 {
@@ -2247,9 +2247,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public DifferentialFormatType? DifferentialFormatType
+        public DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType? DifferentialFormatType
         {
-            get => GetElement<DifferentialFormatType>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType>();
             set => SetElement(value);
         }
 
@@ -2260,9 +2260,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2016.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -2278,8 +2278,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>FormulaFormula &lt;xr:formula></description></item>
-    ///   <item><description>ExtensionList &lt;xr:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.ExtensionList" /> <c>&lt;xr:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula" /> <c>&lt;xr:formula></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2579,8 +2579,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "xrrDefName");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<FormulaFormula>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula>();
             builder.AddElement<RevExDefinedName>()
 .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
 {
@@ -2629,9 +2629,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public FormulaFormula? FormulaFormula
+        public DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula? FormulaFormula
         {
-            get => GetElement<FormulaFormula>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula>();
             set => SetElement(value);
         }
 
@@ -2642,9 +2642,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2016.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -2660,7 +2660,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>StateBasedHeader &lt;xr:hdr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader" /> <c>&lt;xr:hdr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2784,7 +2784,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "xrrdo");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<StateBasedHeader>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader>();
             builder.AddElement<RevExDelObj>()
 .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
 {
@@ -2818,9 +2818,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public StateBasedHeader? StateBasedHeader
+        public DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader? StateBasedHeader
         {
-            get => GetElement<StateBasedHeader>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader>();
             set => SetElement(value);
         }
 
@@ -2836,9 +2836,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>StateBasedHeader &lt;xr:hdr></description></item>
-    ///   <item><description>RevisionStateLink &lt;xr:link></description></item>
-    ///   <item><description>RevisionState &lt;xr:body></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevisionState" /> <c>&lt;xr:body></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevisionStateLink" /> <c>&lt;xr:link></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader" /> <c>&lt;xr:hdr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2962,9 +2962,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "xrrco");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<StateBasedHeader>();
-            builder.AddChild<RevisionStateLink>();
-            builder.AddChild<RevisionState>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevisionState>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevisionStateLink>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader>();
             builder.AddElement<RevExChgObj>()
 .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
 {
@@ -3003,9 +3003,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public StateBasedHeader? StateBasedHeader
+        public DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader? StateBasedHeader
         {
-            get => GetElement<StateBasedHeader>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader>();
             set => SetElement(value);
         }
 
@@ -3659,19 +3659,19 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RevExFuture &lt;xr:xrrftr></description></item>
-    ///   <item><description>RevExUnsupported &lt;xr:xrrUspt></description></item>
-    ///   <item><description>RevExTrimmed &lt;xr:xrrTrim></description></item>
-    ///   <item><description>RevExRowColumn &lt;xr:xrrrc></description></item>
-    ///   <item><description>RevExMove &lt;xr:xrrm></description></item>
-    ///   <item><description>RevExChangeCell &lt;xr:xrrc></description></item>
-    ///   <item><description>RevExFormatting &lt;xr:xrrf></description></item>
-    ///   <item><description>RevExDefinedName &lt;xr:xrrDefName></description></item>
-    ///   <item><description>RevExDelObj &lt;xr:xrrdo></description></item>
-    ///   <item><description>RevExChgObj &lt;xr:xrrco></description></item>
-    ///   <item><description>RevExSheetOp &lt;xr:xrrSheet></description></item>
-    ///   <item><description>RevisionList &lt;xr:xrrList></description></item>
-    ///   <item><description>RevListAutoExpandRw &lt;xr:xrrListExpR></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExChangeCell" /> <c>&lt;xr:xrrc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExChgObj" /> <c>&lt;xr:xrrco></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExDefinedName" /> <c>&lt;xr:xrrDefName></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExDelObj" /> <c>&lt;xr:xrrdo></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExFormatting" /> <c>&lt;xr:xrrf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExFuture" /> <c>&lt;xr:xrrftr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExMove" /> <c>&lt;xr:xrrm></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExRowColumn" /> <c>&lt;xr:xrrrc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExSheetOp" /> <c>&lt;xr:xrrSheet></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExTrimmed" /> <c>&lt;xr:xrrTrim></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExUnsupported" /> <c>&lt;xr:xrrUspt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevisionList" /> <c>&lt;xr:xrrList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevListAutoExpandRw" /> <c>&lt;xr:xrrListExpR></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3795,19 +3795,19 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "xrrg");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<RevExFuture>();
-            builder.AddChild<RevExUnsupported>();
-            builder.AddChild<RevExTrimmed>();
-            builder.AddChild<RevExRowColumn>();
-            builder.AddChild<RevExMove>();
-            builder.AddChild<RevExChangeCell>();
-            builder.AddChild<RevExFormatting>();
-            builder.AddChild<RevExDefinedName>();
-            builder.AddChild<RevExDelObj>();
-            builder.AddChild<RevExChgObj>();
-            builder.AddChild<RevExSheetOp>();
-            builder.AddChild<RevisionList>();
-            builder.AddChild<RevListAutoExpandRw>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExChangeCell>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExChgObj>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExDefinedName>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExDelObj>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExFormatting>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExFuture>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExMove>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExRowColumn>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExSheetOp>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExTrimmed>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExUnsupported>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevisionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevListAutoExpandRw>();
             builder.AddElement<RevGroup>()
 .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
 {
@@ -3886,9 +3886,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>FFormula &lt;xr:f></description></item>
-    ///   <item><description>Xstring &lt;xr:v></description></item>
-    ///   <item><description>RstType &lt;xr:is></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RstType" /> <c>&lt;xr:is></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.FFormula" /> <c>&lt;xr:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.Xstring" /> <c>&lt;xr:v></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3996,9 +3996,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "c");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<FFormula>();
-            builder.AddChild<Xstring>();
-            builder.AddChild<RstType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RstType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.FFormula>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.Xstring>();
             builder.AddElement<RevCell>()
 .AddAttribute(0, "t", a => a.T)
 .AddAttribute(0, "nop", a => a.Nop)
@@ -4019,9 +4019,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public FFormula? FFormula
+        public DocumentFormat.OpenXml.Office2016.Excel.FFormula? FFormula
         {
-            get => GetElement<FFormula>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.FFormula>();
             set => SetElement(value);
         }
 
@@ -4032,9 +4032,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public Xstring? Xstring
+        public DocumentFormat.OpenXml.Office2016.Excel.Xstring? Xstring
         {
-            get => GetElement<Xstring>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.Xstring>();
             set => SetElement(value);
         }
 
@@ -4045,9 +4045,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public RstType? RstType
+        public DocumentFormat.OpenXml.Office2016.Excel.RstType? RstType
         {
-            get => GetElement<RstType>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.RstType>();
             set => SetElement(value);
         }
 
@@ -4063,7 +4063,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RevCell &lt;xr:c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevCell" /> <c>&lt;xr:c></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4171,7 +4171,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "ccse");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<RevCell>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevCell>();
             builder.AddElement<ChangeCellSubEdit>()
 .AddAttribute(0, "r", a => a.R, aBuilder =>
 {
@@ -4198,7 +4198,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Extension &lt;x:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4349,7 +4349,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RefMap &lt;xr:refmap></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RefMap" /> <c>&lt;xr:refmap></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4473,7 +4473,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "hdr");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<RefMap>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RefMap>();
             builder.AddElement<StateBasedHeader>()
 .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
 {
@@ -4500,9 +4500,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public RefMap? RefMap
+        public DocumentFormat.OpenXml.Office2016.Excel.RefMap? RefMap
         {
-            get => GetElement<RefMap>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.RefMap>();
             set => SetElement(value);
         }
 
@@ -4570,11 +4570,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RowColVisualOps &lt;xr:rowColVisualOps></description></item>
-    ///   <item><description>HideUnhideSheet &lt;xr:hideUnhideSheet></description></item>
-    ///   <item><description>ShowGridlinesHeadings &lt;xr:showGridlinesHeadings></description></item>
-    ///   <item><description>FreezePanes &lt;xr:freezePanes></description></item>
-    ///   <item><description>Outlines &lt;xr:outlines></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.FreezePanes" /> <c>&lt;xr:freezePanes></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.HideUnhideSheet" /> <c>&lt;xr:hideUnhideSheet></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.Outlines" /> <c>&lt;xr:outlines></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOps" /> <c>&lt;xr:rowColVisualOps></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.ShowGridlinesHeadings" /> <c>&lt;xr:showGridlinesHeadings></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4618,11 +4618,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "body");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<RowColVisualOps>();
-            builder.AddChild<HideUnhideSheet>();
-            builder.AddChild<ShowGridlinesHeadings>();
-            builder.AddChild<FreezePanes>();
-            builder.AddChild<Outlines>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.FreezePanes>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.HideUnhideSheet>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.Outlines>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOps>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.ShowGridlinesHeadings>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOps), 0, 1, version: FileFormatVersions.Office2016),
@@ -4640,9 +4640,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public RowColVisualOps? RowColVisualOps
+        public DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOps? RowColVisualOps
         {
-            get => GetElement<RowColVisualOps>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOps>();
             set => SetElement(value);
         }
 
@@ -4653,9 +4653,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public HideUnhideSheet? HideUnhideSheet
+        public DocumentFormat.OpenXml.Office2016.Excel.HideUnhideSheet? HideUnhideSheet
         {
-            get => GetElement<HideUnhideSheet>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.HideUnhideSheet>();
             set => SetElement(value);
         }
 
@@ -4666,9 +4666,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public ShowGridlinesHeadings? ShowGridlinesHeadings
+        public DocumentFormat.OpenXml.Office2016.Excel.ShowGridlinesHeadings? ShowGridlinesHeadings
         {
-            get => GetElement<ShowGridlinesHeadings>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.ShowGridlinesHeadings>();
             set => SetElement(value);
         }
 
@@ -4679,9 +4679,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public FreezePanes? FreezePanes
+        public DocumentFormat.OpenXml.Office2016.Excel.FreezePanes? FreezePanes
         {
-            get => GetElement<FreezePanes>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.FreezePanes>();
             set => SetElement(value);
         }
 
@@ -4692,9 +4692,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public Outlines? Outlines
+        public DocumentFormat.OpenXml.Office2016.Excel.Outlines? Outlines
         {
-            get => GetElement<Outlines>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.Outlines>();
             set => SetElement(value);
         }
 
@@ -4710,11 +4710,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RefCell &lt;xr:ref></description></item>
-    ///   <item><description>SheetXluid &lt;xr:sheetUid></description></item>
-    ///   <item><description>RefOartAnchor &lt;xr:oartAnchor></description></item>
-    ///   <item><description>RefFuture &lt;xr:future></description></item>
-    ///   <item><description>RefTest &lt;xr:test></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RefCell" /> <c>&lt;xr:ref></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RefFuture" /> <c>&lt;xr:future></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RefOartAnchor" /> <c>&lt;xr:oartAnchor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RefTest" /> <c>&lt;xr:test></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.SheetXluid" /> <c>&lt;xr:sheetUid></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4758,11 +4758,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "refmap");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<RefCell>();
-            builder.AddChild<SheetXluid>();
-            builder.AddChild<RefOartAnchor>();
-            builder.AddChild<RefFuture>();
-            builder.AddChild<RefTest>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RefCell>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RefFuture>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RefOartAnchor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RefTest>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.SheetXluid>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RefCell), 1, 1, version: FileFormatVersions.Office2016),
@@ -5055,7 +5055,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Outline &lt;xr:outline></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.Outline" /> <c>&lt;xr:outline></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5115,7 +5115,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "outlines");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<Outline>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.Outline>();
             builder.AddElement<Outlines>()
 .AddAttribute(0, "isRow", a => a.IsRow, aBuilder =>
 {
@@ -5249,10 +5249,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Text &lt;x:t></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Run &lt;x:r></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.PhoneticRun &lt;x:rPh></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties &lt;x:phoneticPr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties" /> <c>&lt;x:phoneticPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PhoneticRun" /> <c>&lt;x:rPh></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Run" /> <c>&lt;x:r></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Text" /> <c>&lt;x:t></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5296,10 +5296,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "is");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Text>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PhoneticRun>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PhoneticRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Run>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Text>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Text), 0, 1),
@@ -6052,9 +6052,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.ExcelAc.List &lt;x12ac:list></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Formula1 &lt;x:formula1></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Formula2 &lt;x:formula2></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Formula1" /> <c>&lt;x:formula1></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Formula2" /> <c>&lt;x:formula2></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.ExcelAc.List" /> <c>&lt;x12ac:list></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6306,9 +6306,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "dataValidation");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.ExcelAc.List>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formula1>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formula2>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.ExcelAc.List>();
             builder.AddElement<DataValidation>()
 .AddAttribute(0, "type", a => a.Type)
 .AddAttribute(0, "errorStyle", a => a.ErrorStyle)
@@ -6505,16 +6505,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.SeriesColor &lt;x14:colorSeries></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.NegativeColor &lt;x14:colorNegative></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.AxisColor &lt;x14:colorAxis></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.MarkersColor &lt;x14:colorMarkers></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor &lt;x14:colorFirst></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor &lt;x14:colorLast></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor &lt;x14:colorHigh></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor &lt;x14:colorLow></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office.Excel.Formula &lt;xne:f></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.Sparklines &lt;x14:sparklines></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SeriesColor" /> <c>&lt;x14:colorSeries></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.NegativeColor" /> <c>&lt;x14:colorNegative></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.AxisColor" /> <c>&lt;x14:colorAxis></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.MarkersColor" /> <c>&lt;x14:colorMarkers></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor" /> <c>&lt;x14:colorFirst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor" /> <c>&lt;x14:colorLast></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor" /> <c>&lt;x14:colorHigh></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor" /> <c>&lt;x14:colorLow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Sparklines" /> <c>&lt;x14:sparklines></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7015,9 +7015,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Authors &lt;x:authors></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.CommentList &lt;x:commentList></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Authors" /> <c>&lt;x:authors></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CommentList" /> <c>&lt;x:commentList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7123,9 +7123,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.FilterColumn &lt;x:filterColumn></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.SortState &lt;x:sortState></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.ExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FilterColumn" /> <c>&lt;x:filterColumn></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortState" /> <c>&lt;x:sortState></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7185,9 +7185,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "autoFilter");
             builder.Availability = FileFormatVersions.Office2016;
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FilterColumn>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortState>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<AutoFilter>()
 .AddAttribute(0, "ref", a => a.Reference);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -7210,23 +7210,23 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Location &lt;x:location></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.PivotFields &lt;x:pivotFields></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.RowFields &lt;x:rowFields></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.RowItems &lt;x:rowItems></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.ColumnFields &lt;x:colFields></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.ColumnItems &lt;x:colItems></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.PageFields &lt;x:pageFields></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.DataFields &lt;x:dataFields></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Formats &lt;x:formats></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats &lt;x:conditionalFormats></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.ChartFormats &lt;x:chartFormats></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies &lt;x:pivotHierarchies></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle &lt;x:pivotTableStyleInfo></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.PivotFilters &lt;x:filters></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage &lt;x:rowHierarchiesUsage></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage &lt;x:colHierarchiesUsage></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList &lt;x:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ChartFormats" /> <c>&lt;x:chartFormats></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ColumnFields" /> <c>&lt;x:colFields></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage" /> <c>&lt;x:colHierarchiesUsage></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ColumnItems" /> <c>&lt;x:colItems></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats" /> <c>&lt;x:conditionalFormats></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataFields" /> <c>&lt;x:dataFields></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Formats" /> <c>&lt;x:formats></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Location" /> <c>&lt;x:location></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PageFields" /> <c>&lt;x:pageFields></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotFields" /> <c>&lt;x:pivotFields></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotFilters" /> <c>&lt;x:filters></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies" /> <c>&lt;x:pivotHierarchies></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList" /> <c>&lt;x:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle" /> <c>&lt;x:pivotTableStyleInfo></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RowFields" /> <c>&lt;x:rowFields></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage" /> <c>&lt;x:rowHierarchiesUsage></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RowItems" /> <c>&lt;x:rowItems></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8358,23 +8358,23 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "pivotTableDefinition");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Location>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotFields>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowFields>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowItems>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ChartFormats>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColumnFields>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColumnItems>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageFields>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataFields>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formats>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ChartFormats>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Location>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageFields>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotFields>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotFilters>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowFields>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowItems>();
             builder.AddElement<pivotTableDefinition>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {

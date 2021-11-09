@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ActiveXObjectProperty &lt;ax:ocxPr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty" /> <c>&lt;ax:ocxPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -141,7 +141,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(35, "ocx");
-            builder.AddChild<ActiveXObjectProperty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty>();
             builder.AddElement<ActiveXControlData>()
 .AddAttribute(35, "classid", a => a.ActiveXControlClassId, aBuilder =>
 {
@@ -171,8 +171,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SharedComFont &lt;ax:font></description></item>
-    ///   <item><description>SharedComPicture &lt;ax:picture></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.ActiveX.SharedComFont" /> <c>&lt;ax:font></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture" /> <c>&lt;ax:picture></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -253,8 +253,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(35, "ocxPr");
-            builder.AddChild<SharedComFont>();
-            builder.AddChild<SharedComPicture>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.ActiveX.SharedComFont>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture>();
             builder.AddElement<ActiveXObjectProperty>()
 .AddAttribute(35, "name", a => a.Name, aBuilder =>
 {
@@ -278,9 +278,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:ax = http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        public SharedComFont? SharedComFont
+        public DocumentFormat.OpenXml.Office.ActiveX.SharedComFont? SharedComFont
         {
-            get => GetElement<SharedComFont>();
+            get => GetElement<DocumentFormat.OpenXml.Office.ActiveX.SharedComFont>();
             set => SetElement(value);
         }
 
@@ -291,9 +291,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:ax = http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        public SharedComPicture? SharedComPicture
+        public DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture? SharedComPicture
         {
-            get => GetElement<SharedComPicture>();
+            get => GetElement<DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture>();
             set => SetElement(value);
         }
 
@@ -309,7 +309,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ActiveXObjectProperty &lt;ax:ocxPr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty" /> <c>&lt;ax:ocxPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -390,7 +390,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(35, "font");
-            builder.AddChild<ActiveXObjectProperty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty>();
             builder.AddElement<SharedComFont>()
 .AddAttribute(35, "persistence", a => a.Persistence)
 .AddAttribute(19, "id", a => a.Id);

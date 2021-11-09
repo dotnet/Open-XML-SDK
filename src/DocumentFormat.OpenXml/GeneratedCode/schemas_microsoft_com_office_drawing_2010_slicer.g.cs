@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OfficeArtExtensionList &lt;sle:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Slicer.OfficeArtExtensionList" /> <c>&lt;sle:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
             base.ConfigureMetadata(builder);
             builder.SetSchema(62, "slicer");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Slicer.OfficeArtExtensionList>();
             builder.AddElement<Slicer>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -103,9 +103,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:sle = http://schemas.microsoft.com/office/drawing/2010/slicer
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2010.Drawing.Slicer.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Slicer.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -121,7 +121,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete

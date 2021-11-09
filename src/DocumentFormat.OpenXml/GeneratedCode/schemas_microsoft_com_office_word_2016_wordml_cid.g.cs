@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CommentId &lt;w16cid:commentId></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Word.Cid.CommentId" /> <c>&lt;w16cid:commentId></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
             base.ConfigureMetadata(builder);
             builder.SetSchema(116, "commentsIds");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<CommentId>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Word.Cid.CommentId>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Word.Cid.CommentId), 0, 0, version: FileFormatVersions.Office2019)

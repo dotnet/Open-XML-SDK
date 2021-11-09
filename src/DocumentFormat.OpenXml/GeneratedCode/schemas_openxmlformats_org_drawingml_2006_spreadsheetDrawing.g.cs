@@ -25,15 +25,15 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>FromMarker &lt;xdr:from></description></item>
-    ///   <item><description>ToMarker &lt;xdr:to></description></item>
-    ///   <item><description>Shape &lt;xdr:sp></description></item>
-    ///   <item><description>GroupShape &lt;xdr:grpSp></description></item>
-    ///   <item><description>GraphicFrame &lt;xdr:graphicFrame></description></item>
-    ///   <item><description>ConnectionShape &lt;xdr:cxnSp></description></item>
-    ///   <item><description>Picture &lt;xdr:pic></description></item>
-    ///   <item><description>ContentPart &lt;xdr:contentPart></description></item>
-    ///   <item><description>ClientData &lt;xdr:clientData></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData" /> <c>&lt;xdr:clientData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape" /> <c>&lt;xdr:cxnSp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame" /> <c>&lt;xdr:graphicFrame></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape" /> <c>&lt;xdr:grpSp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker" /> <c>&lt;xdr:from></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ToMarker" /> <c>&lt;xdr:to></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture" /> <c>&lt;xdr:pic></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape" /> <c>&lt;xdr:sp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart" /> <c>&lt;xdr:contentPart></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -92,15 +92,15 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "twoCellAnchor");
-            builder.AddChild<FromMarker>();
-            builder.AddChild<ToMarker>();
-            builder.AddChild<Shape>();
-            builder.AddChild<GroupShape>();
-            builder.AddChild<GraphicFrame>();
-            builder.AddChild<ConnectionShape>();
-            builder.AddChild<Picture>();
-            builder.AddChild<ContentPart>();
-            builder.AddChild<ClientData>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ToMarker>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart>();
             builder.AddElement<TwoCellAnchor>()
 .AddAttribute(0, "editAs", a => a.EditAs, aBuilder =>
 {
@@ -136,9 +136,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public FromMarker? FromMarker
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker? FromMarker
         {
-            get => GetElement<FromMarker>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker>();
             set => SetElement(value);
         }
 
@@ -149,9 +149,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public ToMarker? ToMarker
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.ToMarker? ToMarker
         {
-            get => GetElement<ToMarker>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ToMarker>();
             set => SetElement(value);
         }
 
@@ -167,15 +167,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>FromMarker &lt;xdr:from></description></item>
-    ///   <item><description>Extent &lt;xdr:ext></description></item>
-    ///   <item><description>Shape &lt;xdr:sp></description></item>
-    ///   <item><description>GroupShape &lt;xdr:grpSp></description></item>
-    ///   <item><description>GraphicFrame &lt;xdr:graphicFrame></description></item>
-    ///   <item><description>ConnectionShape &lt;xdr:cxnSp></description></item>
-    ///   <item><description>Picture &lt;xdr:pic></description></item>
-    ///   <item><description>ContentPart &lt;xdr:contentPart></description></item>
-    ///   <item><description>ClientData &lt;xdr:clientData></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent" /> <c>&lt;xdr:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData" /> <c>&lt;xdr:clientData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape" /> <c>&lt;xdr:cxnSp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame" /> <c>&lt;xdr:graphicFrame></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape" /> <c>&lt;xdr:grpSp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker" /> <c>&lt;xdr:from></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture" /> <c>&lt;xdr:pic></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape" /> <c>&lt;xdr:sp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart" /> <c>&lt;xdr:contentPart></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -218,15 +218,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "oneCellAnchor");
-            builder.AddChild<FromMarker>();
-            builder.AddChild<Extent>();
-            builder.AddChild<Shape>();
-            builder.AddChild<GroupShape>();
-            builder.AddChild<GraphicFrame>();
-            builder.AddChild<ConnectionShape>();
-            builder.AddChild<Picture>();
-            builder.AddChild<ContentPart>();
-            builder.AddChild<ClientData>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker), 1, 1),
@@ -257,9 +257,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public FromMarker? FromMarker
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker? FromMarker
         {
-            get => GetElement<FromMarker>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker>();
             set => SetElement(value);
         }
 
@@ -270,9 +270,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public Extent? Extent
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent? Extent
         {
-            get => GetElement<Extent>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent>();
             set => SetElement(value);
         }
 
@@ -288,15 +288,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Position &lt;xdr:pos></description></item>
-    ///   <item><description>Extent &lt;xdr:ext></description></item>
-    ///   <item><description>Shape &lt;xdr:sp></description></item>
-    ///   <item><description>GroupShape &lt;xdr:grpSp></description></item>
-    ///   <item><description>GraphicFrame &lt;xdr:graphicFrame></description></item>
-    ///   <item><description>ConnectionShape &lt;xdr:cxnSp></description></item>
-    ///   <item><description>Picture &lt;xdr:pic></description></item>
-    ///   <item><description>ContentPart &lt;xdr:contentPart></description></item>
-    ///   <item><description>ClientData &lt;xdr:clientData></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.Position" /> <c>&lt;xdr:pos></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent" /> <c>&lt;xdr:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData" /> <c>&lt;xdr:clientData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape" /> <c>&lt;xdr:cxnSp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame" /> <c>&lt;xdr:graphicFrame></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape" /> <c>&lt;xdr:grpSp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture" /> <c>&lt;xdr:pic></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape" /> <c>&lt;xdr:sp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart" /> <c>&lt;xdr:contentPart></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -339,15 +339,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "absoluteAnchor");
-            builder.AddChild<Position>();
-            builder.AddChild<Extent>();
-            builder.AddChild<Shape>();
-            builder.AddChild<GroupShape>();
-            builder.AddChild<GraphicFrame>();
-            builder.AddChild<ConnectionShape>();
-            builder.AddChild<Picture>();
-            builder.AddChild<ContentPart>();
-            builder.AddChild<ClientData>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Position>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Position), 1, 1),
@@ -378,9 +378,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public Position? Position
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.Position? Position
         {
-            get => GetElement<Position>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.Position>();
             set => SetElement(value);
         }
 
@@ -391,9 +391,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public Extent? Extent
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent? Extent
         {
-            get => GetElement<Extent>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent>();
             set => SetElement(value);
         }
 
@@ -409,10 +409,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NonVisualShapeProperties &lt;xdr:nvSpPr></description></item>
-    ///   <item><description>ShapeProperties &lt;xdr:spPr></description></item>
-    ///   <item><description>ShapeStyle &lt;xdr:style></description></item>
-    ///   <item><description>TextBody &lt;xdr:txBody></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties" /> <c>&lt;xdr:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle" /> <c>&lt;xdr:style></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody" /> <c>&lt;xdr:txBody></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeProperties" /> <c>&lt;xdr:nvSpPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -519,10 +519,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "sp");
-            builder.AddChild<NonVisualShapeProperties>();
-            builder.AddChild<ShapeProperties>();
-            builder.AddChild<ShapeStyle>();
-            builder.AddChild<TextBody>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeProperties>();
             builder.AddElement<Shape>()
 .AddAttribute(0, "macro", a => a.Macro)
 .AddAttribute(0, "textlink", a => a.TextLink)
@@ -545,9 +545,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualShapeProperties? NonVisualShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeProperties? NonVisualShapeProperties
         {
-            get => GetElement<NonVisualShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeProperties>();
             set => SetElement(value);
         }
 
@@ -558,9 +558,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -571,9 +571,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public ShapeStyle? ShapeStyle
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle? ShapeStyle
         {
-            get => GetElement<ShapeStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle>();
             set => SetElement(value);
         }
 
@@ -584,9 +584,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public TextBody? TextBody
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody? TextBody
         {
-            get => GetElement<TextBody>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody>();
             set => SetElement(value);
         }
 
@@ -602,14 +602,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NonVisualGroupShapeProperties &lt;xdr:nvGrpSpPr></description></item>
-    ///   <item><description>GroupShapeProperties &lt;xdr:grpSpPr></description></item>
-    ///   <item><description>Shape &lt;xdr:sp></description></item>
-    ///   <item><description>GroupShape &lt;xdr:grpSp></description></item>
-    ///   <item><description>GraphicFrame &lt;xdr:graphicFrame></description></item>
-    ///   <item><description>ConnectionShape &lt;xdr:cxnSp></description></item>
-    ///   <item><description>Picture &lt;xdr:pic></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart &lt;xdr14:contentPart></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShapeProperties" /> <c>&lt;xdr:grpSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape" /> <c>&lt;xdr:cxnSp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame" /> <c>&lt;xdr:graphicFrame></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape" /> <c>&lt;xdr:grpSp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeProperties" /> <c>&lt;xdr:nvGrpSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture" /> <c>&lt;xdr:pic></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape" /> <c>&lt;xdr:sp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart" /> <c>&lt;xdr14:contentPart></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -652,13 +652,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "grpSp");
-            builder.AddChild<NonVisualGroupShapeProperties>();
-            builder.AddChild<GroupShapeProperties>();
-            builder.AddChild<Shape>();
-            builder.AddChild<GroupShape>();
-            builder.AddChild<GraphicFrame>();
-            builder.AddChild<ConnectionShape>();
-            builder.AddChild<Picture>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -683,9 +683,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualGroupShapeProperties? NonVisualGroupShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeProperties? NonVisualGroupShapeProperties
         {
-            get => GetElement<NonVisualGroupShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeProperties>();
             set => SetElement(value);
         }
 
@@ -696,9 +696,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public GroupShapeProperties? GroupShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShapeProperties? GroupShapeProperties
         {
-            get => GetElement<GroupShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShapeProperties>();
             set => SetElement(value);
         }
 
@@ -714,9 +714,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NonVisualGraphicFrameProperties &lt;xdr:nvGraphicFramePr></description></item>
-    ///   <item><description>Transform &lt;xdr:xfrm></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Graphic &lt;a:graphic></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Graphic" /> <c>&lt;a:graphic></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.Transform" /> <c>&lt;xdr:xfrm></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties" /> <c>&lt;xdr:nvGraphicFramePr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -791,9 +791,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "graphicFrame");
-            builder.AddChild<NonVisualGraphicFrameProperties>();
-            builder.AddChild<Transform>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Graphic>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Transform>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties>();
             builder.AddElement<GraphicFrame>()
 .AddAttribute(0, "macro", a => a.Macro)
 .AddAttribute(0, "fPublished", a => a.Published);
@@ -813,9 +813,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualGraphicFrameProperties? NonVisualGraphicFrameProperties
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties? NonVisualGraphicFrameProperties
         {
-            get => GetElement<NonVisualGraphicFrameProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties>();
             set => SetElement(value);
         }
 
@@ -826,9 +826,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public Transform? Transform
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.Transform? Transform
         {
-            get => GetElement<Transform>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.Transform>();
             set => SetElement(value);
         }
 
@@ -857,9 +857,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NonVisualConnectionShapeProperties &lt;xdr:nvCxnSpPr></description></item>
-    ///   <item><description>ShapeProperties &lt;xdr:spPr></description></item>
-    ///   <item><description>ShapeStyle &lt;xdr:style></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties" /> <c>&lt;xdr:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle" /> <c>&lt;xdr:style></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties" /> <c>&lt;xdr:nvCxnSpPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -934,9 +934,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "cxnSp");
-            builder.AddChild<NonVisualConnectionShapeProperties>();
-            builder.AddChild<ShapeProperties>();
-            builder.AddChild<ShapeStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties>();
             builder.AddElement<ConnectionShape>()
 .AddAttribute(0, "macro", a => a.Macro)
 .AddAttribute(0, "fPublished", a => a.Published);
@@ -956,9 +956,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualConnectionShapeProperties? NonVisualConnectionShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties? NonVisualConnectionShapeProperties
         {
-            get => GetElement<NonVisualConnectionShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties>();
             set => SetElement(value);
         }
 
@@ -969,9 +969,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -982,9 +982,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public ShapeStyle? ShapeStyle
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle? ShapeStyle
         {
-            get => GetElement<ShapeStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle>();
             set => SetElement(value);
         }
 
@@ -1000,10 +1000,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NonVisualPictureProperties &lt;xdr:nvPicPr></description></item>
-    ///   <item><description>BlipFill &lt;xdr:blipFill></description></item>
-    ///   <item><description>ShapeProperties &lt;xdr:spPr></description></item>
-    ///   <item><description>ShapeStyle &lt;xdr:style></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.BlipFill" /> <c>&lt;xdr:blipFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties" /> <c>&lt;xdr:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle" /> <c>&lt;xdr:style></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureProperties" /> <c>&lt;xdr:nvPicPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1078,10 +1078,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "pic");
-            builder.AddChild<NonVisualPictureProperties>();
-            builder.AddChild<BlipFill>();
-            builder.AddChild<ShapeProperties>();
-            builder.AddChild<ShapeStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureProperties>();
             builder.AddElement<Picture>()
 .AddAttribute(0, "macro", a => a.Macro)
 .AddAttribute(0, "fPublished", a => a.Published);
@@ -1101,9 +1101,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualPictureProperties? NonVisualPictureProperties
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureProperties? NonVisualPictureProperties
         {
-            get => GetElement<NonVisualPictureProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureProperties>();
             set => SetElement(value);
         }
 
@@ -1114,9 +1114,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public BlipFill? BlipFill
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.BlipFill? BlipFill
         {
-            get => GetElement<BlipFill>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.BlipFill>();
             set => SetElement(value);
         }
 
@@ -1127,9 +1127,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -1140,9 +1140,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public ShapeStyle? ShapeStyle
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle? ShapeStyle
         {
-            get => GetElement<ShapeStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle>();
             set => SetElement(value);
         }
 
@@ -1158,10 +1158,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties &lt;xdr14:nvContentPartPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties &lt;xdr14:nvPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D &lt;xdr14:xfrm></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList &lt;xdr14:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList" /> <c>&lt;xdr14:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D" /> <c>&lt;xdr14:xfrm></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties" /> <c>&lt;xdr14:nvPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties" /> <c>&lt;xdr14:nvContentPartPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1240,10 +1240,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "contentPart");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties>();
             builder.AddElement<ContentPart>()
 .AddAttribute(19, "id", a => a.RelationshipId, aBuilder =>
 {
@@ -1326,9 +1326,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TwoCellAnchor &lt;xdr:twoCellAnchor></description></item>
-    ///   <item><description>OneCellAnchor &lt;xdr:oneCellAnchor></description></item>
-    ///   <item><description>AbsoluteAnchor &lt;xdr:absoluteAnchor></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.AbsoluteAnchor" /> <c>&lt;xdr:absoluteAnchor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.OneCellAnchor" /> <c>&lt;xdr:oneCellAnchor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.TwoCellAnchor" /> <c>&lt;xdr:twoCellAnchor></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1371,9 +1371,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "wsDr");
-            builder.AddChild<TwoCellAnchor>();
-            builder.AddChild<OneCellAnchor>();
-            builder.AddChild<AbsoluteAnchor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.AbsoluteAnchor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.OneCellAnchor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.TwoCellAnchor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -1431,8 +1431,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NonVisualDrawingProperties &lt;xdr:cNvPr></description></item>
-    ///   <item><description>NonVisualShapeDrawingProperties &lt;xdr:cNvSpPr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeDrawingProperties" /> <c>&lt;xdr:cNvSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties" /> <c>&lt;xdr:cNvPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1475,8 +1475,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "nvSpPr");
-            builder.AddChild<NonVisualDrawingProperties>();
-            builder.AddChild<NonVisualShapeDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1, 1),
@@ -1491,9 +1491,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -1504,9 +1504,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualShapeDrawingProperties? NonVisualShapeDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeDrawingProperties? NonVisualShapeDrawingProperties
         {
-            get => GetElement<NonVisualShapeDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -1522,21 +1522,21 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Transform2D &lt;a:xfrm></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.CustomGeometry &lt;a:custGeom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetGeometry &lt;a:prstGeom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.NoFill &lt;a:noFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SolidFill &lt;a:solidFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GradientFill &lt;a:gradFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BlipFill &lt;a:blipFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PatternFill &lt;a:pattFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GroupFill &lt;a:grpFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Outline &lt;a:ln></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectList &lt;a:effectLst></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectDag &lt;a:effectDag></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Scene3DType &lt;a:scene3d></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Shape3DType &lt;a:sp3d></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.CustomGeometry" /> <c>&lt;a:custGeom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectDag" /> <c>&lt;a:effectDag></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectList" /> <c>&lt;a:effectLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GradientFill" /> <c>&lt;a:gradFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GroupFill" /> <c>&lt;a:grpFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Outline" /> <c>&lt;a:ln></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoFill" /> <c>&lt;a:noFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetGeometry" /> <c>&lt;a:prstGeom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Scene3DType" /> <c>&lt;a:scene3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Shape3DType" /> <c>&lt;a:sp3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1595,21 +1595,21 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "spPr");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddElement<ShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
@@ -1678,10 +1678,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.LineReference &lt;a:lnRef></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.FillReference &lt;a:fillRef></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectReference &lt;a:effectRef></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.FontReference &lt;a:fontRef></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.FontReference" /> <c>&lt;a:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.LineReference" /> <c>&lt;a:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.FillReference" /> <c>&lt;a:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectReference" /> <c>&lt;a:effectRef></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1724,10 +1724,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "style");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.FontReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.LineReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.FillReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.FontReference>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineReference), 1, 1),
@@ -1801,9 +1801,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BodyProperties &lt;a:bodyPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ListStyle &lt;a:lstStyle></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Paragraph &lt;a:p></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BodyProperties" /> <c>&lt;a:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ListStyle" /> <c>&lt;a:lstStyle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1895,8 +1895,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NonVisualDrawingProperties &lt;xdr:cNvPr></description></item>
-    ///   <item><description>NonVisualConnectorShapeDrawingProperties &lt;xdr:cNvCxnSpPr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectorShapeDrawingProperties" /> <c>&lt;xdr:cNvCxnSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties" /> <c>&lt;xdr:cNvPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1939,8 +1939,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "nvCxnSpPr");
-            builder.AddChild<NonVisualDrawingProperties>();
-            builder.AddChild<NonVisualConnectorShapeDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectorShapeDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1, 1),
@@ -1955,9 +1955,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -1968,9 +1968,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualConnectorShapeDrawingProperties? NonVisualConnectorShapeDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectorShapeDrawingProperties? NonVisualConnectorShapeDrawingProperties
         {
-            get => GetElement<NonVisualConnectorShapeDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectorShapeDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -1986,8 +1986,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NonVisualDrawingProperties &lt;xdr:cNvPr></description></item>
-    ///   <item><description>NonVisualPictureDrawingProperties &lt;xdr:cNvPicPr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureDrawingProperties" /> <c>&lt;xdr:cNvPicPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties" /> <c>&lt;xdr:cNvPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2030,8 +2030,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "nvPicPr");
-            builder.AddChild<NonVisualDrawingProperties>();
-            builder.AddChild<NonVisualPictureDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1, 1),
@@ -2046,9 +2046,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -2059,9 +2059,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualPictureDrawingProperties? NonVisualPictureDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureDrawingProperties? NonVisualPictureDrawingProperties
         {
-            get => GetElement<NonVisualPictureDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -2077,10 +2077,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Blip &lt;a:blip></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SourceRectangle &lt;a:srcRect></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Tile &lt;a:tile></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Stretch &lt;a:stretch></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Blip" /> <c>&lt;a:blip></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SourceRectangle" /> <c>&lt;a:srcRect></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Stretch" /> <c>&lt;a:stretch></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Tile" /> <c>&lt;a:tile></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2141,8 +2141,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(18, "blipFill");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Blip>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SourceRectangle>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Tile>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Stretch>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Tile>();
             builder.AddElement<BlipFill>()
 .AddAttribute(0, "rotWithShape", a => a.RotateWithShape);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -2198,8 +2198,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NonVisualDrawingProperties &lt;xdr:cNvPr></description></item>
-    ///   <item><description>NonVisualGraphicFrameDrawingProperties &lt;xdr:cNvGraphicFramePr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameDrawingProperties" /> <c>&lt;xdr:cNvGraphicFramePr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties" /> <c>&lt;xdr:cNvPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2242,8 +2242,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "nvGraphicFramePr");
-            builder.AddChild<NonVisualDrawingProperties>();
-            builder.AddChild<NonVisualGraphicFrameDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1, 1),
@@ -2258,9 +2258,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -2271,9 +2271,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualGraphicFrameDrawingProperties? NonVisualGraphicFrameDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameDrawingProperties? NonVisualGraphicFrameDrawingProperties
         {
-            get => GetElement<NonVisualGraphicFrameDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -2289,8 +2289,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Offset &lt;a:off></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Extents &lt;a:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Offset" /> <c>&lt;a:off></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2596,10 +2596,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ColumnId &lt;xdr:col></description></item>
-    ///   <item><description>ColumnOffset &lt;xdr:colOff></description></item>
-    ///   <item><description>RowId &lt;xdr:row></description></item>
-    ///   <item><description>RowOffset &lt;xdr:rowOff></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset" /> <c>&lt;xdr:colOff></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset" /> <c>&lt;xdr:rowOff></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId" /> <c>&lt;xdr:col></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId" /> <c>&lt;xdr:row></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2663,10 +2663,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ColumnId &lt;xdr:col></description></item>
-    ///   <item><description>ColumnOffset &lt;xdr:colOff></description></item>
-    ///   <item><description>RowId &lt;xdr:row></description></item>
-    ///   <item><description>RowOffset &lt;xdr:rowOff></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset" /> <c>&lt;xdr:colOff></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset" /> <c>&lt;xdr:rowOff></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId" /> <c>&lt;xdr:col></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId" /> <c>&lt;xdr:row></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2730,10 +2730,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ColumnId &lt;xdr:col></description></item>
-    ///   <item><description>ColumnOffset &lt;xdr:colOff></description></item>
-    ///   <item><description>RowId &lt;xdr:row></description></item>
-    ///   <item><description>RowOffset &lt;xdr:rowOff></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset" /> <c>&lt;xdr:colOff></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset" /> <c>&lt;xdr:rowOff></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId" /> <c>&lt;xdr:col></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId" /> <c>&lt;xdr:row></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class MarkerType : OpenXmlCompositeElement
@@ -2772,10 +2772,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<ColumnId>();
-            builder.AddChild<ColumnOffset>();
-            builder.AddChild<RowId>();
-            builder.AddChild<RowOffset>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId>();
         }
 
         /// <summary>
@@ -2785,9 +2785,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public ColumnId? ColumnId
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId? ColumnId
         {
-            get => GetElement<ColumnId>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId>();
             set => SetElement(value);
         }
 
@@ -2798,9 +2798,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public ColumnOffset? ColumnOffset
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset? ColumnOffset
         {
-            get => GetElement<ColumnOffset>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset>();
             set => SetElement(value);
         }
 
@@ -2811,9 +2811,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public RowId? RowId
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId? RowId
         {
-            get => GetElement<RowId>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId>();
             set => SetElement(value);
         }
 
@@ -2824,9 +2824,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public RowOffset? RowOffset
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset? RowOffset
         {
-            get => GetElement<RowOffset>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset>();
             set => SetElement(value);
         }
     }
@@ -3041,9 +3041,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HyperlinkOnClick &lt;a:hlinkClick></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HyperlinkOnHover &lt;a:hlinkHover></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnClick" /> <c>&lt;a:hlinkClick></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnHover" /> <c>&lt;a:hlinkHover></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3241,8 +3241,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ShapeLocks &lt;a:spLocks></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeLocks" /> <c>&lt;a:spLocks></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3301,8 +3301,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "cNvSpPr");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapeLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapeLocks>();
             builder.AddElement<NonVisualShapeDrawingProperties>()
 .AddAttribute(0, "txBox", a => a.TextBox);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -3350,10 +3350,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks &lt;a:cxnSpLocks></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.StartConnection &lt;a:stCxn></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EndConnection &lt;a:endCxn></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.StartConnection" /> <c>&lt;a:stCxn></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EndConnection" /> <c>&lt;a:endCxn></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks" /> <c>&lt;a:cxnSpLocks></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3396,9 +3396,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "cNvCxnSpPr");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.StartConnection>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EndConnection>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -3473,8 +3473,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PictureLocks &lt;a:picLocks></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PictureLocks" /> <c>&lt;a:picLocks></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3533,8 +3533,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "cNvPicPr");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PictureLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PictureLocks>();
             builder.AddElement<NonVisualPictureDrawingProperties>()
 .AddAttribute(0, "preferRelativeResize", a => a.PreferRelativeResize);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -3582,8 +3582,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GraphicFrameLocks &lt;a:graphicFrameLocks></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GraphicFrameLocks" /> <c>&lt;a:graphicFrameLocks></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3673,8 +3673,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GroupShapeLocks &lt;a:grpSpLocks></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GroupShapeLocks" /> <c>&lt;a:grpSpLocks></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3764,8 +3764,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NonVisualDrawingProperties &lt;xdr:cNvPr></description></item>
-    ///   <item><description>NonVisualGroupShapeDrawingProperties &lt;xdr:cNvGrpSpPr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeDrawingProperties" /> <c>&lt;xdr:cNvGrpSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties" /> <c>&lt;xdr:cNvPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3808,8 +3808,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "nvGrpSpPr");
-            builder.AddChild<NonVisualDrawingProperties>();
-            builder.AddChild<NonVisualGroupShapeDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1, 1),
@@ -3824,9 +3824,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -3837,9 +3837,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualGroupShapeDrawingProperties? NonVisualGroupShapeDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeDrawingProperties? NonVisualGroupShapeDrawingProperties
         {
-            get => GetElement<NonVisualGroupShapeDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -3855,17 +3855,17 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.TransformGroup &lt;a:xfrm></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.NoFill &lt;a:noFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SolidFill &lt;a:solidFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GradientFill &lt;a:gradFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BlipFill &lt;a:blipFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PatternFill &lt;a:pattFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GroupFill &lt;a:grpFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectList &lt;a:effectLst></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectDag &lt;a:effectDag></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Scene3DType &lt;a:scene3d></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectDag" /> <c>&lt;a:effectDag></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectList" /> <c>&lt;a:effectLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GradientFill" /> <c>&lt;a:gradFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GroupFill" /> <c>&lt;a:grpFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TransformGroup" /> <c>&lt;a:xfrm></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoFill" /> <c>&lt;a:noFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Scene3DType" /> <c>&lt;a:scene3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3924,17 +3924,17 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "grpSpPr");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.TransformGroup>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddElement<GroupShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {

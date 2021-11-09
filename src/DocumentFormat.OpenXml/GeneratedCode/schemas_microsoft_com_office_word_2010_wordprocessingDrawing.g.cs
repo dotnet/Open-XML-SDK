@@ -107,7 +107,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PercentageWidth &lt;wp14:pctWidth></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth" /> <c>&lt;wp14:pctWidth></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -167,7 +167,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(51, "sizeRelH");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<PercentageWidth>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth>();
             builder.AddElement<RelativeWidth>()
 .AddAttribute(0, "relativeFrom", a => a.ObjectId, aBuilder =>
 {
@@ -187,9 +187,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
         /// </remark>
-        public PercentageWidth? PercentageWidth
+        public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth? PercentageWidth
         {
-            get => GetElement<PercentageWidth>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth>();
             set => SetElement(value);
         }
 
@@ -205,7 +205,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PercentageHeight &lt;wp14:pctHeight></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight" /> <c>&lt;wp14:pctHeight></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -265,7 +265,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(51, "sizeRelV");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<PercentageHeight>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight>();
             builder.AddElement<RelativeHeight>()
 .AddAttribute(0, "relativeFrom", a => a.RelativeFrom, aBuilder =>
 {
@@ -285,9 +285,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
         /// </remark>
-        public PercentageHeight? PercentageHeight
+        public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight? PercentageHeight
         {
-            get => GetElement<PercentageHeight>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight>();
             set => SetElement(value);
         }
 

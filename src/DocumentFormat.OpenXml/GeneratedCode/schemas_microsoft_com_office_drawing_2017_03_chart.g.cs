@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>BooleanFalse &lt;c16r3:dispNaAsBlank></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse" /> <c>&lt;c16r3:dispNaAsBlank></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
             base.ConfigureMetadata(builder);
             builder.SetSchema(105, "dataDisplayOptions16");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<BooleanFalse>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse), 0, 1, version: FileFormatVersions.Office2019)
@@ -81,9 +81,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
         /// <remark>
         /// xmlns:c16r3 = http://schemas.microsoft.com/office/drawing/2017/03/chart
         /// </remark>
-        public BooleanFalse? BooleanFalse
+        public DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse? BooleanFalse
         {
-            get => GetElement<BooleanFalse>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse>();
             set => SetElement(value);
         }
 

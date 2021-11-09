@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>RichValueRefreshInterval &lt;xlrvr:refreshInterval></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals.RichValueRefreshInterval" /> <c>&lt;xlrvr:refreshInterval></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals
             base.ConfigureMetadata(builder);
             builder.SetSchema(134, "refreshIntervals");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<RichValueRefreshInterval>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals.RichValueRefreshInterval>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals.RichValueRefreshInterval), 1, 0, version: FileFormatVersions.Office2021)

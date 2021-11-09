@@ -184,9 +184,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NonVisualContentPartProperties &lt;a14:nvContentPartPr></description></item>
-    ///   <item><description>Transform2D &lt;a14:xfrm></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;a14:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList" /> <c>&lt;a14:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Transform2D" /> <c>&lt;a14:xfrm></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.NonVisualContentPartProperties" /> <c>&lt;a14:nvContentPartPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -265,9 +265,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "contentPart");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<NonVisualContentPartProperties>();
-            builder.AddChild<Transform2D>();
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Transform2D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.NonVisualContentPartProperties>();
             builder.AddElement<GvmlContentPart>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
@@ -292,9 +292,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public NonVisualContentPartProperties? NonVisualContentPartProperties
+        public DocumentFormat.OpenXml.Office2010.Drawing.NonVisualContentPartProperties? NonVisualContentPartProperties
         {
-            get => GetElement<NonVisualContentPartProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.NonVisualContentPartProperties>();
             set => SetElement(value);
         }
 
@@ -305,9 +305,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public Transform2D? Transform2D
+        public DocumentFormat.OpenXml.Office2010.Drawing.Transform2D? Transform2D
         {
-            get => GetElement<Transform2D>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Transform2D>();
             set => SetElement(value);
         }
 
@@ -318,9 +318,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -382,12 +382,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.NoFill &lt;a:noFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SolidFill &lt;a:solidFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GradientFill &lt;a:gradFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BlipFill &lt;a:blipFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PatternFill &lt;a:pattFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GroupFill &lt;a:grpFill></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GradientFill" /> <c>&lt;a:gradFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GroupFill" /> <c>&lt;a:grpFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoFill" /> <c>&lt;a:noFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -431,12 +431,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "hiddenFill");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -544,18 +544,18 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.NoFill &lt;a:noFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SolidFill &lt;a:solidFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GradientFill &lt;a:gradFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PatternFill &lt;a:pattFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetDash &lt;a:prstDash></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.CustomDash &lt;a:custDash></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Round &lt;a:round></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.LineJoinBevel &lt;a:bevel></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Miter &lt;a:miter></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HeadEnd &lt;a:headEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.TailEnd &lt;a:tailEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.CustomDash" /> <c>&lt;a:custDash></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GradientFill" /> <c>&lt;a:gradFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HeadEnd" /> <c>&lt;a:headEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TailEnd" /> <c>&lt;a:tailEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.LineJoinBevel" /> <c>&lt;a:bevel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Miter" /> <c>&lt;a:miter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Round" /> <c>&lt;a:round></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoFill" /> <c>&lt;a:noFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetDash" /> <c>&lt;a:prstDash></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -663,18 +663,18 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "hiddenLine");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetDash>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomDash>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Round>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.LineJoinBevel>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Miter>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HeadEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.TailEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.LineJoinBevel>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Miter>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Round>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetDash>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddElement<HiddenLineProperties>()
 .AddAttribute(0, "w", a => a.Width, aBuilder =>
 {
@@ -739,8 +739,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectList &lt;a:effectLst></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectDag &lt;a:effectDag></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectDag" /> <c>&lt;a:effectDag></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectList" /> <c>&lt;a:effectLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -784,8 +784,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "hiddenEffects");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -837,10 +837,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Camera &lt;a:camera></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.LightRig &lt;a:lightRig></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Backdrop &lt;a:backdrop></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Backdrop" /> <c>&lt;a:backdrop></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Camera" /> <c>&lt;a:camera></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.LightRig" /> <c>&lt;a:lightRig></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -884,9 +884,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "hiddenScene3d");
             builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Backdrop>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Camera>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.LightRig>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Backdrop>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -961,11 +961,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BevelTop &lt;a:bevelT></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BevelBottom &lt;a:bevelB></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtrusionColor &lt;a:extrusionClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ContourColor &lt;a:contourClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BevelTop" /> <c>&lt;a:bevelT></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BevelBottom" /> <c>&lt;a:bevelB></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtrusionColor" /> <c>&lt;a:extrusionClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ContourColor" /> <c>&lt;a:contourClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1182,7 +1182,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ImageLayer &lt;a14:imgLayer></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ImageLayer" /> <c>&lt;a14:imgLayer></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1226,7 +1226,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "imgProps");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<ImageLayer>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ImageLayer>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ImageLayer), 1, 1, version: FileFormatVersions.Office2010)
@@ -1240,9 +1240,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ImageLayer? ImageLayer
+        public DocumentFormat.OpenXml.Office2010.Drawing.ImageLayer? ImageLayer
         {
-            get => GetElement<ImageLayer>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ImageLayer>();
             set => SetElement(value);
         }
 
@@ -1332,7 +1332,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1401,7 +1401,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OfficeArtExtensionList &lt;a14:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList" /> <c>&lt;a14:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1605,7 +1605,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "cpLocks");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
             builder.AddElement<ContentPartLocks>()
 .AddAttribute(0, "noGrp", a => a.NoGrouping)
 .AddAttribute(0, "noSelect", a => a.NoSelection)
@@ -1630,9 +1630,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -3372,8 +3372,8 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ForegroundMark &lt;a14:foregroundMark></description></item>
-    ///   <item><description>BackgroundMark &lt;a14:backgroundMark></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.BackgroundMark" /> <c>&lt;a14:backgroundMark></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ForegroundMark" /> <c>&lt;a14:foregroundMark></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3481,8 +3481,8 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "backgroundRemoval");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<ForegroundMark>();
-            builder.AddChild<BackgroundMark>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.BackgroundMark>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ForegroundMark>();
             builder.AddElement<BackgroundRemoval>()
 .AddAttribute(0, "t", a => a.MarqueeTop, aBuilder =>
 {
@@ -3739,33 +3739,33 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ArtisticBlur &lt;a14:artisticBlur></description></item>
-    ///   <item><description>ArtisticCement &lt;a14:artisticCement></description></item>
-    ///   <item><description>ArtisticChalkSketch &lt;a14:artisticChalkSketch></description></item>
-    ///   <item><description>ArtisticCrisscrossEtching &lt;a14:artisticCrisscrossEtching></description></item>
-    ///   <item><description>ArtisticCutout &lt;a14:artisticCutout></description></item>
-    ///   <item><description>ArtisticFilmGrain &lt;a14:artisticFilmGrain></description></item>
-    ///   <item><description>ArtisticGlass &lt;a14:artisticGlass></description></item>
-    ///   <item><description>ArtisticGlowDiffused &lt;a14:artisticGlowDiffused></description></item>
-    ///   <item><description>ArtisticGlowEdges &lt;a14:artisticGlowEdges></description></item>
-    ///   <item><description>ArtisticLightScreen &lt;a14:artisticLightScreen></description></item>
-    ///   <item><description>ArtisticLineDrawing &lt;a14:artisticLineDrawing></description></item>
-    ///   <item><description>ArtisticMarker &lt;a14:artisticMarker></description></item>
-    ///   <item><description>ArtisticMosaicBubbles &lt;a14:artisticMosiaicBubbles></description></item>
-    ///   <item><description>ArtisticPaintStrokes &lt;a14:artisticPaintStrokes></description></item>
-    ///   <item><description>ArtisticPaintBrush &lt;a14:artisticPaintBrush></description></item>
-    ///   <item><description>ArtisticPastelsSmooth &lt;a14:artisticPastelsSmooth></description></item>
-    ///   <item><description>ArtisticPencilGrayscale &lt;a14:artisticPencilGrayscale></description></item>
-    ///   <item><description>ArtisticPencilSketch &lt;a14:artisticPencilSketch></description></item>
-    ///   <item><description>ArtisticPhotocopy &lt;a14:artisticPhotocopy></description></item>
-    ///   <item><description>ArtisticPlasticWrap &lt;a14:artisticPlasticWrap></description></item>
-    ///   <item><description>ArtisticTexturizer &lt;a14:artisticTexturizer></description></item>
-    ///   <item><description>ArtisticWatercolorSponge &lt;a14:artisticWatercolorSponge></description></item>
-    ///   <item><description>BackgroundRemoval &lt;a14:backgroundRemoval></description></item>
-    ///   <item><description>BrightnessContrast &lt;a14:brightnessContrast></description></item>
-    ///   <item><description>ColorTemperature &lt;a14:colorTemperature></description></item>
-    ///   <item><description>Saturation &lt;a14:saturation></description></item>
-    ///   <item><description>SharpenSoften &lt;a14:sharpenSoften></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.BackgroundRemoval" /> <c>&lt;a14:backgroundRemoval></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticBlur" /> <c>&lt;a14:artisticBlur></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.BrightnessContrast" /> <c>&lt;a14:brightnessContrast></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCement" /> <c>&lt;a14:artisticCement></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticChalkSketch" /> <c>&lt;a14:artisticChalkSketch></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ColorTemperature" /> <c>&lt;a14:colorTemperature></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCrisscrossEtching" /> <c>&lt;a14:artisticCrisscrossEtching></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCutout" /> <c>&lt;a14:artisticCutout></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticFilmGrain" /> <c>&lt;a14:artisticFilmGrain></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlass" /> <c>&lt;a14:artisticGlass></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowDiffused" /> <c>&lt;a14:artisticGlowDiffused></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowEdges" /> <c>&lt;a14:artisticGlowEdges></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLightScreen" /> <c>&lt;a14:artisticLightScreen></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLineDrawing" /> <c>&lt;a14:artisticLineDrawing></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMarker" /> <c>&lt;a14:artisticMarker></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMosaicBubbles" /> <c>&lt;a14:artisticMosiaicBubbles></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintBrush" /> <c>&lt;a14:artisticPaintBrush></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintStrokes" /> <c>&lt;a14:artisticPaintStrokes></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPastelsSmooth" /> <c>&lt;a14:artisticPastelsSmooth></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilGrayscale" /> <c>&lt;a14:artisticPencilGrayscale></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilSketch" /> <c>&lt;a14:artisticPencilSketch></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPhotocopy" /> <c>&lt;a14:artisticPhotocopy></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPlasticWrap" /> <c>&lt;a14:artisticPlasticWrap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Saturation" /> <c>&lt;a14:saturation></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.SharpenSoften" /> <c>&lt;a14:sharpenSoften></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticTexturizer" /> <c>&lt;a14:artisticTexturizer></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticWatercolorSponge" /> <c>&lt;a14:artisticWatercolorSponge></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3825,33 +3825,33 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "imgEffect");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<ArtisticBlur>();
-            builder.AddChild<ArtisticCement>();
-            builder.AddChild<ArtisticChalkSketch>();
-            builder.AddChild<ArtisticCrisscrossEtching>();
-            builder.AddChild<ArtisticCutout>();
-            builder.AddChild<ArtisticFilmGrain>();
-            builder.AddChild<ArtisticGlass>();
-            builder.AddChild<ArtisticGlowDiffused>();
-            builder.AddChild<ArtisticGlowEdges>();
-            builder.AddChild<ArtisticLightScreen>();
-            builder.AddChild<ArtisticLineDrawing>();
-            builder.AddChild<ArtisticMarker>();
-            builder.AddChild<ArtisticMosaicBubbles>();
-            builder.AddChild<ArtisticPaintStrokes>();
-            builder.AddChild<ArtisticPaintBrush>();
-            builder.AddChild<ArtisticPastelsSmooth>();
-            builder.AddChild<ArtisticPencilGrayscale>();
-            builder.AddChild<ArtisticPencilSketch>();
-            builder.AddChild<ArtisticPhotocopy>();
-            builder.AddChild<ArtisticPlasticWrap>();
-            builder.AddChild<ArtisticTexturizer>();
-            builder.AddChild<ArtisticWatercolorSponge>();
-            builder.AddChild<BackgroundRemoval>();
-            builder.AddChild<BrightnessContrast>();
-            builder.AddChild<ColorTemperature>();
-            builder.AddChild<Saturation>();
-            builder.AddChild<SharpenSoften>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.BackgroundRemoval>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticBlur>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.BrightnessContrast>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCement>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticChalkSketch>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ColorTemperature>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCrisscrossEtching>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCutout>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticFilmGrain>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlass>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowDiffused>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowEdges>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLightScreen>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLineDrawing>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMarker>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMosaicBubbles>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintBrush>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintStrokes>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPastelsSmooth>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilGrayscale>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilSketch>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPhotocopy>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPlasticWrap>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Saturation>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.SharpenSoften>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticTexturizer>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticWatercolorSponge>();
             builder.AddElement<ImageEffect>()
 .AddAttribute(0, "visible", a => a.Visible);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -3893,9 +3893,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticBlur? ArtisticBlur
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticBlur? ArtisticBlur
         {
-            get => GetElement<ArtisticBlur>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticBlur>();
             set => SetElement(value);
         }
 
@@ -3906,9 +3906,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticCement? ArtisticCement
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCement? ArtisticCement
         {
-            get => GetElement<ArtisticCement>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCement>();
             set => SetElement(value);
         }
 
@@ -3919,9 +3919,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticChalkSketch? ArtisticChalkSketch
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticChalkSketch? ArtisticChalkSketch
         {
-            get => GetElement<ArtisticChalkSketch>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticChalkSketch>();
             set => SetElement(value);
         }
 
@@ -3932,9 +3932,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticCrisscrossEtching? ArtisticCrisscrossEtching
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCrisscrossEtching? ArtisticCrisscrossEtching
         {
-            get => GetElement<ArtisticCrisscrossEtching>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCrisscrossEtching>();
             set => SetElement(value);
         }
 
@@ -3945,9 +3945,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticCutout? ArtisticCutout
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCutout? ArtisticCutout
         {
-            get => GetElement<ArtisticCutout>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCutout>();
             set => SetElement(value);
         }
 
@@ -3958,9 +3958,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticFilmGrain? ArtisticFilmGrain
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticFilmGrain? ArtisticFilmGrain
         {
-            get => GetElement<ArtisticFilmGrain>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticFilmGrain>();
             set => SetElement(value);
         }
 
@@ -3971,9 +3971,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticGlass? ArtisticGlass
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlass? ArtisticGlass
         {
-            get => GetElement<ArtisticGlass>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlass>();
             set => SetElement(value);
         }
 
@@ -3984,9 +3984,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticGlowDiffused? ArtisticGlowDiffused
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowDiffused? ArtisticGlowDiffused
         {
-            get => GetElement<ArtisticGlowDiffused>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowDiffused>();
             set => SetElement(value);
         }
 
@@ -3997,9 +3997,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticGlowEdges? ArtisticGlowEdges
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowEdges? ArtisticGlowEdges
         {
-            get => GetElement<ArtisticGlowEdges>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowEdges>();
             set => SetElement(value);
         }
 
@@ -4010,9 +4010,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticLightScreen? ArtisticLightScreen
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLightScreen? ArtisticLightScreen
         {
-            get => GetElement<ArtisticLightScreen>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLightScreen>();
             set => SetElement(value);
         }
 
@@ -4023,9 +4023,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticLineDrawing? ArtisticLineDrawing
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLineDrawing? ArtisticLineDrawing
         {
-            get => GetElement<ArtisticLineDrawing>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLineDrawing>();
             set => SetElement(value);
         }
 
@@ -4036,9 +4036,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticMarker? ArtisticMarker
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMarker? ArtisticMarker
         {
-            get => GetElement<ArtisticMarker>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMarker>();
             set => SetElement(value);
         }
 
@@ -4049,9 +4049,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticMosaicBubbles? ArtisticMosaicBubbles
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMosaicBubbles? ArtisticMosaicBubbles
         {
-            get => GetElement<ArtisticMosaicBubbles>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMosaicBubbles>();
             set => SetElement(value);
         }
 
@@ -4062,9 +4062,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticPaintStrokes? ArtisticPaintStrokes
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintStrokes? ArtisticPaintStrokes
         {
-            get => GetElement<ArtisticPaintStrokes>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintStrokes>();
             set => SetElement(value);
         }
 
@@ -4075,9 +4075,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticPaintBrush? ArtisticPaintBrush
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintBrush? ArtisticPaintBrush
         {
-            get => GetElement<ArtisticPaintBrush>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintBrush>();
             set => SetElement(value);
         }
 
@@ -4088,9 +4088,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticPastelsSmooth? ArtisticPastelsSmooth
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPastelsSmooth? ArtisticPastelsSmooth
         {
-            get => GetElement<ArtisticPastelsSmooth>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPastelsSmooth>();
             set => SetElement(value);
         }
 
@@ -4101,9 +4101,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticPencilGrayscale? ArtisticPencilGrayscale
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilGrayscale? ArtisticPencilGrayscale
         {
-            get => GetElement<ArtisticPencilGrayscale>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilGrayscale>();
             set => SetElement(value);
         }
 
@@ -4114,9 +4114,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticPencilSketch? ArtisticPencilSketch
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilSketch? ArtisticPencilSketch
         {
-            get => GetElement<ArtisticPencilSketch>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilSketch>();
             set => SetElement(value);
         }
 
@@ -4127,9 +4127,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticPhotocopy? ArtisticPhotocopy
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPhotocopy? ArtisticPhotocopy
         {
-            get => GetElement<ArtisticPhotocopy>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPhotocopy>();
             set => SetElement(value);
         }
 
@@ -4140,9 +4140,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticPlasticWrap? ArtisticPlasticWrap
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPlasticWrap? ArtisticPlasticWrap
         {
-            get => GetElement<ArtisticPlasticWrap>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPlasticWrap>();
             set => SetElement(value);
         }
 
@@ -4153,9 +4153,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticTexturizer? ArtisticTexturizer
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticTexturizer? ArtisticTexturizer
         {
-            get => GetElement<ArtisticTexturizer>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticTexturizer>();
             set => SetElement(value);
         }
 
@@ -4166,9 +4166,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticWatercolorSponge? ArtisticWatercolorSponge
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticWatercolorSponge? ArtisticWatercolorSponge
         {
-            get => GetElement<ArtisticWatercolorSponge>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticWatercolorSponge>();
             set => SetElement(value);
         }
 
@@ -4179,9 +4179,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public BackgroundRemoval? BackgroundRemoval
+        public DocumentFormat.OpenXml.Office2010.Drawing.BackgroundRemoval? BackgroundRemoval
         {
-            get => GetElement<BackgroundRemoval>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.BackgroundRemoval>();
             set => SetElement(value);
         }
 
@@ -4192,9 +4192,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public BrightnessContrast? BrightnessContrast
+        public DocumentFormat.OpenXml.Office2010.Drawing.BrightnessContrast? BrightnessContrast
         {
-            get => GetElement<BrightnessContrast>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.BrightnessContrast>();
             set => SetElement(value);
         }
 
@@ -4205,9 +4205,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ColorTemperature? ColorTemperature
+        public DocumentFormat.OpenXml.Office2010.Drawing.ColorTemperature? ColorTemperature
         {
-            get => GetElement<ColorTemperature>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ColorTemperature>();
             set => SetElement(value);
         }
 
@@ -4218,9 +4218,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public Saturation? Saturation
+        public DocumentFormat.OpenXml.Office2010.Drawing.Saturation? Saturation
         {
-            get => GetElement<Saturation>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Saturation>();
             set => SetElement(value);
         }
 
@@ -4231,9 +4231,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public SharpenSoften? SharpenSoften
+        public DocumentFormat.OpenXml.Office2010.Drawing.SharpenSoften? SharpenSoften
         {
-            get => GetElement<SharpenSoften>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.SharpenSoften>();
             set => SetElement(value);
         }
 
@@ -4249,7 +4249,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ImageEffect &lt;a14:imgEffect></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ImageEffect" /> <c>&lt;a14:imgEffect></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4312,7 +4312,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "imgLayer");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<ImageEffect>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ImageEffect>();
             builder.AddElement<ImageLayer>()
 .AddAttribute(19, "embed", a => a.Embed);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -4333,9 +4333,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HyperlinkOnClick &lt;a:hlinkClick></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HyperlinkOnHover &lt;a:hlinkHover></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnClick" /> <c>&lt;a:hlinkClick></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnHover" /> <c>&lt;a:hlinkHover></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4533,8 +4533,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ContentPartLocks &lt;a14:cpLocks></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;a14:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList" /> <c>&lt;a14:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks" /> <c>&lt;a14:cpLocks></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4594,8 +4594,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "cNvContentPartPr");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<ContentPartLocks>();
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>();
             builder.AddElement<NonVisualInkContentPartProperties>()
 .AddAttribute(0, "isComment", a => a.IsComment);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -4612,9 +4612,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ContentPartLocks? ContentPartLocks
+        public DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks? ContentPartLocks
         {
-            get => GetElement<ContentPartLocks>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>();
             set => SetElement(value);
         }
 
@@ -4625,9 +4625,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -4643,8 +4643,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NonVisualDrawingProperties &lt;a14:cNvPr></description></item>
-    ///   <item><description>NonVisualInkContentPartProperties &lt;a14:cNvContentPartPr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.NonVisualDrawingProperties" /> <c>&lt;a14:cNvPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.NonVisualInkContentPartProperties" /> <c>&lt;a14:cNvContentPartPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4688,8 +4688,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "nvContentPartPr");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<NonVisualDrawingProperties>();
-            builder.AddChild<NonVisualInkContentPartProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.NonVisualDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.NonVisualInkContentPartProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.NonVisualDrawingProperties), 1, 1, version: FileFormatVersions.Office2010),
@@ -4704,9 +4704,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Office2010.Drawing.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -4717,9 +4717,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public NonVisualInkContentPartProperties? NonVisualInkContentPartProperties
+        public DocumentFormat.OpenXml.Office2010.Drawing.NonVisualInkContentPartProperties? NonVisualInkContentPartProperties
         {
-            get => GetElement<NonVisualInkContentPartProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.NonVisualInkContentPartProperties>();
             set => SetElement(value);
         }
 
@@ -4735,8 +4735,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Offset &lt;a:off></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Extents &lt;a:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Offset" /> <c>&lt;a:off></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete

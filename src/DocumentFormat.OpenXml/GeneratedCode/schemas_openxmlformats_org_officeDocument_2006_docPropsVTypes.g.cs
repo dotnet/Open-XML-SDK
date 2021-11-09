@@ -23,41 +23,41 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Variant &lt;vt:variant></description></item>
-    ///   <item><description>VTVector &lt;vt:vector></description></item>
-    ///   <item><description>VTArray &lt;vt:array></description></item>
-    ///   <item><description>VTBlob &lt;vt:blob></description></item>
-    ///   <item><description>VTOBlob &lt;vt:oblob></description></item>
-    ///   <item><description>VTEmpty &lt;vt:empty></description></item>
-    ///   <item><description>VTNull &lt;vt:null></description></item>
-    ///   <item><description>VTByte &lt;vt:i1></description></item>
-    ///   <item><description>VTShort &lt;vt:i2></description></item>
-    ///   <item><description>VTInt32 &lt;vt:i4></description></item>
-    ///   <item><description>VTInt64 &lt;vt:i8></description></item>
-    ///   <item><description>VTInteger &lt;vt:int></description></item>
-    ///   <item><description>VTUnsignedByte &lt;vt:ui1></description></item>
-    ///   <item><description>VTUnsignedShort &lt;vt:ui2></description></item>
-    ///   <item><description>VTUnsignedInt32 &lt;vt:ui4></description></item>
-    ///   <item><description>VTUnsignedInt64 &lt;vt:ui8></description></item>
-    ///   <item><description>VTUnsignedInteger &lt;vt:uint></description></item>
-    ///   <item><description>VTFloat &lt;vt:r4></description></item>
-    ///   <item><description>VTDouble &lt;vt:r8></description></item>
-    ///   <item><description>VTDecimal &lt;vt:decimal></description></item>
-    ///   <item><description>VTLPSTR &lt;vt:lpstr></description></item>
-    ///   <item><description>VTLPWSTR &lt;vt:lpwstr></description></item>
-    ///   <item><description>VTBString &lt;vt:bstr></description></item>
-    ///   <item><description>VTDate &lt;vt:date></description></item>
-    ///   <item><description>VTFileTime &lt;vt:filetime></description></item>
-    ///   <item><description>VTBool &lt;vt:bool></description></item>
-    ///   <item><description>VTCurrency &lt;vt:cy></description></item>
-    ///   <item><description>VTError &lt;vt:error></description></item>
-    ///   <item><description>VTStreamData &lt;vt:stream></description></item>
-    ///   <item><description>VTOStreamData &lt;vt:ostream></description></item>
-    ///   <item><description>VTStorage &lt;vt:storage></description></item>
-    ///   <item><description>VTOStorage &lt;vt:ostorage></description></item>
-    ///   <item><description>VTVStreamData &lt;vt:vstream></description></item>
-    ///   <item><description>VTClassId &lt;vt:clsid></description></item>
-    ///   <item><description>VTClipboardData &lt;vt:cf></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTArray" /> <c>&lt;vt:array></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTClipboardData" /> <c>&lt;vt:cf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTEmpty" /> <c>&lt;vt:empty></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTNull" /> <c>&lt;vt:null></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.Variant" /> <c>&lt;vt:variant></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTVector" /> <c>&lt;vt:vector></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTVStreamData" /> <c>&lt;vt:vstream></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTClassId" /> <c>&lt;vt:clsid></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTCurrency" /> <c>&lt;vt:cy></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTError" /> <c>&lt;vt:error></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTBlob" /> <c>&lt;vt:blob></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTOBlob" /> <c>&lt;vt:oblob></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTStreamData" /> <c>&lt;vt:stream></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTOStreamData" /> <c>&lt;vt:ostream></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTStorage" /> <c>&lt;vt:storage></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTOStorage" /> <c>&lt;vt:ostorage></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTBool" /> <c>&lt;vt:bool></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTByte" /> <c>&lt;vt:i1></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTDate" /> <c>&lt;vt:date></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTFileTime" /> <c>&lt;vt:filetime></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTDecimal" /> <c>&lt;vt:decimal></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTDouble" /> <c>&lt;vt:r8></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTFloat" /> <c>&lt;vt:r4></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTInt32" /> <c>&lt;vt:i4></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTInteger" /> <c>&lt;vt:int></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTInt64" /> <c>&lt;vt:i8></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTShort" /> <c>&lt;vt:i2></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTLPSTR" /> <c>&lt;vt:lpstr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTLPWSTR" /> <c>&lt;vt:lpwstr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTBString" /> <c>&lt;vt:bstr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte" /> <c>&lt;vt:ui1></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32" /> <c>&lt;vt:ui4></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger" /> <c>&lt;vt:uint></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64" /> <c>&lt;vt:ui8></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort" /> <c>&lt;vt:ui2></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -100,41 +100,41 @@ namespace DocumentFormat.OpenXml.VariantTypes
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(5, "variant");
-            builder.AddChild<Variant>();
-            builder.AddChild<VTVector>();
-            builder.AddChild<VTArray>();
-            builder.AddChild<VTBlob>();
-            builder.AddChild<VTOBlob>();
-            builder.AddChild<VTEmpty>();
-            builder.AddChild<VTNull>();
-            builder.AddChild<VTByte>();
-            builder.AddChild<VTShort>();
-            builder.AddChild<VTInt32>();
-            builder.AddChild<VTInt64>();
-            builder.AddChild<VTInteger>();
-            builder.AddChild<VTUnsignedByte>();
-            builder.AddChild<VTUnsignedShort>();
-            builder.AddChild<VTUnsignedInt32>();
-            builder.AddChild<VTUnsignedInt64>();
-            builder.AddChild<VTUnsignedInteger>();
-            builder.AddChild<VTFloat>();
-            builder.AddChild<VTDouble>();
-            builder.AddChild<VTDecimal>();
-            builder.AddChild<VTLPSTR>();
-            builder.AddChild<VTLPWSTR>();
-            builder.AddChild<VTBString>();
-            builder.AddChild<VTDate>();
-            builder.AddChild<VTFileTime>();
-            builder.AddChild<VTBool>();
-            builder.AddChild<VTCurrency>();
-            builder.AddChild<VTError>();
-            builder.AddChild<VTStreamData>();
-            builder.AddChild<VTOStreamData>();
-            builder.AddChild<VTStorage>();
-            builder.AddChild<VTOStorage>();
-            builder.AddChild<VTVStreamData>();
-            builder.AddChild<VTClassId>();
-            builder.AddChild<VTClipboardData>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTArray>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTClipboardData>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTNull>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.Variant>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTVector>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTVStreamData>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTClassId>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTCurrency>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTError>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTBlob>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTOBlob>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTStreamData>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTOStreamData>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTStorage>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTOStorage>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTBool>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTByte>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTDate>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTFileTime>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTDecimal>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTDouble>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTFloat>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTInt32>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTInteger>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTInt64>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTShort>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTLPSTR>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTLPWSTR>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTBString>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.Variant), 1, 1),
@@ -182,9 +182,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public Variant? InnerVariant
+        public DocumentFormat.OpenXml.VariantTypes.Variant? InnerVariant
         {
-            get => GetElement<Variant>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.Variant>();
             set => SetElement(value);
         }
 
@@ -195,9 +195,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTVector? VTVector
+        public DocumentFormat.OpenXml.VariantTypes.VTVector? VTVector
         {
-            get => GetElement<VTVector>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVector>();
             set => SetElement(value);
         }
 
@@ -208,9 +208,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTArray? VTArray
+        public DocumentFormat.OpenXml.VariantTypes.VTArray? VTArray
         {
-            get => GetElement<VTArray>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTArray>();
             set => SetElement(value);
         }
 
@@ -221,9 +221,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTBlob? VTBlob
+        public DocumentFormat.OpenXml.VariantTypes.VTBlob? VTBlob
         {
-            get => GetElement<VTBlob>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBlob>();
             set => SetElement(value);
         }
 
@@ -234,9 +234,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTOBlob? VTOBlob
+        public DocumentFormat.OpenXml.VariantTypes.VTOBlob? VTOBlob
         {
-            get => GetElement<VTOBlob>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTOBlob>();
             set => SetElement(value);
         }
 
@@ -247,9 +247,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTEmpty? VTEmpty
+        public DocumentFormat.OpenXml.VariantTypes.VTEmpty? VTEmpty
         {
-            get => GetElement<VTEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTEmpty>();
             set => SetElement(value);
         }
 
@@ -260,9 +260,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTNull? VTNull
+        public DocumentFormat.OpenXml.VariantTypes.VTNull? VTNull
         {
-            get => GetElement<VTNull>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTNull>();
             set => SetElement(value);
         }
 
@@ -273,9 +273,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTByte? VTByte
+        public DocumentFormat.OpenXml.VariantTypes.VTByte? VTByte
         {
-            get => GetElement<VTByte>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTByte>();
             set => SetElement(value);
         }
 
@@ -286,9 +286,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTShort? VTShort
+        public DocumentFormat.OpenXml.VariantTypes.VTShort? VTShort
         {
-            get => GetElement<VTShort>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTShort>();
             set => SetElement(value);
         }
 
@@ -299,9 +299,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTInt32? VTInt32
+        public DocumentFormat.OpenXml.VariantTypes.VTInt32? VTInt32
         {
-            get => GetElement<VTInt32>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTInt32>();
             set => SetElement(value);
         }
 
@@ -312,9 +312,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTInt64? VTInt64
+        public DocumentFormat.OpenXml.VariantTypes.VTInt64? VTInt64
         {
-            get => GetElement<VTInt64>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTInt64>();
             set => SetElement(value);
         }
 
@@ -325,9 +325,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTInteger? VTInteger
+        public DocumentFormat.OpenXml.VariantTypes.VTInteger? VTInteger
         {
-            get => GetElement<VTInteger>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTInteger>();
             set => SetElement(value);
         }
 
@@ -338,9 +338,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTUnsignedByte? VTUnsignedByte
+        public DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte? VTUnsignedByte
         {
-            get => GetElement<VTUnsignedByte>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte>();
             set => SetElement(value);
         }
 
@@ -351,9 +351,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTUnsignedShort? VTUnsignedShort
+        public DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort? VTUnsignedShort
         {
-            get => GetElement<VTUnsignedShort>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort>();
             set => SetElement(value);
         }
 
@@ -364,9 +364,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTUnsignedInt32? VTUnsignedInt32
+        public DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32? VTUnsignedInt32
         {
-            get => GetElement<VTUnsignedInt32>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32>();
             set => SetElement(value);
         }
 
@@ -377,9 +377,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTUnsignedInt64? VTUnsignedInt64
+        public DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64? VTUnsignedInt64
         {
-            get => GetElement<VTUnsignedInt64>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64>();
             set => SetElement(value);
         }
 
@@ -390,9 +390,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTUnsignedInteger? VTUnsignedInteger
+        public DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger? VTUnsignedInteger
         {
-            get => GetElement<VTUnsignedInteger>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger>();
             set => SetElement(value);
         }
 
@@ -403,9 +403,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTFloat? VTFloat
+        public DocumentFormat.OpenXml.VariantTypes.VTFloat? VTFloat
         {
-            get => GetElement<VTFloat>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTFloat>();
             set => SetElement(value);
         }
 
@@ -416,9 +416,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTDouble? VTDouble
+        public DocumentFormat.OpenXml.VariantTypes.VTDouble? VTDouble
         {
-            get => GetElement<VTDouble>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTDouble>();
             set => SetElement(value);
         }
 
@@ -429,9 +429,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTDecimal? VTDecimal
+        public DocumentFormat.OpenXml.VariantTypes.VTDecimal? VTDecimal
         {
-            get => GetElement<VTDecimal>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTDecimal>();
             set => SetElement(value);
         }
 
@@ -442,9 +442,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTLPSTR? VTLPSTR
+        public DocumentFormat.OpenXml.VariantTypes.VTLPSTR? VTLPSTR
         {
-            get => GetElement<VTLPSTR>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTLPSTR>();
             set => SetElement(value);
         }
 
@@ -455,9 +455,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTLPWSTR? VTLPWSTR
+        public DocumentFormat.OpenXml.VariantTypes.VTLPWSTR? VTLPWSTR
         {
-            get => GetElement<VTLPWSTR>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTLPWSTR>();
             set => SetElement(value);
         }
 
@@ -468,9 +468,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTBString? VTBString
+        public DocumentFormat.OpenXml.VariantTypes.VTBString? VTBString
         {
-            get => GetElement<VTBString>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBString>();
             set => SetElement(value);
         }
 
@@ -481,9 +481,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTDate? VTDate
+        public DocumentFormat.OpenXml.VariantTypes.VTDate? VTDate
         {
-            get => GetElement<VTDate>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTDate>();
             set => SetElement(value);
         }
 
@@ -494,9 +494,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTFileTime? VTFileTime
+        public DocumentFormat.OpenXml.VariantTypes.VTFileTime? VTFileTime
         {
-            get => GetElement<VTFileTime>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTFileTime>();
             set => SetElement(value);
         }
 
@@ -507,9 +507,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTBool? VTBool
+        public DocumentFormat.OpenXml.VariantTypes.VTBool? VTBool
         {
-            get => GetElement<VTBool>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBool>();
             set => SetElement(value);
         }
 
@@ -520,9 +520,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTCurrency? VTCurrency
+        public DocumentFormat.OpenXml.VariantTypes.VTCurrency? VTCurrency
         {
-            get => GetElement<VTCurrency>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTCurrency>();
             set => SetElement(value);
         }
 
@@ -533,9 +533,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTError? VTError
+        public DocumentFormat.OpenXml.VariantTypes.VTError? VTError
         {
-            get => GetElement<VTError>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTError>();
             set => SetElement(value);
         }
 
@@ -546,9 +546,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTStreamData? VTStreamData
+        public DocumentFormat.OpenXml.VariantTypes.VTStreamData? VTStreamData
         {
-            get => GetElement<VTStreamData>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTStreamData>();
             set => SetElement(value);
         }
 
@@ -559,9 +559,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTOStreamData? VTOStreamData
+        public DocumentFormat.OpenXml.VariantTypes.VTOStreamData? VTOStreamData
         {
-            get => GetElement<VTOStreamData>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTOStreamData>();
             set => SetElement(value);
         }
 
@@ -572,9 +572,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTStorage? VTStorage
+        public DocumentFormat.OpenXml.VariantTypes.VTStorage? VTStorage
         {
-            get => GetElement<VTStorage>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTStorage>();
             set => SetElement(value);
         }
 
@@ -585,9 +585,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTOStorage? VTOStorage
+        public DocumentFormat.OpenXml.VariantTypes.VTOStorage? VTOStorage
         {
-            get => GetElement<VTOStorage>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTOStorage>();
             set => SetElement(value);
         }
 
@@ -598,9 +598,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTVStreamData? VTVStreamData
+        public DocumentFormat.OpenXml.VariantTypes.VTVStreamData? VTVStreamData
         {
-            get => GetElement<VTVStreamData>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVStreamData>();
             set => SetElement(value);
         }
 
@@ -611,9 +611,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTClassId? VTClassId
+        public DocumentFormat.OpenXml.VariantTypes.VTClassId? VTClassId
         {
-            get => GetElement<VTClassId>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTClassId>();
             set => SetElement(value);
         }
 
@@ -624,9 +624,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTClipboardData? VTClipboardData
+        public DocumentFormat.OpenXml.VariantTypes.VTClipboardData? VTClipboardData
         {
-            get => GetElement<VTClipboardData>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTClipboardData>();
             set => SetElement(value);
         }
 
@@ -642,27 +642,27 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Variant &lt;vt:variant></description></item>
-    ///   <item><description>VTByte &lt;vt:i1></description></item>
-    ///   <item><description>VTShort &lt;vt:i2></description></item>
-    ///   <item><description>VTInt32 &lt;vt:i4></description></item>
-    ///   <item><description>VTInt64 &lt;vt:i8></description></item>
-    ///   <item><description>VTUnsignedByte &lt;vt:ui1></description></item>
-    ///   <item><description>VTUnsignedShort &lt;vt:ui2></description></item>
-    ///   <item><description>VTUnsignedInt32 &lt;vt:ui4></description></item>
-    ///   <item><description>VTUnsignedInt64 &lt;vt:ui8></description></item>
-    ///   <item><description>VTFloat &lt;vt:r4></description></item>
-    ///   <item><description>VTDouble &lt;vt:r8></description></item>
-    ///   <item><description>VTLPSTR &lt;vt:lpstr></description></item>
-    ///   <item><description>VTLPWSTR &lt;vt:lpwstr></description></item>
-    ///   <item><description>VTBString &lt;vt:bstr></description></item>
-    ///   <item><description>VTDate &lt;vt:date></description></item>
-    ///   <item><description>VTFileTime &lt;vt:filetime></description></item>
-    ///   <item><description>VTBool &lt;vt:bool></description></item>
-    ///   <item><description>VTCurrency &lt;vt:cy></description></item>
-    ///   <item><description>VTError &lt;vt:error></description></item>
-    ///   <item><description>VTClassId &lt;vt:clsid></description></item>
-    ///   <item><description>VTClipboardData &lt;vt:cf></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTClipboardData" /> <c>&lt;vt:cf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.Variant" /> <c>&lt;vt:variant></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTClassId" /> <c>&lt;vt:clsid></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTCurrency" /> <c>&lt;vt:cy></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTError" /> <c>&lt;vt:error></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTBool" /> <c>&lt;vt:bool></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTByte" /> <c>&lt;vt:i1></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTDate" /> <c>&lt;vt:date></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTFileTime" /> <c>&lt;vt:filetime></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTDouble" /> <c>&lt;vt:r8></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTFloat" /> <c>&lt;vt:r4></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTInt32" /> <c>&lt;vt:i4></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTInt64" /> <c>&lt;vt:i8></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTShort" /> <c>&lt;vt:i2></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTLPSTR" /> <c>&lt;vt:lpstr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTLPWSTR" /> <c>&lt;vt:lpwstr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTBString" /> <c>&lt;vt:bstr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte" /> <c>&lt;vt:ui1></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32" /> <c>&lt;vt:ui4></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64" /> <c>&lt;vt:ui8></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort" /> <c>&lt;vt:ui2></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -737,27 +737,27 @@ namespace DocumentFormat.OpenXml.VariantTypes
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(5, "vector");
-            builder.AddChild<Variant>();
-            builder.AddChild<VTByte>();
-            builder.AddChild<VTShort>();
-            builder.AddChild<VTInt32>();
-            builder.AddChild<VTInt64>();
-            builder.AddChild<VTUnsignedByte>();
-            builder.AddChild<VTUnsignedShort>();
-            builder.AddChild<VTUnsignedInt32>();
-            builder.AddChild<VTUnsignedInt64>();
-            builder.AddChild<VTFloat>();
-            builder.AddChild<VTDouble>();
-            builder.AddChild<VTLPSTR>();
-            builder.AddChild<VTLPWSTR>();
-            builder.AddChild<VTBString>();
-            builder.AddChild<VTDate>();
-            builder.AddChild<VTFileTime>();
-            builder.AddChild<VTBool>();
-            builder.AddChild<VTCurrency>();
-            builder.AddChild<VTError>();
-            builder.AddChild<VTClassId>();
-            builder.AddChild<VTClipboardData>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTClipboardData>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.Variant>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTClassId>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTCurrency>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTError>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTBool>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTByte>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTDate>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTFileTime>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTDouble>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTFloat>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTInt32>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTInt64>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTShort>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTLPSTR>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTLPWSTR>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTBString>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort>();
             builder.AddElement<VTVector>()
 .AddAttribute(0, "baseType", a => a.BaseType, aBuilder =>
 {
@@ -805,23 +805,23 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Variant &lt;vt:variant></description></item>
-    ///   <item><description>VTByte &lt;vt:i1></description></item>
-    ///   <item><description>VTShort &lt;vt:i2></description></item>
-    ///   <item><description>VTInt32 &lt;vt:i4></description></item>
-    ///   <item><description>VTInteger &lt;vt:int></description></item>
-    ///   <item><description>VTUnsignedByte &lt;vt:ui1></description></item>
-    ///   <item><description>VTUnsignedShort &lt;vt:ui2></description></item>
-    ///   <item><description>VTUnsignedInt32 &lt;vt:ui4></description></item>
-    ///   <item><description>VTUnsignedInteger &lt;vt:uint></description></item>
-    ///   <item><description>VTFloat &lt;vt:r4></description></item>
-    ///   <item><description>VTDouble &lt;vt:r8></description></item>
-    ///   <item><description>VTDecimal &lt;vt:decimal></description></item>
-    ///   <item><description>VTBString &lt;vt:bstr></description></item>
-    ///   <item><description>VTDate &lt;vt:date></description></item>
-    ///   <item><description>VTBool &lt;vt:bool></description></item>
-    ///   <item><description>VTError &lt;vt:error></description></item>
-    ///   <item><description>VTCurrency &lt;vt:cy></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.Variant" /> <c>&lt;vt:variant></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTCurrency" /> <c>&lt;vt:cy></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTError" /> <c>&lt;vt:error></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTBool" /> <c>&lt;vt:bool></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTByte" /> <c>&lt;vt:i1></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTDate" /> <c>&lt;vt:date></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTDecimal" /> <c>&lt;vt:decimal></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTDouble" /> <c>&lt;vt:r8></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTFloat" /> <c>&lt;vt:r4></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTInt32" /> <c>&lt;vt:i4></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTInteger" /> <c>&lt;vt:int></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTShort" /> <c>&lt;vt:i2></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTBString" /> <c>&lt;vt:bstr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte" /> <c>&lt;vt:ui1></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32" /> <c>&lt;vt:ui4></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger" /> <c>&lt;vt:uint></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort" /> <c>&lt;vt:ui2></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -912,23 +912,23 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(5, "array");
-            builder.AddChild<Variant>();
-            builder.AddChild<VTByte>();
-            builder.AddChild<VTShort>();
-            builder.AddChild<VTInt32>();
-            builder.AddChild<VTInteger>();
-            builder.AddChild<VTUnsignedByte>();
-            builder.AddChild<VTUnsignedShort>();
-            builder.AddChild<VTUnsignedInt32>();
-            builder.AddChild<VTUnsignedInteger>();
-            builder.AddChild<VTFloat>();
-            builder.AddChild<VTDouble>();
-            builder.AddChild<VTDecimal>();
-            builder.AddChild<VTBString>();
-            builder.AddChild<VTDate>();
-            builder.AddChild<VTBool>();
-            builder.AddChild<VTError>();
-            builder.AddChild<VTCurrency>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.Variant>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTCurrency>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTError>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTBool>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTByte>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTDate>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTDecimal>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTDouble>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTFloat>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTInt32>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTInteger>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTShort>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTBString>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort>();
             builder.AddElement<VTArray>()
 .AddAttribute(0, "lBound", a => a.LowerBounds, aBuilder =>
 {

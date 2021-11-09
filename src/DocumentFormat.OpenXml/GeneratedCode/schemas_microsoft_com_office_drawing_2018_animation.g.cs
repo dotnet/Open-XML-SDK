@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OfficeArtExtensionList &lt;aanim:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList" /> <c>&lt;aanim:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -179,7 +179,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
             base.ConfigureMetadata(builder);
             builder.SetSchema(113, "animPr");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList>();
             builder.AddElement<AnimationProperties>()
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "length", a => a.Length, aBuilder =>
@@ -211,9 +211,9 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Animation
         /// <remark>
         /// xmlns:aanim = http://schemas.microsoft.com/office/drawing/2018/animation
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -229,7 +229,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Animation
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete

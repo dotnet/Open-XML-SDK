@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NumberDiagramInfo &lt;dgm1611:autoBuNodeInfo></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfo" /> <c>&lt;dgm1611:autoBuNodeInfo></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
             base.ConfigureMetadata(builder);
             builder.SetSchema(108, "autoBuNodeInfoLst");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<NumberDiagramInfo>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfo>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfo), 0, 0, version: FileFormatVersions.Office2019)
@@ -87,10 +87,10 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.NoBullet &lt;a:buNone></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.AutoNumberedBullet &lt;a:buAutoNum></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.CharacterBullet &lt;a:buChar></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PictureBullet &lt;a:buBlip></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AutoNumberedBullet" /> <c>&lt;a:buAutoNum></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PictureBullet" /> <c>&lt;a:buBlip></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.CharacterBullet" /> <c>&lt;a:buChar></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoBullet" /> <c>&lt;a:buNone></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -166,10 +166,10 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
             base.ConfigureMetadata(builder);
             builder.SetSchema(108, "buPr");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoBullet>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.AutoNumberedBullet>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.CharacterBullet>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.PictureBullet>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.CharacterBullet>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoBullet>();
             builder.AddElement<DiagramAutoBullet>()
 .AddAttribute(0, "prefix", a => a.AutoBulletPrefix)
 .AddAttribute(0, "leadZeros", a => a.LeadZeros);
@@ -249,7 +249,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DiagramAutoBullet &lt;dgm1611:buPr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet" /> <c>&lt;dgm1611:buPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -325,7 +325,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
             base.ConfigureMetadata(builder);
             builder.SetSchema(108, "autoBuNodeInfo");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DiagramAutoBullet>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet>();
             builder.AddElement<NumberDiagramInfo>()
 .AddAttribute(0, "lvl", a => a.Lvl, aBuilder =>
 {
@@ -349,9 +349,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:dgm1611 = http://schemas.microsoft.com/office/drawing/2016/11/diagram
         /// </remark>
-        public DiagramAutoBullet? DiagramAutoBullet
+        public DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet? DiagramAutoBullet
         {
-            get => GetElement<DiagramAutoBullet>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet>();
             set => SetElement(value);
         }
 

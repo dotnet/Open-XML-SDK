@@ -25,11 +25,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DropZoneFilter &lt;c14:dropZoneFilter></description></item>
-    ///   <item><description>DropZoneCategories &lt;c14:dropZoneCategories></description></item>
-    ///   <item><description>DropZoneData &lt;c14:dropZoneData></description></item>
-    ///   <item><description>DropZoneSeries &lt;c14:dropZoneSeries></description></item>
-    ///   <item><description>DropZonesVisible &lt;c14:dropZonesVisible></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneFilter" /> <c>&lt;c14:dropZoneFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneCategories" /> <c>&lt;c14:dropZoneCategories></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneData" /> <c>&lt;c14:dropZoneData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneSeries" /> <c>&lt;c14:dropZoneSeries></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZonesVisible" /> <c>&lt;c14:dropZonesVisible></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -73,11 +73,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
             base.ConfigureMetadata(builder);
             builder.SetSchema(46, "pivotOptions");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DropZoneFilter>();
-            builder.AddChild<DropZoneCategories>();
-            builder.AddChild<DropZoneData>();
-            builder.AddChild<DropZoneSeries>();
-            builder.AddChild<DropZonesVisible>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneCategories>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneData>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZonesVisible>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneFilter), 0, 1, version: FileFormatVersions.Office2010),
@@ -95,9 +95,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <remark>
         /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
         /// </remark>
-        public DropZoneFilter? DropZoneFilter
+        public DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneFilter? DropZoneFilter
         {
-            get => GetElement<DropZoneFilter>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneFilter>();
             set => SetElement(value);
         }
 
@@ -108,9 +108,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <remark>
         /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
         /// </remark>
-        public DropZoneCategories? DropZoneCategories
+        public DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneCategories? DropZoneCategories
         {
-            get => GetElement<DropZoneCategories>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneCategories>();
             set => SetElement(value);
         }
 
@@ -121,9 +121,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <remark>
         /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
         /// </remark>
-        public DropZoneData? DropZoneData
+        public DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneData? DropZoneData
         {
-            get => GetElement<DropZoneData>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneData>();
             set => SetElement(value);
         }
 
@@ -134,9 +134,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <remark>
         /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
         /// </remark>
-        public DropZoneSeries? DropZoneSeries
+        public DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneSeries? DropZoneSeries
         {
-            get => GetElement<DropZoneSeries>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneSeries>();
             set => SetElement(value);
         }
 
@@ -147,9 +147,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <remark>
         /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
         /// </remark>
-        public DropZonesVisible? DropZonesVisible
+        public DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZonesVisible? DropZonesVisible
         {
-            get => GetElement<DropZonesVisible>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZonesVisible>();
             set => SetElement(value);
         }
 
@@ -165,8 +165,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>InSketchMode &lt;c14:inSketchMode></description></item>
-    ///   <item><description>ShowSketchButton &lt;c14:showSketchBtn></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.InSketchMode" /> <c>&lt;c14:inSketchMode></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShowSketchButton" /> <c>&lt;c14:showSketchBtn></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -210,8 +210,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
             base.ConfigureMetadata(builder);
             builder.SetSchema(46, "sketchOptions");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<InSketchMode>();
-            builder.AddChild<ShowSketchButton>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.InSketchMode>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShowSketchButton>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.InSketchMode), 0, 1, version: FileFormatVersions.Office2010),
@@ -226,9 +226,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <remark>
         /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
         /// </remark>
-        public InSketchMode? InSketchMode
+        public DocumentFormat.OpenXml.Office2010.Drawing.Charts.InSketchMode? InSketchMode
         {
-            get => GetElement<InSketchMode>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.InSketchMode>();
             set => SetElement(value);
         }
 
@@ -239,9 +239,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <remark>
         /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
         /// </remark>
-        public ShowSketchButton? ShowSketchButton
+        public DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShowSketchButton? ShowSketchButton
         {
-            get => GetElement<ShowSketchButton>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShowSketchButton>();
             set => SetElement(value);
         }
 
@@ -257,7 +257,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ShapeProperties &lt;c14:spPr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShapeProperties" /> <c>&lt;c14:spPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -301,7 +301,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
             base.ConfigureMetadata(builder);
             builder.SetSchema(46, "invertSolidFillFmt");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShapeProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShapeProperties), 1, 1, version: FileFormatVersions.Office2010)
@@ -315,9 +315,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <remark>
         /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -383,21 +383,21 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (101L), MaxInclusiv
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Transform2D &lt;a:xfrm></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.CustomGeometry &lt;a:custGeom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetGeometry &lt;a:prstGeom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.NoFill &lt;a:noFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SolidFill &lt;a:solidFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GradientFill &lt;a:gradFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BlipFill &lt;a:blipFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PatternFill &lt;a:pattFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GroupFill &lt;a:grpFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Outline &lt;a:ln></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectList &lt;a:effectLst></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectDag &lt;a:effectDag></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Scene3DType &lt;a:scene3d></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Shape3DType &lt;a:sp3d></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.CustomGeometry" /> <c>&lt;a:custGeom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectDag" /> <c>&lt;a:effectDag></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectList" /> <c>&lt;a:effectLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GradientFill" /> <c>&lt;a:gradFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GroupFill" /> <c>&lt;a:grpFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Outline" /> <c>&lt;a:ln></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoFill" /> <c>&lt;a:noFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetGeometry" /> <c>&lt;a:prstGeom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Scene3DType" /> <c>&lt;a:scene3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Shape3DType" /> <c>&lt;a:sp3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -457,21 +457,21 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (101L), MaxInclusiv
             base.ConfigureMetadata(builder);
             builder.SetSchema(46, "spPr");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddElement<ShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {

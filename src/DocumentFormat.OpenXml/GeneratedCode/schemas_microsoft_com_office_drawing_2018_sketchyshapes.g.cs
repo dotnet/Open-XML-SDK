@@ -155,11 +155,11 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.CustomGeometry &lt;a:custGeom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetGeometry &lt;a:prstGeom></description></item>
-    ///   <item><description>LineSketchTypeProperties &lt;ask:type></description></item>
-    ///   <item><description>LineSketchSeed &lt;ask:seed></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;ask:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.CustomGeometry" /> <c>&lt;a:custGeom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.OfficeArtExtensionList" /> <c>&lt;ask:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetGeometry" /> <c>&lt;a:prstGeom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchTypeProperties" /> <c>&lt;ask:type></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchSeed" /> <c>&lt;ask:seed></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -220,10 +220,10 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
             builder.SetSchema(120, "lineSketchStyleProps");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.OfficeArtExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
-            builder.AddChild<LineSketchTypeProperties>();
-            builder.AddChild<LineSketchSeed>();
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchTypeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchSeed>();
             builder.AddElement<LineSketchStyleProperties>()
 .AddAttribute(0, "sd", a => a.Sd);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -254,10 +254,10 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineSketchNoneEmpty &lt;ask:lineSketchNone></description></item>
-    ///   <item><description>LineSketchCurvedEmpty &lt;ask:lineSketchCurved></description></item>
-    ///   <item><description>LineSketchFreehandEmpty &lt;ask:lineSketchFreehand></description></item>
-    ///   <item><description>LineSketchScribbleEmpty &lt;ask:lineSketchScribble></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchNoneEmpty" /> <c>&lt;ask:lineSketchNone></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchCurvedEmpty" /> <c>&lt;ask:lineSketchCurved></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchFreehandEmpty" /> <c>&lt;ask:lineSketchFreehand></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchScribbleEmpty" /> <c>&lt;ask:lineSketchScribble></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -301,10 +301,10 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
             base.ConfigureMetadata(builder);
             builder.SetSchema(120, "type");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<LineSketchNoneEmpty>();
-            builder.AddChild<LineSketchCurvedEmpty>();
-            builder.AddChild<LineSketchFreehandEmpty>();
-            builder.AddChild<LineSketchScribbleEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchNoneEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchCurvedEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchFreehandEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchScribbleEmpty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2021)
@@ -327,9 +327,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         /// <remark>
         /// xmlns:ask = http://schemas.microsoft.com/office/drawing/2018/sketchyshapes
         /// </remark>
-        public LineSketchNoneEmpty? LineSketchNoneEmpty
+        public DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchNoneEmpty? LineSketchNoneEmpty
         {
-            get => GetElement<LineSketchNoneEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchNoneEmpty>();
             set => SetElement(value);
         }
 
@@ -340,9 +340,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         /// <remark>
         /// xmlns:ask = http://schemas.microsoft.com/office/drawing/2018/sketchyshapes
         /// </remark>
-        public LineSketchCurvedEmpty? LineSketchCurvedEmpty
+        public DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchCurvedEmpty? LineSketchCurvedEmpty
         {
-            get => GetElement<LineSketchCurvedEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchCurvedEmpty>();
             set => SetElement(value);
         }
 
@@ -353,9 +353,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         /// <remark>
         /// xmlns:ask = http://schemas.microsoft.com/office/drawing/2018/sketchyshapes
         /// </remark>
-        public LineSketchFreehandEmpty? LineSketchFreehandEmpty
+        public DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchFreehandEmpty? LineSketchFreehandEmpty
         {
-            get => GetElement<LineSketchFreehandEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchFreehandEmpty>();
             set => SetElement(value);
         }
 
@@ -366,9 +366,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         /// <remark>
         /// xmlns:ask = http://schemas.microsoft.com/office/drawing/2018/sketchyshapes
         /// </remark>
-        public LineSketchScribbleEmpty? LineSketchScribbleEmpty
+        public DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchScribbleEmpty? LineSketchScribbleEmpty
         {
-            get => GetElement<LineSketchScribbleEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchScribbleEmpty>();
             set => SetElement(value);
         }
 
@@ -426,7 +426,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete

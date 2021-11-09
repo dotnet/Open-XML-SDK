@@ -24,8 +24,8 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CommentExtensible &lt;w16cex:commentExtensible></description></item>
-    ///   <item><description>ExtensionList &lt;w16cex:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible" /> <c>&lt;w16cex:commentExtensible></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList" /> <c>&lt;w16cex:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -69,8 +69,8 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
             base.ConfigureMetadata(builder);
             builder.SetSchema(127, "commentsExtensible");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<CommentExtensible>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible), 0, 0, version: FileFormatVersions.Office2021),
@@ -121,7 +121,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;w16cex:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList" /> <c>&lt;w16cex:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -222,7 +222,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
             base.ConfigureMetadata(builder);
             builder.SetSchema(127, "commentExtensible");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList>();
             builder.AddElement<CommentExtensible>()
 .AddAttribute(127, "durableId", a => a.DurableId, aBuilder =>
 {
@@ -251,9 +251,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2021))
         /// <remark>
         /// xmlns:w16cex = http://schemas.microsoft.com/office/word/2018/wordml/cex
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -269,7 +269,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2021))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2021.Word.ExtensionList.Extension &lt;w16cur:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Word.ExtensionList.Extension" /> <c>&lt;w16cur:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete

@@ -22,9 +22,9 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ContextNodeProperty &lt;msink:property></description></item>
-    ///   <item><description>SourceLink &lt;msink:sourceLink></description></item>
-    ///   <item><description>DestinationLink &lt;msink:destinationLink></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Ink.SourceLink" /> <c>&lt;msink:sourceLink></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Ink.DestinationLink" /> <c>&lt;msink:destinationLink></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Ink.ContextNodeProperty" /> <c>&lt;msink:property></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -403,9 +403,9 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(45, "context");
-            builder.AddChild<ContextNodeProperty>();
-            builder.AddChild<SourceLink>();
-            builder.AddChild<DestinationLink>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Ink.SourceLink>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Ink.DestinationLink>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Ink.ContextNodeProperty>();
             builder.AddElement<ContextNode>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {

@@ -25,11 +25,11 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NonVisualPictureProperties &lt;pic:nvPicPr></description></item>
-    ///   <item><description>BlipFill &lt;pic:blipFill></description></item>
-    ///   <item><description>ShapeProperties &lt;pic:spPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Drawing.Pictures.ShapeStyle &lt;pic14:style></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Drawing.Pictures.OfficeArtExtensionList &lt;pic14:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Pictures.BlipFill" /> <c>&lt;pic:blipFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Pictures.OfficeArtExtensionList" /> <c>&lt;pic14:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Pictures.ShapeProperties" /> <c>&lt;pic:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Pictures.ShapeStyle" /> <c>&lt;pic14:style></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureProperties" /> <c>&lt;pic:nvPicPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -72,11 +72,11 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(17, "pic");
-            builder.AddChild<NonVisualPictureProperties>();
-            builder.AddChild<BlipFill>();
-            builder.AddChild<ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Pictures.ShapeStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Pictures.BlipFill>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Pictures.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Pictures.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Pictures.ShapeStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureProperties), 1, 1),
@@ -94,9 +94,9 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// <remark>
         /// xmlns:pic = http://schemas.openxmlformats.org/drawingml/2006/picture
         /// </remark>
-        public NonVisualPictureProperties? NonVisualPictureProperties
+        public DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureProperties? NonVisualPictureProperties
         {
-            get => GetElement<NonVisualPictureProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureProperties>();
             set => SetElement(value);
         }
 
@@ -107,9 +107,9 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// <remark>
         /// xmlns:pic = http://schemas.openxmlformats.org/drawingml/2006/picture
         /// </remark>
-        public BlipFill? BlipFill
+        public DocumentFormat.OpenXml.Drawing.Pictures.BlipFill? BlipFill
         {
-            get => GetElement<BlipFill>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Pictures.BlipFill>();
             set => SetElement(value);
         }
 
@@ -120,9 +120,9 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// <remark>
         /// xmlns:pic = http://schemas.openxmlformats.org/drawingml/2006/picture
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Pictures.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Pictures.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -164,9 +164,9 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HyperlinkOnClick &lt;a:hlinkClick></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HyperlinkOnHover &lt;a:hlinkHover></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnClick" /> <c>&lt;a:hlinkClick></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnHover" /> <c>&lt;a:hlinkHover></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -364,8 +364,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PictureLocks &lt;a:picLocks></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PictureLocks" /> <c>&lt;a:picLocks></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -424,8 +424,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(17, "cNvPicPr");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PictureLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PictureLocks>();
             builder.AddElement<NonVisualPictureDrawingProperties>()
 .AddAttribute(0, "preferRelativeResize", a => a.PreferRelativeResize);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -473,8 +473,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>NonVisualDrawingProperties &lt;pic:cNvPr></description></item>
-    ///   <item><description>NonVisualPictureDrawingProperties &lt;pic:cNvPicPr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Pictures.NonVisualDrawingProperties" /> <c>&lt;pic:cNvPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureDrawingProperties" /> <c>&lt;pic:cNvPicPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -517,8 +517,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(17, "nvPicPr");
-            builder.AddChild<NonVisualDrawingProperties>();
-            builder.AddChild<NonVisualPictureDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Pictures.NonVisualDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureDrawingProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Pictures.NonVisualDrawingProperties), 1, 1),
@@ -533,9 +533,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:pic = http://schemas.openxmlformats.org/drawingml/2006/picture
         /// </remark>
-        public NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.Pictures.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Pictures.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -546,9 +546,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:pic = http://schemas.openxmlformats.org/drawingml/2006/picture
         /// </remark>
-        public NonVisualPictureDrawingProperties? NonVisualPictureDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureDrawingProperties? NonVisualPictureDrawingProperties
         {
-            get => GetElement<NonVisualPictureDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -564,10 +564,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Blip &lt;a:blip></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SourceRectangle &lt;a:srcRect></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Tile &lt;a:tile></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Stretch &lt;a:stretch></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Blip" /> <c>&lt;a:blip></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SourceRectangle" /> <c>&lt;a:srcRect></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Stretch" /> <c>&lt;a:stretch></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Tile" /> <c>&lt;a:tile></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -644,8 +644,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema(17, "blipFill");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Blip>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SourceRectangle>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Tile>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Stretch>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Tile>();
             builder.AddElement<BlipFill>()
 .AddAttribute(0, "dpi", a => a.Dpi)
 .AddAttribute(0, "rotWithShape", a => a.RotateWithShape);
@@ -702,21 +702,21 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Transform2D &lt;a:xfrm></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.CustomGeometry &lt;a:custGeom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetGeometry &lt;a:prstGeom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.NoFill &lt;a:noFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SolidFill &lt;a:solidFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GradientFill &lt;a:gradFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BlipFill &lt;a:blipFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PatternFill &lt;a:pattFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GroupFill &lt;a:grpFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Outline &lt;a:ln></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectList &lt;a:effectLst></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectDag &lt;a:effectDag></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Scene3DType &lt;a:scene3d></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Shape3DType &lt;a:sp3d></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.CustomGeometry" /> <c>&lt;a:custGeom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectDag" /> <c>&lt;a:effectDag></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectList" /> <c>&lt;a:effectLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GradientFill" /> <c>&lt;a:gradFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GroupFill" /> <c>&lt;a:grpFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Outline" /> <c>&lt;a:ln></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoFill" /> <c>&lt;a:noFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetGeometry" /> <c>&lt;a:prstGeom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Scene3DType" /> <c>&lt;a:scene3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Shape3DType" /> <c>&lt;a:sp3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -775,21 +775,21 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(17, "spPr");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddElement<ShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {

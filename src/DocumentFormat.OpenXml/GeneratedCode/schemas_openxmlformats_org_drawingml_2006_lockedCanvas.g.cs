@@ -23,16 +23,16 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties &lt;a:nvGrpSpPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties &lt;a:grpSpPr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.TextShape &lt;a:txSp></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Shape &lt;a:sp></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ConnectionShape &lt;a:cxnSp></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Picture &lt;a:pic></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart &lt;a14:contentPart></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GraphicFrame &lt;a:graphicFrame></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GroupShape &lt;a:grpSp></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GvmlGroupShapeExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties" /> <c>&lt;a:grpSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ConnectionShape" /> <c>&lt;a:cxnSp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GraphicFrame" /> <c>&lt;a:graphicFrame></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GroupShape" /> <c>&lt;a:grpSp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GvmlGroupShapeExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties" /> <c>&lt;a:nvGrpSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Picture" /> <c>&lt;a:pic></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Shape" /> <c>&lt;a:sp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TextShape" /> <c>&lt;a:txSp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart" /> <c>&lt;a14:contentPart></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -75,16 +75,16 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(15, "lockedCanvas");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.TextShape>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ConnectionShape>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Picture>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GraphicFrame>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupShape>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GvmlGroupShapeExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Picture>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.TextShape>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties), 1, 1),

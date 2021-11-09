@@ -22,10 +22,10 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>XsnLocation &lt;ntns:xsnLocation></description></item>
-    ///   <item><description>CachedView &lt;ntns:cached></description></item>
-    ///   <item><description>OpenByDefault &lt;ntns:openByDefault></description></item>
-    ///   <item><description>Scope &lt;ntns:xsnScope></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation" /> <c>&lt;ntns:xsnLocation></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomXsn.CachedView" /> <c>&lt;ntns:cached></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault" /> <c>&lt;ntns:openByDefault></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomXsn.Scope" /> <c>&lt;ntns:xsnScope></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -68,10 +68,10 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(39, "customXsn");
-            builder.AddChild<XsnLocation>();
-            builder.AddChild<CachedView>();
-            builder.AddChild<OpenByDefault>();
-            builder.AddChild<Scope>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.CustomXsn.CachedView>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.CustomXsn.Scope>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation), 1, 1),
@@ -88,9 +88,9 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// <remark>
         /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
         /// </remark>
-        public XsnLocation? XsnLocation
+        public DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation? XsnLocation
         {
-            get => GetElement<XsnLocation>();
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation>();
             set => SetElement(value);
         }
 
@@ -101,9 +101,9 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// <remark>
         /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
         /// </remark>
-        public CachedView? CachedView
+        public DocumentFormat.OpenXml.Office.CustomXsn.CachedView? CachedView
         {
-            get => GetElement<CachedView>();
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomXsn.CachedView>();
             set => SetElement(value);
         }
 
@@ -114,9 +114,9 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// <remark>
         /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
         /// </remark>
-        public OpenByDefault? OpenByDefault
+        public DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault? OpenByDefault
         {
-            get => GetElement<OpenByDefault>();
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault>();
             set => SetElement(value);
         }
 
@@ -127,9 +127,9 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// <remark>
         /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
         /// </remark>
-        public Scope? Scope
+        public DocumentFormat.OpenXml.Office.CustomXsn.Scope? Scope
         {
-            get => GetElement<Scope>();
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomXsn.Scope>();
             set => SetElement(value);
         }
 

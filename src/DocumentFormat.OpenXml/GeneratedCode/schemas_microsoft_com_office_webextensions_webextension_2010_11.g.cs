@@ -24,12 +24,12 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>WebExtensionStoreReference &lt;we:reference></description></item>
-    ///   <item><description>WebExtensionReferenceList &lt;we:alternateReferences></description></item>
-    ///   <item><description>WebExtensionPropertyBag &lt;we:properties></description></item>
-    ///   <item><description>WebExtensionBindingList &lt;we:bindings></description></item>
-    ///   <item><description>Snapshot &lt;we:snapshot></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;we:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.Snapshot" /> <c>&lt;we:snapshot></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList" /> <c>&lt;we:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionBindingList" /> <c>&lt;we:bindings></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionPropertyBag" /> <c>&lt;we:properties></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference" /> <c>&lt;we:reference></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionReferenceList" /> <c>&lt;we:alternateReferences></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -105,12 +105,12 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
             base.ConfigureMetadata(builder);
             builder.SetSchema(66, "webextension");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<WebExtensionStoreReference>();
-            builder.AddChild<WebExtensionReferenceList>();
-            builder.AddChild<WebExtensionPropertyBag>();
-            builder.AddChild<WebExtensionBindingList>();
-            builder.AddChild<Snapshot>();
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.Snapshot>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionBindingList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionPropertyBag>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionReferenceList>();
             builder.AddElement<WebExtension>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -136,9 +136,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
         /// </remark>
-        public WebExtensionStoreReference? WebExtensionStoreReference
+        public DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference? WebExtensionStoreReference
         {
-            get => GetElement<WebExtensionStoreReference>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference>();
             set => SetElement(value);
         }
 
@@ -149,9 +149,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
         /// </remark>
-        public WebExtensionReferenceList? WebExtensionReferenceList
+        public DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionReferenceList? WebExtensionReferenceList
         {
-            get => GetElement<WebExtensionReferenceList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionReferenceList>();
             set => SetElement(value);
         }
 
@@ -162,9 +162,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
         /// </remark>
-        public WebExtensionPropertyBag? WebExtensionPropertyBag
+        public DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionPropertyBag? WebExtensionPropertyBag
         {
-            get => GetElement<WebExtensionPropertyBag>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionPropertyBag>();
             set => SetElement(value);
         }
 
@@ -175,9 +175,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
         /// </remark>
-        public WebExtensionBindingList? WebExtensionBindingList
+        public DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionBindingList? WebExtensionBindingList
         {
-            get => GetElement<WebExtensionBindingList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionBindingList>();
             set => SetElement(value);
         }
 
@@ -188,9 +188,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
         /// </remark>
-        public Snapshot? Snapshot
+        public DocumentFormat.OpenXml.Office2013.WebExtension.Snapshot? Snapshot
         {
-            get => GetElement<Snapshot>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtension.Snapshot>();
             set => SetElement(value);
         }
 
@@ -201,9 +201,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -371,7 +371,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -440,7 +440,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OfficeArtExtensionList &lt;we:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList" /> <c>&lt;we:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -532,7 +532,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(66, "binding");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList>();
             builder.AddElement<WebExtensionBinding>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -559,9 +559,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -577,7 +577,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OfficeArtExtensionList &lt;we:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList" /> <c>&lt;we:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -685,7 +685,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(66, "reference");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList>();
             builder.AddElement<WebExtensionStoreReference>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -711,9 +711,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -729,7 +729,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>WebExtensionStoreReference &lt;we:reference></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference" /> <c>&lt;we:reference></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -773,7 +773,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(66, "alternateReferences");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<WebExtensionStoreReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference), 0, 0, version: FileFormatVersions.Office2013)
@@ -792,7 +792,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>WebExtensionProperty &lt;we:property></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionProperty" /> <c>&lt;we:property></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -836,7 +836,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(66, "properties");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<WebExtensionProperty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionProperty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionProperty), 0, 0, version: FileFormatVersions.Office2013)
@@ -855,7 +855,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>WebExtensionBinding &lt;we:binding></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionBinding" /> <c>&lt;we:binding></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -899,7 +899,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(66, "bindings");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<WebExtensionBinding>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionBinding>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionBinding), 0, 0, version: FileFormatVersions.Office2013)
@@ -918,24 +918,24 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.AlphaBiLevel &lt;a:alphaBiLevel></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.AlphaCeiling &lt;a:alphaCeiling></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.AlphaFloor &lt;a:alphaFloor></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.AlphaInverse &lt;a:alphaInv></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.AlphaModulationEffect &lt;a:alphaMod></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.AlphaModulationFixed &lt;a:alphaModFix></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.AlphaReplace &lt;a:alphaRepl></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BiLevel &lt;a:biLevel></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Blur &lt;a:blur></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ColorChange &lt;a:clrChange></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ColorReplacement &lt;a:clrRepl></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Duotone &lt;a:duotone></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.FillOverlay &lt;a:fillOverlay></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Grayscale &lt;a:grayscl></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Hsl &lt;a:hsl></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.LuminanceEffect &lt;a:lum></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.TintEffect &lt;a:tint></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BlipExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AlphaBiLevel" /> <c>&lt;a:alphaBiLevel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AlphaCeiling" /> <c>&lt;a:alphaCeiling></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AlphaFloor" /> <c>&lt;a:alphaFloor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AlphaInverse" /> <c>&lt;a:alphaInv></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AlphaModulationEffect" /> <c>&lt;a:alphaMod></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AlphaModulationFixed" /> <c>&lt;a:alphaModFix></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AlphaReplace" /> <c>&lt;a:alphaRepl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BiLevel" /> <c>&lt;a:biLevel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Blur" /> <c>&lt;a:blur></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ColorChange" /> <c>&lt;a:clrChange></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ColorReplacement" /> <c>&lt;a:clrRepl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Duotone" /> <c>&lt;a:duotone></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.FillOverlay" /> <c>&lt;a:fillOverlay></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Grayscale" /> <c>&lt;a:grayscl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Hsl" /> <c>&lt;a:hsl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.LuminanceEffect" /> <c>&lt;a:lum></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TintEffect" /> <c>&lt;a:tint></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1041,6 +1041,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaModulationFixed>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaReplace>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BiLevel>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Blur>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ColorChange>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ColorReplacement>();
@@ -1050,7 +1051,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Hsl>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.LuminanceEffect>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.TintEffect>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipExtensionList>();
             builder.AddElement<Snapshot>()
 .AddAttribute(19, "embed", a => a.Embed)
 .AddAttribute(19, "link", a => a.Link)

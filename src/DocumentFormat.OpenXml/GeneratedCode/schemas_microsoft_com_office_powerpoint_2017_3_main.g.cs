@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TrackList &lt;p173:trackLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Presentation.TrackList" /> <c>&lt;p173:trackLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
             base.ConfigureMetadata(builder);
             builder.SetSchema(89, "tracksInfo");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<TrackList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Presentation.TrackList>();
             builder.AddElement<TracksInfo>()
 .AddAttribute(0, "displayLoc", a => a.DisplayLoc, aBuilder =>
 {
@@ -103,9 +103,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p173 = http://schemas.microsoft.com/office/powerpoint/2017/3/main
         /// </remark>
-        public TrackList? TrackList
+        public DocumentFormat.OpenXml.Office2019.Presentation.TrackList? TrackList
         {
-            get => GetElement<TrackList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Presentation.TrackList>();
             set => SetElement(value);
         }
 
@@ -248,7 +248,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Track &lt;p173:track></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Presentation.Track" /> <c>&lt;p173:track></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -292,7 +292,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(89, "trackLst");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<Track>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Presentation.Track>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Presentation.Track), 0, 0, version: FileFormatVersions.Office2019)

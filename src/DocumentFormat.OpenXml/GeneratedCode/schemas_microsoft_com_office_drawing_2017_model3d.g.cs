@@ -25,19 +25,19 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ShapeProperties &lt;am3d:spPr></description></item>
-    ///   <item><description>Model3DCamera &lt;am3d:camera></description></item>
-    ///   <item><description>Model3DTransform &lt;am3d:trans></description></item>
-    ///   <item><description>PictureAttributionSourceURL &lt;am3d:attrSrcUrl></description></item>
-    ///   <item><description>Model3DRaster &lt;am3d:raster></description></item>
-    ///   <item><description>Model3DExtensionList &lt;am3d:extLst></description></item>
-    ///   <item><description>ObjectViewport &lt;am3d:objViewport></description></item>
-    ///   <item><description>WindowViewport &lt;am3d:winViewport></description></item>
-    ///   <item><description>AmbientLight &lt;am3d:ambientLight></description></item>
-    ///   <item><description>PointLight &lt;am3d:ptLight></description></item>
-    ///   <item><description>SpotLight &lt;am3d:spotLight></description></item>
-    ///   <item><description>DirectionalLight &lt;am3d:dirLight></description></item>
-    ///   <item><description>UnknownLight &lt;am3d:unkLight></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ShapeProperties" /> <c>&lt;am3d:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PictureAttributionSourceURL" /> <c>&lt;am3d:attrSrcUrl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.AmbientLight" /> <c>&lt;am3d:ambientLight></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.DirectionalLight" /> <c>&lt;am3d:dirLight></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DCamera" /> <c>&lt;am3d:camera></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtensionList" /> <c>&lt;am3d:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DRaster" /> <c>&lt;am3d:raster></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DTransform" /> <c>&lt;am3d:trans></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ObjectViewport" /> <c>&lt;am3d:objViewport></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PointLight" /> <c>&lt;am3d:ptLight></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SpotLight" /> <c>&lt;am3d:spotLight></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.UnknownLight" /> <c>&lt;am3d:unkLight></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.WindowViewport" /> <c>&lt;am3d:winViewport></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -119,19 +119,19 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema(111, "model3d");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<ShapeProperties>();
-            builder.AddChild<Model3DCamera>();
-            builder.AddChild<Model3DTransform>();
-            builder.AddChild<PictureAttributionSourceURL>();
-            builder.AddChild<Model3DRaster>();
-            builder.AddChild<Model3DExtensionList>();
-            builder.AddChild<ObjectViewport>();
-            builder.AddChild<WindowViewport>();
-            builder.AddChild<AmbientLight>();
-            builder.AddChild<PointLight>();
-            builder.AddChild<SpotLight>();
-            builder.AddChild<DirectionalLight>();
-            builder.AddChild<UnknownLight>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PictureAttributionSourceURL>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.AmbientLight>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.DirectionalLight>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DCamera>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DRaster>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DTransform>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ObjectViewport>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PointLight>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SpotLight>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.UnknownLight>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.WindowViewport>();
             builder.AddElement<Model3D>()
 .AddAttribute(19, "embed", a => a.Embed)
 .AddAttribute(19, "link", a => a.Link);
@@ -166,9 +166,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -179,9 +179,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public Model3DCamera? Model3DCamera
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DCamera? Model3DCamera
         {
-            get => GetElement<Model3DCamera>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DCamera>();
             set => SetElement(value);
         }
 
@@ -192,9 +192,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public Model3DTransform? Model3DTransform
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DTransform? Model3DTransform
         {
-            get => GetElement<Model3DTransform>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DTransform>();
             set => SetElement(value);
         }
 
@@ -205,9 +205,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public PictureAttributionSourceURL? PictureAttributionSourceURL
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PictureAttributionSourceURL? PictureAttributionSourceURL
         {
-            get => GetElement<PictureAttributionSourceURL>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PictureAttributionSourceURL>();
             set => SetElement(value);
         }
 
@@ -218,9 +218,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public Model3DRaster? Model3DRaster
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DRaster? Model3DRaster
         {
-            get => GetElement<Model3DRaster>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DRaster>();
             set => SetElement(value);
         }
 
@@ -231,9 +231,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public Model3DExtensionList? Model3DExtensionList
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtensionList? Model3DExtensionList
         {
-            get => GetElement<Model3DExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtensionList>();
             set => SetElement(value);
         }
 
@@ -735,9 +735,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SxRatio &lt;am3d:sx></description></item>
-    ///   <item><description>SyRatio &lt;am3d:sy></description></item>
-    ///   <item><description>SzRatio &lt;am3d:sz></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SxRatio" /> <c>&lt;am3d:sx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SyRatio" /> <c>&lt;am3d:sy></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzRatio" /> <c>&lt;am3d:sz></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -781,9 +781,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema(111, "scale");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<SxRatio>();
-            builder.AddChild<SyRatio>();
-            builder.AddChild<SzRatio>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SxRatio>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SyRatio>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzRatio>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SxRatio), 1, 1, version: FileFormatVersions.Office2019),
@@ -799,9 +799,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public SxRatio? SxRatio
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SxRatio? SxRatio
         {
-            get => GetElement<SxRatio>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SxRatio>();
             set => SetElement(value);
         }
 
@@ -812,9 +812,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public SyRatio? SyRatio
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SyRatio? SyRatio
         {
-            get => GetElement<SyRatio>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SyRatio>();
             set => SetElement(value);
         }
 
@@ -825,9 +825,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public SzRatio? SzRatio
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzRatio? SzRatio
         {
-            get => GetElement<SzRatio>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzRatio>();
             set => SetElement(value);
         }
 
@@ -923,7 +923,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1132,8 +1132,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>SzPositiveRatio &lt;am3d:sz></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;am3d:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList" /> <c>&lt;am3d:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzPositiveRatio" /> <c>&lt;am3d:sz></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1177,8 +1177,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema(111, "orthographic");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<SzPositiveRatio>();
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzPositiveRatio>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzPositiveRatio), 1, 1, version: FileFormatVersions.Office2019),
@@ -1193,9 +1193,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public SzPositiveRatio? SzPositiveRatio
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzPositiveRatio? SzPositiveRatio
         {
-            get => GetElement<SzPositiveRatio>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzPositiveRatio>();
             set => SetElement(value);
         }
 
@@ -1206,9 +1206,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -1224,7 +1224,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OfficeArtExtensionList &lt;am3d:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList" /> <c>&lt;am3d:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1284,7 +1284,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema(111, "perspective");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
             builder.AddElement<PerspectiveProjection>()
 .AddAttribute(0, "fov", a => a.Fov, aBuilder =>
 {
@@ -1304,9 +1304,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -1322,24 +1322,24 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.AlphaBiLevel &lt;a:alphaBiLevel></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.AlphaCeiling &lt;a:alphaCeiling></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.AlphaFloor &lt;a:alphaFloor></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.AlphaInverse &lt;a:alphaInv></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.AlphaModulationEffect &lt;a:alphaMod></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.AlphaModulationFixed &lt;a:alphaModFix></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.AlphaReplace &lt;a:alphaRepl></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BiLevel &lt;a:biLevel></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Blur &lt;a:blur></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ColorChange &lt;a:clrChange></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ColorReplacement &lt;a:clrRepl></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Duotone &lt;a:duotone></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.FillOverlay &lt;a:fillOverlay></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Grayscale &lt;a:grayscl></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Hsl &lt;a:hsl></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.LuminanceEffect &lt;a:lum></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.TintEffect &lt;a:tint></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BlipExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AlphaBiLevel" /> <c>&lt;a:alphaBiLevel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AlphaCeiling" /> <c>&lt;a:alphaCeiling></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AlphaFloor" /> <c>&lt;a:alphaFloor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AlphaInverse" /> <c>&lt;a:alphaInv></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AlphaModulationEffect" /> <c>&lt;a:alphaMod></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AlphaModulationFixed" /> <c>&lt;a:alphaModFix></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AlphaReplace" /> <c>&lt;a:alphaRepl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BiLevel" /> <c>&lt;a:biLevel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Blur" /> <c>&lt;a:blur></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ColorChange" /> <c>&lt;a:clrChange></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ColorReplacement" /> <c>&lt;a:clrRepl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Duotone" /> <c>&lt;a:duotone></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.FillOverlay" /> <c>&lt;a:fillOverlay></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Grayscale" /> <c>&lt;a:grayscl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Hsl" /> <c>&lt;a:hsl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.LuminanceEffect" /> <c>&lt;a:lum></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TintEffect" /> <c>&lt;a:tint></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1445,6 +1445,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaModulationFixed>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaReplace>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BiLevel>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Blur>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ColorChange>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ColorReplacement>();
@@ -1454,7 +1455,6 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Hsl>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.LuminanceEffect>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.TintEffect>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipExtensionList>();
             builder.AddElement<Blip>()
 .AddAttribute(19, "embed", a => a.Embed)
 .AddAttribute(19, "link", a => a.Link)
@@ -1500,12 +1500,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage" /> <c>&lt;a:scrgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1549,12 +1549,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(111, "clr");
             builder.Availability = FileFormatVersions.Office2019;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -1662,8 +1662,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.EmbeddedAnimation &lt;a3danim:embedAnim></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.PosterFrame &lt;a3danim:posterFrame></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.EmbeddedAnimation" /> <c>&lt;a3danim:embedAnim></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.PosterFrame" /> <c>&lt;a3danim:posterFrame></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1751,21 +1751,21 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Transform2D &lt;a:xfrm></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.CustomGeometry &lt;a:custGeom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetGeometry &lt;a:prstGeom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.NoFill &lt;a:noFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SolidFill &lt;a:solidFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GradientFill &lt;a:gradFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BlipFill &lt;a:blipFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PatternFill &lt;a:pattFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GroupFill &lt;a:grpFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Outline &lt;a:ln></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectList &lt;a:effectLst></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectDag &lt;a:effectDag></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Scene3DType &lt;a:scene3d></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Shape3DType &lt;a:sp3d></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.CustomGeometry" /> <c>&lt;a:custGeom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectDag" /> <c>&lt;a:effectDag></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectList" /> <c>&lt;a:effectLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GradientFill" /> <c>&lt;a:gradFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GroupFill" /> <c>&lt;a:grpFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Outline" /> <c>&lt;a:ln></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoFill" /> <c>&lt;a:noFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetGeometry" /> <c>&lt;a:prstGeom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Scene3DType" /> <c>&lt;a:scene3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Shape3DType" /> <c>&lt;a:sp3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1825,21 +1825,21 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(111, "spPr");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddElement<ShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
@@ -1908,12 +1908,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>PosPoint3D &lt;am3d:pos></description></item>
-    ///   <item><description>UpVector3D &lt;am3d:up></description></item>
-    ///   <item><description>LookAtPoint3D &lt;am3d:lookAt></description></item>
-    ///   <item><description>OrthographicProjection &lt;am3d:orthographic></description></item>
-    ///   <item><description>PerspectiveProjection &lt;am3d:perspective></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;am3d:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList" /> <c>&lt;am3d:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D" /> <c>&lt;am3d:pos></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D" /> <c>&lt;am3d:lookAt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.UpVector3D" /> <c>&lt;am3d:up></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OrthographicProjection" /> <c>&lt;am3d:orthographic></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PerspectiveProjection" /> <c>&lt;am3d:perspective></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1957,12 +1957,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(111, "camera");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<PosPoint3D>();
-            builder.AddChild<UpVector3D>();
-            builder.AddChild<LookAtPoint3D>();
-            builder.AddChild<OrthographicProjection>();
-            builder.AddChild<PerspectiveProjection>();
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.UpVector3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OrthographicProjection>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PerspectiveProjection>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D), 1, 1, version: FileFormatVersions.Office2019),
@@ -1984,9 +1984,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public PosPoint3D? PosPoint3D
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D? PosPoint3D
         {
-            get => GetElement<PosPoint3D>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D>();
             set => SetElement(value);
         }
 
@@ -1997,9 +1997,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public UpVector3D? UpVector3D
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.UpVector3D? UpVector3D
         {
-            get => GetElement<UpVector3D>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.UpVector3D>();
             set => SetElement(value);
         }
 
@@ -2010,9 +2010,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public LookAtPoint3D? LookAtPoint3D
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D? LookAtPoint3D
         {
-            get => GetElement<LookAtPoint3D>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D>();
             set => SetElement(value);
         }
 
@@ -2028,12 +2028,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>MeterPerModelUnitPositiveRatio &lt;am3d:meterPerModelUnit></description></item>
-    ///   <item><description>PreTransVector3D &lt;am3d:preTrans></description></item>
-    ///   <item><description>Scale3D &lt;am3d:scale></description></item>
-    ///   <item><description>Rotate3D &lt;am3d:rot></description></item>
-    ///   <item><description>PostTransVector3D &lt;am3d:postTrans></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;am3d:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList" /> <c>&lt;am3d:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PreTransVector3D" /> <c>&lt;am3d:preTrans></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PostTransVector3D" /> <c>&lt;am3d:postTrans></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.MeterPerModelUnitPositiveRatio" /> <c>&lt;am3d:meterPerModelUnit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Rotate3D" /> <c>&lt;am3d:rot></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Scale3D" /> <c>&lt;am3d:scale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2077,12 +2077,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(111, "trans");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<MeterPerModelUnitPositiveRatio>();
-            builder.AddChild<PreTransVector3D>();
-            builder.AddChild<Scale3D>();
-            builder.AddChild<Rotate3D>();
-            builder.AddChild<PostTransVector3D>();
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PreTransVector3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PostTransVector3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.MeterPerModelUnitPositiveRatio>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Rotate3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Scale3D>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.MeterPerModelUnitPositiveRatio), 0, 1, version: FileFormatVersions.Office2019),
@@ -2101,9 +2101,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public MeterPerModelUnitPositiveRatio? MeterPerModelUnitPositiveRatio
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.MeterPerModelUnitPositiveRatio? MeterPerModelUnitPositiveRatio
         {
-            get => GetElement<MeterPerModelUnitPositiveRatio>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.MeterPerModelUnitPositiveRatio>();
             set => SetElement(value);
         }
 
@@ -2114,9 +2114,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public PreTransVector3D? PreTransVector3D
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PreTransVector3D? PreTransVector3D
         {
-            get => GetElement<PreTransVector3D>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PreTransVector3D>();
             set => SetElement(value);
         }
 
@@ -2127,9 +2127,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public Scale3D? Scale3D
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Scale3D? Scale3D
         {
-            get => GetElement<Scale3D>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Scale3D>();
             set => SetElement(value);
         }
 
@@ -2140,9 +2140,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public Rotate3D? Rotate3D
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Rotate3D? Rotate3D
         {
-            get => GetElement<Rotate3D>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Rotate3D>();
             set => SetElement(value);
         }
 
@@ -2153,9 +2153,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public PostTransVector3D? PostTransVector3D
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PostTransVector3D? PostTransVector3D
         {
-            get => GetElement<PostTransVector3D>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PostTransVector3D>();
             set => SetElement(value);
         }
 
@@ -2166,9 +2166,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -2236,7 +2236,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Blip &lt;am3d:blip></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Blip" /> <c>&lt;am3d:blip></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2312,7 +2312,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(111, "raster");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<Blip>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Blip>();
             builder.AddElement<Model3DRaster>()
 .AddAttribute(0, "rName", a => a.RName, aBuilder =>
 {
@@ -2335,9 +2335,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public Blip? Blip
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Blip? Blip
         {
-            get => GetElement<Blip>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Blip>();
             set => SetElement(value);
         }
 
@@ -2353,7 +2353,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Model3DExtension &lt;am3d:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtension" /> <c>&lt;am3d:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2397,7 +2397,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(111, "extLst");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<Model3DExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtension), 0, 0, version: FileFormatVersions.Office2019)
@@ -2416,7 +2416,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OfficeArtExtensionList &lt;am3d:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList" /> <c>&lt;am3d:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2476,7 +2476,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(111, "objViewport");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
             builder.AddElement<ObjectViewport>()
 .AddAttribute(0, "viewportSz", a => a.ViewportSz, aBuilder =>
 {
@@ -2496,9 +2496,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -2514,7 +2514,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>OfficeArtExtensionList &lt;am3d:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList" /> <c>&lt;am3d:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2558,7 +2558,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             base.ConfigureMetadata(builder);
             builder.SetSchema(111, "winViewport");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2019)
@@ -2572,9 +2572,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -2590,9 +2590,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ColorType &lt;am3d:clr></description></item>
-    ///   <item><description>IlluminancePositiveRatio &lt;am3d:illuminance></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;am3d:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType" /> <c>&lt;am3d:clr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList" /> <c>&lt;am3d:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio" /> <c>&lt;am3d:illuminance></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2652,9 +2652,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             base.ConfigureMetadata(builder);
             builder.SetSchema(111, "ambientLight");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<ColorType>();
-            builder.AddChild<IlluminancePositiveRatio>();
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio>();
             builder.AddElement<AmbientLight>()
 .AddAttribute(0, "enabled", a => a.Enabled);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -2672,9 +2672,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public ColorType? ColorType
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType? ColorType
         {
-            get => GetElement<ColorType>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType>();
             set => SetElement(value);
         }
 
@@ -2685,9 +2685,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public IlluminancePositiveRatio? IlluminancePositiveRatio
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio? IlluminancePositiveRatio
         {
-            get => GetElement<IlluminancePositiveRatio>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio>();
             set => SetElement(value);
         }
 
@@ -2698,9 +2698,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -2716,10 +2716,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ColorType &lt;am3d:clr></description></item>
-    ///   <item><description>IntensityPositiveRatio &lt;am3d:intensity></description></item>
-    ///   <item><description>PosPoint3D &lt;am3d:pos></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;am3d:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType" /> <c>&lt;am3d:clr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList" /> <c>&lt;am3d:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D" /> <c>&lt;am3d:pos></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio" /> <c>&lt;am3d:intensity></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2795,10 +2795,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             base.ConfigureMetadata(builder);
             builder.SetSchema(111, "ptLight");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<ColorType>();
-            builder.AddChild<IntensityPositiveRatio>();
-            builder.AddChild<PosPoint3D>();
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio>();
             builder.AddElement<PointLight>()
 .AddAttribute(0, "enabled", a => a.Enabled)
 .AddAttribute(0, "rad", a => a.Rad, aBuilder =>
@@ -2822,9 +2822,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public ColorType? ColorType
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType? ColorType
         {
-            get => GetElement<ColorType>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType>();
             set => SetElement(value);
         }
 
@@ -2835,9 +2835,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public IntensityPositiveRatio? IntensityPositiveRatio
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio? IntensityPositiveRatio
         {
-            get => GetElement<IntensityPositiveRatio>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio>();
             set => SetElement(value);
         }
 
@@ -2848,9 +2848,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public PosPoint3D? PosPoint3D
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D? PosPoint3D
         {
-            get => GetElement<PosPoint3D>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D>();
             set => SetElement(value);
         }
 
@@ -2861,9 +2861,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -2879,11 +2879,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ColorType &lt;am3d:clr></description></item>
-    ///   <item><description>IntensityPositiveRatio &lt;am3d:intensity></description></item>
-    ///   <item><description>PosPoint3D &lt;am3d:pos></description></item>
-    ///   <item><description>LookAtPoint3D &lt;am3d:lookAt></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;am3d:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType" /> <c>&lt;am3d:clr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList" /> <c>&lt;am3d:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D" /> <c>&lt;am3d:pos></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D" /> <c>&lt;am3d:lookAt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio" /> <c>&lt;am3d:intensity></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2975,11 +2975,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             base.ConfigureMetadata(builder);
             builder.SetSchema(111, "spotLight");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<ColorType>();
-            builder.AddChild<IntensityPositiveRatio>();
-            builder.AddChild<PosPoint3D>();
-            builder.AddChild<LookAtPoint3D>();
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio>();
             builder.AddElement<SpotLight>()
 .AddAttribute(0, "enabled", a => a.Enabled)
 .AddAttribute(0, "rad", a => a.Rad, aBuilder =>
@@ -3009,9 +3009,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public ColorType? ColorType
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType? ColorType
         {
-            get => GetElement<ColorType>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType>();
             set => SetElement(value);
         }
 
@@ -3022,9 +3022,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public IntensityPositiveRatio? IntensityPositiveRatio
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio? IntensityPositiveRatio
         {
-            get => GetElement<IntensityPositiveRatio>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio>();
             set => SetElement(value);
         }
 
@@ -3035,9 +3035,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public PosPoint3D? PosPoint3D
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D? PosPoint3D
         {
-            get => GetElement<PosPoint3D>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D>();
             set => SetElement(value);
         }
 
@@ -3048,9 +3048,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public LookAtPoint3D? LookAtPoint3D
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D? LookAtPoint3D
         {
-            get => GetElement<LookAtPoint3D>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D>();
             set => SetElement(value);
         }
 
@@ -3061,9 +3061,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -3079,11 +3079,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ColorType &lt;am3d:clr></description></item>
-    ///   <item><description>IlluminancePositiveRatio &lt;am3d:illuminance></description></item>
-    ///   <item><description>PosPoint3D &lt;am3d:pos></description></item>
-    ///   <item><description>LookAtPoint3D &lt;am3d:lookAt></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;am3d:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType" /> <c>&lt;am3d:clr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList" /> <c>&lt;am3d:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D" /> <c>&lt;am3d:pos></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D" /> <c>&lt;am3d:lookAt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio" /> <c>&lt;am3d:illuminance></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3159,11 +3159,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             base.ConfigureMetadata(builder);
             builder.SetSchema(111, "dirLight");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<ColorType>();
-            builder.AddChild<IlluminancePositiveRatio>();
-            builder.AddChild<PosPoint3D>();
-            builder.AddChild<LookAtPoint3D>();
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio>();
             builder.AddElement<DirectionalLight>()
 .AddAttribute(0, "enabled", a => a.Enabled)
 .AddAttribute(0, "angularRad", a => a.AngularRad, aBuilder =>
@@ -3188,9 +3188,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public ColorType? ColorType
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType? ColorType
         {
-            get => GetElement<ColorType>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType>();
             set => SetElement(value);
         }
 
@@ -3201,9 +3201,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public IlluminancePositiveRatio? IlluminancePositiveRatio
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio? IlluminancePositiveRatio
         {
-            get => GetElement<IlluminancePositiveRatio>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio>();
             set => SetElement(value);
         }
 
@@ -3214,9 +3214,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public PosPoint3D? PosPoint3D
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D? PosPoint3D
         {
-            get => GetElement<PosPoint3D>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D>();
             set => SetElement(value);
         }
 
@@ -3227,9 +3227,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public LookAtPoint3D? LookAtPoint3D
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D? LookAtPoint3D
         {
-            get => GetElement<LookAtPoint3D>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D>();
             set => SetElement(value);
         }
 
@@ -3240,9 +3240,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 

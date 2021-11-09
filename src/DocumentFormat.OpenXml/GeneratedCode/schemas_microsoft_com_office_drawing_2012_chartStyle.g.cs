@@ -23,14 +23,14 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
-    ///   <item><description>ColorStyleVariation &lt;cs:variation></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage" /> <c>&lt;a:scrgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyleVariation" /> <c>&lt;cs:variation></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -106,14 +106,14 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "colorStyle");
             builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
-            builder.AddChild<ColorStyleVariation>();
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyleVariation>();
             builder.AddElement<ColorStyle>()
 .AddAttribute(0, "meth", a => a.Method, aBuilder =>
 {
@@ -187,38 +187,38 @@ union.AddValidator(StringValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>AxisTitle &lt;cs:axisTitle></description></item>
-    ///   <item><description>CategoryAxis &lt;cs:categoryAxis></description></item>
-    ///   <item><description>ChartArea &lt;cs:chartArea></description></item>
-    ///   <item><description>DataLabel &lt;cs:dataLabel></description></item>
-    ///   <item><description>DataLabelCallout &lt;cs:dataLabelCallout></description></item>
-    ///   <item><description>DataPoint &lt;cs:dataPoint></description></item>
-    ///   <item><description>DataPoint3D &lt;cs:dataPoint3D></description></item>
-    ///   <item><description>DataPointLine &lt;cs:dataPointLine></description></item>
-    ///   <item><description>DataPointMarker &lt;cs:dataPointMarker></description></item>
-    ///   <item><description>MarkerLayoutProperties &lt;cs:dataPointMarkerLayout></description></item>
-    ///   <item><description>DataPointWireframe &lt;cs:dataPointWireframe></description></item>
-    ///   <item><description>DataTableStyle &lt;cs:dataTable></description></item>
-    ///   <item><description>DownBar &lt;cs:downBar></description></item>
-    ///   <item><description>DropLine &lt;cs:dropLine></description></item>
-    ///   <item><description>ErrorBar &lt;cs:errorBar></description></item>
-    ///   <item><description>Floor &lt;cs:floor></description></item>
-    ///   <item><description>GridlineMajor &lt;cs:gridlineMajor></description></item>
-    ///   <item><description>GridlineMinor &lt;cs:gridlineMinor></description></item>
-    ///   <item><description>HiLoLine &lt;cs:hiLoLine></description></item>
-    ///   <item><description>LeaderLine &lt;cs:leaderLine></description></item>
-    ///   <item><description>LegendStyle &lt;cs:legend></description></item>
-    ///   <item><description>PlotArea &lt;cs:plotArea></description></item>
-    ///   <item><description>PlotArea3D &lt;cs:plotArea3D></description></item>
-    ///   <item><description>SeriesAxis &lt;cs:seriesAxis></description></item>
-    ///   <item><description>SeriesLine &lt;cs:seriesLine></description></item>
-    ///   <item><description>TitleStyle &lt;cs:title></description></item>
-    ///   <item><description>TrendlineStyle &lt;cs:trendline></description></item>
-    ///   <item><description>TrendlineLabel &lt;cs:trendlineLabel></description></item>
-    ///   <item><description>UpBar &lt;cs:upBar></description></item>
-    ///   <item><description>ValueAxis &lt;cs:valueAxis></description></item>
-    ///   <item><description>Wall &lt;cs:wall></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerLayoutProperties" /> <c>&lt;cs:dataPointMarkerLayout></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.AxisTitle" /> <c>&lt;cs:axisTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.CategoryAxis" /> <c>&lt;cs:categoryAxis></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ChartArea" /> <c>&lt;cs:chartArea></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabel" /> <c>&lt;cs:dataLabel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelCallout" /> <c>&lt;cs:dataLabelCallout></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint" /> <c>&lt;cs:dataPoint></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint3D" /> <c>&lt;cs:dataPoint3D></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointLine" /> <c>&lt;cs:dataPointLine></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointMarker" /> <c>&lt;cs:dataPointMarker></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointWireframe" /> <c>&lt;cs:dataPointWireframe></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataTableStyle" /> <c>&lt;cs:dataTable></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DownBar" /> <c>&lt;cs:downBar></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DropLine" /> <c>&lt;cs:dropLine></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ErrorBar" /> <c>&lt;cs:errorBar></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Floor" /> <c>&lt;cs:floor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMajor" /> <c>&lt;cs:gridlineMajor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMinor" /> <c>&lt;cs:gridlineMinor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.HiLoLine" /> <c>&lt;cs:hiLoLine></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LeaderLine" /> <c>&lt;cs:leaderLine></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendStyle" /> <c>&lt;cs:legend></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea" /> <c>&lt;cs:plotArea></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea3D" /> <c>&lt;cs:plotArea3D></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesAxis" /> <c>&lt;cs:seriesAxis></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesLine" /> <c>&lt;cs:seriesLine></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitleStyle" /> <c>&lt;cs:title></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineStyle" /> <c>&lt;cs:trendline></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineLabel" /> <c>&lt;cs:trendlineLabel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.UpBar" /> <c>&lt;cs:upBar></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ValueAxis" /> <c>&lt;cs:valueAxis></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Wall" /> <c>&lt;cs:wall></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -278,38 +278,38 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "chartStyle");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<AxisTitle>();
-            builder.AddChild<CategoryAxis>();
-            builder.AddChild<ChartArea>();
-            builder.AddChild<DataLabel>();
-            builder.AddChild<DataLabelCallout>();
-            builder.AddChild<DataPoint>();
-            builder.AddChild<DataPoint3D>();
-            builder.AddChild<DataPointLine>();
-            builder.AddChild<DataPointMarker>();
-            builder.AddChild<MarkerLayoutProperties>();
-            builder.AddChild<DataPointWireframe>();
-            builder.AddChild<DataTableStyle>();
-            builder.AddChild<DownBar>();
-            builder.AddChild<DropLine>();
-            builder.AddChild<ErrorBar>();
-            builder.AddChild<Floor>();
-            builder.AddChild<GridlineMajor>();
-            builder.AddChild<GridlineMinor>();
-            builder.AddChild<HiLoLine>();
-            builder.AddChild<LeaderLine>();
-            builder.AddChild<LegendStyle>();
-            builder.AddChild<PlotArea>();
-            builder.AddChild<PlotArea3D>();
-            builder.AddChild<SeriesAxis>();
-            builder.AddChild<SeriesLine>();
-            builder.AddChild<TitleStyle>();
-            builder.AddChild<TrendlineStyle>();
-            builder.AddChild<TrendlineLabel>();
-            builder.AddChild<UpBar>();
-            builder.AddChild<ValueAxis>();
-            builder.AddChild<Wall>();
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerLayoutProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.AxisTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.CategoryAxis>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ChartArea>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabel>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelCallout>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointMarker>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointWireframe>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataTableStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DownBar>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DropLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ErrorBar>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Floor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMajor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMinor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.HiLoLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LeaderLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesAxis>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitleStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineLabel>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.UpBar>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ValueAxis>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Wall>();
             builder.AddElement<ChartStyle>()
 .AddAttribute(0, "id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -356,9 +356,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public AxisTitle? AxisTitle
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.AxisTitle? AxisTitle
         {
-            get => GetElement<AxisTitle>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.AxisTitle>();
             set => SetElement(value);
         }
 
@@ -369,9 +369,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public CategoryAxis? CategoryAxis
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.CategoryAxis? CategoryAxis
         {
-            get => GetElement<CategoryAxis>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.CategoryAxis>();
             set => SetElement(value);
         }
 
@@ -382,9 +382,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public ChartArea? ChartArea
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ChartArea? ChartArea
         {
-            get => GetElement<ChartArea>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ChartArea>();
             set => SetElement(value);
         }
 
@@ -395,9 +395,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public DataLabel? DataLabel
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabel? DataLabel
         {
-            get => GetElement<DataLabel>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabel>();
             set => SetElement(value);
         }
 
@@ -408,9 +408,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public DataLabelCallout? DataLabelCallout
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelCallout? DataLabelCallout
         {
-            get => GetElement<DataLabelCallout>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelCallout>();
             set => SetElement(value);
         }
 
@@ -421,9 +421,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public DataPoint? DataPoint
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint? DataPoint
         {
-            get => GetElement<DataPoint>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint>();
             set => SetElement(value);
         }
 
@@ -434,9 +434,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public DataPoint3D? DataPoint3D
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint3D? DataPoint3D
         {
-            get => GetElement<DataPoint3D>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint3D>();
             set => SetElement(value);
         }
 
@@ -447,9 +447,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public DataPointLine? DataPointLine
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointLine? DataPointLine
         {
-            get => GetElement<DataPointLine>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointLine>();
             set => SetElement(value);
         }
 
@@ -460,9 +460,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public DataPointMarker? DataPointMarker
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointMarker? DataPointMarker
         {
-            get => GetElement<DataPointMarker>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointMarker>();
             set => SetElement(value);
         }
 
@@ -473,9 +473,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public MarkerLayoutProperties? MarkerLayoutProperties
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerLayoutProperties? MarkerLayoutProperties
         {
-            get => GetElement<MarkerLayoutProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerLayoutProperties>();
             set => SetElement(value);
         }
 
@@ -486,9 +486,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public DataPointWireframe? DataPointWireframe
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointWireframe? DataPointWireframe
         {
-            get => GetElement<DataPointWireframe>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointWireframe>();
             set => SetElement(value);
         }
 
@@ -499,9 +499,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public DataTableStyle? DataTableStyle
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataTableStyle? DataTableStyle
         {
-            get => GetElement<DataTableStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataTableStyle>();
             set => SetElement(value);
         }
 
@@ -512,9 +512,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public DownBar? DownBar
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DownBar? DownBar
         {
-            get => GetElement<DownBar>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DownBar>();
             set => SetElement(value);
         }
 
@@ -525,9 +525,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public DropLine? DropLine
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DropLine? DropLine
         {
-            get => GetElement<DropLine>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DropLine>();
             set => SetElement(value);
         }
 
@@ -538,9 +538,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public ErrorBar? ErrorBar
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ErrorBar? ErrorBar
         {
-            get => GetElement<ErrorBar>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ErrorBar>();
             set => SetElement(value);
         }
 
@@ -551,9 +551,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public Floor? Floor
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Floor? Floor
         {
-            get => GetElement<Floor>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Floor>();
             set => SetElement(value);
         }
 
@@ -564,9 +564,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public GridlineMajor? GridlineMajor
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMajor? GridlineMajor
         {
-            get => GetElement<GridlineMajor>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMajor>();
             set => SetElement(value);
         }
 
@@ -577,9 +577,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public GridlineMinor? GridlineMinor
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMinor? GridlineMinor
         {
-            get => GetElement<GridlineMinor>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMinor>();
             set => SetElement(value);
         }
 
@@ -590,9 +590,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public HiLoLine? HiLoLine
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.HiLoLine? HiLoLine
         {
-            get => GetElement<HiLoLine>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.HiLoLine>();
             set => SetElement(value);
         }
 
@@ -603,9 +603,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public LeaderLine? LeaderLine
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LeaderLine? LeaderLine
         {
-            get => GetElement<LeaderLine>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LeaderLine>();
             set => SetElement(value);
         }
 
@@ -616,9 +616,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public LegendStyle? LegendStyle
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendStyle? LegendStyle
         {
-            get => GetElement<LegendStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendStyle>();
             set => SetElement(value);
         }
 
@@ -629,9 +629,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public PlotArea? PlotArea
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea? PlotArea
         {
-            get => GetElement<PlotArea>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea>();
             set => SetElement(value);
         }
 
@@ -642,9 +642,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public PlotArea3D? PlotArea3D
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea3D? PlotArea3D
         {
-            get => GetElement<PlotArea3D>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea3D>();
             set => SetElement(value);
         }
 
@@ -655,9 +655,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public SeriesAxis? SeriesAxis
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesAxis? SeriesAxis
         {
-            get => GetElement<SeriesAxis>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesAxis>();
             set => SetElement(value);
         }
 
@@ -668,9 +668,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public SeriesLine? SeriesLine
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesLine? SeriesLine
         {
-            get => GetElement<SeriesLine>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesLine>();
             set => SetElement(value);
         }
 
@@ -681,9 +681,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public TitleStyle? TitleStyle
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitleStyle? TitleStyle
         {
-            get => GetElement<TitleStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitleStyle>();
             set => SetElement(value);
         }
 
@@ -694,9 +694,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public TrendlineStyle? TrendlineStyle
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineStyle? TrendlineStyle
         {
-            get => GetElement<TrendlineStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineStyle>();
             set => SetElement(value);
         }
 
@@ -707,9 +707,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public TrendlineLabel? TrendlineLabel
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineLabel? TrendlineLabel
         {
-            get => GetElement<TrendlineLabel>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineLabel>();
             set => SetElement(value);
         }
 
@@ -720,9 +720,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public UpBar? UpBar
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.UpBar? UpBar
         {
-            get => GetElement<UpBar>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.UpBar>();
             set => SetElement(value);
         }
 
@@ -733,9 +733,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public ValueAxis? ValueAxis
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ValueAxis? ValueAxis
         {
-            get => GetElement<ValueAxis>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ValueAxis>();
             set => SetElement(value);
         }
 
@@ -746,9 +746,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public Wall? Wall
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Wall? Wall
         {
-            get => GetElement<Wall>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Wall>();
             set => SetElement(value);
         }
 
@@ -759,9 +759,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -808,34 +808,34 @@ union.AddValidator(StringValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Tint &lt;a:tint></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Shade &lt;a:shade></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Complement &lt;a:comp></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Inverse &lt;a:inv></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Gray &lt;a:gray></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Alpha &lt;a:alpha></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.AlphaOffset &lt;a:alphaOff></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.AlphaModulation &lt;a:alphaMod></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Hue &lt;a:hue></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HueOffset &lt;a:hueOff></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HueModulation &lt;a:hueMod></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Saturation &lt;a:sat></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SaturationOffset &lt;a:satOff></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SaturationModulation &lt;a:satMod></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Luminance &lt;a:lum></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.LuminanceOffset &lt;a:lumOff></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.LuminanceModulation &lt;a:lumMod></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Red &lt;a:red></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RedOffset &lt;a:redOff></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RedModulation &lt;a:redMod></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Green &lt;a:green></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GreenOffset &lt;a:greenOff></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GreenModulation &lt;a:greenMod></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Blue &lt;a:blue></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BlueOffset &lt;a:blueOff></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BlueModulation &lt;a:blueMod></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Gamma &lt;a:gamma></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.InverseGamma &lt;a:invGamma></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HueOffset" /> <c>&lt;a:hueOff></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Complement" /> <c>&lt;a:comp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AlphaOffset" /> <c>&lt;a:alphaOff></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Gamma" /> <c>&lt;a:gamma></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Gray" /> <c>&lt;a:gray></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.InverseGamma" /> <c>&lt;a:invGamma></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Inverse" /> <c>&lt;a:inv></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Saturation" /> <c>&lt;a:sat></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SaturationOffset" /> <c>&lt;a:satOff></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SaturationModulation" /> <c>&lt;a:satMod></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Luminance" /> <c>&lt;a:lum></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.LuminanceOffset" /> <c>&lt;a:lumOff></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.LuminanceModulation" /> <c>&lt;a:lumMod></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Red" /> <c>&lt;a:red></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RedOffset" /> <c>&lt;a:redOff></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RedModulation" /> <c>&lt;a:redMod></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Green" /> <c>&lt;a:green></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GreenOffset" /> <c>&lt;a:greenOff></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GreenModulation" /> <c>&lt;a:greenMod></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Blue" /> <c>&lt;a:blue></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlueOffset" /> <c>&lt;a:blueOff></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlueModulation" /> <c>&lt;a:blueMod></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Hue" /> <c>&lt;a:hue></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Tint" /> <c>&lt;a:tint></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Shade" /> <c>&lt;a:shade></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Alpha" /> <c>&lt;a:alpha></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AlphaModulation" /> <c>&lt;a:alphaMod></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HueModulation" /> <c>&lt;a:hueMod></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -879,17 +879,13 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "variation");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Tint>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shade>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Complement>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Inverse>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Gray>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Alpha>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaModulation>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Hue>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HueOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HueModulation>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Complement>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaOffset>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Gamma>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Gray>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.InverseGamma>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Inverse>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Saturation>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SaturationOffset>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SaturationModulation>();
@@ -905,8 +901,12 @@ union.AddValidator(StringValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Blue>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlueOffset>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlueModulation>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Gamma>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.InverseGamma>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Hue>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Tint>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shade>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Alpha>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaModulation>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HueModulation>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -958,7 +958,7 @@ union.AddValidator(StringValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1027,34 +1027,34 @@ union.AddValidator(StringValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Tint &lt;a:tint></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Shade &lt;a:shade></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Complement &lt;a:comp></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Inverse &lt;a:inv></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Gray &lt;a:gray></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Alpha &lt;a:alpha></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.AlphaOffset &lt;a:alphaOff></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.AlphaModulation &lt;a:alphaMod></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Hue &lt;a:hue></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HueOffset &lt;a:hueOff></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HueModulation &lt;a:hueMod></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Saturation &lt;a:sat></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SaturationOffset &lt;a:satOff></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SaturationModulation &lt;a:satMod></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Luminance &lt;a:lum></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.LuminanceOffset &lt;a:lumOff></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.LuminanceModulation &lt;a:lumMod></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Red &lt;a:red></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RedOffset &lt;a:redOff></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RedModulation &lt;a:redMod></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Green &lt;a:green></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GreenOffset &lt;a:greenOff></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GreenModulation &lt;a:greenMod></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Blue &lt;a:blue></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BlueOffset &lt;a:blueOff></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BlueModulation &lt;a:blueMod></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Gamma &lt;a:gamma></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.InverseGamma &lt;a:invGamma></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HueOffset" /> <c>&lt;a:hueOff></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Complement" /> <c>&lt;a:comp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AlphaOffset" /> <c>&lt;a:alphaOff></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Gamma" /> <c>&lt;a:gamma></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Gray" /> <c>&lt;a:gray></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.InverseGamma" /> <c>&lt;a:invGamma></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Inverse" /> <c>&lt;a:inv></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Saturation" /> <c>&lt;a:sat></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SaturationOffset" /> <c>&lt;a:satOff></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SaturationModulation" /> <c>&lt;a:satMod></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Luminance" /> <c>&lt;a:lum></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.LuminanceOffset" /> <c>&lt;a:lumOff></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.LuminanceModulation" /> <c>&lt;a:lumMod></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Red" /> <c>&lt;a:red></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RedOffset" /> <c>&lt;a:redOff></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RedModulation" /> <c>&lt;a:redMod></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Green" /> <c>&lt;a:green></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GreenOffset" /> <c>&lt;a:greenOff></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GreenModulation" /> <c>&lt;a:greenMod></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Blue" /> <c>&lt;a:blue></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlueOffset" /> <c>&lt;a:blueOff></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlueModulation" /> <c>&lt;a:blueMod></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Hue" /> <c>&lt;a:hue></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Tint" /> <c>&lt;a:tint></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Shade" /> <c>&lt;a:shade></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Alpha" /> <c>&lt;a:alpha></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AlphaModulation" /> <c>&lt;a:alphaMod></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HueModulation" /> <c>&lt;a:hueMod></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1114,17 +1114,13 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "styleClr");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Tint>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shade>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Complement>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Inverse>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Gray>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Alpha>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaModulation>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Hue>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HueOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HueModulation>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Complement>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaOffset>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Gamma>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Gray>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.InverseGamma>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Inverse>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Saturation>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SaturationOffset>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SaturationModulation>();
@@ -1140,8 +1136,12 @@ union.AddValidator(StringValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Blue>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlueOffset>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlueModulation>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Gamma>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.InverseGamma>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Hue>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Tint>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shade>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Alpha>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaModulation>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HueModulation>();
             builder.AddElement<StyleColor>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
@@ -1203,13 +1203,13 @@ union.AddValidator(StringValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
-    ///   <item><description>StyleColor &lt;cs:styleClr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage" /> <c>&lt;a:scrgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor" /> <c>&lt;cs:styleClr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1283,13 +1283,13 @@ union.AddValidator(StringValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
-    ///   <item><description>StyleColor &lt;cs:styleClr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage" /> <c>&lt;a:scrgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor" /> <c>&lt;cs:styleClr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1363,13 +1363,13 @@ union.AddValidator(StringValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
-    ///   <item><description>StyleColor &lt;cs:styleClr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage" /> <c>&lt;a:scrgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor" /> <c>&lt;cs:styleClr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1443,13 +1443,13 @@ union.AddValidator(StringValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
-    ///   <item><description>StyleColor &lt;cs:styleClr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage" /> <c>&lt;a:scrgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor" /> <c>&lt;cs:styleClr></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class StyleReference : OpenXmlCompositeElement
@@ -1520,13 +1520,13 @@ union.AddValidator(StringValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
-            builder.AddChild<StyleColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor>();
             builder.AddElement<StyleReference>()
 .AddAttribute(0, "idx", a => a.Index, aBuilder =>
 {
@@ -1586,13 +1586,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage &lt;a:scrgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RgbColorModelHex &lt;a:srgbClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HslColor &lt;a:hslClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SystemColor &lt;a:sysClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SchemeColor &lt;a:schemeClr></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
-    ///   <item><description>StyleColor &lt;cs:styleClr></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage" /> <c>&lt;a:scrgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor" /> <c>&lt;cs:styleClr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1668,13 +1668,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "fontRef");
             builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
-            builder.AddChild<StyleColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor>();
             builder.AddElement<FontReference>()
 .AddAttribute(0, "idx", a => a.Index, aBuilder =>
 {
@@ -1712,21 +1712,21 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Transform2D &lt;a:xfrm></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.CustomGeometry &lt;a:custGeom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetGeometry &lt;a:prstGeom></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.NoFill &lt;a:noFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SolidFill &lt;a:solidFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GradientFill &lt;a:gradFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BlipFill &lt;a:blipFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PatternFill &lt;a:pattFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GroupFill &lt;a:grpFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Outline &lt;a:ln></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectList &lt;a:effectLst></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectDag &lt;a:effectDag></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Scene3DType &lt;a:scene3d></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Shape3DType &lt;a:sp3d></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.CustomGeometry" /> <c>&lt;a:custGeom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectDag" /> <c>&lt;a:effectDag></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectList" /> <c>&lt;a:effectLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GradientFill" /> <c>&lt;a:gradFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GroupFill" /> <c>&lt;a:grpFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Outline" /> <c>&lt;a:ln></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoFill" /> <c>&lt;a:noFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetGeometry" /> <c>&lt;a:prstGeom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Scene3DType" /> <c>&lt;a:scene3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Shape3DType" /> <c>&lt;a:sp3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1786,21 +1786,21 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "spPr");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddElement<ShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
@@ -1869,28 +1869,28 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Outline &lt;a:ln></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.NoFill &lt;a:noFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SolidFill &lt;a:solidFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GradientFill &lt;a:gradFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.BlipFill &lt;a:blipFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PatternFill &lt;a:pattFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.GroupFill &lt;a:grpFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectList &lt;a:effectLst></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectDag &lt;a:effectDag></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Highlight &lt;a:highlight></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.UnderlineFollowsText &lt;a:uLnTx></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Underline &lt;a:uLn></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.UnderlineFillText &lt;a:uFillTx></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.UnderlineFill &lt;a:uFill></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.LatinFont &lt;a:latin></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.EastAsianFont &lt;a:ea></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ComplexScriptFont &lt;a:cs></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.SymbolFont &lt;a:sym></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HyperlinkOnClick &lt;a:hlinkClick></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.HyperlinkOnMouseOver &lt;a:hlinkMouseOver></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.RightToLeft &lt;a:rtl></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RightToLeft" /> <c>&lt;a:rtl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Highlight" /> <c>&lt;a:highlight></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectDag" /> <c>&lt;a:effectDag></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectList" /> <c>&lt;a:effectLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GradientFill" /> <c>&lt;a:gradFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GroupFill" /> <c>&lt;a:grpFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnClick" /> <c>&lt;a:hlinkClick></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnMouseOver" /> <c>&lt;a:hlinkMouseOver></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Outline" /> <c>&lt;a:ln></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Underline" /> <c>&lt;a:uLn></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoFill" /> <c>&lt;a:noFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.LatinFont" /> <c>&lt;a:latin></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EastAsianFont" /> <c>&lt;a:ea></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ComplexScriptFont" /> <c>&lt;a:cs></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SymbolFont" /> <c>&lt;a:sym></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.UnderlineFillText" /> <c>&lt;a:uFillTx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.UnderlineFill" /> <c>&lt;a:uFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.UnderlineFollowsText" /> <c>&lt;a:uLnTx></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2238,28 +2238,28 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "defRPr");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.RightToLeft>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Highlight>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.UnderlineFollowsText>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnMouseOver>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Underline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.UnderlineFillText>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.UnderlineFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.LatinFont>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EastAsianFont>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ComplexScriptFont>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SymbolFont>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnMouseOver>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RightToLeft>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.UnderlineFillText>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.UnderlineFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.UnderlineFollowsText>();
             builder.AddElement<TextCharacterPropertiesType>()
 .AddAttribute(0, "kumimoji", a => a.Kumimoji)
 .AddAttribute(0, "lang", a => a.Language)
@@ -2374,14 +2374,14 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetTextWrap &lt;a:prstTxWarp></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.NoAutoFit &lt;a:noAutofit></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.NormalAutoFit &lt;a:normAutofit></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ShapeAutoFit &lt;a:spAutoFit></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Scene3DType &lt;a:scene3d></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.Shape3DType &lt;a:sp3d></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.FlatText &lt;a:flatTx></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.FlatText" /> <c>&lt;a:flatTx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetTextWrap" /> <c>&lt;a:prstTxWarp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Scene3DType" /> <c>&lt;a:scene3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Shape3DType" /> <c>&lt;a:sp3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoAutoFit" /> <c>&lt;a:noAutofit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NormalAutoFit" /> <c>&lt;a:normAutofit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeAutoFit" /> <c>&lt;a:spAutoFit></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2729,14 +2729,14 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "bodyPr");
             builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.FlatText>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetTextWrap>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NoAutoFit>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NormalAutoFit>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapeAutoFit>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.FlatText>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.AddElement<TextBodyProperties>()
 .AddAttribute(0, "rot", a => a.Rotation)
 .AddAttribute(0, "spcFirstLastPara", a => a.UseParagraphSpacing)
@@ -3896,15 +3896,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3974,15 +3974,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4052,15 +4052,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4130,15 +4130,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4208,15 +4208,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4286,15 +4286,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4364,15 +4364,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4442,15 +4442,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4520,15 +4520,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4598,15 +4598,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4676,15 +4676,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4754,15 +4754,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4832,15 +4832,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4910,15 +4910,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4988,15 +4988,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5066,15 +5066,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5144,15 +5144,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5222,15 +5222,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5300,15 +5300,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5378,15 +5378,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5456,15 +5456,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5534,15 +5534,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5612,15 +5612,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5690,15 +5690,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5768,15 +5768,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5846,15 +5846,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5924,15 +5924,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6002,15 +6002,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6080,15 +6080,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6158,15 +6158,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6236,15 +6236,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>LineReference &lt;cs:lnRef></description></item>
-    ///   <item><description>LineWidthScale &lt;cs:lineWidthScale></description></item>
-    ///   <item><description>FillReference &lt;cs:fillRef></description></item>
-    ///   <item><description>EffectReference &lt;cs:effectRef></description></item>
-    ///   <item><description>FontReference &lt;cs:fontRef></description></item>
-    ///   <item><description>ShapeProperties &lt;cs:spPr></description></item>
-    ///   <item><description>TextCharacterPropertiesType &lt;cs:defRPr></description></item>
-    ///   <item><description>TextBodyProperties &lt;cs:bodyPr></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties" /> <c>&lt;cs:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties" /> <c>&lt;cs:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType" /> <c>&lt;cs:defRPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference" /> <c>&lt;cs:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference" /> <c>&lt;cs:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference" /> <c>&lt;cs:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class StyleEntry : OpenXmlCompositeElement
@@ -6299,15 +6299,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<LineReference>();
-            builder.AddChild<LineWidthScale>();
-            builder.AddChild<FillReference>();
-            builder.AddChild<EffectReference>();
-            builder.AddChild<FontReference>();
-            builder.AddChild<ShapeProperties>();
-            builder.AddChild<TextCharacterPropertiesType>();
-            builder.AddChild<TextBodyProperties>();
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale>();
             builder.AddElement<StyleEntry>()
 .AddAttribute(0, "mods", a => a.Modifiers);
         }
@@ -6319,9 +6319,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public LineReference? LineReference
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference? LineReference
         {
-            get => GetElement<LineReference>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference>();
             set => SetElement(value);
         }
 
@@ -6332,9 +6332,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public LineWidthScale? LineWidthScale
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale? LineWidthScale
         {
-            get => GetElement<LineWidthScale>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale>();
             set => SetElement(value);
         }
 
@@ -6345,9 +6345,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public FillReference? FillReference
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference? FillReference
         {
-            get => GetElement<FillReference>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference>();
             set => SetElement(value);
         }
 
@@ -6358,9 +6358,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public EffectReference? EffectReference
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference? EffectReference
         {
-            get => GetElement<EffectReference>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference>();
             set => SetElement(value);
         }
 
@@ -6371,9 +6371,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public FontReference? FontReference
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference? FontReference
         {
-            get => GetElement<FontReference>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference>();
             set => SetElement(value);
         }
 
@@ -6384,9 +6384,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -6397,9 +6397,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public TextCharacterPropertiesType? TextCharacterPropertiesType
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType? TextCharacterPropertiesType
         {
-            get => GetElement<TextCharacterPropertiesType>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType>();
             set => SetElement(value);
         }
 
@@ -6410,9 +6410,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public TextBodyProperties? TextBodyProperties
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties? TextBodyProperties
         {
-            get => GetElement<TextBodyProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties>();
             set => SetElement(value);
         }
 
@@ -6423,9 +6423,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList>();
             set => SetElement(value);
         }
     }

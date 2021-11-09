@@ -25,8 +25,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TaskHistory &lt;ppt1912SchemaUri:history></description></item>
-    ///   <item><description>ExtensionList &lt;ppt1912SchemaUri:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList" /> <c>&lt;ppt1912SchemaUri:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistory" /> <c>&lt;ppt1912SchemaUri:history></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -86,8 +86,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
             base.ConfigureMetadata(builder);
             builder.SetSchema(136, "taskHistoryDetails");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<TaskHistory>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistory>();
             builder.AddElement<TaskHistoryDetails>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -108,9 +108,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:ppt1912SchemaUri = http://schemas.microsoft.com/office/powerpoint/2019/12/main
         /// </remark>
-        public TaskHistory? TaskHistory
+        public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistory? TaskHistory
         {
-            get => GetElement<TaskHistory>();
+            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistory>();
             set => SetElement(value);
         }
 
@@ -121,9 +121,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:ppt1912SchemaUri = http://schemas.microsoft.com/office/powerpoint/2019/12/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -189,7 +189,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Presentation.Extension &lt;p:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -384,8 +384,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CommentAnchor &lt;ppt1912SchemaUri:comment></description></item>
-    ///   <item><description>ExtensionList &lt;ppt1912SchemaUri:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList" /> <c>&lt;ppt1912SchemaUri:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.CommentAnchor" /> <c>&lt;ppt1912SchemaUri:comment></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -429,8 +429,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(136, "anchr");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<CommentAnchor>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.CommentAnchor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.CommentAnchor), 1, 1, version: FileFormatVersions.Office2021),
@@ -445,9 +445,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:ppt1912SchemaUri = http://schemas.microsoft.com/office/powerpoint/2019/12/main
         /// </remark>
-        public CommentAnchor? CommentAnchor
+        public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.CommentAnchor? CommentAnchor
         {
-            get => GetElement<CommentAnchor>();
+            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.CommentAnchor>();
             set => SetElement(value);
         }
 
@@ -458,9 +458,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:ppt1912SchemaUri = http://schemas.microsoft.com/office/powerpoint/2019/12/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -842,19 +842,19 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>AtrbtnTaskAssignUnassignUser &lt;ppt1912SchemaUri:atrbtn></description></item>
-    ///   <item><description>TaskAnchor &lt;ppt1912SchemaUri:anchr></description></item>
-    ///   <item><description>AsgnTaskAssignUnassignUser &lt;ppt1912SchemaUri:asgn></description></item>
-    ///   <item><description>UnAsgnTaskAssignUnassignUser &lt;ppt1912SchemaUri:unAsgn></description></item>
-    ///   <item><description>AddEmpty &lt;ppt1912SchemaUri:add></description></item>
-    ///   <item><description>TaskTitleEventInfo &lt;ppt1912SchemaUri:title></description></item>
-    ///   <item><description>TaskScheduleEventInfo &lt;ppt1912SchemaUri:date></description></item>
-    ///   <item><description>TaskProgressEventInfo &lt;ppt1912SchemaUri:pcntCmplt></description></item>
-    ///   <item><description>TaskPriorityRecord &lt;ppt1912SchemaUri:pri></description></item>
-    ///   <item><description>UnasgnAllEmpty &lt;ppt1912SchemaUri:unasgnAll></description></item>
-    ///   <item><description>TaskUndo &lt;ppt1912SchemaUri:undo></description></item>
-    ///   <item><description>TaskUnknownRecord &lt;ppt1912SchemaUri:unknown></description></item>
-    ///   <item><description>ExtensionList &lt;ppt1912SchemaUri:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AddEmpty" /> <c>&lt;ppt1912SchemaUri:add></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.UnasgnAllEmpty" /> <c>&lt;ppt1912SchemaUri:unasgnAll></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList" /> <c>&lt;ppt1912SchemaUri:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskAnchor" /> <c>&lt;ppt1912SchemaUri:anchr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser" /> <c>&lt;ppt1912SchemaUri:atrbtn></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AsgnTaskAssignUnassignUser" /> <c>&lt;ppt1912SchemaUri:asgn></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.UnAsgnTaskAssignUnassignUser" /> <c>&lt;ppt1912SchemaUri:unAsgn></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskPriorityRecord" /> <c>&lt;ppt1912SchemaUri:pri></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskProgressEventInfo" /> <c>&lt;ppt1912SchemaUri:pcntCmplt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskScheduleEventInfo" /> <c>&lt;ppt1912SchemaUri:date></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskTitleEventInfo" /> <c>&lt;ppt1912SchemaUri:title></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskUndo" /> <c>&lt;ppt1912SchemaUri:undo></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskUnknownRecord" /> <c>&lt;ppt1912SchemaUri:unknown></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -930,19 +930,19 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(136, "event");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<AtrbtnTaskAssignUnassignUser>();
-            builder.AddChild<TaskAnchor>();
-            builder.AddChild<AsgnTaskAssignUnassignUser>();
-            builder.AddChild<UnAsgnTaskAssignUnassignUser>();
-            builder.AddChild<AddEmpty>();
-            builder.AddChild<TaskTitleEventInfo>();
-            builder.AddChild<TaskScheduleEventInfo>();
-            builder.AddChild<TaskProgressEventInfo>();
-            builder.AddChild<TaskPriorityRecord>();
-            builder.AddChild<UnasgnAllEmpty>();
-            builder.AddChild<TaskUndo>();
-            builder.AddChild<TaskUnknownRecord>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AddEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.UnasgnAllEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskAnchor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AsgnTaskAssignUnassignUser>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.UnAsgnTaskAssignUnassignUser>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskPriorityRecord>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskProgressEventInfo>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskScheduleEventInfo>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskTitleEventInfo>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskUndo>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskUnknownRecord>();
             builder.AddElement<TaskHistoryEvent>()
 .AddAttribute(0, "time", a => a.Time, aBuilder =>
 {
@@ -981,9 +981,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:ppt1912SchemaUri = http://schemas.microsoft.com/office/powerpoint/2019/12/main
         /// </remark>
-        public AtrbtnTaskAssignUnassignUser? AtrbtnTaskAssignUnassignUser
+        public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser? AtrbtnTaskAssignUnassignUser
         {
-            get => GetElement<AtrbtnTaskAssignUnassignUser>();
+            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser>();
             set => SetElement(value);
         }
 
@@ -994,9 +994,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:ppt1912SchemaUri = http://schemas.microsoft.com/office/powerpoint/2019/12/main
         /// </remark>
-        public TaskAnchor? TaskAnchor
+        public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskAnchor? TaskAnchor
         {
-            get => GetElement<TaskAnchor>();
+            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskAnchor>();
             set => SetElement(value);
         }
 
@@ -1012,7 +1012,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>TaskHistoryEvent &lt;ppt1912SchemaUri:event></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistoryEvent" /> <c>&lt;ppt1912SchemaUri:event></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1056,7 +1056,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(136, "history");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<TaskHistoryEvent>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistoryEvent>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistoryEvent), 0, 0, version: FileFormatVersions.Office2021)

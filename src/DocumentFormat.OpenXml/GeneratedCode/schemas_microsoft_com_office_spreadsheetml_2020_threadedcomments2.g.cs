@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>ExtensionList &lt;xltc2:extLst></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList" /> <c>&lt;xltc2:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -157,7 +157,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
             base.ConfigureMetadata(builder);
             builder.SetSchema(131, "hyperlink");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList>();
             builder.AddElement<CommentHyperlink>()
 .AddAttribute(0, "startIndex", a => a.StartIndex, aBuilder =>
 {
@@ -184,9 +184,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xltc2 = http://schemas.microsoft.com/office/spreadsheetml/2020/threadedcomments2
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -202,7 +202,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Extension &lt;x:ext></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete

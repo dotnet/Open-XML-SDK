@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Characteristic &lt;ac:characteristic></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.AdditionalCharacteristics.Characteristic" /> <c>&lt;ac:characteristic></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(8, "additionalCharacteristics");
-            builder.AddChild<Characteristic>();
+            builder.AddChild<DocumentFormat.OpenXml.AdditionalCharacteristics.Characteristic>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.AdditionalCharacteristics.Characteristic), 0, 0)
