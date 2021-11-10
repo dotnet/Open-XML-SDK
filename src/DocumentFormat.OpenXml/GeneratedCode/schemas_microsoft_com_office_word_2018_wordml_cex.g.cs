@@ -251,9 +251,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2021))
         /// <remark>
         /// xmlns:w16cex = http://schemas.microsoft.com/office/word/2018/wordml/cex
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 

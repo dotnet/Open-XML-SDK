@@ -21208,9 +21208,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <remark>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.CustomUI.Commands? Commands
+        public Commands? Commands
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.Commands>();
+            get => GetElement<Commands>();
             set => SetElement(value);
         }
 
@@ -21221,9 +21221,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <remark>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.CustomUI.Ribbon? Ribbon
+        public Ribbon? Ribbon
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.Ribbon>();
+            get => GetElement<Ribbon>();
             set => SetElement(value);
         }
 
@@ -21234,9 +21234,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <remark>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.CustomUI.Backstage? Backstage
+        public Backstage? Backstage
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.Backstage>();
+            get => GetElement<Backstage>();
             set => SetElement(value);
         }
 
@@ -21247,9 +21247,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <remark>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.CustomUI.ContextMenus? ContextMenus
+        public ContextMenus? ContextMenus
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.ContextMenus>();
+            get => GetElement<ContextMenus>();
             set => SetElement(value);
         }
 
@@ -22889,9 +22889,9 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <remark>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular? ButtonRegular
+        public ButtonRegular? ButtonRegular
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular>();
+            get => GetElement<ButtonRegular>();
             set => SetElement(value);
         }
 
@@ -24920,9 +24920,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <remark>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.CustomUI.SharedControlsQatItems? SharedControlsQatItems
+        public SharedControlsQatItems? SharedControlsQatItems
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.SharedControlsQatItems>();
+            get => GetElement<SharedControlsQatItems>();
             set => SetElement(value);
         }
 
@@ -24933,9 +24933,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <remark>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.CustomUI.DocumentControlsQatItems? DocumentControlsQatItems
+        public DocumentControlsQatItems? DocumentControlsQatItems
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.DocumentControlsQatItems>();
+            get => GetElement<DocumentControlsQatItems>();
             set => SetElement(value);
         }
 
@@ -26435,9 +26435,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <remark>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.CustomUI.BackstageRegularButton? BackstageRegularButton
+        public BackstageRegularButton? BackstageRegularButton
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageRegularButton>();
+            get => GetElement<BackstageRegularButton>();
             set => SetElement(value);
         }
 
@@ -26448,9 +26448,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <remark>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.CustomUI.BackstagePrimaryMenu? BackstagePrimaryMenu
+        public BackstagePrimaryMenu? BackstagePrimaryMenu
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.BackstagePrimaryMenu>();
+            get => GetElement<BackstagePrimaryMenu>();
             set => SetElement(value);
         }
 
@@ -29257,9 +29257,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <remark>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroups? BackstageGroups
+        public BackstageGroups? BackstageGroups
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroups>();
+            get => GetElement<BackstageGroups>();
             set => SetElement(value);
         }
 
@@ -29270,9 +29270,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <remark>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.CustomUI.SimpleGroups? SimpleGroups
+        public SimpleGroups? SimpleGroups
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.SimpleGroups>();
+            get => GetElement<SimpleGroups>();
             set => SetElement(value);
         }
 
@@ -29873,9 +29873,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <remark>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.CustomUI.QuickAccessToolbar? QuickAccessToolbar
+        public QuickAccessToolbar? QuickAccessToolbar
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.QuickAccessToolbar>();
+            get => GetElement<QuickAccessToolbar>();
             set => SetElement(value);
         }
 
@@ -29886,9 +29886,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <remark>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.CustomUI.Tabs? Tabs
+        public Tabs? Tabs
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.Tabs>();
+            get => GetElement<Tabs>();
             set => SetElement(value);
         }
 
@@ -29899,9 +29899,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <remark>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.CustomUI.ContextualTabs? ContextualTabs
+        public ContextualTabs? ContextualTabs
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.ContextualTabs>();
+            get => GetElement<ContextualTabs>();
             set => SetElement(value);
         }
 

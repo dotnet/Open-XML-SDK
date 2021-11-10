@@ -264,9 +264,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Authors? Authors
+        public Authors? Authors
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Authors>();
+            get => GetElement<Authors>();
             set => SetElement(value);
         }
 
@@ -277,9 +277,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.CommentList? CommentList
+        public CommentList? CommentList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CommentList>();
+            get => GetElement<CommentList>();
             set => SetElement(value);
         }
 
@@ -290,9 +290,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -964,9 +964,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.CacheSource? CacheSource
+        public CacheSource? CacheSource
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CacheSource>();
+            get => GetElement<CacheSource>();
             set => SetElement(value);
         }
 
@@ -977,9 +977,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.CacheFields? CacheFields
+        public CacheFields? CacheFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CacheFields>();
+            get => GetElement<CacheFields>();
             set => SetElement(value);
         }
 
@@ -990,9 +990,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.CacheHierarchies? CacheHierarchies
+        public CacheHierarchies? CacheHierarchies
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CacheHierarchies>();
+            get => GetElement<CacheHierarchies>();
             set => SetElement(value);
         }
 
@@ -1003,9 +1003,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Kpis? Kpis
+        public Kpis? Kpis
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Kpis>();
+            get => GetElement<Kpis>();
             set => SetElement(value);
         }
 
@@ -1016,9 +1016,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.TupleCache? TupleCache
+        public TupleCache? TupleCache
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TupleCache>();
+            get => GetElement<TupleCache>();
             set => SetElement(value);
         }
 
@@ -1029,9 +1029,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.CalculatedItems? CalculatedItems
+        public CalculatedItems? CalculatedItems
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CalculatedItems>();
+            get => GetElement<CalculatedItems>();
             set => SetElement(value);
         }
 
@@ -1042,9 +1042,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.CalculatedMembers? CalculatedMembers
+        public CalculatedMembers? CalculatedMembers
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CalculatedMembers>();
+            get => GetElement<CalculatedMembers>();
             set => SetElement(value);
         }
 
@@ -1055,9 +1055,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Dimensions? Dimensions
+        public Dimensions? Dimensions
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Dimensions>();
+            get => GetElement<Dimensions>();
             set => SetElement(value);
         }
 
@@ -1068,9 +1068,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.MeasureGroups? MeasureGroups
+        public MeasureGroups? MeasureGroups
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MeasureGroups>();
+            get => GetElement<MeasureGroups>();
             set => SetElement(value);
         }
 
@@ -1081,9 +1081,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Maps? Maps
+        public Maps? Maps
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Maps>();
+            get => GetElement<Maps>();
             set => SetElement(value);
         }
 
@@ -1094,9 +1094,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtensionList? PivotCacheDefinitionExtensionList
+        public PivotCacheDefinitionExtensionList? PivotCacheDefinitionExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtensionList>();
+            get => GetElement<PivotCacheDefinitionExtensionList>();
             set => SetElement(value);
         }
 
@@ -2541,9 +2541,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Location? Location
+        public Location? Location
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Location>();
+            get => GetElement<Location>();
             set => SetElement(value);
         }
 
@@ -2554,9 +2554,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PivotFields? PivotFields
+        public PivotFields? PivotFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFields>();
+            get => GetElement<PivotFields>();
             set => SetElement(value);
         }
 
@@ -2567,9 +2567,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.RowFields? RowFields
+        public RowFields? RowFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowFields>();
+            get => GetElement<RowFields>();
             set => SetElement(value);
         }
 
@@ -2580,9 +2580,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.RowItems? RowItems
+        public RowItems? RowItems
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowItems>();
+            get => GetElement<RowItems>();
             set => SetElement(value);
         }
 
@@ -2593,9 +2593,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ColumnFields? ColumnFields
+        public ColumnFields? ColumnFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnFields>();
+            get => GetElement<ColumnFields>();
             set => SetElement(value);
         }
 
@@ -2606,9 +2606,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ColumnItems? ColumnItems
+        public ColumnItems? ColumnItems
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnItems>();
+            get => GetElement<ColumnItems>();
             set => SetElement(value);
         }
 
@@ -2619,9 +2619,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PageFields? PageFields
+        public PageFields? PageFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageFields>();
+            get => GetElement<PageFields>();
             set => SetElement(value);
         }
 
@@ -2632,9 +2632,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.DataFields? DataFields
+        public DataFields? DataFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DataFields>();
+            get => GetElement<DataFields>();
             set => SetElement(value);
         }
 
@@ -2645,9 +2645,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Formats? Formats
+        public Formats? Formats
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formats>();
+            get => GetElement<Formats>();
             set => SetElement(value);
         }
 
@@ -2658,9 +2658,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats? ConditionalFormats
+        public ConditionalFormats? ConditionalFormats
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats>();
+            get => GetElement<ConditionalFormats>();
             set => SetElement(value);
         }
 
@@ -2671,9 +2671,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ChartFormats? ChartFormats
+        public ChartFormats? ChartFormats
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartFormats>();
+            get => GetElement<ChartFormats>();
             set => SetElement(value);
         }
 
@@ -2684,9 +2684,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies? PivotHierarchies
+        public PivotHierarchies? PivotHierarchies
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies>();
+            get => GetElement<PivotHierarchies>();
             set => SetElement(value);
         }
 
@@ -2697,9 +2697,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle? PivotTableStyle
+        public PivotTableStyle? PivotTableStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle>();
+            get => GetElement<PivotTableStyle>();
             set => SetElement(value);
         }
 
@@ -2710,9 +2710,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PivotFilters? PivotFilters
+        public PivotFilters? PivotFilters
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFilters>();
+            get => GetElement<PivotFilters>();
             set => SetElement(value);
         }
 
@@ -2723,9 +2723,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage? RowHierarchiesUsage
+        public RowHierarchiesUsage? RowHierarchiesUsage
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage>();
+            get => GetElement<RowHierarchiesUsage>();
             set => SetElement(value);
         }
 
@@ -2736,9 +2736,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage? ColumnHierarchiesUsage
+        public ColumnHierarchiesUsage? ColumnHierarchiesUsage
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage>();
+            get => GetElement<ColumnHierarchiesUsage>();
             set => SetElement(value);
         }
 
@@ -2749,9 +2749,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList? PivotTableDefinitionExtensionList
+        public PivotTableDefinitionExtensionList? PivotTableDefinitionExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList>();
+            get => GetElement<PivotTableDefinitionExtensionList>();
             set => SetElement(value);
         }
 
@@ -3243,9 +3243,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.QueryTableRefresh? QueryTableRefresh
+        public QueryTableRefresh? QueryTableRefresh
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.QueryTableRefresh>();
+            get => GetElement<QueryTableRefresh>();
             set => SetElement(value);
         }
 
@@ -3256,9 +3256,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.QueryTableExtensionList? QueryTableExtensionList
+        public QueryTableExtensionList? QueryTableExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.QueryTableExtensionList>();
+            get => GetElement<QueryTableExtensionList>();
             set => SetElement(value);
         }
 
@@ -4153,9 +4153,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.SheetProperties? SheetProperties
+        public SheetProperties? SheetProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>();
+            get => GetElement<SheetProperties>();
             set => SetElement(value);
         }
 
@@ -4166,9 +4166,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.SheetDimension? SheetDimension
+        public SheetDimension? SheetDimension
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetDimension>();
+            get => GetElement<SheetDimension>();
             set => SetElement(value);
         }
 
@@ -4179,9 +4179,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.SheetViews? SheetViews
+        public SheetViews? SheetViews
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetViews>();
+            get => GetElement<SheetViews>();
             set => SetElement(value);
         }
 
@@ -4192,9 +4192,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties? SheetFormatProperties
+        public SheetFormatProperties? SheetFormatProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>();
+            get => GetElement<SheetFormatProperties>();
             set => SetElement(value);
         }
 
@@ -4337,9 +4337,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ChartSheetProperties? ChartSheetProperties
+        public ChartSheetProperties? ChartSheetProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartSheetProperties>();
+            get => GetElement<ChartSheetProperties>();
             set => SetElement(value);
         }
 
@@ -4350,9 +4350,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ChartSheetViews? ChartSheetViews
+        public ChartSheetViews? ChartSheetViews
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartSheetViews>();
+            get => GetElement<ChartSheetViews>();
             set => SetElement(value);
         }
 
@@ -4363,9 +4363,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ChartSheetProtection? ChartSheetProtection
+        public ChartSheetProtection? ChartSheetProtection
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartSheetProtection>();
+            get => GetElement<ChartSheetProtection>();
             set => SetElement(value);
         }
 
@@ -4376,9 +4376,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.CustomChartsheetViews? CustomChartsheetViews
+        public CustomChartsheetViews? CustomChartsheetViews
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CustomChartsheetViews>();
+            get => GetElement<CustomChartsheetViews>();
             set => SetElement(value);
         }
 
@@ -4389,9 +4389,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PageMargins? PageMargins
+        public PageMargins? PageMargins
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageMargins>();
+            get => GetElement<PageMargins>();
             set => SetElement(value);
         }
 
@@ -4402,9 +4402,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup? ChartSheetPageSetup
+        public ChartSheetPageSetup? ChartSheetPageSetup
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup>();
+            get => GetElement<ChartSheetPageSetup>();
             set => SetElement(value);
         }
 
@@ -4415,9 +4415,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.HeaderFooter? HeaderFooter
+        public HeaderFooter? HeaderFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>();
+            get => GetElement<HeaderFooter>();
             set => SetElement(value);
         }
 
@@ -4428,9 +4428,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Drawing? Drawing
+        public Drawing? Drawing
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Drawing>();
+            get => GetElement<Drawing>();
             set => SetElement(value);
         }
 
@@ -4441,9 +4441,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing? LegacyDrawing
+        public LegacyDrawing? LegacyDrawing
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing>();
+            get => GetElement<LegacyDrawing>();
             set => SetElement(value);
         }
 
@@ -4454,9 +4454,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter? LegacyDrawingHeaderFooter
+        public LegacyDrawingHeaderFooter? LegacyDrawingHeaderFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter>();
+            get => GetElement<LegacyDrawingHeaderFooter>();
             set => SetElement(value);
         }
 
@@ -4467,9 +4467,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter? DrawingHeaderFooter
+        public DrawingHeaderFooter? DrawingHeaderFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter>();
+            get => GetElement<DrawingHeaderFooter>();
             set => SetElement(value);
         }
 
@@ -4480,9 +4480,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Picture? Picture
+        public Picture? Picture
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Picture>();
+            get => GetElement<Picture>();
             set => SetElement(value);
         }
 
@@ -4493,9 +4493,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.WebPublishItems? WebPublishItems
+        public WebPublishItems? WebPublishItems
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.WebPublishItems>();
+            get => GetElement<WebPublishItems>();
             set => SetElement(value);
         }
 
@@ -4506,9 +4506,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -4657,9 +4657,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.SheetProperties? SheetProperties
+        public SheetProperties? SheetProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>();
+            get => GetElement<SheetProperties>();
             set => SetElement(value);
         }
 
@@ -4670,9 +4670,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.SheetViews? SheetViews
+        public SheetViews? SheetViews
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetViews>();
+            get => GetElement<SheetViews>();
             set => SetElement(value);
         }
 
@@ -4683,9 +4683,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties? SheetFormatProperties
+        public SheetFormatProperties? SheetFormatProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>();
+            get => GetElement<SheetFormatProperties>();
             set => SetElement(value);
         }
 
@@ -4696,9 +4696,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.SheetProtection? SheetProtection
+        public SheetProtection? SheetProtection
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetProtection>();
+            get => GetElement<SheetProtection>();
             set => SetElement(value);
         }
 
@@ -4709,9 +4709,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews? CustomSheetViews
+        public CustomSheetViews? CustomSheetViews
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews>();
+            get => GetElement<CustomSheetViews>();
             set => SetElement(value);
         }
 
@@ -4722,9 +4722,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PrintOptions? PrintOptions
+        public PrintOptions? PrintOptions
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PrintOptions>();
+            get => GetElement<PrintOptions>();
             set => SetElement(value);
         }
 
@@ -4735,9 +4735,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PageMargins? PageMargins
+        public PageMargins? PageMargins
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageMargins>();
+            get => GetElement<PageMargins>();
             set => SetElement(value);
         }
 
@@ -4748,9 +4748,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PageSetup? PageSetup
+        public PageSetup? PageSetup
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageSetup>();
+            get => GetElement<PageSetup>();
             set => SetElement(value);
         }
 
@@ -4761,9 +4761,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.HeaderFooter? HeaderFooter
+        public HeaderFooter? HeaderFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>();
+            get => GetElement<HeaderFooter>();
             set => SetElement(value);
         }
 
@@ -4774,9 +4774,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Drawing? Drawing
+        public Drawing? Drawing
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Drawing>();
+            get => GetElement<Drawing>();
             set => SetElement(value);
         }
 
@@ -4787,9 +4787,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing? LegacyDrawing
+        public LegacyDrawing? LegacyDrawing
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing>();
+            get => GetElement<LegacyDrawing>();
             set => SetElement(value);
         }
 
@@ -4800,9 +4800,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter? LegacyDrawingHeaderFooter
+        public LegacyDrawingHeaderFooter? LegacyDrawingHeaderFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter>();
+            get => GetElement<LegacyDrawingHeaderFooter>();
             set => SetElement(value);
         }
 
@@ -4813,9 +4813,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter? DrawingHeaderFooter
+        public DrawingHeaderFooter? DrawingHeaderFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter>();
+            get => GetElement<DrawingHeaderFooter>();
             set => SetElement(value);
         }
 
@@ -4826,9 +4826,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.OleObjects? OleObjects
+        public OleObjects? OleObjects
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OleObjects>();
+            get => GetElement<OleObjects>();
             set => SetElement(value);
         }
 
@@ -4839,9 +4839,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Controls? Controls
+        public Controls? Controls
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Controls>();
+            get => GetElement<Controls>();
             set => SetElement(value);
         }
 
@@ -4852,9 +4852,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -4976,9 +4976,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.MetadataTypes? MetadataTypes
+        public MetadataTypes? MetadataTypes
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MetadataTypes>();
+            get => GetElement<MetadataTypes>();
             set => SetElement(value);
         }
 
@@ -4989,9 +4989,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.MetadataStrings? MetadataStrings
+        public MetadataStrings? MetadataStrings
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MetadataStrings>();
+            get => GetElement<MetadataStrings>();
             set => SetElement(value);
         }
 
@@ -5002,9 +5002,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.MdxMetadata? MdxMetadata
+        public MdxMetadata? MdxMetadata
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MdxMetadata>();
+            get => GetElement<MdxMetadata>();
             set => SetElement(value);
         }
 
@@ -5231,9 +5231,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.NumberingFormats? NumberingFormats
+        public NumberingFormats? NumberingFormats
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NumberingFormats>();
+            get => GetElement<NumberingFormats>();
             set => SetElement(value);
         }
 
@@ -5244,9 +5244,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Fonts? Fonts
+        public Fonts? Fonts
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Fonts>();
+            get => GetElement<Fonts>();
             set => SetElement(value);
         }
 
@@ -5257,9 +5257,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Fills? Fills
+        public Fills? Fills
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Fills>();
+            get => GetElement<Fills>();
             set => SetElement(value);
         }
 
@@ -5270,9 +5270,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Borders? Borders
+        public Borders? Borders
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Borders>();
+            get => GetElement<Borders>();
             set => SetElement(value);
         }
 
@@ -5283,9 +5283,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.CellStyleFormats? CellStyleFormats
+        public CellStyleFormats? CellStyleFormats
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CellStyleFormats>();
+            get => GetElement<CellStyleFormats>();
             set => SetElement(value);
         }
 
@@ -5296,9 +5296,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.CellFormats? CellFormats
+        public CellFormats? CellFormats
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CellFormats>();
+            get => GetElement<CellFormats>();
             set => SetElement(value);
         }
 
@@ -5309,9 +5309,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.CellStyles? CellStyles
+        public CellStyles? CellStyles
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CellStyles>();
+            get => GetElement<CellStyles>();
             set => SetElement(value);
         }
 
@@ -5322,9 +5322,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.DifferentialFormats? DifferentialFormats
+        public DifferentialFormats? DifferentialFormats
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DifferentialFormats>();
+            get => GetElement<DifferentialFormats>();
             set => SetElement(value);
         }
 
@@ -5335,9 +5335,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.TableStyles? TableStyles
+        public TableStyles? TableStyles
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TableStyles>();
+            get => GetElement<TableStyles>();
             set => SetElement(value);
         }
 
@@ -5348,9 +5348,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Colors? Colors
+        public Colors? Colors
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Colors>();
+            get => GetElement<Colors>();
             set => SetElement(value);
         }
 
@@ -5361,9 +5361,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.StylesheetExtensionList? StylesheetExtensionList
+        public StylesheetExtensionList? StylesheetExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.StylesheetExtensionList>();
+            get => GetElement<StylesheetExtensionList>();
             set => SetElement(value);
         }
 
@@ -5983,9 +5983,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.AutoFilter? AutoFilter
+        public AutoFilter? AutoFilter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.AutoFilter>();
+            get => GetElement<AutoFilter>();
             set => SetElement(value);
         }
 
@@ -5996,9 +5996,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.SortState? SortState
+        public SortState? SortState
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SortState>();
+            get => GetElement<SortState>();
             set => SetElement(value);
         }
 
@@ -6009,9 +6009,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.TableColumns? TableColumns
+        public TableColumns? TableColumns
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TableColumns>();
+            get => GetElement<TableColumns>();
             set => SetElement(value);
         }
 
@@ -6022,9 +6022,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.TableStyleInfo? TableStyleInfo
+        public TableStyleInfo? TableStyleInfo
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TableStyleInfo>();
+            get => GetElement<TableStyleInfo>();
             set => SetElement(value);
         }
 
@@ -6035,9 +6035,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.TableExtensionList? TableExtensionList
+        public TableExtensionList? TableExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TableExtensionList>();
+            get => GetElement<TableExtensionList>();
             set => SetElement(value);
         }
 
@@ -6306,9 +6306,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.FileVersion? FileVersion
+        public FileVersion? FileVersion
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FileVersion>();
+            get => GetElement<FileVersion>();
             set => SetElement(value);
         }
 
@@ -6319,9 +6319,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.FileSharing? FileSharing
+        public FileSharing? FileSharing
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FileSharing>();
+            get => GetElement<FileSharing>();
             set => SetElement(value);
         }
 
@@ -6332,9 +6332,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.WorkbookProperties? WorkbookProperties
+        public WorkbookProperties? WorkbookProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.WorkbookProperties>();
+            get => GetElement<WorkbookProperties>();
             set => SetElement(value);
         }
 
@@ -6358,9 +6358,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.WorkbookProtection? WorkbookProtection
+        public WorkbookProtection? WorkbookProtection
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.WorkbookProtection>();
+            get => GetElement<WorkbookProtection>();
             set => SetElement(value);
         }
 
@@ -6371,9 +6371,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.BookViews? BookViews
+        public BookViews? BookViews
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.BookViews>();
+            get => GetElement<BookViews>();
             set => SetElement(value);
         }
 
@@ -6384,9 +6384,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Sheets? Sheets
+        public Sheets? Sheets
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Sheets>();
+            get => GetElement<Sheets>();
             set => SetElement(value);
         }
 
@@ -6397,9 +6397,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.FunctionGroups? FunctionGroups
+        public FunctionGroups? FunctionGroups
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FunctionGroups>();
+            get => GetElement<FunctionGroups>();
             set => SetElement(value);
         }
 
@@ -6410,9 +6410,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExternalReferences? ExternalReferences
+        public ExternalReferences? ExternalReferences
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExternalReferences>();
+            get => GetElement<ExternalReferences>();
             set => SetElement(value);
         }
 
@@ -6423,9 +6423,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.DefinedNames? DefinedNames
+        public DefinedNames? DefinedNames
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DefinedNames>();
+            get => GetElement<DefinedNames>();
             set => SetElement(value);
         }
 
@@ -6436,9 +6436,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.CalculationProperties? CalculationProperties
+        public CalculationProperties? CalculationProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CalculationProperties>();
+            get => GetElement<CalculationProperties>();
             set => SetElement(value);
         }
 
@@ -6449,9 +6449,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.OleSize? OleSize
+        public OleSize? OleSize
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OleSize>();
+            get => GetElement<OleSize>();
             set => SetElement(value);
         }
 
@@ -6462,9 +6462,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookViews? CustomWorkbookViews
+        public CustomWorkbookViews? CustomWorkbookViews
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookViews>();
+            get => GetElement<CustomWorkbookViews>();
             set => SetElement(value);
         }
 
@@ -6475,9 +6475,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PivotCaches? PivotCaches
+        public PivotCaches? PivotCaches
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotCaches>();
+            get => GetElement<PivotCaches>();
             set => SetElement(value);
         }
 
@@ -6488,9 +6488,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.WebPublishing? WebPublishing
+        public WebPublishing? WebPublishing
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.WebPublishing>();
+            get => GetElement<WebPublishing>();
             set => SetElement(value);
         }
 
@@ -6673,9 +6673,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Filters? Filters
+        public Filters? Filters
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Filters>();
+            get => GetElement<Filters>();
             set => SetElement(value);
         }
 
@@ -6686,9 +6686,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Top10? Top10
+        public Top10? Top10
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Top10>();
+            get => GetElement<Top10>();
             set => SetElement(value);
         }
 
@@ -6712,9 +6712,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.CustomFilters? CustomFilters
+        public CustomFilters? CustomFilters
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CustomFilters>();
+            get => GetElement<CustomFilters>();
             set => SetElement(value);
         }
 
@@ -6725,9 +6725,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.DynamicFilter? DynamicFilter
+        public DynamicFilter? DynamicFilter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DynamicFilter>();
+            get => GetElement<DynamicFilter>();
             set => SetElement(value);
         }
 
@@ -6738,9 +6738,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ColorFilter? ColorFilter
+        public ColorFilter? ColorFilter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColorFilter>();
+            get => GetElement<ColorFilter>();
             set => SetElement(value);
         }
 
@@ -6764,9 +6764,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.IconFilter? IconFilter
+        public IconFilter? IconFilter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.IconFilter>();
+            get => GetElement<IconFilter>();
             set => SetElement(value);
         }
 
@@ -6777,9 +6777,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -7471,9 +7471,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.CommentText? CommentText
+        public CommentText? CommentText
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CommentText>();
+            get => GetElement<CommentText>();
             set => SetElement(value);
         }
 
@@ -7484,9 +7484,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.CommentProperties? CommentProperties
+        public CommentProperties? CommentProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CommentProperties>();
+            get => GetElement<CommentProperties>();
             set => SetElement(value);
         }
 
@@ -8512,9 +8512,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.DataBinding? DataBinding
+        public DataBinding? DataBinding
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DataBinding>();
+            get => GetElement<DataBinding>();
             set => SetElement(value);
         }
 
@@ -9111,9 +9111,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.DatabaseProperties? DatabaseProperties
+        public DatabaseProperties? DatabaseProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DatabaseProperties>();
+            get => GetElement<DatabaseProperties>();
             set => SetElement(value);
         }
 
@@ -9124,9 +9124,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.OlapProperties? OlapProperties
+        public OlapProperties? OlapProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OlapProperties>();
+            get => GetElement<OlapProperties>();
             set => SetElement(value);
         }
 
@@ -9137,9 +9137,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.WebQueryProperties? WebQueryProperties
+        public WebQueryProperties? WebQueryProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.WebQueryProperties>();
+            get => GetElement<WebQueryProperties>();
             set => SetElement(value);
         }
 
@@ -9150,9 +9150,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.TextProperties? TextProperties
+        public TextProperties? TextProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TextProperties>();
+            get => GetElement<TextProperties>();
             set => SetElement(value);
         }
 
@@ -9163,9 +9163,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Parameters? Parameters
+        public Parameters? Parameters
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Parameters>();
+            get => GetElement<Parameters>();
             set => SetElement(value);
         }
 
@@ -9176,9 +9176,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ConnectionExtensionList? ConnectionExtensionList
+        public ConnectionExtensionList? ConnectionExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ConnectionExtensionList>();
+            get => GetElement<ConnectionExtensionList>();
             set => SetElement(value);
         }
 
@@ -9961,9 +9961,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.SharedItems? SharedItems
+        public SharedItems? SharedItems
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SharedItems>();
+            get => GetElement<SharedItems>();
             set => SetElement(value);
         }
 
@@ -9974,9 +9974,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.FieldGroup? FieldGroup
+        public FieldGroup? FieldGroup
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FieldGroup>();
+            get => GetElement<FieldGroup>();
             set => SetElement(value);
         }
 
@@ -11420,9 +11420,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Tuples? Tuples
+        public Tuples? Tuples
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Tuples>();
+            get => GetElement<Tuples>();
             set => SetElement(value);
         }
 
@@ -12638,9 +12638,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Groups? Groups
+        public Groups? Groups
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Groups>();
+            get => GetElement<Groups>();
             set => SetElement(value);
         }
 
@@ -12651,9 +12651,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -12905,9 +12905,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.GroupMembers? GroupMembers
+        public GroupMembers? GroupMembers
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.GroupMembers>();
+            get => GetElement<GroupMembers>();
             set => SetElement(value);
         }
 
@@ -13787,9 +13787,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Tuples? Tuples
+        public Tuples? Tuples
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Tuples>();
+            get => GetElement<Tuples>();
             set => SetElement(value);
         }
 
@@ -13900,9 +13900,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PivotArea? PivotArea
+        public PivotArea? PivotArea
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
+            get => GetElement<PivotArea>();
             set => SetElement(value);
         }
 
@@ -13913,9 +13913,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -14197,9 +14197,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences? PivotAreaReferences
+        public PivotAreaReferences? PivotAreaReferences
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences>();
+            get => GetElement<PivotAreaReferences>();
             set => SetElement(value);
         }
 
@@ -14210,9 +14210,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -14420,9 +14420,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtensionList? CalculatedMemberExtensionList
+        public CalculatedMemberExtensionList? CalculatedMemberExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtensionList>();
+            get => GetElement<CalculatedMemberExtensionList>();
             set => SetElement(value);
         }
 
@@ -15319,9 +15319,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Items? Items
+        public Items? Items
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Items>();
+            get => GetElement<Items>();
             set => SetElement(value);
         }
 
@@ -15332,9 +15332,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.AutoSortScope? AutoSortScope
+        public AutoSortScope? AutoSortScope
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.AutoSortScope>();
+            get => GetElement<AutoSortScope>();
             set => SetElement(value);
         }
 
@@ -15345,9 +15345,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtensionList? PivotFieldExtensionList
+        public PivotFieldExtensionList? PivotFieldExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtensionList>();
+            get => GetElement<PivotFieldExtensionList>();
             set => SetElement(value);
         }
 
@@ -15762,9 +15762,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.DataFieldExtensionList? DataFieldExtensionList
+        public DataFieldExtensionList? DataFieldExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DataFieldExtensionList>();
+            get => GetElement<DataFieldExtensionList>();
             set => SetElement(value);
         }
 
@@ -16040,9 +16040,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PivotArea? PivotArea
+        public PivotArea? PivotArea
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
+            get => GetElement<PivotArea>();
             set => SetElement(value);
         }
 
@@ -16053,9 +16053,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -16187,9 +16187,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PivotAreas? PivotAreas
+        public PivotAreas? PivotAreas
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotAreas>();
+            get => GetElement<PivotAreas>();
             set => SetElement(value);
         }
 
@@ -16200,9 +16200,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -16413,9 +16413,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PivotArea? PivotArea
+        public PivotArea? PivotArea
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
+            get => GetElement<PivotArea>();
             set => SetElement(value);
         }
 
@@ -16683,9 +16683,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.MemberProperties? MemberProperties
+        public MemberProperties? MemberProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MemberProperties>();
+            get => GetElement<MemberProperties>();
             set => SetElement(value);
         }
 
@@ -17537,9 +17537,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.AutoFilter? AutoFilter
+        public AutoFilter? AutoFilter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.AutoFilter>();
+            get => GetElement<AutoFilter>();
             set => SetElement(value);
         }
 
@@ -17550,9 +17550,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtensionList? PivotFilterExtensionList
+        public PivotFilterExtensionList? PivotFilterExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtensionList>();
+            get => GetElement<PivotFilterExtensionList>();
             set => SetElement(value);
         }
 
@@ -18018,9 +18018,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.FieldsUsage? FieldsUsage
+        public FieldsUsage? FieldsUsage
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FieldsUsage>();
+            get => GetElement<FieldsUsage>();
             set => SetElement(value);
         }
 
@@ -18031,9 +18031,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.GroupLevels? GroupLevels
+        public GroupLevels? GroupLevels
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.GroupLevels>();
+            get => GetElement<GroupLevels>();
             set => SetElement(value);
         }
 
@@ -18044,9 +18044,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtensionList? CacheHierarchyExtensionList
+        public CacheHierarchyExtensionList? CacheHierarchyExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtensionList>();
+            get => GetElement<CacheHierarchyExtensionList>();
             set => SetElement(value);
         }
 
@@ -18550,9 +18550,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -19398,9 +19398,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -19672,9 +19672,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Text? Text
+        public Text? Text
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Text>();
+            get => GetElement<Text>();
             set => SetElement(value);
         }
     }
@@ -20638,9 +20638,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.RunProperties? RunProperties
+        public RunProperties? RunProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RunProperties>();
+            get => GetElement<RunProperties>();
             set => SetElement(value);
         }
 
@@ -20651,9 +20651,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Text? Text
+        public Text? Text
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Text>();
+            get => GetElement<Text>();
             set => SetElement(value);
         }
 
@@ -20768,9 +20768,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Text? Text
+        public Text? Text
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Text>();
+            get => GetElement<Text>();
             set => SetElement(value);
         }
 
@@ -21074,9 +21074,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.SheetIdMap? SheetIdMap
+        public SheetIdMap? SheetIdMap
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetIdMap>();
+            get => GetElement<SheetIdMap>();
             set => SetElement(value);
         }
 
@@ -21087,9 +21087,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ReviewedList? ReviewedList
+        public ReviewedList? ReviewedList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ReviewedList>();
+            get => GetElement<ReviewedList>();
             set => SetElement(value);
         }
 
@@ -21100,9 +21100,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -21780,9 +21780,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -22257,9 +22257,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.OldCell? OldCell
+        public OldCell? OldCell
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OldCell>();
+            get => GetElement<OldCell>();
             set => SetElement(value);
         }
 
@@ -22270,9 +22270,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.NewCell? NewCell
+        public NewCell? NewCell
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NewCell>();
+            get => GetElement<NewCell>();
             set => SetElement(value);
         }
 
@@ -22283,9 +22283,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.OldDifferentialFormat? OldDifferentialFormat
+        public OldDifferentialFormat? OldDifferentialFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OldDifferentialFormat>();
+            get => GetElement<OldDifferentialFormat>();
             set => SetElement(value);
         }
 
@@ -22296,9 +22296,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.NewDifferentialFormat? NewDifferentialFormat
+        public NewDifferentialFormat? NewDifferentialFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NewDifferentialFormat>();
+            get => GetElement<NewDifferentialFormat>();
             set => SetElement(value);
         }
 
@@ -22309,9 +22309,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -22497,9 +22497,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat? DifferentialFormat
+        public DifferentialFormat? DifferentialFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat>();
+            get => GetElement<DifferentialFormat>();
             set => SetElement(value);
         }
 
@@ -22510,9 +22510,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -23210,9 +23210,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Formula? Formula
+        public Formula? Formula
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formula>();
+            get => GetElement<Formula>();
             set => SetElement(value);
         }
 
@@ -23223,9 +23223,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.OldFormula? OldFormula
+        public OldFormula? OldFormula
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OldFormula>();
+            get => GetElement<OldFormula>();
             set => SetElement(value);
         }
 
@@ -23236,9 +23236,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -24409,9 +24409,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.CellFormula? CellFormula
+        public CellFormula? CellFormula
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CellFormula>();
+            get => GetElement<CellFormula>();
             set => SetElement(value);
         }
 
@@ -24422,9 +24422,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.CellValue? CellValue
+        public CellValue? CellValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CellValue>();
+            get => GetElement<CellValue>();
             set => SetElement(value);
         }
 
@@ -24435,9 +24435,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.InlineString? InlineString
+        public InlineString? InlineString
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.InlineString>();
+            get => GetElement<InlineString>();
             set => SetElement(value);
         }
 
@@ -24448,9 +24448,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
     }
@@ -24638,9 +24638,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.CellFormula? CellFormula
+        public CellFormula? CellFormula
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CellFormula>();
+            get => GetElement<CellFormula>();
             set => SetElement(value);
         }
 
@@ -24651,9 +24651,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.CellValue? CellValue
+        public CellValue? CellValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CellValue>();
+            get => GetElement<CellValue>();
             set => SetElement(value);
         }
 
@@ -24664,9 +24664,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.InlineString? InlineString
+        public InlineString? InlineString
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.InlineString>();
+            get => GetElement<InlineString>();
             set => SetElement(value);
         }
 
@@ -24677,9 +24677,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -24975,9 +24975,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Font? Font
+        public Font? Font
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Font>();
+            get => GetElement<Font>();
             set => SetElement(value);
         }
 
@@ -24988,9 +24988,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.NumberingFormat? NumberingFormat
+        public NumberingFormat? NumberingFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
+            get => GetElement<NumberingFormat>();
             set => SetElement(value);
         }
 
@@ -25001,9 +25001,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Fill? Fill
+        public Fill? Fill
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Fill>();
+            get => GetElement<Fill>();
             set => SetElement(value);
         }
 
@@ -25014,9 +25014,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Alignment? Alignment
+        public Alignment? Alignment
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
+            get => GetElement<Alignment>();
             set => SetElement(value);
         }
 
@@ -25027,9 +25027,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Border? Border
+        public Border? Border
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Border>();
+            get => GetElement<Border>();
             set => SetElement(value);
         }
 
@@ -25040,9 +25040,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Protection? Protection
+        public Protection? Protection
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Protection>();
+            get => GetElement<Protection>();
             set => SetElement(value);
         }
 
@@ -25053,9 +25053,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
     }
@@ -25523,9 +25523,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -26772,9 +26772,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PivotArea? PivotArea
+        public PivotArea? PivotArea
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
+            get => GetElement<PivotArea>();
             set => SetElement(value);
         }
 
@@ -27950,9 +27950,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.OddHeader? OddHeader
+        public OddHeader? OddHeader
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OddHeader>();
+            get => GetElement<OddHeader>();
             set => SetElement(value);
         }
 
@@ -27963,9 +27963,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.OddFooter? OddFooter
+        public OddFooter? OddFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OddFooter>();
+            get => GetElement<OddFooter>();
             set => SetElement(value);
         }
 
@@ -27976,9 +27976,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.EvenHeader? EvenHeader
+        public EvenHeader? EvenHeader
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.EvenHeader>();
+            get => GetElement<EvenHeader>();
             set => SetElement(value);
         }
 
@@ -27989,9 +27989,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.EvenFooter? EvenFooter
+        public EvenFooter? EvenFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.EvenFooter>();
+            get => GetElement<EvenFooter>();
             set => SetElement(value);
         }
 
@@ -28002,9 +28002,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.FirstHeader? FirstHeader
+        public FirstHeader? FirstHeader
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FirstHeader>();
+            get => GetElement<FirstHeader>();
             set => SetElement(value);
         }
 
@@ -28015,9 +28015,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.FirstFooter? FirstFooter
+        public FirstFooter? FirstFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FirstFooter>();
+            get => GetElement<FirstFooter>();
             set => SetElement(value);
         }
 
@@ -28659,9 +28659,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -29733,9 +29733,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -29888,9 +29888,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PageMargins? PageMargins
+        public PageMargins? PageMargins
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageMargins>();
+            get => GetElement<PageMargins>();
             set => SetElement(value);
         }
 
@@ -29901,9 +29901,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup? ChartSheetPageSetup
+        public ChartSheetPageSetup? ChartSheetPageSetup
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup>();
+            get => GetElement<ChartSheetPageSetup>();
             set => SetElement(value);
         }
 
@@ -29914,9 +29914,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.HeaderFooter? HeaderFooter
+        public HeaderFooter? HeaderFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>();
+            get => GetElement<HeaderFooter>();
             set => SetElement(value);
         }
 
@@ -30173,9 +30173,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ControlProperties? ControlProperties
+        public ControlProperties? ControlProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ControlProperties>();
+            get => GetElement<ControlProperties>();
             set => SetElement(value);
         }
 
@@ -30745,9 +30745,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Formula1? Formula1
+        public Formula1? Formula1
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formula1>();
+            get => GetElement<Formula1>();
             set => SetElement(value);
         }
 
@@ -30758,9 +30758,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Formula2? Formula2
+        public Formula2? Formula2
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formula2>();
+            get => GetElement<Formula2>();
             set => SetElement(value);
         }
 
@@ -31174,9 +31174,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Pane? Pane
+        public Pane? Pane
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Pane>();
+            get => GetElement<Pane>();
             set => SetElement(value);
         }
 
@@ -31623,9 +31623,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Pane? Pane
+        public Pane? Pane
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Pane>();
+            get => GetElement<Pane>();
             set => SetElement(value);
         }
 
@@ -31636,9 +31636,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Selection? Selection
+        public Selection? Selection
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Selection>();
+            get => GetElement<Selection>();
             set => SetElement(value);
         }
 
@@ -31649,9 +31649,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.RowBreaks? RowBreaks
+        public RowBreaks? RowBreaks
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowBreaks>();
+            get => GetElement<RowBreaks>();
             set => SetElement(value);
         }
 
@@ -31662,9 +31662,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks? ColumnBreaks
+        public ColumnBreaks? ColumnBreaks
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks>();
+            get => GetElement<ColumnBreaks>();
             set => SetElement(value);
         }
 
@@ -31675,9 +31675,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PageMargins? PageMargins
+        public PageMargins? PageMargins
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageMargins>();
+            get => GetElement<PageMargins>();
             set => SetElement(value);
         }
 
@@ -31688,9 +31688,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PrintOptions? PrintOptions
+        public PrintOptions? PrintOptions
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PrintOptions>();
+            get => GetElement<PrintOptions>();
             set => SetElement(value);
         }
 
@@ -31701,9 +31701,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PageSetup? PageSetup
+        public PageSetup? PageSetup
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageSetup>();
+            get => GetElement<PageSetup>();
             set => SetElement(value);
         }
 
@@ -31714,9 +31714,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.HeaderFooter? HeaderFooter
+        public HeaderFooter? HeaderFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>();
+            get => GetElement<HeaderFooter>();
             set => SetElement(value);
         }
 
@@ -31727,9 +31727,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.AutoFilter? AutoFilter
+        public AutoFilter? AutoFilter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.AutoFilter>();
+            get => GetElement<AutoFilter>();
             set => SetElement(value);
         }
 
@@ -31740,9 +31740,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -31944,9 +31944,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.EmbeddedObjectProperties? EmbeddedObjectProperties
+        public EmbeddedObjectProperties? EmbeddedObjectProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.EmbeddedObjectProperties>();
+            get => GetElement<EmbeddedObjectProperties>();
             set => SetElement(value);
         }
 
@@ -33206,9 +33206,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -33333,9 +33333,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.MdxTuple? MdxTuple
+        public MdxTuple? MdxTuple
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MdxTuple>();
+            get => GetElement<MdxTuple>();
             set => SetElement(value);
         }
 
@@ -33346,9 +33346,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.MdxSet? MdxSet
+        public MdxSet? MdxSet
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MdxSet>();
+            get => GetElement<MdxSet>();
             set => SetElement(value);
         }
 
@@ -33359,9 +33359,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.MdxMemberProp? MdxMemberProp
+        public MdxMemberProp? MdxMemberProp
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MdxMemberProp>();
+            get => GetElement<MdxMemberProp>();
             set => SetElement(value);
         }
 
@@ -33372,9 +33372,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.MdxKpi? MdxKpi
+        public MdxKpi? MdxKpi
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MdxKpi>();
+            get => GetElement<MdxKpi>();
             set => SetElement(value);
         }
 
@@ -34108,9 +34108,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.XmlCellProperties? XmlCellProperties
+        public XmlCellProperties? XmlCellProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.XmlCellProperties>();
+            get => GetElement<XmlCellProperties>();
             set => SetElement(value);
         }
 
@@ -34121,9 +34121,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -34243,9 +34243,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.XmlProperties? XmlProperties
+        public XmlProperties? XmlProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.XmlProperties>();
+            get => GetElement<XmlProperties>();
             set => SetElement(value);
         }
 
@@ -34256,9 +34256,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -34394,9 +34394,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -34490,9 +34490,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ForegroundColor? ForegroundColor
+        public ForegroundColor? ForegroundColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ForegroundColor>();
+            get => GetElement<ForegroundColor>();
             set => SetElement(value);
         }
 
@@ -34503,9 +34503,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.BackgroundColor? BackgroundColor
+        public BackgroundColor? BackgroundColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.BackgroundColor>();
+            get => GetElement<BackgroundColor>();
             set => SetElement(value);
         }
 
@@ -34770,9 +34770,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Color? Color
+        public Color? Color
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Color>();
+            get => GetElement<Color>();
             set => SetElement(value);
         }
 
@@ -35219,9 +35219,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Bold? Bold
+        public Bold? Bold
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Bold>();
+            get => GetElement<Bold>();
             set => SetElement(value);
         }
 
@@ -35232,9 +35232,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Italic? Italic
+        public Italic? Italic
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Italic>();
+            get => GetElement<Italic>();
             set => SetElement(value);
         }
 
@@ -35245,9 +35245,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Strike? Strike
+        public Strike? Strike
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Strike>();
+            get => GetElement<Strike>();
             set => SetElement(value);
         }
 
@@ -35258,9 +35258,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Condense? Condense
+        public Condense? Condense
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Condense>();
+            get => GetElement<Condense>();
             set => SetElement(value);
         }
 
@@ -35271,9 +35271,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Extend? Extend
+        public Extend? Extend
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Extend>();
+            get => GetElement<Extend>();
             set => SetElement(value);
         }
 
@@ -35284,9 +35284,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Outline? Outline
+        public Outline? Outline
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Outline>();
+            get => GetElement<Outline>();
             set => SetElement(value);
         }
 
@@ -35297,9 +35297,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Shadow? Shadow
+        public Shadow? Shadow
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Shadow>();
+            get => GetElement<Shadow>();
             set => SetElement(value);
         }
 
@@ -35310,9 +35310,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Underline? Underline
+        public Underline? Underline
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Underline>();
+            get => GetElement<Underline>();
             set => SetElement(value);
         }
 
@@ -35323,9 +35323,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment? VerticalTextAlignment
+        public VerticalTextAlignment? VerticalTextAlignment
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment>();
+            get => GetElement<VerticalTextAlignment>();
             set => SetElement(value);
         }
 
@@ -35336,9 +35336,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.FontSize? FontSize
+        public FontSize? FontSize
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontSize>();
+            get => GetElement<FontSize>();
             set => SetElement(value);
         }
 
@@ -35349,9 +35349,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Color? Color
+        public Color? Color
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Color>();
+            get => GetElement<Color>();
             set => SetElement(value);
         }
 
@@ -35362,9 +35362,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.FontName? FontName
+        public FontName? FontName
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontName>();
+            get => GetElement<FontName>();
             set => SetElement(value);
         }
 
@@ -35375,9 +35375,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.FontFamilyNumbering? FontFamilyNumbering
+        public FontFamilyNumbering? FontFamilyNumbering
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontFamilyNumbering>();
+            get => GetElement<FontFamilyNumbering>();
             set => SetElement(value);
         }
 
@@ -35388,9 +35388,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.FontCharSet? FontCharSet
+        public FontCharSet? FontCharSet
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontCharSet>();
+            get => GetElement<FontCharSet>();
             set => SetElement(value);
         }
 
@@ -35401,9 +35401,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.FontScheme? FontScheme
+        public FontScheme? FontScheme
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontScheme>();
+            get => GetElement<FontScheme>();
             set => SetElement(value);
         }
 
@@ -35479,9 +35479,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PatternFill? PatternFill
+        public PatternFill? PatternFill
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PatternFill>();
+            get => GetElement<PatternFill>();
             set => SetElement(value);
         }
 
@@ -35492,9 +35492,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.GradientFill? GradientFill
+        public GradientFill? GradientFill
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.GradientFill>();
+            get => GetElement<GradientFill>();
             set => SetElement(value);
         }
 
@@ -35643,9 +35643,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.StartBorder? StartBorder
+        public StartBorder? StartBorder
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.StartBorder>();
+            get => GetElement<StartBorder>();
             set => SetElement(value);
         }
 
@@ -35656,9 +35656,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.EndBorder? EndBorder
+        public EndBorder? EndBorder
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.EndBorder>();
+            get => GetElement<EndBorder>();
             set => SetElement(value);
         }
 
@@ -35669,9 +35669,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.LeftBorder? LeftBorder
+        public LeftBorder? LeftBorder
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.LeftBorder>();
+            get => GetElement<LeftBorder>();
             set => SetElement(value);
         }
 
@@ -35682,9 +35682,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.RightBorder? RightBorder
+        public RightBorder? RightBorder
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RightBorder>();
+            get => GetElement<RightBorder>();
             set => SetElement(value);
         }
 
@@ -35695,9 +35695,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.TopBorder? TopBorder
+        public TopBorder? TopBorder
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TopBorder>();
+            get => GetElement<TopBorder>();
             set => SetElement(value);
         }
 
@@ -35708,9 +35708,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.BottomBorder? BottomBorder
+        public BottomBorder? BottomBorder
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.BottomBorder>();
+            get => GetElement<BottomBorder>();
             set => SetElement(value);
         }
 
@@ -35721,9 +35721,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.DiagonalBorder? DiagonalBorder
+        public DiagonalBorder? DiagonalBorder
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DiagonalBorder>();
+            get => GetElement<DiagonalBorder>();
             set => SetElement(value);
         }
 
@@ -35734,9 +35734,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.VerticalBorder? VerticalBorder
+        public VerticalBorder? VerticalBorder
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.VerticalBorder>();
+            get => GetElement<VerticalBorder>();
             set => SetElement(value);
         }
 
@@ -35747,9 +35747,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.HorizontalBorder? HorizontalBorder
+        public HorizontalBorder? HorizontalBorder
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.HorizontalBorder>();
+            get => GetElement<HorizontalBorder>();
             set => SetElement(value);
         }
 
@@ -36240,9 +36240,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -36548,9 +36548,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Alignment? Alignment
+        public Alignment? Alignment
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
+            get => GetElement<Alignment>();
             set => SetElement(value);
         }
 
@@ -36561,9 +36561,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Protection? Protection
+        public Protection? Protection
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Protection>();
+            get => GetElement<Protection>();
             set => SetElement(value);
         }
 
@@ -36574,9 +36574,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -37392,9 +37392,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Xstring? Xstring
+        public Xstring? Xstring
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Xstring>();
+            get => GetElement<Xstring>();
             set => SetElement(value);
         }
 
@@ -37600,9 +37600,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Values? Values
+        public Values? Values
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Values>();
+            get => GetElement<Values>();
             set => SetElement(value);
         }
 
@@ -37792,9 +37792,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.DdeLinkValue? DdeLinkValue
+        public DdeLinkValue? DdeLinkValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DdeLinkValue>();
+            get => GetElement<DdeLinkValue>();
             set => SetElement(value);
         }
 
@@ -37962,9 +37962,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.SheetNames? SheetNames
+        public SheetNames? SheetNames
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetNames>();
+            get => GetElement<SheetNames>();
             set => SetElement(value);
         }
 
@@ -37975,9 +37975,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedNames? ExternalDefinedNames
+        public ExternalDefinedNames? ExternalDefinedNames
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedNames>();
+            get => GetElement<ExternalDefinedNames>();
             set => SetElement(value);
         }
 
@@ -37988,9 +37988,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.SheetDataSet? SheetDataSet
+        public SheetDataSet? SheetDataSet
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetDataSet>();
+            get => GetElement<SheetDataSet>();
             set => SetElement(value);
         }
 
@@ -38106,9 +38106,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.DdeItems? DdeItems
+        public DdeItems? DdeItems
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DdeItems>();
+            get => GetElement<DdeItems>();
             set => SetElement(value);
         }
 
@@ -38226,9 +38226,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.OleItems? OleItems
+        public OleItems? OleItems
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OleItems>();
+            get => GetElement<OleItems>();
             set => SetElement(value);
         }
 
@@ -38621,9 +38621,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.CalculatedColumnFormula? CalculatedColumnFormula
+        public CalculatedColumnFormula? CalculatedColumnFormula
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CalculatedColumnFormula>();
+            get => GetElement<CalculatedColumnFormula>();
             set => SetElement(value);
         }
 
@@ -38634,9 +38634,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.TotalsRowFormula? TotalsRowFormula
+        public TotalsRowFormula? TotalsRowFormula
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TotalsRowFormula>();
+            get => GetElement<TotalsRowFormula>();
             set => SetElement(value);
         }
 
@@ -38647,9 +38647,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.XmlColumnProperties? XmlColumnProperties
+        public XmlColumnProperties? XmlColumnProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.XmlColumnProperties>();
+            get => GetElement<XmlColumnProperties>();
             set => SetElement(value);
         }
 
@@ -38660,9 +38660,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -38967,9 +38967,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -39233,9 +39233,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Xstring? Xstring
+        public Xstring? Xstring
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Xstring>();
+            get => GetElement<Xstring>();
             set => SetElement(value);
         }
 
@@ -40069,9 +40069,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -40485,9 +40485,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -41052,9 +41052,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.FromMarker? FromMarker
+        public FromMarker? FromMarker
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FromMarker>();
+            get => GetElement<FromMarker>();
             set => SetElement(value);
         }
 
@@ -41065,9 +41065,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ToMarker? ToMarker
+        public ToMarker? ToMarker
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ToMarker>();
+            get => GetElement<ToMarker>();
             set => SetElement(value);
         }
 
@@ -42643,9 +42643,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Color? Color
+        public Color? Color
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Color>();
+            get => GetElement<Color>();
             set => SetElement(value);
         }
     }
@@ -42975,9 +42975,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor? ObjectAnchor
+        public ObjectAnchor? ObjectAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor>();
+            get => GetElement<ObjectAnchor>();
             set => SetElement(value);
         }
 
@@ -43259,9 +43259,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor? ObjectAnchor
+        public ObjectAnchor? ObjectAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor>();
+            get => GetElement<ObjectAnchor>();
             set => SetElement(value);
         }
 
@@ -43371,9 +43371,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.TabColor? TabColor
+        public TabColor? TabColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TabColor>();
+            get => GetElement<TabColor>();
             set => SetElement(value);
         }
 
@@ -44980,9 +44980,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.TabColor? TabColor
+        public TabColor? TabColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TabColor>();
+            get => GetElement<TabColor>();
             set => SetElement(value);
         }
 
@@ -44993,9 +44993,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.OutlineProperties? OutlineProperties
+        public OutlineProperties? OutlineProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OutlineProperties>();
+            get => GetElement<OutlineProperties>();
             set => SetElement(value);
         }
 
@@ -45006,9 +45006,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PageSetupProperties? PageSetupProperties
+        public PageSetupProperties? PageSetupProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageSetupProperties>();
+            get => GetElement<PageSetupProperties>();
             set => SetElement(value);
         }
 
@@ -46192,9 +46192,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.DataReferences? DataReferences
+        public DataReferences? DataReferences
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DataReferences>();
+            get => GetElement<DataReferences>();
             set => SetElement(value);
         }
 
@@ -46749,9 +46749,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PivotArea? PivotArea
+        public PivotArea? PivotArea
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
+            get => GetElement<PivotArea>();
             set => SetElement(value);
         }
 
@@ -47009,9 +47009,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Pages? Pages
+        public Pages? Pages
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Pages>();
+            get => GetElement<Pages>();
             set => SetElement(value);
         }
 
@@ -47022,9 +47022,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.RangeSets? RangeSets
+        public RangeSets? RangeSets
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RangeSets>();
+            get => GetElement<RangeSets>();
             set => SetElement(value);
         }
 
@@ -47416,9 +47416,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor? ObjectAnchor
+        public ObjectAnchor? ObjectAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor>();
+            get => GetElement<ObjectAnchor>();
             set => SetElement(value);
         }
 
@@ -49153,9 +49153,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Tables? Tables
+        public Tables? Tables
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Tables>();
+            get => GetElement<Tables>();
             set => SetElement(value);
         }
 
@@ -49506,9 +49506,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.TextFields? TextFields
+        public TextFields? TextFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TextFields>();
+            get => GetElement<TextFields>();
             set => SetElement(value);
         }
 
@@ -49937,9 +49937,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.WorksheetSource? WorksheetSource
+        public WorksheetSource? WorksheetSource
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.WorksheetSource>();
+            get => GetElement<WorksheetSource>();
             set => SetElement(value);
         }
 
@@ -49950,9 +49950,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Consolidation? Consolidation
+        public Consolidation? Consolidation
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Consolidation>();
+            get => GetElement<Consolidation>();
             set => SetElement(value);
         }
 
@@ -49963,9 +49963,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtensionList? CacheSourceExtensionList
+        public CacheSourceExtensionList? CacheSourceExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtensionList>();
+            get => GetElement<CacheSourceExtensionList>();
             set => SetElement(value);
         }
 
@@ -50290,9 +50290,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Entries? Entries
+        public Entries? Entries
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Entries>();
+            get => GetElement<Entries>();
             set => SetElement(value);
         }
 
@@ -50303,9 +50303,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Sets? Sets
+        public Sets? Sets
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Sets>();
+            get => GetElement<Sets>();
             set => SetElement(value);
         }
 
@@ -50316,9 +50316,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.QueryCache? QueryCache
+        public QueryCache? QueryCache
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.QueryCache>();
+            get => GetElement<QueryCache>();
             set => SetElement(value);
         }
 
@@ -50329,9 +50329,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ServerFormats? ServerFormats
+        public ServerFormats? ServerFormats
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ServerFormats>();
+            get => GetElement<ServerFormats>();
             set => SetElement(value);
         }
 
@@ -50342,9 +50342,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -53899,9 +53899,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.QueryTableFields? QueryTableFields
+        public QueryTableFields? QueryTableFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.QueryTableFields>();
+            get => GetElement<QueryTableFields>();
             set => SetElement(value);
         }
 
@@ -53912,9 +53912,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.QueryTableDeletedFields? QueryTableDeletedFields
+        public QueryTableDeletedFields? QueryTableDeletedFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.QueryTableDeletedFields>();
+            get => GetElement<QueryTableDeletedFields>();
             set => SetElement(value);
         }
 
@@ -53925,9 +53925,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.SortState? SortState
+        public SortState? SortState
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SortState>();
+            get => GetElement<SortState>();
             set => SetElement(value);
         }
 
@@ -53938,9 +53938,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -55728,9 +55728,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.IndexedColors? IndexedColors
+        public IndexedColors? IndexedColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.IndexedColors>();
+            get => GetElement<IndexedColors>();
             set => SetElement(value);
         }
 
@@ -55741,9 +55741,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.MruColors? MruColors
+        public MruColors? MruColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MruColors>();
+            get => GetElement<MruColors>();
             set => SetElement(value);
         }
 

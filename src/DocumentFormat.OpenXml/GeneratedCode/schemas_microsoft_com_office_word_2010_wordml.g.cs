@@ -1769,9 +1769,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.FillToRectangle? FillToRectangle
+        public FillToRectangle? FillToRectangle
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.FillToRectangle>();
+            get => GetElement<FillToRectangle>();
             set => SetElement(value);
         }
 
@@ -1986,9 +1986,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex? RgbColorModelHex
+        public RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex>();
+            get => GetElement<RgbColorModelHex>();
             set => SetElement(value);
         }
 
@@ -1999,9 +1999,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.SchemeColor? SchemeColor
+        public SchemeColor? SchemeColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.SchemeColor>();
+            get => GetElement<SchemeColor>();
             set => SetElement(value);
         }
 
@@ -2087,9 +2087,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.GradientStopList? GradientStopList
+        public GradientStopList? GradientStopList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.GradientStopList>();
+            get => GetElement<GradientStopList>();
             set => SetElement(value);
         }
 
@@ -2302,9 +2302,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex? RgbColorModelHex
+        public RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex>();
+            get => GetElement<RgbColorModelHex>();
             set => SetElement(value);
         }
 
@@ -2315,9 +2315,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.SchemeColor? SchemeColor
+        public SchemeColor? SchemeColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.SchemeColor>();
+            get => GetElement<SchemeColor>();
             set => SetElement(value);
         }
 
@@ -2590,9 +2590,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex? RgbColorModelHex
+        public RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex>();
+            get => GetElement<RgbColorModelHex>();
             set => SetElement(value);
         }
 
@@ -2603,9 +2603,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.SchemeColor? SchemeColor
+        public SchemeColor? SchemeColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.SchemeColor>();
+            get => GetElement<SchemeColor>();
             set => SetElement(value);
         }
 
@@ -3222,9 +3222,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.NoFillEmpty? NoFillEmpty
+        public NoFillEmpty? NoFillEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.NoFillEmpty>();
+            get => GetElement<NoFillEmpty>();
             set => SetElement(value);
         }
 
@@ -3235,9 +3235,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.SolidColorFillProperties? SolidColorFillProperties
+        public SolidColorFillProperties? SolidColorFillProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.SolidColorFillProperties>();
+            get => GetElement<SolidColorFillProperties>();
             set => SetElement(value);
         }
 
@@ -3248,9 +3248,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.GradientFillProperties? GradientFillProperties
+        public GradientFillProperties? GradientFillProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.GradientFillProperties>();
+            get => GetElement<GradientFillProperties>();
             set => SetElement(value);
         }
 
@@ -3327,9 +3327,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.Camera? Camera
+        public Camera? Camera
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Camera>();
+            get => GetElement<Camera>();
             set => SetElement(value);
         }
 
@@ -3340,9 +3340,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.LightRig? LightRig
+        public LightRig? LightRig
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.LightRig>();
+            get => GetElement<LightRig>();
             set => SetElement(value);
         }
 
@@ -3498,9 +3498,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.BevelTop? BevelTop
+        public BevelTop? BevelTop
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.BevelTop>();
+            get => GetElement<BevelTop>();
             set => SetElement(value);
         }
 
@@ -3511,9 +3511,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.BevelBottom? BevelBottom
+        public BevelBottom? BevelBottom
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.BevelBottom>();
+            get => GetElement<BevelBottom>();
             set => SetElement(value);
         }
 
@@ -3524,9 +3524,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.ExtrusionColor? ExtrusionColor
+        public ExtrusionColor? ExtrusionColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.ExtrusionColor>();
+            get => GetElement<ExtrusionColor>();
             set => SetElement(value);
         }
 
@@ -3537,9 +3537,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.ContourColor? ContourColor
+        public ContourColor? ContourColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.ContourColor>();
+            get => GetElement<ContourColor>();
             set => SetElement(value);
         }
 
@@ -4045,9 +4045,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.WordNonVisualContentPartShapeProperties? WordNonVisualContentPartShapeProperties
+        public WordNonVisualContentPartShapeProperties? WordNonVisualContentPartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.WordNonVisualContentPartShapeProperties>();
+            get => GetElement<WordNonVisualContentPartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -4058,9 +4058,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.Transform2D? Transform2D
+        public Transform2D? Transform2D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Transform2D>();
+            get => GetElement<Transform2D>();
             set => SetElement(value);
         }
 
@@ -4071,9 +4071,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.OfficeArtExtensionList? OfficeArtExtensionList
+        public OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.OfficeArtExtensionList>();
+            get => GetElement<OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -4366,9 +4366,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.Checked? Checked
+        public Checked? Checked
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Checked>();
+            get => GetElement<Checked>();
             set => SetElement(value);
         }
 
@@ -4379,9 +4379,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.CheckedState? CheckedState
+        public CheckedState? CheckedState
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.CheckedState>();
+            get => GetElement<CheckedState>();
             set => SetElement(value);
         }
 
@@ -4392,9 +4392,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.UncheckedState? UncheckedState
+        public UncheckedState? UncheckedState
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.UncheckedState>();
+            get => GetElement<UncheckedState>();
             set => SetElement(value);
         }
 
@@ -4503,9 +4503,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex? RgbColorModelHex
+        public RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex>();
+            get => GetElement<RgbColorModelHex>();
             set => SetElement(value);
         }
 
@@ -4516,9 +4516,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.SchemeColor? SchemeColor
+        public SchemeColor? SchemeColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.SchemeColor>();
+            get => GetElement<SchemeColor>();
             set => SetElement(value);
         }
 
@@ -4985,9 +4985,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.SphereCoordinates? SphereCoordinates
+        public SphereCoordinates? SphereCoordinates
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.SphereCoordinates>();
+            get => GetElement<SphereCoordinates>();
             set => SetElement(value);
         }
 
@@ -5343,9 +5343,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex? RgbColorModelHex
+        public RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex>();
+            get => GetElement<RgbColorModelHex>();
             set => SetElement(value);
         }
 
@@ -5356,9 +5356,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.SchemeColor? SchemeColor
+        public SchemeColor? SchemeColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.SchemeColor>();
+            get => GetElement<SchemeColor>();
             set => SetElement(value);
         }
     }
@@ -5943,9 +5943,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.NonVisualDrawingProperties? NonVisualDrawingProperties
+        public NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.NonVisualDrawingProperties>();
+            get => GetElement<NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -5956,9 +5956,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.NonVisualInkContentPartProperties? NonVisualInkContentPartProperties
+        public NonVisualInkContentPartProperties? NonVisualInkContentPartProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.NonVisualInkContentPartProperties>();
+            get => GetElement<NonVisualInkContentPartProperties>();
             set => SetElement(value);
         }
 

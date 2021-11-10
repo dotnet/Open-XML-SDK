@@ -103,9 +103,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:sle = http://schemas.microsoft.com/office/drawing/2010/slicer
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.Slicer.OfficeArtExtensionList? OfficeArtExtensionList
+        public OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Slicer.OfficeArtExtensionList>();
+            get => GetElement<OfficeArtExtensionList>();
             set => SetElement(value);
         }
 

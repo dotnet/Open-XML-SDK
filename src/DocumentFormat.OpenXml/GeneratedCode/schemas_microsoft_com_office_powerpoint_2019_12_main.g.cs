@@ -108,9 +108,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:ppt1912SchemaUri = http://schemas.microsoft.com/office/powerpoint/2019/12/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistory? TaskHistory
+        public TaskHistory? TaskHistory
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistory>();
+            get => GetElement<TaskHistory>();
             set => SetElement(value);
         }
 
@@ -121,9 +121,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:ppt1912SchemaUri = http://schemas.microsoft.com/office/powerpoint/2019/12/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -445,9 +445,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:ppt1912SchemaUri = http://schemas.microsoft.com/office/powerpoint/2019/12/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.CommentAnchor? CommentAnchor
+        public CommentAnchor? CommentAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.CommentAnchor>();
+            get => GetElement<CommentAnchor>();
             set => SetElement(value);
         }
 
@@ -458,9 +458,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:ppt1912SchemaUri = http://schemas.microsoft.com/office/powerpoint/2019/12/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -981,9 +981,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:ppt1912SchemaUri = http://schemas.microsoft.com/office/powerpoint/2019/12/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser? AtrbtnTaskAssignUnassignUser
+        public AtrbtnTaskAssignUnassignUser? AtrbtnTaskAssignUnassignUser
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser>();
+            get => GetElement<AtrbtnTaskAssignUnassignUser>();
             set => SetElement(value);
         }
 
@@ -994,9 +994,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:ppt1912SchemaUri = http://schemas.microsoft.com/office/powerpoint/2019/12/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskAnchor? TaskAnchor
+        public TaskAnchor? TaskAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskAnchor>();
+            get => GetElement<TaskAnchor>();
             set => SetElement(value);
         }
 

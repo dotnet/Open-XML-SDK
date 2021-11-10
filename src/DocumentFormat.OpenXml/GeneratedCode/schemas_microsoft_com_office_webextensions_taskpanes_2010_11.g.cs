@@ -400,9 +400,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:wetp = http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionPartReference? WebExtensionPartReference
+        public WebExtensionPartReference? WebExtensionPartReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionPartReference>();
+            get => GetElement<WebExtensionPartReference>();
             set => SetElement(value);
         }
 
@@ -413,9 +413,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:wetp = http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.WebExtentionPane.OfficeArtExtensionList? OfficeArtExtensionList
+        public OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtentionPane.OfficeArtExtensionList>();
+            get => GetElement<OfficeArtExtensionList>();
             set => SetElement(value);
         }
 

@@ -206,9 +206,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:t = http://schemas.microsoft.com/office/tasks/2019/documenttasks
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor? TaskAnchor
+        public TaskAnchor? TaskAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor>();
+            get => GetElement<TaskAnchor>();
             set => SetElement(value);
         }
 
@@ -219,9 +219,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:t = http://schemas.microsoft.com/office/tasks/2019/documenttasks
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistory? TaskHistory
+        public TaskHistory? TaskHistory
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistory>();
+            get => GetElement<TaskHistory>();
             set => SetElement(value);
         }
 
@@ -232,9 +232,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:t = http://schemas.microsoft.com/office/tasks/2019/documenttasks
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -374,9 +374,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:t = http://schemas.microsoft.com/office/tasks/2019/documenttasks
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.DocumentTasks.CommentAnchor? CommentAnchor
+        public CommentAnchor? CommentAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.CommentAnchor>();
+            get => GetElement<CommentAnchor>();
             set => SetElement(value);
         }
 
@@ -387,9 +387,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:t = http://schemas.microsoft.com/office/tasks/2019/documenttasks
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -610,9 +610,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:t = http://schemas.microsoft.com/office/tasks/2019/documenttasks
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.DocumentTasks.AttributionTaskUser? AttributionTaskUser
+        public AttributionTaskUser? AttributionTaskUser
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.AttributionTaskUser>();
+            get => GetElement<AttributionTaskUser>();
             set => SetElement(value);
         }
 
@@ -623,9 +623,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:t = http://schemas.microsoft.com/office/tasks/2019/documenttasks
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor? TaskAnchor
+        public TaskAnchor? TaskAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor>();
+            get => GetElement<TaskAnchor>();
             set => SetElement(value);
         }
 

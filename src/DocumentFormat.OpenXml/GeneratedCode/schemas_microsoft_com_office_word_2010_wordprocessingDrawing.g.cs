@@ -187,9 +187,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth? PercentageWidth
+        public PercentageWidth? PercentageWidth
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth>();
+            get => GetElement<PercentageWidth>();
             set => SetElement(value);
         }
 
@@ -285,9 +285,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight? PercentageHeight
+        public PercentageHeight? PercentageHeight
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight>();
+            get => GetElement<PercentageHeight>();
             set => SetElement(value);
         }
 

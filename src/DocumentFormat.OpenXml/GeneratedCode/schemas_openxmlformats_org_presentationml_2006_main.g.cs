@@ -2169,9 +2169,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.SlideMasterIdList? SlideMasterIdList
+        public SlideMasterIdList? SlideMasterIdList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideMasterIdList>();
+            get => GetElement<SlideMasterIdList>();
             set => SetElement(value);
         }
 
@@ -2182,9 +2182,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.NotesMasterIdList? NotesMasterIdList
+        public NotesMasterIdList? NotesMasterIdList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NotesMasterIdList>();
+            get => GetElement<NotesMasterIdList>();
             set => SetElement(value);
         }
 
@@ -2195,9 +2195,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.HandoutMasterIdList? HandoutMasterIdList
+        public HandoutMasterIdList? HandoutMasterIdList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.HandoutMasterIdList>();
+            get => GetElement<HandoutMasterIdList>();
             set => SetElement(value);
         }
 
@@ -2208,9 +2208,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.SlideIdList? SlideIdList
+        public SlideIdList? SlideIdList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideIdList>();
+            get => GetElement<SlideIdList>();
             set => SetElement(value);
         }
 
@@ -2221,9 +2221,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.SlideSize? SlideSize
+        public SlideSize? SlideSize
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideSize>();
+            get => GetElement<SlideSize>();
             set => SetElement(value);
         }
 
@@ -2234,9 +2234,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.NotesSize? NotesSize
+        public NotesSize? NotesSize
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NotesSize>();
+            get => GetElement<NotesSize>();
             set => SetElement(value);
         }
 
@@ -2247,9 +2247,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.EmbeddedFontList? EmbeddedFontList
+        public EmbeddedFontList? EmbeddedFontList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.EmbeddedFontList>();
+            get => GetElement<EmbeddedFontList>();
             set => SetElement(value);
         }
 
@@ -2260,9 +2260,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CustomShowList? CustomShowList
+        public CustomShowList? CustomShowList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CustomShowList>();
+            get => GetElement<CustomShowList>();
             set => SetElement(value);
         }
 
@@ -2273,9 +2273,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.PhotoAlbum? PhotoAlbum
+        public PhotoAlbum? PhotoAlbum
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.PhotoAlbum>();
+            get => GetElement<PhotoAlbum>();
             set => SetElement(value);
         }
 
@@ -2286,9 +2286,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CustomerDataList? CustomerDataList
+        public CustomerDataList? CustomerDataList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CustomerDataList>();
+            get => GetElement<CustomerDataList>();
             set => SetElement(value);
         }
 
@@ -2299,9 +2299,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.Kinsoku? Kinsoku
+        public Kinsoku? Kinsoku
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Kinsoku>();
+            get => GetElement<Kinsoku>();
             set => SetElement(value);
         }
 
@@ -2312,9 +2312,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.DefaultTextStyle? DefaultTextStyle
+        public DefaultTextStyle? DefaultTextStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.DefaultTextStyle>();
+            get => GetElement<DefaultTextStyle>();
             set => SetElement(value);
         }
 
@@ -2325,9 +2325,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ModificationVerifier? ModificationVerifier
+        public ModificationVerifier? ModificationVerifier
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ModificationVerifier>();
+            get => GetElement<ModificationVerifier>();
             set => SetElement(value);
         }
 
@@ -2338,9 +2338,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.PresentationExtensionList? PresentationExtensionList
+        public PresentationExtensionList? PresentationExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.PresentationExtensionList>();
+            get => GetElement<PresentationExtensionList>();
             set => SetElement(value);
         }
 
@@ -2459,9 +2459,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.HtmlPublishProperties? HtmlPublishProperties
+        public HtmlPublishProperties? HtmlPublishProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.HtmlPublishProperties>();
+            get => GetElement<HtmlPublishProperties>();
             set => SetElement(value);
         }
 
@@ -2472,9 +2472,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.WebProperties? WebProperties
+        public WebProperties? WebProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.WebProperties>();
+            get => GetElement<WebProperties>();
             set => SetElement(value);
         }
 
@@ -2485,9 +2485,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.PrintingProperties? PrintingProperties
+        public PrintingProperties? PrintingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.PrintingProperties>();
+            get => GetElement<PrintingProperties>();
             set => SetElement(value);
         }
 
@@ -2498,9 +2498,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ShowProperties? ShowProperties
+        public ShowProperties? ShowProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ShowProperties>();
+            get => GetElement<ShowProperties>();
             set => SetElement(value);
         }
 
@@ -2511,9 +2511,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ColorMostRecentlyUsed? ColorMostRecentlyUsed
+        public ColorMostRecentlyUsed? ColorMostRecentlyUsed
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ColorMostRecentlyUsed>();
+            get => GetElement<ColorMostRecentlyUsed>();
             set => SetElement(value);
         }
 
@@ -2524,9 +2524,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtensionList? PresentationPropertiesExtensionList
+        public PresentationPropertiesExtensionList? PresentationPropertiesExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtensionList>();
+            get => GetElement<PresentationPropertiesExtensionList>();
             set => SetElement(value);
         }
 
@@ -2700,9 +2700,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommonSlideData? CommonSlideData
+        public CommonSlideData? CommonSlideData
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
+            get => GetElement<CommonSlideData>();
             set => SetElement(value);
         }
 
@@ -2713,9 +2713,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ColorMapOverride? ColorMapOverride
+        public ColorMapOverride? ColorMapOverride
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ColorMapOverride>();
+            get => GetElement<ColorMapOverride>();
             set => SetElement(value);
         }
 
@@ -2726,9 +2726,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.Transition? Transition
+        public Transition? Transition
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Transition>();
+            get => GetElement<Transition>();
             set => SetElement(value);
         }
 
@@ -2739,9 +2739,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.Timing? Timing
+        public Timing? Timing
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Timing>();
+            get => GetElement<Timing>();
             set => SetElement(value);
         }
 
@@ -2752,9 +2752,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.SlideExtensionList? SlideExtensionList
+        public SlideExtensionList? SlideExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideExtensionList>();
+            get => GetElement<SlideExtensionList>();
             set => SetElement(value);
         }
 
@@ -2985,9 +2985,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommonSlideData? CommonSlideData
+        public CommonSlideData? CommonSlideData
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
+            get => GetElement<CommonSlideData>();
             set => SetElement(value);
         }
 
@@ -2998,9 +2998,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ColorMapOverride? ColorMapOverride
+        public ColorMapOverride? ColorMapOverride
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ColorMapOverride>();
+            get => GetElement<ColorMapOverride>();
             set => SetElement(value);
         }
 
@@ -3011,9 +3011,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.Transition? Transition
+        public Transition? Transition
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Transition>();
+            get => GetElement<Transition>();
             set => SetElement(value);
         }
 
@@ -3024,9 +3024,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.Timing? Timing
+        public Timing? Timing
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Timing>();
+            get => GetElement<Timing>();
             set => SetElement(value);
         }
 
@@ -3037,9 +3037,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.HeaderFooter? HeaderFooter
+        public HeaderFooter? HeaderFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.HeaderFooter>();
+            get => GetElement<HeaderFooter>();
             set => SetElement(value);
         }
 
@@ -3050,9 +3050,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.SlideLayoutExtensionList? SlideLayoutExtensionList
+        public SlideLayoutExtensionList? SlideLayoutExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideLayoutExtensionList>();
+            get => GetElement<SlideLayoutExtensionList>();
             set => SetElement(value);
         }
 
@@ -3201,9 +3201,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommonSlideData? CommonSlideData
+        public CommonSlideData? CommonSlideData
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
+            get => GetElement<CommonSlideData>();
             set => SetElement(value);
         }
 
@@ -3214,9 +3214,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ColorMap? ColorMap
+        public ColorMap? ColorMap
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ColorMap>();
+            get => GetElement<ColorMap>();
             set => SetElement(value);
         }
 
@@ -3227,9 +3227,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.SlideLayoutIdList? SlideLayoutIdList
+        public SlideLayoutIdList? SlideLayoutIdList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideLayoutIdList>();
+            get => GetElement<SlideLayoutIdList>();
             set => SetElement(value);
         }
 
@@ -3240,9 +3240,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.Transition? Transition
+        public Transition? Transition
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Transition>();
+            get => GetElement<Transition>();
             set => SetElement(value);
         }
 
@@ -3253,9 +3253,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.Timing? Timing
+        public Timing? Timing
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Timing>();
+            get => GetElement<Timing>();
             set => SetElement(value);
         }
 
@@ -3266,9 +3266,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.HeaderFooter? HeaderFooter
+        public HeaderFooter? HeaderFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.HeaderFooter>();
+            get => GetElement<HeaderFooter>();
             set => SetElement(value);
         }
 
@@ -3279,9 +3279,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.TextStyles? TextStyles
+        public TextStyles? TextStyles
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.TextStyles>();
+            get => GetElement<TextStyles>();
             set => SetElement(value);
         }
 
@@ -3292,9 +3292,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.SlideMasterExtensionList? SlideMasterExtensionList
+        public SlideMasterExtensionList? SlideMasterExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideMasterExtensionList>();
+            get => GetElement<SlideMasterExtensionList>();
             set => SetElement(value);
         }
 
@@ -3413,9 +3413,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommonSlideData? CommonSlideData
+        public CommonSlideData? CommonSlideData
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
+            get => GetElement<CommonSlideData>();
             set => SetElement(value);
         }
 
@@ -3426,9 +3426,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ColorMap? ColorMap
+        public ColorMap? ColorMap
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ColorMap>();
+            get => GetElement<ColorMap>();
             set => SetElement(value);
         }
 
@@ -3439,9 +3439,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.HeaderFooter? HeaderFooter
+        public HeaderFooter? HeaderFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.HeaderFooter>();
+            get => GetElement<HeaderFooter>();
             set => SetElement(value);
         }
 
@@ -3452,9 +3452,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.HandoutMasterExtensionList? HandoutMasterExtensionList
+        public HandoutMasterExtensionList? HandoutMasterExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.HandoutMasterExtensionList>();
+            get => GetElement<HandoutMasterExtensionList>();
             set => SetElement(value);
         }
 
@@ -3576,9 +3576,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommonSlideData? CommonSlideData
+        public CommonSlideData? CommonSlideData
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
+            get => GetElement<CommonSlideData>();
             set => SetElement(value);
         }
 
@@ -3589,9 +3589,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ColorMap? ColorMap
+        public ColorMap? ColorMap
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ColorMap>();
+            get => GetElement<ColorMap>();
             set => SetElement(value);
         }
 
@@ -3602,9 +3602,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.HeaderFooter? HeaderFooter
+        public HeaderFooter? HeaderFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.HeaderFooter>();
+            get => GetElement<HeaderFooter>();
             set => SetElement(value);
         }
 
@@ -3615,9 +3615,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.NotesStyle? NotesStyle
+        public NotesStyle? NotesStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NotesStyle>();
+            get => GetElement<NotesStyle>();
             set => SetElement(value);
         }
 
@@ -3628,9 +3628,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.NotesMasterExtensionList? NotesMasterExtensionList
+        public NotesMasterExtensionList? NotesMasterExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NotesMasterExtensionList>();
+            get => GetElement<NotesMasterExtensionList>();
             set => SetElement(value);
         }
 
@@ -3781,9 +3781,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommonSlideData? CommonSlideData
+        public CommonSlideData? CommonSlideData
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
+            get => GetElement<CommonSlideData>();
             set => SetElement(value);
         }
 
@@ -3794,9 +3794,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ColorMapOverride? ColorMapOverride
+        public ColorMapOverride? ColorMapOverride
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ColorMapOverride>();
+            get => GetElement<ColorMapOverride>();
             set => SetElement(value);
         }
 
@@ -3807,9 +3807,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionListWithModification? ExtensionListWithModification
+        public ExtensionListWithModification? ExtensionListWithModification
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
+            get => GetElement<ExtensionListWithModification>();
             set => SetElement(value);
         }
 
@@ -3974,9 +3974,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -4232,9 +4232,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.NormalViewProperties? NormalViewProperties
+        public NormalViewProperties? NormalViewProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NormalViewProperties>();
+            get => GetElement<NormalViewProperties>();
             set => SetElement(value);
         }
 
@@ -4245,9 +4245,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.SlideViewProperties? SlideViewProperties
+        public SlideViewProperties? SlideViewProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideViewProperties>();
+            get => GetElement<SlideViewProperties>();
             set => SetElement(value);
         }
 
@@ -4258,9 +4258,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.OutlineViewProperties? OutlineViewProperties
+        public OutlineViewProperties? OutlineViewProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.OutlineViewProperties>();
+            get => GetElement<OutlineViewProperties>();
             set => SetElement(value);
         }
 
@@ -4271,9 +4271,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.NotesTextViewProperties? NotesTextViewProperties
+        public NotesTextViewProperties? NotesTextViewProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NotesTextViewProperties>();
+            get => GetElement<NotesTextViewProperties>();
             set => SetElement(value);
         }
 
@@ -4284,9 +4284,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.SorterViewProperties? SorterViewProperties
+        public SorterViewProperties? SorterViewProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.SorterViewProperties>();
+            get => GetElement<SorterViewProperties>();
             set => SetElement(value);
         }
 
@@ -4297,9 +4297,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.NotesViewProperties? NotesViewProperties
+        public NotesViewProperties? NotesViewProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NotesViewProperties>();
+            get => GetElement<NotesViewProperties>();
             set => SetElement(value);
         }
 
@@ -4310,9 +4310,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.GridSpacing? GridSpacing
+        public GridSpacing? GridSpacing
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.GridSpacing>();
+            get => GetElement<GridSpacing>();
             set => SetElement(value);
         }
 
@@ -4323,9 +4323,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -4735,9 +4735,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.Sound? Sound
+        public Sound? Sound
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Sound>();
+            get => GetElement<Sound>();
             set => SetElement(value);
         }
 
@@ -4930,9 +4930,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.SlideTarget? SlideTarget
+        public SlideTarget? SlideTarget
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideTarget>();
+            get => GetElement<SlideTarget>();
             set => SetElement(value);
         }
 
@@ -4943,9 +4943,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.SoundTarget? SoundTarget
+        public SoundTarget? SoundTarget
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.SoundTarget>();
+            get => GetElement<SoundTarget>();
             set => SetElement(value);
         }
 
@@ -4956,9 +4956,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ShapeTarget? ShapeTarget
+        public ShapeTarget? ShapeTarget
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeTarget>();
+            get => GetElement<ShapeTarget>();
             set => SetElement(value);
         }
 
@@ -4969,9 +4969,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.InkTarget? InkTarget
+        public InkTarget? InkTarget
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.InkTarget>();
+            get => GetElement<InkTarget>();
             set => SetElement(value);
         }
 
@@ -5330,9 +5330,9 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeD
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.TargetElement? TargetElement
+        public TargetElement? TargetElement
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.TargetElement>();
+            get => GetElement<TargetElement>();
             set => SetElement(value);
         }
 
@@ -5343,9 +5343,9 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeD
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.TimeNode? TimeNode
+        public TimeNode? TimeNode
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.TimeNode>();
+            get => GetElement<TimeNode>();
             set => SetElement(value);
         }
 
@@ -5356,9 +5356,9 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeD
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.RuntimeNodeTrigger? RuntimeNodeTrigger
+        public RuntimeNodeTrigger? RuntimeNodeTrigger
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.RuntimeNodeTrigger>();
+            get => GetElement<RuntimeNodeTrigger>();
             set => SetElement(value);
         }
     }
@@ -5428,9 +5428,9 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeD
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommonTimeNode? CommonTimeNode
+        public CommonTimeNode? CommonTimeNode
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonTimeNode>();
+            get => GetElement<CommonTimeNode>();
             set => SetElement(value);
         }
 
@@ -5567,9 +5567,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommonTimeNode? CommonTimeNode
+        public CommonTimeNode? CommonTimeNode
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonTimeNode>();
+            get => GetElement<CommonTimeNode>();
             set => SetElement(value);
         }
 
@@ -5580,9 +5580,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.PreviousConditionList? PreviousConditionList
+        public PreviousConditionList? PreviousConditionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.PreviousConditionList>();
+            get => GetElement<PreviousConditionList>();
             set => SetElement(value);
         }
 
@@ -5593,9 +5593,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.NextConditionList? NextConditionList
+        public NextConditionList? NextConditionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NextConditionList>();
+            get => GetElement<NextConditionList>();
             set => SetElement(value);
         }
 
@@ -5668,9 +5668,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommonTimeNode? CommonTimeNode
+        public CommonTimeNode? CommonTimeNode
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonTimeNode>();
+            get => GetElement<CommonTimeNode>();
             set => SetElement(value);
         }
 
@@ -5862,9 +5862,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommonBehavior? CommonBehavior
+        public CommonBehavior? CommonBehavior
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
+            get => GetElement<CommonBehavior>();
             set => SetElement(value);
         }
 
@@ -5875,9 +5875,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.TimeAnimateValueList? TimeAnimateValueList
+        public TimeAnimateValueList? TimeAnimateValueList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.TimeAnimateValueList>();
+            get => GetElement<TimeAnimateValueList>();
             set => SetElement(value);
         }
 
@@ -6000,9 +6000,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommonBehavior? CommonBehavior
+        public CommonBehavior? CommonBehavior
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
+            get => GetElement<CommonBehavior>();
             set => SetElement(value);
         }
 
@@ -6013,9 +6013,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ByColor? ByColor
+        public ByColor? ByColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ByColor>();
+            get => GetElement<ByColor>();
             set => SetElement(value);
         }
 
@@ -6026,9 +6026,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.FromColor? FromColor
+        public FromColor? FromColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.FromColor>();
+            get => GetElement<FromColor>();
             set => SetElement(value);
         }
 
@@ -6039,9 +6039,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ToColor? ToColor
+        public ToColor? ToColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ToColor>();
+            get => GetElement<ToColor>();
             set => SetElement(value);
         }
 
@@ -6172,9 +6172,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommonBehavior? CommonBehavior
+        public CommonBehavior? CommonBehavior
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
+            get => GetElement<CommonBehavior>();
             set => SetElement(value);
         }
 
@@ -6185,9 +6185,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.Progress? Progress
+        public Progress? Progress
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Progress>();
+            get => GetElement<Progress>();
             set => SetElement(value);
         }
 
@@ -6389,9 +6389,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommonBehavior? CommonBehavior
+        public CommonBehavior? CommonBehavior
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
+            get => GetElement<CommonBehavior>();
             set => SetElement(value);
         }
 
@@ -6402,9 +6402,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ByPosition? ByPosition
+        public ByPosition? ByPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ByPosition>();
+            get => GetElement<ByPosition>();
             set => SetElement(value);
         }
 
@@ -6415,9 +6415,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.FromPosition? FromPosition
+        public FromPosition? FromPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.FromPosition>();
+            get => GetElement<FromPosition>();
             set => SetElement(value);
         }
 
@@ -6428,9 +6428,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ToPosition? ToPosition
+        public ToPosition? ToPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ToPosition>();
+            get => GetElement<ToPosition>();
             set => SetElement(value);
         }
 
@@ -6441,9 +6441,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.RotationCenter? RotationCenter
+        public RotationCenter? RotationCenter
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.RotationCenter>();
+            get => GetElement<RotationCenter>();
             set => SetElement(value);
         }
 
@@ -6595,9 +6595,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommonBehavior? CommonBehavior
+        public CommonBehavior? CommonBehavior
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
+            get => GetElement<CommonBehavior>();
             set => SetElement(value);
         }
 
@@ -6721,9 +6721,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommonBehavior? CommonBehavior
+        public CommonBehavior? CommonBehavior
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
+            get => GetElement<CommonBehavior>();
             set => SetElement(value);
         }
 
@@ -6734,9 +6734,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ByPosition? ByPosition
+        public ByPosition? ByPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ByPosition>();
+            get => GetElement<ByPosition>();
             set => SetElement(value);
         }
 
@@ -6747,9 +6747,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.FromPosition? FromPosition
+        public FromPosition? FromPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.FromPosition>();
+            get => GetElement<FromPosition>();
             set => SetElement(value);
         }
 
@@ -6760,9 +6760,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ToPosition? ToPosition
+        public ToPosition? ToPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ToPosition>();
+            get => GetElement<ToPosition>();
             set => SetElement(value);
         }
 
@@ -6873,9 +6873,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommonBehavior? CommonBehavior
+        public CommonBehavior? CommonBehavior
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
+            get => GetElement<CommonBehavior>();
             set => SetElement(value);
         }
 
@@ -6951,9 +6951,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommonBehavior? CommonBehavior
+        public CommonBehavior? CommonBehavior
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
+            get => GetElement<CommonBehavior>();
             set => SetElement(value);
         }
 
@@ -6964,9 +6964,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ToVariantValue? ToVariantValue
+        public ToVariantValue? ToVariantValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ToVariantValue>();
+            get => GetElement<ToVariantValue>();
             set => SetElement(value);
         }
 
@@ -7057,9 +7057,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommonMediaNode? CommonMediaNode
+        public CommonMediaNode? CommonMediaNode
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonMediaNode>();
+            get => GetElement<CommonMediaNode>();
             set => SetElement(value);
         }
 
@@ -7150,9 +7150,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommonMediaNode? CommonMediaNode
+        public CommonMediaNode? CommonMediaNode
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonMediaNode>();
+            get => GetElement<CommonMediaNode>();
             set => SetElement(value);
         }
 
@@ -7681,9 +7681,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.StartConditionList? StartConditionList
+        public StartConditionList? StartConditionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.StartConditionList>();
+            get => GetElement<StartConditionList>();
             set => SetElement(value);
         }
 
@@ -7694,9 +7694,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.EndConditionList? EndConditionList
+        public EndConditionList? EndConditionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.EndConditionList>();
+            get => GetElement<EndConditionList>();
             set => SetElement(value);
         }
 
@@ -7707,9 +7707,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.EndSync? EndSync
+        public EndSync? EndSync
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.EndSync>();
+            get => GetElement<EndSync>();
             set => SetElement(value);
         }
 
@@ -7720,9 +7720,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.Iterate? Iterate
+        public Iterate? Iterate
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Iterate>();
+            get => GetElement<Iterate>();
             set => SetElement(value);
         }
 
@@ -7733,9 +7733,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ChildTimeNodeList? ChildTimeNodeList
+        public ChildTimeNodeList? ChildTimeNodeList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ChildTimeNodeList>();
+            get => GetElement<ChildTimeNodeList>();
             set => SetElement(value);
         }
 
@@ -7746,9 +7746,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.SubTimeNodeList? SubTimeNodeList
+        public SubTimeNodeList? SubTimeNodeList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.SubTimeNodeList>();
+            get => GetElement<SubTimeNodeList>();
             set => SetElement(value);
         }
 
@@ -8785,9 +8785,9 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeD
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.VariantValue? VariantValue
+        public VariantValue? VariantValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.VariantValue>();
+            get => GetElement<VariantValue>();
             set => SetElement(value);
         }
 
@@ -9196,9 +9196,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommonTimeNode? CommonTimeNode
+        public CommonTimeNode? CommonTimeNode
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonTimeNode>();
+            get => GetElement<CommonTimeNode>();
             set => SetElement(value);
         }
 
@@ -9209,9 +9209,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.TargetElement? TargetElement
+        public TargetElement? TargetElement
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.TargetElement>();
+            get => GetElement<TargetElement>();
             set => SetElement(value);
         }
 
@@ -9222,9 +9222,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.AttributeNameList? AttributeNameList
+        public AttributeNameList? AttributeNameList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.AttributeNameList>();
+            get => GetElement<AttributeNameList>();
             set => SetElement(value);
         }
 
@@ -9297,9 +9297,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.FloatVariantValue? FloatVariantValue
+        public FloatVariantValue? FloatVariantValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.FloatVariantValue>();
+            get => GetElement<FloatVariantValue>();
             set => SetElement(value);
         }
 
@@ -9510,9 +9510,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.BooleanVariantValue? BooleanVariantValue
+        public BooleanVariantValue? BooleanVariantValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.BooleanVariantValue>();
+            get => GetElement<BooleanVariantValue>();
             set => SetElement(value);
         }
 
@@ -9523,9 +9523,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.IntegerVariantValue? IntegerVariantValue
+        public IntegerVariantValue? IntegerVariantValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.IntegerVariantValue>();
+            get => GetElement<IntegerVariantValue>();
             set => SetElement(value);
         }
 
@@ -9536,9 +9536,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.FloatVariantValue? FloatVariantValue
+        public FloatVariantValue? FloatVariantValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.FloatVariantValue>();
+            get => GetElement<FloatVariantValue>();
             set => SetElement(value);
         }
 
@@ -9549,9 +9549,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.StringVariantValue? StringVariantValue
+        public StringVariantValue? StringVariantValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.StringVariantValue>();
+            get => GetElement<StringVariantValue>();
             set => SetElement(value);
         }
 
@@ -9562,9 +9562,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ColorValue? ColorValue
+        public ColorValue? ColorValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ColorValue>();
+            get => GetElement<ColorValue>();
             set => SetElement(value);
         }
     }
@@ -9709,9 +9709,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommonTimeNode? CommonTimeNode
+        public CommonTimeNode? CommonTimeNode
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonTimeNode>();
+            get => GetElement<CommonTimeNode>();
             set => SetElement(value);
         }
 
@@ -9722,9 +9722,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.TargetElement? TargetElement
+        public TargetElement? TargetElement
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.TargetElement>();
+            get => GetElement<TargetElement>();
             set => SetElement(value);
         }
 
@@ -9797,9 +9797,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ParallelTimeNode? ParallelTimeNode
+        public ParallelTimeNode? ParallelTimeNode
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ParallelTimeNode>();
+            get => GetElement<ParallelTimeNode>();
             set => SetElement(value);
         }
 
@@ -9892,9 +9892,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.TimeNodeList? TimeNodeList
+        public TimeNodeList? TimeNodeList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.TimeNodeList>();
+            get => GetElement<TimeNodeList>();
             set => SetElement(value);
         }
 
@@ -10299,9 +10299,9 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeD
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.TemplateList? TemplateList
+        public TemplateList? TemplateList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.TemplateList>();
+            get => GetElement<TemplateList>();
             set => SetElement(value);
         }
 
@@ -10677,9 +10677,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.BuildAsOne? BuildAsOne
+        public BuildAsOne? BuildAsOne
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.BuildAsOne>();
+            get => GetElement<BuildAsOne>();
             set => SetElement(value);
         }
 
@@ -10690,9 +10690,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.BuildSubElement? BuildSubElement
+        public BuildSubElement? BuildSubElement
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.BuildSubElement>();
+            get => GetElement<BuildSubElement>();
             set => SetElement(value);
         }
 
@@ -10925,9 +10925,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.RgbColor? RgbColor
+        public RgbColor? RgbColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.RgbColor>();
+            get => GetElement<RgbColor>();
             set => SetElement(value);
         }
 
@@ -10938,9 +10938,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.HslColor? HslColor
+        public HslColor? HslColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.HslColor>();
+            get => GetElement<HslColor>();
             set => SetElement(value);
         }
 
@@ -11151,7 +11151,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>RGB Color Model - Percentage Variant.</para>
+        /// <para>RGB Color Model - Percentage Variant, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: a:scrgbClr.</para>
         /// </summary>
         /// <remark>
@@ -11177,7 +11177,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>Hue, Saturation, Luminance Color Model.</para>
+        /// <para>Hue, Saturation, Luminance Color Model, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: a:hslClr.</para>
         /// </summary>
         /// <remark>
@@ -11190,7 +11190,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>System Color.</para>
+        /// <para>System Color, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: a:sysClr.</para>
         /// </summary>
         /// <remark>
@@ -11216,7 +11216,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>Preset Color.</para>
+        /// <para>Preset Color, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: a:prstClr.</para>
         /// </summary>
         /// <remark>
@@ -11552,9 +11552,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommentAuthorExtensionList? CommentAuthorExtensionList
+        public CommentAuthorExtensionList? CommentAuthorExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommentAuthorExtensionList>();
+            get => GetElement<CommentAuthorExtensionList>();
             set => SetElement(value);
         }
 
@@ -11691,9 +11691,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.Position? Position
+        public Position? Position
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Position>();
+            get => GetElement<Position>();
             set => SetElement(value);
         }
 
@@ -11704,9 +11704,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.Text? Text
+        public Text? Text
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Text>();
+            get => GetElement<Text>();
             set => SetElement(value);
         }
 
@@ -11717,9 +11717,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommentExtensionList? CommentExtensionList
+        public CommentExtensionList? CommentExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommentExtensionList>();
+            get => GetElement<CommentExtensionList>();
             set => SetElement(value);
         }
 
@@ -11978,9 +11978,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -11991,9 +11991,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.Picture? Picture
+        public Picture? Picture
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Picture>();
+            get => GetElement<Picture>();
             set => SetElement(value);
         }
 
@@ -12113,9 +12113,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -12234,9 +12234,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -12334,9 +12334,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -12434,9 +12434,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -12772,9 +12772,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.Font? Font
+        public Font? Font
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Font>();
+            get => GetElement<Font>();
             set => SetElement(value);
         }
 
@@ -12785,9 +12785,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.RegularFont? RegularFont
+        public RegularFont? RegularFont
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.RegularFont>();
+            get => GetElement<RegularFont>();
             set => SetElement(value);
         }
 
@@ -12798,9 +12798,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.BoldFont? BoldFont
+        public BoldFont? BoldFont
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.BoldFont>();
+            get => GetElement<BoldFont>();
             set => SetElement(value);
         }
 
@@ -12811,9 +12811,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ItalicFont? ItalicFont
+        public ItalicFont? ItalicFont
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ItalicFont>();
+            get => GetElement<ItalicFont>();
             set => SetElement(value);
         }
 
@@ -12824,9 +12824,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.BoldItalicFont? BoldItalicFont
+        public BoldItalicFont? BoldItalicFont
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.BoldItalicFont>();
+            get => GetElement<BoldItalicFont>();
             set => SetElement(value);
         }
 
@@ -13005,9 +13005,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.SlideList? SlideList
+        public SlideList? SlideList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideList>();
+            get => GetElement<SlideList>();
             set => SetElement(value);
         }
 
@@ -13018,9 +13018,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -13463,9 +13463,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.PlaceholderShape? PlaceholderShape
+        public PlaceholderShape? PlaceholderShape
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.PlaceholderShape>();
+            get => GetElement<PlaceholderShape>();
             set => SetElement(value);
         }
 
@@ -13544,9 +13544,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties? NonVisualDrawingProperties
+        public NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties>();
+            get => GetElement<NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -13557,9 +13557,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.NonVisualShapeDrawingProperties? NonVisualShapeDrawingProperties
+        public NonVisualShapeDrawingProperties? NonVisualShapeDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualShapeDrawingProperties>();
+            get => GetElement<NonVisualShapeDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -13570,9 +13570,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
+        public ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>();
+            get => GetElement<ApplicationNonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -14147,9 +14147,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties? NonVisualDrawingProperties
+        public NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties>();
+            get => GetElement<NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -14160,9 +14160,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.NonVisualConnectorShapeDrawingProperties? NonVisualConnectorShapeDrawingProperties
+        public NonVisualConnectorShapeDrawingProperties? NonVisualConnectorShapeDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualConnectorShapeDrawingProperties>();
+            get => GetElement<NonVisualConnectorShapeDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -14173,9 +14173,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
+        public ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>();
+            get => GetElement<ApplicationNonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -14363,9 +14363,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties? NonVisualDrawingProperties
+        public NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties>();
+            get => GetElement<NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -14376,9 +14376,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.NonVisualPictureDrawingProperties? NonVisualPictureDrawingProperties
+        public NonVisualPictureDrawingProperties? NonVisualPictureDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualPictureDrawingProperties>();
+            get => GetElement<NonVisualPictureDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -14389,9 +14389,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
+        public ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>();
+            get => GetElement<ApplicationNonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -14699,9 +14699,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties? NonVisualDrawingProperties
+        public NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties>();
+            get => GetElement<NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -14712,9 +14712,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameDrawingProperties? NonVisualGraphicFrameDrawingProperties
+        public NonVisualGraphicFrameDrawingProperties? NonVisualGraphicFrameDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameDrawingProperties>();
+            get => GetElement<NonVisualGraphicFrameDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -14725,9 +14725,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
+        public ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>();
+            get => GetElement<ApplicationNonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -15699,9 +15699,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -15804,9 +15804,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.Background? Background
+        public Background? Background
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Background>();
+            get => GetElement<Background>();
             set => SetElement(value);
         }
 
@@ -15817,9 +15817,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ShapeTree? ShapeTree
+        public ShapeTree? ShapeTree
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeTree>();
+            get => GetElement<ShapeTree>();
             set => SetElement(value);
         }
 
@@ -15830,9 +15830,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CustomerDataList? CustomerDataList
+        public CustomerDataList? CustomerDataList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CustomerDataList>();
+            get => GetElement<CustomerDataList>();
             set => SetElement(value);
         }
 
@@ -15843,9 +15843,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ControlList? ControlList
+        public ControlList? ControlList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ControlList>();
+            get => GetElement<ControlList>();
             set => SetElement(value);
         }
 
@@ -15856,9 +15856,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommonSlideDataExtensionList? CommonSlideDataExtensionList
+        public CommonSlideDataExtensionList? CommonSlideDataExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideDataExtensionList>();
+            get => GetElement<CommonSlideDataExtensionList>();
             set => SetElement(value);
         }
 
@@ -16342,9 +16342,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ScaleFactor? ScaleFactor
+        public ScaleFactor? ScaleFactor
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ScaleFactor>();
+            get => GetElement<ScaleFactor>();
             set => SetElement(value);
         }
 
@@ -16355,9 +16355,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.Origin? Origin
+        public Origin? Origin
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Origin>();
+            get => GetElement<Origin>();
             set => SetElement(value);
         }
 
@@ -16742,9 +16742,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommonViewProperties? CommonViewProperties
+        public CommonViewProperties? CommonViewProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonViewProperties>();
+            get => GetElement<CommonViewProperties>();
             set => SetElement(value);
         }
 
@@ -16755,9 +16755,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.GuideList? GuideList
+        public GuideList? GuideList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.GuideList>();
+            get => GetElement<GuideList>();
             set => SetElement(value);
         }
 
@@ -16928,9 +16928,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.RestoredLeft? RestoredLeft
+        public RestoredLeft? RestoredLeft
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.RestoredLeft>();
+            get => GetElement<RestoredLeft>();
             set => SetElement(value);
         }
 
@@ -16941,9 +16941,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.RestoredTop? RestoredTop
+        public RestoredTop? RestoredTop
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.RestoredTop>();
+            get => GetElement<RestoredTop>();
             set => SetElement(value);
         }
 
@@ -16954,9 +16954,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -17032,9 +17032,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties? CommonSlideViewProperties
+        public CommonSlideViewProperties? CommonSlideViewProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties>();
+            get => GetElement<CommonSlideViewProperties>();
             set => SetElement(value);
         }
 
@@ -17045,9 +17045,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -17126,9 +17126,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommonViewProperties? CommonViewProperties
+        public CommonViewProperties? CommonViewProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonViewProperties>();
+            get => GetElement<CommonViewProperties>();
             set => SetElement(value);
         }
 
@@ -17139,9 +17139,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.OutlineViewSlideList? OutlineViewSlideList
+        public OutlineViewSlideList? OutlineViewSlideList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.OutlineViewSlideList>();
+            get => GetElement<OutlineViewSlideList>();
             set => SetElement(value);
         }
 
@@ -17152,9 +17152,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -17230,9 +17230,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommonViewProperties? CommonViewProperties
+        public CommonViewProperties? CommonViewProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonViewProperties>();
+            get => GetElement<CommonViewProperties>();
             set => SetElement(value);
         }
 
@@ -17243,9 +17243,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -17339,9 +17339,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommonViewProperties? CommonViewProperties
+        public CommonViewProperties? CommonViewProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonViewProperties>();
+            get => GetElement<CommonViewProperties>();
             set => SetElement(value);
         }
 
@@ -17352,9 +17352,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -17430,9 +17430,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties? CommonSlideViewProperties
+        public CommonSlideViewProperties? CommonSlideViewProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties>();
+            get => GetElement<CommonSlideViewProperties>();
             set => SetElement(value);
         }
 
@@ -17443,9 +17443,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -17911,9 +17911,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.NonVisualPictureProperties? NonVisualPictureProperties
+        public NonVisualPictureProperties? NonVisualPictureProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualPictureProperties>();
+            get => GetElement<NonVisualPictureProperties>();
             set => SetElement(value);
         }
 
@@ -17924,9 +17924,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.BlipFill? BlipFill
+        public BlipFill? BlipFill
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.BlipFill>();
+            get => GetElement<BlipFill>();
             set => SetElement(value);
         }
 
@@ -17937,9 +17937,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ShapeProperties? ShapeProperties
+        public ShapeProperties? ShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeProperties>();
+            get => GetElement<ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -17950,9 +17950,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ShapeStyle? ShapeStyle
+        public ShapeStyle? ShapeStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeStyle>();
+            get => GetElement<ShapeStyle>();
             set => SetElement(value);
         }
 
@@ -17963,9 +17963,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionListWithModification? ExtensionListWithModification
+        public ExtensionListWithModification? ExtensionListWithModification
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
+            get => GetElement<ExtensionListWithModification>();
             set => SetElement(value);
         }
 
@@ -18059,9 +18059,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -18152,9 +18152,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -18508,9 +18508,9 @@ aBuilder.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersio
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.TimeNodeList? TimeNodeList
+        public TimeNodeList? TimeNodeList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.TimeNodeList>();
+            get => GetElement<TimeNodeList>();
             set => SetElement(value);
         }
 
@@ -18521,9 +18521,9 @@ aBuilder.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersio
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.BuildList? BuildList
+        public BuildList? BuildList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.BuildList>();
+            get => GetElement<BuildList>();
             set => SetElement(value);
         }
 
@@ -18534,9 +18534,9 @@ aBuilder.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersio
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionListWithModification? ExtensionListWithModification
+        public ExtensionListWithModification? ExtensionListWithModification
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
+            get => GetElement<ExtensionListWithModification>();
             set => SetElement(value);
         }
 
@@ -18701,9 +18701,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.BackgroundProperties? BackgroundProperties
+        public BackgroundProperties? BackgroundProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.BackgroundProperties>();
+            get => GetElement<BackgroundProperties>();
             set => SetElement(value);
         }
 
@@ -18714,9 +18714,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.BackgroundStyleReference? BackgroundStyleReference
+        public BackgroundStyleReference? BackgroundStyleReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.BackgroundStyleReference>();
+            get => GetElement<BackgroundStyleReference>();
             set => SetElement(value);
         }
 
@@ -18957,9 +18957,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeProperties? NonVisualGroupShapeProperties
+        public NonVisualGroupShapeProperties? NonVisualGroupShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeProperties>();
+            get => GetElement<NonVisualGroupShapeProperties>();
             set => SetElement(value);
         }
 
@@ -18970,9 +18970,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.GroupShapeProperties? GroupShapeProperties
+        public GroupShapeProperties? GroupShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.GroupShapeProperties>();
+            get => GetElement<GroupShapeProperties>();
             set => SetElement(value);
         }
     }
@@ -19237,9 +19237,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties? NonVisualDrawingProperties
+        public NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties>();
+            get => GetElement<NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -19250,9 +19250,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeDrawingProperties? NonVisualGroupShapeDrawingProperties
+        public NonVisualGroupShapeDrawingProperties? NonVisualGroupShapeDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeDrawingProperties>();
+            get => GetElement<NonVisualGroupShapeDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -19263,9 +19263,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
+        public ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>();
+            get => GetElement<ApplicationNonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -19506,9 +19506,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.NonVisualShapeProperties? NonVisualShapeProperties
+        public NonVisualShapeProperties? NonVisualShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualShapeProperties>();
+            get => GetElement<NonVisualShapeProperties>();
             set => SetElement(value);
         }
 
@@ -19519,9 +19519,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ShapeProperties? ShapeProperties
+        public ShapeProperties? ShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeProperties>();
+            get => GetElement<ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -19532,9 +19532,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ShapeStyle? ShapeStyle
+        public ShapeStyle? ShapeStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeStyle>();
+            get => GetElement<ShapeStyle>();
             set => SetElement(value);
         }
 
@@ -19545,9 +19545,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.TextBody? TextBody
+        public TextBody? TextBody
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.TextBody>();
+            get => GetElement<TextBody>();
             set => SetElement(value);
         }
 
@@ -19558,9 +19558,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionListWithModification? ExtensionListWithModification
+        public ExtensionListWithModification? ExtensionListWithModification
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
+            get => GetElement<ExtensionListWithModification>();
             set => SetElement(value);
         }
 
@@ -19642,9 +19642,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameProperties? NonVisualGraphicFrameProperties
+        public NonVisualGraphicFrameProperties? NonVisualGraphicFrameProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameProperties>();
+            get => GetElement<NonVisualGraphicFrameProperties>();
             set => SetElement(value);
         }
 
@@ -19655,9 +19655,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.Transform? Transform
+        public Transform? Transform
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Transform>();
+            get => GetElement<Transform>();
             set => SetElement(value);
         }
 
@@ -19681,9 +19681,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionListWithModification? ExtensionListWithModification
+        public ExtensionListWithModification? ExtensionListWithModification
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
+            get => GetElement<ExtensionListWithModification>();
             set => SetElement(value);
         }
 
@@ -19765,9 +19765,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.NonVisualConnectionShapeProperties? NonVisualConnectionShapeProperties
+        public NonVisualConnectionShapeProperties? NonVisualConnectionShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualConnectionShapeProperties>();
+            get => GetElement<NonVisualConnectionShapeProperties>();
             set => SetElement(value);
         }
 
@@ -19778,9 +19778,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ShapeProperties? ShapeProperties
+        public ShapeProperties? ShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeProperties>();
+            get => GetElement<ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -19791,9 +19791,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ShapeStyle? ShapeStyle
+        public ShapeStyle? ShapeStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeStyle>();
+            get => GetElement<ShapeStyle>();
             set => SetElement(value);
         }
 
@@ -19804,9 +19804,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionListWithModification? ExtensionListWithModification
+        public ExtensionListWithModification? ExtensionListWithModification
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
+            get => GetElement<ExtensionListWithModification>();
             set => SetElement(value);
         }
 
@@ -19977,9 +19977,9 @@ aBuilder.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (Fil
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.BackgroundAnimation? BackgroundAnimation
+        public BackgroundAnimation? BackgroundAnimation
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.BackgroundAnimation>();
+            get => GetElement<BackgroundAnimation>();
             set => SetElement(value);
         }
 
@@ -19990,9 +19990,9 @@ aBuilder.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (Fil
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.SubShape? SubShape
+        public SubShape? SubShape
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.SubShape>();
+            get => GetElement<SubShape>();
             set => SetElement(value);
         }
 
@@ -20003,9 +20003,9 @@ aBuilder.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (Fil
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.OleChartElement? OleChartElement
+        public OleChartElement? OleChartElement
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.OleChartElement>();
+            get => GetElement<OleChartElement>();
             set => SetElement(value);
         }
 
@@ -20016,9 +20016,9 @@ aBuilder.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (Fil
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.TextElement? TextElement
+        public TextElement? TextElement
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.TextElement>();
+            get => GetElement<TextElement>();
             set => SetElement(value);
         }
 
@@ -20029,9 +20029,9 @@ aBuilder.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (Fil
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.GraphicElement? GraphicElement
+        public GraphicElement? GraphicElement
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.GraphicElement>();
+            get => GetElement<GraphicElement>();
             set => SetElement(value);
         }
 
@@ -20805,9 +20805,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionListWithModification? ExtensionListWithModification
+        public ExtensionListWithModification? ExtensionListWithModification
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
+            get => GetElement<ExtensionListWithModification>();
             set => SetElement(value);
         }
 
@@ -21071,9 +21071,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.TimeAbsolute? TimeAbsolute
+        public TimeAbsolute? TimeAbsolute
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.TimeAbsolute>();
+            get => GetElement<TimeAbsolute>();
             set => SetElement(value);
         }
 
@@ -21084,9 +21084,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.TimePercentage? TimePercentage
+        public TimePercentage? TimePercentage
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.TimePercentage>();
+            get => GetElement<TimePercentage>();
             set => SetElement(value);
         }
 
@@ -21821,9 +21821,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.NotesMasterId? NotesMasterId
+        public NotesMasterId? NotesMasterId
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NotesMasterId>();
+            get => GetElement<NotesMasterId>();
             set => SetElement(value);
         }
 
@@ -21896,9 +21896,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.HandoutMasterId? HandoutMasterId
+        public HandoutMasterId? HandoutMasterId
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.HandoutMasterId>();
+            get => GetElement<HandoutMasterId>();
             set => SetElement(value);
         }
 
@@ -22322,9 +22322,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -23280,9 +23280,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -23447,9 +23447,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -24006,9 +24006,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionListWithModification? ExtensionListWithModification
+        public ExtensionListWithModification? ExtensionListWithModification
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
+            get => GetElement<ExtensionListWithModification>();
             set => SetElement(value);
         }
 
@@ -24214,9 +24214,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.TitleStyle? TitleStyle
+        public TitleStyle? TitleStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.TitleStyle>();
+            get => GetElement<TitleStyle>();
             set => SetElement(value);
         }
 
@@ -24227,9 +24227,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.BodyStyle? BodyStyle
+        public BodyStyle? BodyStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.BodyStyle>();
+            get => GetElement<BodyStyle>();
             set => SetElement(value);
         }
 
@@ -24240,9 +24240,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.OtherStyle? OtherStyle
+        public OtherStyle? OtherStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.OtherStyle>();
+            get => GetElement<OtherStyle>();
             set => SetElement(value);
         }
 
@@ -24253,9 +24253,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -24583,9 +24583,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.CharRange? CharRange
+        public CharRange? CharRange
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CharRange>();
+            get => GetElement<CharRange>();
             set => SetElement(value);
         }
 
@@ -24596,9 +24596,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.ParagraphIndexRange? ParagraphIndexRange
+        public ParagraphIndexRange? ParagraphIndexRange
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ParagraphIndexRange>();
+            get => GetElement<ParagraphIndexRange>();
             set => SetElement(value);
         }
 
@@ -25409,9 +25409,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.StartSoundAction? StartSoundAction
+        public StartSoundAction? StartSoundAction
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.StartSoundAction>();
+            get => GetElement<StartSoundAction>();
             set => SetElement(value);
         }
 
@@ -25422,9 +25422,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.EndSoundAction? EndSoundAction
+        public EndSoundAction? EndSoundAction
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.EndSoundAction>();
+            get => GetElement<EndSoundAction>();
             set => SetElement(value);
         }
 

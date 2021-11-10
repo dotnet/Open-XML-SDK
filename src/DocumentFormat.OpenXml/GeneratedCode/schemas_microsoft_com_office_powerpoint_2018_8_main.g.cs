@@ -616,9 +616,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p188 = http://schemas.microsoft.com/office/powerpoint/2018/8/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 
@@ -818,9 +818,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p188 = http://schemas.microsoft.com/office/powerpoint/2018/8/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.TextBodyType? TextBodyType
+        public TextBodyType? TextBodyType
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.TextBodyType>();
+            get => GetElement<TextBodyType>();
             set => SetElement(value);
         }
 
@@ -831,9 +831,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p188 = http://schemas.microsoft.com/office/powerpoint/2018/8/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 

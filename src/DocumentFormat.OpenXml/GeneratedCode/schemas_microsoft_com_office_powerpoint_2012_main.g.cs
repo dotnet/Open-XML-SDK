@@ -252,9 +252,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p15 = http://schemas.microsoft.com/office/powerpoint/2012/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier? ParentCommentIdentifier
+        public ParentCommentIdentifier? ParentCommentIdentifier
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier>();
+            get => GetElement<ParentCommentIdentifier>();
             set => SetElement(value);
         }
 
@@ -947,9 +947,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p15 = http://schemas.microsoft.com/office/powerpoint/2012/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType? ColorType
+        public ColorType? ColorType
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType>();
+            get => GetElement<ColorType>();
             set => SetElement(value);
         }
 
@@ -960,9 +960,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:p15 = http://schemas.microsoft.com/office/powerpoint/2012/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList? ExtensionList
+        public ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList>();
+            get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
 

@@ -95,9 +95,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <remark>
         /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneFilter? DropZoneFilter
+        public DropZoneFilter? DropZoneFilter
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneFilter>();
+            get => GetElement<DropZoneFilter>();
             set => SetElement(value);
         }
 
@@ -108,9 +108,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <remark>
         /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneCategories? DropZoneCategories
+        public DropZoneCategories? DropZoneCategories
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneCategories>();
+            get => GetElement<DropZoneCategories>();
             set => SetElement(value);
         }
 
@@ -121,9 +121,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <remark>
         /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneData? DropZoneData
+        public DropZoneData? DropZoneData
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneData>();
+            get => GetElement<DropZoneData>();
             set => SetElement(value);
         }
 
@@ -134,9 +134,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <remark>
         /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneSeries? DropZoneSeries
+        public DropZoneSeries? DropZoneSeries
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneSeries>();
+            get => GetElement<DropZoneSeries>();
             set => SetElement(value);
         }
 
@@ -147,9 +147,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <remark>
         /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZonesVisible? DropZonesVisible
+        public DropZonesVisible? DropZonesVisible
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZonesVisible>();
+            get => GetElement<DropZonesVisible>();
             set => SetElement(value);
         }
 
@@ -226,9 +226,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <remark>
         /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.Charts.InSketchMode? InSketchMode
+        public InSketchMode? InSketchMode
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.InSketchMode>();
+            get => GetElement<InSketchMode>();
             set => SetElement(value);
         }
 
@@ -239,9 +239,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <remark>
         /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShowSketchButton? ShowSketchButton
+        public ShowSketchButton? ShowSketchButton
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShowSketchButton>();
+            get => GetElement<ShowSketchButton>();
             set => SetElement(value);
         }
 
@@ -315,9 +315,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <remark>
         /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShapeProperties? ShapeProperties
+        public ShapeProperties? ShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShapeProperties>();
+            get => GetElement<ShapeProperties>();
             set => SetElement(value);
         }
 
