@@ -306,9 +306,9 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <remark>
         /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Excel.RowSortMap? RowSortMap
+        public RowSortMap? RowSortMap
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Excel.RowSortMap>();
+            get => GetElement<RowSortMap>();
             set => SetElement(value);
         }
 
@@ -319,9 +319,9 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <remark>
         /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Excel.ColumnSortMap? ColumnSortMap
+        public ColumnSortMap? ColumnSortMap
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Excel.ColumnSortMap>();
+            get => GetElement<ColumnSortMap>();
             set => SetElement(value);
         }
 

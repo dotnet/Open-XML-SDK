@@ -109,9 +109,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <remark>
         /// xmlns:wpc = http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.BackgroundFormatting? BackgroundFormatting
+        public BackgroundFormatting? BackgroundFormatting
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.BackgroundFormatting>();
+            get => GetElement<BackgroundFormatting>();
             set => SetElement(value);
         }
 
@@ -122,9 +122,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <remark>
         /// xmlns:wpc = http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.WholeFormatting? WholeFormatting
+        public WholeFormatting? WholeFormatting
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.WholeFormatting>();
+            get => GetElement<WholeFormatting>();
             set => SetElement(value);
         }
 

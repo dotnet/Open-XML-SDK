@@ -349,9 +349,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:dgm1611 = http://schemas.microsoft.com/office/drawing/2016/11/diagram
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet? DiagramAutoBullet
+        public DiagramAutoBullet? DiagramAutoBullet
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet>();
+            get => GetElement<DiagramAutoBullet>();
             set => SetElement(value);
         }
 

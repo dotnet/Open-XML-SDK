@@ -103,9 +103,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p173 = http://schemas.microsoft.com/office/powerpoint/2017/3/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Presentation.TrackList? TrackList
+        public TrackList? TrackList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Presentation.TrackList>();
+            get => GetElement<TrackList>();
             set => SetElement(value);
         }
 

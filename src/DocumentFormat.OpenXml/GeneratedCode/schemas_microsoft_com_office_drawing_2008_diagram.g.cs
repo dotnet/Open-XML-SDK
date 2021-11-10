@@ -81,9 +81,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <remark>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Drawing.ShapeTree? ShapeTree
+        public ShapeTree? ShapeTree
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.ShapeTree>();
+            get => GetElement<ShapeTree>();
             set => SetElement(value);
         }
 
@@ -563,9 +563,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingProperties? NonVisualDrawingProperties
+        public NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingProperties>();
+            get => GetElement<NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -576,9 +576,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingShapeProperties? NonVisualDrawingShapeProperties
+        public NonVisualDrawingShapeProperties? NonVisualDrawingShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingShapeProperties>();
+            get => GetElement<NonVisualDrawingShapeProperties>();
             set => SetElement(value);
         }
 
@@ -1329,9 +1329,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingProperties? NonVisualDrawingProperties
+        public NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingProperties>();
+            get => GetElement<NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -1342,9 +1342,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Drawing.NonVisualGroupDrawingShapeProperties? NonVisualGroupDrawingShapeProperties
+        public NonVisualGroupDrawingShapeProperties? NonVisualGroupDrawingShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.NonVisualGroupDrawingShapeProperties>();
+            get => GetElement<NonVisualGroupDrawingShapeProperties>();
             set => SetElement(value);
         }
 
@@ -1596,9 +1596,9 @@ union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4
         /// <remark>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Drawing.ShapeNonVisualProperties? ShapeNonVisualProperties
+        public ShapeNonVisualProperties? ShapeNonVisualProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.ShapeNonVisualProperties>();
+            get => GetElement<ShapeNonVisualProperties>();
             set => SetElement(value);
         }
 
@@ -1609,9 +1609,9 @@ union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4
         /// <remark>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Drawing.ShapeProperties? ShapeProperties
+        public ShapeProperties? ShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.ShapeProperties>();
+            get => GetElement<ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -1622,9 +1622,9 @@ union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4
         /// <remark>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Drawing.ShapeStyle? ShapeStyle
+        public ShapeStyle? ShapeStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.ShapeStyle>();
+            get => GetElement<ShapeStyle>();
             set => SetElement(value);
         }
 
@@ -1635,9 +1635,9 @@ union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4
         /// <remark>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Drawing.TextBody? TextBody
+        public TextBody? TextBody
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.TextBody>();
+            get => GetElement<TextBody>();
             set => SetElement(value);
         }
 
@@ -1648,9 +1648,9 @@ union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4
         /// <remark>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Drawing.Transform2D? Transform2D
+        public Transform2D? Transform2D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Transform2D>();
+            get => GetElement<Transform2D>();
             set => SetElement(value);
         }
 
@@ -1661,9 +1661,9 @@ union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4
         /// <remark>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Drawing.OfficeArtExtensionList? OfficeArtExtensionList
+        public OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.OfficeArtExtensionList>();
+            get => GetElement<OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -1880,9 +1880,9 @@ union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4
         /// <remark>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Drawing.GroupShapeNonVisualProperties? GroupShapeNonVisualProperties
+        public GroupShapeNonVisualProperties? GroupShapeNonVisualProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.GroupShapeNonVisualProperties>();
+            get => GetElement<GroupShapeNonVisualProperties>();
             set => SetElement(value);
         }
 
@@ -1893,9 +1893,9 @@ union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4
         /// <remark>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Drawing.GroupShapeProperties? GroupShapeProperties
+        public GroupShapeProperties? GroupShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.GroupShapeProperties>();
+            get => GetElement<GroupShapeProperties>();
             set => SetElement(value);
         }
     }

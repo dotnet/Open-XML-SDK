@@ -135,9 +135,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualContentPartProperties? NonVisualContentPartProperties
+        public NonVisualContentPartProperties? NonVisualContentPartProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualContentPartProperties>();
+            get => GetElement<NonVisualContentPartProperties>();
             set => SetElement(value);
         }
 
@@ -148,9 +148,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
+        public ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ApplicationNonVisualDrawingProperties>();
+            get => GetElement<ApplicationNonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -161,9 +161,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.Transform2D? Transform2D
+        public Transform2D? Transform2D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.Transform2D>();
+            get => GetElement<Transform2D>();
             set => SetElement(value);
         }
 
@@ -174,9 +174,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.OfficeArtExtensionList? OfficeArtExtensionList
+        public OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.OfficeArtExtensionList>();
+            get => GetElement<OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -563,9 +563,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualDrawingProperties? NonVisualDrawingProperties
+        public NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualDrawingProperties>();
+            get => GetElement<NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -576,9 +576,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualInkContentPartProperties? NonVisualInkContentPartProperties
+        public NonVisualInkContentPartProperties? NonVisualInkContentPartProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualInkContentPartProperties>();
+            get => GetElement<NonVisualInkContentPartProperties>();
             set => SetElement(value);
         }
 

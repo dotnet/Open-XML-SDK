@@ -166,9 +166,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ShapeProperties? ShapeProperties
+        public ShapeProperties? ShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ShapeProperties>();
+            get => GetElement<ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -179,9 +179,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DCamera? Model3DCamera
+        public Model3DCamera? Model3DCamera
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DCamera>();
+            get => GetElement<Model3DCamera>();
             set => SetElement(value);
         }
 
@@ -192,9 +192,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DTransform? Model3DTransform
+        public Model3DTransform? Model3DTransform
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DTransform>();
+            get => GetElement<Model3DTransform>();
             set => SetElement(value);
         }
 
@@ -205,9 +205,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PictureAttributionSourceURL? PictureAttributionSourceURL
+        public PictureAttributionSourceURL? PictureAttributionSourceURL
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PictureAttributionSourceURL>();
+            get => GetElement<PictureAttributionSourceURL>();
             set => SetElement(value);
         }
 
@@ -218,9 +218,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DRaster? Model3DRaster
+        public Model3DRaster? Model3DRaster
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DRaster>();
+            get => GetElement<Model3DRaster>();
             set => SetElement(value);
         }
 
@@ -231,9 +231,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtensionList? Model3DExtensionList
+        public Model3DExtensionList? Model3DExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtensionList>();
+            get => GetElement<Model3DExtensionList>();
             set => SetElement(value);
         }
 
@@ -799,9 +799,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SxRatio? SxRatio
+        public SxRatio? SxRatio
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SxRatio>();
+            get => GetElement<SxRatio>();
             set => SetElement(value);
         }
 
@@ -812,9 +812,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SyRatio? SyRatio
+        public SyRatio? SyRatio
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SyRatio>();
+            get => GetElement<SyRatio>();
             set => SetElement(value);
         }
 
@@ -825,9 +825,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzRatio? SzRatio
+        public SzRatio? SzRatio
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzRatio>();
+            get => GetElement<SzRatio>();
             set => SetElement(value);
         }
 
@@ -1193,9 +1193,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzPositiveRatio? SzPositiveRatio
+        public SzPositiveRatio? SzPositiveRatio
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzPositiveRatio>();
+            get => GetElement<SzPositiveRatio>();
             set => SetElement(value);
         }
 
@@ -1206,9 +1206,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
+        public OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
+            get => GetElement<OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -1304,9 +1304,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
+        public OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
+            get => GetElement<OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -1984,9 +1984,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D? PosPoint3D
+        public PosPoint3D? PosPoint3D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D>();
+            get => GetElement<PosPoint3D>();
             set => SetElement(value);
         }
 
@@ -1997,9 +1997,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.UpVector3D? UpVector3D
+        public UpVector3D? UpVector3D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.UpVector3D>();
+            get => GetElement<UpVector3D>();
             set => SetElement(value);
         }
 
@@ -2010,9 +2010,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D? LookAtPoint3D
+        public LookAtPoint3D? LookAtPoint3D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D>();
+            get => GetElement<LookAtPoint3D>();
             set => SetElement(value);
         }
 
@@ -2101,9 +2101,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.MeterPerModelUnitPositiveRatio? MeterPerModelUnitPositiveRatio
+        public MeterPerModelUnitPositiveRatio? MeterPerModelUnitPositiveRatio
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.MeterPerModelUnitPositiveRatio>();
+            get => GetElement<MeterPerModelUnitPositiveRatio>();
             set => SetElement(value);
         }
 
@@ -2114,9 +2114,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PreTransVector3D? PreTransVector3D
+        public PreTransVector3D? PreTransVector3D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PreTransVector3D>();
+            get => GetElement<PreTransVector3D>();
             set => SetElement(value);
         }
 
@@ -2127,9 +2127,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Scale3D? Scale3D
+        public Scale3D? Scale3D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Scale3D>();
+            get => GetElement<Scale3D>();
             set => SetElement(value);
         }
 
@@ -2140,9 +2140,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Rotate3D? Rotate3D
+        public Rotate3D? Rotate3D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Rotate3D>();
+            get => GetElement<Rotate3D>();
             set => SetElement(value);
         }
 
@@ -2153,9 +2153,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PostTransVector3D? PostTransVector3D
+        public PostTransVector3D? PostTransVector3D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PostTransVector3D>();
+            get => GetElement<PostTransVector3D>();
             set => SetElement(value);
         }
 
@@ -2166,9 +2166,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
+        public OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
+            get => GetElement<OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -2335,9 +2335,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Blip? Blip
+        public Blip? Blip
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Blip>();
+            get => GetElement<Blip>();
             set => SetElement(value);
         }
 
@@ -2496,9 +2496,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
+        public OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
+            get => GetElement<OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -2572,9 +2572,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
+        public OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
+            get => GetElement<OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -2672,9 +2672,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType? ColorType
+        public ColorType? ColorType
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType>();
+            get => GetElement<ColorType>();
             set => SetElement(value);
         }
 
@@ -2685,9 +2685,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio? IlluminancePositiveRatio
+        public IlluminancePositiveRatio? IlluminancePositiveRatio
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio>();
+            get => GetElement<IlluminancePositiveRatio>();
             set => SetElement(value);
         }
 
@@ -2698,9 +2698,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
+        public OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
+            get => GetElement<OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -2822,9 +2822,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType? ColorType
+        public ColorType? ColorType
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType>();
+            get => GetElement<ColorType>();
             set => SetElement(value);
         }
 
@@ -2835,9 +2835,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio? IntensityPositiveRatio
+        public IntensityPositiveRatio? IntensityPositiveRatio
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio>();
+            get => GetElement<IntensityPositiveRatio>();
             set => SetElement(value);
         }
 
@@ -2848,9 +2848,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D? PosPoint3D
+        public PosPoint3D? PosPoint3D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D>();
+            get => GetElement<PosPoint3D>();
             set => SetElement(value);
         }
 
@@ -2861,9 +2861,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
+        public OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
+            get => GetElement<OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -3009,9 +3009,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType? ColorType
+        public ColorType? ColorType
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType>();
+            get => GetElement<ColorType>();
             set => SetElement(value);
         }
 
@@ -3022,9 +3022,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio? IntensityPositiveRatio
+        public IntensityPositiveRatio? IntensityPositiveRatio
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio>();
+            get => GetElement<IntensityPositiveRatio>();
             set => SetElement(value);
         }
 
@@ -3035,9 +3035,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D? PosPoint3D
+        public PosPoint3D? PosPoint3D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D>();
+            get => GetElement<PosPoint3D>();
             set => SetElement(value);
         }
 
@@ -3048,9 +3048,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D? LookAtPoint3D
+        public LookAtPoint3D? LookAtPoint3D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D>();
+            get => GetElement<LookAtPoint3D>();
             set => SetElement(value);
         }
 
@@ -3061,9 +3061,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
+        public OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
+            get => GetElement<OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -3188,9 +3188,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType? ColorType
+        public ColorType? ColorType
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType>();
+            get => GetElement<ColorType>();
             set => SetElement(value);
         }
 
@@ -3201,9 +3201,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio? IlluminancePositiveRatio
+        public IlluminancePositiveRatio? IlluminancePositiveRatio
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio>();
+            get => GetElement<IlluminancePositiveRatio>();
             set => SetElement(value);
         }
 
@@ -3214,9 +3214,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D? PosPoint3D
+        public PosPoint3D? PosPoint3D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D>();
+            get => GetElement<PosPoint3D>();
             set => SetElement(value);
         }
 
@@ -3227,9 +3227,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D? LookAtPoint3D
+        public LookAtPoint3D? LookAtPoint3D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D>();
+            get => GetElement<LookAtPoint3D>();
             set => SetElement(value);
         }
 
@@ -3240,9 +3240,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
+        public OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
+            get => GetElement<OfficeArtExtensionList>();
             set => SetElement(value);
         }
 

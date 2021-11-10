@@ -247,9 +247,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.DocEvents? DocEvents
+        public DocEvents? DocEvents
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.DocEvents>();
+            get => GetElement<DocEvents>();
             set => SetElement(value);
         }
 
@@ -260,9 +260,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.Mcds? Mcds
+        public Mcds? Mcds
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.Mcds>();
+            get => GetElement<Mcds>();
             set => SetElement(value);
         }
 
@@ -889,9 +889,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.FixedCommandKeyboardCustomization? FixedCommandKeyboardCustomization
+        public FixedCommandKeyboardCustomization? FixedCommandKeyboardCustomization
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.FixedCommandKeyboardCustomization>();
+            get => GetElement<FixedCommandKeyboardCustomization>();
             set => SetElement(value);
         }
 
@@ -902,9 +902,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.MacroKeyboardCustomization? MacroKeyboardCustomization
+        public MacroKeyboardCustomization? MacroKeyboardCustomization
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.MacroKeyboardCustomization>();
+            get => GetElement<MacroKeyboardCustomization>();
             set => SetElement(value);
         }
 
@@ -915,9 +915,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.AllocatedCommandKeyboardCustomization? AllocatedCommandKeyboardCustomization
+        public AllocatedCommandKeyboardCustomization? AllocatedCommandKeyboardCustomization
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.AllocatedCommandKeyboardCustomization>();
+            get => GetElement<AllocatedCommandKeyboardCustomization>();
             set => SetElement(value);
         }
 
@@ -928,9 +928,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.WllMacroKeyboardCustomization? WllMacroKeyboardCustomization
+        public WllMacroKeyboardCustomization? WllMacroKeyboardCustomization
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.WllMacroKeyboardCustomization>();
+            get => GetElement<WllMacroKeyboardCustomization>();
             set => SetElement(value);
         }
 
@@ -941,9 +941,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.CharacterInsertion? CharacterInsertion
+        public CharacterInsertion? CharacterInsertion
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.CharacterInsertion>();
+            get => GetElement<CharacterInsertion>();
             set => SetElement(value);
         }
 
@@ -1820,9 +1820,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.EventDocNewXsdString? EventDocNewXsdString
+        public EventDocNewXsdString? EventDocNewXsdString
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocNewXsdString>();
+            get => GetElement<EventDocNewXsdString>();
             set => SetElement(value);
         }
 
@@ -1833,9 +1833,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.EventDocOpenXsdString? EventDocOpenXsdString
+        public EventDocOpenXsdString? EventDocOpenXsdString
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocOpenXsdString>();
+            get => GetElement<EventDocOpenXsdString>();
             set => SetElement(value);
         }
 
@@ -1846,9 +1846,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.EventDocCloseXsdString? EventDocCloseXsdString
+        public EventDocCloseXsdString? EventDocCloseXsdString
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocCloseXsdString>();
+            get => GetElement<EventDocCloseXsdString>();
             set => SetElement(value);
         }
 
@@ -1859,9 +1859,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.EventDocSyncXsdString? EventDocSyncXsdString
+        public EventDocSyncXsdString? EventDocSyncXsdString
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocSyncXsdString>();
+            get => GetElement<EventDocSyncXsdString>();
             set => SetElement(value);
         }
 
@@ -1872,9 +1872,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.EventDocXmlAfterInsertXsdString? EventDocXmlAfterInsertXsdString
+        public EventDocXmlAfterInsertXsdString? EventDocXmlAfterInsertXsdString
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocXmlAfterInsertXsdString>();
+            get => GetElement<EventDocXmlAfterInsertXsdString>();
             set => SetElement(value);
         }
 
@@ -1885,9 +1885,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.EventDocXmlBeforeDeleteXsdString? EventDocXmlBeforeDeleteXsdString
+        public EventDocXmlBeforeDeleteXsdString? EventDocXmlBeforeDeleteXsdString
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocXmlBeforeDeleteXsdString>();
+            get => GetElement<EventDocXmlBeforeDeleteXsdString>();
             set => SetElement(value);
         }
 
@@ -1898,9 +1898,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.EventDocContentControlAfterInsertXsdString? EventDocContentControlAfterInsertXsdString
+        public EventDocContentControlAfterInsertXsdString? EventDocContentControlAfterInsertXsdString
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocContentControlAfterInsertXsdString>();
+            get => GetElement<EventDocContentControlAfterInsertXsdString>();
             set => SetElement(value);
         }
 
@@ -1911,9 +1911,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.EventDocContentControlBeforeDeleteXsdString? EventDocContentControlBeforeDeleteXsdString
+        public EventDocContentControlBeforeDeleteXsdString? EventDocContentControlBeforeDeleteXsdString
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocContentControlBeforeDeleteXsdString>();
+            get => GetElement<EventDocContentControlBeforeDeleteXsdString>();
             set => SetElement(value);
         }
 
@@ -1924,9 +1924,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.EventDocContentControlOnExistXsdString? EventDocContentControlOnExistXsdString
+        public EventDocContentControlOnExistXsdString? EventDocContentControlOnExistXsdString
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocContentControlOnExistXsdString>();
+            get => GetElement<EventDocContentControlOnExistXsdString>();
             set => SetElement(value);
         }
 
@@ -1937,9 +1937,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.EventDocContentControlOnEnterXsdString? EventDocContentControlOnEnterXsdString
+        public EventDocContentControlOnEnterXsdString? EventDocContentControlOnEnterXsdString
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocContentControlOnEnterXsdString>();
+            get => GetElement<EventDocContentControlOnEnterXsdString>();
             set => SetElement(value);
         }
 
@@ -1950,9 +1950,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.EventDocStoreUpdateXsdString? EventDocStoreUpdateXsdString
+        public EventDocStoreUpdateXsdString? EventDocStoreUpdateXsdString
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocStoreUpdateXsdString>();
+            get => GetElement<EventDocStoreUpdateXsdString>();
             set => SetElement(value);
         }
 
@@ -1963,9 +1963,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.EventDocContentControlUpdateXsdString? EventDocContentControlUpdateXsdString
+        public EventDocContentControlUpdateXsdString? EventDocContentControlUpdateXsdString
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocContentControlUpdateXsdString>();
+            get => GetElement<EventDocContentControlUpdateXsdString>();
             set => SetElement(value);
         }
 
@@ -1976,9 +1976,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.EventDocBuildingBlockAfterInsertXsdString? EventDocBuildingBlockAfterInsertXsdString
+        public EventDocBuildingBlockAfterInsertXsdString? EventDocBuildingBlockAfterInsertXsdString
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocBuildingBlockAfterInsertXsdString>();
+            get => GetElement<EventDocBuildingBlockAfterInsertXsdString>();
             set => SetElement(value);
         }
 
@@ -2566,9 +2566,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.RecordIncluded? RecordIncluded
+        public RecordIncluded? RecordIncluded
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.RecordIncluded>();
+            get => GetElement<RecordIncluded>();
             set => SetElement(value);
         }
 
@@ -2579,9 +2579,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.RecordHashCode? RecordHashCode
+        public RecordHashCode? RecordHashCode
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.RecordHashCode>();
+            get => GetElement<RecordHashCode>();
             set => SetElement(value);
         }
 

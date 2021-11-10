@@ -136,9 +136,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker? FromMarker
+        public FromMarker? FromMarker
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker>();
+            get => GetElement<FromMarker>();
             set => SetElement(value);
         }
 
@@ -149,9 +149,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.ToMarker? ToMarker
+        public ToMarker? ToMarker
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ToMarker>();
+            get => GetElement<ToMarker>();
             set => SetElement(value);
         }
 
@@ -257,9 +257,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker? FromMarker
+        public FromMarker? FromMarker
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker>();
+            get => GetElement<FromMarker>();
             set => SetElement(value);
         }
 
@@ -270,9 +270,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent? Extent
+        public Extent? Extent
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent>();
+            get => GetElement<Extent>();
             set => SetElement(value);
         }
 
@@ -378,9 +378,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.Position? Position
+        public Position? Position
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.Position>();
+            get => GetElement<Position>();
             set => SetElement(value);
         }
 
@@ -391,9 +391,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent? Extent
+        public Extent? Extent
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent>();
+            get => GetElement<Extent>();
             set => SetElement(value);
         }
 
@@ -545,9 +545,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeProperties? NonVisualShapeProperties
+        public NonVisualShapeProperties? NonVisualShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeProperties>();
+            get => GetElement<NonVisualShapeProperties>();
             set => SetElement(value);
         }
 
@@ -558,9 +558,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties? ShapeProperties
+        public ShapeProperties? ShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties>();
+            get => GetElement<ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -571,9 +571,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle? ShapeStyle
+        public ShapeStyle? ShapeStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle>();
+            get => GetElement<ShapeStyle>();
             set => SetElement(value);
         }
 
@@ -584,9 +584,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody? TextBody
+        public TextBody? TextBody
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody>();
+            get => GetElement<TextBody>();
             set => SetElement(value);
         }
 
@@ -683,9 +683,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeProperties? NonVisualGroupShapeProperties
+        public NonVisualGroupShapeProperties? NonVisualGroupShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeProperties>();
+            get => GetElement<NonVisualGroupShapeProperties>();
             set => SetElement(value);
         }
 
@@ -696,9 +696,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShapeProperties? GroupShapeProperties
+        public GroupShapeProperties? GroupShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShapeProperties>();
+            get => GetElement<GroupShapeProperties>();
             set => SetElement(value);
         }
 
@@ -813,9 +813,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties? NonVisualGraphicFrameProperties
+        public NonVisualGraphicFrameProperties? NonVisualGraphicFrameProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties>();
+            get => GetElement<NonVisualGraphicFrameProperties>();
             set => SetElement(value);
         }
 
@@ -826,9 +826,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.Transform? Transform
+        public Transform? Transform
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.Transform>();
+            get => GetElement<Transform>();
             set => SetElement(value);
         }
 
@@ -956,9 +956,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties? NonVisualConnectionShapeProperties
+        public NonVisualConnectionShapeProperties? NonVisualConnectionShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties>();
+            get => GetElement<NonVisualConnectionShapeProperties>();
             set => SetElement(value);
         }
 
@@ -969,9 +969,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties? ShapeProperties
+        public ShapeProperties? ShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties>();
+            get => GetElement<ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -982,9 +982,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle? ShapeStyle
+        public ShapeStyle? ShapeStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle>();
+            get => GetElement<ShapeStyle>();
             set => SetElement(value);
         }
 
@@ -1101,9 +1101,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureProperties? NonVisualPictureProperties
+        public NonVisualPictureProperties? NonVisualPictureProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureProperties>();
+            get => GetElement<NonVisualPictureProperties>();
             set => SetElement(value);
         }
 
@@ -1114,9 +1114,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.BlipFill? BlipFill
+        public BlipFill? BlipFill
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.BlipFill>();
+            get => GetElement<BlipFill>();
             set => SetElement(value);
         }
 
@@ -1127,9 +1127,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties? ShapeProperties
+        public ShapeProperties? ShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties>();
+            get => GetElement<ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -1140,9 +1140,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle? ShapeStyle
+        public ShapeStyle? ShapeStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle>();
+            get => GetElement<ShapeStyle>();
             set => SetElement(value);
         }
 
@@ -1491,9 +1491,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties? NonVisualDrawingProperties
+        public NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
+            get => GetElement<NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -1504,9 +1504,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeDrawingProperties? NonVisualShapeDrawingProperties
+        public NonVisualShapeDrawingProperties? NonVisualShapeDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeDrawingProperties>();
+            get => GetElement<NonVisualShapeDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -1955,9 +1955,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties? NonVisualDrawingProperties
+        public NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
+            get => GetElement<NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -1968,9 +1968,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectorShapeDrawingProperties? NonVisualConnectorShapeDrawingProperties
+        public NonVisualConnectorShapeDrawingProperties? NonVisualConnectorShapeDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectorShapeDrawingProperties>();
+            get => GetElement<NonVisualConnectorShapeDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -2046,9 +2046,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties? NonVisualDrawingProperties
+        public NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
+            get => GetElement<NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -2059,9 +2059,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureDrawingProperties? NonVisualPictureDrawingProperties
+        public NonVisualPictureDrawingProperties? NonVisualPictureDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureDrawingProperties>();
+            get => GetElement<NonVisualPictureDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -2258,9 +2258,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties? NonVisualDrawingProperties
+        public NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
+            get => GetElement<NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -2271,9 +2271,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameDrawingProperties? NonVisualGraphicFrameDrawingProperties
+        public NonVisualGraphicFrameDrawingProperties? NonVisualGraphicFrameDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameDrawingProperties>();
+            get => GetElement<NonVisualGraphicFrameDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -2785,9 +2785,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId? ColumnId
+        public ColumnId? ColumnId
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId>();
+            get => GetElement<ColumnId>();
             set => SetElement(value);
         }
 
@@ -2798,9 +2798,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset? ColumnOffset
+        public ColumnOffset? ColumnOffset
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset>();
+            get => GetElement<ColumnOffset>();
             set => SetElement(value);
         }
 
@@ -2811,9 +2811,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId? RowId
+        public RowId? RowId
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId>();
+            get => GetElement<RowId>();
             set => SetElement(value);
         }
 
@@ -2824,9 +2824,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset? RowOffset
+        public RowOffset? RowOffset
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset>();
+            get => GetElement<RowOffset>();
             set => SetElement(value);
         }
     }
@@ -3824,9 +3824,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties? NonVisualDrawingProperties
+        public NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
+            get => GetElement<NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -3837,9 +3837,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeDrawingProperties? NonVisualGroupShapeDrawingProperties
+        public NonVisualGroupShapeDrawingProperties? NonVisualGroupShapeDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeDrawingProperties>();
+            get => GetElement<NonVisualGroupShapeDrawingProperties>();
             set => SetElement(value);
         }
 

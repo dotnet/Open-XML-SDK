@@ -85,9 +85,9 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         /// <remark>
         /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
         /// </remark>
-        public DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen? ShowOnOpen
+        public ShowOnOpen? ShowOnOpen
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen>();
+            get => GetElement<ShowOnOpen>();
             set => SetElement(value);
         }
 
@@ -98,9 +98,9 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         /// <remark>
         /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
         /// </remark>
-        public DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace? DefaultPropertyEditorNamespace
+        public DefaultPropertyEditorNamespace? DefaultPropertyEditorNamespace
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace>();
+            get => GetElement<DefaultPropertyEditorNamespace>();
             set => SetElement(value);
         }
 
@@ -339,9 +339,9 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         /// <remark>
         /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
         /// </remark>
-        public DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.PropertyEditorNamespace? PropertyEditorNamespace
+        public PropertyEditorNamespace? PropertyEditorNamespace
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.PropertyEditorNamespace>();
+            get => GetElement<PropertyEditorNamespace>();
             set => SetElement(value);
         }
 
@@ -352,9 +352,9 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         /// <remark>
         /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
         /// </remark>
-        public DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.XsnFileLocation? XsnFileLocation
+        public XsnFileLocation? XsnFileLocation
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.XsnFileLocation>();
+            get => GetElement<XsnFileLocation>();
             set => SetElement(value);
         }
 

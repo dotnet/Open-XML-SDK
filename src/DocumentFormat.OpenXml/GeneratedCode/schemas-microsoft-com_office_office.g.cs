@@ -359,9 +359,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.Skew? Skew
+        public Skew? Skew
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.Skew>();
+            get => GetElement<Skew>();
             set => SetElement(value);
         }
 
@@ -372,9 +372,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.Extrusion? Extrusion
+        public Extrusion? Extrusion
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
+            get => GetElement<Extrusion>();
             set => SetElement(value);
         }
 
@@ -385,9 +385,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.Callout? Callout
+        public Callout? Callout
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.Callout>();
+            get => GetElement<Callout>();
             set => SetElement(value);
         }
 
@@ -398,9 +398,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.Lock? Lock
+        public Lock? Lock
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.Lock>();
+            get => GetElement<Lock>();
             set => SetElement(value);
         }
 
@@ -411,9 +411,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.ColorMostRecentlyUsed? ColorMostRecentlyUsed
+        public ColorMostRecentlyUsed? ColorMostRecentlyUsed
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.ColorMostRecentlyUsed>();
+            get => GetElement<ColorMostRecentlyUsed>();
             set => SetElement(value);
         }
 
@@ -424,9 +424,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.ColorMenu? ColorMenu
+        public ColorMenu? ColorMenu
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.ColorMenu>();
+            get => GetElement<ColorMenu>();
             set => SetElement(value);
         }
 
@@ -526,9 +526,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.ShapeIdMap? ShapeIdMap
+        public ShapeIdMap? ShapeIdMap
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.ShapeIdMap>();
+            get => GetElement<ShapeIdMap>();
             set => SetElement(value);
         }
 
@@ -539,9 +539,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.RegroupTable? RegroupTable
+        public RegroupTable? RegroupTable
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.RegroupTable>();
+            get => GetElement<RegroupTable>();
             set => SetElement(value);
         }
 
@@ -552,9 +552,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.Rules? Rules
+        public Rules? Rules
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.Rules>();
+            get => GetElement<Rules>();
             set => SetElement(value);
         }
 
@@ -1131,9 +1131,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.RelationTable? RelationTable
+        public RelationTable? RelationTable
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.RelationTable>();
+            get => GetElement<RelationTable>();
             set => SetElement(value);
         }
 
@@ -2537,9 +2537,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.LinkType? LinkType
+        public LinkType? LinkType
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.LinkType>();
+            get => GetElement<LinkType>();
             set => SetElement(value);
         }
 
@@ -2550,9 +2550,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.LockedField? LockedField
+        public LockedField? LockedField
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.LockedField>();
+            get => GetElement<LockedField>();
             set => SetElement(value);
         }
 
@@ -2563,9 +2563,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.FieldCodes? FieldCodes
+        public FieldCodes? FieldCodes
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.FieldCodes>();
+            get => GetElement<FieldCodes>();
             set => SetElement(value);
         }
 

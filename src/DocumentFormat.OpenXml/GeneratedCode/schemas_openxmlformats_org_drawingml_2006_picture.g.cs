@@ -94,9 +94,9 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// <remark>
         /// xmlns:pic = http://schemas.openxmlformats.org/drawingml/2006/picture
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureProperties? NonVisualPictureProperties
+        public NonVisualPictureProperties? NonVisualPictureProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureProperties>();
+            get => GetElement<NonVisualPictureProperties>();
             set => SetElement(value);
         }
 
@@ -107,9 +107,9 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// <remark>
         /// xmlns:pic = http://schemas.openxmlformats.org/drawingml/2006/picture
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Pictures.BlipFill? BlipFill
+        public BlipFill? BlipFill
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Pictures.BlipFill>();
+            get => GetElement<BlipFill>();
             set => SetElement(value);
         }
 
@@ -120,9 +120,9 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// <remark>
         /// xmlns:pic = http://schemas.openxmlformats.org/drawingml/2006/picture
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Pictures.ShapeProperties? ShapeProperties
+        public ShapeProperties? ShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Pictures.ShapeProperties>();
+            get => GetElement<ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -533,9 +533,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:pic = http://schemas.openxmlformats.org/drawingml/2006/picture
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Pictures.NonVisualDrawingProperties? NonVisualDrawingProperties
+        public NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Pictures.NonVisualDrawingProperties>();
+            get => GetElement<NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -546,9 +546,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:pic = http://schemas.openxmlformats.org/drawingml/2006/picture
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureDrawingProperties? NonVisualPictureDrawingProperties
+        public NonVisualPictureDrawingProperties? NonVisualPictureDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureDrawingProperties>();
+            get => GetElement<NonVisualPictureDrawingProperties>();
             set => SetElement(value);
         }
 

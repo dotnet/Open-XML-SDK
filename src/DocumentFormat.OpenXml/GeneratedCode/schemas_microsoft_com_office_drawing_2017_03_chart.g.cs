@@ -81,9 +81,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
         /// <remark>
         /// xmlns:c16r3 = http://schemas.microsoft.com/office/drawing/2017/03/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse? BooleanFalse
+        public BooleanFalse? BooleanFalse
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse>();
+            get => GetElement<BooleanFalse>();
             set => SetElement(value);
         }
 
