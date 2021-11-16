@@ -102,9 +102,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:tsle = http://schemas.microsoft.com/office/drawing/2012/timeslicer
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 

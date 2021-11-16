@@ -90,9 +90,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -103,9 +103,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public NonVisualInkContentPartProperties? NonVisualInkContentPartProperties
+        public DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualInkContentPartProperties? NonVisualInkContentPartProperties
         {
-            get => GetElement<NonVisualInkContentPartProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualInkContentPartProperties>();
             set => SetElement(value);
         }
 
@@ -116,9 +116,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Office2010.PowerPoint.ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
         {
-            get => GetElement<ApplicationNonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ApplicationNonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -475,9 +475,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public MediaTrim? MediaTrim
+        public DocumentFormat.OpenXml.Office2010.PowerPoint.MediaTrim? MediaTrim
         {
-            get => GetElement<MediaTrim>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaTrim>();
             set => SetElement(value);
         }
 
@@ -488,9 +488,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public MediaFade? MediaFade
+        public DocumentFormat.OpenXml.Office2010.PowerPoint.MediaFade? MediaFade
         {
-            get => GetElement<MediaFade>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaFade>();
             set => SetElement(value);
         }
 
@@ -501,9 +501,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public MediaBookmarkList? MediaBookmarkList
+        public DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList? MediaBookmarkList
         {
-            get => GetElement<MediaBookmarkList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList>();
             set => SetElement(value);
         }
 
@@ -514,9 +514,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -2273,9 +2273,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public TriggerEventRecord? TriggerEventRecord
+        public DocumentFormat.OpenXml.Office2010.PowerPoint.TriggerEventRecord? TriggerEventRecord
         {
-            get => GetElement<TriggerEventRecord>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.TriggerEventRecord>();
             set => SetElement(value);
         }
 
@@ -2286,9 +2286,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public PlayEventRecord? PlayEventRecord
+        public DocumentFormat.OpenXml.Office2010.PowerPoint.PlayEventRecord? PlayEventRecord
         {
-            get => GetElement<PlayEventRecord>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.PlayEventRecord>();
             set => SetElement(value);
         }
 
@@ -2299,9 +2299,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public StopEventRecord? StopEventRecord
+        public DocumentFormat.OpenXml.Office2010.PowerPoint.StopEventRecord? StopEventRecord
         {
-            get => GetElement<StopEventRecord>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.StopEventRecord>();
             set => SetElement(value);
         }
 
@@ -2312,9 +2312,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public PauseEventRecord? PauseEventRecord
+        public DocumentFormat.OpenXml.Office2010.PowerPoint.PauseEventRecord? PauseEventRecord
         {
-            get => GetElement<PauseEventRecord>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.PauseEventRecord>();
             set => SetElement(value);
         }
 
@@ -2325,9 +2325,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public ResumeEventRecord? ResumeEventRecord
+        public DocumentFormat.OpenXml.Office2010.PowerPoint.ResumeEventRecord? ResumeEventRecord
         {
-            get => GetElement<ResumeEventRecord>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ResumeEventRecord>();
             set => SetElement(value);
         }
 
@@ -2338,9 +2338,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public SeekEventRecord? SeekEventRecord
+        public DocumentFormat.OpenXml.Office2010.PowerPoint.SeekEventRecord? SeekEventRecord
         {
-            get => GetElement<SeekEventRecord>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.SeekEventRecord>();
             set => SetElement(value);
         }
 
@@ -2351,9 +2351,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public NullEventRecord? NullEventRecord
+        public DocumentFormat.OpenXml.Office2010.PowerPoint.NullEventRecord? NullEventRecord
         {
-            get => GetElement<NullEventRecord>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.NullEventRecord>();
             set => SetElement(value);
         }
 
@@ -3256,9 +3256,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -3486,9 +3486,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public SectionSlideIdList? SectionSlideIdList
+        public DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList? SectionSlideIdList
         {
-            get => GetElement<SectionSlideIdList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList>();
             set => SetElement(value);
         }
 
@@ -3499,9 +3499,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList>();
             set => SetElement(value);
         }
 

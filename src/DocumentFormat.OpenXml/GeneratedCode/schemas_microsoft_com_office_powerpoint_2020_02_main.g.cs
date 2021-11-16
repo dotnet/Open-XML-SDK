@@ -166,9 +166,9 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
         /// <remark>
         /// xmlns:p202 = http://schemas.microsoft.com/office/powerpoint/2020/02/main
         /// </remark>
-        public DesignerTagList? DesignerTagList
+        public DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList? DesignerTagList
         {
-            get => GetElement<DesignerTagList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList>();
             set => SetElement(value);
         }
 
@@ -179,9 +179,9 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
         /// <remark>
         /// xmlns:p202 = http://schemas.microsoft.com/office/powerpoint/2020/02/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.ExtensionList>();
             set => SetElement(value);
         }
 

@@ -97,9 +97,9 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public StartTime? StartTime
+        public DocumentFormat.OpenXml.Drawing.StartTime? StartTime
         {
-            get => GetElement<StartTime>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.StartTime>();
             set => SetElement(value);
         }
 
@@ -110,9 +110,9 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public EndTime? EndTime
+        public DocumentFormat.OpenXml.Drawing.EndTime? EndTime
         {
-            get => GetElement<EndTime>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.EndTime>();
             set => SetElement(value);
         }
 
@@ -123,9 +123,9 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -354,9 +354,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -453,9 +453,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -552,9 +552,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -2892,9 +2892,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public BevelTop? BevelTop
+        public DocumentFormat.OpenXml.Drawing.BevelTop? BevelTop
         {
-            get => GetElement<BevelTop>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.BevelTop>();
             set => SetElement(value);
         }
 
@@ -2905,9 +2905,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public BevelBottom? BevelBottom
+        public DocumentFormat.OpenXml.Drawing.BevelBottom? BevelBottom
         {
-            get => GetElement<BevelBottom>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.BevelBottom>();
             set => SetElement(value);
         }
 
@@ -2918,9 +2918,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtrusionColor? ExtrusionColor
+        public DocumentFormat.OpenXml.Drawing.ExtrusionColor? ExtrusionColor
         {
-            get => GetElement<ExtrusionColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtrusionColor>();
             set => SetElement(value);
         }
 
@@ -2931,9 +2931,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ContourColor? ContourColor
+        public DocumentFormat.OpenXml.Drawing.ContourColor? ContourColor
         {
-            get => GetElement<ContourColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ContourColor>();
             set => SetElement(value);
         }
 
@@ -2944,9 +2944,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -3153,9 +3153,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public FillToRectangle? FillToRectangle
+        public DocumentFormat.OpenXml.Drawing.FillToRectangle? FillToRectangle
         {
-            get => GetElement<FillToRectangle>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.FillToRectangle>();
             set => SetElement(value);
         }
 
@@ -3370,9 +3370,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public FillRectangle? FillRectangle
+        public DocumentFormat.OpenXml.Drawing.FillRectangle? FillRectangle
         {
-            get => GetElement<FillRectangle>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.FillRectangle>();
             set => SetElement(value);
         }
 
@@ -3493,9 +3493,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RgbColorModelPercentage? RgbColorModelPercentage
+        public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
-            get => GetElement<RgbColorModelPercentage>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
             set => SetElement(value);
         }
 
@@ -3506,9 +3506,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RgbColorModelHex? RgbColorModelHex
+        public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<RgbColorModelHex>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
             set => SetElement(value);
         }
 
@@ -3519,9 +3519,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public HslColor? HslColor
+        public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
-            get => GetElement<HslColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
             set => SetElement(value);
         }
 
@@ -3532,9 +3532,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SystemColor? SystemColor
+        public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
-            get => GetElement<SystemColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
             set => SetElement(value);
         }
 
@@ -3545,9 +3545,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SchemeColor? SchemeColor
+        public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
-            get => GetElement<SchemeColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
             set => SetElement(value);
         }
 
@@ -3558,9 +3558,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public PresetColor? PresetColor
+        public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
-            get => GetElement<PresetColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
             set => SetElement(value);
         }
 
@@ -3686,9 +3686,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public GradientStopList? GradientStopList
+        public DocumentFormat.OpenXml.Drawing.GradientStopList? GradientStopList
         {
-            get => GetElement<GradientStopList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.GradientStopList>();
             set => SetElement(value);
         }
 
@@ -3811,9 +3811,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Blip? Blip
+        public DocumentFormat.OpenXml.Drawing.Blip? Blip
         {
-            get => GetElement<Blip>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Blip>();
             set => SetElement(value);
         }
 
@@ -3824,9 +3824,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SourceRectangle? SourceRectangle
+        public DocumentFormat.OpenXml.Drawing.SourceRectangle? SourceRectangle
         {
-            get => GetElement<SourceRectangle>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SourceRectangle>();
             set => SetElement(value);
         }
 
@@ -3923,9 +3923,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ForegroundColor? ForegroundColor
+        public DocumentFormat.OpenXml.Drawing.ForegroundColor? ForegroundColor
         {
-            get => GetElement<ForegroundColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ForegroundColor>();
             set => SetElement(value);
         }
 
@@ -3936,9 +3936,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public BackgroundColor? BackgroundColor
+        public DocumentFormat.OpenXml.Drawing.BackgroundColor? BackgroundColor
         {
-            get => GetElement<BackgroundColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.BackgroundColor>();
             set => SetElement(value);
         }
 
@@ -4604,9 +4604,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RgbColorModelPercentage? RgbColorModelPercentage
+        public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
-            get => GetElement<RgbColorModelPercentage>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
             set => SetElement(value);
         }
 
@@ -4617,9 +4617,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RgbColorModelHex? RgbColorModelHex
+        public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<RgbColorModelHex>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
             set => SetElement(value);
         }
 
@@ -4630,9 +4630,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public HslColor? HslColor
+        public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
-            get => GetElement<HslColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
             set => SetElement(value);
         }
 
@@ -4643,9 +4643,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SystemColor? SystemColor
+        public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
-            get => GetElement<SystemColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
             set => SetElement(value);
         }
 
@@ -4656,9 +4656,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SchemeColor? SchemeColor
+        public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
-            get => GetElement<SchemeColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
             set => SetElement(value);
         }
 
@@ -4669,9 +4669,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public PresetColor? PresetColor
+        public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
-            get => GetElement<PresetColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
             set => SetElement(value);
         }
 
@@ -4744,9 +4744,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public EffectContainer? EffectContainer
+        public DocumentFormat.OpenXml.Drawing.EffectContainer? EffectContainer
         {
-            get => GetElement<EffectContainer>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.EffectContainer>();
             set => SetElement(value);
         }
 
@@ -5035,9 +5035,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public EffectContainer? EffectContainer
+        public DocumentFormat.OpenXml.Drawing.EffectContainer? EffectContainer
         {
-            get => GetElement<EffectContainer>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.EffectContainer>();
             set => SetElement(value);
         }
 
@@ -5196,9 +5196,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ColorFrom? ColorFrom
+        public DocumentFormat.OpenXml.Drawing.ColorFrom? ColorFrom
         {
-            get => GetElement<ColorFrom>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ColorFrom>();
             set => SetElement(value);
         }
 
@@ -5209,9 +5209,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ColorTo? ColorTo
+        public DocumentFormat.OpenXml.Drawing.ColorTo? ColorTo
         {
-            get => GetElement<ColorTo>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ColorTo>();
             set => SetElement(value);
         }
 
@@ -5305,9 +5305,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RgbColorModelPercentage? RgbColorModelPercentage
+        public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
-            get => GetElement<RgbColorModelPercentage>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
             set => SetElement(value);
         }
 
@@ -5318,9 +5318,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RgbColorModelHex? RgbColorModelHex
+        public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<RgbColorModelHex>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
             set => SetElement(value);
         }
 
@@ -5331,9 +5331,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public HslColor? HslColor
+        public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
-            get => GetElement<HslColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
             set => SetElement(value);
         }
 
@@ -5344,9 +5344,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SystemColor? SystemColor
+        public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
-            get => GetElement<SystemColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
             set => SetElement(value);
         }
 
@@ -5357,9 +5357,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SchemeColor? SchemeColor
+        public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
-            get => GetElement<SchemeColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
             set => SetElement(value);
         }
 
@@ -5370,9 +5370,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public PresetColor? PresetColor
+        public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
-            get => GetElement<PresetColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
             set => SetElement(value);
         }
 
@@ -5549,9 +5549,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public NoFill? NoFill
+        public DocumentFormat.OpenXml.Drawing.NoFill? NoFill
         {
-            get => GetElement<NoFill>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NoFill>();
             set => SetElement(value);
         }
 
@@ -5562,9 +5562,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SolidFill? SolidFill
+        public DocumentFormat.OpenXml.Drawing.SolidFill? SolidFill
         {
-            get => GetElement<SolidFill>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SolidFill>();
             set => SetElement(value);
         }
 
@@ -5575,9 +5575,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public GradientFill? GradientFill
+        public DocumentFormat.OpenXml.Drawing.GradientFill? GradientFill
         {
-            get => GetElement<GradientFill>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.GradientFill>();
             set => SetElement(value);
         }
 
@@ -5588,9 +5588,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public BlipFill? BlipFill
+        public DocumentFormat.OpenXml.Drawing.BlipFill? BlipFill
         {
-            get => GetElement<BlipFill>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.BlipFill>();
             set => SetElement(value);
         }
 
@@ -5601,9 +5601,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public PatternFill? PatternFill
+        public DocumentFormat.OpenXml.Drawing.PatternFill? PatternFill
         {
-            get => GetElement<PatternFill>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PatternFill>();
             set => SetElement(value);
         }
 
@@ -5614,9 +5614,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public GroupFill? GroupFill
+        public DocumentFormat.OpenXml.Drawing.GroupFill? GroupFill
         {
-            get => GetElement<GroupFill>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.GroupFill>();
             set => SetElement(value);
         }
 
@@ -5732,9 +5732,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public NoFill? NoFill
+        public DocumentFormat.OpenXml.Drawing.NoFill? NoFill
         {
-            get => GetElement<NoFill>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NoFill>();
             set => SetElement(value);
         }
 
@@ -5745,9 +5745,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SolidFill? SolidFill
+        public DocumentFormat.OpenXml.Drawing.SolidFill? SolidFill
         {
-            get => GetElement<SolidFill>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SolidFill>();
             set => SetElement(value);
         }
 
@@ -5758,9 +5758,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public GradientFill? GradientFill
+        public DocumentFormat.OpenXml.Drawing.GradientFill? GradientFill
         {
-            get => GetElement<GradientFill>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.GradientFill>();
             set => SetElement(value);
         }
 
@@ -5771,9 +5771,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public BlipFill? BlipFill
+        public DocumentFormat.OpenXml.Drawing.BlipFill? BlipFill
         {
-            get => GetElement<BlipFill>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.BlipFill>();
             set => SetElement(value);
         }
 
@@ -5784,9 +5784,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public PatternFill? PatternFill
+        public DocumentFormat.OpenXml.Drawing.PatternFill? PatternFill
         {
-            get => GetElement<PatternFill>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PatternFill>();
             set => SetElement(value);
         }
 
@@ -5797,9 +5797,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public GroupFill? GroupFill
+        public DocumentFormat.OpenXml.Drawing.GroupFill? GroupFill
         {
-            get => GetElement<GroupFill>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.GroupFill>();
             set => SetElement(value);
         }
 
@@ -5914,9 +5914,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RgbColorModelPercentage? RgbColorModelPercentage
+        public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
-            get => GetElement<RgbColorModelPercentage>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
             set => SetElement(value);
         }
 
@@ -5927,9 +5927,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RgbColorModelHex? RgbColorModelHex
+        public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<RgbColorModelHex>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
             set => SetElement(value);
         }
 
@@ -5940,9 +5940,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public HslColor? HslColor
+        public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
-            get => GetElement<HslColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
             set => SetElement(value);
         }
 
@@ -5953,9 +5953,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SystemColor? SystemColor
+        public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
-            get => GetElement<SystemColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
             set => SetElement(value);
         }
 
@@ -5966,9 +5966,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SchemeColor? SchemeColor
+        public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
-            get => GetElement<SchemeColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
             set => SetElement(value);
         }
 
@@ -5979,9 +5979,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public PresetColor? PresetColor
+        public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
-            get => GetElement<PresetColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
             set => SetElement(value);
         }
 
@@ -6251,9 +6251,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInc
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RgbColorModelPercentage? RgbColorModelPercentage
+        public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
-            get => GetElement<RgbColorModelPercentage>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
             set => SetElement(value);
         }
 
@@ -6264,9 +6264,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInc
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RgbColorModelHex? RgbColorModelHex
+        public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<RgbColorModelHex>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
             set => SetElement(value);
         }
 
@@ -6277,9 +6277,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInc
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public HslColor? HslColor
+        public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
-            get => GetElement<HslColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
             set => SetElement(value);
         }
 
@@ -6290,9 +6290,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInc
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SystemColor? SystemColor
+        public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
-            get => GetElement<SystemColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
             set => SetElement(value);
         }
 
@@ -6303,9 +6303,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInc
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SchemeColor? SchemeColor
+        public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
-            get => GetElement<SchemeColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
             set => SetElement(value);
         }
 
@@ -6316,9 +6316,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInc
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public PresetColor? PresetColor
+        public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
-            get => GetElement<PresetColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
             set => SetElement(value);
         }
 
@@ -6652,9 +6652,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RgbColorModelPercentage? RgbColorModelPercentage
+        public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
-            get => GetElement<RgbColorModelPercentage>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
             set => SetElement(value);
         }
 
@@ -6665,9 +6665,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RgbColorModelHex? RgbColorModelHex
+        public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<RgbColorModelHex>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
             set => SetElement(value);
         }
 
@@ -6678,9 +6678,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public HslColor? HslColor
+        public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
-            get => GetElement<HslColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
             set => SetElement(value);
         }
 
@@ -6691,9 +6691,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SystemColor? SystemColor
+        public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
-            get => GetElement<SystemColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
             set => SetElement(value);
         }
 
@@ -6704,9 +6704,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SchemeColor? SchemeColor
+        public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
-            get => GetElement<SchemeColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
             set => SetElement(value);
         }
 
@@ -6717,9 +6717,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public PresetColor? PresetColor
+        public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
-            get => GetElement<PresetColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
             set => SetElement(value);
         }
 
@@ -6875,9 +6875,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInc
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RgbColorModelPercentage? RgbColorModelPercentage
+        public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
-            get => GetElement<RgbColorModelPercentage>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
             set => SetElement(value);
         }
 
@@ -6888,9 +6888,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInc
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RgbColorModelHex? RgbColorModelHex
+        public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<RgbColorModelHex>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
             set => SetElement(value);
         }
 
@@ -6901,9 +6901,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInc
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public HslColor? HslColor
+        public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
-            get => GetElement<HslColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
             set => SetElement(value);
         }
 
@@ -6914,9 +6914,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInc
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SystemColor? SystemColor
+        public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
-            get => GetElement<SystemColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
             set => SetElement(value);
         }
 
@@ -6927,9 +6927,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInc
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SchemeColor? SchemeColor
+        public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
-            get => GetElement<SchemeColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
             set => SetElement(value);
         }
 
@@ -6940,9 +6940,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInc
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public PresetColor? PresetColor
+        public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
-            get => GetElement<PresetColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
             set => SetElement(value);
         }
 
@@ -7656,9 +7656,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Blur? Blur
+        public DocumentFormat.OpenXml.Drawing.Blur? Blur
         {
-            get => GetElement<Blur>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Blur>();
             set => SetElement(value);
         }
 
@@ -7669,9 +7669,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public FillOverlay? FillOverlay
+        public DocumentFormat.OpenXml.Drawing.FillOverlay? FillOverlay
         {
-            get => GetElement<FillOverlay>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.FillOverlay>();
             set => SetElement(value);
         }
 
@@ -7682,9 +7682,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Glow? Glow
+        public DocumentFormat.OpenXml.Drawing.Glow? Glow
         {
-            get => GetElement<Glow>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Glow>();
             set => SetElement(value);
         }
 
@@ -7695,9 +7695,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public InnerShadow? InnerShadow
+        public DocumentFormat.OpenXml.Drawing.InnerShadow? InnerShadow
         {
-            get => GetElement<InnerShadow>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.InnerShadow>();
             set => SetElement(value);
         }
 
@@ -7708,9 +7708,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public OuterShadow? OuterShadow
+        public DocumentFormat.OpenXml.Drawing.OuterShadow? OuterShadow
         {
-            get => GetElement<OuterShadow>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.OuterShadow>();
             set => SetElement(value);
         }
 
@@ -7721,9 +7721,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public PresetShadow? PresetShadow
+        public DocumentFormat.OpenXml.Drawing.PresetShadow? PresetShadow
         {
-            get => GetElement<PresetShadow>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetShadow>();
             set => SetElement(value);
         }
 
@@ -7734,9 +7734,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Reflection? Reflection
+        public DocumentFormat.OpenXml.Drawing.Reflection? Reflection
         {
-            get => GetElement<Reflection>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Reflection>();
             set => SetElement(value);
         }
 
@@ -7747,9 +7747,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SoftEdge? SoftEdge
+        public DocumentFormat.OpenXml.Drawing.SoftEdge? SoftEdge
         {
-            get => GetElement<SoftEdge>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SoftEdge>();
             set => SetElement(value);
         }
 
@@ -7837,9 +7837,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public AdjustValueList? AdjustValueList
+        public DocumentFormat.OpenXml.Drawing.AdjustValueList? AdjustValueList
         {
-            get => GetElement<AdjustValueList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.AdjustValueList>();
             set => SetElement(value);
         }
 
@@ -7850,9 +7850,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ShapeGuideList? ShapeGuideList
+        public DocumentFormat.OpenXml.Drawing.ShapeGuideList? ShapeGuideList
         {
-            get => GetElement<ShapeGuideList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ShapeGuideList>();
             set => SetElement(value);
         }
 
@@ -7863,9 +7863,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public AdjustHandleList? AdjustHandleList
+        public DocumentFormat.OpenXml.Drawing.AdjustHandleList? AdjustHandleList
         {
-            get => GetElement<AdjustHandleList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.AdjustHandleList>();
             set => SetElement(value);
         }
 
@@ -7876,9 +7876,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ConnectionSiteList? ConnectionSiteList
+        public DocumentFormat.OpenXml.Drawing.ConnectionSiteList? ConnectionSiteList
         {
-            get => GetElement<ConnectionSiteList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ConnectionSiteList>();
             set => SetElement(value);
         }
 
@@ -7889,9 +7889,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Rectangle? Rectangle
+        public DocumentFormat.OpenXml.Drawing.Rectangle? Rectangle
         {
-            get => GetElement<Rectangle>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Rectangle>();
             set => SetElement(value);
         }
 
@@ -7902,9 +7902,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public PathList? PathList
+        public DocumentFormat.OpenXml.Drawing.PathList? PathList
         {
-            get => GetElement<PathList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PathList>();
             set => SetElement(value);
         }
 
@@ -7999,9 +7999,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public AdjustValueList? AdjustValueList
+        public DocumentFormat.OpenXml.Drawing.AdjustValueList? AdjustValueList
         {
-            get => GetElement<AdjustValueList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.AdjustValueList>();
             set => SetElement(value);
         }
 
@@ -8096,9 +8096,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public AdjustValueList? AdjustValueList
+        public DocumentFormat.OpenXml.Drawing.AdjustValueList? AdjustValueList
         {
-            get => GetElement<AdjustValueList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.AdjustValueList>();
             set => SetElement(value);
         }
 
@@ -8404,9 +8404,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public NoFill? NoFill
+        public DocumentFormat.OpenXml.Drawing.NoFill? NoFill
         {
-            get => GetElement<NoFill>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NoFill>();
             set => SetElement(value);
         }
 
@@ -8417,9 +8417,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SolidFill? SolidFill
+        public DocumentFormat.OpenXml.Drawing.SolidFill? SolidFill
         {
-            get => GetElement<SolidFill>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SolidFill>();
             set => SetElement(value);
         }
 
@@ -8430,9 +8430,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public GradientFill? GradientFill
+        public DocumentFormat.OpenXml.Drawing.GradientFill? GradientFill
         {
-            get => GetElement<GradientFill>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.GradientFill>();
             set => SetElement(value);
         }
 
@@ -8443,9 +8443,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public BlipFill? BlipFill
+        public DocumentFormat.OpenXml.Drawing.BlipFill? BlipFill
         {
-            get => GetElement<BlipFill>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.BlipFill>();
             set => SetElement(value);
         }
 
@@ -8456,9 +8456,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public PatternFill? PatternFill
+        public DocumentFormat.OpenXml.Drawing.PatternFill? PatternFill
         {
-            get => GetElement<PatternFill>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PatternFill>();
             set => SetElement(value);
         }
 
@@ -8469,9 +8469,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public GroupFill? GroupFill
+        public DocumentFormat.OpenXml.Drawing.GroupFill? GroupFill
         {
-            get => GetElement<GroupFill>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.GroupFill>();
             set => SetElement(value);
         }
 
@@ -8798,9 +8798,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RgbColorModelPercentage? RgbColorModelPercentage
+        public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
-            get => GetElement<RgbColorModelPercentage>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
             set => SetElement(value);
         }
 
@@ -8811,9 +8811,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RgbColorModelHex? RgbColorModelHex
+        public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<RgbColorModelHex>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
             set => SetElement(value);
         }
 
@@ -8824,9 +8824,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public HslColor? HslColor
+        public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
-            get => GetElement<HslColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
             set => SetElement(value);
         }
 
@@ -8837,9 +8837,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SystemColor? SystemColor
+        public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
-            get => GetElement<SystemColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
             set => SetElement(value);
         }
 
@@ -8850,9 +8850,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SchemeColor? SchemeColor
+        public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
-            get => GetElement<SchemeColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
             set => SetElement(value);
         }
 
@@ -8863,9 +8863,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public PresetColor? PresetColor
+        public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
-            get => GetElement<PresetColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
             set => SetElement(value);
         }
     }
@@ -8944,9 +8944,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public EffectList? EffectList
+        public DocumentFormat.OpenXml.Drawing.EffectList? EffectList
         {
-            get => GetElement<EffectList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.EffectList>();
             set => SetElement(value);
         }
 
@@ -8957,9 +8957,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public EffectDag? EffectDag
+        public DocumentFormat.OpenXml.Drawing.EffectDag? EffectDag
         {
-            get => GetElement<EffectDag>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.EffectDag>();
             set => SetElement(value);
         }
 
@@ -9239,9 +9239,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public LatinFont? LatinFont
+        public DocumentFormat.OpenXml.Drawing.LatinFont? LatinFont
         {
-            get => GetElement<LatinFont>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.LatinFont>();
             set => SetElement(value);
         }
 
@@ -9252,9 +9252,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public EastAsianFont? EastAsianFont
+        public DocumentFormat.OpenXml.Drawing.EastAsianFont? EastAsianFont
         {
-            get => GetElement<EastAsianFont>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.EastAsianFont>();
             set => SetElement(value);
         }
 
@@ -9265,9 +9265,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ComplexScriptFont? ComplexScriptFont
+        public DocumentFormat.OpenXml.Drawing.ComplexScriptFont? ComplexScriptFont
         {
-            get => GetElement<ComplexScriptFont>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ComplexScriptFont>();
             set => SetElement(value);
         }
     }
@@ -9380,9 +9380,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RgbColorModelPercentage? RgbColorModelPercentage
+        public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
-            get => GetElement<RgbColorModelPercentage>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
             set => SetElement(value);
         }
 
@@ -9393,9 +9393,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RgbColorModelHex? RgbColorModelHex
+        public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<RgbColorModelHex>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
             set => SetElement(value);
         }
 
@@ -9406,9 +9406,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public HslColor? HslColor
+        public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
-            get => GetElement<HslColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
             set => SetElement(value);
         }
 
@@ -9419,9 +9419,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SystemColor? SystemColor
+        public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
-            get => GetElement<SystemColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
             set => SetElement(value);
         }
 
@@ -9432,9 +9432,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SchemeColor? SchemeColor
+        public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
-            get => GetElement<SchemeColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
             set => SetElement(value);
         }
 
@@ -9445,9 +9445,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public PresetColor? PresetColor
+        public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
-            get => GetElement<PresetColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
             set => SetElement(value);
         }
 
@@ -10287,9 +10287,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RgbColorModelPercentage? RgbColorModelPercentage
+        public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
-            get => GetElement<RgbColorModelPercentage>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
             set => SetElement(value);
         }
 
@@ -10300,9 +10300,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RgbColorModelHex? RgbColorModelHex
+        public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<RgbColorModelHex>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
             set => SetElement(value);
         }
 
@@ -10313,9 +10313,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public HslColor? HslColor
+        public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
-            get => GetElement<HslColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
             set => SetElement(value);
         }
 
@@ -10326,9 +10326,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SystemColor? SystemColor
+        public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
-            get => GetElement<SystemColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
             set => SetElement(value);
         }
 
@@ -10339,9 +10339,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SchemeColor? SchemeColor
+        public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
-            get => GetElement<SchemeColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
             set => SetElement(value);
         }
 
@@ -10352,9 +10352,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public PresetColor? PresetColor
+        public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
-            get => GetElement<PresetColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
             set => SetElement(value);
         }
     }
@@ -10947,9 +10947,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Blip? Blip
+        public DocumentFormat.OpenXml.Drawing.Blip? Blip
         {
-            get => GetElement<Blip>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Blip>();
             set => SetElement(value);
         }
 
@@ -12056,9 +12056,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public NoFill? NoFill
+        public DocumentFormat.OpenXml.Drawing.NoFill? NoFill
         {
-            get => GetElement<NoFill>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NoFill>();
             set => SetElement(value);
         }
 
@@ -12069,9 +12069,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SolidFill? SolidFill
+        public DocumentFormat.OpenXml.Drawing.SolidFill? SolidFill
         {
-            get => GetElement<SolidFill>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SolidFill>();
             set => SetElement(value);
         }
 
@@ -12082,9 +12082,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public GradientFill? GradientFill
+        public DocumentFormat.OpenXml.Drawing.GradientFill? GradientFill
         {
-            get => GetElement<GradientFill>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.GradientFill>();
             set => SetElement(value);
         }
 
@@ -12095,9 +12095,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public BlipFill? BlipFill
+        public DocumentFormat.OpenXml.Drawing.BlipFill? BlipFill
         {
-            get => GetElement<BlipFill>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.BlipFill>();
             set => SetElement(value);
         }
 
@@ -12108,9 +12108,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public PatternFill? PatternFill
+        public DocumentFormat.OpenXml.Drawing.PatternFill? PatternFill
         {
-            get => GetElement<PatternFill>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PatternFill>();
             set => SetElement(value);
         }
 
@@ -12121,9 +12121,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public GroupFill? GroupFill
+        public DocumentFormat.OpenXml.Drawing.GroupFill? GroupFill
         {
-            get => GetElement<GroupFill>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.GroupFill>();
             set => SetElement(value);
         }
 
@@ -12199,9 +12199,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RunProperties? RunProperties
+        public DocumentFormat.OpenXml.Drawing.RunProperties? RunProperties
         {
-            get => GetElement<RunProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RunProperties>();
             set => SetElement(value);
         }
 
@@ -12212,9 +12212,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Text? Text
+        public DocumentFormat.OpenXml.Drawing.Text? Text
         {
-            get => GetElement<Text>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Text>();
             set => SetElement(value);
         }
 
@@ -12287,9 +12287,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RunProperties? RunProperties
+        public DocumentFormat.OpenXml.Drawing.RunProperties? RunProperties
         {
-            get => GetElement<RunProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RunProperties>();
             set => SetElement(value);
         }
 
@@ -12407,9 +12407,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RunProperties? RunProperties
+        public DocumentFormat.OpenXml.Drawing.RunProperties? RunProperties
         {
-            get => GetElement<RunProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RunProperties>();
             set => SetElement(value);
         }
 
@@ -12420,9 +12420,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ParagraphProperties? ParagraphProperties
+        public DocumentFormat.OpenXml.Drawing.ParagraphProperties? ParagraphProperties
         {
-            get => GetElement<ParagraphProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ParagraphProperties>();
             set => SetElement(value);
         }
 
@@ -12433,9 +12433,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Text? Text
+        public DocumentFormat.OpenXml.Drawing.Text? Text
         {
-            get => GetElement<Text>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Text>();
             set => SetElement(value);
         }
 
@@ -12508,9 +12508,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public GraphicData? GraphicData
+        public DocumentFormat.OpenXml.Drawing.GraphicData? GraphicData
         {
-            get => GetElement<GraphicData>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.GraphicData>();
             set => SetElement(value);
         }
 
@@ -12816,9 +12816,9 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ThemeElements? ThemeElements
+        public DocumentFormat.OpenXml.Drawing.ThemeElements? ThemeElements
         {
-            get => GetElement<ThemeElements>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ThemeElements>();
             set => SetElement(value);
         }
 
@@ -12829,9 +12829,9 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ObjectDefaults? ObjectDefaults
+        public DocumentFormat.OpenXml.Drawing.ObjectDefaults? ObjectDefaults
         {
-            get => GetElement<ObjectDefaults>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ObjectDefaults>();
             set => SetElement(value);
         }
 
@@ -12842,9 +12842,9 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtraColorSchemeList? ExtraColorSchemeList
+        public DocumentFormat.OpenXml.Drawing.ExtraColorSchemeList? ExtraColorSchemeList
         {
-            get => GetElement<ExtraColorSchemeList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtraColorSchemeList>();
             set => SetElement(value);
         }
 
@@ -12855,9 +12855,9 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public CustomColorList? CustomColorList
+        public DocumentFormat.OpenXml.Drawing.CustomColorList? CustomColorList
         {
-            get => GetElement<CustomColorList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.CustomColorList>();
             set => SetElement(value);
         }
 
@@ -12868,9 +12868,9 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public OfficeStyleSheetExtensionList? OfficeStyleSheetExtensionList
+        public DocumentFormat.OpenXml.Drawing.OfficeStyleSheetExtensionList? OfficeStyleSheetExtensionList
         {
-            get => GetElement<OfficeStyleSheetExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.OfficeStyleSheetExtensionList>();
             set => SetElement(value);
         }
 
@@ -12980,9 +12980,9 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ColorScheme? ColorScheme
+        public DocumentFormat.OpenXml.Drawing.ColorScheme? ColorScheme
         {
-            get => GetElement<ColorScheme>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ColorScheme>();
             set => SetElement(value);
         }
 
@@ -12993,9 +12993,9 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public FontScheme? FontScheme
+        public DocumentFormat.OpenXml.Drawing.FontScheme? FontScheme
         {
-            get => GetElement<FontScheme>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.FontScheme>();
             set => SetElement(value);
         }
 
@@ -13006,9 +13006,9 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public FormatScheme? FormatScheme
+        public DocumentFormat.OpenXml.Drawing.FormatScheme? FormatScheme
         {
-            get => GetElement<FormatScheme>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.FormatScheme>();
             set => SetElement(value);
         }
 
@@ -13192,9 +13192,9 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public TableProperties? TableProperties
+        public DocumentFormat.OpenXml.Drawing.TableProperties? TableProperties
         {
-            get => GetElement<TableProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.TableProperties>();
             set => SetElement(value);
         }
 
@@ -13205,9 +13205,9 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public TableGrid? TableGrid
+        public DocumentFormat.OpenXml.Drawing.TableGrid? TableGrid
         {
-            get => GetElement<TableGrid>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.TableGrid>();
             set => SetElement(value);
         }
 
@@ -13614,9 +13614,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RgbColorModelPercentage? RgbColorModelPercentage
+        public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
-            get => GetElement<RgbColorModelPercentage>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
             set => SetElement(value);
         }
 
@@ -13627,9 +13627,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RgbColorModelHex? RgbColorModelHex
+        public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<RgbColorModelHex>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
             set => SetElement(value);
         }
 
@@ -13640,9 +13640,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public HslColor? HslColor
+        public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
-            get => GetElement<HslColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
             set => SetElement(value);
         }
 
@@ -13653,9 +13653,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SystemColor? SystemColor
+        public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
-            get => GetElement<SystemColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
             set => SetElement(value);
         }
 
@@ -13666,9 +13666,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SchemeColor? SchemeColor
+        public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
-            get => GetElement<SchemeColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
             set => SetElement(value);
         }
 
@@ -13679,9 +13679,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public PresetColor? PresetColor
+        public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
-            get => GetElement<PresetColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
             set => SetElement(value);
         }
 
@@ -13831,9 +13831,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Camera? Camera
+        public DocumentFormat.OpenXml.Drawing.Camera? Camera
         {
-            get => GetElement<Camera>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Camera>();
             set => SetElement(value);
         }
 
@@ -13844,9 +13844,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public LightRig? LightRig
+        public DocumentFormat.OpenXml.Drawing.LightRig? LightRig
         {
-            get => GetElement<LightRig>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.LightRig>();
             set => SetElement(value);
         }
 
@@ -13857,9 +13857,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Backdrop? Backdrop
+        public DocumentFormat.OpenXml.Drawing.Backdrop? Backdrop
         {
-            get => GetElement<Backdrop>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Backdrop>();
             set => SetElement(value);
         }
 
@@ -13870,9 +13870,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -14369,9 +14369,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Dark1Color? Dark1Color
+        public DocumentFormat.OpenXml.Drawing.Dark1Color? Dark1Color
         {
-            get => GetElement<Dark1Color>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Dark1Color>();
             set => SetElement(value);
         }
 
@@ -14382,9 +14382,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Light1Color? Light1Color
+        public DocumentFormat.OpenXml.Drawing.Light1Color? Light1Color
         {
-            get => GetElement<Light1Color>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Light1Color>();
             set => SetElement(value);
         }
 
@@ -14395,9 +14395,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Dark2Color? Dark2Color
+        public DocumentFormat.OpenXml.Drawing.Dark2Color? Dark2Color
         {
-            get => GetElement<Dark2Color>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Dark2Color>();
             set => SetElement(value);
         }
 
@@ -14408,9 +14408,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Light2Color? Light2Color
+        public DocumentFormat.OpenXml.Drawing.Light2Color? Light2Color
         {
-            get => GetElement<Light2Color>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Light2Color>();
             set => SetElement(value);
         }
 
@@ -14421,9 +14421,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Accent1Color? Accent1Color
+        public DocumentFormat.OpenXml.Drawing.Accent1Color? Accent1Color
         {
-            get => GetElement<Accent1Color>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Accent1Color>();
             set => SetElement(value);
         }
 
@@ -14434,9 +14434,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Accent2Color? Accent2Color
+        public DocumentFormat.OpenXml.Drawing.Accent2Color? Accent2Color
         {
-            get => GetElement<Accent2Color>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Accent2Color>();
             set => SetElement(value);
         }
 
@@ -14447,9 +14447,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Accent3Color? Accent3Color
+        public DocumentFormat.OpenXml.Drawing.Accent3Color? Accent3Color
         {
-            get => GetElement<Accent3Color>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Accent3Color>();
             set => SetElement(value);
         }
 
@@ -14460,9 +14460,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Accent4Color? Accent4Color
+        public DocumentFormat.OpenXml.Drawing.Accent4Color? Accent4Color
         {
-            get => GetElement<Accent4Color>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Accent4Color>();
             set => SetElement(value);
         }
 
@@ -14473,9 +14473,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Accent5Color? Accent5Color
+        public DocumentFormat.OpenXml.Drawing.Accent5Color? Accent5Color
         {
-            get => GetElement<Accent5Color>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Accent5Color>();
             set => SetElement(value);
         }
 
@@ -14486,9 +14486,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Accent6Color? Accent6Color
+        public DocumentFormat.OpenXml.Drawing.Accent6Color? Accent6Color
         {
-            get => GetElement<Accent6Color>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Accent6Color>();
             set => SetElement(value);
         }
 
@@ -14499,9 +14499,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Hyperlink? Hyperlink
+        public DocumentFormat.OpenXml.Drawing.Hyperlink? Hyperlink
         {
-            get => GetElement<Hyperlink>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Hyperlink>();
             set => SetElement(value);
         }
 
@@ -14512,9 +14512,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public FollowedHyperlinkColor? FollowedHyperlinkColor
+        public DocumentFormat.OpenXml.Drawing.FollowedHyperlinkColor? FollowedHyperlinkColor
         {
-            get => GetElement<FollowedHyperlinkColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.FollowedHyperlinkColor>();
             set => SetElement(value);
         }
 
@@ -14525,9 +14525,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -14627,9 +14627,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public MajorFont? MajorFont
+        public DocumentFormat.OpenXml.Drawing.MajorFont? MajorFont
         {
-            get => GetElement<MajorFont>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.MajorFont>();
             set => SetElement(value);
         }
 
@@ -14640,9 +14640,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public MinorFont? MinorFont
+        public DocumentFormat.OpenXml.Drawing.MinorFont? MinorFont
         {
-            get => GetElement<MinorFont>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.MinorFont>();
             set => SetElement(value);
         }
 
@@ -14653,9 +14653,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -14755,9 +14755,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public FillStyleList? FillStyleList
+        public DocumentFormat.OpenXml.Drawing.FillStyleList? FillStyleList
         {
-            get => GetElement<FillStyleList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.FillStyleList>();
             set => SetElement(value);
         }
 
@@ -14768,9 +14768,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public LineStyleList? LineStyleList
+        public DocumentFormat.OpenXml.Drawing.LineStyleList? LineStyleList
         {
-            get => GetElement<LineStyleList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.LineStyleList>();
             set => SetElement(value);
         }
 
@@ -14781,9 +14781,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public EffectStyleList? EffectStyleList
+        public DocumentFormat.OpenXml.Drawing.EffectStyleList? EffectStyleList
         {
-            get => GetElement<EffectStyleList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.EffectStyleList>();
             set => SetElement(value);
         }
 
@@ -14794,9 +14794,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public BackgroundFillStyleList? BackgroundFillStyleList
+        public DocumentFormat.OpenXml.Drawing.BackgroundFillStyleList? BackgroundFillStyleList
         {
-            get => GetElement<BackgroundFillStyleList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.BackgroundFillStyleList>();
             set => SetElement(value);
         }
 
@@ -15697,9 +15697,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RgbColorModelPercentage? RgbColorModelPercentage
+        public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
-            get => GetElement<RgbColorModelPercentage>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
             set => SetElement(value);
         }
 
@@ -15710,9 +15710,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RgbColorModelHex? RgbColorModelHex
+        public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<RgbColorModelHex>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
             set => SetElement(value);
         }
 
@@ -15723,9 +15723,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public HslColor? HslColor
+        public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
-            get => GetElement<HslColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
             set => SetElement(value);
         }
 
@@ -15736,9 +15736,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SystemColor? SystemColor
+        public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
-            get => GetElement<SystemColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
             set => SetElement(value);
         }
 
@@ -15749,9 +15749,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public PresetColor? PresetColor
+        public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
-            get => GetElement<PresetColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
             set => SetElement(value);
         }
     }
@@ -16358,9 +16358,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -16604,9 +16604,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ConnectorLockingExtensionList? ConnectorLockingExtensionList
+        public DocumentFormat.OpenXml.Drawing.ConnectorLockingExtensionList? ConnectorLockingExtensionList
         {
-            get => GetElement<ConnectorLockingExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ConnectorLockingExtensionList>();
             set => SetElement(value);
         }
 
@@ -16897,9 +16897,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -17865,9 +17865,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public BodyProperties? BodyProperties
+        public DocumentFormat.OpenXml.Drawing.BodyProperties? BodyProperties
         {
-            get => GetElement<BodyProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>();
             set => SetElement(value);
         }
 
@@ -17878,9 +17878,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ListStyle? ListStyle
+        public DocumentFormat.OpenXml.Drawing.ListStyle? ListStyle
         {
-            get => GetElement<ListStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>();
             set => SetElement(value);
         }
 
@@ -18035,9 +18035,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Offset? Offset
+        public DocumentFormat.OpenXml.Drawing.Offset? Offset
         {
-            get => GetElement<Offset>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>();
             set => SetElement(value);
         }
 
@@ -18048,9 +18048,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Extents? Extents
+        public DocumentFormat.OpenXml.Drawing.Extents? Extents
         {
-            get => GetElement<Extents>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>();
             set => SetElement(value);
         }
 
@@ -18221,9 +18221,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public HyperlinkOnClick? HyperlinkOnClick
+        public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick? HyperlinkOnClick
         {
-            get => GetElement<HyperlinkOnClick>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
             set => SetElement(value);
         }
 
@@ -18234,9 +18234,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public HyperlinkOnHover? HyperlinkOnHover
+        public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover? HyperlinkOnHover
         {
-            get => GetElement<HyperlinkOnHover>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
             set => SetElement(value);
         }
 
@@ -18247,9 +18247,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
+        public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
         {
-            get => GetElement<NonVisualDrawingPropertiesExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
             set => SetElement(value);
         }
 
@@ -18343,9 +18343,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ShapeLocks? ShapeLocks
+        public DocumentFormat.OpenXml.Drawing.ShapeLocks? ShapeLocks
         {
-            get => GetElement<ShapeLocks>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ShapeLocks>();
             set => SetElement(value);
         }
 
@@ -18356,9 +18356,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -18434,9 +18434,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -18447,9 +18447,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public NonVisualShapeDrawingProperties? NonVisualShapeDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.NonVisualShapeDrawingProperties? NonVisualShapeDrawingProperties
         {
-            get => GetElement<NonVisualShapeDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualShapeDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -18603,9 +18603,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Transform2D? Transform2D
+        public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
-            get => GetElement<Transform2D>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
             set => SetElement(value);
         }
 
@@ -18690,9 +18690,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public TextBody? TextBody
+        public DocumentFormat.OpenXml.Drawing.TextBody? TextBody
         {
-            get => GetElement<TextBody>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.TextBody>();
             set => SetElement(value);
         }
 
@@ -18774,9 +18774,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public LineReference? LineReference
+        public DocumentFormat.OpenXml.Drawing.LineReference? LineReference
         {
-            get => GetElement<LineReference>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.LineReference>();
             set => SetElement(value);
         }
 
@@ -18787,9 +18787,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public FillReference? FillReference
+        public DocumentFormat.OpenXml.Drawing.FillReference? FillReference
         {
-            get => GetElement<FillReference>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.FillReference>();
             set => SetElement(value);
         }
 
@@ -18800,9 +18800,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public EffectReference? EffectReference
+        public DocumentFormat.OpenXml.Drawing.EffectReference? EffectReference
         {
-            get => GetElement<EffectReference>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>();
             set => SetElement(value);
         }
 
@@ -18813,9 +18813,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public FontReference? FontReference
+        public DocumentFormat.OpenXml.Drawing.FontReference? FontReference
         {
-            get => GetElement<FontReference>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.FontReference>();
             set => SetElement(value);
         }
 
@@ -18897,9 +18897,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ConnectionShapeLocks? ConnectionShapeLocks
+        public DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks? ConnectionShapeLocks
         {
-            get => GetElement<ConnectionShapeLocks>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks>();
             set => SetElement(value);
         }
 
@@ -18910,9 +18910,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public StartConnection? StartConnection
+        public DocumentFormat.OpenXml.Drawing.StartConnection? StartConnection
         {
-            get => GetElement<StartConnection>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.StartConnection>();
             set => SetElement(value);
         }
 
@@ -18923,9 +18923,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public EndConnection? EndConnection
+        public DocumentFormat.OpenXml.Drawing.EndConnection? EndConnection
         {
-            get => GetElement<EndConnection>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.EndConnection>();
             set => SetElement(value);
         }
 
@@ -18936,9 +18936,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -19014,9 +19014,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -19027,9 +19027,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public NonVisualConnectorShapeDrawingProperties? NonVisualConnectorShapeDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.NonVisualConnectorShapeDrawingProperties? NonVisualConnectorShapeDrawingProperties
         {
-            get => GetElement<NonVisualConnectorShapeDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualConnectorShapeDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -19123,9 +19123,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public PictureLocks? PictureLocks
+        public DocumentFormat.OpenXml.Drawing.PictureLocks? PictureLocks
         {
-            get => GetElement<PictureLocks>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PictureLocks>();
             set => SetElement(value);
         }
 
@@ -19136,9 +19136,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public NonVisualPicturePropertiesExtensionList? NonVisualPicturePropertiesExtensionList
+        public DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList? NonVisualPicturePropertiesExtensionList
         {
-            get => GetElement<NonVisualPicturePropertiesExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>();
             set => SetElement(value);
         }
 
@@ -19214,9 +19214,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -19227,9 +19227,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public NonVisualPictureDrawingProperties? NonVisualPictureDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.NonVisualPictureDrawingProperties? NonVisualPictureDrawingProperties
         {
-            get => GetElement<NonVisualPictureDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualPictureDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -19305,9 +19305,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public GraphicFrameLocks? GraphicFrameLocks
+        public DocumentFormat.OpenXml.Drawing.GraphicFrameLocks? GraphicFrameLocks
         {
-            get => GetElement<GraphicFrameLocks>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
             set => SetElement(value);
         }
 
@@ -19318,9 +19318,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -19396,9 +19396,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -19409,9 +19409,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public NonVisualGraphicFrameDrawingProperties? NonVisualGraphicFrameDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.NonVisualGraphicFrameDrawingProperties? NonVisualGraphicFrameDrawingProperties
         {
-            get => GetElement<NonVisualGraphicFrameDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGraphicFrameDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -19487,9 +19487,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public GroupShapeLocks? GroupShapeLocks
+        public DocumentFormat.OpenXml.Drawing.GroupShapeLocks? GroupShapeLocks
         {
-            get => GetElement<GroupShapeLocks>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>();
             set => SetElement(value);
         }
 
@@ -19500,9 +19500,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public NonVisualGroupDrawingShapePropsExtensionList? NonVisualGroupDrawingShapePropsExtensionList
+        public DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList? NonVisualGroupDrawingShapePropsExtensionList
         {
-            get => GetElement<NonVisualGroupDrawingShapePropsExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
             set => SetElement(value);
         }
 
@@ -19728,9 +19728,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Rotation? Rotation
+        public DocumentFormat.OpenXml.Drawing.Rotation? Rotation
         {
-            get => GetElement<Rotation>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Rotation>();
             set => SetElement(value);
         }
 
@@ -19846,9 +19846,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Rotation? Rotation
+        public DocumentFormat.OpenXml.Drawing.Rotation? Rotation
         {
-            get => GetElement<Rotation>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Rotation>();
             set => SetElement(value);
         }
 
@@ -19930,9 +19930,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Anchor? Anchor
+        public DocumentFormat.OpenXml.Drawing.Anchor? Anchor
         {
-            get => GetElement<Anchor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Anchor>();
             set => SetElement(value);
         }
 
@@ -19943,9 +19943,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Normal? Normal
+        public DocumentFormat.OpenXml.Drawing.Normal? Normal
         {
-            get => GetElement<Normal>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Normal>();
             set => SetElement(value);
         }
 
@@ -19956,9 +19956,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public UpVector? UpVector
+        public DocumentFormat.OpenXml.Drawing.UpVector? UpVector
         {
-            get => GetElement<UpVector>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.UpVector>();
             set => SetElement(value);
         }
 
@@ -19969,9 +19969,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -20675,9 +20675,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RgbColorModelPercentage? RgbColorModelPercentage
+        public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
-            get => GetElement<RgbColorModelPercentage>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
             set => SetElement(value);
         }
 
@@ -20688,9 +20688,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RgbColorModelHex? RgbColorModelHex
+        public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<RgbColorModelHex>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
             set => SetElement(value);
         }
 
@@ -20701,9 +20701,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public HslColor? HslColor
+        public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
-            get => GetElement<HslColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
             set => SetElement(value);
         }
 
@@ -20714,9 +20714,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SystemColor? SystemColor
+        public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
-            get => GetElement<SystemColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
             set => SetElement(value);
         }
 
@@ -20727,9 +20727,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SchemeColor? SchemeColor
+        public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
-            get => GetElement<SchemeColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
             set => SetElement(value);
         }
 
@@ -20740,9 +20740,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public PresetColor? PresetColor
+        public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
-            get => GetElement<PresetColor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
             set => SetElement(value);
         }
 
@@ -21208,9 +21208,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Position? Position
+        public DocumentFormat.OpenXml.Drawing.Position? Position
         {
-            get => GetElement<Position>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Position>();
             set => SetElement(value);
         }
 
@@ -21420,9 +21420,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Position? Position
+        public DocumentFormat.OpenXml.Drawing.Position? Position
         {
-            get => GetElement<Position>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Position>();
             set => SetElement(value);
         }
 
@@ -21521,9 +21521,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Position? Position
+        public DocumentFormat.OpenXml.Drawing.Position? Position
         {
-            get => GetElement<Position>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Position>();
             set => SetElement(value);
         }
 
@@ -21623,9 +21623,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Point? Point
+        public DocumentFormat.OpenXml.Drawing.Point? Point
         {
-            get => GetElement<Point>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Point>();
             set => SetElement(value);
         }
 
@@ -21698,9 +21698,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Point? Point
+        public DocumentFormat.OpenXml.Drawing.Point? Point
         {
-            get => GetElement<Point>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Point>();
             set => SetElement(value);
         }
 
@@ -22820,9 +22820,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Offset? Offset
+        public DocumentFormat.OpenXml.Drawing.Offset? Offset
         {
-            get => GetElement<Offset>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>();
             set => SetElement(value);
         }
 
@@ -22833,9 +22833,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Extents? Extents
+        public DocumentFormat.OpenXml.Drawing.Extents? Extents
         {
-            get => GetElement<Extents>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>();
             set => SetElement(value);
         }
 
@@ -22846,9 +22846,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ChildOffset? ChildOffset
+        public DocumentFormat.OpenXml.Drawing.ChildOffset? ChildOffset
         {
-            get => GetElement<ChildOffset>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChildOffset>();
             set => SetElement(value);
         }
 
@@ -22859,9 +22859,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ChildExtents? ChildExtents
+        public DocumentFormat.OpenXml.Drawing.ChildExtents? ChildExtents
         {
-            get => GetElement<ChildExtents>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChildExtents>();
             set => SetElement(value);
         }
 
@@ -23312,9 +23312,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public PresetTextWrap? PresetTextWrap
+        public DocumentFormat.OpenXml.Drawing.PresetTextWrap? PresetTextWrap
         {
-            get => GetElement<PresetTextWrap>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetTextWrap>();
             set => SetElement(value);
         }
 
@@ -23417,9 +23417,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DefaultParagraphProperties? DefaultParagraphProperties
+        public DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties? DefaultParagraphProperties
         {
-            get => GetElement<DefaultParagraphProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties>();
             set => SetElement(value);
         }
 
@@ -23430,9 +23430,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Level1ParagraphProperties? Level1ParagraphProperties
+        public DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties? Level1ParagraphProperties
         {
-            get => GetElement<Level1ParagraphProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties>();
             set => SetElement(value);
         }
 
@@ -23443,9 +23443,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Level2ParagraphProperties? Level2ParagraphProperties
+        public DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties? Level2ParagraphProperties
         {
-            get => GetElement<Level2ParagraphProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties>();
             set => SetElement(value);
         }
 
@@ -23456,9 +23456,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Level3ParagraphProperties? Level3ParagraphProperties
+        public DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties? Level3ParagraphProperties
         {
-            get => GetElement<Level3ParagraphProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties>();
             set => SetElement(value);
         }
 
@@ -23469,9 +23469,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Level4ParagraphProperties? Level4ParagraphProperties
+        public DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties? Level4ParagraphProperties
         {
-            get => GetElement<Level4ParagraphProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties>();
             set => SetElement(value);
         }
 
@@ -23482,9 +23482,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Level5ParagraphProperties? Level5ParagraphProperties
+        public DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties? Level5ParagraphProperties
         {
-            get => GetElement<Level5ParagraphProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties>();
             set => SetElement(value);
         }
 
@@ -23495,9 +23495,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Level6ParagraphProperties? Level6ParagraphProperties
+        public DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties? Level6ParagraphProperties
         {
-            get => GetElement<Level6ParagraphProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties>();
             set => SetElement(value);
         }
 
@@ -23508,9 +23508,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Level7ParagraphProperties? Level7ParagraphProperties
+        public DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties? Level7ParagraphProperties
         {
-            get => GetElement<Level7ParagraphProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties>();
             set => SetElement(value);
         }
 
@@ -23521,9 +23521,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Level8ParagraphProperties? Level8ParagraphProperties
+        public DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties? Level8ParagraphProperties
         {
-            get => GetElement<Level8ParagraphProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties>();
             set => SetElement(value);
         }
 
@@ -23534,9 +23534,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Level9ParagraphProperties? Level9ParagraphProperties
+        public DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties? Level9ParagraphProperties
         {
-            get => GetElement<Level9ParagraphProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties>();
             set => SetElement(value);
         }
 
@@ -23547,9 +23547,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -23829,9 +23829,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Drawing.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -23842,9 +23842,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public BodyProperties? BodyProperties
+        public DocumentFormat.OpenXml.Drawing.BodyProperties? BodyProperties
         {
-            get => GetElement<BodyProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>();
             set => SetElement(value);
         }
 
@@ -23855,9 +23855,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ListStyle? ListStyle
+        public DocumentFormat.OpenXml.Drawing.ListStyle? ListStyle
         {
-            get => GetElement<ListStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>();
             set => SetElement(value);
         }
 
@@ -23868,9 +23868,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ShapeStyle? ShapeStyle
+        public DocumentFormat.OpenXml.Drawing.ShapeStyle? ShapeStyle
         {
-            get => GetElement<ShapeStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ShapeStyle>();
             set => SetElement(value);
         }
 
@@ -23881,9 +23881,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
     }
@@ -24320,9 +24320,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
     }
@@ -24395,9 +24395,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ColorScheme? ColorScheme
+        public DocumentFormat.OpenXml.Drawing.ColorScheme? ColorScheme
         {
-            get => GetElement<ColorScheme>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ColorScheme>();
             set => SetElement(value);
         }
 
@@ -24408,9 +24408,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ColorMap? ColorMap
+        public DocumentFormat.OpenXml.Drawing.ColorMap? ColorMap
         {
-            get => GetElement<ColorMap>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ColorMap>();
             set => SetElement(value);
         }
 
@@ -24492,9 +24492,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ColorScheme? ColorScheme
+        public DocumentFormat.OpenXml.Drawing.ColorScheme? ColorScheme
         {
-            get => GetElement<ColorScheme>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ColorScheme>();
             set => SetElement(value);
         }
 
@@ -24505,9 +24505,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public FontScheme? FontScheme
+        public DocumentFormat.OpenXml.Drawing.FontScheme? FontScheme
         {
-            get => GetElement<FontScheme>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.FontScheme>();
             set => SetElement(value);
         }
 
@@ -24518,9 +24518,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public FormatScheme? FormatScheme
+        public DocumentFormat.OpenXml.Drawing.FormatScheme? FormatScheme
         {
-            get => GetElement<FormatScheme>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.FormatScheme>();
             set => SetElement(value);
         }
 
@@ -24531,9 +24531,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -24633,9 +24633,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Bevel? Bevel
+        public DocumentFormat.OpenXml.Drawing.Bevel? Bevel
         {
-            get => GetElement<Bevel>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Bevel>();
             set => SetElement(value);
         }
 
@@ -24646,9 +24646,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public LightRig? LightRig
+        public DocumentFormat.OpenXml.Drawing.LightRig? LightRig
         {
-            get => GetElement<LightRig>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.LightRig>();
             set => SetElement(value);
         }
 
@@ -24659,9 +24659,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -24925,9 +24925,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public LeftBorderLineProperties? LeftBorderLineProperties
+        public DocumentFormat.OpenXml.Drawing.LeftBorderLineProperties? LeftBorderLineProperties
         {
-            get => GetElement<LeftBorderLineProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.LeftBorderLineProperties>();
             set => SetElement(value);
         }
 
@@ -24938,9 +24938,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RightBorderLineProperties? RightBorderLineProperties
+        public DocumentFormat.OpenXml.Drawing.RightBorderLineProperties? RightBorderLineProperties
         {
-            get => GetElement<RightBorderLineProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RightBorderLineProperties>();
             set => SetElement(value);
         }
 
@@ -24951,9 +24951,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public TopBorderLineProperties? TopBorderLineProperties
+        public DocumentFormat.OpenXml.Drawing.TopBorderLineProperties? TopBorderLineProperties
         {
-            get => GetElement<TopBorderLineProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.TopBorderLineProperties>();
             set => SetElement(value);
         }
 
@@ -24964,9 +24964,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public BottomBorderLineProperties? BottomBorderLineProperties
+        public DocumentFormat.OpenXml.Drawing.BottomBorderLineProperties? BottomBorderLineProperties
         {
-            get => GetElement<BottomBorderLineProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.BottomBorderLineProperties>();
             set => SetElement(value);
         }
 
@@ -24977,9 +24977,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public TopLeftToBottomRightBorderLineProperties? TopLeftToBottomRightBorderLineProperties
+        public DocumentFormat.OpenXml.Drawing.TopLeftToBottomRightBorderLineProperties? TopLeftToBottomRightBorderLineProperties
         {
-            get => GetElement<TopLeftToBottomRightBorderLineProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.TopLeftToBottomRightBorderLineProperties>();
             set => SetElement(value);
         }
 
@@ -24990,9 +24990,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public BottomLeftToTopRightBorderLineProperties? BottomLeftToTopRightBorderLineProperties
+        public DocumentFormat.OpenXml.Drawing.BottomLeftToTopRightBorderLineProperties? BottomLeftToTopRightBorderLineProperties
         {
-            get => GetElement<BottomLeftToTopRightBorderLineProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.BottomLeftToTopRightBorderLineProperties>();
             set => SetElement(value);
         }
 
@@ -25003,9 +25003,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Cell3DProperties? Cell3DProperties
+        public DocumentFormat.OpenXml.Drawing.Cell3DProperties? Cell3DProperties
         {
-            get => GetElement<Cell3DProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Cell3DProperties>();
             set => SetElement(value);
         }
 
@@ -25155,9 +25155,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public TextBody? TextBody
+        public DocumentFormat.OpenXml.Drawing.TextBody? TextBody
         {
-            get => GetElement<TextBody>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.TextBody>();
             set => SetElement(value);
         }
 
@@ -25168,9 +25168,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public TableCellProperties? TableCellProperties
+        public DocumentFormat.OpenXml.Drawing.TableCellProperties? TableCellProperties
         {
-            get => GetElement<TableCellProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.TableCellProperties>();
             set => SetElement(value);
         }
 
@@ -25181,9 +25181,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -25498,9 +25498,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public TableBackground? TableBackground
+        public DocumentFormat.OpenXml.Drawing.TableBackground? TableBackground
         {
-            get => GetElement<TableBackground>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.TableBackground>();
             set => SetElement(value);
         }
 
@@ -25511,9 +25511,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public WholeTable? WholeTable
+        public DocumentFormat.OpenXml.Drawing.WholeTable? WholeTable
         {
-            get => GetElement<WholeTable>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.WholeTable>();
             set => SetElement(value);
         }
 
@@ -25524,9 +25524,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Band1Horizontal? Band1Horizontal
+        public DocumentFormat.OpenXml.Drawing.Band1Horizontal? Band1Horizontal
         {
-            get => GetElement<Band1Horizontal>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Band1Horizontal>();
             set => SetElement(value);
         }
 
@@ -25537,9 +25537,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Band2Horizontal? Band2Horizontal
+        public DocumentFormat.OpenXml.Drawing.Band2Horizontal? Band2Horizontal
         {
-            get => GetElement<Band2Horizontal>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Band2Horizontal>();
             set => SetElement(value);
         }
 
@@ -25550,9 +25550,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Band1Vertical? Band1Vertical
+        public DocumentFormat.OpenXml.Drawing.Band1Vertical? Band1Vertical
         {
-            get => GetElement<Band1Vertical>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Band1Vertical>();
             set => SetElement(value);
         }
 
@@ -25563,9 +25563,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Band2Vertical? Band2Vertical
+        public DocumentFormat.OpenXml.Drawing.Band2Vertical? Band2Vertical
         {
-            get => GetElement<Band2Vertical>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Band2Vertical>();
             set => SetElement(value);
         }
 
@@ -25576,9 +25576,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public LastColumn? LastColumn
+        public DocumentFormat.OpenXml.Drawing.LastColumn? LastColumn
         {
-            get => GetElement<LastColumn>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.LastColumn>();
             set => SetElement(value);
         }
 
@@ -25589,9 +25589,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public FirstColumn? FirstColumn
+        public DocumentFormat.OpenXml.Drawing.FirstColumn? FirstColumn
         {
-            get => GetElement<FirstColumn>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.FirstColumn>();
             set => SetElement(value);
         }
 
@@ -25602,9 +25602,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public LastRow? LastRow
+        public DocumentFormat.OpenXml.Drawing.LastRow? LastRow
         {
-            get => GetElement<LastRow>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.LastRow>();
             set => SetElement(value);
         }
 
@@ -25615,9 +25615,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SoutheastCell? SoutheastCell
+        public DocumentFormat.OpenXml.Drawing.SoutheastCell? SoutheastCell
         {
-            get => GetElement<SoutheastCell>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SoutheastCell>();
             set => SetElement(value);
         }
 
@@ -25628,9 +25628,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SouthwestCell? SouthwestCell
+        public DocumentFormat.OpenXml.Drawing.SouthwestCell? SouthwestCell
         {
-            get => GetElement<SouthwestCell>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SouthwestCell>();
             set => SetElement(value);
         }
 
@@ -25641,9 +25641,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public FirstRow? FirstRow
+        public DocumentFormat.OpenXml.Drawing.FirstRow? FirstRow
         {
-            get => GetElement<FirstRow>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.FirstRow>();
             set => SetElement(value);
         }
 
@@ -25654,9 +25654,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public NortheastCell? NortheastCell
+        public DocumentFormat.OpenXml.Drawing.NortheastCell? NortheastCell
         {
-            get => GetElement<NortheastCell>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NortheastCell>();
             set => SetElement(value);
         }
 
@@ -25667,9 +25667,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public NorthwestCell? NorthwestCell
+        public DocumentFormat.OpenXml.Drawing.NorthwestCell? NorthwestCell
         {
-            get => GetElement<NorthwestCell>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NorthwestCell>();
             set => SetElement(value);
         }
 
@@ -25680,9 +25680,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
     }
@@ -25815,9 +25815,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -26764,9 +26764,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Outline? Outline
+        public DocumentFormat.OpenXml.Drawing.Outline? Outline
         {
-            get => GetElement<Outline>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Outline>();
             set => SetElement(value);
         }
 
@@ -26777,9 +26777,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public LineReference? LineReference
+        public DocumentFormat.OpenXml.Drawing.LineReference? LineReference
         {
-            get => GetElement<LineReference>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.LineReference>();
             set => SetElement(value);
         }
     }
@@ -26873,9 +26873,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public LeftBorder? LeftBorder
+        public DocumentFormat.OpenXml.Drawing.LeftBorder? LeftBorder
         {
-            get => GetElement<LeftBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.LeftBorder>();
             set => SetElement(value);
         }
 
@@ -26886,9 +26886,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public RightBorder? RightBorder
+        public DocumentFormat.OpenXml.Drawing.RightBorder? RightBorder
         {
-            get => GetElement<RightBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RightBorder>();
             set => SetElement(value);
         }
 
@@ -26899,9 +26899,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public TopBorder? TopBorder
+        public DocumentFormat.OpenXml.Drawing.TopBorder? TopBorder
         {
-            get => GetElement<TopBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.TopBorder>();
             set => SetElement(value);
         }
 
@@ -26912,9 +26912,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public BottomBorder? BottomBorder
+        public DocumentFormat.OpenXml.Drawing.BottomBorder? BottomBorder
         {
-            get => GetElement<BottomBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.BottomBorder>();
             set => SetElement(value);
         }
 
@@ -26925,9 +26925,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public InsideHorizontalBorder? InsideHorizontalBorder
+        public DocumentFormat.OpenXml.Drawing.InsideHorizontalBorder? InsideHorizontalBorder
         {
-            get => GetElement<InsideHorizontalBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.InsideHorizontalBorder>();
             set => SetElement(value);
         }
 
@@ -26938,9 +26938,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public InsideVerticalBorder? InsideVerticalBorder
+        public DocumentFormat.OpenXml.Drawing.InsideVerticalBorder? InsideVerticalBorder
         {
-            get => GetElement<InsideVerticalBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.InsideVerticalBorder>();
             set => SetElement(value);
         }
 
@@ -26951,9 +26951,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public TopLeftToBottomRightBorder? TopLeftToBottomRightBorder
+        public DocumentFormat.OpenXml.Drawing.TopLeftToBottomRightBorder? TopLeftToBottomRightBorder
         {
-            get => GetElement<TopLeftToBottomRightBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.TopLeftToBottomRightBorder>();
             set => SetElement(value);
         }
 
@@ -26964,9 +26964,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public TopRightToBottomLeftBorder? TopRightToBottomLeftBorder
+        public DocumentFormat.OpenXml.Drawing.TopRightToBottomLeftBorder? TopRightToBottomLeftBorder
         {
-            get => GetElement<TopRightToBottomLeftBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.TopRightToBottomLeftBorder>();
             set => SetElement(value);
         }
 
@@ -26977,9 +26977,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -27206,9 +27206,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public TableCellBorders? TableCellBorders
+        public DocumentFormat.OpenXml.Drawing.TableCellBorders? TableCellBorders
         {
-            get => GetElement<TableCellBorders>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.TableCellBorders>();
             set => SetElement(value);
         }
 
@@ -28177,9 +28177,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public TableCellTextStyle? TableCellTextStyle
+        public DocumentFormat.OpenXml.Drawing.TableCellTextStyle? TableCellTextStyle
         {
-            get => GetElement<TableCellTextStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.TableCellTextStyle>();
             set => SetElement(value);
         }
 
@@ -28190,9 +28190,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public TableCellStyle? TableCellStyle
+        public DocumentFormat.OpenXml.Drawing.TableCellStyle? TableCellStyle
         {
-            get => GetElement<TableCellStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.TableCellStyle>();
             set => SetElement(value);
         }
     }
@@ -29779,9 +29779,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public LineSpacing? LineSpacing
+        public DocumentFormat.OpenXml.Drawing.LineSpacing? LineSpacing
         {
-            get => GetElement<LineSpacing>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.LineSpacing>();
             set => SetElement(value);
         }
 
@@ -29792,9 +29792,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SpaceBefore? SpaceBefore
+        public DocumentFormat.OpenXml.Drawing.SpaceBefore? SpaceBefore
         {
-            get => GetElement<SpaceBefore>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SpaceBefore>();
             set => SetElement(value);
         }
 
@@ -29805,9 +29805,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SpaceAfter? SpaceAfter
+        public DocumentFormat.OpenXml.Drawing.SpaceAfter? SpaceAfter
         {
-            get => GetElement<SpaceAfter>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SpaceAfter>();
             set => SetElement(value);
         }
     }
@@ -30634,9 +30634,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Outline? Outline
+        public DocumentFormat.OpenXml.Drawing.Outline? Outline
         {
-            get => GetElement<Outline>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Outline>();
             set => SetElement(value);
         }
     }
@@ -30727,9 +30727,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ParagraphProperties? ParagraphProperties
+        public DocumentFormat.OpenXml.Drawing.ParagraphProperties? ParagraphProperties
         {
-            get => GetElement<ParagraphProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ParagraphProperties>();
             set => SetElement(value);
         }
 
@@ -31148,9 +31148,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SpacingPercent? SpacingPercent
+        public DocumentFormat.OpenXml.Drawing.SpacingPercent? SpacingPercent
         {
-            get => GetElement<SpacingPercent>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SpacingPercent>();
             set => SetElement(value);
         }
 
@@ -31161,9 +31161,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public SpacingPoints? SpacingPoints
+        public DocumentFormat.OpenXml.Drawing.SpacingPoints? SpacingPoints
         {
-            get => GetElement<SpacingPoints>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SpacingPoints>();
             set => SetElement(value);
         }
     }
@@ -31585,9 +31585,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -31598,9 +31598,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public NonVisualGroupShapeDrawingProperties? NonVisualGroupShapeDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeDrawingProperties? NonVisualGroupShapeDrawingProperties
         {
-            get => GetElement<NonVisualGroupShapeDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -31736,9 +31736,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public TransformGroup? TransformGroup
+        public DocumentFormat.OpenXml.Drawing.TransformGroup? TransformGroup
         {
-            get => GetElement<TransformGroup>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.TransformGroup>();
             set => SetElement(value);
         }
 
@@ -31823,9 +31823,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public NonVisualShapeProperties? NonVisualShapeProperties
+        public DocumentFormat.OpenXml.Drawing.NonVisualShapeProperties? NonVisualShapeProperties
         {
-            get => GetElement<NonVisualShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualShapeProperties>();
             set => SetElement(value);
         }
 
@@ -31836,9 +31836,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Drawing.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -31849,9 +31849,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public TextShape? TextShape
+        public DocumentFormat.OpenXml.Drawing.TextShape? TextShape
         {
-            get => GetElement<TextShape>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.TextShape>();
             set => SetElement(value);
         }
 
@@ -31862,9 +31862,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ShapeStyle? ShapeStyle
+        public DocumentFormat.OpenXml.Drawing.ShapeStyle? ShapeStyle
         {
-            get => GetElement<ShapeStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ShapeStyle>();
             set => SetElement(value);
         }
 
@@ -31875,9 +31875,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -31959,9 +31959,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public NonVisualConnectionShapeProperties? NonVisualConnectionShapeProperties
+        public DocumentFormat.OpenXml.Drawing.NonVisualConnectionShapeProperties? NonVisualConnectionShapeProperties
         {
-            get => GetElement<NonVisualConnectionShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualConnectionShapeProperties>();
             set => SetElement(value);
         }
 
@@ -31972,9 +31972,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Drawing.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -31985,9 +31985,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ShapeStyle? ShapeStyle
+        public DocumentFormat.OpenXml.Drawing.ShapeStyle? ShapeStyle
         {
-            get => GetElement<ShapeStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ShapeStyle>();
             set => SetElement(value);
         }
 
@@ -31998,9 +31998,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -32085,9 +32085,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public NonVisualPictureProperties? NonVisualPictureProperties
+        public DocumentFormat.OpenXml.Drawing.NonVisualPictureProperties? NonVisualPictureProperties
         {
-            get => GetElement<NonVisualPictureProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualPictureProperties>();
             set => SetElement(value);
         }
 
@@ -32098,9 +32098,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public BlipFill? BlipFill
+        public DocumentFormat.OpenXml.Drawing.BlipFill? BlipFill
         {
-            get => GetElement<BlipFill>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.BlipFill>();
             set => SetElement(value);
         }
 
@@ -32111,9 +32111,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Drawing.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -32124,9 +32124,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ShapeStyle? ShapeStyle
+        public DocumentFormat.OpenXml.Drawing.ShapeStyle? ShapeStyle
         {
-            get => GetElement<ShapeStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ShapeStyle>();
             set => SetElement(value);
         }
 
@@ -32137,9 +32137,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -32221,9 +32221,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public NonVisualGraphicFrameProperties? NonVisualGraphicFrameProperties
+        public DocumentFormat.OpenXml.Drawing.NonVisualGraphicFrameProperties? NonVisualGraphicFrameProperties
         {
-            get => GetElement<NonVisualGraphicFrameProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGraphicFrameProperties>();
             set => SetElement(value);
         }
 
@@ -32234,9 +32234,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Graphic? Graphic
+        public DocumentFormat.OpenXml.Drawing.Graphic? Graphic
         {
-            get => GetElement<Graphic>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>();
             set => SetElement(value);
         }
 
@@ -32247,9 +32247,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public Transform2D? Transform2D
+        public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
-            get => GetElement<Transform2D>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
             set => SetElement(value);
         }
 
@@ -32260,9 +32260,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -32365,9 +32365,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public NonVisualGroupShapeProperties? NonVisualGroupShapeProperties
+        public DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties? NonVisualGroupShapeProperties
         {
-            get => GetElement<NonVisualGroupShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties>();
             set => SetElement(value);
         }
 
@@ -32378,9 +32378,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public VisualGroupShapeProperties? VisualGroupShapeProperties
+        public DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties? VisualGroupShapeProperties
         {
-            get => GetElement<VisualGroupShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties>();
             set => SetElement(value);
         }
 
@@ -32958,9 +32958,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -33306,9 +33306,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -33452,9 +33452,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ShapeDefault? ShapeDefault
+        public DocumentFormat.OpenXml.Drawing.ShapeDefault? ShapeDefault
         {
-            get => GetElement<ShapeDefault>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ShapeDefault>();
             set => SetElement(value);
         }
 
@@ -33465,9 +33465,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public LineDefault? LineDefault
+        public DocumentFormat.OpenXml.Drawing.LineDefault? LineDefault
         {
-            get => GetElement<LineDefault>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.LineDefault>();
             set => SetElement(value);
         }
 
@@ -33478,9 +33478,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public TextDefault? TextDefault
+        public DocumentFormat.OpenXml.Drawing.TextDefault? TextDefault
         {
-            get => GetElement<TextDefault>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.TextDefault>();
             set => SetElement(value);
         }
 
@@ -33491,9 +33491,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -34080,9 +34080,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public HyperlinkSound? HyperlinkSound
+        public DocumentFormat.OpenXml.Drawing.HyperlinkSound? HyperlinkSound
         {
-            get => GetElement<HyperlinkSound>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkSound>();
             set => SetElement(value);
         }
 
@@ -34093,9 +34093,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public HyperlinkExtensionList? HyperlinkExtensionList
+        public DocumentFormat.OpenXml.Drawing.HyperlinkExtensionList? HyperlinkExtensionList
         {
-            get => GetElement<HyperlinkExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkExtensionList>();
             set => SetElement(value);
         }
     }

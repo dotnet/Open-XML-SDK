@@ -88,9 +88,9 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// <remark>
         /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
         /// </remark>
-        public XsnLocation? XsnLocation
+        public DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation? XsnLocation
         {
-            get => GetElement<XsnLocation>();
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation>();
             set => SetElement(value);
         }
 
@@ -101,9 +101,9 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// <remark>
         /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
         /// </remark>
-        public CachedView? CachedView
+        public DocumentFormat.OpenXml.Office.CustomXsn.CachedView? CachedView
         {
-            get => GetElement<CachedView>();
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomXsn.CachedView>();
             set => SetElement(value);
         }
 
@@ -114,9 +114,9 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// <remark>
         /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
         /// </remark>
-        public OpenByDefault? OpenByDefault
+        public DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault? OpenByDefault
         {
-            get => GetElement<OpenByDefault>();
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault>();
             set => SetElement(value);
         }
 
@@ -127,9 +127,9 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// <remark>
         /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
         /// </remark>
-        public Scope? Scope
+        public DocumentFormat.OpenXml.Office.CustomXsn.Scope? Scope
         {
-            get => GetElement<Scope>();
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomXsn.Scope>();
             set => SetElement(value);
         }
 

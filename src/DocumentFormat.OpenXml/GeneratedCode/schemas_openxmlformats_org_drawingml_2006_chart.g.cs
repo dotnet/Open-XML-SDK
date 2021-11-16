@@ -1800,9 +1800,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ManualLayout? ManualLayout
+        public DocumentFormat.OpenXml.Drawing.Charts.ManualLayout? ManualLayout
         {
-            get => GetElement<ManualLayout>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ManualLayout>();
             set => SetElement(value);
         }
 
@@ -1813,9 +1813,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -1897,9 +1897,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public StringReference? StringReference
+        public DocumentFormat.OpenXml.Drawing.Charts.StringReference? StringReference
         {
-            get => GetElement<StringReference>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringReference>();
             set => SetElement(value);
         }
 
@@ -1910,9 +1910,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public RichText? RichText
+        public DocumentFormat.OpenXml.Drawing.Charts.RichText? RichText
         {
-            get => GetElement<RichText>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.RichText>();
             set => SetElement(value);
         }
 
@@ -1923,9 +1923,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public StringLiteral? StringLiteral
+        public DocumentFormat.OpenXml.Drawing.Charts.StringLiteral? StringLiteral
         {
-            get => GetElement<StringLiteral>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringLiteral>();
             set => SetElement(value);
         }
 
@@ -2356,9 +2356,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             set => SetElement(value);
         }
     }
@@ -2699,9 +2699,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public StringReference? StringReference
+        public DocumentFormat.OpenXml.Drawing.Charts.StringReference? StringReference
         {
-            get => GetElement<StringReference>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringReference>();
             set => SetElement(value);
         }
 
@@ -2712,9 +2712,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NumericValue? NumericValue
+        public DocumentFormat.OpenXml.Drawing.Charts.NumericValue? NumericValue
         {
-            get => GetElement<NumericValue>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumericValue>();
             set => SetElement(value);
         }
 
@@ -2877,9 +2877,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Index? Index
+        public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
-            get => GetElement<Index>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
             set => SetElement(value);
         }
 
@@ -2890,9 +2890,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Order? Order
+        public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
         {
-            get => GetElement<Order>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
             set => SetElement(value);
         }
 
@@ -2903,9 +2903,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public SeriesText? SeriesText
+        public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
         {
-            get => GetElement<SeriesText>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
             set => SetElement(value);
         }
 
@@ -2916,9 +2916,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -2929,9 +2929,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Marker? Marker
+        public DocumentFormat.OpenXml.Drawing.Charts.Marker? Marker
         {
-            get => GetElement<Marker>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
             set => SetElement(value);
         }
 
@@ -2942,9 +2942,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PictureOptions? PictureOptions
+        public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
-            get => GetElement<PictureOptions>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
             set => SetElement(value);
         }
 
@@ -3277,9 +3277,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Index? Index
+        public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
-            get => GetElement<Index>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
             set => SetElement(value);
         }
 
@@ -3290,9 +3290,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Order? Order
+        public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
         {
-            get => GetElement<Order>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
             set => SetElement(value);
         }
 
@@ -3303,9 +3303,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public SeriesText? SeriesText
+        public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
         {
-            get => GetElement<SeriesText>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
             set => SetElement(value);
         }
 
@@ -3316,9 +3316,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -3329,9 +3329,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public InvertIfNegative? InvertIfNegative
+        public DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative? InvertIfNegative
         {
-            get => GetElement<InvertIfNegative>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>();
             set => SetElement(value);
         }
 
@@ -3342,9 +3342,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PictureOptions? PictureOptions
+        public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
-            get => GetElement<PictureOptions>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
             set => SetElement(value);
         }
 
@@ -3456,9 +3456,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Index? Index
+        public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
-            get => GetElement<Index>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
             set => SetElement(value);
         }
 
@@ -3469,9 +3469,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Order? Order
+        public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
         {
-            get => GetElement<Order>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
             set => SetElement(value);
         }
 
@@ -3482,9 +3482,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public SeriesText? SeriesText
+        public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
         {
-            get => GetElement<SeriesText>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
             set => SetElement(value);
         }
 
@@ -3495,9 +3495,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -3508,9 +3508,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PictureOptions? PictureOptions
+        public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
-            get => GetElement<PictureOptions>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
             set => SetElement(value);
         }
 
@@ -3619,9 +3619,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Index? Index
+        public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
-            get => GetElement<Index>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
             set => SetElement(value);
         }
 
@@ -3632,9 +3632,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Order? Order
+        public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
         {
-            get => GetElement<Order>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
             set => SetElement(value);
         }
 
@@ -3645,9 +3645,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public SeriesText? SeriesText
+        public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
         {
-            get => GetElement<SeriesText>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
             set => SetElement(value);
         }
 
@@ -3658,9 +3658,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -3671,9 +3671,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PictureOptions? PictureOptions
+        public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
-            get => GetElement<PictureOptions>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
             set => SetElement(value);
         }
 
@@ -3684,9 +3684,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Explosion? Explosion
+        public DocumentFormat.OpenXml.Drawing.Charts.Explosion? Explosion
         {
-            get => GetElement<Explosion>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Explosion>();
             set => SetElement(value);
         }
 
@@ -3789,9 +3789,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Index? Index
+        public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
-            get => GetElement<Index>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
             set => SetElement(value);
         }
 
@@ -3802,9 +3802,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Order? Order
+        public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
         {
-            get => GetElement<Order>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
             set => SetElement(value);
         }
 
@@ -3815,9 +3815,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public SeriesText? SeriesText
+        public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
         {
-            get => GetElement<SeriesText>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
             set => SetElement(value);
         }
 
@@ -3828,9 +3828,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -3841,9 +3841,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PictureOptions? PictureOptions
+        public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
-            get => GetElement<PictureOptions>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
             set => SetElement(value);
         }
 
@@ -3854,9 +3854,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public CategoryAxisData? CategoryAxisData
+        public DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData? CategoryAxisData
         {
-            get => GetElement<CategoryAxisData>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
             set => SetElement(value);
         }
 
@@ -3867,9 +3867,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Values? Values
+        public DocumentFormat.OpenXml.Drawing.Charts.Values? Values
         {
-            get => GetElement<Values>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Values>();
             set => SetElement(value);
         }
 
@@ -3880,9 +3880,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Bubble3D? Bubble3D
+        public DocumentFormat.OpenXml.Drawing.Charts.Bubble3D? Bubble3D
         {
-            get => GetElement<Bubble3D>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
             set => SetElement(value);
         }
 
@@ -3893,9 +3893,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public SurfaceSerExtensionList? SurfaceSerExtensionList
+        public DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList? SurfaceSerExtensionList
         {
-            get => GetElement<SurfaceSerExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList>();
             set => SetElement(value);
         }
 
@@ -4042,9 +4042,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public LogBase? LogBase
+        public DocumentFormat.OpenXml.Drawing.Charts.LogBase? LogBase
         {
-            get => GetElement<LogBase>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.LogBase>();
             set => SetElement(value);
         }
 
@@ -4055,9 +4055,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Orientation? Orientation
+        public DocumentFormat.OpenXml.Drawing.Charts.Orientation? Orientation
         {
-            get => GetElement<Orientation>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Orientation>();
             set => SetElement(value);
         }
 
@@ -4068,9 +4068,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MaxAxisValue? MaxAxisValue
+        public DocumentFormat.OpenXml.Drawing.Charts.MaxAxisValue? MaxAxisValue
         {
-            get => GetElement<MaxAxisValue>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MaxAxisValue>();
             set => SetElement(value);
         }
 
@@ -4081,9 +4081,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MinAxisValue? MinAxisValue
+        public DocumentFormat.OpenXml.Drawing.Charts.MinAxisValue? MinAxisValue
         {
-            get => GetElement<MinAxisValue>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinAxisValue>();
             set => SetElement(value);
         }
 
@@ -4094,9 +4094,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -4232,9 +4232,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartText? ChartText
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartText? ChartText
         {
-            get => GetElement<ChartText>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartText>();
             set => SetElement(value);
         }
 
@@ -4245,9 +4245,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Layout? Layout
+        public DocumentFormat.OpenXml.Drawing.Charts.Layout? Layout
         {
-            get => GetElement<Layout>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
             set => SetElement(value);
         }
 
@@ -4258,9 +4258,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Overlay? Overlay
+        public DocumentFormat.OpenXml.Drawing.Charts.Overlay? Overlay
         {
-            get => GetElement<Overlay>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Overlay>();
             set => SetElement(value);
         }
 
@@ -4271,9 +4271,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -4284,9 +4284,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TextProperties? TextProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
         {
-            get => GetElement<TextProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
             set => SetElement(value);
         }
 
@@ -4297,9 +4297,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -5000,9 +5000,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Date1904? Date1904
+        public DocumentFormat.OpenXml.Drawing.Charts.Date1904? Date1904
         {
-            get => GetElement<Date1904>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Date1904>();
             set => SetElement(value);
         }
 
@@ -5013,9 +5013,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public EditingLanguage? EditingLanguage
+        public DocumentFormat.OpenXml.Drawing.Charts.EditingLanguage? EditingLanguage
         {
-            get => GetElement<EditingLanguage>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.EditingLanguage>();
             set => SetElement(value);
         }
 
@@ -5026,9 +5026,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public RoundedCorners? RoundedCorners
+        public DocumentFormat.OpenXml.Drawing.Charts.RoundedCorners? RoundedCorners
         {
-            get => GetElement<RoundedCorners>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.RoundedCorners>();
             set => SetElement(value);
         }
 
@@ -5835,9 +5835,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NumericValue? NumericValue
+        public DocumentFormat.OpenXml.Drawing.Charts.NumericValue? NumericValue
         {
-            get => GetElement<NumericValue>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumericValue>();
             set => SetElement(value);
         }
 
@@ -5978,9 +5978,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Formula? Formula
+        public DocumentFormat.OpenXml.Drawing.Charts.Formula? Formula
         {
-            get => GetElement<Formula>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Formula>();
             set => SetElement(value);
         }
 
@@ -5991,9 +5991,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NumberingCache? NumberingCache
+        public DocumentFormat.OpenXml.Drawing.Charts.NumberingCache? NumberingCache
         {
-            get => GetElement<NumberingCache>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberingCache>();
             set => SetElement(value);
         }
 
@@ -6004,9 +6004,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NumRefExtensionList? NumRefExtensionList
+        public DocumentFormat.OpenXml.Drawing.Charts.NumRefExtensionList? NumRefExtensionList
         {
-            get => GetElement<NumRefExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumRefExtensionList>();
             set => SetElement(value);
         }
 
@@ -6211,9 +6211,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public FormatCode? FormatCode
+        public DocumentFormat.OpenXml.Drawing.Charts.FormatCode? FormatCode
         {
-            get => GetElement<FormatCode>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.FormatCode>();
             set => SetElement(value);
         }
 
@@ -6224,9 +6224,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PointCount? PointCount
+        public DocumentFormat.OpenXml.Drawing.Charts.PointCount? PointCount
         {
-            get => GetElement<PointCount>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
             set => SetElement(value);
         }
     }
@@ -6364,9 +6364,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Formula? Formula
+        public DocumentFormat.OpenXml.Drawing.Charts.Formula? Formula
         {
-            get => GetElement<Formula>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Formula>();
             set => SetElement(value);
         }
 
@@ -6377,9 +6377,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MultiLevelStringCache? MultiLevelStringCache
+        public DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringCache? MultiLevelStringCache
         {
-            get => GetElement<MultiLevelStringCache>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringCache>();
             set => SetElement(value);
         }
 
@@ -6390,9 +6390,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MultiLvlStrRefExtensionList? MultiLvlStrRefExtensionList
+        public DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtensionList? MultiLvlStrRefExtensionList
         {
-            get => GetElement<MultiLvlStrRefExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtensionList>();
             set => SetElement(value);
         }
 
@@ -6471,9 +6471,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Formula? Formula
+        public DocumentFormat.OpenXml.Drawing.Charts.Formula? Formula
         {
-            get => GetElement<Formula>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Formula>();
             set => SetElement(value);
         }
 
@@ -6484,9 +6484,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public StringCache? StringCache
+        public DocumentFormat.OpenXml.Drawing.Charts.StringCache? StringCache
         {
-            get => GetElement<StringCache>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringCache>();
             set => SetElement(value);
         }
 
@@ -6497,9 +6497,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public StrRefExtensionList? StrRefExtensionList
+        public DocumentFormat.OpenXml.Drawing.Charts.StrRefExtensionList? StrRefExtensionList
         {
-            get => GetElement<StrRefExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StrRefExtensionList>();
             set => SetElement(value);
         }
 
@@ -6698,9 +6698,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PointCount? PointCount
+        public DocumentFormat.OpenXml.Drawing.Charts.PointCount? PointCount
         {
-            get => GetElement<PointCount>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
             set => SetElement(value);
         }
     }
@@ -6988,9 +6988,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public LayoutTarget? LayoutTarget
+        public DocumentFormat.OpenXml.Drawing.Charts.LayoutTarget? LayoutTarget
         {
-            get => GetElement<LayoutTarget>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.LayoutTarget>();
             set => SetElement(value);
         }
 
@@ -7001,9 +7001,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public LeftMode? LeftMode
+        public DocumentFormat.OpenXml.Drawing.Charts.LeftMode? LeftMode
         {
-            get => GetElement<LeftMode>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.LeftMode>();
             set => SetElement(value);
         }
 
@@ -7014,9 +7014,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TopMode? TopMode
+        public DocumentFormat.OpenXml.Drawing.Charts.TopMode? TopMode
         {
-            get => GetElement<TopMode>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TopMode>();
             set => SetElement(value);
         }
 
@@ -7027,9 +7027,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public WidthMode? WidthMode
+        public DocumentFormat.OpenXml.Drawing.Charts.WidthMode? WidthMode
         {
-            get => GetElement<WidthMode>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.WidthMode>();
             set => SetElement(value);
         }
 
@@ -7040,9 +7040,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public HeightMode? HeightMode
+        public DocumentFormat.OpenXml.Drawing.Charts.HeightMode? HeightMode
         {
-            get => GetElement<HeightMode>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.HeightMode>();
             set => SetElement(value);
         }
 
@@ -7053,9 +7053,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Left? Left
+        public DocumentFormat.OpenXml.Drawing.Charts.Left? Left
         {
-            get => GetElement<Left>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Left>();
             set => SetElement(value);
         }
 
@@ -7066,9 +7066,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Top? Top
+        public DocumentFormat.OpenXml.Drawing.Charts.Top? Top
         {
-            get => GetElement<Top>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Top>();
             set => SetElement(value);
         }
 
@@ -7079,9 +7079,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Width? Width
+        public DocumentFormat.OpenXml.Drawing.Charts.Width? Width
         {
-            get => GetElement<Width>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Width>();
             set => SetElement(value);
         }
 
@@ -7092,9 +7092,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Height? Height
+        public DocumentFormat.OpenXml.Drawing.Charts.Height? Height
         {
-            get => GetElement<Height>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Height>();
             set => SetElement(value);
         }
 
@@ -7105,9 +7105,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -7525,9 +7525,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Symbol? Symbol
+        public DocumentFormat.OpenXml.Drawing.Charts.Symbol? Symbol
         {
-            get => GetElement<Symbol>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Symbol>();
             set => SetElement(value);
         }
 
@@ -7538,9 +7538,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Size? Size
+        public DocumentFormat.OpenXml.Drawing.Charts.Size? Size
         {
-            get => GetElement<Size>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Size>();
             set => SetElement(value);
         }
 
@@ -7551,9 +7551,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -7564,9 +7564,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -7651,9 +7651,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ApplyToFront? ApplyToFront
+        public DocumentFormat.OpenXml.Drawing.Charts.ApplyToFront? ApplyToFront
         {
-            get => GetElement<ApplyToFront>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ApplyToFront>();
             set => SetElement(value);
         }
 
@@ -7664,9 +7664,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ApplyToSides? ApplyToSides
+        public DocumentFormat.OpenXml.Drawing.Charts.ApplyToSides? ApplyToSides
         {
-            get => GetElement<ApplyToSides>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ApplyToSides>();
             set => SetElement(value);
         }
 
@@ -7677,9 +7677,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ApplyToEnd? ApplyToEnd
+        public DocumentFormat.OpenXml.Drawing.Charts.ApplyToEnd? ApplyToEnd
         {
-            get => GetElement<ApplyToEnd>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ApplyToEnd>();
             set => SetElement(value);
         }
 
@@ -7690,9 +7690,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PictureFormat? PictureFormat
+        public DocumentFormat.OpenXml.Drawing.Charts.PictureFormat? PictureFormat
         {
-            get => GetElement<PictureFormat>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureFormat>();
             set => SetElement(value);
         }
 
@@ -7703,9 +7703,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PictureStackUnit? PictureStackUnit
+        public DocumentFormat.OpenXml.Drawing.Charts.PictureStackUnit? PictureStackUnit
         {
-            get => GetElement<PictureStackUnit>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureStackUnit>();
             set => SetElement(value);
         }
 
@@ -7936,9 +7936,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Layout? Layout
+        public DocumentFormat.OpenXml.Drawing.Charts.Layout? Layout
         {
-            get => GetElement<Layout>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
             set => SetElement(value);
         }
 
@@ -7949,9 +7949,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartText? ChartText
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartText? ChartText
         {
-            get => GetElement<ChartText>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartText>();
             set => SetElement(value);
         }
 
@@ -7962,9 +7962,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NumberingFormat? NumberingFormat
+        public DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat? NumberingFormat
         {
-            get => GetElement<NumberingFormat>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
             set => SetElement(value);
         }
 
@@ -7975,9 +7975,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -7988,9 +7988,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TextProperties? TextProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
         {
-            get => GetElement<TextProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
             set => SetElement(value);
         }
 
@@ -8001,9 +8001,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -8544,9 +8544,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NumberReference? NumberReference
+        public DocumentFormat.OpenXml.Drawing.Charts.NumberReference? NumberReference
         {
-            get => GetElement<NumberReference>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberReference>();
             set => SetElement(value);
         }
 
@@ -8557,9 +8557,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NumberLiteral? NumberLiteral
+        public DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral? NumberLiteral
         {
-            get => GetElement<NumberLiteral>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral>();
             set => SetElement(value);
         }
     }
@@ -8838,9 +8838,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             set => SetElement(value);
         }
     }
@@ -9119,9 +9119,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (5L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Index? Index
+        public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
-            get => GetElement<Index>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
             set => SetElement(value);
         }
 
@@ -9132,9 +9132,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (5L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -9358,9 +9358,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Layout? Layout
+        public DocumentFormat.OpenXml.Drawing.Charts.Layout? Layout
         {
-            get => GetElement<Layout>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
             set => SetElement(value);
         }
 
@@ -9371,9 +9371,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartText? ChartText
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartText? ChartText
         {
-            get => GetElement<ChartText>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartText>();
             set => SetElement(value);
         }
 
@@ -9384,9 +9384,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -9397,9 +9397,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TextProperties? TextProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
         {
-            get => GetElement<TextProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
             set => SetElement(value);
         }
 
@@ -9578,9 +9578,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Index? Index
+        public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
-            get => GetElement<Index>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
             set => SetElement(value);
         }
 
@@ -9591,9 +9591,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -9604,9 +9604,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Marker? Marker
+        public DocumentFormat.OpenXml.Drawing.Charts.Marker? Marker
         {
-            get => GetElement<Marker>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
             set => SetElement(value);
         }
 
@@ -9617,9 +9617,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DataLabel? DataLabel
+        public DocumentFormat.OpenXml.Drawing.Charts.DataLabel? DataLabel
         {
-            get => GetElement<DataLabel>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.DataLabel>();
             set => SetElement(value);
         }
 
@@ -9630,9 +9630,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -9768,9 +9768,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Index? Index
+        public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
-            get => GetElement<Index>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
             set => SetElement(value);
         }
 
@@ -9910,9 +9910,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public OddHeader? OddHeader
+        public DocumentFormat.OpenXml.Drawing.Charts.OddHeader? OddHeader
         {
-            get => GetElement<OddHeader>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.OddHeader>();
             set => SetElement(value);
         }
 
@@ -9923,9 +9923,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public OddFooter? OddFooter
+        public DocumentFormat.OpenXml.Drawing.Charts.OddFooter? OddFooter
         {
-            get => GetElement<OddFooter>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.OddFooter>();
             set => SetElement(value);
         }
 
@@ -9936,9 +9936,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public EvenHeader? EvenHeader
+        public DocumentFormat.OpenXml.Drawing.Charts.EvenHeader? EvenHeader
         {
-            get => GetElement<EvenHeader>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.EvenHeader>();
             set => SetElement(value);
         }
 
@@ -9949,9 +9949,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public EvenFooter? EvenFooter
+        public DocumentFormat.OpenXml.Drawing.Charts.EvenFooter? EvenFooter
         {
-            get => GetElement<EvenFooter>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.EvenFooter>();
             set => SetElement(value);
         }
 
@@ -9962,9 +9962,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public FirstHeader? FirstHeader
+        public DocumentFormat.OpenXml.Drawing.Charts.FirstHeader? FirstHeader
         {
-            get => GetElement<FirstHeader>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.FirstHeader>();
             set => SetElement(value);
         }
 
@@ -9975,9 +9975,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public FirstFooter? FirstFooter
+        public DocumentFormat.OpenXml.Drawing.Charts.FirstFooter? FirstFooter
         {
-            get => GetElement<FirstFooter>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.FirstFooter>();
             set => SetElement(value);
         }
 
@@ -10603,9 +10603,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Index? Index
+        public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
-            get => GetElement<Index>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
             set => SetElement(value);
         }
 
@@ -10702,9 +10702,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Grouping? Grouping
+        public DocumentFormat.OpenXml.Drawing.Charts.Grouping? Grouping
         {
-            get => GetElement<Grouping>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Grouping>();
             set => SetElement(value);
         }
 
@@ -10715,9 +10715,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public VaryColors? VaryColors
+        public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
-            get => GetElement<VaryColors>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
             set => SetElement(value);
         }
 
@@ -10817,9 +10817,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Grouping? Grouping
+        public DocumentFormat.OpenXml.Drawing.Charts.Grouping? Grouping
         {
-            get => GetElement<Grouping>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Grouping>();
             set => SetElement(value);
         }
 
@@ -10830,9 +10830,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public VaryColors? VaryColors
+        public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
-            get => GetElement<VaryColors>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
             set => SetElement(value);
         }
 
@@ -10941,9 +10941,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Grouping? Grouping
+        public DocumentFormat.OpenXml.Drawing.Charts.Grouping? Grouping
         {
-            get => GetElement<Grouping>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Grouping>();
             set => SetElement(value);
         }
 
@@ -10954,9 +10954,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public VaryColors? VaryColors
+        public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
-            get => GetElement<VaryColors>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
             set => SetElement(value);
         }
 
@@ -11056,9 +11056,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Grouping? Grouping
+        public DocumentFormat.OpenXml.Drawing.Charts.Grouping? Grouping
         {
-            get => GetElement<Grouping>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Grouping>();
             set => SetElement(value);
         }
 
@@ -11069,9 +11069,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public VaryColors? VaryColors
+        public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
-            get => GetElement<VaryColors>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
             set => SetElement(value);
         }
 
@@ -11239,9 +11239,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public RadarStyle? RadarStyle
+        public DocumentFormat.OpenXml.Drawing.Charts.RadarStyle? RadarStyle
         {
-            get => GetElement<RadarStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.RadarStyle>();
             set => SetElement(value);
         }
 
@@ -11252,9 +11252,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public VaryColors? VaryColors
+        public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
-            get => GetElement<VaryColors>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
             set => SetElement(value);
         }
 
@@ -11342,9 +11342,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ScatterStyle? ScatterStyle
+        public DocumentFormat.OpenXml.Drawing.Charts.ScatterStyle? ScatterStyle
         {
-            get => GetElement<ScatterStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ScatterStyle>();
             set => SetElement(value);
         }
 
@@ -11355,9 +11355,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public VaryColors? VaryColors
+        public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
-            get => GetElement<VaryColors>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
             set => SetElement(value);
         }
 
@@ -11448,9 +11448,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public VaryColors? VaryColors
+        public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
-            get => GetElement<VaryColors>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
             set => SetElement(value);
         }
 
@@ -11538,9 +11538,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public VaryColors? VaryColors
+        public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
-            get => GetElement<VaryColors>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
             set => SetElement(value);
         }
 
@@ -11634,9 +11634,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public VaryColors? VaryColors
+        public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
-            get => GetElement<VaryColors>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
             set => SetElement(value);
         }
 
@@ -11742,9 +11742,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public BarDirection? BarDirection
+        public DocumentFormat.OpenXml.Drawing.Charts.BarDirection? BarDirection
         {
-            get => GetElement<BarDirection>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.BarDirection>();
             set => SetElement(value);
         }
 
@@ -11755,9 +11755,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public BarGrouping? BarGrouping
+        public DocumentFormat.OpenXml.Drawing.Charts.BarGrouping? BarGrouping
         {
-            get => GetElement<BarGrouping>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.BarGrouping>();
             set => SetElement(value);
         }
 
@@ -11768,9 +11768,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public VaryColors? VaryColors
+        public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
-            get => GetElement<VaryColors>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
             set => SetElement(value);
         }
 
@@ -11876,9 +11876,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public BarDirection? BarDirection
+        public DocumentFormat.OpenXml.Drawing.Charts.BarDirection? BarDirection
         {
-            get => GetElement<BarDirection>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.BarDirection>();
             set => SetElement(value);
         }
 
@@ -11889,9 +11889,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public BarGrouping? BarGrouping
+        public DocumentFormat.OpenXml.Drawing.Charts.BarGrouping? BarGrouping
         {
-            get => GetElement<BarGrouping>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.BarGrouping>();
             set => SetElement(value);
         }
 
@@ -11902,9 +11902,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public VaryColors? VaryColors
+        public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
-            get => GetElement<VaryColors>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
             set => SetElement(value);
         }
 
@@ -12013,9 +12013,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public OfPieType? OfPieType
+        public DocumentFormat.OpenXml.Drawing.Charts.OfPieType? OfPieType
         {
-            get => GetElement<OfPieType>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.OfPieType>();
             set => SetElement(value);
         }
 
@@ -12026,9 +12026,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public VaryColors? VaryColors
+        public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
-            get => GetElement<VaryColors>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
             set => SetElement(value);
         }
 
@@ -12119,9 +12119,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Wireframe? Wireframe
+        public DocumentFormat.OpenXml.Drawing.Charts.Wireframe? Wireframe
         {
-            get => GetElement<Wireframe>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Wireframe>();
             set => SetElement(value);
         }
 
@@ -12209,9 +12209,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Wireframe? Wireframe
+        public DocumentFormat.OpenXml.Drawing.Charts.Wireframe? Wireframe
         {
-            get => GetElement<Wireframe>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Wireframe>();
             set => SetElement(value);
         }
 
@@ -12222,9 +12222,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public VaryColors? VaryColors
+        public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
-            get => GetElement<VaryColors>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
             set => SetElement(value);
         }
 
@@ -12321,9 +12321,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public VaryColors? VaryColors
+        public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
-            get => GetElement<VaryColors>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
             set => SetElement(value);
         }
 
@@ -12465,9 +12465,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public AxisId? AxisId
+        public DocumentFormat.OpenXml.Drawing.Charts.AxisId? AxisId
         {
-            get => GetElement<AxisId>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
             set => SetElement(value);
         }
 
@@ -12478,9 +12478,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Scaling? Scaling
+        public DocumentFormat.OpenXml.Drawing.Charts.Scaling? Scaling
         {
-            get => GetElement<Scaling>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Scaling>();
             set => SetElement(value);
         }
 
@@ -12491,9 +12491,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Delete? Delete
+        public DocumentFormat.OpenXml.Drawing.Charts.Delete? Delete
         {
-            get => GetElement<Delete>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
             set => SetElement(value);
         }
 
@@ -12504,9 +12504,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public AxisPosition? AxisPosition
+        public DocumentFormat.OpenXml.Drawing.Charts.AxisPosition? AxisPosition
         {
-            get => GetElement<AxisPosition>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisPosition>();
             set => SetElement(value);
         }
 
@@ -12517,9 +12517,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MajorGridlines? MajorGridlines
+        public DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines? MajorGridlines
         {
-            get => GetElement<MajorGridlines>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines>();
             set => SetElement(value);
         }
 
@@ -12530,9 +12530,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MinorGridlines? MinorGridlines
+        public DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines? MinorGridlines
         {
-            get => GetElement<MinorGridlines>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines>();
             set => SetElement(value);
         }
 
@@ -12543,9 +12543,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Title? Title
+        public DocumentFormat.OpenXml.Drawing.Charts.Title? Title
         {
-            get => GetElement<Title>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Title>();
             set => SetElement(value);
         }
 
@@ -12556,9 +12556,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NumberingFormat? NumberingFormat
+        public DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat? NumberingFormat
         {
-            get => GetElement<NumberingFormat>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
             set => SetElement(value);
         }
 
@@ -12569,9 +12569,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MajorTickMark? MajorTickMark
+        public DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark? MajorTickMark
         {
-            get => GetElement<MajorTickMark>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark>();
             set => SetElement(value);
         }
 
@@ -12582,9 +12582,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MinorTickMark? MinorTickMark
+        public DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark? MinorTickMark
         {
-            get => GetElement<MinorTickMark>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark>();
             set => SetElement(value);
         }
 
@@ -12595,9 +12595,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TickLabelPosition? TickLabelPosition
+        public DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition? TickLabelPosition
         {
-            get => GetElement<TickLabelPosition>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition>();
             set => SetElement(value);
         }
 
@@ -12608,9 +12608,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -12621,9 +12621,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TextProperties? TextProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
         {
-            get => GetElement<TextProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
             set => SetElement(value);
         }
 
@@ -12634,9 +12634,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public CrossingAxis? CrossingAxis
+        public DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis? CrossingAxis
         {
-            get => GetElement<CrossingAxis>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis>();
             set => SetElement(value);
         }
 
@@ -12784,9 +12784,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public AxisId? AxisId
+        public DocumentFormat.OpenXml.Drawing.Charts.AxisId? AxisId
         {
-            get => GetElement<AxisId>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
             set => SetElement(value);
         }
 
@@ -12797,9 +12797,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Scaling? Scaling
+        public DocumentFormat.OpenXml.Drawing.Charts.Scaling? Scaling
         {
-            get => GetElement<Scaling>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Scaling>();
             set => SetElement(value);
         }
 
@@ -12810,9 +12810,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Delete? Delete
+        public DocumentFormat.OpenXml.Drawing.Charts.Delete? Delete
         {
-            get => GetElement<Delete>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
             set => SetElement(value);
         }
 
@@ -12823,9 +12823,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public AxisPosition? AxisPosition
+        public DocumentFormat.OpenXml.Drawing.Charts.AxisPosition? AxisPosition
         {
-            get => GetElement<AxisPosition>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisPosition>();
             set => SetElement(value);
         }
 
@@ -12836,9 +12836,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MajorGridlines? MajorGridlines
+        public DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines? MajorGridlines
         {
-            get => GetElement<MajorGridlines>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines>();
             set => SetElement(value);
         }
 
@@ -12849,9 +12849,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MinorGridlines? MinorGridlines
+        public DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines? MinorGridlines
         {
-            get => GetElement<MinorGridlines>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines>();
             set => SetElement(value);
         }
 
@@ -12862,9 +12862,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Title? Title
+        public DocumentFormat.OpenXml.Drawing.Charts.Title? Title
         {
-            get => GetElement<Title>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Title>();
             set => SetElement(value);
         }
 
@@ -12875,9 +12875,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NumberingFormat? NumberingFormat
+        public DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat? NumberingFormat
         {
-            get => GetElement<NumberingFormat>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
             set => SetElement(value);
         }
 
@@ -12888,9 +12888,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MajorTickMark? MajorTickMark
+        public DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark? MajorTickMark
         {
-            get => GetElement<MajorTickMark>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark>();
             set => SetElement(value);
         }
 
@@ -12901,9 +12901,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MinorTickMark? MinorTickMark
+        public DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark? MinorTickMark
         {
-            get => GetElement<MinorTickMark>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark>();
             set => SetElement(value);
         }
 
@@ -12914,9 +12914,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TickLabelPosition? TickLabelPosition
+        public DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition? TickLabelPosition
         {
-            get => GetElement<TickLabelPosition>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition>();
             set => SetElement(value);
         }
 
@@ -12927,9 +12927,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -12940,9 +12940,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TextProperties? TextProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
         {
-            get => GetElement<TextProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
             set => SetElement(value);
         }
 
@@ -12953,9 +12953,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public CrossingAxis? CrossingAxis
+        public DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis? CrossingAxis
         {
-            get => GetElement<CrossingAxis>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis>();
             set => SetElement(value);
         }
 
@@ -13106,9 +13106,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public AxisId? AxisId
+        public DocumentFormat.OpenXml.Drawing.Charts.AxisId? AxisId
         {
-            get => GetElement<AxisId>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
             set => SetElement(value);
         }
 
@@ -13119,9 +13119,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Scaling? Scaling
+        public DocumentFormat.OpenXml.Drawing.Charts.Scaling? Scaling
         {
-            get => GetElement<Scaling>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Scaling>();
             set => SetElement(value);
         }
 
@@ -13132,9 +13132,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Delete? Delete
+        public DocumentFormat.OpenXml.Drawing.Charts.Delete? Delete
         {
-            get => GetElement<Delete>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
             set => SetElement(value);
         }
 
@@ -13145,9 +13145,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public AxisPosition? AxisPosition
+        public DocumentFormat.OpenXml.Drawing.Charts.AxisPosition? AxisPosition
         {
-            get => GetElement<AxisPosition>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisPosition>();
             set => SetElement(value);
         }
 
@@ -13158,9 +13158,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MajorGridlines? MajorGridlines
+        public DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines? MajorGridlines
         {
-            get => GetElement<MajorGridlines>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines>();
             set => SetElement(value);
         }
 
@@ -13171,9 +13171,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MinorGridlines? MinorGridlines
+        public DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines? MinorGridlines
         {
-            get => GetElement<MinorGridlines>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines>();
             set => SetElement(value);
         }
 
@@ -13184,9 +13184,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Title? Title
+        public DocumentFormat.OpenXml.Drawing.Charts.Title? Title
         {
-            get => GetElement<Title>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Title>();
             set => SetElement(value);
         }
 
@@ -13197,9 +13197,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NumberingFormat? NumberingFormat
+        public DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat? NumberingFormat
         {
-            get => GetElement<NumberingFormat>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
             set => SetElement(value);
         }
 
@@ -13210,9 +13210,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MajorTickMark? MajorTickMark
+        public DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark? MajorTickMark
         {
-            get => GetElement<MajorTickMark>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark>();
             set => SetElement(value);
         }
 
@@ -13223,9 +13223,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MinorTickMark? MinorTickMark
+        public DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark? MinorTickMark
         {
-            get => GetElement<MinorTickMark>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark>();
             set => SetElement(value);
         }
 
@@ -13236,9 +13236,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TickLabelPosition? TickLabelPosition
+        public DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition? TickLabelPosition
         {
-            get => GetElement<TickLabelPosition>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition>();
             set => SetElement(value);
         }
 
@@ -13249,9 +13249,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -13262,9 +13262,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TextProperties? TextProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
         {
-            get => GetElement<TextProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
             set => SetElement(value);
         }
 
@@ -13275,9 +13275,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public CrossingAxis? CrossingAxis
+        public DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis? CrossingAxis
         {
-            get => GetElement<CrossingAxis>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis>();
             set => SetElement(value);
         }
 
@@ -13413,9 +13413,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public AxisId? AxisId
+        public DocumentFormat.OpenXml.Drawing.Charts.AxisId? AxisId
         {
-            get => GetElement<AxisId>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
             set => SetElement(value);
         }
 
@@ -13426,9 +13426,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Scaling? Scaling
+        public DocumentFormat.OpenXml.Drawing.Charts.Scaling? Scaling
         {
-            get => GetElement<Scaling>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Scaling>();
             set => SetElement(value);
         }
 
@@ -13439,9 +13439,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Delete? Delete
+        public DocumentFormat.OpenXml.Drawing.Charts.Delete? Delete
         {
-            get => GetElement<Delete>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
             set => SetElement(value);
         }
 
@@ -13452,9 +13452,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public AxisPosition? AxisPosition
+        public DocumentFormat.OpenXml.Drawing.Charts.AxisPosition? AxisPosition
         {
-            get => GetElement<AxisPosition>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisPosition>();
             set => SetElement(value);
         }
 
@@ -13465,9 +13465,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MajorGridlines? MajorGridlines
+        public DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines? MajorGridlines
         {
-            get => GetElement<MajorGridlines>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines>();
             set => SetElement(value);
         }
 
@@ -13478,9 +13478,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MinorGridlines? MinorGridlines
+        public DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines? MinorGridlines
         {
-            get => GetElement<MinorGridlines>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines>();
             set => SetElement(value);
         }
 
@@ -13491,9 +13491,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Title? Title
+        public DocumentFormat.OpenXml.Drawing.Charts.Title? Title
         {
-            get => GetElement<Title>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Title>();
             set => SetElement(value);
         }
 
@@ -13504,9 +13504,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NumberingFormat? NumberingFormat
+        public DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat? NumberingFormat
         {
-            get => GetElement<NumberingFormat>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
             set => SetElement(value);
         }
 
@@ -13517,9 +13517,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MajorTickMark? MajorTickMark
+        public DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark? MajorTickMark
         {
-            get => GetElement<MajorTickMark>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark>();
             set => SetElement(value);
         }
 
@@ -13530,9 +13530,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MinorTickMark? MinorTickMark
+        public DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark? MinorTickMark
         {
-            get => GetElement<MinorTickMark>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark>();
             set => SetElement(value);
         }
 
@@ -13543,9 +13543,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TickLabelPosition? TickLabelPosition
+        public DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition? TickLabelPosition
         {
-            get => GetElement<TickLabelPosition>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition>();
             set => SetElement(value);
         }
 
@@ -13556,9 +13556,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -13569,9 +13569,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TextProperties? TextProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
         {
-            get => GetElement<TextProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
             set => SetElement(value);
         }
 
@@ -13582,9 +13582,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public CrossingAxis? CrossingAxis
+        public DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis? CrossingAxis
         {
-            get => GetElement<CrossingAxis>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis>();
             set => SetElement(value);
         }
 
@@ -13675,9 +13675,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ShowHorizontalBorder? ShowHorizontalBorder
+        public DocumentFormat.OpenXml.Drawing.Charts.ShowHorizontalBorder? ShowHorizontalBorder
         {
-            get => GetElement<ShowHorizontalBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ShowHorizontalBorder>();
             set => SetElement(value);
         }
 
@@ -13688,9 +13688,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ShowVerticalBorder? ShowVerticalBorder
+        public DocumentFormat.OpenXml.Drawing.Charts.ShowVerticalBorder? ShowVerticalBorder
         {
-            get => GetElement<ShowVerticalBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ShowVerticalBorder>();
             set => SetElement(value);
         }
 
@@ -13701,9 +13701,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ShowOutlineBorder? ShowOutlineBorder
+        public DocumentFormat.OpenXml.Drawing.Charts.ShowOutlineBorder? ShowOutlineBorder
         {
-            get => GetElement<ShowOutlineBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ShowOutlineBorder>();
             set => SetElement(value);
         }
 
@@ -13714,9 +13714,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ShowKeys? ShowKeys
+        public DocumentFormat.OpenXml.Drawing.Charts.ShowKeys? ShowKeys
         {
-            get => GetElement<ShowKeys>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ShowKeys>();
             set => SetElement(value);
         }
 
@@ -13727,9 +13727,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -13740,9 +13740,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TextProperties? TextProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
         {
-            get => GetElement<TextProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
             set => SetElement(value);
         }
 
@@ -13753,9 +13753,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -13947,9 +13947,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NumericValue? NumericValue
+        public DocumentFormat.OpenXml.Drawing.Charts.NumericValue? NumericValue
         {
-            get => GetElement<NumericValue>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumericValue>();
             set => SetElement(value);
         }
 
@@ -16728,9 +16728,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public GapWidth? GapWidth
+        public DocumentFormat.OpenXml.Drawing.Charts.GapWidth? GapWidth
         {
-            get => GetElement<GapWidth>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.GapWidth>();
             set => SetElement(value);
         }
 
@@ -16741,9 +16741,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public UpBars? UpBars
+        public DocumentFormat.OpenXml.Drawing.Charts.UpBars? UpBars
         {
-            get => GetElement<UpBars>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.UpBars>();
             set => SetElement(value);
         }
 
@@ -16754,9 +16754,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DownBars? DownBars
+        public DocumentFormat.OpenXml.Drawing.Charts.DownBars? DownBars
         {
-            get => GetElement<DownBars>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.DownBars>();
             set => SetElement(value);
         }
 
@@ -16767,9 +16767,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -17220,9 +17220,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PointCount? PointCount
+        public DocumentFormat.OpenXml.Drawing.Charts.PointCount? PointCount
         {
-            get => GetElement<PointCount>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
             set => SetElement(value);
         }
 
@@ -17502,9 +17502,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Index? Index
+        public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
-            get => GetElement<Index>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
             set => SetElement(value);
         }
 
@@ -17515,9 +17515,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public InvertIfNegative? InvertIfNegative
+        public DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative? InvertIfNegative
         {
-            get => GetElement<InvertIfNegative>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>();
             set => SetElement(value);
         }
 
@@ -17528,9 +17528,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Marker? Marker
+        public DocumentFormat.OpenXml.Drawing.Charts.Marker? Marker
         {
-            get => GetElement<Marker>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
             set => SetElement(value);
         }
 
@@ -17541,9 +17541,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Bubble3D? Bubble3D
+        public DocumentFormat.OpenXml.Drawing.Charts.Bubble3D? Bubble3D
         {
-            get => GetElement<Bubble3D>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
             set => SetElement(value);
         }
 
@@ -17554,9 +17554,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Explosion? Explosion
+        public DocumentFormat.OpenXml.Drawing.Charts.Explosion? Explosion
         {
-            get => GetElement<Explosion>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Explosion>();
             set => SetElement(value);
         }
 
@@ -17567,9 +17567,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -17580,9 +17580,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PictureOptions? PictureOptions
+        public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
-            get => GetElement<PictureOptions>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
             set => SetElement(value);
         }
 
@@ -17593,9 +17593,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -17701,9 +17701,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TrendlineName? TrendlineName
+        public DocumentFormat.OpenXml.Drawing.Charts.TrendlineName? TrendlineName
         {
-            get => GetElement<TrendlineName>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TrendlineName>();
             set => SetElement(value);
         }
 
@@ -17714,9 +17714,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -17727,9 +17727,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TrendlineType? TrendlineType
+        public DocumentFormat.OpenXml.Drawing.Charts.TrendlineType? TrendlineType
         {
-            get => GetElement<TrendlineType>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TrendlineType>();
             set => SetElement(value);
         }
 
@@ -17740,9 +17740,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PolynomialOrder? PolynomialOrder
+        public DocumentFormat.OpenXml.Drawing.Charts.PolynomialOrder? PolynomialOrder
         {
-            get => GetElement<PolynomialOrder>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PolynomialOrder>();
             set => SetElement(value);
         }
 
@@ -17753,9 +17753,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Period? Period
+        public DocumentFormat.OpenXml.Drawing.Charts.Period? Period
         {
-            get => GetElement<Period>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Period>();
             set => SetElement(value);
         }
 
@@ -17766,9 +17766,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Forward? Forward
+        public DocumentFormat.OpenXml.Drawing.Charts.Forward? Forward
         {
-            get => GetElement<Forward>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Forward>();
             set => SetElement(value);
         }
 
@@ -17779,9 +17779,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Backward? Backward
+        public DocumentFormat.OpenXml.Drawing.Charts.Backward? Backward
         {
-            get => GetElement<Backward>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Backward>();
             set => SetElement(value);
         }
 
@@ -17792,9 +17792,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Intercept? Intercept
+        public DocumentFormat.OpenXml.Drawing.Charts.Intercept? Intercept
         {
-            get => GetElement<Intercept>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Intercept>();
             set => SetElement(value);
         }
 
@@ -17805,9 +17805,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DisplayRSquaredValue? DisplayRSquaredValue
+        public DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue? DisplayRSquaredValue
         {
-            get => GetElement<DisplayRSquaredValue>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue>();
             set => SetElement(value);
         }
 
@@ -17818,9 +17818,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DisplayEquation? DisplayEquation
+        public DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation? DisplayEquation
         {
-            get => GetElement<DisplayEquation>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation>();
             set => SetElement(value);
         }
 
@@ -17831,9 +17831,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TrendlineLabel? TrendlineLabel
+        public DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel? TrendlineLabel
         {
-            get => GetElement<TrendlineLabel>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel>();
             set => SetElement(value);
         }
 
@@ -17844,9 +17844,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -17943,9 +17943,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ErrorDirection? ErrorDirection
+        public DocumentFormat.OpenXml.Drawing.Charts.ErrorDirection? ErrorDirection
         {
-            get => GetElement<ErrorDirection>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ErrorDirection>();
             set => SetElement(value);
         }
 
@@ -17956,9 +17956,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ErrorBarType? ErrorBarType
+        public DocumentFormat.OpenXml.Drawing.Charts.ErrorBarType? ErrorBarType
         {
-            get => GetElement<ErrorBarType>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarType>();
             set => SetElement(value);
         }
 
@@ -17969,9 +17969,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ErrorBarValueType? ErrorBarValueType
+        public DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValueType? ErrorBarValueType
         {
-            get => GetElement<ErrorBarValueType>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValueType>();
             set => SetElement(value);
         }
 
@@ -17982,9 +17982,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NoEndCap? NoEndCap
+        public DocumentFormat.OpenXml.Drawing.Charts.NoEndCap? NoEndCap
         {
-            get => GetElement<NoEndCap>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NoEndCap>();
             set => SetElement(value);
         }
 
@@ -17995,9 +17995,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Plus? Plus
+        public DocumentFormat.OpenXml.Drawing.Charts.Plus? Plus
         {
-            get => GetElement<Plus>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Plus>();
             set => SetElement(value);
         }
 
@@ -18008,9 +18008,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Minus? Minus
+        public DocumentFormat.OpenXml.Drawing.Charts.Minus? Minus
         {
-            get => GetElement<Minus>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Minus>();
             set => SetElement(value);
         }
 
@@ -18021,9 +18021,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ErrorBarValue? ErrorBarValue
+        public DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue? ErrorBarValue
         {
-            get => GetElement<ErrorBarValue>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue>();
             set => SetElement(value);
         }
 
@@ -18034,9 +18034,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -18047,9 +18047,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -18266,9 +18266,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MultiLevelStringReference? MultiLevelStringReference
+        public DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference? MultiLevelStringReference
         {
-            get => GetElement<MultiLevelStringReference>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference>();
             set => SetElement(value);
         }
 
@@ -18279,9 +18279,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NumberReference? NumberReference
+        public DocumentFormat.OpenXml.Drawing.Charts.NumberReference? NumberReference
         {
-            get => GetElement<NumberReference>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberReference>();
             set => SetElement(value);
         }
 
@@ -18292,9 +18292,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NumberLiteral? NumberLiteral
+        public DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral? NumberLiteral
         {
-            get => GetElement<NumberLiteral>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral>();
             set => SetElement(value);
         }
 
@@ -18305,9 +18305,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public StringReference? StringReference
+        public DocumentFormat.OpenXml.Drawing.Charts.StringReference? StringReference
         {
-            get => GetElement<StringReference>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringReference>();
             set => SetElement(value);
         }
 
@@ -18318,9 +18318,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public StringLiteral? StringLiteral
+        public DocumentFormat.OpenXml.Drawing.Charts.StringLiteral? StringLiteral
         {
-            get => GetElement<StringLiteral>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringLiteral>();
             set => SetElement(value);
         }
     }
@@ -19333,9 +19333,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Index? Index
+        public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
-            get => GetElement<Index>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
             set => SetElement(value);
         }
 
@@ -19346,9 +19346,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Order? Order
+        public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
         {
-            get => GetElement<Order>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
             set => SetElement(value);
         }
 
@@ -19359,9 +19359,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public SeriesText? SeriesText
+        public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
         {
-            get => GetElement<SeriesText>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
             set => SetElement(value);
         }
 
@@ -19372,9 +19372,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -19385,9 +19385,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Marker? Marker
+        public DocumentFormat.OpenXml.Drawing.Charts.Marker? Marker
         {
-            get => GetElement<Marker>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
             set => SetElement(value);
         }
 
@@ -19606,9 +19606,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Index? Index
+        public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
-            get => GetElement<Index>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
             set => SetElement(value);
         }
 
@@ -19619,9 +19619,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Order? Order
+        public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
         {
-            get => GetElement<Order>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
             set => SetElement(value);
         }
 
@@ -19632,9 +19632,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public SeriesText? SeriesText
+        public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
         {
-            get => GetElement<SeriesText>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
             set => SetElement(value);
         }
 
@@ -19645,9 +19645,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -19658,9 +19658,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PictureOptions? PictureOptions
+        public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
-            get => GetElement<PictureOptions>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
             set => SetElement(value);
         }
 
@@ -19671,9 +19671,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Marker? Marker
+        public DocumentFormat.OpenXml.Drawing.Charts.Marker? Marker
         {
-            get => GetElement<Marker>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
             set => SetElement(value);
         }
 
@@ -20152,9 +20152,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100L), MaxInclusi
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Index? Index
+        public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
-            get => GetElement<Index>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
             set => SetElement(value);
         }
 
@@ -20165,9 +20165,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100L), MaxInclusi
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Order? Order
+        public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
         {
-            get => GetElement<Order>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
             set => SetElement(value);
         }
 
@@ -20178,9 +20178,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100L), MaxInclusi
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public SeriesText? SeriesText
+        public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
         {
-            get => GetElement<SeriesText>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
             set => SetElement(value);
         }
 
@@ -20191,9 +20191,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100L), MaxInclusi
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -20204,9 +20204,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100L), MaxInclusi
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PictureOptions? PictureOptions
+        public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
-            get => GetElement<PictureOptions>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
             set => SetElement(value);
         }
 
@@ -20217,9 +20217,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100L), MaxInclusi
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public InvertIfNegative? InvertIfNegative
+        public DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative? InvertIfNegative
         {
-            get => GetElement<InvertIfNegative>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>();
             set => SetElement(value);
         }
 
@@ -21778,9 +21778,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PivotTableName? PivotTableName
+        public DocumentFormat.OpenXml.Drawing.Charts.PivotTableName? PivotTableName
         {
-            get => GetElement<PivotTableName>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PivotTableName>();
             set => SetElement(value);
         }
 
@@ -21791,9 +21791,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public FormatId? FormatId
+        public DocumentFormat.OpenXml.Drawing.Charts.FormatId? FormatId
         {
-            get => GetElement<FormatId>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.FormatId>();
             set => SetElement(value);
         }
 
@@ -21804,9 +21804,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -21891,9 +21891,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartObject? ChartObject
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartObject? ChartObject
         {
-            get => GetElement<ChartObject>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartObject>();
             set => SetElement(value);
         }
 
@@ -21904,9 +21904,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Data? Data
+        public DocumentFormat.OpenXml.Drawing.Charts.Data? Data
         {
-            get => GetElement<Data>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Data>();
             set => SetElement(value);
         }
 
@@ -21917,9 +21917,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Formatting? Formatting
+        public DocumentFormat.OpenXml.Drawing.Charts.Formatting? Formatting
         {
-            get => GetElement<Formatting>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Formatting>();
             set => SetElement(value);
         }
 
@@ -21930,9 +21930,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Selection? Selection
+        public DocumentFormat.OpenXml.Drawing.Charts.Selection? Selection
         {
-            get => GetElement<Selection>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Selection>();
             set => SetElement(value);
         }
 
@@ -21943,9 +21943,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public UserInterface? UserInterface
+        public DocumentFormat.OpenXml.Drawing.Charts.UserInterface? UserInterface
         {
-            get => GetElement<UserInterface>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.UserInterface>();
             set => SetElement(value);
         }
 
@@ -22054,9 +22054,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Title? Title
+        public DocumentFormat.OpenXml.Drawing.Charts.Title? Title
         {
-            get => GetElement<Title>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Title>();
             set => SetElement(value);
         }
 
@@ -22067,9 +22067,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public AutoTitleDeleted? AutoTitleDeleted
+        public DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted? AutoTitleDeleted
         {
-            get => GetElement<AutoTitleDeleted>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted>();
             set => SetElement(value);
         }
 
@@ -22080,9 +22080,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PivotFormats? PivotFormats
+        public DocumentFormat.OpenXml.Drawing.Charts.PivotFormats? PivotFormats
         {
-            get => GetElement<PivotFormats>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PivotFormats>();
             set => SetElement(value);
         }
 
@@ -22093,9 +22093,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public View3D? View3D
+        public DocumentFormat.OpenXml.Drawing.Charts.View3D? View3D
         {
-            get => GetElement<View3D>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.View3D>();
             set => SetElement(value);
         }
 
@@ -22106,9 +22106,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Floor? Floor
+        public DocumentFormat.OpenXml.Drawing.Charts.Floor? Floor
         {
-            get => GetElement<Floor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Floor>();
             set => SetElement(value);
         }
 
@@ -22119,9 +22119,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public SideWall? SideWall
+        public DocumentFormat.OpenXml.Drawing.Charts.SideWall? SideWall
         {
-            get => GetElement<SideWall>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SideWall>();
             set => SetElement(value);
         }
 
@@ -22132,9 +22132,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public BackWall? BackWall
+        public DocumentFormat.OpenXml.Drawing.Charts.BackWall? BackWall
         {
-            get => GetElement<BackWall>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.BackWall>();
             set => SetElement(value);
         }
 
@@ -22145,9 +22145,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PlotArea? PlotArea
+        public DocumentFormat.OpenXml.Drawing.Charts.PlotArea? PlotArea
         {
-            get => GetElement<PlotArea>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PlotArea>();
             set => SetElement(value);
         }
 
@@ -22158,9 +22158,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Legend? Legend
+        public DocumentFormat.OpenXml.Drawing.Charts.Legend? Legend
         {
-            get => GetElement<Legend>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Legend>();
             set => SetElement(value);
         }
 
@@ -22171,9 +22171,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PlotVisibleOnly? PlotVisibleOnly
+        public DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly? PlotVisibleOnly
         {
-            get => GetElement<PlotVisibleOnly>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly>();
             set => SetElement(value);
         }
 
@@ -22184,9 +22184,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DisplayBlanksAs? DisplayBlanksAs
+        public DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs? DisplayBlanksAs
         {
-            get => GetElement<DisplayBlanksAs>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs>();
             set => SetElement(value);
         }
 
@@ -22197,9 +22197,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ShowDataLabelsOverMaximum? ShowDataLabelsOverMaximum
+        public DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum? ShowDataLabelsOverMaximum
         {
-            get => GetElement<ShowDataLabelsOverMaximum>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum>();
             set => SetElement(value);
         }
 
@@ -22210,9 +22210,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartExtensionList? ChartExtensionList
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList? ChartExtensionList
         {
-            get => GetElement<ChartExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList>();
             set => SetElement(value);
         }
 
@@ -22310,9 +22310,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public AutoUpdate? AutoUpdate
+        public DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate? AutoUpdate
         {
-            get => GetElement<AutoUpdate>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate>();
             set => SetElement(value);
         }
 
@@ -22394,9 +22394,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public HeaderFooter? HeaderFooter
+        public DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter? HeaderFooter
         {
-            get => GetElement<HeaderFooter>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter>();
             set => SetElement(value);
         }
 
@@ -22407,9 +22407,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PageMargins? PageMargins
+        public DocumentFormat.OpenXml.Drawing.Charts.PageMargins? PageMargins
         {
-            get => GetElement<PageMargins>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PageMargins>();
             set => SetElement(value);
         }
 
@@ -22420,9 +22420,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PageSetup? PageSetup
+        public DocumentFormat.OpenXml.Drawing.Charts.PageSetup? PageSetup
         {
-            get => GetElement<PageSetup>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PageSetup>();
             set => SetElement(value);
         }
 
@@ -22433,9 +22433,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public LegacyDrawingHeaderFooter? LegacyDrawingHeaderFooter
+        public DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter? LegacyDrawingHeaderFooter
         {
-            get => GetElement<LegacyDrawingHeaderFooter>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter>();
             set => SetElement(value);
         }
 
@@ -22817,9 +22817,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public RotateX? RotateX
+        public DocumentFormat.OpenXml.Drawing.Charts.RotateX? RotateX
         {
-            get => GetElement<RotateX>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.RotateX>();
             set => SetElement(value);
         }
 
@@ -22830,9 +22830,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public HeightPercent? HeightPercent
+        public DocumentFormat.OpenXml.Drawing.Charts.HeightPercent? HeightPercent
         {
-            get => GetElement<HeightPercent>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.HeightPercent>();
             set => SetElement(value);
         }
 
@@ -22843,9 +22843,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public RotateY? RotateY
+        public DocumentFormat.OpenXml.Drawing.Charts.RotateY? RotateY
         {
-            get => GetElement<RotateY>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.RotateY>();
             set => SetElement(value);
         }
 
@@ -22856,9 +22856,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DepthPercent? DepthPercent
+        public DocumentFormat.OpenXml.Drawing.Charts.DepthPercent? DepthPercent
         {
-            get => GetElement<DepthPercent>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.DepthPercent>();
             set => SetElement(value);
         }
 
@@ -22869,9 +22869,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public RightAngleAxes? RightAngleAxes
+        public DocumentFormat.OpenXml.Drawing.Charts.RightAngleAxes? RightAngleAxes
         {
-            get => GetElement<RightAngleAxes>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.RightAngleAxes>();
             set => SetElement(value);
         }
 
@@ -22882,9 +22882,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Perspective? Perspective
+        public DocumentFormat.OpenXml.Drawing.Charts.Perspective? Perspective
         {
-            get => GetElement<Perspective>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Perspective>();
             set => SetElement(value);
         }
 
@@ -22895,9 +22895,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -23169,9 +23169,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Thickness? Thickness
+        public DocumentFormat.OpenXml.Drawing.Charts.Thickness? Thickness
         {
-            get => GetElement<Thickness>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Thickness>();
             set => SetElement(value);
         }
 
@@ -23182,9 +23182,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -23195,9 +23195,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PictureOptions? PictureOptions
+        public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
-            get => GetElement<PictureOptions>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
             set => SetElement(value);
         }
 
@@ -23208,9 +23208,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
             set => SetElement(value);
         }
     }
@@ -23355,9 +23355,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Layout? Layout
+        public DocumentFormat.OpenXml.Drawing.Charts.Layout? Layout
         {
-            get => GetElement<Layout>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
             set => SetElement(value);
         }
 
@@ -23448,9 +23448,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public LegendPosition? LegendPosition
+        public DocumentFormat.OpenXml.Drawing.Charts.LegendPosition? LegendPosition
         {
-            get => GetElement<LegendPosition>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.LegendPosition>();
             set => SetElement(value);
         }
 

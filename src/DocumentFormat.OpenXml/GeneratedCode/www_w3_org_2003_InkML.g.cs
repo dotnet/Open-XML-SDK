@@ -1894,9 +1894,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public TraceFormat? TraceFormat
+        public DocumentFormat.OpenXml.InkML.TraceFormat? TraceFormat
         {
-            get => GetElement<TraceFormat>();
+            get => GetElement<DocumentFormat.OpenXml.InkML.TraceFormat>();
             set => SetElement(value);
         }
 
@@ -2196,9 +2196,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public TraceFormat? TraceFormat
+        public DocumentFormat.OpenXml.InkML.TraceFormat? TraceFormat
         {
-            get => GetElement<TraceFormat>();
+            get => GetElement<DocumentFormat.OpenXml.InkML.TraceFormat>();
             set => SetElement(value);
         }
 
@@ -2209,9 +2209,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public SampleRate? SampleRate
+        public DocumentFormat.OpenXml.InkML.SampleRate? SampleRate
         {
-            get => GetElement<SampleRate>();
+            get => GetElement<DocumentFormat.OpenXml.InkML.SampleRate>();
             set => SetElement(value);
         }
 
@@ -2222,9 +2222,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public Latency? Latency
+        public DocumentFormat.OpenXml.InkML.Latency? Latency
         {
-            get => GetElement<Latency>();
+            get => GetElement<DocumentFormat.OpenXml.InkML.Latency>();
             set => SetElement(value);
         }
 
@@ -2235,9 +2235,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public ActiveArea? ActiveArea
+        public DocumentFormat.OpenXml.InkML.ActiveArea? ActiveArea
         {
-            get => GetElement<ActiveArea>();
+            get => GetElement<DocumentFormat.OpenXml.InkML.ActiveArea>();
             set => SetElement(value);
         }
 
@@ -3201,9 +3201,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public Canvas? Canvas
+        public DocumentFormat.OpenXml.InkML.Canvas? Canvas
         {
-            get => GetElement<Canvas>();
+            get => GetElement<DocumentFormat.OpenXml.InkML.Canvas>();
             set => SetElement(value);
         }
 
@@ -3214,9 +3214,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public CanvasTransform? CanvasTransform
+        public DocumentFormat.OpenXml.InkML.CanvasTransform? CanvasTransform
         {
-            get => GetElement<CanvasTransform>();
+            get => GetElement<DocumentFormat.OpenXml.InkML.CanvasTransform>();
             set => SetElement(value);
         }
 
@@ -3227,9 +3227,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public TraceFormat? TraceFormat
+        public DocumentFormat.OpenXml.InkML.TraceFormat? TraceFormat
         {
-            get => GetElement<TraceFormat>();
+            get => GetElement<DocumentFormat.OpenXml.InkML.TraceFormat>();
             set => SetElement(value);
         }
 
@@ -3240,9 +3240,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public InkSource? InkSource
+        public DocumentFormat.OpenXml.InkML.InkSource? InkSource
         {
-            get => GetElement<InkSource>();
+            get => GetElement<DocumentFormat.OpenXml.InkML.InkSource>();
             set => SetElement(value);
         }
 
@@ -3253,9 +3253,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public Brush? Brush
+        public DocumentFormat.OpenXml.InkML.Brush? Brush
         {
-            get => GetElement<Brush>();
+            get => GetElement<DocumentFormat.OpenXml.InkML.Brush>();
             set => SetElement(value);
         }
 
@@ -3266,9 +3266,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public Timestamp? Timestamp
+        public DocumentFormat.OpenXml.InkML.Timestamp? Timestamp
         {
-            get => GetElement<Timestamp>();
+            get => GetElement<DocumentFormat.OpenXml.InkML.Timestamp>();
             set => SetElement(value);
         }
 

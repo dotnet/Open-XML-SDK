@@ -146,9 +146,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:thm15 = http://schemas.microsoft.com/office/thememl/2012/main
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -398,9 +398,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:thm15 = http://schemas.microsoft.com/office/thememl/2012/main
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 

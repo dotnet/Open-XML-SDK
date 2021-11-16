@@ -199,9 +199,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public EffectExtent? EffectExtent
+        public DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent? EffectExtent
         {
-            get => GetElement<EffectExtent>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent>();
             set => SetElement(value);
         }
 
@@ -330,9 +330,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public WrapPolygon? WrapPolygon
+        public DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon? WrapPolygon
         {
-            get => GetElement<WrapPolygon>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon>();
             set => SetElement(value);
         }
 
@@ -461,9 +461,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public WrapPolygon? WrapPolygon
+        public DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon? WrapPolygon
         {
-            get => GetElement<WrapPolygon>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon>();
             set => SetElement(value);
         }
 
@@ -571,9 +571,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public EffectExtent? EffectExtent
+        public DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent? EffectExtent
         {
-            get => GetElement<EffectExtent>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent>();
             set => SetElement(value);
         }
 
@@ -775,9 +775,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public Extent? Extent
+        public DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent? Extent
         {
-            get => GetElement<Extent>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent>();
             set => SetElement(value);
         }
 
@@ -788,9 +788,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public EffectExtent? EffectExtent
+        public DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent? EffectExtent
         {
-            get => GetElement<EffectExtent>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent>();
             set => SetElement(value);
         }
 
@@ -801,9 +801,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public DocProperties? DocProperties
+        public DocumentFormat.OpenXml.Drawing.Wordprocessing.DocProperties? DocProperties
         {
-            get => GetElement<DocProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.DocProperties>();
             set => SetElement(value);
         }
 
@@ -814,9 +814,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public NonVisualGraphicFrameDrawingProperties? NonVisualGraphicFrameDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.Wordprocessing.NonVisualGraphicFrameDrawingProperties? NonVisualGraphicFrameDrawingProperties
         {
-            get => GetElement<NonVisualGraphicFrameDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.NonVisualGraphicFrameDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -1204,9 +1204,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public SimplePosition? SimplePosition
+        public DocumentFormat.OpenXml.Drawing.Wordprocessing.SimplePosition? SimplePosition
         {
-            get => GetElement<SimplePosition>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.SimplePosition>();
             set => SetElement(value);
         }
 
@@ -1217,9 +1217,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public HorizontalPosition? HorizontalPosition
+        public DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalPosition? HorizontalPosition
         {
-            get => GetElement<HorizontalPosition>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalPosition>();
             set => SetElement(value);
         }
 
@@ -1230,9 +1230,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public VerticalPosition? VerticalPosition
+        public DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalPosition? VerticalPosition
         {
-            get => GetElement<VerticalPosition>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalPosition>();
             set => SetElement(value);
         }
 
@@ -1243,9 +1243,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public Extent? Extent
+        public DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent? Extent
         {
-            get => GetElement<Extent>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent>();
             set => SetElement(value);
         }
 
@@ -1256,9 +1256,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public EffectExtent? EffectExtent
+        public DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent? EffectExtent
         {
-            get => GetElement<EffectExtent>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent>();
             set => SetElement(value);
         }
 
@@ -1608,9 +1608,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public StartPoint? StartPoint
+        public DocumentFormat.OpenXml.Drawing.Wordprocessing.StartPoint? StartPoint
         {
-            get => GetElement<StartPoint>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.StartPoint>();
             set => SetElement(value);
         }
 
@@ -1714,9 +1714,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public HorizontalAlignment? HorizontalAlignment
+        public DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignment? HorizontalAlignment
         {
-            get => GetElement<HorizontalAlignment>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignment>();
             set => SetElement(value);
         }
 
@@ -1727,9 +1727,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public PositionOffset? PositionOffset
+        public DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset? PositionOffset
         {
-            get => GetElement<PositionOffset>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset>();
             set => SetElement(value);
         }
 
@@ -1846,9 +1846,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public VerticalAlignment? VerticalAlignment
+        public DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignment? VerticalAlignment
         {
-            get => GetElement<VerticalAlignment>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignment>();
             set => SetElement(value);
         }
 
@@ -1859,9 +1859,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public PositionOffset? PositionOffset
+        public DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset? PositionOffset
         {
-            get => GetElement<PositionOffset>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset>();
             set => SetElement(value);
         }
 
