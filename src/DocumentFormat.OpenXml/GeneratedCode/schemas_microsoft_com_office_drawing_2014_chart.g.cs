@@ -705,9 +705,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c16 = http://schemas.microsoft.com/office/drawing/2014/chart
         /// </remark>
-        public BooleanFalse? BooleanFalse
+        public DocumentFormat.OpenXml.Office2016.Drawing.Charts.BooleanFalse? BooleanFalse
         {
-            get => GetElement<BooleanFalse>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.BooleanFalse>();
             set => SetElement(value);
         }
 
@@ -959,9 +959,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c16 = http://schemas.microsoft.com/office/drawing/2014/chart
         /// </remark>
-        public UniqueIdChartUniqueID? UniqueIdChartUniqueID
+        public DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID? UniqueIdChartUniqueID
         {
-            get => GetElement<UniqueIdChartUniqueID>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID>();
             set => SetElement(value);
         }
 
@@ -972,9 +972,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c16 = http://schemas.microsoft.com/office/drawing/2014/chart
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Office2016.Drawing.Charts.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -985,9 +985,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c16 = http://schemas.microsoft.com/office/drawing/2014/chart
         /// </remark>
-        public UnsignedIntegerType? UnsignedIntegerType
+        public DocumentFormat.OpenXml.Office2016.Drawing.Charts.UnsignedIntegerType? UnsignedIntegerType
         {
-            get => GetElement<UnsignedIntegerType>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UnsignedIntegerType>();
             set => SetElement(value);
         }
 
@@ -998,9 +998,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c16 = http://schemas.microsoft.com/office/drawing/2014/chart
         /// </remark>
-        public InvertIfNegativeBoolean? InvertIfNegativeBoolean
+        public DocumentFormat.OpenXml.Office2016.Drawing.Charts.InvertIfNegativeBoolean? InvertIfNegativeBoolean
         {
-            get => GetElement<InvertIfNegativeBoolean>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.InvertIfNegativeBoolean>();
             set => SetElement(value);
         }
 
@@ -1011,9 +1011,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c16 = http://schemas.microsoft.com/office/drawing/2014/chart
         /// </remark>
-        public Bubble3DBoolean? Bubble3DBoolean
+        public DocumentFormat.OpenXml.Office2016.Drawing.Charts.Bubble3DBoolean? Bubble3DBoolean
         {
-            get => GetElement<Bubble3DBoolean>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.Bubble3DBoolean>();
             set => SetElement(value);
         }
 
@@ -1024,9 +1024,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c16 = http://schemas.microsoft.com/office/drawing/2014/chart
         /// </remark>
-        public Marker? Marker
+        public DocumentFormat.OpenXml.Office2016.Drawing.Charts.Marker? Marker
         {
-            get => GetElement<Marker>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.Marker>();
             set => SetElement(value);
         }
 
@@ -1037,9 +1037,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c16 = http://schemas.microsoft.com/office/drawing/2014/chart
         /// </remark>
-        public DLbl? DLbl
+        public DocumentFormat.OpenXml.Office2016.Drawing.Charts.DLbl? DLbl
         {
-            get => GetElement<DLbl>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.DLbl>();
             set => SetElement(value);
         }
 
@@ -1211,9 +1211,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c16 = http://schemas.microsoft.com/office/drawing/2014/chart
         /// </remark>
-        public NumberDataType? NumberDataType
+        public DocumentFormat.OpenXml.Office2016.Drawing.Charts.NumberDataType? NumberDataType
         {
-            get => GetElement<NumberDataType>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.NumberDataType>();
             set => SetElement(value);
         }
 
@@ -1369,9 +1369,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c16 = http://schemas.microsoft.com/office/drawing/2014/chart
         /// </remark>
-        public StringDataType? StringDataType
+        public DocumentFormat.OpenXml.Office2016.Drawing.Charts.StringDataType? StringDataType
         {
-            get => GetElement<StringDataType>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.StringDataType>();
             set => SetElement(value);
         }
 
@@ -1527,9 +1527,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c16 = http://schemas.microsoft.com/office/drawing/2014/chart
         /// </remark>
-        public MultiLvlStrData? MultiLvlStrData
+        public DocumentFormat.OpenXml.Office2016.Drawing.Charts.MultiLvlStrData? MultiLvlStrData
         {
-            get => GetElement<MultiLvlStrData>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.MultiLvlStrData>();
             set => SetElement(value);
         }
 
@@ -1743,9 +1743,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c16 = http://schemas.microsoft.com/office/drawing/2014/chart
         /// </remark>
-        public XsdunsignedInt? XsdunsignedInt
+        public DocumentFormat.OpenXml.Office2016.Drawing.Charts.XsdunsignedInt? XsdunsignedInt
         {
-            get => GetElement<XsdunsignedInt>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.XsdunsignedInt>();
             set => SetElement(value);
         }
 
@@ -1756,9 +1756,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c16 = http://schemas.microsoft.com/office/drawing/2014/chart
         /// </remark>
-        public UniqueID? UniqueID
+        public DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueID? UniqueID
         {
-            get => GetElement<UniqueID>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueID>();
             set => SetElement(value);
         }
 

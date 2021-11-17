@@ -529,9 +529,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:xnsv = http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews
         /// </remark>
-        public DifferentialFormatType? DifferentialFormatType
+        public DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType? DifferentialFormatType
         {
-            get => GetElement<DifferentialFormatType>();
+            get => GetElement<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType>();
             set => SetElement(value);
         }
 
@@ -1187,9 +1187,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:xnsv = http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews
         /// </remark>
-        public DifferentialFormatType? DifferentialFormatType
+        public DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType? DifferentialFormatType
         {
-            get => GetElement<DifferentialFormatType>();
+            get => GetElement<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType>();
             set => SetElement(value);
         }
 

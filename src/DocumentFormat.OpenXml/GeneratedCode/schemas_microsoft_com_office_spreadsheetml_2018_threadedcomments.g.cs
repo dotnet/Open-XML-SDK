@@ -351,9 +351,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:xltc = http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -616,9 +616,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:xltc = http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments
         /// </remark>
-        public ThreadedCommentText? ThreadedCommentText
+        public DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentText? ThreadedCommentText
         {
-            get => GetElement<ThreadedCommentText>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentText>();
             set => SetElement(value);
         }
 
@@ -629,9 +629,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:xltc = http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments
         /// </remark>
-        public ThreadedCommentMentions? ThreadedCommentMentions
+        public DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions? ThreadedCommentMentions
         {
-            get => GetElement<ThreadedCommentMentions>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions>();
             set => SetElement(value);
         }
 
@@ -642,9 +642,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:xltc = http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList>();
             set => SetElement(value);
         }
 

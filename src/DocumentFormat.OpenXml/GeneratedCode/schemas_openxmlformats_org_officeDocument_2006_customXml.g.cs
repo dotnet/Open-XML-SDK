@@ -104,9 +104,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:ds = http://schemas.openxmlformats.org/officeDocument/2006/customXml
         /// </remark>
-        public SchemaReferences? SchemaReferences
+        public DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences? SchemaReferences
         {
-            get => GetElement<SchemaReferences>();
+            get => GetElement<DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences>();
             set => SetElement(value);
         }
 

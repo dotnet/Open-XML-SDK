@@ -100,9 +100,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ChartData? ChartData
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartData? ChartData
         {
-            get => GetElement<ChartData>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartData>();
             set => SetElement(value);
         }
 
@@ -113,9 +113,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public Chart? Chart
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Chart? Chart
         {
-            get => GetElement<Chart>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Chart>();
             set => SetElement(value);
         }
 
@@ -126,9 +126,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -139,9 +139,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public TxPrTextBody? TxPrTextBody
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody? TxPrTextBody
         {
-            get => GetElement<TxPrTextBody>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
             set => SetElement(value);
         }
 
@@ -152,9 +152,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ColorMappingType? ColorMappingType
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ColorMappingType? ColorMappingType
         {
-            get => GetElement<ColorMappingType>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ColorMappingType>();
             set => SetElement(value);
         }
 
@@ -165,9 +165,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public PrintSettings? PrintSettings
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PrintSettings? PrintSettings
         {
-            get => GetElement<PrintSettings>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PrintSettings>();
             set => SetElement(value);
         }
 
@@ -178,9 +178,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -1227,9 +1227,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public TextData? TextData
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TextData? TextData
         {
-            get => GetElement<TextData>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TextData>();
             set => SetElement(value);
         }
 
@@ -1240,9 +1240,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public RichTextBody? RichTextBody
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.RichTextBody? RichTextBody
         {
-            get => GetElement<RichTextBody>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.RichTextBody>();
             set => SetElement(value);
         }
 
@@ -1482,9 +1482,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public Text? Text
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text? Text
         {
-            get => GetElement<Text>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text>();
             set => SetElement(value);
         }
 
@@ -1495,9 +1495,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -1508,9 +1508,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public TxPrTextBody? TxPrTextBody
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody? TxPrTextBody
         {
-            get => GetElement<TxPrTextBody>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
             set => SetElement(value);
         }
 
@@ -1521,9 +1521,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -1784,9 +1784,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public Text? Text
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text? Text
         {
-            get => GetElement<Text>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text>();
             set => SetElement(value);
         }
 
@@ -1797,9 +1797,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -1810,9 +1810,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public TxPrTextBody? TxPrTextBody
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody? TxPrTextBody
         {
-            get => GetElement<TxPrTextBody>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
             set => SetElement(value);
         }
 
@@ -1823,9 +1823,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -1920,9 +1920,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public AxisUnitsLabel? AxisUnitsLabel
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnitsLabel? AxisUnitsLabel
         {
-            get => GetElement<AxisUnitsLabel>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnitsLabel>();
             set => SetElement(value);
         }
 
@@ -1933,9 +1933,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -2130,9 +2130,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -2143,9 +2143,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             set => SetElement(value);
         }
     }
@@ -2349,9 +2349,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             set => SetElement(value);
         }
     }
@@ -2422,9 +2422,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -2866,9 +2866,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public Xsddouble? Xsddouble
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Xsddouble? Xsddouble
         {
-            get => GetElement<Xsddouble>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Xsddouble>();
             set => SetElement(value);
         }
 
@@ -2879,9 +2879,9 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public BinCountXsdunsignedInt? BinCountXsdunsignedInt
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.BinCountXsdunsignedInt? BinCountXsdunsignedInt
         {
-            get => GetElement<BinCountXsdunsignedInt>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.BinCountXsdunsignedInt>();
             set => SetElement(value);
         }
 
@@ -3525,9 +3525,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public NumberFormat? NumberFormat
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat? NumberFormat
         {
-            get => GetElement<NumberFormat>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat>();
             set => SetElement(value);
         }
 
@@ -3538,9 +3538,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -3551,9 +3551,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public TxPrTextBody? TxPrTextBody
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody? TxPrTextBody
         {
-            get => GetElement<TxPrTextBody>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
             set => SetElement(value);
         }
 
@@ -3564,9 +3564,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public DataLabelVisibilities? DataLabelVisibilities
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelVisibilities? DataLabelVisibilities
         {
-            get => GetElement<DataLabelVisibilities>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelVisibilities>();
             set => SetElement(value);
         }
 
@@ -3577,9 +3577,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public SeparatorXsdstring? SeparatorXsdstring
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeparatorXsdstring? SeparatorXsdstring
         {
-            get => GetElement<SeparatorXsdstring>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeparatorXsdstring>();
             set => SetElement(value);
         }
 
@@ -3590,9 +3590,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -3739,9 +3739,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -3752,9 +3752,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -3867,9 +3867,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public NumberFormat? NumberFormat
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat? NumberFormat
         {
-            get => GetElement<NumberFormat>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat>();
             set => SetElement(value);
         }
 
@@ -3880,9 +3880,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -3893,9 +3893,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public TxPrTextBody? TxPrTextBody
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody? TxPrTextBody
         {
-            get => GetElement<TxPrTextBody>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
             set => SetElement(value);
         }
 
@@ -3906,9 +3906,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public DataLabelVisibilities? DataLabelVisibilities
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelVisibilities? DataLabelVisibilities
         {
-            get => GetElement<DataLabelVisibilities>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelVisibilities>();
             set => SetElement(value);
         }
 
@@ -3919,9 +3919,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public SeparatorXsdstring? SeparatorXsdstring
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeparatorXsdstring? SeparatorXsdstring
         {
-            get => GetElement<SeparatorXsdstring>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeparatorXsdstring>();
             set => SetElement(value);
         }
 
@@ -4065,9 +4065,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ParentLabelLayout? ParentLabelLayout
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ParentLabelLayout? ParentLabelLayout
         {
-            get => GetElement<ParentLabelLayout>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ParentLabelLayout>();
             set => SetElement(value);
         }
 
@@ -4078,9 +4078,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public SeriesElementVisibilities? SeriesElementVisibilities
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeriesElementVisibilities? SeriesElementVisibilities
         {
-            get => GetElement<SeriesElementVisibilities>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeriesElementVisibilities>();
             set => SetElement(value);
         }
 
@@ -4199,9 +4199,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -4212,9 +4212,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -4398,9 +4398,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public Text? Text
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text? Text
         {
-            get => GetElement<Text>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text>();
             set => SetElement(value);
         }
 
@@ -4411,9 +4411,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -4493,9 +4493,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public PlotSurface? PlotSurface
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotSurface? PlotSurface
         {
-            get => GetElement<PlotSurface>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotSurface>();
             set => SetElement(value);
         }
 
@@ -4770,9 +4770,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public Text? Text
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text? Text
         {
-            get => GetElement<Text>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text>();
             set => SetElement(value);
         }
 
@@ -4783,9 +4783,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -4796,9 +4796,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public TxPrTextBody? TxPrTextBody
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody? TxPrTextBody
         {
-            get => GetElement<TxPrTextBody>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
             set => SetElement(value);
         }
 
@@ -4809,9 +4809,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -4894,9 +4894,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public PlotAreaRegion? PlotAreaRegion
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotAreaRegion? PlotAreaRegion
         {
-            get => GetElement<PlotAreaRegion>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotAreaRegion>();
             set => SetElement(value);
         }
 
@@ -5028,9 +5028,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -5041,9 +5041,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public TxPrTextBody? TxPrTextBody
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody? TxPrTextBody
         {
-            get => GetElement<TxPrTextBody>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
             set => SetElement(value);
         }
 
@@ -5054,9 +5054,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -5197,9 +5197,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public OddHeaderXsdstring? OddHeaderXsdstring
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.OddHeaderXsdstring? OddHeaderXsdstring
         {
-            get => GetElement<OddHeaderXsdstring>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.OddHeaderXsdstring>();
             set => SetElement(value);
         }
 
@@ -5210,9 +5210,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public OddFooterXsdstring? OddFooterXsdstring
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.OddFooterXsdstring? OddFooterXsdstring
         {
-            get => GetElement<OddFooterXsdstring>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.OddFooterXsdstring>();
             set => SetElement(value);
         }
 
@@ -5223,9 +5223,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public EvenHeaderXsdstring? EvenHeaderXsdstring
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EvenHeaderXsdstring? EvenHeaderXsdstring
         {
-            get => GetElement<EvenHeaderXsdstring>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EvenHeaderXsdstring>();
             set => SetElement(value);
         }
 
@@ -5236,9 +5236,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public EvenFooterXsdstring? EvenFooterXsdstring
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EvenFooterXsdstring? EvenFooterXsdstring
         {
-            get => GetElement<EvenFooterXsdstring>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EvenFooterXsdstring>();
             set => SetElement(value);
         }
 
@@ -5249,9 +5249,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public FirstHeaderXsdstring? FirstHeaderXsdstring
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FirstHeaderXsdstring? FirstHeaderXsdstring
         {
-            get => GetElement<FirstHeaderXsdstring>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FirstHeaderXsdstring>();
             set => SetElement(value);
         }
 
@@ -5262,9 +5262,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public FirstFooterXsdstring? FirstFooterXsdstring
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FirstFooterXsdstring? FirstFooterXsdstring
         {
-            get => GetElement<FirstFooterXsdstring>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FirstFooterXsdstring>();
             set => SetElement(value);
         }
 
@@ -5675,9 +5675,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ExternalData? ExternalData
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExternalData? ExternalData
         {
-            get => GetElement<ExternalData>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExternalData>();
             set => SetElement(value);
         }
 
@@ -5760,9 +5760,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ChartTitle? ChartTitle
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartTitle? ChartTitle
         {
-            get => GetElement<ChartTitle>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartTitle>();
             set => SetElement(value);
         }
 
@@ -5773,9 +5773,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public PlotArea? PlotArea
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotArea? PlotArea
         {
-            get => GetElement<PlotArea>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotArea>();
             set => SetElement(value);
         }
 
@@ -5786,9 +5786,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public Legend? Legend
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Legend? Legend
         {
-            get => GetElement<Legend>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Legend>();
             set => SetElement(value);
         }
 
@@ -5799,9 +5799,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -6210,9 +6210,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public HeaderFooter? HeaderFooter
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.HeaderFooter? HeaderFooter
         {
-            get => GetElement<HeaderFooter>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.HeaderFooter>();
             set => SetElement(value);
         }
 
@@ -6223,9 +6223,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public PageMargins? PageMargins
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageMargins? PageMargins
         {
-            get => GetElement<PageMargins>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageMargins>();
             set => SetElement(value);
         }
 
@@ -6236,9 +6236,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public PageSetup? PageSetup
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageSetup? PageSetup
         {
-            get => GetElement<PageSetup>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageSetup>();
             set => SetElement(value);
         }
 

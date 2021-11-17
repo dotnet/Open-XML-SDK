@@ -184,9 +184,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
         /// <remark>
         /// xmlns:xlrdwi = http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage
         /// </remark>
-        public AddressWebImageSupportingRichDataRelationship? AddressWebImageSupportingRichDataRelationship
+        public DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.AddressWebImageSupportingRichDataRelationship? AddressWebImageSupportingRichDataRelationship
         {
-            get => GetElement<AddressWebImageSupportingRichDataRelationship>();
+            get => GetElement<DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.AddressWebImageSupportingRichDataRelationship>();
             set => SetElement(value);
         }
 
@@ -197,9 +197,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
         /// <remark>
         /// xmlns:xlrdwi = http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage
         /// </remark>
-        public MoreImagesAddressWebImageSupportingRichDataRelationship? MoreImagesAddressWebImageSupportingRichDataRelationship
+        public DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.MoreImagesAddressWebImageSupportingRichDataRelationship? MoreImagesAddressWebImageSupportingRichDataRelationship
         {
-            get => GetElement<MoreImagesAddressWebImageSupportingRichDataRelationship>();
+            get => GetElement<DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.MoreImagesAddressWebImageSupportingRichDataRelationship>();
             set => SetElement(value);
         }
 
@@ -210,9 +210,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
         /// <remark>
         /// xmlns:xlrdwi = http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage
         /// </remark>
-        public BlipWebImageSupportingRichDataRelationship? BlipWebImageSupportingRichDataRelationship
+        public DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.BlipWebImageSupportingRichDataRelationship? BlipWebImageSupportingRichDataRelationship
         {
-            get => GetElement<BlipWebImageSupportingRichDataRelationship>();
+            get => GetElement<DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.BlipWebImageSupportingRichDataRelationship>();
             set => SetElement(value);
         }
 

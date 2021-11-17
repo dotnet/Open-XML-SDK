@@ -543,9 +543,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         /// <remark>
         /// xmlns:w15 = http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public SectionTitle? SectionTitle
+        public DocumentFormat.OpenXml.Office2013.Word.SectionTitle? SectionTitle
         {
-            get => GetElement<SectionTitle>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Word.SectionTitle>();
             set => SetElement(value);
         }
 
@@ -556,9 +556,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         /// <remark>
         /// xmlns:w15 = http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public DoNotAllowInsertDeleteSection? DoNotAllowInsertDeleteSection
+        public DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection? DoNotAllowInsertDeleteSection
         {
-            get => GetElement<DoNotAllowInsertDeleteSection>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection>();
             set => SetElement(value);
         }
 
@@ -1074,9 +1074,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         /// <remark>
         /// xmlns:w15 = http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public PresenceInfo? PresenceInfo
+        public DocumentFormat.OpenXml.Office2013.Word.PresenceInfo? PresenceInfo
         {
-            get => GetElement<PresenceInfo>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Word.PresenceInfo>();
             set => SetElement(value);
         }
 

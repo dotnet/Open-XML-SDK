@@ -165,9 +165,9 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
         /// <remark>
         /// xmlns:pRoam = http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings
         /// </remark>
-        public Key? Key
+        public DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Key? Key
         {
-            get => GetElement<Key>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Key>();
             set => SetElement(value);
         }
 
@@ -178,9 +178,9 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
         /// <remark>
         /// xmlns:pRoam = http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings
         /// </remark>
-        public Value? Value
+        public DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Value? Value
         {
-            get => GetElement<Value>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Value>();
             set => SetElement(value);
         }
 

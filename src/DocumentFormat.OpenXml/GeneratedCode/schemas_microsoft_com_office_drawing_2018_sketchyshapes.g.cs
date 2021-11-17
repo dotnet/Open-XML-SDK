@@ -327,9 +327,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         /// <remark>
         /// xmlns:ask = http://schemas.microsoft.com/office/drawing/2018/sketchyshapes
         /// </remark>
-        public LineSketchNoneEmpty? LineSketchNoneEmpty
+        public DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchNoneEmpty? LineSketchNoneEmpty
         {
-            get => GetElement<LineSketchNoneEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchNoneEmpty>();
             set => SetElement(value);
         }
 
@@ -340,9 +340,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         /// <remark>
         /// xmlns:ask = http://schemas.microsoft.com/office/drawing/2018/sketchyshapes
         /// </remark>
-        public LineSketchCurvedEmpty? LineSketchCurvedEmpty
+        public DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchCurvedEmpty? LineSketchCurvedEmpty
         {
-            get => GetElement<LineSketchCurvedEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchCurvedEmpty>();
             set => SetElement(value);
         }
 
@@ -353,9 +353,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         /// <remark>
         /// xmlns:ask = http://schemas.microsoft.com/office/drawing/2018/sketchyshapes
         /// </remark>
-        public LineSketchFreehandEmpty? LineSketchFreehandEmpty
+        public DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchFreehandEmpty? LineSketchFreehandEmpty
         {
-            get => GetElement<LineSketchFreehandEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchFreehandEmpty>();
             set => SetElement(value);
         }
 
@@ -366,9 +366,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         /// <remark>
         /// xmlns:ask = http://schemas.microsoft.com/office/drawing/2018/sketchyshapes
         /// </remark>
-        public LineSketchScribbleEmpty? LineSketchScribbleEmpty
+        public DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchScribbleEmpty? LineSketchScribbleEmpty
         {
-            get => GetElement<LineSketchScribbleEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchScribbleEmpty>();
             set => SetElement(value);
         }
 

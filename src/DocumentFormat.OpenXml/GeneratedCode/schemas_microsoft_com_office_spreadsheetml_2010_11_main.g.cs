@@ -903,9 +903,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public TextProperties? TextProperties
+        public DocumentFormat.OpenXml.Office2013.Excel.TextProperties? TextProperties
         {
-            get => GetElement<TextProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.TextProperties>();
             set => SetElement(value);
         }
 
@@ -916,9 +916,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public ModelTextProperties? ModelTextProperties
+        public DocumentFormat.OpenXml.Office2013.Excel.ModelTextProperties? ModelTextProperties
         {
-            get => GetElement<ModelTextProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ModelTextProperties>();
             set => SetElement(value);
         }
 
@@ -929,9 +929,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public RangeProperties? RangeProperties
+        public DocumentFormat.OpenXml.Office2013.Excel.RangeProperties? RangeProperties
         {
-            get => GetElement<RangeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.RangeProperties>();
             set => SetElement(value);
         }
 
@@ -942,9 +942,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public OleDbPrpoperties? OleDbPrpoperties
+        public DocumentFormat.OpenXml.Office2013.Excel.OleDbPrpoperties? OleDbPrpoperties
         {
-            get => GetElement<OleDbPrpoperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.OleDbPrpoperties>();
             set => SetElement(value);
         }
 
@@ -955,9 +955,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public DataFeedProperties? DataFeedProperties
+        public DocumentFormat.OpenXml.Office2013.Excel.DataFeedProperties? DataFeedProperties
         {
-            get => GetElement<DataFeedProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.DataFeedProperties>();
             set => SetElement(value);
         }
 
@@ -1512,9 +1512,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public ModelTables? ModelTables
+        public DocumentFormat.OpenXml.Office2013.Excel.ModelTables? ModelTables
         {
-            get => GetElement<ModelTables>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ModelTables>();
             set => SetElement(value);
         }
 
@@ -1525,9 +1525,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public ModelRelationships? ModelRelationships
+        public DocumentFormat.OpenXml.Office2013.Excel.ModelRelationships? ModelRelationships
         {
-            get => GetElement<ModelRelationships>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ModelRelationships>();
             set => SetElement(value);
         }
 
@@ -1538,9 +1538,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2013.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -2111,9 +2111,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2013.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -2419,9 +2419,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public SurveyPrSurveyElementPr? SurveyPrSurveyElementPr
+        public DocumentFormat.OpenXml.Office2013.Excel.SurveyPrSurveyElementPr? SurveyPrSurveyElementPr
         {
-            get => GetElement<SurveyPrSurveyElementPr>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.SurveyPrSurveyElementPr>();
             set => SetElement(value);
         }
 
@@ -2432,9 +2432,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public TitlePrSurveyElementPr? TitlePrSurveyElementPr
+        public DocumentFormat.OpenXml.Office2013.Excel.TitlePrSurveyElementPr? TitlePrSurveyElementPr
         {
-            get => GetElement<TitlePrSurveyElementPr>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.TitlePrSurveyElementPr>();
             set => SetElement(value);
         }
 
@@ -2445,9 +2445,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public DescriptionPrSurveyElementPr? DescriptionPrSurveyElementPr
+        public DocumentFormat.OpenXml.Office2013.Excel.DescriptionPrSurveyElementPr? DescriptionPrSurveyElementPr
         {
-            get => GetElement<DescriptionPrSurveyElementPr>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.DescriptionPrSurveyElementPr>();
             set => SetElement(value);
         }
 
@@ -2458,9 +2458,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public SurveyQuestions? SurveyQuestions
+        public DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestions? SurveyQuestions
         {
-            get => GetElement<SurveyQuestions>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestions>();
             set => SetElement(value);
         }
 
@@ -2471,9 +2471,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2013.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -2688,9 +2688,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public TimelineCachePivotTables? TimelineCachePivotTables
+        public DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotTables? TimelineCachePivotTables
         {
-            get => GetElement<TimelineCachePivotTables>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotTables>();
             set => SetElement(value);
         }
 
@@ -2701,9 +2701,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public TimelineState? TimelineState
+        public DocumentFormat.OpenXml.Office2013.Excel.TimelineState? TimelineState
         {
-            get => GetElement<TimelineState>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.TimelineState>();
             set => SetElement(value);
         }
 
@@ -2714,9 +2714,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2013.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -3095,9 +3095,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public TimelineStyleElements? TimelineStyleElements
+        public DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElements? TimelineStyleElements
         {
-            get => GetElement<TimelineStyleElements>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElements>();
             set => SetElement(value);
         }
 
@@ -3926,9 +3926,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public DbTables? DbTables
+        public DocumentFormat.OpenXml.Office2013.Excel.DbTables? DbTables
         {
-            get => GetElement<DbTables>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.DbTables>();
             set => SetElement(value);
         }
 
@@ -3939,9 +3939,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public DbCommand? DbCommand
+        public DocumentFormat.OpenXml.Office2013.Excel.DbCommand? DbCommand
         {
-            get => GetElement<DbCommand>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.DbCommand>();
             set => SetElement(value);
         }
 
@@ -4036,9 +4036,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public DbTables? DbTables
+        public DocumentFormat.OpenXml.Office2013.Excel.DbTables? DbTables
         {
-            get => GetElement<DbTables>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.DbTables>();
             set => SetElement(value);
         }
 
@@ -4678,9 +4678,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public Xstring? Xstring
+        public DocumentFormat.OpenXml.Office2013.Excel.Xstring? Xstring
         {
-            get => GetElement<Xstring>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.Xstring>();
             set => SetElement(value);
         }
 
@@ -4691,9 +4691,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public PivotValueCellExtra? PivotValueCellExtra
+        public DocumentFormat.OpenXml.Office2013.Excel.PivotValueCellExtra? PivotValueCellExtra
         {
-            get => GetElement<PivotValueCellExtra>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.PivotValueCellExtra>();
             set => SetElement(value);
         }
 
@@ -5616,9 +5616,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2013.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
             set => SetElement(value);
         }
     }
@@ -5692,9 +5692,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public QuestionsPrSurveyElementPr? QuestionsPrSurveyElementPr
+        public DocumentFormat.OpenXml.Office2013.Excel.QuestionsPrSurveyElementPr? QuestionsPrSurveyElementPr
         {
-            get => GetElement<QuestionsPrSurveyElementPr>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.QuestionsPrSurveyElementPr>();
             set => SetElement(value);
         }
 
@@ -5928,9 +5928,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public QuestionPrSurveyElementPr? QuestionPrSurveyElementPr
+        public DocumentFormat.OpenXml.Office2013.Excel.QuestionPrSurveyElementPr? QuestionPrSurveyElementPr
         {
-            get => GetElement<QuestionPrSurveyElementPr>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.QuestionPrSurveyElementPr>();
             set => SetElement(value);
         }
 
@@ -5941,9 +5941,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2013.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -6218,9 +6218,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2013.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -6788,9 +6788,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public SelectionTimelineRange? SelectionTimelineRange
+        public DocumentFormat.OpenXml.Office2013.Excel.SelectionTimelineRange? SelectionTimelineRange
         {
-            get => GetElement<SelectionTimelineRange>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.SelectionTimelineRange>();
             set => SetElement(value);
         }
 
@@ -6801,9 +6801,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public BoundsTimelineRange? BoundsTimelineRange
+        public DocumentFormat.OpenXml.Office2013.Excel.BoundsTimelineRange? BoundsTimelineRange
         {
-            get => GetElement<BoundsTimelineRange>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.BoundsTimelineRange>();
             set => SetElement(value);
         }
 
@@ -6814,9 +6814,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public MovingPeriodState? MovingPeriodState
+        public DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState? MovingPeriodState
         {
-            get => GetElement<MovingPeriodState>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState>();
             set => SetElement(value);
         }
 
@@ -6827,9 +6827,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2013.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
             set => SetElement(value);
         }
 

@@ -1385,9 +1385,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DrawingMonikerList? DrawingMonikerList
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.DrawingMonikerList? DrawingMonikerList
         {
-            get => GetElement<DrawingMonikerList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.DrawingMonikerList>();
             set => SetElement(value);
         }
 
@@ -4989,9 +4989,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public XfrmEmpty? XfrmEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty? XfrmEmpty
         {
-            get => GetElement<XfrmEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty>();
             set => SetElement(value);
         }
 
@@ -5002,9 +5002,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public GeomEmpty? GeomEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.GeomEmpty? GeomEmpty
         {
-            get => GetElement<GeomEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.GeomEmpty>();
             set => SetElement(value);
         }
 
@@ -5015,9 +5015,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public FillEmpty? FillEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty? FillEmpty
         {
-            get => GetElement<FillEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty>();
             set => SetElement(value);
         }
 
@@ -5028,9 +5028,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public LnEmpty? LnEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.LnEmpty? LnEmpty
         {
-            get => GetElement<LnEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.LnEmpty>();
             set => SetElement(value);
         }
 
@@ -5041,9 +5041,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public EffectEmpty? EffectEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty? EffectEmpty
         {
-            get => GetElement<EffectEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty>();
             set => SetElement(value);
         }
 
@@ -5054,9 +5054,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public Scene3dEmpty? Scene3dEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty? Scene3dEmpty
         {
-            get => GetElement<Scene3dEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty>();
             set => SetElement(value);
         }
 
@@ -5067,9 +5067,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public Sp3dEmpty? Sp3dEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.Sp3dEmpty? Sp3dEmpty
         {
-            get => GetElement<Sp3dEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.Sp3dEmpty>();
             set => SetElement(value);
         }
 
@@ -5080,9 +5080,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public ExtLstEmpty? ExtLstEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty? ExtLstEmpty
         {
-            get => GetElement<ExtLstEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty>();
             set => SetElement(value);
         }
 
@@ -5093,9 +5093,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public BwModeEmpty? BwModeEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty? BwModeEmpty
         {
-            get => GetElement<BwModeEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty>();
             set => SetElement(value);
         }
 
@@ -5756,9 +5756,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public LnRefStyleMatrixReference? LnRefStyleMatrixReference
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.LnRefStyleMatrixReference? LnRefStyleMatrixReference
         {
-            get => GetElement<LnRefStyleMatrixReference>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.LnRefStyleMatrixReference>();
             set => SetElement(value);
         }
 
@@ -5769,9 +5769,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public FillRefStyleMatrixReference? FillRefStyleMatrixReference
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.FillRefStyleMatrixReference? FillRefStyleMatrixReference
         {
-            get => GetElement<FillRefStyleMatrixReference>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.FillRefStyleMatrixReference>();
             set => SetElement(value);
         }
 
@@ -5782,9 +5782,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public EffectRefStyleMatrixReference? EffectRefStyleMatrixReference
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectRefStyleMatrixReference? EffectRefStyleMatrixReference
         {
-            get => GetElement<EffectRefStyleMatrixReference>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectRefStyleMatrixReference>();
             set => SetElement(value);
         }
 
@@ -5795,9 +5795,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public FontReference? FontReference
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.FontReference? FontReference
         {
-            get => GetElement<FontReference>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.FontReference>();
             set => SetElement(value);
         }
 
@@ -6248,9 +6248,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public SrcRectEmpty? SrcRectEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.SrcRectEmpty? SrcRectEmpty
         {
-            get => GetElement<SrcRectEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.SrcRectEmpty>();
             set => SetElement(value);
         }
 
@@ -6261,9 +6261,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public FillModeEmpty? FillModeEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.FillModeEmpty? FillModeEmpty
         {
-            get => GetElement<FillModeEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.FillModeEmpty>();
             set => SetElement(value);
         }
 
@@ -6274,9 +6274,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DpiEmpty? DpiEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.DpiEmpty? DpiEmpty
         {
-            get => GetElement<DpiEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.DpiEmpty>();
             set => SetElement(value);
         }
 
@@ -6287,9 +6287,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public RotWithShapeEmpty? RotWithShapeEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.RotWithShapeEmpty? RotWithShapeEmpty
         {
-            get => GetElement<RotWithShapeEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.RotWithShapeEmpty>();
             set => SetElement(value);
         }
 
@@ -6665,9 +6665,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public XfrmEmpty? XfrmEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty? XfrmEmpty
         {
-            get => GetElement<XfrmEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty>();
             set => SetElement(value);
         }
 
@@ -6678,9 +6678,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public FillEmpty? FillEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty? FillEmpty
         {
-            get => GetElement<FillEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty>();
             set => SetElement(value);
         }
 
@@ -6691,9 +6691,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public EffectEmpty? EffectEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty? EffectEmpty
         {
-            get => GetElement<EffectEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty>();
             set => SetElement(value);
         }
 
@@ -6704,9 +6704,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public Scene3dEmpty? Scene3dEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty? Scene3dEmpty
         {
-            get => GetElement<Scene3dEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty>();
             set => SetElement(value);
         }
 
@@ -6717,9 +6717,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public ExtLstEmpty? ExtLstEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty? ExtLstEmpty
         {
-            get => GetElement<ExtLstEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty>();
             set => SetElement(value);
         }
 
@@ -6730,9 +6730,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public BwModeEmpty? BwModeEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty? BwModeEmpty
         {
-            get => GetElement<BwModeEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty>();
             set => SetElement(value);
         }
 
@@ -7520,9 +7520,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public StCxnConnection? StCxnConnection
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnConnection? StCxnConnection
         {
-            get => GetElement<StCxnConnection>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnConnection>();
             set => SetElement(value);
         }
 
@@ -7533,9 +7533,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public EndCxnConnection? EndCxnConnection
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnConnection? EndCxnConnection
         {
-            get => GetElement<EndCxnConnection>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnConnection>();
             set => SetElement(value);
         }
 
@@ -7642,9 +7642,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public StCxnEmpty? StCxnEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnEmpty? StCxnEmpty
         {
-            get => GetElement<StCxnEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnEmpty>();
             set => SetElement(value);
         }
 
@@ -7655,9 +7655,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public EndCxnEmpty? EndCxnEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnEmpty? EndCxnEmpty
         {
-            get => GetElement<EndCxnEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnEmpty>();
             set => SetElement(value);
         }
 
@@ -7668,9 +7668,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public NoGrpEmpty? NoGrpEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoGrpEmpty? NoGrpEmpty
         {
-            get => GetElement<NoGrpEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoGrpEmpty>();
             set => SetElement(value);
         }
 
@@ -7681,9 +7681,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public NoSelectEmpty? NoSelectEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoSelectEmpty? NoSelectEmpty
         {
-            get => GetElement<NoSelectEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoSelectEmpty>();
             set => SetElement(value);
         }
 
@@ -7694,9 +7694,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public NoRotEmpty? NoRotEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoRotEmpty? NoRotEmpty
         {
-            get => GetElement<NoRotEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoRotEmpty>();
             set => SetElement(value);
         }
 
@@ -7707,9 +7707,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public NoChangeAspectEmpty? NoChangeAspectEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeAspectEmpty? NoChangeAspectEmpty
         {
-            get => GetElement<NoChangeAspectEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeAspectEmpty>();
             set => SetElement(value);
         }
 
@@ -7720,9 +7720,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public NoMoveEmpty? NoMoveEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoMoveEmpty? NoMoveEmpty
         {
-            get => GetElement<NoMoveEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoMoveEmpty>();
             set => SetElement(value);
         }
 
@@ -7733,9 +7733,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public NoResizeEmpty? NoResizeEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoResizeEmpty? NoResizeEmpty
         {
-            get => GetElement<NoResizeEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoResizeEmpty>();
             set => SetElement(value);
         }
 
@@ -7746,9 +7746,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public NoEditPointsEmpty? NoEditPointsEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoEditPointsEmpty? NoEditPointsEmpty
         {
-            get => GetElement<NoEditPointsEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoEditPointsEmpty>();
             set => SetElement(value);
         }
 
@@ -7759,9 +7759,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public NoAdjustHandlesEmpty? NoAdjustHandlesEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoAdjustHandlesEmpty? NoAdjustHandlesEmpty
         {
-            get => GetElement<NoAdjustHandlesEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoAdjustHandlesEmpty>();
             set => SetElement(value);
         }
 
@@ -7772,9 +7772,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public NoChangeArrowheadsEmpty? NoChangeArrowheadsEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeArrowheadsEmpty? NoChangeArrowheadsEmpty
         {
-            get => GetElement<NoChangeArrowheadsEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeArrowheadsEmpty>();
             set => SetElement(value);
         }
 
@@ -7785,9 +7785,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public NoChangeShapeTypeEmpty? NoChangeShapeTypeEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeShapeTypeEmpty? NoChangeShapeTypeEmpty
         {
-            get => GetElement<NoChangeShapeTypeEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeShapeTypeEmpty>();
             set => SetElement(value);
         }
 
@@ -8177,9 +8177,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public LfPrEmpty? LfPrEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.LfPrEmpty? LfPrEmpty
         {
-            get => GetElement<LfPrEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.LfPrEmpty>();
             set => SetElement(value);
         }
 
@@ -9068,9 +9068,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public SndDataImgData? SndDataImgData
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData? SndDataImgData
         {
-            get => GetElement<SndDataImgData>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData>();
             set => SetElement(value);
         }
     }
@@ -9144,9 +9144,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public HlinkClickHyperlinkProps? HlinkClickHyperlinkProps
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickHyperlinkProps? HlinkClickHyperlinkProps
         {
-            get => GetElement<HlinkClickHyperlinkProps>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickHyperlinkProps>();
             set => SetElement(value);
         }
 
@@ -9157,9 +9157,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public HlinkHoverHyperlinkProps? HlinkHoverHyperlinkProps
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverHyperlinkProps? HlinkHoverHyperlinkProps
         {
-            get => GetElement<HlinkHoverHyperlinkProps>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverHyperlinkProps>();
             set => SetElement(value);
         }
 
@@ -9236,9 +9236,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public HlinkClickEmpty? HlinkClickEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickEmpty? HlinkClickEmpty
         {
-            get => GetElement<HlinkClickEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickEmpty>();
             set => SetElement(value);
         }
 
@@ -9249,9 +9249,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public HlinkHoverEmpty? HlinkHoverEmpty
+        public DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverEmpty? HlinkHoverEmpty
         {
-            get => GetElement<HlinkHoverEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverEmpty>();
             set => SetElement(value);
         }
 
