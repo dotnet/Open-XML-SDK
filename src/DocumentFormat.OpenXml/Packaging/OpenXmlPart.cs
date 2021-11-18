@@ -78,13 +78,16 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (IsContentTypeFixed && metroPart.ContentType != ContentType)
             {
-                var errorMessage = SR.Format(
+                if (!((metroPart.ContentType == "model/gltf.binary") && (ContentType == "model/gltf-binary")))
+                {
+                    var errorMessage = SR.Format(
                     ExceptionMessages.InvalidPartContentType,
                     metroPart.Uri.OriginalString,
                     metroPart.ContentType,
                     ContentType);
 
-                throw new OpenXmlPackageException(errorMessage);
+                    throw new OpenXmlPackageException(errorMessage);
+                }
             }
 
             _packagePart = metroPart;
