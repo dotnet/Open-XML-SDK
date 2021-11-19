@@ -292,9 +292,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public NonVisualContentPartProperties? NonVisualContentPartProperties
+        public DocumentFormat.OpenXml.Office2010.Drawing.NonVisualContentPartProperties? NonVisualContentPartProperties
         {
-            get => GetElement<NonVisualContentPartProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.NonVisualContentPartProperties>();
             set => SetElement(value);
         }
 
@@ -305,9 +305,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public Transform2D? Transform2D
+        public DocumentFormat.OpenXml.Office2010.Drawing.Transform2D? Transform2D
         {
-            get => GetElement<Transform2D>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Transform2D>();
             set => SetElement(value);
         }
 
@@ -318,9 +318,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -1240,9 +1240,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ImageLayer? ImageLayer
+        public DocumentFormat.OpenXml.Office2010.Drawing.ImageLayer? ImageLayer
         {
-            get => GetElement<ImageLayer>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ImageLayer>();
             set => SetElement(value);
         }
 
@@ -1630,9 +1630,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -3893,9 +3893,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticBlur? ArtisticBlur
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticBlur? ArtisticBlur
         {
-            get => GetElement<ArtisticBlur>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticBlur>();
             set => SetElement(value);
         }
 
@@ -3906,9 +3906,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticCement? ArtisticCement
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCement? ArtisticCement
         {
-            get => GetElement<ArtisticCement>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCement>();
             set => SetElement(value);
         }
 
@@ -3919,9 +3919,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticChalkSketch? ArtisticChalkSketch
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticChalkSketch? ArtisticChalkSketch
         {
-            get => GetElement<ArtisticChalkSketch>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticChalkSketch>();
             set => SetElement(value);
         }
 
@@ -3932,9 +3932,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticCrisscrossEtching? ArtisticCrisscrossEtching
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCrisscrossEtching? ArtisticCrisscrossEtching
         {
-            get => GetElement<ArtisticCrisscrossEtching>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCrisscrossEtching>();
             set => SetElement(value);
         }
 
@@ -3945,9 +3945,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticCutout? ArtisticCutout
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCutout? ArtisticCutout
         {
-            get => GetElement<ArtisticCutout>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCutout>();
             set => SetElement(value);
         }
 
@@ -3958,9 +3958,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticFilmGrain? ArtisticFilmGrain
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticFilmGrain? ArtisticFilmGrain
         {
-            get => GetElement<ArtisticFilmGrain>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticFilmGrain>();
             set => SetElement(value);
         }
 
@@ -3971,9 +3971,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticGlass? ArtisticGlass
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlass? ArtisticGlass
         {
-            get => GetElement<ArtisticGlass>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlass>();
             set => SetElement(value);
         }
 
@@ -3984,9 +3984,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticGlowDiffused? ArtisticGlowDiffused
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowDiffused? ArtisticGlowDiffused
         {
-            get => GetElement<ArtisticGlowDiffused>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowDiffused>();
             set => SetElement(value);
         }
 
@@ -3997,9 +3997,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticGlowEdges? ArtisticGlowEdges
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowEdges? ArtisticGlowEdges
         {
-            get => GetElement<ArtisticGlowEdges>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowEdges>();
             set => SetElement(value);
         }
 
@@ -4010,9 +4010,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticLightScreen? ArtisticLightScreen
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLightScreen? ArtisticLightScreen
         {
-            get => GetElement<ArtisticLightScreen>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLightScreen>();
             set => SetElement(value);
         }
 
@@ -4023,9 +4023,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticLineDrawing? ArtisticLineDrawing
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLineDrawing? ArtisticLineDrawing
         {
-            get => GetElement<ArtisticLineDrawing>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLineDrawing>();
             set => SetElement(value);
         }
 
@@ -4036,9 +4036,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticMarker? ArtisticMarker
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMarker? ArtisticMarker
         {
-            get => GetElement<ArtisticMarker>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMarker>();
             set => SetElement(value);
         }
 
@@ -4049,9 +4049,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticMosaicBubbles? ArtisticMosaicBubbles
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMosaicBubbles? ArtisticMosaicBubbles
         {
-            get => GetElement<ArtisticMosaicBubbles>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMosaicBubbles>();
             set => SetElement(value);
         }
 
@@ -4062,9 +4062,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticPaintStrokes? ArtisticPaintStrokes
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintStrokes? ArtisticPaintStrokes
         {
-            get => GetElement<ArtisticPaintStrokes>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintStrokes>();
             set => SetElement(value);
         }
 
@@ -4075,9 +4075,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticPaintBrush? ArtisticPaintBrush
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintBrush? ArtisticPaintBrush
         {
-            get => GetElement<ArtisticPaintBrush>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintBrush>();
             set => SetElement(value);
         }
 
@@ -4088,9 +4088,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticPastelsSmooth? ArtisticPastelsSmooth
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPastelsSmooth? ArtisticPastelsSmooth
         {
-            get => GetElement<ArtisticPastelsSmooth>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPastelsSmooth>();
             set => SetElement(value);
         }
 
@@ -4101,9 +4101,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticPencilGrayscale? ArtisticPencilGrayscale
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilGrayscale? ArtisticPencilGrayscale
         {
-            get => GetElement<ArtisticPencilGrayscale>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilGrayscale>();
             set => SetElement(value);
         }
 
@@ -4114,9 +4114,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticPencilSketch? ArtisticPencilSketch
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilSketch? ArtisticPencilSketch
         {
-            get => GetElement<ArtisticPencilSketch>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilSketch>();
             set => SetElement(value);
         }
 
@@ -4127,9 +4127,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticPhotocopy? ArtisticPhotocopy
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPhotocopy? ArtisticPhotocopy
         {
-            get => GetElement<ArtisticPhotocopy>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPhotocopy>();
             set => SetElement(value);
         }
 
@@ -4140,9 +4140,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticPlasticWrap? ArtisticPlasticWrap
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPlasticWrap? ArtisticPlasticWrap
         {
-            get => GetElement<ArtisticPlasticWrap>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPlasticWrap>();
             set => SetElement(value);
         }
 
@@ -4153,9 +4153,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticTexturizer? ArtisticTexturizer
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticTexturizer? ArtisticTexturizer
         {
-            get => GetElement<ArtisticTexturizer>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticTexturizer>();
             set => SetElement(value);
         }
 
@@ -4166,9 +4166,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ArtisticWatercolorSponge? ArtisticWatercolorSponge
+        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticWatercolorSponge? ArtisticWatercolorSponge
         {
-            get => GetElement<ArtisticWatercolorSponge>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticWatercolorSponge>();
             set => SetElement(value);
         }
 
@@ -4179,9 +4179,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public BackgroundRemoval? BackgroundRemoval
+        public DocumentFormat.OpenXml.Office2010.Drawing.BackgroundRemoval? BackgroundRemoval
         {
-            get => GetElement<BackgroundRemoval>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.BackgroundRemoval>();
             set => SetElement(value);
         }
 
@@ -4192,9 +4192,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public BrightnessContrast? BrightnessContrast
+        public DocumentFormat.OpenXml.Office2010.Drawing.BrightnessContrast? BrightnessContrast
         {
-            get => GetElement<BrightnessContrast>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.BrightnessContrast>();
             set => SetElement(value);
         }
 
@@ -4205,9 +4205,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ColorTemperature? ColorTemperature
+        public DocumentFormat.OpenXml.Office2010.Drawing.ColorTemperature? ColorTemperature
         {
-            get => GetElement<ColorTemperature>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ColorTemperature>();
             set => SetElement(value);
         }
 
@@ -4218,9 +4218,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public Saturation? Saturation
+        public DocumentFormat.OpenXml.Office2010.Drawing.Saturation? Saturation
         {
-            get => GetElement<Saturation>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Saturation>();
             set => SetElement(value);
         }
 
@@ -4231,9 +4231,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public SharpenSoften? SharpenSoften
+        public DocumentFormat.OpenXml.Office2010.Drawing.SharpenSoften? SharpenSoften
         {
-            get => GetElement<SharpenSoften>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.SharpenSoften>();
             set => SetElement(value);
         }
 
@@ -4612,9 +4612,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public ContentPartLocks? ContentPartLocks
+        public DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks? ContentPartLocks
         {
-            get => GetElement<ContentPartLocks>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>();
             set => SetElement(value);
         }
 
@@ -4625,9 +4625,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -4704,9 +4704,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Office2010.Drawing.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -4717,9 +4717,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public NonVisualInkContentPartProperties? NonVisualInkContentPartProperties
+        public DocumentFormat.OpenXml.Office2010.Drawing.NonVisualInkContentPartProperties? NonVisualInkContentPartProperties
         {
-            get => GetElement<NonVisualInkContentPartProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.NonVisualInkContentPartProperties>();
             set => SetElement(value);
         }
 

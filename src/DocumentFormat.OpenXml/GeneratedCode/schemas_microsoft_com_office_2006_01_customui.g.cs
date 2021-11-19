@@ -14608,9 +14608,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <remark>
         /// xmlns:mso = http://schemas.microsoft.com/office/2006/01/customui
         /// </remark>
-        public RepurposedCommands? RepurposedCommands
+        public DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommands? RepurposedCommands
         {
-            get => GetElement<RepurposedCommands>();
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommands>();
             set => SetElement(value);
         }
 
@@ -14621,9 +14621,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <remark>
         /// xmlns:mso = http://schemas.microsoft.com/office/2006/01/customui
         /// </remark>
-        public Ribbon? Ribbon
+        public DocumentFormat.OpenXml.Office.CustomUI.Ribbon? Ribbon
         {
-            get => GetElement<Ribbon>();
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.Ribbon>();
             set => SetElement(value);
         }
 
@@ -16207,9 +16207,9 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <remark>
         /// xmlns:mso = http://schemas.microsoft.com/office/2006/01/customui
         /// </remark>
-        public UnsizedButton? UnsizedButton
+        public DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton? UnsizedButton
         {
-            get => GetElement<UnsizedButton>();
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>();
             set => SetElement(value);
         }
 
@@ -18296,9 +18296,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <remark>
         /// xmlns:mso = http://schemas.microsoft.com/office/2006/01/customui
         /// </remark>
-        public SharedQatControls? SharedQatControls
+        public DocumentFormat.OpenXml.Office.CustomUI.SharedQatControls? SharedQatControls
         {
-            get => GetElement<SharedQatControls>();
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.SharedQatControls>();
             set => SetElement(value);
         }
 
@@ -18309,9 +18309,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <remark>
         /// xmlns:mso = http://schemas.microsoft.com/office/2006/01/customui
         /// </remark>
-        public DocumentSpecificQuickAccessToolbarControls? DocumentSpecificQuickAccessToolbarControls
+        public DocumentFormat.OpenXml.Office.CustomUI.DocumentSpecificQuickAccessToolbarControls? DocumentSpecificQuickAccessToolbarControls
         {
-            get => GetElement<DocumentSpecificQuickAccessToolbarControls>();
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.DocumentSpecificQuickAccessToolbarControls>();
             set => SetElement(value);
         }
 
@@ -18597,9 +18597,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <remark>
         /// xmlns:mso = http://schemas.microsoft.com/office/2006/01/customui
         /// </remark>
-        public OfficeMenu? OfficeMenu
+        public DocumentFormat.OpenXml.Office.CustomUI.OfficeMenu? OfficeMenu
         {
-            get => GetElement<OfficeMenu>();
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.OfficeMenu>();
             set => SetElement(value);
         }
 
@@ -18610,9 +18610,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <remark>
         /// xmlns:mso = http://schemas.microsoft.com/office/2006/01/customui
         /// </remark>
-        public QuickAccessToolbar? QuickAccessToolbar
+        public DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbar? QuickAccessToolbar
         {
-            get => GetElement<QuickAccessToolbar>();
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbar>();
             set => SetElement(value);
         }
 
@@ -18623,9 +18623,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <remark>
         /// xmlns:mso = http://schemas.microsoft.com/office/2006/01/customui
         /// </remark>
-        public Tabs? Tabs
+        public DocumentFormat.OpenXml.Office.CustomUI.Tabs? Tabs
         {
-            get => GetElement<Tabs>();
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.Tabs>();
             set => SetElement(value);
         }
 
@@ -18636,9 +18636,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <remark>
         /// xmlns:mso = http://schemas.microsoft.com/office/2006/01/customui
         /// </remark>
-        public ContextualTabSets? ContextualTabSets
+        public DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSets? ContextualTabSets
         {
-            get => GetElement<ContextualTabSets>();
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSets>();
             set => SetElement(value);
         }
 

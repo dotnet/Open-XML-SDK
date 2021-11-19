@@ -112,9 +112,9 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public FromAnchor? FromAnchor
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.FromAnchor? FromAnchor
         {
-            get => GetElement<FromAnchor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.FromAnchor>();
             set => SetElement(value);
         }
 
@@ -125,9 +125,9 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public ToAnchor? ToAnchor
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.ToAnchor? ToAnchor
         {
-            get => GetElement<ToAnchor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.ToAnchor>();
             set => SetElement(value);
         }
 
@@ -230,9 +230,9 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public FromAnchor? FromAnchor
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.FromAnchor? FromAnchor
         {
-            get => GetElement<FromAnchor>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.FromAnchor>();
             set => SetElement(value);
         }
 
@@ -243,9 +243,9 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public Extent? Extent
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.Extent? Extent
         {
-            get => GetElement<Extent>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.Extent>();
             set => SetElement(value);
         }
 
@@ -397,9 +397,9 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public NonVisualShapeProperties? NonVisualShapeProperties
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualShapeProperties? NonVisualShapeProperties
         {
-            get => GetElement<NonVisualShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualShapeProperties>();
             set => SetElement(value);
         }
 
@@ -410,9 +410,9 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -423,9 +423,9 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public Style? Style
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.Style? Style
         {
-            get => GetElement<Style>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.Style>();
             set => SetElement(value);
         }
 
@@ -436,9 +436,9 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public TextBody? TextBody
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.TextBody? TextBody
         {
-            get => GetElement<TextBody>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.TextBody>();
             set => SetElement(value);
         }
 
@@ -535,9 +535,9 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public NonVisualGroupShapeProperties? NonVisualGroupShapeProperties
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualGroupShapeProperties? NonVisualGroupShapeProperties
         {
-            get => GetElement<NonVisualGroupShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualGroupShapeProperties>();
             set => SetElement(value);
         }
 
@@ -548,9 +548,9 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public GroupShapeProperties? GroupShapeProperties
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.GroupShapeProperties? GroupShapeProperties
         {
-            get => GetElement<GroupShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.GroupShapeProperties>();
             set => SetElement(value);
         }
 
@@ -665,9 +665,9 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public NonVisualGraphicFrameProperties? NonVisualGraphicFrameProperties
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualGraphicFrameProperties? NonVisualGraphicFrameProperties
         {
-            get => GetElement<NonVisualGraphicFrameProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualGraphicFrameProperties>();
             set => SetElement(value);
         }
 
@@ -678,9 +678,9 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public Transform? Transform
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.Transform? Transform
         {
-            get => GetElement<Transform>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.Transform>();
             set => SetElement(value);
         }
 
@@ -808,9 +808,9 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public NonVisualConnectorShapeDrawingProperties? NonVisualConnectorShapeDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualConnectorShapeDrawingProperties? NonVisualConnectorShapeDrawingProperties
         {
-            get => GetElement<NonVisualConnectorShapeDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualConnectorShapeDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -821,9 +821,9 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -834,9 +834,9 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public Style? Style
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.Style? Style
         {
-            get => GetElement<Style>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.Style>();
             set => SetElement(value);
         }
 
@@ -954,9 +954,9 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public NonVisualPictureProperties? NonVisualPictureProperties
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualPictureProperties? NonVisualPictureProperties
         {
-            get => GetElement<NonVisualPictureProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualPictureProperties>();
             set => SetElement(value);
         }
 
@@ -967,9 +967,9 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public BlipFill? BlipFill
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.BlipFill? BlipFill
         {
-            get => GetElement<BlipFill>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.BlipFill>();
             set => SetElement(value);
         }
 
@@ -980,9 +980,9 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -993,9 +993,9 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public Style? Style
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.Style? Style
         {
-            get => GetElement<Style>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.Style>();
             set => SetElement(value);
         }
 
@@ -1380,9 +1380,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -1393,9 +1393,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public NonVisualShapeDrawingProperties? NonVisualShapeDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualShapeDrawingProperties? NonVisualShapeDrawingProperties
         {
-            get => GetElement<NonVisualShapeDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualShapeDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -1967,9 +1967,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -1980,9 +1980,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public NonVisualConnectionShapeProperties? NonVisualConnectionShapeProperties
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualConnectionShapeProperties? NonVisualConnectionShapeProperties
         {
-            get => GetElement<NonVisualConnectionShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualConnectionShapeProperties>();
             set => SetElement(value);
         }
 
@@ -2167,9 +2167,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -2180,9 +2180,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public NonVisualPictureDrawingProperties? NonVisualPictureDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualPictureDrawingProperties? NonVisualPictureDrawingProperties
         {
-            get => GetElement<NonVisualPictureDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualPictureDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -2487,9 +2487,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -2500,9 +2500,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public NonVisualGraphicFrameDrawingProperties? NonVisualGraphicFrameDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualGraphicFrameDrawingProperties? NonVisualGraphicFrameDrawingProperties
         {
-            get => GetElement<NonVisualGraphicFrameDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualGraphicFrameDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -3011,9 +3011,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public XPosition? XPosition
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.XPosition? XPosition
         {
-            get => GetElement<XPosition>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.XPosition>();
             set => SetElement(value);
         }
 
@@ -3024,9 +3024,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public YPosition? YPosition
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.YPosition? YPosition
         {
-            get => GetElement<YPosition>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.YPosition>();
             set => SetElement(value);
         }
     }
@@ -3169,9 +3169,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -3182,9 +3182,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
         /// </remark>
-        public NonVisualGroupShapeDrawingProperties? NonVisualGroupShapeDrawingProperties
+        public DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualGroupShapeDrawingProperties? NonVisualGroupShapeDrawingProperties
         {
-            get => GetElement<NonVisualGroupShapeDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualGroupShapeDrawingProperties>();
             set => SetElement(value);
         }
 

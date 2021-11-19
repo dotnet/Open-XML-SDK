@@ -182,9 +182,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public Variant? InnerVariant
+        public DocumentFormat.OpenXml.VariantTypes.Variant? InnerVariant
         {
-            get => GetElement<Variant>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.Variant>();
             set => SetElement(value);
         }
 
@@ -195,9 +195,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTVector? VTVector
+        public DocumentFormat.OpenXml.VariantTypes.VTVector? VTVector
         {
-            get => GetElement<VTVector>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVector>();
             set => SetElement(value);
         }
 
@@ -208,9 +208,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTArray? VTArray
+        public DocumentFormat.OpenXml.VariantTypes.VTArray? VTArray
         {
-            get => GetElement<VTArray>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTArray>();
             set => SetElement(value);
         }
 
@@ -221,9 +221,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTBlob? VTBlob
+        public DocumentFormat.OpenXml.VariantTypes.VTBlob? VTBlob
         {
-            get => GetElement<VTBlob>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBlob>();
             set => SetElement(value);
         }
 
@@ -234,9 +234,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTOBlob? VTOBlob
+        public DocumentFormat.OpenXml.VariantTypes.VTOBlob? VTOBlob
         {
-            get => GetElement<VTOBlob>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTOBlob>();
             set => SetElement(value);
         }
 
@@ -247,9 +247,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTEmpty? VTEmpty
+        public DocumentFormat.OpenXml.VariantTypes.VTEmpty? VTEmpty
         {
-            get => GetElement<VTEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTEmpty>();
             set => SetElement(value);
         }
 
@@ -260,9 +260,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTNull? VTNull
+        public DocumentFormat.OpenXml.VariantTypes.VTNull? VTNull
         {
-            get => GetElement<VTNull>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTNull>();
             set => SetElement(value);
         }
 
@@ -273,9 +273,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTByte? VTByte
+        public DocumentFormat.OpenXml.VariantTypes.VTByte? VTByte
         {
-            get => GetElement<VTByte>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTByte>();
             set => SetElement(value);
         }
 
@@ -286,9 +286,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTShort? VTShort
+        public DocumentFormat.OpenXml.VariantTypes.VTShort? VTShort
         {
-            get => GetElement<VTShort>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTShort>();
             set => SetElement(value);
         }
 
@@ -299,9 +299,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTInt32? VTInt32
+        public DocumentFormat.OpenXml.VariantTypes.VTInt32? VTInt32
         {
-            get => GetElement<VTInt32>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTInt32>();
             set => SetElement(value);
         }
 
@@ -312,9 +312,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTInt64? VTInt64
+        public DocumentFormat.OpenXml.VariantTypes.VTInt64? VTInt64
         {
-            get => GetElement<VTInt64>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTInt64>();
             set => SetElement(value);
         }
 
@@ -325,9 +325,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTInteger? VTInteger
+        public DocumentFormat.OpenXml.VariantTypes.VTInteger? VTInteger
         {
-            get => GetElement<VTInteger>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTInteger>();
             set => SetElement(value);
         }
 
@@ -338,9 +338,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTUnsignedByte? VTUnsignedByte
+        public DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte? VTUnsignedByte
         {
-            get => GetElement<VTUnsignedByte>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte>();
             set => SetElement(value);
         }
 
@@ -351,9 +351,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTUnsignedShort? VTUnsignedShort
+        public DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort? VTUnsignedShort
         {
-            get => GetElement<VTUnsignedShort>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort>();
             set => SetElement(value);
         }
 
@@ -364,9 +364,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTUnsignedInt32? VTUnsignedInt32
+        public DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32? VTUnsignedInt32
         {
-            get => GetElement<VTUnsignedInt32>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32>();
             set => SetElement(value);
         }
 
@@ -377,9 +377,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTUnsignedInt64? VTUnsignedInt64
+        public DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64? VTUnsignedInt64
         {
-            get => GetElement<VTUnsignedInt64>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64>();
             set => SetElement(value);
         }
 
@@ -390,9 +390,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTUnsignedInteger? VTUnsignedInteger
+        public DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger? VTUnsignedInteger
         {
-            get => GetElement<VTUnsignedInteger>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger>();
             set => SetElement(value);
         }
 
@@ -403,9 +403,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTFloat? VTFloat
+        public DocumentFormat.OpenXml.VariantTypes.VTFloat? VTFloat
         {
-            get => GetElement<VTFloat>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTFloat>();
             set => SetElement(value);
         }
 
@@ -416,9 +416,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTDouble? VTDouble
+        public DocumentFormat.OpenXml.VariantTypes.VTDouble? VTDouble
         {
-            get => GetElement<VTDouble>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTDouble>();
             set => SetElement(value);
         }
 
@@ -429,9 +429,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTDecimal? VTDecimal
+        public DocumentFormat.OpenXml.VariantTypes.VTDecimal? VTDecimal
         {
-            get => GetElement<VTDecimal>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTDecimal>();
             set => SetElement(value);
         }
 
@@ -442,9 +442,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTLPSTR? VTLPSTR
+        public DocumentFormat.OpenXml.VariantTypes.VTLPSTR? VTLPSTR
         {
-            get => GetElement<VTLPSTR>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTLPSTR>();
             set => SetElement(value);
         }
 
@@ -455,9 +455,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTLPWSTR? VTLPWSTR
+        public DocumentFormat.OpenXml.VariantTypes.VTLPWSTR? VTLPWSTR
         {
-            get => GetElement<VTLPWSTR>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTLPWSTR>();
             set => SetElement(value);
         }
 
@@ -468,9 +468,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTBString? VTBString
+        public DocumentFormat.OpenXml.VariantTypes.VTBString? VTBString
         {
-            get => GetElement<VTBString>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBString>();
             set => SetElement(value);
         }
 
@@ -481,9 +481,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTDate? VTDate
+        public DocumentFormat.OpenXml.VariantTypes.VTDate? VTDate
         {
-            get => GetElement<VTDate>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTDate>();
             set => SetElement(value);
         }
 
@@ -494,9 +494,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTFileTime? VTFileTime
+        public DocumentFormat.OpenXml.VariantTypes.VTFileTime? VTFileTime
         {
-            get => GetElement<VTFileTime>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTFileTime>();
             set => SetElement(value);
         }
 
@@ -507,9 +507,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTBool? VTBool
+        public DocumentFormat.OpenXml.VariantTypes.VTBool? VTBool
         {
-            get => GetElement<VTBool>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBool>();
             set => SetElement(value);
         }
 
@@ -520,9 +520,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTCurrency? VTCurrency
+        public DocumentFormat.OpenXml.VariantTypes.VTCurrency? VTCurrency
         {
-            get => GetElement<VTCurrency>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTCurrency>();
             set => SetElement(value);
         }
 
@@ -533,9 +533,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTError? VTError
+        public DocumentFormat.OpenXml.VariantTypes.VTError? VTError
         {
-            get => GetElement<VTError>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTError>();
             set => SetElement(value);
         }
 
@@ -546,9 +546,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTStreamData? VTStreamData
+        public DocumentFormat.OpenXml.VariantTypes.VTStreamData? VTStreamData
         {
-            get => GetElement<VTStreamData>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTStreamData>();
             set => SetElement(value);
         }
 
@@ -559,9 +559,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTOStreamData? VTOStreamData
+        public DocumentFormat.OpenXml.VariantTypes.VTOStreamData? VTOStreamData
         {
-            get => GetElement<VTOStreamData>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTOStreamData>();
             set => SetElement(value);
         }
 
@@ -572,9 +572,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTStorage? VTStorage
+        public DocumentFormat.OpenXml.VariantTypes.VTStorage? VTStorage
         {
-            get => GetElement<VTStorage>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTStorage>();
             set => SetElement(value);
         }
 
@@ -585,9 +585,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTOStorage? VTOStorage
+        public DocumentFormat.OpenXml.VariantTypes.VTOStorage? VTOStorage
         {
-            get => GetElement<VTOStorage>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTOStorage>();
             set => SetElement(value);
         }
 
@@ -598,9 +598,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTVStreamData? VTVStreamData
+        public DocumentFormat.OpenXml.VariantTypes.VTVStreamData? VTVStreamData
         {
-            get => GetElement<VTVStreamData>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVStreamData>();
             set => SetElement(value);
         }
 
@@ -611,9 +611,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTClassId? VTClassId
+        public DocumentFormat.OpenXml.VariantTypes.VTClassId? VTClassId
         {
-            get => GetElement<VTClassId>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTClassId>();
             set => SetElement(value);
         }
 
@@ -624,9 +624,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTClipboardData? VTClipboardData
+        public DocumentFormat.OpenXml.VariantTypes.VTClipboardData? VTClipboardData
         {
-            get => GetElement<VTClipboardData>();
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTClipboardData>();
             set => SetElement(value);
         }
 

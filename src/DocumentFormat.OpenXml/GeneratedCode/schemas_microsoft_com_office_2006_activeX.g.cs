@@ -278,9 +278,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:ax = http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        public SharedComFont? SharedComFont
+        public DocumentFormat.OpenXml.Office.ActiveX.SharedComFont? SharedComFont
         {
-            get => GetElement<SharedComFont>();
+            get => GetElement<DocumentFormat.OpenXml.Office.ActiveX.SharedComFont>();
             set => SetElement(value);
         }
 
@@ -291,9 +291,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:ax = http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        public SharedComPicture? SharedComPicture
+        public DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture? SharedComPicture
         {
-            get => GetElement<SharedComPicture>();
+            get => GetElement<DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture>();
             set => SetElement(value);
         }
 

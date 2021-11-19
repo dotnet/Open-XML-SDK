@@ -253,9 +253,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// <remark>
         /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
         /// </remark>
-        public NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -266,9 +266,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// <remark>
         /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
         /// </remark>
-        public NonVisualGroupDrawingShapeProperties? NonVisualGroupDrawingShapeProperties
+        public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGroupDrawingShapeProperties? NonVisualGroupDrawingShapeProperties
         {
-            get => GetElement<NonVisualGroupDrawingShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGroupDrawingShapeProperties>();
             set => SetElement(value);
         }
 
@@ -279,9 +279,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// <remark>
         /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
         /// </remark>
-        public GroupShapeProperties? GroupShapeProperties
+        public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GroupShapeProperties? GroupShapeProperties
         {
-            get => GetElement<GroupShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GroupShapeProperties>();
             set => SetElement(value);
         }
     }
@@ -1100,9 +1100,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
         /// </remark>
-        public NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -1113,9 +1113,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
         /// </remark>
-        public NonVisualGraphicFrameProperties? NonVisualGraphicFrameProperties
+        public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties? NonVisualGraphicFrameProperties
         {
-            get => GetElement<NonVisualGraphicFrameProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties>();
             set => SetElement(value);
         }
 
@@ -1126,9 +1126,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
         /// </remark>
-        public Transform2D? Transform2D
+        public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D? Transform2D
         {
-            get => GetElement<Transform2D>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D>();
             set => SetElement(value);
         }
 
@@ -1152,9 +1152,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 

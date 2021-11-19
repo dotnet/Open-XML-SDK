@@ -136,9 +136,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
         /// </remark>
-        public WebExtensionStoreReference? WebExtensionStoreReference
+        public DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference? WebExtensionStoreReference
         {
-            get => GetElement<WebExtensionStoreReference>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference>();
             set => SetElement(value);
         }
 
@@ -149,9 +149,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
         /// </remark>
-        public WebExtensionReferenceList? WebExtensionReferenceList
+        public DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionReferenceList? WebExtensionReferenceList
         {
-            get => GetElement<WebExtensionReferenceList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionReferenceList>();
             set => SetElement(value);
         }
 
@@ -162,9 +162,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
         /// </remark>
-        public WebExtensionPropertyBag? WebExtensionPropertyBag
+        public DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionPropertyBag? WebExtensionPropertyBag
         {
-            get => GetElement<WebExtensionPropertyBag>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionPropertyBag>();
             set => SetElement(value);
         }
 
@@ -175,9 +175,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
         /// </remark>
-        public WebExtensionBindingList? WebExtensionBindingList
+        public DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionBindingList? WebExtensionBindingList
         {
-            get => GetElement<WebExtensionBindingList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionBindingList>();
             set => SetElement(value);
         }
 
@@ -188,9 +188,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
         /// </remark>
-        public Snapshot? Snapshot
+        public DocumentFormat.OpenXml.Office2013.WebExtension.Snapshot? Snapshot
         {
-            get => GetElement<Snapshot>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtension.Snapshot>();
             set => SetElement(value);
         }
 
@@ -201,9 +201,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -559,9 +559,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -711,9 +711,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 

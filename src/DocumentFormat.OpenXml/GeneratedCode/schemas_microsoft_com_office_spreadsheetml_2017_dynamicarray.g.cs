@@ -116,9 +116,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
         /// <remark>
         /// xmlns:xda = http://schemas.microsoft.com/office/spreadsheetml/2017/dynamicarray
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList>();
             set => SetElement(value);
         }
 

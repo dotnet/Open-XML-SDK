@@ -505,9 +505,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public SequenceOfReferences? SequenceOfReferences
+        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences? SequenceOfReferences
         {
-            get => GetElement<SequenceOfReferences>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences>();
             set => SetElement(value);
         }
 
@@ -581,9 +581,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public SequenceOfReferences? SequenceOfReferences
+        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences? SequenceOfReferences
         {
-            get => GetElement<SequenceOfReferences>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences>();
             set => SetElement(value);
         }
 
@@ -657,9 +657,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public SequenceOfReferences? SequenceOfReferences
+        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences? SequenceOfReferences
         {
-            get => GetElement<SequenceOfReferences>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences>();
             set => SetElement(value);
         }
 
@@ -733,9 +733,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public ChartText? ChartText
+        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.ChartText? ChartText
         {
-            get => GetElement<ChartText>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ChartText>();
             set => SetElement(value);
         }
 
@@ -809,9 +809,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public AxisDataSourceType? AxisDataSourceType
+        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.AxisDataSourceType? AxisDataSourceType
         {
-            get => GetElement<AxisDataSourceType>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.AxisDataSourceType>();
             set => SetElement(value);
         }
 
@@ -885,9 +885,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public AreaChartSeries? AreaChartSeries
+        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.AreaChartSeries? AreaChartSeries
         {
-            get => GetElement<AreaChartSeries>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.AreaChartSeries>();
             set => SetElement(value);
         }
 
@@ -961,9 +961,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public BarChartSeries? BarChartSeries
+        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.BarChartSeries? BarChartSeries
         {
-            get => GetElement<BarChartSeries>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.BarChartSeries>();
             set => SetElement(value);
         }
 
@@ -1037,9 +1037,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public BubbleChartSeries? BubbleChartSeries
+        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.BubbleChartSeries? BubbleChartSeries
         {
-            get => GetElement<BubbleChartSeries>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.BubbleChartSeries>();
             set => SetElement(value);
         }
 
@@ -1113,9 +1113,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public LineChartSeries? LineChartSeries
+        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.LineChartSeries? LineChartSeries
         {
-            get => GetElement<LineChartSeries>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.LineChartSeries>();
             set => SetElement(value);
         }
 
@@ -1189,9 +1189,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public PieChartSeries? PieChartSeries
+        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.PieChartSeries? PieChartSeries
         {
-            get => GetElement<PieChartSeries>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.PieChartSeries>();
             set => SetElement(value);
         }
 
@@ -1265,9 +1265,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public RadarChartSeries? RadarChartSeries
+        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.RadarChartSeries? RadarChartSeries
         {
-            get => GetElement<RadarChartSeries>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.RadarChartSeries>();
             set => SetElement(value);
         }
 
@@ -1341,9 +1341,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public ScatterChartSeries? ScatterChartSeries
+        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.ScatterChartSeries? ScatterChartSeries
         {
-            get => GetElement<ScatterChartSeries>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ScatterChartSeries>();
             set => SetElement(value);
         }
 
@@ -1417,9 +1417,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public SurfaceChartSeries? SurfaceChartSeries
+        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.SurfaceChartSeries? SurfaceChartSeries
         {
-            get => GetElement<SurfaceChartSeries>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.SurfaceChartSeries>();
             set => SetElement(value);
         }
 
@@ -1496,9 +1496,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public Formula? Formula
+        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.Formula? Formula
         {
-            get => GetElement<Formula>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.Formula>();
             set => SetElement(value);
         }
 
@@ -1509,9 +1509,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public DataLabelsRangeChache? DataLabelsRangeChache
+        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRangeChache? DataLabelsRangeChache
         {
-            get => GetElement<DataLabelsRangeChache>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRangeChache>();
             set => SetElement(value);
         }
 
@@ -4359,9 +4359,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public SequenceOfReferences? SequenceOfReferences
+        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences? SequenceOfReferences
         {
-            get => GetElement<SequenceOfReferences>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences>();
             set => SetElement(value);
         }
 
@@ -4372,9 +4372,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties? ShapeProperties
         {
-            get => GetElement<ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -4385,9 +4385,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public Explosion? Explosion
+        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.Explosion? Explosion
         {
-            get => GetElement<Explosion>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.Explosion>();
             set => SetElement(value);
         }
 
@@ -4398,9 +4398,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public InvertIfNegativeBoolean? InvertIfNegativeBoolean
+        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.InvertIfNegativeBoolean? InvertIfNegativeBoolean
         {
-            get => GetElement<InvertIfNegativeBoolean>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.InvertIfNegativeBoolean>();
             set => SetElement(value);
         }
 
@@ -4411,9 +4411,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public Bubble3D? Bubble3D
+        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.Bubble3D? Bubble3D
         {
-            get => GetElement<Bubble3D>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.Bubble3D>();
             set => SetElement(value);
         }
 
@@ -4424,9 +4424,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public Marker? Marker
+        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.Marker? Marker
         {
-            get => GetElement<Marker>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.Marker>();
             set => SetElement(value);
         }
 
@@ -4437,9 +4437,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public DataLabel? DataLabel
+        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabel? DataLabel
         {
-            get => GetElement<DataLabel>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabel>();
             set => SetElement(value);
         }
 
@@ -4519,9 +4519,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public TextFieldGuid? TextFieldGuid
+        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.TextFieldGuid? TextFieldGuid
         {
-            get => GetElement<TextFieldGuid>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.TextFieldGuid>();
             set => SetElement(value);
         }
 
@@ -4532,9 +4532,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public Formula? Formula
+        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.Formula? Formula
         {
-            get => GetElement<Formula>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.Formula>();
             set => SetElement(value);
         }
 
@@ -4545,9 +4545,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public DataLabelFieldTableCache? DataLabelFieldTableCache
+        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTableCache? DataLabelFieldTableCache
         {
-            get => GetElement<DataLabelFieldTableCache>();
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTableCache>();
             set => SetElement(value);
         }
 

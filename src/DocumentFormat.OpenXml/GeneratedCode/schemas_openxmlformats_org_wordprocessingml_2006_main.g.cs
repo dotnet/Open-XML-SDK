@@ -7573,9 +7573,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NumberingLevelReference? NumberingLevelReference
+        public DocumentFormat.OpenXml.Wordprocessing.NumberingLevelReference? NumberingLevelReference
         {
-            get => GetElement<NumberingLevelReference>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingLevelReference>();
             set => SetElement(value);
         }
 
@@ -7586,9 +7586,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NumberingId? NumberingId
+        public DocumentFormat.OpenXml.Wordprocessing.NumberingId? NumberingId
         {
-            get => GetElement<NumberingId>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingId>();
             set => SetElement(value);
         }
 
@@ -7599,9 +7599,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NumberingChange? NumberingChange
+        public DocumentFormat.OpenXml.Wordprocessing.NumberingChange? NumberingChange
         {
-            get => GetElement<NumberingChange>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingChange>();
             set => SetElement(value);
         }
 
@@ -7612,9 +7612,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Inserted? Inserted
+        public DocumentFormat.OpenXml.Wordprocessing.Inserted? Inserted
         {
-            get => GetElement<Inserted>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Inserted>();
             set => SetElement(value);
         }
 
@@ -7702,9 +7702,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TopBorder? TopBorder
+        public DocumentFormat.OpenXml.Wordprocessing.TopBorder? TopBorder
         {
-            get => GetElement<TopBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopBorder>();
             set => SetElement(value);
         }
 
@@ -7715,9 +7715,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public LeftBorder? LeftBorder
+        public DocumentFormat.OpenXml.Wordprocessing.LeftBorder? LeftBorder
         {
-            get => GetElement<LeftBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LeftBorder>();
             set => SetElement(value);
         }
 
@@ -7728,9 +7728,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public BottomBorder? BottomBorder
+        public DocumentFormat.OpenXml.Wordprocessing.BottomBorder? BottomBorder
         {
-            get => GetElement<BottomBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BottomBorder>();
             set => SetElement(value);
         }
 
@@ -7741,9 +7741,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public RightBorder? RightBorder
+        public DocumentFormat.OpenXml.Wordprocessing.RightBorder? RightBorder
         {
-            get => GetElement<RightBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RightBorder>();
             set => SetElement(value);
         }
 
@@ -7754,9 +7754,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public BetweenBorder? BetweenBorder
+        public DocumentFormat.OpenXml.Wordprocessing.BetweenBorder? BetweenBorder
         {
-            get => GetElement<BetweenBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BetweenBorder>();
             set => SetElement(value);
         }
 
@@ -7767,9 +7767,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public BarBorder? BarBorder
+        public DocumentFormat.OpenXml.Wordprocessing.BarBorder? BarBorder
         {
-            get => GetElement<BarBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BarBorder>();
             set => SetElement(value);
         }
 
@@ -9354,9 +9354,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ParagraphPropertiesExtended? ParagraphPropertiesExtended
+        public DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesExtended? ParagraphPropertiesExtended
         {
-            get => GetElement<ParagraphPropertiesExtended>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesExtended>();
             set => SetElement(value);
         }
 
@@ -10973,9 +10973,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FieldData? FieldData
+        public DocumentFormat.OpenXml.Wordprocessing.FieldData? FieldData
         {
-            get => GetElement<FieldData>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FieldData>();
             set => SetElement(value);
         }
 
@@ -10986,9 +10986,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FormFieldData? FormFieldData
+        public DocumentFormat.OpenXml.Wordprocessing.FormFieldData? FormFieldData
         {
-            get => GetElement<FormFieldData>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FormFieldData>();
             set => SetElement(value);
         }
 
@@ -10999,9 +10999,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NumberingChange? NumberingChange
+        public DocumentFormat.OpenXml.Wordprocessing.NumberingChange? NumberingChange
         {
-            get => GetElement<NumberingChange>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingChange>();
             set => SetElement(value);
         }
 
@@ -11080,9 +11080,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public RubyProperties? RubyProperties
+        public DocumentFormat.OpenXml.Wordprocessing.RubyProperties? RubyProperties
         {
-            get => GetElement<RubyProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RubyProperties>();
             set => SetElement(value);
         }
 
@@ -11093,9 +11093,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public RubyContent? RubyContent
+        public DocumentFormat.OpenXml.Wordprocessing.RubyContent? RubyContent
         {
-            get => GetElement<RubyContent>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RubyContent>();
             set => SetElement(value);
         }
 
@@ -11106,9 +11106,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public RubyBase? RubyBase
+        public DocumentFormat.OpenXml.Wordprocessing.RubyBase? RubyBase
         {
-            get => GetElement<RubyBase>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RubyBase>();
             set => SetElement(value);
         }
 
@@ -13936,9 +13936,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PreviousRunProperties? PreviousRunProperties
+        public DocumentFormat.OpenXml.Wordprocessing.PreviousRunProperties? PreviousRunProperties
         {
-            get => GetElement<PreviousRunProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PreviousRunProperties>();
             set => SetElement(value);
         }
 
@@ -14227,9 +14227,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public RunStyle? RunStyle
+        public DocumentFormat.OpenXml.Wordprocessing.RunStyle? RunStyle
         {
-            get => GetElement<RunStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunStyle>();
             set => SetElement(value);
         }
 
@@ -14240,9 +14240,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public RunFonts? RunFonts
+        public DocumentFormat.OpenXml.Wordprocessing.RunFonts? RunFonts
         {
-            get => GetElement<RunFonts>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunFonts>();
             set => SetElement(value);
         }
 
@@ -14253,9 +14253,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Bold? Bold
+        public DocumentFormat.OpenXml.Wordprocessing.Bold? Bold
         {
-            get => GetElement<Bold>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Bold>();
             set => SetElement(value);
         }
 
@@ -14266,9 +14266,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public BoldComplexScript? BoldComplexScript
+        public DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript? BoldComplexScript
         {
-            get => GetElement<BoldComplexScript>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript>();
             set => SetElement(value);
         }
 
@@ -14279,9 +14279,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Italic? Italic
+        public DocumentFormat.OpenXml.Wordprocessing.Italic? Italic
         {
-            get => GetElement<Italic>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Italic>();
             set => SetElement(value);
         }
 
@@ -14292,9 +14292,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ItalicComplexScript? ItalicComplexScript
+        public DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript? ItalicComplexScript
         {
-            get => GetElement<ItalicComplexScript>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript>();
             set => SetElement(value);
         }
 
@@ -14305,9 +14305,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Caps? Caps
+        public DocumentFormat.OpenXml.Wordprocessing.Caps? Caps
         {
-            get => GetElement<Caps>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Caps>();
             set => SetElement(value);
         }
 
@@ -14318,9 +14318,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SmallCaps? SmallCaps
+        public DocumentFormat.OpenXml.Wordprocessing.SmallCaps? SmallCaps
         {
-            get => GetElement<SmallCaps>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SmallCaps>();
             set => SetElement(value);
         }
 
@@ -14331,9 +14331,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Strike? Strike
+        public DocumentFormat.OpenXml.Wordprocessing.Strike? Strike
         {
-            get => GetElement<Strike>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Strike>();
             set => SetElement(value);
         }
 
@@ -14344,9 +14344,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DoubleStrike? DoubleStrike
+        public DocumentFormat.OpenXml.Wordprocessing.DoubleStrike? DoubleStrike
         {
-            get => GetElement<DoubleStrike>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoubleStrike>();
             set => SetElement(value);
         }
 
@@ -14357,9 +14357,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Outline? Outline
+        public DocumentFormat.OpenXml.Wordprocessing.Outline? Outline
         {
-            get => GetElement<Outline>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Outline>();
             set => SetElement(value);
         }
 
@@ -14370,9 +14370,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Shadow? Shadow
+        public DocumentFormat.OpenXml.Wordprocessing.Shadow? Shadow
         {
-            get => GetElement<Shadow>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shadow>();
             set => SetElement(value);
         }
 
@@ -14383,9 +14383,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Emboss? Emboss
+        public DocumentFormat.OpenXml.Wordprocessing.Emboss? Emboss
         {
-            get => GetElement<Emboss>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Emboss>();
             set => SetElement(value);
         }
 
@@ -14396,9 +14396,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Imprint? Imprint
+        public DocumentFormat.OpenXml.Wordprocessing.Imprint? Imprint
         {
-            get => GetElement<Imprint>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Imprint>();
             set => SetElement(value);
         }
 
@@ -14409,9 +14409,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NoProof? NoProof
+        public DocumentFormat.OpenXml.Wordprocessing.NoProof? NoProof
         {
-            get => GetElement<NoProof>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoProof>();
             set => SetElement(value);
         }
 
@@ -14422,9 +14422,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SnapToGrid? SnapToGrid
+        public DocumentFormat.OpenXml.Wordprocessing.SnapToGrid? SnapToGrid
         {
-            get => GetElement<SnapToGrid>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
             set => SetElement(value);
         }
 
@@ -14435,9 +14435,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Vanish? Vanish
+        public DocumentFormat.OpenXml.Wordprocessing.Vanish? Vanish
         {
-            get => GetElement<Vanish>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Vanish>();
             set => SetElement(value);
         }
 
@@ -14448,9 +14448,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public WebHidden? WebHidden
+        public DocumentFormat.OpenXml.Wordprocessing.WebHidden? WebHidden
         {
-            get => GetElement<WebHidden>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WebHidden>();
             set => SetElement(value);
         }
 
@@ -14461,9 +14461,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Color? Color
+        public DocumentFormat.OpenXml.Wordprocessing.Color? Color
         {
-            get => GetElement<Color>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Color>();
             set => SetElement(value);
         }
 
@@ -14474,9 +14474,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Spacing? Spacing
+        public DocumentFormat.OpenXml.Wordprocessing.Spacing? Spacing
         {
-            get => GetElement<Spacing>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Spacing>();
             set => SetElement(value);
         }
 
@@ -14487,9 +14487,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public CharacterScale? CharacterScale
+        public DocumentFormat.OpenXml.Wordprocessing.CharacterScale? CharacterScale
         {
-            get => GetElement<CharacterScale>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.CharacterScale>();
             set => SetElement(value);
         }
 
@@ -14500,9 +14500,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Kern? Kern
+        public DocumentFormat.OpenXml.Wordprocessing.Kern? Kern
         {
-            get => GetElement<Kern>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Kern>();
             set => SetElement(value);
         }
 
@@ -14513,9 +14513,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Position? Position
+        public DocumentFormat.OpenXml.Wordprocessing.Position? Position
         {
-            get => GetElement<Position>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Position>();
             set => SetElement(value);
         }
 
@@ -14526,9 +14526,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FontSize? FontSize
+        public DocumentFormat.OpenXml.Wordprocessing.FontSize? FontSize
         {
-            get => GetElement<FontSize>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FontSize>();
             set => SetElement(value);
         }
 
@@ -14539,9 +14539,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FontSizeComplexScript? FontSizeComplexScript
+        public DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript? FontSizeComplexScript
         {
-            get => GetElement<FontSizeComplexScript>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript>();
             set => SetElement(value);
         }
 
@@ -14552,9 +14552,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Highlight? Highlight
+        public DocumentFormat.OpenXml.Wordprocessing.Highlight? Highlight
         {
-            get => GetElement<Highlight>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Highlight>();
             set => SetElement(value);
         }
 
@@ -14565,9 +14565,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Underline? Underline
+        public DocumentFormat.OpenXml.Wordprocessing.Underline? Underline
         {
-            get => GetElement<Underline>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Underline>();
             set => SetElement(value);
         }
 
@@ -14578,9 +14578,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TextEffect? TextEffect
+        public DocumentFormat.OpenXml.Wordprocessing.TextEffect? TextEffect
         {
-            get => GetElement<TextEffect>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextEffect>();
             set => SetElement(value);
         }
 
@@ -14591,9 +14591,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Border? Border
+        public DocumentFormat.OpenXml.Wordprocessing.Border? Border
         {
-            get => GetElement<Border>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Border>();
             set => SetElement(value);
         }
 
@@ -14604,9 +14604,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Shading? Shading
+        public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
-            get => GetElement<Shading>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
             set => SetElement(value);
         }
 
@@ -14617,9 +14617,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FitText? FitText
+        public DocumentFormat.OpenXml.Wordprocessing.FitText? FitText
         {
-            get => GetElement<FitText>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FitText>();
             set => SetElement(value);
         }
 
@@ -14630,9 +14630,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public VerticalTextAlignment? VerticalTextAlignment
+        public DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment? VerticalTextAlignment
         {
-            get => GetElement<VerticalTextAlignment>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment>();
             set => SetElement(value);
         }
 
@@ -14643,9 +14643,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public RightToLeftText? RightToLeftText
+        public DocumentFormat.OpenXml.Wordprocessing.RightToLeftText? RightToLeftText
         {
-            get => GetElement<RightToLeftText>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RightToLeftText>();
             set => SetElement(value);
         }
 
@@ -14656,9 +14656,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ComplexScript? ComplexScript
+        public DocumentFormat.OpenXml.Wordprocessing.ComplexScript? ComplexScript
         {
-            get => GetElement<ComplexScript>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ComplexScript>();
             set => SetElement(value);
         }
 
@@ -14669,9 +14669,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Emphasis? Emphasis
+        public DocumentFormat.OpenXml.Wordprocessing.Emphasis? Emphasis
         {
-            get => GetElement<Emphasis>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Emphasis>();
             set => SetElement(value);
         }
 
@@ -14682,9 +14682,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Languages? Languages
+        public DocumentFormat.OpenXml.Wordprocessing.Languages? Languages
         {
-            get => GetElement<Languages>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Languages>();
             set => SetElement(value);
         }
 
@@ -14695,9 +14695,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EastAsianLayout? EastAsianLayout
+        public DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout? EastAsianLayout
         {
-            get => GetElement<EastAsianLayout>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout>();
             set => SetElement(value);
         }
 
@@ -14708,9 +14708,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SpecVanish? SpecVanish
+        public DocumentFormat.OpenXml.Wordprocessing.SpecVanish? SpecVanish
         {
-            get => GetElement<SpecVanish>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SpecVanish>();
             set => SetElement(value);
         }
 
@@ -14877,9 +14877,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public RunPropertiesChange? RunPropertiesChange
+        public DocumentFormat.OpenXml.Wordprocessing.RunPropertiesChange? RunPropertiesChange
         {
-            get => GetElement<RunPropertiesChange>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunPropertiesChange>();
             set => SetElement(value);
         }
 
@@ -16151,9 +16151,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FieldData? FieldData
+        public DocumentFormat.OpenXml.Wordprocessing.FieldData? FieldData
         {
-            get => GetElement<FieldData>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FieldData>();
             set => SetElement(value);
         }
 
@@ -16831,9 +16831,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public RunProperties? RunProperties
+        public DocumentFormat.OpenXml.Wordprocessing.RunProperties? RunProperties
         {
-            get => GetElement<RunProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunProperties>();
             set => SetElement(value);
         }
 
@@ -16990,9 +16990,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SdtContentRunRuby? SdtContentRunRuby
+        public DocumentFormat.OpenXml.Wordprocessing.SdtContentRunRuby? SdtContentRunRuby
         {
-            get => GetElement<SdtContentRunRuby>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SdtContentRunRuby>();
             set => SetElement(value);
         }
 
@@ -18728,9 +18728,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SdtContentRun? SdtContentRun
+        public DocumentFormat.OpenXml.Wordprocessing.SdtContentRun? SdtContentRun
         {
-            get => GetElement<SdtContentRun>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SdtContentRun>();
             set => SetElement(value);
         }
 
@@ -19099,9 +19099,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SdtContentBlock? SdtContentBlock
+        public DocumentFormat.OpenXml.Wordprocessing.SdtContentBlock? SdtContentBlock
         {
-            get => GetElement<SdtContentBlock>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SdtContentBlock>();
             set => SetElement(value);
         }
 
@@ -19633,9 +19633,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ParagraphProperties? ParagraphProperties
+        public DocumentFormat.OpenXml.Wordprocessing.ParagraphProperties? ParagraphProperties
         {
-            get => GetElement<ParagraphProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphProperties>();
             set => SetElement(value);
         }
 
@@ -20239,9 +20239,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TablePropertyExceptions? TablePropertyExceptions
+        public DocumentFormat.OpenXml.Wordprocessing.TablePropertyExceptions? TablePropertyExceptions
         {
-            get => GetElement<TablePropertyExceptions>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TablePropertyExceptions>();
             set => SetElement(value);
         }
 
@@ -20252,9 +20252,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableRowProperties? TableRowProperties
+        public DocumentFormat.OpenXml.Wordprocessing.TableRowProperties? TableRowProperties
         {
-            get => GetElement<TableRowProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableRowProperties>();
             set => SetElement(value);
         }
 
@@ -20614,9 +20614,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SdtContentRow? SdtContentRow
+        public DocumentFormat.OpenXml.Wordprocessing.SdtContentRow? SdtContentRow
         {
-            get => GetElement<SdtContentRow>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SdtContentRow>();
             set => SetElement(value);
         }
 
@@ -20860,9 +20860,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellProperties? TableCellProperties
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellProperties? TableCellProperties
         {
-            get => GetElement<TableCellProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellProperties>();
             set => SetElement(value);
         }
 
@@ -21222,9 +21222,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SdtContentCell? SdtContentCell
+        public DocumentFormat.OpenXml.Wordprocessing.SdtContentCell? SdtContentCell
         {
-            get => GetElement<SdtContentCell>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SdtContentCell>();
             set => SetElement(value);
         }
 
@@ -21963,9 +21963,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FieldData? FieldData
+        public DocumentFormat.OpenXml.Wordprocessing.FieldData? FieldData
         {
-            get => GetElement<FieldData>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FieldData>();
             set => SetElement(value);
         }
 
@@ -24317,9 +24317,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TopBorder? TopBorder
+        public DocumentFormat.OpenXml.Wordprocessing.TopBorder? TopBorder
         {
-            get => GetElement<TopBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopBorder>();
             set => SetElement(value);
         }
 
@@ -24330,9 +24330,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public LeftBorder? LeftBorder
+        public DocumentFormat.OpenXml.Wordprocessing.LeftBorder? LeftBorder
         {
-            get => GetElement<LeftBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LeftBorder>();
             set => SetElement(value);
         }
 
@@ -24343,9 +24343,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StartBorder? StartBorder
+        public DocumentFormat.OpenXml.Wordprocessing.StartBorder? StartBorder
         {
-            get => GetElement<StartBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StartBorder>();
             set => SetElement(value);
         }
 
@@ -24356,9 +24356,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public BottomBorder? BottomBorder
+        public DocumentFormat.OpenXml.Wordprocessing.BottomBorder? BottomBorder
         {
-            get => GetElement<BottomBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BottomBorder>();
             set => SetElement(value);
         }
 
@@ -24369,9 +24369,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public RightBorder? RightBorder
+        public DocumentFormat.OpenXml.Wordprocessing.RightBorder? RightBorder
         {
-            get => GetElement<RightBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RightBorder>();
             set => SetElement(value);
         }
 
@@ -24382,9 +24382,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EndBorder? EndBorder
+        public DocumentFormat.OpenXml.Wordprocessing.EndBorder? EndBorder
         {
-            get => GetElement<EndBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EndBorder>();
             set => SetElement(value);
         }
 
@@ -24395,9 +24395,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public InsideHorizontalBorder? InsideHorizontalBorder
+        public DocumentFormat.OpenXml.Wordprocessing.InsideHorizontalBorder? InsideHorizontalBorder
         {
-            get => GetElement<InsideHorizontalBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.InsideHorizontalBorder>();
             set => SetElement(value);
         }
 
@@ -24408,9 +24408,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public InsideVerticalBorder? InsideVerticalBorder
+        public DocumentFormat.OpenXml.Wordprocessing.InsideVerticalBorder? InsideVerticalBorder
         {
-            get => GetElement<InsideVerticalBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.InsideVerticalBorder>();
             set => SetElement(value);
         }
 
@@ -24421,9 +24421,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TopLeftToBottomRightCellBorder? TopLeftToBottomRightCellBorder
+        public DocumentFormat.OpenXml.Wordprocessing.TopLeftToBottomRightCellBorder? TopLeftToBottomRightCellBorder
         {
-            get => GetElement<TopLeftToBottomRightCellBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopLeftToBottomRightCellBorder>();
             set => SetElement(value);
         }
 
@@ -24434,9 +24434,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TopRightToBottomLeftCellBorder? TopRightToBottomLeftCellBorder
+        public DocumentFormat.OpenXml.Wordprocessing.TopRightToBottomLeftCellBorder? TopRightToBottomLeftCellBorder
         {
-            get => GetElement<TopRightToBottomLeftCellBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopRightToBottomLeftCellBorder>();
             set => SetElement(value);
         }
 
@@ -25078,9 +25078,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TopMargin? TopMargin
+        public DocumentFormat.OpenXml.Wordprocessing.TopMargin? TopMargin
         {
-            get => GetElement<TopMargin>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopMargin>();
             set => SetElement(value);
         }
 
@@ -25091,9 +25091,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public LeftMargin? LeftMargin
+        public DocumentFormat.OpenXml.Wordprocessing.LeftMargin? LeftMargin
         {
-            get => GetElement<LeftMargin>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LeftMargin>();
             set => SetElement(value);
         }
 
@@ -25104,9 +25104,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StartMargin? StartMargin
+        public DocumentFormat.OpenXml.Wordprocessing.StartMargin? StartMargin
         {
-            get => GetElement<StartMargin>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StartMargin>();
             set => SetElement(value);
         }
 
@@ -25117,9 +25117,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public BottomMargin? BottomMargin
+        public DocumentFormat.OpenXml.Wordprocessing.BottomMargin? BottomMargin
         {
-            get => GetElement<BottomMargin>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BottomMargin>();
             set => SetElement(value);
         }
 
@@ -25130,9 +25130,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public RightMargin? RightMargin
+        public DocumentFormat.OpenXml.Wordprocessing.RightMargin? RightMargin
         {
-            get => GetElement<RightMargin>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RightMargin>();
             set => SetElement(value);
         }
 
@@ -25143,9 +25143,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EndMargin? EndMargin
+        public DocumentFormat.OpenXml.Wordprocessing.EndMargin? EndMargin
         {
-            get => GetElement<EndMargin>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EndMargin>();
             set => SetElement(value);
         }
 
@@ -25933,9 +25933,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TopBorder? TopBorder
+        public DocumentFormat.OpenXml.Wordprocessing.TopBorder? TopBorder
         {
-            get => GetElement<TopBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopBorder>();
             set => SetElement(value);
         }
 
@@ -25946,9 +25946,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public LeftBorder? LeftBorder
+        public DocumentFormat.OpenXml.Wordprocessing.LeftBorder? LeftBorder
         {
-            get => GetElement<LeftBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LeftBorder>();
             set => SetElement(value);
         }
 
@@ -25959,9 +25959,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StartBorder? StartBorder
+        public DocumentFormat.OpenXml.Wordprocessing.StartBorder? StartBorder
         {
-            get => GetElement<StartBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StartBorder>();
             set => SetElement(value);
         }
 
@@ -25972,9 +25972,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public BottomBorder? BottomBorder
+        public DocumentFormat.OpenXml.Wordprocessing.BottomBorder? BottomBorder
         {
-            get => GetElement<BottomBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BottomBorder>();
             set => SetElement(value);
         }
 
@@ -25985,9 +25985,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public RightBorder? RightBorder
+        public DocumentFormat.OpenXml.Wordprocessing.RightBorder? RightBorder
         {
-            get => GetElement<RightBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RightBorder>();
             set => SetElement(value);
         }
 
@@ -25998,9 +25998,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EndBorder? EndBorder
+        public DocumentFormat.OpenXml.Wordprocessing.EndBorder? EndBorder
         {
-            get => GetElement<EndBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EndBorder>();
             set => SetElement(value);
         }
 
@@ -26011,9 +26011,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public InsideHorizontalBorder? InsideHorizontalBorder
+        public DocumentFormat.OpenXml.Wordprocessing.InsideHorizontalBorder? InsideHorizontalBorder
         {
-            get => GetElement<InsideHorizontalBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.InsideHorizontalBorder>();
             set => SetElement(value);
         }
 
@@ -26024,9 +26024,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public InsideVerticalBorder? InsideVerticalBorder
+        public DocumentFormat.OpenXml.Wordprocessing.InsideVerticalBorder? InsideVerticalBorder
         {
-            get => GetElement<InsideVerticalBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.InsideVerticalBorder>();
             set => SetElement(value);
         }
 
@@ -26162,9 +26162,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TopMargin? TopMargin
+        public DocumentFormat.OpenXml.Wordprocessing.TopMargin? TopMargin
         {
-            get => GetElement<TopMargin>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopMargin>();
             set => SetElement(value);
         }
 
@@ -26175,9 +26175,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellLeftMargin? TableCellLeftMargin
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellLeftMargin? TableCellLeftMargin
         {
-            get => GetElement<TableCellLeftMargin>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellLeftMargin>();
             set => SetElement(value);
         }
 
@@ -26188,9 +26188,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StartMargin? StartMargin
+        public DocumentFormat.OpenXml.Wordprocessing.StartMargin? StartMargin
         {
-            get => GetElement<StartMargin>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StartMargin>();
             set => SetElement(value);
         }
 
@@ -26201,9 +26201,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public BottomMargin? BottomMargin
+        public DocumentFormat.OpenXml.Wordprocessing.BottomMargin? BottomMargin
         {
-            get => GetElement<BottomMargin>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BottomMargin>();
             set => SetElement(value);
         }
 
@@ -26214,9 +26214,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellRightMargin? TableCellRightMargin
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellRightMargin? TableCellRightMargin
         {
-            get => GetElement<TableCellRightMargin>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellRightMargin>();
             set => SetElement(value);
         }
 
@@ -26227,9 +26227,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EndMargin? EndMargin
+        public DocumentFormat.OpenXml.Wordprocessing.EndMargin? EndMargin
         {
-            get => GetElement<EndMargin>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EndMargin>();
             set => SetElement(value);
         }
 
@@ -26427,9 +26427,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public AltChunkProperties? AltChunkProperties
+        public DocumentFormat.OpenXml.Wordprocessing.AltChunkProperties? AltChunkProperties
         {
-            get => GetElement<AltChunkProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AltChunkProperties>();
             set => SetElement(value);
         }
 
@@ -26706,9 +26706,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FootnotePosition? FootnotePosition
+        public DocumentFormat.OpenXml.Wordprocessing.FootnotePosition? FootnotePosition
         {
-            get => GetElement<FootnotePosition>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FootnotePosition>();
             set => SetElement(value);
         }
 
@@ -26719,9 +26719,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NumberingFormat? NumberingFormat
+        public DocumentFormat.OpenXml.Wordprocessing.NumberingFormat? NumberingFormat
         {
-            get => GetElement<NumberingFormat>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingFormat>();
             set => SetElement(value);
         }
 
@@ -26732,9 +26732,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NumberingStart? NumberingStart
+        public DocumentFormat.OpenXml.Wordprocessing.NumberingStart? NumberingStart
         {
-            get => GetElement<NumberingStart>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingStart>();
             set => SetElement(value);
         }
 
@@ -26745,9 +26745,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NumberingRestart? NumberingRestart
+        public DocumentFormat.OpenXml.Wordprocessing.NumberingRestart? NumberingRestart
         {
-            get => GetElement<NumberingRestart>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingRestart>();
             set => SetElement(value);
         }
 
@@ -26835,9 +26835,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EndnotePosition? EndnotePosition
+        public DocumentFormat.OpenXml.Wordprocessing.EndnotePosition? EndnotePosition
         {
-            get => GetElement<EndnotePosition>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EndnotePosition>();
             set => SetElement(value);
         }
 
@@ -26848,9 +26848,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NumberingFormat? NumberingFormat
+        public DocumentFormat.OpenXml.Wordprocessing.NumberingFormat? NumberingFormat
         {
-            get => GetElement<NumberingFormat>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingFormat>();
             set => SetElement(value);
         }
 
@@ -26861,9 +26861,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NumberingStart? NumberingStart
+        public DocumentFormat.OpenXml.Wordprocessing.NumberingStart? NumberingStart
         {
-            get => GetElement<NumberingStart>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingStart>();
             set => SetElement(value);
         }
 
@@ -26874,9 +26874,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NumberingRestart? NumberingRestart
+        public DocumentFormat.OpenXml.Wordprocessing.NumberingRestart? NumberingRestart
         {
-            get => GetElement<NumberingRestart>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingRestart>();
             set => SetElement(value);
         }
 
@@ -27441,9 +27441,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TopBorder? TopBorder
+        public DocumentFormat.OpenXml.Wordprocessing.TopBorder? TopBorder
         {
-            get => GetElement<TopBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopBorder>();
             set => SetElement(value);
         }
 
@@ -27454,9 +27454,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public LeftBorder? LeftBorder
+        public DocumentFormat.OpenXml.Wordprocessing.LeftBorder? LeftBorder
         {
-            get => GetElement<LeftBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LeftBorder>();
             set => SetElement(value);
         }
 
@@ -27467,9 +27467,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public BottomBorder? BottomBorder
+        public DocumentFormat.OpenXml.Wordprocessing.BottomBorder? BottomBorder
         {
-            get => GetElement<BottomBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BottomBorder>();
             set => SetElement(value);
         }
 
@@ -27480,9 +27480,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public RightBorder? RightBorder
+        public DocumentFormat.OpenXml.Wordprocessing.RightBorder? RightBorder
         {
-            get => GetElement<RightBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RightBorder>();
             set => SetElement(value);
         }
 
@@ -29590,9 +29590,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public WriteProtection? WriteProtection
+        public DocumentFormat.OpenXml.Wordprocessing.WriteProtection? WriteProtection
         {
-            get => GetElement<WriteProtection>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WriteProtection>();
             set => SetElement(value);
         }
 
@@ -29603,9 +29603,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public View? View
+        public DocumentFormat.OpenXml.Wordprocessing.View? View
         {
-            get => GetElement<View>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.View>();
             set => SetElement(value);
         }
 
@@ -29616,9 +29616,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Zoom? Zoom
+        public DocumentFormat.OpenXml.Wordprocessing.Zoom? Zoom
         {
-            get => GetElement<Zoom>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Zoom>();
             set => SetElement(value);
         }
 
@@ -29629,9 +29629,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public RemovePersonalInformation? RemovePersonalInformation
+        public DocumentFormat.OpenXml.Wordprocessing.RemovePersonalInformation? RemovePersonalInformation
         {
-            get => GetElement<RemovePersonalInformation>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RemovePersonalInformation>();
             set => SetElement(value);
         }
 
@@ -29642,9 +29642,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public RemoveDateAndTime? RemoveDateAndTime
+        public DocumentFormat.OpenXml.Wordprocessing.RemoveDateAndTime? RemoveDateAndTime
         {
-            get => GetElement<RemoveDateAndTime>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RemoveDateAndTime>();
             set => SetElement(value);
         }
 
@@ -29655,9 +29655,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DoNotDisplayPageBoundaries? DoNotDisplayPageBoundaries
+        public DocumentFormat.OpenXml.Wordprocessing.DoNotDisplayPageBoundaries? DoNotDisplayPageBoundaries
         {
-            get => GetElement<DoNotDisplayPageBoundaries>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotDisplayPageBoundaries>();
             set => SetElement(value);
         }
 
@@ -29668,9 +29668,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DisplayBackgroundShape? DisplayBackgroundShape
+        public DocumentFormat.OpenXml.Wordprocessing.DisplayBackgroundShape? DisplayBackgroundShape
         {
-            get => GetElement<DisplayBackgroundShape>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DisplayBackgroundShape>();
             set => SetElement(value);
         }
 
@@ -29681,9 +29681,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PrintPostScriptOverText? PrintPostScriptOverText
+        public DocumentFormat.OpenXml.Wordprocessing.PrintPostScriptOverText? PrintPostScriptOverText
         {
-            get => GetElement<PrintPostScriptOverText>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PrintPostScriptOverText>();
             set => SetElement(value);
         }
 
@@ -29694,9 +29694,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PrintFractionalCharacterWidth? PrintFractionalCharacterWidth
+        public DocumentFormat.OpenXml.Wordprocessing.PrintFractionalCharacterWidth? PrintFractionalCharacterWidth
         {
-            get => GetElement<PrintFractionalCharacterWidth>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PrintFractionalCharacterWidth>();
             set => SetElement(value);
         }
 
@@ -29707,9 +29707,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PrintFormsData? PrintFormsData
+        public DocumentFormat.OpenXml.Wordprocessing.PrintFormsData? PrintFormsData
         {
-            get => GetElement<PrintFormsData>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PrintFormsData>();
             set => SetElement(value);
         }
 
@@ -29720,9 +29720,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EmbedTrueTypeFonts? EmbedTrueTypeFonts
+        public DocumentFormat.OpenXml.Wordprocessing.EmbedTrueTypeFonts? EmbedTrueTypeFonts
         {
-            get => GetElement<EmbedTrueTypeFonts>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EmbedTrueTypeFonts>();
             set => SetElement(value);
         }
 
@@ -29733,9 +29733,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EmbedSystemFonts? EmbedSystemFonts
+        public DocumentFormat.OpenXml.Wordprocessing.EmbedSystemFonts? EmbedSystemFonts
         {
-            get => GetElement<EmbedSystemFonts>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EmbedSystemFonts>();
             set => SetElement(value);
         }
 
@@ -29746,9 +29746,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SaveSubsetFonts? SaveSubsetFonts
+        public DocumentFormat.OpenXml.Wordprocessing.SaveSubsetFonts? SaveSubsetFonts
         {
-            get => GetElement<SaveSubsetFonts>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SaveSubsetFonts>();
             set => SetElement(value);
         }
 
@@ -29759,9 +29759,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SaveFormsData? SaveFormsData
+        public DocumentFormat.OpenXml.Wordprocessing.SaveFormsData? SaveFormsData
         {
-            get => GetElement<SaveFormsData>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SaveFormsData>();
             set => SetElement(value);
         }
 
@@ -29772,9 +29772,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public MirrorMargins? MirrorMargins
+        public DocumentFormat.OpenXml.Wordprocessing.MirrorMargins? MirrorMargins
         {
-            get => GetElement<MirrorMargins>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MirrorMargins>();
             set => SetElement(value);
         }
 
@@ -29785,9 +29785,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public AlignBorderAndEdges? AlignBorderAndEdges
+        public DocumentFormat.OpenXml.Wordprocessing.AlignBorderAndEdges? AlignBorderAndEdges
         {
-            get => GetElement<AlignBorderAndEdges>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AlignBorderAndEdges>();
             set => SetElement(value);
         }
 
@@ -29798,9 +29798,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public BordersDoNotSurroundHeader? BordersDoNotSurroundHeader
+        public DocumentFormat.OpenXml.Wordprocessing.BordersDoNotSurroundHeader? BordersDoNotSurroundHeader
         {
-            get => GetElement<BordersDoNotSurroundHeader>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BordersDoNotSurroundHeader>();
             set => SetElement(value);
         }
 
@@ -29811,9 +29811,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public BordersDoNotSurroundFooter? BordersDoNotSurroundFooter
+        public DocumentFormat.OpenXml.Wordprocessing.BordersDoNotSurroundFooter? BordersDoNotSurroundFooter
         {
-            get => GetElement<BordersDoNotSurroundFooter>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BordersDoNotSurroundFooter>();
             set => SetElement(value);
         }
 
@@ -29824,9 +29824,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public GutterAtTop? GutterAtTop
+        public DocumentFormat.OpenXml.Wordprocessing.GutterAtTop? GutterAtTop
         {
-            get => GetElement<GutterAtTop>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.GutterAtTop>();
             set => SetElement(value);
         }
 
@@ -29837,9 +29837,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HideSpellingErrors? HideSpellingErrors
+        public DocumentFormat.OpenXml.Wordprocessing.HideSpellingErrors? HideSpellingErrors
         {
-            get => GetElement<HideSpellingErrors>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.HideSpellingErrors>();
             set => SetElement(value);
         }
 
@@ -29850,9 +29850,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HideGrammaticalErrors? HideGrammaticalErrors
+        public DocumentFormat.OpenXml.Wordprocessing.HideGrammaticalErrors? HideGrammaticalErrors
         {
-            get => GetElement<HideGrammaticalErrors>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.HideGrammaticalErrors>();
             set => SetElement(value);
         }
 
@@ -29989,9 +29989,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Frameset? Frameset
+        public DocumentFormat.OpenXml.Wordprocessing.Frameset? Frameset
         {
-            get => GetElement<Frameset>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Frameset>();
             set => SetElement(value);
         }
 
@@ -30002,9 +30002,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Divs? Divs
+        public DocumentFormat.OpenXml.Wordprocessing.Divs? Divs
         {
-            get => GetElement<Divs>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Divs>();
             set => SetElement(value);
         }
 
@@ -30015,9 +30015,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public WebPageEncoding? WebPageEncoding
+        public DocumentFormat.OpenXml.Wordprocessing.WebPageEncoding? WebPageEncoding
         {
-            get => GetElement<WebPageEncoding>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WebPageEncoding>();
             set => SetElement(value);
         }
 
@@ -30028,9 +30028,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OptimizeForBrowser? OptimizeForBrowser
+        public DocumentFormat.OpenXml.Wordprocessing.OptimizeForBrowser? OptimizeForBrowser
         {
-            get => GetElement<OptimizeForBrowser>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.OptimizeForBrowser>();
             set => SetElement(value);
         }
 
@@ -30041,9 +30041,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public RelyOnVML? RelyOnVML
+        public DocumentFormat.OpenXml.Wordprocessing.RelyOnVML? RelyOnVML
         {
-            get => GetElement<RelyOnVML>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RelyOnVML>();
             set => SetElement(value);
         }
 
@@ -30054,9 +30054,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public AllowPNG? AllowPNG
+        public DocumentFormat.OpenXml.Wordprocessing.AllowPNG? AllowPNG
         {
-            get => GetElement<AllowPNG>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AllowPNG>();
             set => SetElement(value);
         }
 
@@ -30067,9 +30067,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DoNotRelyOnCSS? DoNotRelyOnCSS
+        public DocumentFormat.OpenXml.Wordprocessing.DoNotRelyOnCSS? DoNotRelyOnCSS
         {
-            get => GetElement<DoNotRelyOnCSS>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotRelyOnCSS>();
             set => SetElement(value);
         }
 
@@ -30080,9 +30080,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DoNotSaveAsSingleFile? DoNotSaveAsSingleFile
+        public DocumentFormat.OpenXml.Wordprocessing.DoNotSaveAsSingleFile? DoNotSaveAsSingleFile
         {
-            get => GetElement<DoNotSaveAsSingleFile>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotSaveAsSingleFile>();
             set => SetElement(value);
         }
 
@@ -30093,9 +30093,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DoNotOrganizeInFolder? DoNotOrganizeInFolder
+        public DocumentFormat.OpenXml.Wordprocessing.DoNotOrganizeInFolder? DoNotOrganizeInFolder
         {
-            get => GetElement<DoNotOrganizeInFolder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotOrganizeInFolder>();
             set => SetElement(value);
         }
 
@@ -30106,9 +30106,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DoNotUseLongFileNames? DoNotUseLongFileNames
+        public DocumentFormat.OpenXml.Wordprocessing.DoNotUseLongFileNames? DoNotUseLongFileNames
         {
-            get => GetElement<DoNotUseLongFileNames>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotUseLongFileNames>();
             set => SetElement(value);
         }
 
@@ -30119,9 +30119,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PixelsPerInch? PixelsPerInch
+        public DocumentFormat.OpenXml.Wordprocessing.PixelsPerInch? PixelsPerInch
         {
-            get => GetElement<PixelsPerInch>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PixelsPerInch>();
             set => SetElement(value);
         }
 
@@ -30132,9 +30132,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TargetScreenSize? TargetScreenSize
+        public DocumentFormat.OpenXml.Wordprocessing.TargetScreenSize? TargetScreenSize
         {
-            get => GetElement<TargetScreenSize>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TargetScreenSize>();
             set => SetElement(value);
         }
 
@@ -30439,9 +30439,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DocDefaults? DocDefaults
+        public DocumentFormat.OpenXml.Wordprocessing.DocDefaults? DocDefaults
         {
-            get => GetElement<DocDefaults>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DocDefaults>();
             set => SetElement(value);
         }
 
@@ -30452,9 +30452,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public LatentStyles? LatentStyles
+        public DocumentFormat.OpenXml.Wordprocessing.LatentStyles? LatentStyles
         {
-            get => GetElement<LatentStyles>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LatentStyles>();
             set => SetElement(value);
         }
 
@@ -30557,9 +30557,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DocumentBackground? DocumentBackground
+        public DocumentFormat.OpenXml.Wordprocessing.DocumentBackground? DocumentBackground
         {
-            get => GetElement<DocumentBackground>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DocumentBackground>();
             set => SetElement(value);
         }
 
@@ -30570,9 +30570,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Body? Body
+        public DocumentFormat.OpenXml.Wordprocessing.Body? Body
         {
-            get => GetElement<Body>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Body>();
             set => SetElement(value);
         }
 
@@ -30685,9 +30685,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DocumentBackground? DocumentBackground
+        public DocumentFormat.OpenXml.Wordprocessing.DocumentBackground? DocumentBackground
         {
-            get => GetElement<DocumentBackground>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DocumentBackground>();
             set => SetElement(value);
         }
 
@@ -30698,9 +30698,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DocParts? DocParts
+        public DocumentFormat.OpenXml.Wordprocessing.DocParts? DocParts
         {
-            get => GetElement<DocParts>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DocParts>();
             set => SetElement(value);
         }
 
@@ -30828,9 +30828,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableWidth? TableWidth
+        public DocumentFormat.OpenXml.Wordprocessing.TableWidth? TableWidth
         {
-            get => GetElement<TableWidth>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableWidth>();
             set => SetElement(value);
         }
 
@@ -30841,9 +30841,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableJustification? TableJustification
+        public DocumentFormat.OpenXml.Wordprocessing.TableJustification? TableJustification
         {
-            get => GetElement<TableJustification>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableJustification>();
             set => SetElement(value);
         }
 
@@ -30854,9 +30854,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellSpacing? TableCellSpacing
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing? TableCellSpacing
         {
-            get => GetElement<TableCellSpacing>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing>();
             set => SetElement(value);
         }
 
@@ -30867,9 +30867,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableIndentation? TableIndentation
+        public DocumentFormat.OpenXml.Wordprocessing.TableIndentation? TableIndentation
         {
-            get => GetElement<TableIndentation>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableIndentation>();
             set => SetElement(value);
         }
 
@@ -30880,9 +30880,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableBorders? TableBorders
+        public DocumentFormat.OpenXml.Wordprocessing.TableBorders? TableBorders
         {
-            get => GetElement<TableBorders>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableBorders>();
             set => SetElement(value);
         }
 
@@ -30893,9 +30893,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Shading? Shading
+        public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
-            get => GetElement<Shading>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
             set => SetElement(value);
         }
 
@@ -30906,9 +30906,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableLayout? TableLayout
+        public DocumentFormat.OpenXml.Wordprocessing.TableLayout? TableLayout
         {
-            get => GetElement<TableLayout>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableLayout>();
             set => SetElement(value);
         }
 
@@ -30919,9 +30919,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellMarginDefault? TableCellMarginDefault
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault? TableCellMarginDefault
         {
-            get => GetElement<TableCellMarginDefault>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault>();
             set => SetElement(value);
         }
 
@@ -30932,9 +30932,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableLook? TableLook
+        public DocumentFormat.OpenXml.Wordprocessing.TableLook? TableLook
         {
-            get => GetElement<TableLook>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableLook>();
             set => SetElement(value);
         }
 
@@ -31100,9 +31100,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ConditionalFormatStyle? ConditionalFormatStyle
+        public DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle? ConditionalFormatStyle
         {
-            get => GetElement<ConditionalFormatStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle>();
             set => SetElement(value);
         }
 
@@ -31113,9 +31113,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellWidth? TableCellWidth
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellWidth? TableCellWidth
         {
-            get => GetElement<TableCellWidth>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellWidth>();
             set => SetElement(value);
         }
 
@@ -31126,9 +31126,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public GridSpan? GridSpan
+        public DocumentFormat.OpenXml.Wordprocessing.GridSpan? GridSpan
         {
-            get => GetElement<GridSpan>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.GridSpan>();
             set => SetElement(value);
         }
 
@@ -31139,9 +31139,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HorizontalMerge? HorizontalMerge
+        public DocumentFormat.OpenXml.Wordprocessing.HorizontalMerge? HorizontalMerge
         {
-            get => GetElement<HorizontalMerge>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.HorizontalMerge>();
             set => SetElement(value);
         }
 
@@ -31152,9 +31152,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public VerticalMerge? VerticalMerge
+        public DocumentFormat.OpenXml.Wordprocessing.VerticalMerge? VerticalMerge
         {
-            get => GetElement<VerticalMerge>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.VerticalMerge>();
             set => SetElement(value);
         }
 
@@ -31165,9 +31165,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellBorders? TableCellBorders
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellBorders? TableCellBorders
         {
-            get => GetElement<TableCellBorders>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellBorders>();
             set => SetElement(value);
         }
 
@@ -31178,9 +31178,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Shading? Shading
+        public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
-            get => GetElement<Shading>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
             set => SetElement(value);
         }
 
@@ -31191,9 +31191,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NoWrap? NoWrap
+        public DocumentFormat.OpenXml.Wordprocessing.NoWrap? NoWrap
         {
-            get => GetElement<NoWrap>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoWrap>();
             set => SetElement(value);
         }
 
@@ -31204,9 +31204,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellMargin? TableCellMargin
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellMargin? TableCellMargin
         {
-            get => GetElement<TableCellMargin>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellMargin>();
             set => SetElement(value);
         }
 
@@ -31217,9 +31217,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TextDirection? TextDirection
+        public DocumentFormat.OpenXml.Wordprocessing.TextDirection? TextDirection
         {
-            get => GetElement<TextDirection>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextDirection>();
             set => SetElement(value);
         }
 
@@ -31230,9 +31230,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellFitText? TableCellFitText
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellFitText? TableCellFitText
         {
-            get => GetElement<TableCellFitText>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellFitText>();
             set => SetElement(value);
         }
 
@@ -31243,9 +31243,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellVerticalAlignment? TableCellVerticalAlignment
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment? TableCellVerticalAlignment
         {
-            get => GetElement<TableCellVerticalAlignment>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment>();
             set => SetElement(value);
         }
 
@@ -31256,9 +31256,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HideMark? HideMark
+        public DocumentFormat.OpenXml.Wordprocessing.HideMark? HideMark
         {
-            get => GetElement<HideMark>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.HideMark>();
             set => SetElement(value);
         }
 
@@ -31516,9 +31516,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableStyle? TableStyle
+        public DocumentFormat.OpenXml.Wordprocessing.TableStyle? TableStyle
         {
-            get => GetElement<TableStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableStyle>();
             set => SetElement(value);
         }
 
@@ -31529,9 +31529,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TablePositionProperties? TablePositionProperties
+        public DocumentFormat.OpenXml.Wordprocessing.TablePositionProperties? TablePositionProperties
         {
-            get => GetElement<TablePositionProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TablePositionProperties>();
             set => SetElement(value);
         }
 
@@ -31542,9 +31542,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableOverlap? TableOverlap
+        public DocumentFormat.OpenXml.Wordprocessing.TableOverlap? TableOverlap
         {
-            get => GetElement<TableOverlap>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableOverlap>();
             set => SetElement(value);
         }
 
@@ -31555,9 +31555,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public BiDiVisual? BiDiVisual
+        public DocumentFormat.OpenXml.Wordprocessing.BiDiVisual? BiDiVisual
         {
-            get => GetElement<BiDiVisual>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BiDiVisual>();
             set => SetElement(value);
         }
 
@@ -31568,9 +31568,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableWidth? TableWidth
+        public DocumentFormat.OpenXml.Wordprocessing.TableWidth? TableWidth
         {
-            get => GetElement<TableWidth>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableWidth>();
             set => SetElement(value);
         }
 
@@ -31581,9 +31581,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableJustification? TableJustification
+        public DocumentFormat.OpenXml.Wordprocessing.TableJustification? TableJustification
         {
-            get => GetElement<TableJustification>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableJustification>();
             set => SetElement(value);
         }
 
@@ -31594,9 +31594,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellSpacing? TableCellSpacing
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing? TableCellSpacing
         {
-            get => GetElement<TableCellSpacing>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing>();
             set => SetElement(value);
         }
 
@@ -31607,9 +31607,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableIndentation? TableIndentation
+        public DocumentFormat.OpenXml.Wordprocessing.TableIndentation? TableIndentation
         {
-            get => GetElement<TableIndentation>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableIndentation>();
             set => SetElement(value);
         }
 
@@ -31620,9 +31620,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableBorders? TableBorders
+        public DocumentFormat.OpenXml.Wordprocessing.TableBorders? TableBorders
         {
-            get => GetElement<TableBorders>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableBorders>();
             set => SetElement(value);
         }
 
@@ -31633,9 +31633,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Shading? Shading
+        public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
-            get => GetElement<Shading>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
             set => SetElement(value);
         }
 
@@ -31646,9 +31646,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableLayout? TableLayout
+        public DocumentFormat.OpenXml.Wordprocessing.TableLayout? TableLayout
         {
-            get => GetElement<TableLayout>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableLayout>();
             set => SetElement(value);
         }
 
@@ -31659,9 +31659,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellMarginDefault? TableCellMarginDefault
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault? TableCellMarginDefault
         {
-            get => GetElement<TableCellMarginDefault>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault>();
             set => SetElement(value);
         }
 
@@ -31672,9 +31672,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableLook? TableLook
+        public DocumentFormat.OpenXml.Wordprocessing.TableLook? TableLook
         {
-            get => GetElement<TableLook>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableLook>();
             set => SetElement(value);
         }
 
@@ -31685,9 +31685,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCaption? TableCaption
+        public DocumentFormat.OpenXml.Wordprocessing.TableCaption? TableCaption
         {
-            get => GetElement<TableCaption>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCaption>();
             set => SetElement(value);
         }
 
@@ -31698,9 +31698,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableDescription? TableDescription
+        public DocumentFormat.OpenXml.Wordprocessing.TableDescription? TableDescription
         {
-            get => GetElement<TableDescription>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableDescription>();
             set => SetElement(value);
         }
 
@@ -31929,9 +31929,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FootnoteProperties? FootnoteProperties
+        public DocumentFormat.OpenXml.Wordprocessing.FootnoteProperties? FootnoteProperties
         {
-            get => GetElement<FootnoteProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FootnoteProperties>();
             set => SetElement(value);
         }
 
@@ -31942,9 +31942,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EndnoteProperties? EndnoteProperties
+        public DocumentFormat.OpenXml.Wordprocessing.EndnoteProperties? EndnoteProperties
         {
-            get => GetElement<EndnoteProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EndnoteProperties>();
             set => SetElement(value);
         }
 
@@ -31955,9 +31955,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SectionType? SectionType
+        public DocumentFormat.OpenXml.Wordprocessing.SectionType? SectionType
         {
-            get => GetElement<SectionType>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SectionType>();
             set => SetElement(value);
         }
 
@@ -31968,9 +31968,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PageSize? PageSize
+        public DocumentFormat.OpenXml.Wordprocessing.PageSize? PageSize
         {
-            get => GetElement<PageSize>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PageSize>();
             set => SetElement(value);
         }
 
@@ -31981,9 +31981,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PageMargin? PageMargin
+        public DocumentFormat.OpenXml.Wordprocessing.PageMargin? PageMargin
         {
-            get => GetElement<PageMargin>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PageMargin>();
             set => SetElement(value);
         }
 
@@ -31994,9 +31994,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PaperSource? PaperSource
+        public DocumentFormat.OpenXml.Wordprocessing.PaperSource? PaperSource
         {
-            get => GetElement<PaperSource>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PaperSource>();
             set => SetElement(value);
         }
 
@@ -32007,9 +32007,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PageBorders? PageBorders
+        public DocumentFormat.OpenXml.Wordprocessing.PageBorders? PageBorders
         {
-            get => GetElement<PageBorders>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PageBorders>();
             set => SetElement(value);
         }
 
@@ -32020,9 +32020,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public LineNumberType? LineNumberType
+        public DocumentFormat.OpenXml.Wordprocessing.LineNumberType? LineNumberType
         {
-            get => GetElement<LineNumberType>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LineNumberType>();
             set => SetElement(value);
         }
 
@@ -32033,9 +32033,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PageNumberType? PageNumberType
+        public DocumentFormat.OpenXml.Wordprocessing.PageNumberType? PageNumberType
         {
-            get => GetElement<PageNumberType>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PageNumberType>();
             set => SetElement(value);
         }
 
@@ -32046,9 +32046,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Columns? Columns
+        public DocumentFormat.OpenXml.Wordprocessing.Columns? Columns
         {
-            get => GetElement<Columns>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Columns>();
             set => SetElement(value);
         }
 
@@ -32059,9 +32059,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FormProtection? FormProtection
+        public DocumentFormat.OpenXml.Wordprocessing.FormProtection? FormProtection
         {
-            get => GetElement<FormProtection>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FormProtection>();
             set => SetElement(value);
         }
 
@@ -32072,9 +32072,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public VerticalTextAlignmentOnPage? VerticalTextAlignmentOnPage
+        public DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentOnPage? VerticalTextAlignmentOnPage
         {
-            get => GetElement<VerticalTextAlignmentOnPage>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentOnPage>();
             set => SetElement(value);
         }
 
@@ -32085,9 +32085,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NoEndnote? NoEndnote
+        public DocumentFormat.OpenXml.Wordprocessing.NoEndnote? NoEndnote
         {
-            get => GetElement<NoEndnote>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoEndnote>();
             set => SetElement(value);
         }
 
@@ -32098,9 +32098,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TitlePage? TitlePage
+        public DocumentFormat.OpenXml.Wordprocessing.TitlePage? TitlePage
         {
-            get => GetElement<TitlePage>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TitlePage>();
             set => SetElement(value);
         }
 
@@ -32111,9 +32111,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TextDirection? TextDirection
+        public DocumentFormat.OpenXml.Wordprocessing.TextDirection? TextDirection
         {
-            get => GetElement<TextDirection>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextDirection>();
             set => SetElement(value);
         }
 
@@ -32124,9 +32124,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public BiDi? BiDi
+        public DocumentFormat.OpenXml.Wordprocessing.BiDi? BiDi
         {
-            get => GetElement<BiDi>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BiDi>();
             set => SetElement(value);
         }
 
@@ -32137,9 +32137,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public GutterOnRight? GutterOnRight
+        public DocumentFormat.OpenXml.Wordprocessing.GutterOnRight? GutterOnRight
         {
-            get => GetElement<GutterOnRight>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.GutterOnRight>();
             set => SetElement(value);
         }
 
@@ -32150,9 +32150,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DocGrid? DocGrid
+        public DocumentFormat.OpenXml.Wordprocessing.DocGrid? DocGrid
         {
-            get => GetElement<DocGrid>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DocGrid>();
             set => SetElement(value);
         }
 
@@ -32163,9 +32163,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PrinterSettingsReference? PrinterSettingsReference
+        public DocumentFormat.OpenXml.Wordprocessing.PrinterSettingsReference? PrinterSettingsReference
         {
-            get => GetElement<PrinterSettingsReference>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PrinterSettingsReference>();
             set => SetElement(value);
         }
 
@@ -32365,9 +32365,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ParagraphStyleId? ParagraphStyleId
+        public DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleId? ParagraphStyleId
         {
-            get => GetElement<ParagraphStyleId>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleId>();
             set => SetElement(value);
         }
 
@@ -32378,9 +32378,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public KeepNext? KeepNext
+        public DocumentFormat.OpenXml.Wordprocessing.KeepNext? KeepNext
         {
-            get => GetElement<KeepNext>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.KeepNext>();
             set => SetElement(value);
         }
 
@@ -32391,9 +32391,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public KeepLines? KeepLines
+        public DocumentFormat.OpenXml.Wordprocessing.KeepLines? KeepLines
         {
-            get => GetElement<KeepLines>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.KeepLines>();
             set => SetElement(value);
         }
 
@@ -32404,9 +32404,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PageBreakBefore? PageBreakBefore
+        public DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore? PageBreakBefore
         {
-            get => GetElement<PageBreakBefore>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore>();
             set => SetElement(value);
         }
 
@@ -32417,9 +32417,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FrameProperties? FrameProperties
+        public DocumentFormat.OpenXml.Wordprocessing.FrameProperties? FrameProperties
         {
-            get => GetElement<FrameProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FrameProperties>();
             set => SetElement(value);
         }
 
@@ -32430,9 +32430,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public WidowControl? WidowControl
+        public DocumentFormat.OpenXml.Wordprocessing.WidowControl? WidowControl
         {
-            get => GetElement<WidowControl>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WidowControl>();
             set => SetElement(value);
         }
 
@@ -32443,9 +32443,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NumberingProperties? NumberingProperties
+        public DocumentFormat.OpenXml.Wordprocessing.NumberingProperties? NumberingProperties
         {
-            get => GetElement<NumberingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingProperties>();
             set => SetElement(value);
         }
 
@@ -32456,9 +32456,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SuppressLineNumbers? SuppressLineNumbers
+        public DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers? SuppressLineNumbers
         {
-            get => GetElement<SuppressLineNumbers>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers>();
             set => SetElement(value);
         }
 
@@ -32469,9 +32469,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ParagraphBorders? ParagraphBorders
+        public DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders? ParagraphBorders
         {
-            get => GetElement<ParagraphBorders>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders>();
             set => SetElement(value);
         }
 
@@ -32482,9 +32482,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Shading? Shading
+        public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
-            get => GetElement<Shading>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
             set => SetElement(value);
         }
 
@@ -32495,9 +32495,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Tabs? Tabs
+        public DocumentFormat.OpenXml.Wordprocessing.Tabs? Tabs
         {
-            get => GetElement<Tabs>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Tabs>();
             set => SetElement(value);
         }
 
@@ -32508,9 +32508,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SuppressAutoHyphens? SuppressAutoHyphens
+        public DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens? SuppressAutoHyphens
         {
-            get => GetElement<SuppressAutoHyphens>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens>();
             set => SetElement(value);
         }
 
@@ -32521,9 +32521,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Kinsoku? Kinsoku
+        public DocumentFormat.OpenXml.Wordprocessing.Kinsoku? Kinsoku
         {
-            get => GetElement<Kinsoku>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Kinsoku>();
             set => SetElement(value);
         }
 
@@ -32534,9 +32534,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public WordWrap? WordWrap
+        public DocumentFormat.OpenXml.Wordprocessing.WordWrap? WordWrap
         {
-            get => GetElement<WordWrap>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WordWrap>();
             set => SetElement(value);
         }
 
@@ -32547,9 +32547,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OverflowPunctuation? OverflowPunctuation
+        public DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation? OverflowPunctuation
         {
-            get => GetElement<OverflowPunctuation>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation>();
             set => SetElement(value);
         }
 
@@ -32560,9 +32560,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TopLinePunctuation? TopLinePunctuation
+        public DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation? TopLinePunctuation
         {
-            get => GetElement<TopLinePunctuation>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation>();
             set => SetElement(value);
         }
 
@@ -32573,9 +32573,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public AutoSpaceDE? AutoSpaceDE
+        public DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE? AutoSpaceDE
         {
-            get => GetElement<AutoSpaceDE>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE>();
             set => SetElement(value);
         }
 
@@ -32586,9 +32586,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public AutoSpaceDN? AutoSpaceDN
+        public DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN? AutoSpaceDN
         {
-            get => GetElement<AutoSpaceDN>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN>();
             set => SetElement(value);
         }
 
@@ -32599,9 +32599,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public BiDi? BiDi
+        public DocumentFormat.OpenXml.Wordprocessing.BiDi? BiDi
         {
-            get => GetElement<BiDi>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BiDi>();
             set => SetElement(value);
         }
 
@@ -32612,9 +32612,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public AdjustRightIndent? AdjustRightIndent
+        public DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent? AdjustRightIndent
         {
-            get => GetElement<AdjustRightIndent>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent>();
             set => SetElement(value);
         }
 
@@ -32625,9 +32625,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SnapToGrid? SnapToGrid
+        public DocumentFormat.OpenXml.Wordprocessing.SnapToGrid? SnapToGrid
         {
-            get => GetElement<SnapToGrid>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
             set => SetElement(value);
         }
 
@@ -32638,9 +32638,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SpacingBetweenLines? SpacingBetweenLines
+        public DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines? SpacingBetweenLines
         {
-            get => GetElement<SpacingBetweenLines>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines>();
             set => SetElement(value);
         }
 
@@ -32651,9 +32651,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Indentation? Indentation
+        public DocumentFormat.OpenXml.Wordprocessing.Indentation? Indentation
         {
-            get => GetElement<Indentation>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Indentation>();
             set => SetElement(value);
         }
 
@@ -32664,9 +32664,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ContextualSpacing? ContextualSpacing
+        public DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing? ContextualSpacing
         {
-            get => GetElement<ContextualSpacing>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing>();
             set => SetElement(value);
         }
 
@@ -32677,9 +32677,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public MirrorIndents? MirrorIndents
+        public DocumentFormat.OpenXml.Wordprocessing.MirrorIndents? MirrorIndents
         {
-            get => GetElement<MirrorIndents>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MirrorIndents>();
             set => SetElement(value);
         }
 
@@ -32690,9 +32690,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SuppressOverlap? SuppressOverlap
+        public DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap? SuppressOverlap
         {
-            get => GetElement<SuppressOverlap>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap>();
             set => SetElement(value);
         }
 
@@ -32703,9 +32703,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Justification? Justification
+        public DocumentFormat.OpenXml.Wordprocessing.Justification? Justification
         {
-            get => GetElement<Justification>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Justification>();
             set => SetElement(value);
         }
 
@@ -32716,9 +32716,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TextDirection? TextDirection
+        public DocumentFormat.OpenXml.Wordprocessing.TextDirection? TextDirection
         {
-            get => GetElement<TextDirection>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextDirection>();
             set => SetElement(value);
         }
 
@@ -32729,9 +32729,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TextAlignment? TextAlignment
+        public DocumentFormat.OpenXml.Wordprocessing.TextAlignment? TextAlignment
         {
-            get => GetElement<TextAlignment>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextAlignment>();
             set => SetElement(value);
         }
 
@@ -32742,9 +32742,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TextBoxTightWrap? TextBoxTightWrap
+        public DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap? TextBoxTightWrap
         {
-            get => GetElement<TextBoxTightWrap>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap>();
             set => SetElement(value);
         }
 
@@ -32755,9 +32755,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OutlineLevel? OutlineLevel
+        public DocumentFormat.OpenXml.Wordprocessing.OutlineLevel? OutlineLevel
         {
-            get => GetElement<OutlineLevel>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.OutlineLevel>();
             set => SetElement(value);
         }
 
@@ -32768,9 +32768,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DivId? DivId
+        public DocumentFormat.OpenXml.Wordprocessing.DivId? DivId
         {
-            get => GetElement<DivId>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DivId>();
             set => SetElement(value);
         }
 
@@ -32781,9 +32781,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ConditionalFormatStyle? ConditionalFormatStyle
+        public DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle? ConditionalFormatStyle
         {
-            get => GetElement<ConditionalFormatStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle>();
             set => SetElement(value);
         }
 
@@ -33359,9 +33359,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Inserted? Inserted
+        public DocumentFormat.OpenXml.Wordprocessing.Inserted? Inserted
         {
-            get => GetElement<Inserted>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Inserted>();
             set => SetElement(value);
         }
 
@@ -33372,9 +33372,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Deleted? Deleted
+        public DocumentFormat.OpenXml.Wordprocessing.Deleted? Deleted
         {
-            get => GetElement<Deleted>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Deleted>();
             set => SetElement(value);
         }
 
@@ -33385,9 +33385,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public MoveFrom? MoveFrom
+        public DocumentFormat.OpenXml.Wordprocessing.MoveFrom? MoveFrom
         {
-            get => GetElement<MoveFrom>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MoveFrom>();
             set => SetElement(value);
         }
 
@@ -33398,9 +33398,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public MoveTo? MoveTo
+        public DocumentFormat.OpenXml.Wordprocessing.MoveTo? MoveTo
         {
-            get => GetElement<MoveTo>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MoveTo>();
             set => SetElement(value);
         }
 
@@ -34111,9 +34111,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Inserted? Inserted
+        public DocumentFormat.OpenXml.Wordprocessing.Inserted? Inserted
         {
-            get => GetElement<Inserted>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Inserted>();
             set => SetElement(value);
         }
 
@@ -34124,9 +34124,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Deleted? Deleted
+        public DocumentFormat.OpenXml.Wordprocessing.Deleted? Deleted
         {
-            get => GetElement<Deleted>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Deleted>();
             set => SetElement(value);
         }
 
@@ -34137,9 +34137,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public MoveFrom? MoveFrom
+        public DocumentFormat.OpenXml.Wordprocessing.MoveFrom? MoveFrom
         {
-            get => GetElement<MoveFrom>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MoveFrom>();
             set => SetElement(value);
         }
 
@@ -34150,9 +34150,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public MoveTo? MoveTo
+        public DocumentFormat.OpenXml.Wordprocessing.MoveTo? MoveTo
         {
-            get => GetElement<MoveTo>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MoveTo>();
             set => SetElement(value);
         }
 
@@ -34963,9 +34963,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (140L), InitialVersion
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DropDownListSelection? DropDownListSelection
+        public DocumentFormat.OpenXml.Wordprocessing.DropDownListSelection? DropDownListSelection
         {
-            get => GetElement<DropDownListSelection>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DropDownListSelection>();
             set => SetElement(value);
         }
 
@@ -34976,9 +34976,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (140L), InitialVersion
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DefaultDropDownListItemIndex? DefaultDropDownListItemIndex
+        public DocumentFormat.OpenXml.Wordprocessing.DefaultDropDownListItemIndex? DefaultDropDownListItemIndex
         {
-            get => GetElement<DefaultDropDownListItemIndex>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DefaultDropDownListItemIndex>();
             set => SetElement(value);
         }
 
@@ -35060,9 +35060,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (140L), InitialVersion
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TextBoxFormFieldType? TextBoxFormFieldType
+        public DocumentFormat.OpenXml.Wordprocessing.TextBoxFormFieldType? TextBoxFormFieldType
         {
-            get => GetElement<TextBoxFormFieldType>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextBoxFormFieldType>();
             set => SetElement(value);
         }
 
@@ -35073,9 +35073,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (140L), InitialVersion
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DefaultTextBoxFormFieldString? DefaultTextBoxFormFieldString
+        public DocumentFormat.OpenXml.Wordprocessing.DefaultTextBoxFormFieldString? DefaultTextBoxFormFieldString
         {
-            get => GetElement<DefaultTextBoxFormFieldString>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DefaultTextBoxFormFieldString>();
             set => SetElement(value);
         }
 
@@ -35086,9 +35086,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (140L), InitialVersion
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public MaxLength? MaxLength
+        public DocumentFormat.OpenXml.Wordprocessing.MaxLength? MaxLength
         {
-            get => GetElement<MaxLength>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MaxLength>();
             set => SetElement(value);
         }
 
@@ -35099,9 +35099,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (140L), InitialVersion
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Format? Format
+        public DocumentFormat.OpenXml.Wordprocessing.Format? Format
         {
-            get => GetElement<Format>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Format>();
             set => SetElement(value);
         }
 
@@ -35668,9 +35668,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PreviousSectionProperties? PreviousSectionProperties
+        public DocumentFormat.OpenXml.Wordprocessing.PreviousSectionProperties? PreviousSectionProperties
         {
-            get => GetElement<PreviousSectionProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PreviousSectionProperties>();
             set => SetElement(value);
         }
 
@@ -35820,9 +35820,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PreviousParagraphMarkRunProperties? PreviousParagraphMarkRunProperties
+        public DocumentFormat.OpenXml.Wordprocessing.PreviousParagraphMarkRunProperties? PreviousParagraphMarkRunProperties
         {
-            get => GetElement<PreviousParagraphMarkRunProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PreviousParagraphMarkRunProperties>();
             set => SetElement(value);
         }
 
@@ -35895,9 +35895,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public MatchSource? MatchSource
+        public DocumentFormat.OpenXml.Wordprocessing.MatchSource? MatchSource
         {
-            get => GetElement<MatchSource>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MatchSource>();
             set => SetElement(value);
         }
 
@@ -36139,9 +36139,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public RubyAlign? RubyAlign
+        public DocumentFormat.OpenXml.Wordprocessing.RubyAlign? RubyAlign
         {
-            get => GetElement<RubyAlign>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RubyAlign>();
             set => SetElement(value);
         }
 
@@ -36152,9 +36152,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PhoneticGuideTextFontSize? PhoneticGuideTextFontSize
+        public DocumentFormat.OpenXml.Wordprocessing.PhoneticGuideTextFontSize? PhoneticGuideTextFontSize
         {
-            get => GetElement<PhoneticGuideTextFontSize>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PhoneticGuideTextFontSize>();
             set => SetElement(value);
         }
 
@@ -36165,9 +36165,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PhoneticGuideRaise? PhoneticGuideRaise
+        public DocumentFormat.OpenXml.Wordprocessing.PhoneticGuideRaise? PhoneticGuideRaise
         {
-            get => GetElement<PhoneticGuideRaise>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PhoneticGuideRaise>();
             set => SetElement(value);
         }
 
@@ -36178,9 +36178,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PhoneticGuideBaseTextSize? PhoneticGuideBaseTextSize
+        public DocumentFormat.OpenXml.Wordprocessing.PhoneticGuideBaseTextSize? PhoneticGuideBaseTextSize
         {
-            get => GetElement<PhoneticGuideBaseTextSize>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PhoneticGuideBaseTextSize>();
             set => SetElement(value);
         }
 
@@ -36191,9 +36191,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public LanguageId? LanguageId
+        public DocumentFormat.OpenXml.Wordprocessing.LanguageId? LanguageId
         {
-            get => GetElement<LanguageId>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LanguageId>();
             set => SetElement(value);
         }
 
@@ -36204,9 +36204,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Dirty? Dirty
+        public DocumentFormat.OpenXml.Wordprocessing.Dirty? Dirty
         {
-            get => GetElement<Dirty>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Dirty>();
             set => SetElement(value);
         }
 
@@ -38527,9 +38527,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public CustomXmlPlaceholder? CustomXmlPlaceholder
+        public DocumentFormat.OpenXml.Wordprocessing.CustomXmlPlaceholder? CustomXmlPlaceholder
         {
-            get => GetElement<CustomXmlPlaceholder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.CustomXmlPlaceholder>();
             set => SetElement(value);
         }
 
@@ -38787,9 +38787,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PreviousTableGrid? PreviousTableGrid
+        public DocumentFormat.OpenXml.Wordprocessing.PreviousTableGrid? PreviousTableGrid
         {
-            get => GetElement<PreviousTableGrid>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PreviousTableGrid>();
             set => SetElement(value);
         }
 
@@ -38939,9 +38939,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PreviousTableCellProperties? PreviousTableCellProperties
+        public DocumentFormat.OpenXml.Wordprocessing.PreviousTableCellProperties? PreviousTableCellProperties
         {
-            get => GetElement<PreviousTableCellProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PreviousTableCellProperties>();
             set => SetElement(value);
         }
 
@@ -39116,9 +39116,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ConditionalFormatStyle? ConditionalFormatStyle
+        public DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle? ConditionalFormatStyle
         {
-            get => GetElement<ConditionalFormatStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle>();
             set => SetElement(value);
         }
 
@@ -39129,9 +39129,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellWidth? TableCellWidth
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellWidth? TableCellWidth
         {
-            get => GetElement<TableCellWidth>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellWidth>();
             set => SetElement(value);
         }
 
@@ -39142,9 +39142,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public GridSpan? GridSpan
+        public DocumentFormat.OpenXml.Wordprocessing.GridSpan? GridSpan
         {
-            get => GetElement<GridSpan>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.GridSpan>();
             set => SetElement(value);
         }
 
@@ -39155,9 +39155,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HorizontalMerge? HorizontalMerge
+        public DocumentFormat.OpenXml.Wordprocessing.HorizontalMerge? HorizontalMerge
         {
-            get => GetElement<HorizontalMerge>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.HorizontalMerge>();
             set => SetElement(value);
         }
 
@@ -39168,9 +39168,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public VerticalMerge? VerticalMerge
+        public DocumentFormat.OpenXml.Wordprocessing.VerticalMerge? VerticalMerge
         {
-            get => GetElement<VerticalMerge>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.VerticalMerge>();
             set => SetElement(value);
         }
 
@@ -39181,9 +39181,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellBorders? TableCellBorders
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellBorders? TableCellBorders
         {
-            get => GetElement<TableCellBorders>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellBorders>();
             set => SetElement(value);
         }
 
@@ -39194,9 +39194,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Shading? Shading
+        public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
-            get => GetElement<Shading>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
             set => SetElement(value);
         }
 
@@ -39207,9 +39207,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NoWrap? NoWrap
+        public DocumentFormat.OpenXml.Wordprocessing.NoWrap? NoWrap
         {
-            get => GetElement<NoWrap>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoWrap>();
             set => SetElement(value);
         }
 
@@ -39220,9 +39220,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellMargin? TableCellMargin
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellMargin? TableCellMargin
         {
-            get => GetElement<TableCellMargin>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellMargin>();
             set => SetElement(value);
         }
 
@@ -39233,9 +39233,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TextDirection? TextDirection
+        public DocumentFormat.OpenXml.Wordprocessing.TextDirection? TextDirection
         {
-            get => GetElement<TextDirection>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextDirection>();
             set => SetElement(value);
         }
 
@@ -39246,9 +39246,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellFitText? TableCellFitText
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellFitText? TableCellFitText
         {
-            get => GetElement<TableCellFitText>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellFitText>();
             set => SetElement(value);
         }
 
@@ -39259,9 +39259,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellVerticalAlignment? TableCellVerticalAlignment
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment? TableCellVerticalAlignment
         {
-            get => GetElement<TableCellVerticalAlignment>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment>();
             set => SetElement(value);
         }
 
@@ -39272,9 +39272,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HideMark? HideMark
+        public DocumentFormat.OpenXml.Wordprocessing.HideMark? HideMark
         {
-            get => GetElement<HideMark>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.HideMark>();
             set => SetElement(value);
         }
 
@@ -39424,9 +39424,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PreviousTableProperties? PreviousTableProperties
+        public DocumentFormat.OpenXml.Wordprocessing.PreviousTableProperties? PreviousTableProperties
         {
-            get => GetElement<PreviousTableProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PreviousTableProperties>();
             set => SetElement(value);
         }
 
@@ -39576,9 +39576,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PreviousTablePropertyExceptions? PreviousTablePropertyExceptions
+        public DocumentFormat.OpenXml.Wordprocessing.PreviousTablePropertyExceptions? PreviousTablePropertyExceptions
         {
-            get => GetElement<PreviousTablePropertyExceptions>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PreviousTablePropertyExceptions>();
             set => SetElement(value);
         }
 
@@ -39738,9 +39738,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableStyle? TableStyle
+        public DocumentFormat.OpenXml.Wordprocessing.TableStyle? TableStyle
         {
-            get => GetElement<TableStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableStyle>();
             set => SetElement(value);
         }
 
@@ -39751,9 +39751,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TablePositionProperties? TablePositionProperties
+        public DocumentFormat.OpenXml.Wordprocessing.TablePositionProperties? TablePositionProperties
         {
-            get => GetElement<TablePositionProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TablePositionProperties>();
             set => SetElement(value);
         }
 
@@ -39764,9 +39764,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableOverlap? TableOverlap
+        public DocumentFormat.OpenXml.Wordprocessing.TableOverlap? TableOverlap
         {
-            get => GetElement<TableOverlap>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableOverlap>();
             set => SetElement(value);
         }
 
@@ -39777,9 +39777,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public BiDiVisual? BiDiVisual
+        public DocumentFormat.OpenXml.Wordprocessing.BiDiVisual? BiDiVisual
         {
-            get => GetElement<BiDiVisual>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BiDiVisual>();
             set => SetElement(value);
         }
 
@@ -39790,9 +39790,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableWidth? TableWidth
+        public DocumentFormat.OpenXml.Wordprocessing.TableWidth? TableWidth
         {
-            get => GetElement<TableWidth>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableWidth>();
             set => SetElement(value);
         }
 
@@ -39803,9 +39803,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableJustification? TableJustification
+        public DocumentFormat.OpenXml.Wordprocessing.TableJustification? TableJustification
         {
-            get => GetElement<TableJustification>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableJustification>();
             set => SetElement(value);
         }
 
@@ -39816,9 +39816,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellSpacing? TableCellSpacing
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing? TableCellSpacing
         {
-            get => GetElement<TableCellSpacing>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing>();
             set => SetElement(value);
         }
 
@@ -39829,9 +39829,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableIndentation? TableIndentation
+        public DocumentFormat.OpenXml.Wordprocessing.TableIndentation? TableIndentation
         {
-            get => GetElement<TableIndentation>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableIndentation>();
             set => SetElement(value);
         }
 
@@ -39842,9 +39842,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableBorders? TableBorders
+        public DocumentFormat.OpenXml.Wordprocessing.TableBorders? TableBorders
         {
-            get => GetElement<TableBorders>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableBorders>();
             set => SetElement(value);
         }
 
@@ -39855,9 +39855,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Shading? Shading
+        public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
-            get => GetElement<Shading>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
             set => SetElement(value);
         }
 
@@ -39868,9 +39868,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableLayout? TableLayout
+        public DocumentFormat.OpenXml.Wordprocessing.TableLayout? TableLayout
         {
-            get => GetElement<TableLayout>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableLayout>();
             set => SetElement(value);
         }
 
@@ -39881,9 +39881,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellMarginDefault? TableCellMarginDefault
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault? TableCellMarginDefault
         {
-            get => GetElement<TableCellMarginDefault>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault>();
             set => SetElement(value);
         }
 
@@ -39894,9 +39894,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableLook? TableLook
+        public DocumentFormat.OpenXml.Wordprocessing.TableLook? TableLook
         {
-            get => GetElement<TableLook>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableLook>();
             set => SetElement(value);
         }
 
@@ -39907,9 +39907,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCaption? TableCaption
+        public DocumentFormat.OpenXml.Wordprocessing.TableCaption? TableCaption
         {
-            get => GetElement<TableCaption>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCaption>();
             set => SetElement(value);
         }
 
@@ -39920,9 +39920,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableDescription? TableDescription
+        public DocumentFormat.OpenXml.Wordprocessing.TableDescription? TableDescription
         {
-            get => GetElement<TableDescription>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableDescription>();
             set => SetElement(value);
         }
 
@@ -39933,9 +39933,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TablePropertiesChange? TablePropertiesChange
+        public DocumentFormat.OpenXml.Wordprocessing.TablePropertiesChange? TablePropertiesChange
         {
-            get => GetElement<TablePropertiesChange>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TablePropertiesChange>();
             set => SetElement(value);
         }
 
@@ -40513,9 +40513,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Active? Active
+        public DocumentFormat.OpenXml.Wordprocessing.Active? Active
         {
-            get => GetElement<Active>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Active>();
             set => SetElement(value);
         }
 
@@ -40526,9 +40526,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ColumnIndex? ColumnIndex
+        public DocumentFormat.OpenXml.Wordprocessing.ColumnIndex? ColumnIndex
         {
-            get => GetElement<ColumnIndex>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ColumnIndex>();
             set => SetElement(value);
         }
 
@@ -40539,9 +40539,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UniqueTag? UniqueTag
+        public DocumentFormat.OpenXml.Wordprocessing.UniqueTag? UniqueTag
         {
-            get => GetElement<UniqueTag>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.UniqueTag>();
             set => SetElement(value);
         }
 
@@ -40731,9 +40731,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public MailMergeFieldType? MailMergeFieldType
+        public DocumentFormat.OpenXml.Wordprocessing.MailMergeFieldType? MailMergeFieldType
         {
-            get => GetElement<MailMergeFieldType>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MailMergeFieldType>();
             set => SetElement(value);
         }
 
@@ -40744,9 +40744,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Name? Name
+        public DocumentFormat.OpenXml.Wordprocessing.Name? Name
         {
-            get => GetElement<Name>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Name>();
             set => SetElement(value);
         }
 
@@ -40757,9 +40757,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public MappedName? MappedName
+        public DocumentFormat.OpenXml.Wordprocessing.MappedName? MappedName
         {
-            get => GetElement<MappedName>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MappedName>();
             set => SetElement(value);
         }
 
@@ -40770,9 +40770,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ColumnIndex? ColumnIndex
+        public DocumentFormat.OpenXml.Wordprocessing.ColumnIndex? ColumnIndex
         {
-            get => GetElement<ColumnIndex>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ColumnIndex>();
             set => SetElement(value);
         }
 
@@ -40783,9 +40783,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public LanguageId? LanguageId
+        public DocumentFormat.OpenXml.Wordprocessing.LanguageId? LanguageId
         {
-            get => GetElement<LanguageId>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LanguageId>();
             set => SetElement(value);
         }
 
@@ -40796,9 +40796,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DynamicAddress? DynamicAddress
+        public DocumentFormat.OpenXml.Wordprocessing.DynamicAddress? DynamicAddress
         {
-            get => GetElement<DynamicAddress>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DynamicAddress>();
             set => SetElement(value);
         }
 
@@ -41045,9 +41045,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UdlConnectionString? UdlConnectionString
+        public DocumentFormat.OpenXml.Wordprocessing.UdlConnectionString? UdlConnectionString
         {
-            get => GetElement<UdlConnectionString>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.UdlConnectionString>();
             set => SetElement(value);
         }
 
@@ -41058,9 +41058,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DataSourceTableName? DataSourceTableName
+        public DocumentFormat.OpenXml.Wordprocessing.DataSourceTableName? DataSourceTableName
         {
-            get => GetElement<DataSourceTableName>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DataSourceTableName>();
             set => SetElement(value);
         }
 
@@ -41071,9 +41071,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SourceReference? SourceReference
+        public DocumentFormat.OpenXml.Wordprocessing.SourceReference? SourceReference
         {
-            get => GetElement<SourceReference>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SourceReference>();
             set => SetElement(value);
         }
 
@@ -41084,9 +41084,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ColumnDelimiter? ColumnDelimiter
+        public DocumentFormat.OpenXml.Wordprocessing.ColumnDelimiter? ColumnDelimiter
         {
-            get => GetElement<ColumnDelimiter>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ColumnDelimiter>();
             set => SetElement(value);
         }
 
@@ -41097,9 +41097,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public MailMergeSource? MailMergeSource
+        public DocumentFormat.OpenXml.Wordprocessing.MailMergeSource? MailMergeSource
         {
-            get => GetElement<MailMergeSource>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MailMergeSource>();
             set => SetElement(value);
         }
 
@@ -41110,9 +41110,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FirstRowHeader? FirstRowHeader
+        public DocumentFormat.OpenXml.Wordprocessing.FirstRowHeader? FirstRowHeader
         {
-            get => GetElement<FirstRowHeader>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FirstRowHeader>();
             set => SetElement(value);
         }
 
@@ -41537,9 +41537,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public RunFonts? RunFonts
+        public DocumentFormat.OpenXml.Wordprocessing.RunFonts? RunFonts
         {
-            get => GetElement<RunFonts>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunFonts>();
             set => SetElement(value);
         }
 
@@ -41550,9 +41550,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Bold? Bold
+        public DocumentFormat.OpenXml.Wordprocessing.Bold? Bold
         {
-            get => GetElement<Bold>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Bold>();
             set => SetElement(value);
         }
 
@@ -41563,9 +41563,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public BoldComplexScript? BoldComplexScript
+        public DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript? BoldComplexScript
         {
-            get => GetElement<BoldComplexScript>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript>();
             set => SetElement(value);
         }
 
@@ -41576,9 +41576,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Italic? Italic
+        public DocumentFormat.OpenXml.Wordprocessing.Italic? Italic
         {
-            get => GetElement<Italic>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Italic>();
             set => SetElement(value);
         }
 
@@ -41589,9 +41589,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ItalicComplexScript? ItalicComplexScript
+        public DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript? ItalicComplexScript
         {
-            get => GetElement<ItalicComplexScript>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript>();
             set => SetElement(value);
         }
 
@@ -41602,9 +41602,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Caps? Caps
+        public DocumentFormat.OpenXml.Wordprocessing.Caps? Caps
         {
-            get => GetElement<Caps>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Caps>();
             set => SetElement(value);
         }
 
@@ -41615,9 +41615,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SmallCaps? SmallCaps
+        public DocumentFormat.OpenXml.Wordprocessing.SmallCaps? SmallCaps
         {
-            get => GetElement<SmallCaps>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SmallCaps>();
             set => SetElement(value);
         }
 
@@ -41628,9 +41628,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Strike? Strike
+        public DocumentFormat.OpenXml.Wordprocessing.Strike? Strike
         {
-            get => GetElement<Strike>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Strike>();
             set => SetElement(value);
         }
 
@@ -41641,9 +41641,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DoubleStrike? DoubleStrike
+        public DocumentFormat.OpenXml.Wordprocessing.DoubleStrike? DoubleStrike
         {
-            get => GetElement<DoubleStrike>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoubleStrike>();
             set => SetElement(value);
         }
 
@@ -41654,9 +41654,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Outline? Outline
+        public DocumentFormat.OpenXml.Wordprocessing.Outline? Outline
         {
-            get => GetElement<Outline>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Outline>();
             set => SetElement(value);
         }
 
@@ -41667,9 +41667,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Shadow? Shadow
+        public DocumentFormat.OpenXml.Wordprocessing.Shadow? Shadow
         {
-            get => GetElement<Shadow>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shadow>();
             set => SetElement(value);
         }
 
@@ -41680,9 +41680,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Emboss? Emboss
+        public DocumentFormat.OpenXml.Wordprocessing.Emboss? Emboss
         {
-            get => GetElement<Emboss>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Emboss>();
             set => SetElement(value);
         }
 
@@ -41693,9 +41693,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Imprint? Imprint
+        public DocumentFormat.OpenXml.Wordprocessing.Imprint? Imprint
         {
-            get => GetElement<Imprint>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Imprint>();
             set => SetElement(value);
         }
 
@@ -41706,9 +41706,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NoProof? NoProof
+        public DocumentFormat.OpenXml.Wordprocessing.NoProof? NoProof
         {
-            get => GetElement<NoProof>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoProof>();
             set => SetElement(value);
         }
 
@@ -41719,9 +41719,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SnapToGrid? SnapToGrid
+        public DocumentFormat.OpenXml.Wordprocessing.SnapToGrid? SnapToGrid
         {
-            get => GetElement<SnapToGrid>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
             set => SetElement(value);
         }
 
@@ -41732,9 +41732,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Vanish? Vanish
+        public DocumentFormat.OpenXml.Wordprocessing.Vanish? Vanish
         {
-            get => GetElement<Vanish>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Vanish>();
             set => SetElement(value);
         }
 
@@ -41745,9 +41745,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public WebHidden? WebHidden
+        public DocumentFormat.OpenXml.Wordprocessing.WebHidden? WebHidden
         {
-            get => GetElement<WebHidden>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WebHidden>();
             set => SetElement(value);
         }
 
@@ -41758,9 +41758,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Color? Color
+        public DocumentFormat.OpenXml.Wordprocessing.Color? Color
         {
-            get => GetElement<Color>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Color>();
             set => SetElement(value);
         }
 
@@ -41771,9 +41771,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Spacing? Spacing
+        public DocumentFormat.OpenXml.Wordprocessing.Spacing? Spacing
         {
-            get => GetElement<Spacing>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Spacing>();
             set => SetElement(value);
         }
 
@@ -41784,9 +41784,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public CharacterScale? CharacterScale
+        public DocumentFormat.OpenXml.Wordprocessing.CharacterScale? CharacterScale
         {
-            get => GetElement<CharacterScale>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.CharacterScale>();
             set => SetElement(value);
         }
 
@@ -41797,9 +41797,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Kern? Kern
+        public DocumentFormat.OpenXml.Wordprocessing.Kern? Kern
         {
-            get => GetElement<Kern>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Kern>();
             set => SetElement(value);
         }
 
@@ -41810,9 +41810,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Position? Position
+        public DocumentFormat.OpenXml.Wordprocessing.Position? Position
         {
-            get => GetElement<Position>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Position>();
             set => SetElement(value);
         }
 
@@ -41823,9 +41823,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FontSize? FontSize
+        public DocumentFormat.OpenXml.Wordprocessing.FontSize? FontSize
         {
-            get => GetElement<FontSize>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FontSize>();
             set => SetElement(value);
         }
 
@@ -41836,9 +41836,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FontSizeComplexScript? FontSizeComplexScript
+        public DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript? FontSizeComplexScript
         {
-            get => GetElement<FontSizeComplexScript>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript>();
             set => SetElement(value);
         }
 
@@ -41849,9 +41849,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Underline? Underline
+        public DocumentFormat.OpenXml.Wordprocessing.Underline? Underline
         {
-            get => GetElement<Underline>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Underline>();
             set => SetElement(value);
         }
 
@@ -41862,9 +41862,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TextEffect? TextEffect
+        public DocumentFormat.OpenXml.Wordprocessing.TextEffect? TextEffect
         {
-            get => GetElement<TextEffect>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextEffect>();
             set => SetElement(value);
         }
 
@@ -41875,9 +41875,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Border? Border
+        public DocumentFormat.OpenXml.Wordprocessing.Border? Border
         {
-            get => GetElement<Border>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Border>();
             set => SetElement(value);
         }
 
@@ -41888,9 +41888,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Shading? Shading
+        public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
-            get => GetElement<Shading>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
             set => SetElement(value);
         }
 
@@ -41901,9 +41901,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FitText? FitText
+        public DocumentFormat.OpenXml.Wordprocessing.FitText? FitText
         {
-            get => GetElement<FitText>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FitText>();
             set => SetElement(value);
         }
 
@@ -41914,9 +41914,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public VerticalTextAlignment? VerticalTextAlignment
+        public DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment? VerticalTextAlignment
         {
-            get => GetElement<VerticalTextAlignment>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment>();
             set => SetElement(value);
         }
 
@@ -41927,9 +41927,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Emphasis? Emphasis
+        public DocumentFormat.OpenXml.Wordprocessing.Emphasis? Emphasis
         {
-            get => GetElement<Emphasis>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Emphasis>();
             set => SetElement(value);
         }
 
@@ -41940,9 +41940,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Languages? Languages
+        public DocumentFormat.OpenXml.Wordprocessing.Languages? Languages
         {
-            get => GetElement<Languages>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Languages>();
             set => SetElement(value);
         }
 
@@ -41953,9 +41953,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EastAsianLayout? EastAsianLayout
+        public DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout? EastAsianLayout
         {
-            get => GetElement<EastAsianLayout>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout>();
             set => SetElement(value);
         }
 
@@ -41966,9 +41966,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SpecVanish? SpecVanish
+        public DocumentFormat.OpenXml.Wordprocessing.SpecVanish? SpecVanish
         {
-            get => GetElement<SpecVanish>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SpecVanish>();
             set => SetElement(value);
         }
 
@@ -42134,9 +42134,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public KeepNext? KeepNext
+        public DocumentFormat.OpenXml.Wordprocessing.KeepNext? KeepNext
         {
-            get => GetElement<KeepNext>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.KeepNext>();
             set => SetElement(value);
         }
 
@@ -42147,9 +42147,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public KeepLines? KeepLines
+        public DocumentFormat.OpenXml.Wordprocessing.KeepLines? KeepLines
         {
-            get => GetElement<KeepLines>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.KeepLines>();
             set => SetElement(value);
         }
 
@@ -42160,9 +42160,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PageBreakBefore? PageBreakBefore
+        public DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore? PageBreakBefore
         {
-            get => GetElement<PageBreakBefore>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore>();
             set => SetElement(value);
         }
 
@@ -42173,9 +42173,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FrameProperties? FrameProperties
+        public DocumentFormat.OpenXml.Wordprocessing.FrameProperties? FrameProperties
         {
-            get => GetElement<FrameProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FrameProperties>();
             set => SetElement(value);
         }
 
@@ -42186,9 +42186,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public WidowControl? WidowControl
+        public DocumentFormat.OpenXml.Wordprocessing.WidowControl? WidowControl
         {
-            get => GetElement<WidowControl>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WidowControl>();
             set => SetElement(value);
         }
 
@@ -42199,9 +42199,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NumberingProperties? NumberingProperties
+        public DocumentFormat.OpenXml.Wordprocessing.NumberingProperties? NumberingProperties
         {
-            get => GetElement<NumberingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingProperties>();
             set => SetElement(value);
         }
 
@@ -42212,9 +42212,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SuppressLineNumbers? SuppressLineNumbers
+        public DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers? SuppressLineNumbers
         {
-            get => GetElement<SuppressLineNumbers>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers>();
             set => SetElement(value);
         }
 
@@ -42225,9 +42225,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ParagraphBorders? ParagraphBorders
+        public DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders? ParagraphBorders
         {
-            get => GetElement<ParagraphBorders>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders>();
             set => SetElement(value);
         }
 
@@ -42238,9 +42238,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Shading? Shading
+        public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
-            get => GetElement<Shading>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
             set => SetElement(value);
         }
 
@@ -42251,9 +42251,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Tabs? Tabs
+        public DocumentFormat.OpenXml.Wordprocessing.Tabs? Tabs
         {
-            get => GetElement<Tabs>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Tabs>();
             set => SetElement(value);
         }
 
@@ -42264,9 +42264,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SuppressAutoHyphens? SuppressAutoHyphens
+        public DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens? SuppressAutoHyphens
         {
-            get => GetElement<SuppressAutoHyphens>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens>();
             set => SetElement(value);
         }
 
@@ -42277,9 +42277,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Kinsoku? Kinsoku
+        public DocumentFormat.OpenXml.Wordprocessing.Kinsoku? Kinsoku
         {
-            get => GetElement<Kinsoku>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Kinsoku>();
             set => SetElement(value);
         }
 
@@ -42290,9 +42290,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public WordWrap? WordWrap
+        public DocumentFormat.OpenXml.Wordprocessing.WordWrap? WordWrap
         {
-            get => GetElement<WordWrap>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WordWrap>();
             set => SetElement(value);
         }
 
@@ -42303,9 +42303,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OverflowPunctuation? OverflowPunctuation
+        public DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation? OverflowPunctuation
         {
-            get => GetElement<OverflowPunctuation>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation>();
             set => SetElement(value);
         }
 
@@ -42316,9 +42316,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TopLinePunctuation? TopLinePunctuation
+        public DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation? TopLinePunctuation
         {
-            get => GetElement<TopLinePunctuation>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation>();
             set => SetElement(value);
         }
 
@@ -42329,9 +42329,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public AutoSpaceDE? AutoSpaceDE
+        public DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE? AutoSpaceDE
         {
-            get => GetElement<AutoSpaceDE>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE>();
             set => SetElement(value);
         }
 
@@ -42342,9 +42342,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public AutoSpaceDN? AutoSpaceDN
+        public DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN? AutoSpaceDN
         {
-            get => GetElement<AutoSpaceDN>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN>();
             set => SetElement(value);
         }
 
@@ -42355,9 +42355,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public BiDi? BiDi
+        public DocumentFormat.OpenXml.Wordprocessing.BiDi? BiDi
         {
-            get => GetElement<BiDi>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BiDi>();
             set => SetElement(value);
         }
 
@@ -42368,9 +42368,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public AdjustRightIndent? AdjustRightIndent
+        public DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent? AdjustRightIndent
         {
-            get => GetElement<AdjustRightIndent>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent>();
             set => SetElement(value);
         }
 
@@ -42381,9 +42381,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SnapToGrid? SnapToGrid
+        public DocumentFormat.OpenXml.Wordprocessing.SnapToGrid? SnapToGrid
         {
-            get => GetElement<SnapToGrid>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
             set => SetElement(value);
         }
 
@@ -42394,9 +42394,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SpacingBetweenLines? SpacingBetweenLines
+        public DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines? SpacingBetweenLines
         {
-            get => GetElement<SpacingBetweenLines>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines>();
             set => SetElement(value);
         }
 
@@ -42407,9 +42407,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Indentation? Indentation
+        public DocumentFormat.OpenXml.Wordprocessing.Indentation? Indentation
         {
-            get => GetElement<Indentation>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Indentation>();
             set => SetElement(value);
         }
 
@@ -42420,9 +42420,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ContextualSpacing? ContextualSpacing
+        public DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing? ContextualSpacing
         {
-            get => GetElement<ContextualSpacing>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing>();
             set => SetElement(value);
         }
 
@@ -42433,9 +42433,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public MirrorIndents? MirrorIndents
+        public DocumentFormat.OpenXml.Wordprocessing.MirrorIndents? MirrorIndents
         {
-            get => GetElement<MirrorIndents>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MirrorIndents>();
             set => SetElement(value);
         }
 
@@ -42446,9 +42446,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SuppressOverlap? SuppressOverlap
+        public DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap? SuppressOverlap
         {
-            get => GetElement<SuppressOverlap>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap>();
             set => SetElement(value);
         }
 
@@ -42459,9 +42459,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Justification? Justification
+        public DocumentFormat.OpenXml.Wordprocessing.Justification? Justification
         {
-            get => GetElement<Justification>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Justification>();
             set => SetElement(value);
         }
 
@@ -42472,9 +42472,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TextDirection? TextDirection
+        public DocumentFormat.OpenXml.Wordprocessing.TextDirection? TextDirection
         {
-            get => GetElement<TextDirection>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextDirection>();
             set => SetElement(value);
         }
 
@@ -42485,9 +42485,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TextAlignment? TextAlignment
+        public DocumentFormat.OpenXml.Wordprocessing.TextAlignment? TextAlignment
         {
-            get => GetElement<TextAlignment>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextAlignment>();
             set => SetElement(value);
         }
 
@@ -42498,9 +42498,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TextBoxTightWrap? TextBoxTightWrap
+        public DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap? TextBoxTightWrap
         {
-            get => GetElement<TextBoxTightWrap>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap>();
             set => SetElement(value);
         }
 
@@ -42511,9 +42511,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OutlineLevel? OutlineLevel
+        public DocumentFormat.OpenXml.Wordprocessing.OutlineLevel? OutlineLevel
         {
-            get => GetElement<OutlineLevel>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.OutlineLevel>();
             set => SetElement(value);
         }
 
@@ -42586,9 +42586,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public RunPropertiesBaseStyle? RunPropertiesBaseStyle
+        public DocumentFormat.OpenXml.Wordprocessing.RunPropertiesBaseStyle? RunPropertiesBaseStyle
         {
-            get => GetElement<RunPropertiesBaseStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunPropertiesBaseStyle>();
             set => SetElement(value);
         }
 
@@ -42661,9 +42661,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (652
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ParagraphPropertiesBaseStyle? ParagraphPropertiesBaseStyle
+        public DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesBaseStyle? ParagraphPropertiesBaseStyle
         {
-            get => GetElement<ParagraphPropertiesBaseStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesBaseStyle>();
             set => SetElement(value);
         }
 
@@ -43106,9 +43106,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Width? Width
+        public DocumentFormat.OpenXml.Wordprocessing.Width? Width
         {
-            get => GetElement<Width>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Width>();
             set => SetElement(value);
         }
 
@@ -43119,9 +43119,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Color? Color
+        public DocumentFormat.OpenXml.Wordprocessing.Color? Color
         {
-            get => GetElement<Color>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Color>();
             set => SetElement(value);
         }
 
@@ -43132,9 +43132,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NoBorder? NoBorder
+        public DocumentFormat.OpenXml.Wordprocessing.NoBorder? NoBorder
         {
-            get => GetElement<NoBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoBorder>();
             set => SetElement(value);
         }
 
@@ -43145,9 +43145,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FlatBorders? FlatBorders
+        public DocumentFormat.OpenXml.Wordprocessing.FlatBorders? FlatBorders
         {
-            get => GetElement<FlatBorders>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FlatBorders>();
             set => SetElement(value);
         }
 
@@ -43289,9 +43289,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FrameSize? FrameSize
+        public DocumentFormat.OpenXml.Wordprocessing.FrameSize? FrameSize
         {
-            get => GetElement<FrameSize>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FrameSize>();
             set => SetElement(value);
         }
 
@@ -43302,9 +43302,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FramesetSplitbar? FramesetSplitbar
+        public DocumentFormat.OpenXml.Wordprocessing.FramesetSplitbar? FramesetSplitbar
         {
-            get => GetElement<FramesetSplitbar>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FramesetSplitbar>();
             set => SetElement(value);
         }
 
@@ -43315,9 +43315,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FrameLayout? FrameLayout
+        public DocumentFormat.OpenXml.Wordprocessing.FrameLayout? FrameLayout
         {
-            get => GetElement<FrameLayout>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FrameLayout>();
             set => SetElement(value);
         }
 
@@ -43411,9 +43411,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FrameSize? FrameSize
+        public DocumentFormat.OpenXml.Wordprocessing.FrameSize? FrameSize
         {
-            get => GetElement<FrameSize>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FrameSize>();
             set => SetElement(value);
         }
 
@@ -43424,9 +43424,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FrameName? FrameName
+        public DocumentFormat.OpenXml.Wordprocessing.FrameName? FrameName
         {
-            get => GetElement<FrameName>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FrameName>();
             set => SetElement(value);
         }
 
@@ -43437,9 +43437,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SourceFileReference? SourceFileReference
+        public DocumentFormat.OpenXml.Wordprocessing.SourceFileReference? SourceFileReference
         {
-            get => GetElement<SourceFileReference>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SourceFileReference>();
             set => SetElement(value);
         }
 
@@ -43450,9 +43450,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public MarginWidth? MarginWidth
+        public DocumentFormat.OpenXml.Wordprocessing.MarginWidth? MarginWidth
         {
-            get => GetElement<MarginWidth>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MarginWidth>();
             set => SetElement(value);
         }
 
@@ -43463,9 +43463,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public MarginHeight? MarginHeight
+        public DocumentFormat.OpenXml.Wordprocessing.MarginHeight? MarginHeight
         {
-            get => GetElement<MarginHeight>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MarginHeight>();
             set => SetElement(value);
         }
 
@@ -43476,9 +43476,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ScrollbarVisibility? ScrollbarVisibility
+        public DocumentFormat.OpenXml.Wordprocessing.ScrollbarVisibility? ScrollbarVisibility
         {
-            get => GetElement<ScrollbarVisibility>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ScrollbarVisibility>();
             set => SetElement(value);
         }
 
@@ -43489,9 +43489,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NoResizeAllowed? NoResizeAllowed
+        public DocumentFormat.OpenXml.Wordprocessing.NoResizeAllowed? NoResizeAllowed
         {
-            get => GetElement<NoResizeAllowed>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoResizeAllowed>();
             set => SetElement(value);
         }
 
@@ -43502,9 +43502,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public LinkedToFile? LinkedToFile
+        public DocumentFormat.OpenXml.Wordprocessing.LinkedToFile? LinkedToFile
         {
-            get => GetElement<LinkedToFile>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LinkedToFile>();
             set => SetElement(value);
         }
 
@@ -43953,9 +43953,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ParagraphStyleId? ParagraphStyleId
+        public DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleId? ParagraphStyleId
         {
-            get => GetElement<ParagraphStyleId>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleId>();
             set => SetElement(value);
         }
 
@@ -43966,9 +43966,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public KeepNext? KeepNext
+        public DocumentFormat.OpenXml.Wordprocessing.KeepNext? KeepNext
         {
-            get => GetElement<KeepNext>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.KeepNext>();
             set => SetElement(value);
         }
 
@@ -43979,9 +43979,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public KeepLines? KeepLines
+        public DocumentFormat.OpenXml.Wordprocessing.KeepLines? KeepLines
         {
-            get => GetElement<KeepLines>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.KeepLines>();
             set => SetElement(value);
         }
 
@@ -43992,9 +43992,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PageBreakBefore? PageBreakBefore
+        public DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore? PageBreakBefore
         {
-            get => GetElement<PageBreakBefore>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore>();
             set => SetElement(value);
         }
 
@@ -44005,9 +44005,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FrameProperties? FrameProperties
+        public DocumentFormat.OpenXml.Wordprocessing.FrameProperties? FrameProperties
         {
-            get => GetElement<FrameProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FrameProperties>();
             set => SetElement(value);
         }
 
@@ -44018,9 +44018,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public WidowControl? WidowControl
+        public DocumentFormat.OpenXml.Wordprocessing.WidowControl? WidowControl
         {
-            get => GetElement<WidowControl>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WidowControl>();
             set => SetElement(value);
         }
 
@@ -44031,9 +44031,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NumberingProperties? NumberingProperties
+        public DocumentFormat.OpenXml.Wordprocessing.NumberingProperties? NumberingProperties
         {
-            get => GetElement<NumberingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingProperties>();
             set => SetElement(value);
         }
 
@@ -44044,9 +44044,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SuppressLineNumbers? SuppressLineNumbers
+        public DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers? SuppressLineNumbers
         {
-            get => GetElement<SuppressLineNumbers>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers>();
             set => SetElement(value);
         }
 
@@ -44057,9 +44057,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ParagraphBorders? ParagraphBorders
+        public DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders? ParagraphBorders
         {
-            get => GetElement<ParagraphBorders>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders>();
             set => SetElement(value);
         }
 
@@ -44070,9 +44070,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Shading? Shading
+        public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
-            get => GetElement<Shading>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
             set => SetElement(value);
         }
 
@@ -44083,9 +44083,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Tabs? Tabs
+        public DocumentFormat.OpenXml.Wordprocessing.Tabs? Tabs
         {
-            get => GetElement<Tabs>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Tabs>();
             set => SetElement(value);
         }
 
@@ -44096,9 +44096,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SuppressAutoHyphens? SuppressAutoHyphens
+        public DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens? SuppressAutoHyphens
         {
-            get => GetElement<SuppressAutoHyphens>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens>();
             set => SetElement(value);
         }
 
@@ -44109,9 +44109,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Kinsoku? Kinsoku
+        public DocumentFormat.OpenXml.Wordprocessing.Kinsoku? Kinsoku
         {
-            get => GetElement<Kinsoku>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Kinsoku>();
             set => SetElement(value);
         }
 
@@ -44122,9 +44122,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public WordWrap? WordWrap
+        public DocumentFormat.OpenXml.Wordprocessing.WordWrap? WordWrap
         {
-            get => GetElement<WordWrap>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WordWrap>();
             set => SetElement(value);
         }
 
@@ -44135,9 +44135,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OverflowPunctuation? OverflowPunctuation
+        public DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation? OverflowPunctuation
         {
-            get => GetElement<OverflowPunctuation>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation>();
             set => SetElement(value);
         }
 
@@ -44148,9 +44148,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TopLinePunctuation? TopLinePunctuation
+        public DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation? TopLinePunctuation
         {
-            get => GetElement<TopLinePunctuation>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation>();
             set => SetElement(value);
         }
 
@@ -44161,9 +44161,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public AutoSpaceDE? AutoSpaceDE
+        public DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE? AutoSpaceDE
         {
-            get => GetElement<AutoSpaceDE>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE>();
             set => SetElement(value);
         }
 
@@ -44174,9 +44174,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public AutoSpaceDN? AutoSpaceDN
+        public DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN? AutoSpaceDN
         {
-            get => GetElement<AutoSpaceDN>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN>();
             set => SetElement(value);
         }
 
@@ -44187,9 +44187,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public BiDi? BiDi
+        public DocumentFormat.OpenXml.Wordprocessing.BiDi? BiDi
         {
-            get => GetElement<BiDi>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BiDi>();
             set => SetElement(value);
         }
 
@@ -44200,9 +44200,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public AdjustRightIndent? AdjustRightIndent
+        public DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent? AdjustRightIndent
         {
-            get => GetElement<AdjustRightIndent>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent>();
             set => SetElement(value);
         }
 
@@ -44213,9 +44213,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SnapToGrid? SnapToGrid
+        public DocumentFormat.OpenXml.Wordprocessing.SnapToGrid? SnapToGrid
         {
-            get => GetElement<SnapToGrid>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
             set => SetElement(value);
         }
 
@@ -44226,9 +44226,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SpacingBetweenLines? SpacingBetweenLines
+        public DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines? SpacingBetweenLines
         {
-            get => GetElement<SpacingBetweenLines>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines>();
             set => SetElement(value);
         }
 
@@ -44239,9 +44239,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Indentation? Indentation
+        public DocumentFormat.OpenXml.Wordprocessing.Indentation? Indentation
         {
-            get => GetElement<Indentation>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Indentation>();
             set => SetElement(value);
         }
 
@@ -44252,9 +44252,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ContextualSpacing? ContextualSpacing
+        public DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing? ContextualSpacing
         {
-            get => GetElement<ContextualSpacing>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing>();
             set => SetElement(value);
         }
 
@@ -44265,9 +44265,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public MirrorIndents? MirrorIndents
+        public DocumentFormat.OpenXml.Wordprocessing.MirrorIndents? MirrorIndents
         {
-            get => GetElement<MirrorIndents>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MirrorIndents>();
             set => SetElement(value);
         }
 
@@ -44278,9 +44278,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SuppressOverlap? SuppressOverlap
+        public DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap? SuppressOverlap
         {
-            get => GetElement<SuppressOverlap>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap>();
             set => SetElement(value);
         }
 
@@ -44291,9 +44291,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Justification? Justification
+        public DocumentFormat.OpenXml.Wordprocessing.Justification? Justification
         {
-            get => GetElement<Justification>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Justification>();
             set => SetElement(value);
         }
 
@@ -44304,9 +44304,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TextDirection? TextDirection
+        public DocumentFormat.OpenXml.Wordprocessing.TextDirection? TextDirection
         {
-            get => GetElement<TextDirection>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextDirection>();
             set => SetElement(value);
         }
 
@@ -44317,9 +44317,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TextAlignment? TextAlignment
+        public DocumentFormat.OpenXml.Wordprocessing.TextAlignment? TextAlignment
         {
-            get => GetElement<TextAlignment>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextAlignment>();
             set => SetElement(value);
         }
 
@@ -44330,9 +44330,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TextBoxTightWrap? TextBoxTightWrap
+        public DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap? TextBoxTightWrap
         {
-            get => GetElement<TextBoxTightWrap>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap>();
             set => SetElement(value);
         }
 
@@ -44343,9 +44343,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OutlineLevel? OutlineLevel
+        public DocumentFormat.OpenXml.Wordprocessing.OutlineLevel? OutlineLevel
         {
-            get => GetElement<OutlineLevel>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.OutlineLevel>();
             set => SetElement(value);
         }
 
@@ -44547,9 +44547,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public RunFonts? RunFonts
+        public DocumentFormat.OpenXml.Wordprocessing.RunFonts? RunFonts
         {
-            get => GetElement<RunFonts>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunFonts>();
             set => SetElement(value);
         }
 
@@ -44560,9 +44560,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Bold? Bold
+        public DocumentFormat.OpenXml.Wordprocessing.Bold? Bold
         {
-            get => GetElement<Bold>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Bold>();
             set => SetElement(value);
         }
 
@@ -44573,9 +44573,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public BoldComplexScript? BoldComplexScript
+        public DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript? BoldComplexScript
         {
-            get => GetElement<BoldComplexScript>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript>();
             set => SetElement(value);
         }
 
@@ -44586,9 +44586,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Italic? Italic
+        public DocumentFormat.OpenXml.Wordprocessing.Italic? Italic
         {
-            get => GetElement<Italic>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Italic>();
             set => SetElement(value);
         }
 
@@ -44599,9 +44599,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ItalicComplexScript? ItalicComplexScript
+        public DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript? ItalicComplexScript
         {
-            get => GetElement<ItalicComplexScript>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript>();
             set => SetElement(value);
         }
 
@@ -44612,9 +44612,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Caps? Caps
+        public DocumentFormat.OpenXml.Wordprocessing.Caps? Caps
         {
-            get => GetElement<Caps>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Caps>();
             set => SetElement(value);
         }
 
@@ -44625,9 +44625,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SmallCaps? SmallCaps
+        public DocumentFormat.OpenXml.Wordprocessing.SmallCaps? SmallCaps
         {
-            get => GetElement<SmallCaps>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SmallCaps>();
             set => SetElement(value);
         }
 
@@ -44638,9 +44638,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Strike? Strike
+        public DocumentFormat.OpenXml.Wordprocessing.Strike? Strike
         {
-            get => GetElement<Strike>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Strike>();
             set => SetElement(value);
         }
 
@@ -44651,9 +44651,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DoubleStrike? DoubleStrike
+        public DocumentFormat.OpenXml.Wordprocessing.DoubleStrike? DoubleStrike
         {
-            get => GetElement<DoubleStrike>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoubleStrike>();
             set => SetElement(value);
         }
 
@@ -44664,9 +44664,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Outline? Outline
+        public DocumentFormat.OpenXml.Wordprocessing.Outline? Outline
         {
-            get => GetElement<Outline>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Outline>();
             set => SetElement(value);
         }
 
@@ -44677,9 +44677,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Shadow? Shadow
+        public DocumentFormat.OpenXml.Wordprocessing.Shadow? Shadow
         {
-            get => GetElement<Shadow>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shadow>();
             set => SetElement(value);
         }
 
@@ -44690,9 +44690,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Emboss? Emboss
+        public DocumentFormat.OpenXml.Wordprocessing.Emboss? Emboss
         {
-            get => GetElement<Emboss>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Emboss>();
             set => SetElement(value);
         }
 
@@ -44703,9 +44703,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Imprint? Imprint
+        public DocumentFormat.OpenXml.Wordprocessing.Imprint? Imprint
         {
-            get => GetElement<Imprint>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Imprint>();
             set => SetElement(value);
         }
 
@@ -44716,9 +44716,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NoProof? NoProof
+        public DocumentFormat.OpenXml.Wordprocessing.NoProof? NoProof
         {
-            get => GetElement<NoProof>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoProof>();
             set => SetElement(value);
         }
 
@@ -44729,9 +44729,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SnapToGrid? SnapToGrid
+        public DocumentFormat.OpenXml.Wordprocessing.SnapToGrid? SnapToGrid
         {
-            get => GetElement<SnapToGrid>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
             set => SetElement(value);
         }
 
@@ -44742,9 +44742,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Vanish? Vanish
+        public DocumentFormat.OpenXml.Wordprocessing.Vanish? Vanish
         {
-            get => GetElement<Vanish>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Vanish>();
             set => SetElement(value);
         }
 
@@ -44755,9 +44755,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public WebHidden? WebHidden
+        public DocumentFormat.OpenXml.Wordprocessing.WebHidden? WebHidden
         {
-            get => GetElement<WebHidden>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WebHidden>();
             set => SetElement(value);
         }
 
@@ -44768,9 +44768,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Color? Color
+        public DocumentFormat.OpenXml.Wordprocessing.Color? Color
         {
-            get => GetElement<Color>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Color>();
             set => SetElement(value);
         }
 
@@ -44781,9 +44781,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Spacing? Spacing
+        public DocumentFormat.OpenXml.Wordprocessing.Spacing? Spacing
         {
-            get => GetElement<Spacing>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Spacing>();
             set => SetElement(value);
         }
 
@@ -44794,9 +44794,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public CharacterScale? CharacterScale
+        public DocumentFormat.OpenXml.Wordprocessing.CharacterScale? CharacterScale
         {
-            get => GetElement<CharacterScale>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.CharacterScale>();
             set => SetElement(value);
         }
 
@@ -44807,9 +44807,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Kern? Kern
+        public DocumentFormat.OpenXml.Wordprocessing.Kern? Kern
         {
-            get => GetElement<Kern>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Kern>();
             set => SetElement(value);
         }
 
@@ -44820,9 +44820,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Position? Position
+        public DocumentFormat.OpenXml.Wordprocessing.Position? Position
         {
-            get => GetElement<Position>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Position>();
             set => SetElement(value);
         }
 
@@ -44833,9 +44833,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FontSize? FontSize
+        public DocumentFormat.OpenXml.Wordprocessing.FontSize? FontSize
         {
-            get => GetElement<FontSize>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FontSize>();
             set => SetElement(value);
         }
 
@@ -44846,9 +44846,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FontSizeComplexScript? FontSizeComplexScript
+        public DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript? FontSizeComplexScript
         {
-            get => GetElement<FontSizeComplexScript>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript>();
             set => SetElement(value);
         }
 
@@ -44859,9 +44859,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Underline? Underline
+        public DocumentFormat.OpenXml.Wordprocessing.Underline? Underline
         {
-            get => GetElement<Underline>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Underline>();
             set => SetElement(value);
         }
 
@@ -44872,9 +44872,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TextEffect? TextEffect
+        public DocumentFormat.OpenXml.Wordprocessing.TextEffect? TextEffect
         {
-            get => GetElement<TextEffect>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextEffect>();
             set => SetElement(value);
         }
 
@@ -44885,9 +44885,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Border? Border
+        public DocumentFormat.OpenXml.Wordprocessing.Border? Border
         {
-            get => GetElement<Border>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Border>();
             set => SetElement(value);
         }
 
@@ -44898,9 +44898,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Shading? Shading
+        public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
-            get => GetElement<Shading>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
             set => SetElement(value);
         }
 
@@ -44911,9 +44911,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FitText? FitText
+        public DocumentFormat.OpenXml.Wordprocessing.FitText? FitText
         {
-            get => GetElement<FitText>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FitText>();
             set => SetElement(value);
         }
 
@@ -44924,9 +44924,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public VerticalTextAlignment? VerticalTextAlignment
+        public DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment? VerticalTextAlignment
         {
-            get => GetElement<VerticalTextAlignment>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment>();
             set => SetElement(value);
         }
 
@@ -44937,9 +44937,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public RightToLeftText? RightToLeftText
+        public DocumentFormat.OpenXml.Wordprocessing.RightToLeftText? RightToLeftText
         {
-            get => GetElement<RightToLeftText>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RightToLeftText>();
             set => SetElement(value);
         }
 
@@ -44950,9 +44950,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ComplexScript? ComplexScript
+        public DocumentFormat.OpenXml.Wordprocessing.ComplexScript? ComplexScript
         {
-            get => GetElement<ComplexScript>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ComplexScript>();
             set => SetElement(value);
         }
 
@@ -44963,9 +44963,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Emphasis? Emphasis
+        public DocumentFormat.OpenXml.Wordprocessing.Emphasis? Emphasis
         {
-            get => GetElement<Emphasis>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Emphasis>();
             set => SetElement(value);
         }
 
@@ -44976,9 +44976,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Languages? Languages
+        public DocumentFormat.OpenXml.Wordprocessing.Languages? Languages
         {
-            get => GetElement<Languages>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Languages>();
             set => SetElement(value);
         }
 
@@ -44989,9 +44989,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EastAsianLayout? EastAsianLayout
+        public DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout? EastAsianLayout
         {
-            get => GetElement<EastAsianLayout>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout>();
             set => SetElement(value);
         }
 
@@ -45002,9 +45002,9 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SpecVanish? SpecVanish
+        public DocumentFormat.OpenXml.Wordprocessing.SpecVanish? SpecVanish
         {
-            get => GetElement<SpecVanish>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SpecVanish>();
             set => SetElement(value);
         }
 
@@ -45228,9 +45228,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StartNumberingValue? StartNumberingValue
+        public DocumentFormat.OpenXml.Wordprocessing.StartNumberingValue? StartNumberingValue
         {
-            get => GetElement<StartNumberingValue>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StartNumberingValue>();
             set => SetElement(value);
         }
 
@@ -45241,9 +45241,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NumberingFormat? NumberingFormat
+        public DocumentFormat.OpenXml.Wordprocessing.NumberingFormat? NumberingFormat
         {
-            get => GetElement<NumberingFormat>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingFormat>();
             set => SetElement(value);
         }
 
@@ -45254,9 +45254,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public LevelRestart? LevelRestart
+        public DocumentFormat.OpenXml.Wordprocessing.LevelRestart? LevelRestart
         {
-            get => GetElement<LevelRestart>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LevelRestart>();
             set => SetElement(value);
         }
 
@@ -45267,9 +45267,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ParagraphStyleIdInLevel? ParagraphStyleIdInLevel
+        public DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleIdInLevel? ParagraphStyleIdInLevel
         {
-            get => GetElement<ParagraphStyleIdInLevel>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleIdInLevel>();
             set => SetElement(value);
         }
 
@@ -45280,9 +45280,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public IsLegalNumberingStyle? IsLegalNumberingStyle
+        public DocumentFormat.OpenXml.Wordprocessing.IsLegalNumberingStyle? IsLegalNumberingStyle
         {
-            get => GetElement<IsLegalNumberingStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.IsLegalNumberingStyle>();
             set => SetElement(value);
         }
 
@@ -45293,9 +45293,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public LevelSuffix? LevelSuffix
+        public DocumentFormat.OpenXml.Wordprocessing.LevelSuffix? LevelSuffix
         {
-            get => GetElement<LevelSuffix>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LevelSuffix>();
             set => SetElement(value);
         }
 
@@ -45306,9 +45306,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public LevelText? LevelText
+        public DocumentFormat.OpenXml.Wordprocessing.LevelText? LevelText
         {
-            get => GetElement<LevelText>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LevelText>();
             set => SetElement(value);
         }
 
@@ -45319,9 +45319,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public LevelPictureBulletId? LevelPictureBulletId
+        public DocumentFormat.OpenXml.Wordprocessing.LevelPictureBulletId? LevelPictureBulletId
         {
-            get => GetElement<LevelPictureBulletId>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LevelPictureBulletId>();
             set => SetElement(value);
         }
 
@@ -45332,9 +45332,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public LegacyNumbering? LegacyNumbering
+        public DocumentFormat.OpenXml.Wordprocessing.LegacyNumbering? LegacyNumbering
         {
-            get => GetElement<LegacyNumbering>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LegacyNumbering>();
             set => SetElement(value);
         }
 
@@ -45345,9 +45345,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public LevelJustification? LevelJustification
+        public DocumentFormat.OpenXml.Wordprocessing.LevelJustification? LevelJustification
         {
-            get => GetElement<LevelJustification>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LevelJustification>();
             set => SetElement(value);
         }
 
@@ -45358,9 +45358,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PreviousParagraphProperties? PreviousParagraphProperties
+        public DocumentFormat.OpenXml.Wordprocessing.PreviousParagraphProperties? PreviousParagraphProperties
         {
-            get => GetElement<PreviousParagraphProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PreviousParagraphProperties>();
             set => SetElement(value);
         }
 
@@ -45371,9 +45371,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NumberingSymbolRunProperties? NumberingSymbolRunProperties
+        public DocumentFormat.OpenXml.Wordprocessing.NumberingSymbolRunProperties? NumberingSymbolRunProperties
         {
-            get => GetElement<NumberingSymbolRunProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingSymbolRunProperties>();
             set => SetElement(value);
         }
 
@@ -45473,9 +45473,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StartOverrideNumberingValue? StartOverrideNumberingValue
+        public DocumentFormat.OpenXml.Wordprocessing.StartOverrideNumberingValue? StartOverrideNumberingValue
         {
-            get => GetElement<StartOverrideNumberingValue>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StartOverrideNumberingValue>();
             set => SetElement(value);
         }
 
@@ -45486,9 +45486,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Level? Level
+        public DocumentFormat.OpenXml.Wordprocessing.Level? Level
         {
-            get => GetElement<Level>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Level>();
             set => SetElement(value);
         }
 
@@ -45592,9 +45592,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PictureBulletBase? PictureBulletBase
+        public DocumentFormat.OpenXml.Wordprocessing.PictureBulletBase? PictureBulletBase
         {
-            get => GetElement<PictureBulletBase>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PictureBulletBase>();
             set => SetElement(value);
         }
 
@@ -45605,9 +45605,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Drawing? Drawing
+        public DocumentFormat.OpenXml.Wordprocessing.Drawing? Drawing
         {
-            get => GetElement<Drawing>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Drawing>();
             set => SetElement(value);
         }
 
@@ -45724,9 +45724,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Nsid? Nsid
+        public DocumentFormat.OpenXml.Wordprocessing.Nsid? Nsid
         {
-            get => GetElement<Nsid>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Nsid>();
             set => SetElement(value);
         }
 
@@ -45737,9 +45737,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public MultiLevelType? MultiLevelType
+        public DocumentFormat.OpenXml.Wordprocessing.MultiLevelType? MultiLevelType
         {
-            get => GetElement<MultiLevelType>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MultiLevelType>();
             set => SetElement(value);
         }
 
@@ -45750,9 +45750,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TemplateCode? TemplateCode
+        public DocumentFormat.OpenXml.Wordprocessing.TemplateCode? TemplateCode
         {
-            get => GetElement<TemplateCode>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TemplateCode>();
             set => SetElement(value);
         }
 
@@ -45763,9 +45763,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public AbstractNumDefinitionName? AbstractNumDefinitionName
+        public DocumentFormat.OpenXml.Wordprocessing.AbstractNumDefinitionName? AbstractNumDefinitionName
         {
-            get => GetElement<AbstractNumDefinitionName>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AbstractNumDefinitionName>();
             set => SetElement(value);
         }
 
@@ -45776,9 +45776,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StyleLink? StyleLink
+        public DocumentFormat.OpenXml.Wordprocessing.StyleLink? StyleLink
         {
-            get => GetElement<StyleLink>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StyleLink>();
             set => SetElement(value);
         }
 
@@ -45789,9 +45789,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NumberingStyleLink? NumberingStyleLink
+        public DocumentFormat.OpenXml.Wordprocessing.NumberingStyleLink? NumberingStyleLink
         {
-            get => GetElement<NumberingStyleLink>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingStyleLink>();
             set => SetElement(value);
         }
 
@@ -45892,9 +45892,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public AbstractNumId? AbstractNumId
+        public DocumentFormat.OpenXml.Wordprocessing.AbstractNumId? AbstractNumId
         {
-            get => GetElement<AbstractNumId>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AbstractNumId>();
             set => SetElement(value);
         }
 
@@ -46075,9 +46075,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public KeepNext? KeepNext
+        public DocumentFormat.OpenXml.Wordprocessing.KeepNext? KeepNext
         {
-            get => GetElement<KeepNext>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.KeepNext>();
             set => SetElement(value);
         }
 
@@ -46088,9 +46088,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public KeepLines? KeepLines
+        public DocumentFormat.OpenXml.Wordprocessing.KeepLines? KeepLines
         {
-            get => GetElement<KeepLines>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.KeepLines>();
             set => SetElement(value);
         }
 
@@ -46101,9 +46101,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PageBreakBefore? PageBreakBefore
+        public DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore? PageBreakBefore
         {
-            get => GetElement<PageBreakBefore>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore>();
             set => SetElement(value);
         }
 
@@ -46114,9 +46114,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FrameProperties? FrameProperties
+        public DocumentFormat.OpenXml.Wordprocessing.FrameProperties? FrameProperties
         {
-            get => GetElement<FrameProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FrameProperties>();
             set => SetElement(value);
         }
 
@@ -46127,9 +46127,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public WidowControl? WidowControl
+        public DocumentFormat.OpenXml.Wordprocessing.WidowControl? WidowControl
         {
-            get => GetElement<WidowControl>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WidowControl>();
             set => SetElement(value);
         }
 
@@ -46140,9 +46140,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NumberingProperties? NumberingProperties
+        public DocumentFormat.OpenXml.Wordprocessing.NumberingProperties? NumberingProperties
         {
-            get => GetElement<NumberingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingProperties>();
             set => SetElement(value);
         }
 
@@ -46153,9 +46153,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SuppressLineNumbers? SuppressLineNumbers
+        public DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers? SuppressLineNumbers
         {
-            get => GetElement<SuppressLineNumbers>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers>();
             set => SetElement(value);
         }
 
@@ -46166,9 +46166,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ParagraphBorders? ParagraphBorders
+        public DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders? ParagraphBorders
         {
-            get => GetElement<ParagraphBorders>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders>();
             set => SetElement(value);
         }
 
@@ -46179,9 +46179,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Shading? Shading
+        public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
-            get => GetElement<Shading>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
             set => SetElement(value);
         }
 
@@ -46192,9 +46192,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Tabs? Tabs
+        public DocumentFormat.OpenXml.Wordprocessing.Tabs? Tabs
         {
-            get => GetElement<Tabs>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Tabs>();
             set => SetElement(value);
         }
 
@@ -46205,9 +46205,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SuppressAutoHyphens? SuppressAutoHyphens
+        public DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens? SuppressAutoHyphens
         {
-            get => GetElement<SuppressAutoHyphens>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens>();
             set => SetElement(value);
         }
 
@@ -46218,9 +46218,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Kinsoku? Kinsoku
+        public DocumentFormat.OpenXml.Wordprocessing.Kinsoku? Kinsoku
         {
-            get => GetElement<Kinsoku>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Kinsoku>();
             set => SetElement(value);
         }
 
@@ -46231,9 +46231,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public WordWrap? WordWrap
+        public DocumentFormat.OpenXml.Wordprocessing.WordWrap? WordWrap
         {
-            get => GetElement<WordWrap>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WordWrap>();
             set => SetElement(value);
         }
 
@@ -46244,9 +46244,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OverflowPunctuation? OverflowPunctuation
+        public DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation? OverflowPunctuation
         {
-            get => GetElement<OverflowPunctuation>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation>();
             set => SetElement(value);
         }
 
@@ -46257,9 +46257,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TopLinePunctuation? TopLinePunctuation
+        public DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation? TopLinePunctuation
         {
-            get => GetElement<TopLinePunctuation>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation>();
             set => SetElement(value);
         }
 
@@ -46270,9 +46270,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public AutoSpaceDE? AutoSpaceDE
+        public DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE? AutoSpaceDE
         {
-            get => GetElement<AutoSpaceDE>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE>();
             set => SetElement(value);
         }
 
@@ -46283,9 +46283,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public AutoSpaceDN? AutoSpaceDN
+        public DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN? AutoSpaceDN
         {
-            get => GetElement<AutoSpaceDN>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN>();
             set => SetElement(value);
         }
 
@@ -46296,9 +46296,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public BiDi? BiDi
+        public DocumentFormat.OpenXml.Wordprocessing.BiDi? BiDi
         {
-            get => GetElement<BiDi>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BiDi>();
             set => SetElement(value);
         }
 
@@ -46309,9 +46309,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public AdjustRightIndent? AdjustRightIndent
+        public DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent? AdjustRightIndent
         {
-            get => GetElement<AdjustRightIndent>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent>();
             set => SetElement(value);
         }
 
@@ -46322,9 +46322,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SnapToGrid? SnapToGrid
+        public DocumentFormat.OpenXml.Wordprocessing.SnapToGrid? SnapToGrid
         {
-            get => GetElement<SnapToGrid>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
             set => SetElement(value);
         }
 
@@ -46335,9 +46335,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SpacingBetweenLines? SpacingBetweenLines
+        public DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines? SpacingBetweenLines
         {
-            get => GetElement<SpacingBetweenLines>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines>();
             set => SetElement(value);
         }
 
@@ -46348,9 +46348,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Indentation? Indentation
+        public DocumentFormat.OpenXml.Wordprocessing.Indentation? Indentation
         {
-            get => GetElement<Indentation>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Indentation>();
             set => SetElement(value);
         }
 
@@ -46361,9 +46361,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ContextualSpacing? ContextualSpacing
+        public DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing? ContextualSpacing
         {
-            get => GetElement<ContextualSpacing>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing>();
             set => SetElement(value);
         }
 
@@ -46374,9 +46374,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public MirrorIndents? MirrorIndents
+        public DocumentFormat.OpenXml.Wordprocessing.MirrorIndents? MirrorIndents
         {
-            get => GetElement<MirrorIndents>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MirrorIndents>();
             set => SetElement(value);
         }
 
@@ -46387,9 +46387,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SuppressOverlap? SuppressOverlap
+        public DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap? SuppressOverlap
         {
-            get => GetElement<SuppressOverlap>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap>();
             set => SetElement(value);
         }
 
@@ -46400,9 +46400,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Justification? Justification
+        public DocumentFormat.OpenXml.Wordprocessing.Justification? Justification
         {
-            get => GetElement<Justification>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Justification>();
             set => SetElement(value);
         }
 
@@ -46413,9 +46413,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TextDirection? TextDirection
+        public DocumentFormat.OpenXml.Wordprocessing.TextDirection? TextDirection
         {
-            get => GetElement<TextDirection>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextDirection>();
             set => SetElement(value);
         }
 
@@ -46426,9 +46426,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TextAlignment? TextAlignment
+        public DocumentFormat.OpenXml.Wordprocessing.TextAlignment? TextAlignment
         {
-            get => GetElement<TextAlignment>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextAlignment>();
             set => SetElement(value);
         }
 
@@ -46439,9 +46439,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TextBoxTightWrap? TextBoxTightWrap
+        public DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap? TextBoxTightWrap
         {
-            get => GetElement<TextBoxTightWrap>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap>();
             set => SetElement(value);
         }
 
@@ -46452,9 +46452,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OutlineLevel? OutlineLevel
+        public DocumentFormat.OpenXml.Wordprocessing.OutlineLevel? OutlineLevel
         {
-            get => GetElement<OutlineLevel>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.OutlineLevel>();
             set => SetElement(value);
         }
 
@@ -46465,9 +46465,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ParagraphPropertiesChange? ParagraphPropertiesChange
+        public DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesChange? ParagraphPropertiesChange
         {
-            get => GetElement<ParagraphPropertiesChange>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesChange>();
             set => SetElement(value);
         }
 
@@ -46567,9 +46567,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableJustification? TableJustification
+        public DocumentFormat.OpenXml.Wordprocessing.TableJustification? TableJustification
         {
-            get => GetElement<TableJustification>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableJustification>();
             set => SetElement(value);
         }
 
@@ -46580,9 +46580,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellSpacing? TableCellSpacing
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing? TableCellSpacing
         {
-            get => GetElement<TableCellSpacing>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing>();
             set => SetElement(value);
         }
 
@@ -46593,9 +46593,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableIndentation? TableIndentation
+        public DocumentFormat.OpenXml.Wordprocessing.TableIndentation? TableIndentation
         {
-            get => GetElement<TableIndentation>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableIndentation>();
             set => SetElement(value);
         }
 
@@ -46606,9 +46606,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableBorders? TableBorders
+        public DocumentFormat.OpenXml.Wordprocessing.TableBorders? TableBorders
         {
-            get => GetElement<TableBorders>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableBorders>();
             set => SetElement(value);
         }
 
@@ -46619,9 +46619,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Shading? Shading
+        public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
-            get => GetElement<Shading>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
             set => SetElement(value);
         }
 
@@ -46632,9 +46632,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellMarginDefault? TableCellMarginDefault
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault? TableCellMarginDefault
         {
-            get => GetElement<TableCellMarginDefault>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault>();
             set => SetElement(value);
         }
 
@@ -46817,9 +46817,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellBorders? TableCellBorders
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellBorders? TableCellBorders
         {
-            get => GetElement<TableCellBorders>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellBorders>();
             set => SetElement(value);
         }
 
@@ -46830,9 +46830,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Shading? Shading
+        public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
-            get => GetElement<Shading>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
             set => SetElement(value);
         }
 
@@ -46843,9 +46843,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NoWrap? NoWrap
+        public DocumentFormat.OpenXml.Wordprocessing.NoWrap? NoWrap
         {
-            get => GetElement<NoWrap>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoWrap>();
             set => SetElement(value);
         }
 
@@ -46856,9 +46856,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellMargin? TableCellMargin
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellMargin? TableCellMargin
         {
-            get => GetElement<TableCellMargin>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellMargin>();
             set => SetElement(value);
         }
 
@@ -46869,9 +46869,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellVerticalAlignment? TableCellVerticalAlignment
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment? TableCellVerticalAlignment
         {
-            get => GetElement<TableCellVerticalAlignment>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment>();
             set => SetElement(value);
         }
 
@@ -47186,9 +47186,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public RunFonts? RunFonts
+        public DocumentFormat.OpenXml.Wordprocessing.RunFonts? RunFonts
         {
-            get => GetElement<RunFonts>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunFonts>();
             set => SetElement(value);
         }
 
@@ -47199,9 +47199,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Bold? Bold
+        public DocumentFormat.OpenXml.Wordprocessing.Bold? Bold
         {
-            get => GetElement<Bold>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Bold>();
             set => SetElement(value);
         }
 
@@ -47212,9 +47212,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public BoldComplexScript? BoldComplexScript
+        public DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript? BoldComplexScript
         {
-            get => GetElement<BoldComplexScript>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript>();
             set => SetElement(value);
         }
 
@@ -47225,9 +47225,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Italic? Italic
+        public DocumentFormat.OpenXml.Wordprocessing.Italic? Italic
         {
-            get => GetElement<Italic>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Italic>();
             set => SetElement(value);
         }
 
@@ -47238,9 +47238,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ItalicComplexScript? ItalicComplexScript
+        public DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript? ItalicComplexScript
         {
-            get => GetElement<ItalicComplexScript>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript>();
             set => SetElement(value);
         }
 
@@ -47251,9 +47251,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Caps? Caps
+        public DocumentFormat.OpenXml.Wordprocessing.Caps? Caps
         {
-            get => GetElement<Caps>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Caps>();
             set => SetElement(value);
         }
 
@@ -47264,9 +47264,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SmallCaps? SmallCaps
+        public DocumentFormat.OpenXml.Wordprocessing.SmallCaps? SmallCaps
         {
-            get => GetElement<SmallCaps>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SmallCaps>();
             set => SetElement(value);
         }
 
@@ -47277,9 +47277,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Strike? Strike
+        public DocumentFormat.OpenXml.Wordprocessing.Strike? Strike
         {
-            get => GetElement<Strike>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Strike>();
             set => SetElement(value);
         }
 
@@ -47290,9 +47290,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DoubleStrike? DoubleStrike
+        public DocumentFormat.OpenXml.Wordprocessing.DoubleStrike? DoubleStrike
         {
-            get => GetElement<DoubleStrike>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoubleStrike>();
             set => SetElement(value);
         }
 
@@ -47303,9 +47303,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Outline? Outline
+        public DocumentFormat.OpenXml.Wordprocessing.Outline? Outline
         {
-            get => GetElement<Outline>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Outline>();
             set => SetElement(value);
         }
 
@@ -47316,9 +47316,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Shadow? Shadow
+        public DocumentFormat.OpenXml.Wordprocessing.Shadow? Shadow
         {
-            get => GetElement<Shadow>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shadow>();
             set => SetElement(value);
         }
 
@@ -47329,9 +47329,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Emboss? Emboss
+        public DocumentFormat.OpenXml.Wordprocessing.Emboss? Emboss
         {
-            get => GetElement<Emboss>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Emboss>();
             set => SetElement(value);
         }
 
@@ -47342,9 +47342,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Imprint? Imprint
+        public DocumentFormat.OpenXml.Wordprocessing.Imprint? Imprint
         {
-            get => GetElement<Imprint>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Imprint>();
             set => SetElement(value);
         }
 
@@ -47355,9 +47355,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NoProof? NoProof
+        public DocumentFormat.OpenXml.Wordprocessing.NoProof? NoProof
         {
-            get => GetElement<NoProof>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoProof>();
             set => SetElement(value);
         }
 
@@ -47368,9 +47368,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SnapToGrid? SnapToGrid
+        public DocumentFormat.OpenXml.Wordprocessing.SnapToGrid? SnapToGrid
         {
-            get => GetElement<SnapToGrid>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
             set => SetElement(value);
         }
 
@@ -47381,9 +47381,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Vanish? Vanish
+        public DocumentFormat.OpenXml.Wordprocessing.Vanish? Vanish
         {
-            get => GetElement<Vanish>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Vanish>();
             set => SetElement(value);
         }
 
@@ -47394,9 +47394,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public WebHidden? WebHidden
+        public DocumentFormat.OpenXml.Wordprocessing.WebHidden? WebHidden
         {
-            get => GetElement<WebHidden>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WebHidden>();
             set => SetElement(value);
         }
 
@@ -47407,9 +47407,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Color? Color
+        public DocumentFormat.OpenXml.Wordprocessing.Color? Color
         {
-            get => GetElement<Color>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Color>();
             set => SetElement(value);
         }
 
@@ -47420,9 +47420,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Spacing? Spacing
+        public DocumentFormat.OpenXml.Wordprocessing.Spacing? Spacing
         {
-            get => GetElement<Spacing>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Spacing>();
             set => SetElement(value);
         }
 
@@ -47433,9 +47433,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public CharacterScale? CharacterScale
+        public DocumentFormat.OpenXml.Wordprocessing.CharacterScale? CharacterScale
         {
-            get => GetElement<CharacterScale>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.CharacterScale>();
             set => SetElement(value);
         }
 
@@ -47446,9 +47446,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Kern? Kern
+        public DocumentFormat.OpenXml.Wordprocessing.Kern? Kern
         {
-            get => GetElement<Kern>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Kern>();
             set => SetElement(value);
         }
 
@@ -47459,9 +47459,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Position? Position
+        public DocumentFormat.OpenXml.Wordprocessing.Position? Position
         {
-            get => GetElement<Position>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Position>();
             set => SetElement(value);
         }
 
@@ -47472,9 +47472,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FontSize? FontSize
+        public DocumentFormat.OpenXml.Wordprocessing.FontSize? FontSize
         {
-            get => GetElement<FontSize>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FontSize>();
             set => SetElement(value);
         }
 
@@ -47485,9 +47485,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FontSizeComplexScript? FontSizeComplexScript
+        public DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript? FontSizeComplexScript
         {
-            get => GetElement<FontSizeComplexScript>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript>();
             set => SetElement(value);
         }
 
@@ -47498,9 +47498,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Underline? Underline
+        public DocumentFormat.OpenXml.Wordprocessing.Underline? Underline
         {
-            get => GetElement<Underline>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Underline>();
             set => SetElement(value);
         }
 
@@ -47511,9 +47511,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TextEffect? TextEffect
+        public DocumentFormat.OpenXml.Wordprocessing.TextEffect? TextEffect
         {
-            get => GetElement<TextEffect>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextEffect>();
             set => SetElement(value);
         }
 
@@ -47524,9 +47524,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Border? Border
+        public DocumentFormat.OpenXml.Wordprocessing.Border? Border
         {
-            get => GetElement<Border>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Border>();
             set => SetElement(value);
         }
 
@@ -47537,9 +47537,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Shading? Shading
+        public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
-            get => GetElement<Shading>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
             set => SetElement(value);
         }
 
@@ -47550,9 +47550,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FitText? FitText
+        public DocumentFormat.OpenXml.Wordprocessing.FitText? FitText
         {
-            get => GetElement<FitText>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FitText>();
             set => SetElement(value);
         }
 
@@ -47563,9 +47563,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public VerticalTextAlignment? VerticalTextAlignment
+        public DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment? VerticalTextAlignment
         {
-            get => GetElement<VerticalTextAlignment>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment>();
             set => SetElement(value);
         }
 
@@ -47576,9 +47576,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Emphasis? Emphasis
+        public DocumentFormat.OpenXml.Wordprocessing.Emphasis? Emphasis
         {
-            get => GetElement<Emphasis>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Emphasis>();
             set => SetElement(value);
         }
 
@@ -47589,9 +47589,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Languages? Languages
+        public DocumentFormat.OpenXml.Wordprocessing.Languages? Languages
         {
-            get => GetElement<Languages>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Languages>();
             set => SetElement(value);
         }
 
@@ -47602,9 +47602,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EastAsianLayout? EastAsianLayout
+        public DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout? EastAsianLayout
         {
-            get => GetElement<EastAsianLayout>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout>();
             set => SetElement(value);
         }
 
@@ -47615,9 +47615,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SpecVanish? SpecVanish
+        public DocumentFormat.OpenXml.Wordprocessing.SpecVanish? SpecVanish
         {
-            get => GetElement<SpecVanish>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SpecVanish>();
             set => SetElement(value);
         }
 
@@ -47628,9 +47628,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public RunPropertiesChange? RunPropertiesChange
+        public DocumentFormat.OpenXml.Wordprocessing.RunPropertiesChange? RunPropertiesChange
         {
-            get => GetElement<RunPropertiesChange>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunPropertiesChange>();
             set => SetElement(value);
         }
 
@@ -47742,9 +47742,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableStyleRowBandSize? TableStyleRowBandSize
+        public DocumentFormat.OpenXml.Wordprocessing.TableStyleRowBandSize? TableStyleRowBandSize
         {
-            get => GetElement<TableStyleRowBandSize>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableStyleRowBandSize>();
             set => SetElement(value);
         }
 
@@ -47755,9 +47755,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableStyleColumnBandSize? TableStyleColumnBandSize
+        public DocumentFormat.OpenXml.Wordprocessing.TableStyleColumnBandSize? TableStyleColumnBandSize
         {
-            get => GetElement<TableStyleColumnBandSize>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableStyleColumnBandSize>();
             set => SetElement(value);
         }
 
@@ -47768,9 +47768,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableJustification? TableJustification
+        public DocumentFormat.OpenXml.Wordprocessing.TableJustification? TableJustification
         {
-            get => GetElement<TableJustification>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableJustification>();
             set => SetElement(value);
         }
 
@@ -47781,9 +47781,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellSpacing? TableCellSpacing
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing? TableCellSpacing
         {
-            get => GetElement<TableCellSpacing>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing>();
             set => SetElement(value);
         }
 
@@ -47794,9 +47794,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableIndentation? TableIndentation
+        public DocumentFormat.OpenXml.Wordprocessing.TableIndentation? TableIndentation
         {
-            get => GetElement<TableIndentation>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableIndentation>();
             set => SetElement(value);
         }
 
@@ -47807,9 +47807,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableBorders? TableBorders
+        public DocumentFormat.OpenXml.Wordprocessing.TableBorders? TableBorders
         {
-            get => GetElement<TableBorders>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableBorders>();
             set => SetElement(value);
         }
 
@@ -47820,9 +47820,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Shading? Shading
+        public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
-            get => GetElement<Shading>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
             set => SetElement(value);
         }
 
@@ -47833,9 +47833,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellMarginDefault? TableCellMarginDefault
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault? TableCellMarginDefault
         {
-            get => GetElement<TableCellMarginDefault>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault>();
             set => SetElement(value);
         }
 
@@ -47929,9 +47929,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Shading? Shading
+        public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
-            get => GetElement<Shading>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
             set => SetElement(value);
         }
 
@@ -47942,9 +47942,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NoWrap? NoWrap
+        public DocumentFormat.OpenXml.Wordprocessing.NoWrap? NoWrap
         {
-            get => GetElement<NoWrap>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoWrap>();
             set => SetElement(value);
         }
 
@@ -47955,9 +47955,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellMargin? TableCellMargin
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellMargin? TableCellMargin
         {
-            get => GetElement<TableCellMargin>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellMargin>();
             set => SetElement(value);
         }
 
@@ -47968,9 +47968,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellVerticalAlignment? TableCellVerticalAlignment
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment? TableCellVerticalAlignment
         {
-            get => GetElement<TableCellVerticalAlignment>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment>();
             set => SetElement(value);
         }
 
@@ -48079,9 +48079,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StyleParagraphProperties? StyleParagraphProperties
+        public DocumentFormat.OpenXml.Wordprocessing.StyleParagraphProperties? StyleParagraphProperties
         {
-            get => GetElement<StyleParagraphProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StyleParagraphProperties>();
             set => SetElement(value);
         }
 
@@ -48092,9 +48092,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public RunPropertiesBaseStyle? RunPropertiesBaseStyle
+        public DocumentFormat.OpenXml.Wordprocessing.RunPropertiesBaseStyle? RunPropertiesBaseStyle
         {
-            get => GetElement<RunPropertiesBaseStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunPropertiesBaseStyle>();
             set => SetElement(value);
         }
 
@@ -48105,9 +48105,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableStyleConditionalFormattingTableProperties? TableStyleConditionalFormattingTableProperties
+        public DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableProperties? TableStyleConditionalFormattingTableProperties
         {
-            get => GetElement<TableStyleConditionalFormattingTableProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableProperties>();
             set => SetElement(value);
         }
 
@@ -48118,9 +48118,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableStyleConditionalFormattingTableRowProperties? TableStyleConditionalFormattingTableRowProperties
+        public DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableRowProperties? TableStyleConditionalFormattingTableRowProperties
         {
-            get => GetElement<TableStyleConditionalFormattingTableRowProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableRowProperties>();
             set => SetElement(value);
         }
 
@@ -48131,9 +48131,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableStyleConditionalFormattingTableCellProperties? TableStyleConditionalFormattingTableCellProperties
+        public DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableCellProperties? TableStyleConditionalFormattingTableCellProperties
         {
-            get => GetElement<TableStyleConditionalFormattingTableCellProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableCellProperties>();
             set => SetElement(value);
         }
 
@@ -48363,9 +48363,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public RunPropertiesDefault? RunPropertiesDefault
+        public DocumentFormat.OpenXml.Wordprocessing.RunPropertiesDefault? RunPropertiesDefault
         {
-            get => GetElement<RunPropertiesDefault>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunPropertiesDefault>();
             set => SetElement(value);
         }
 
@@ -48376,9 +48376,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ParagraphPropertiesDefault? ParagraphPropertiesDefault
+        public DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesDefault? ParagraphPropertiesDefault
         {
-            get => GetElement<ParagraphPropertiesDefault>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesDefault>();
             set => SetElement(value);
         }
 
@@ -48785,9 +48785,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StyleName? StyleName
+        public DocumentFormat.OpenXml.Wordprocessing.StyleName? StyleName
         {
-            get => GetElement<StyleName>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StyleName>();
             set => SetElement(value);
         }
 
@@ -48798,9 +48798,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Aliases? Aliases
+        public DocumentFormat.OpenXml.Wordprocessing.Aliases? Aliases
         {
-            get => GetElement<Aliases>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Aliases>();
             set => SetElement(value);
         }
 
@@ -48811,9 +48811,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public BasedOn? BasedOn
+        public DocumentFormat.OpenXml.Wordprocessing.BasedOn? BasedOn
         {
-            get => GetElement<BasedOn>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BasedOn>();
             set => SetElement(value);
         }
 
@@ -48824,9 +48824,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NextParagraphStyle? NextParagraphStyle
+        public DocumentFormat.OpenXml.Wordprocessing.NextParagraphStyle? NextParagraphStyle
         {
-            get => GetElement<NextParagraphStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NextParagraphStyle>();
             set => SetElement(value);
         }
 
@@ -48837,9 +48837,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public LinkedStyle? LinkedStyle
+        public DocumentFormat.OpenXml.Wordprocessing.LinkedStyle? LinkedStyle
         {
-            get => GetElement<LinkedStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LinkedStyle>();
             set => SetElement(value);
         }
 
@@ -48850,9 +48850,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public AutoRedefine? AutoRedefine
+        public DocumentFormat.OpenXml.Wordprocessing.AutoRedefine? AutoRedefine
         {
-            get => GetElement<AutoRedefine>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AutoRedefine>();
             set => SetElement(value);
         }
 
@@ -48863,9 +48863,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StyleHidden? StyleHidden
+        public DocumentFormat.OpenXml.Wordprocessing.StyleHidden? StyleHidden
         {
-            get => GetElement<StyleHidden>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StyleHidden>();
             set => SetElement(value);
         }
 
@@ -48876,9 +48876,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UIPriority? UIPriority
+        public DocumentFormat.OpenXml.Wordprocessing.UIPriority? UIPriority
         {
-            get => GetElement<UIPriority>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.UIPriority>();
             set => SetElement(value);
         }
 
@@ -48889,9 +48889,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SemiHidden? SemiHidden
+        public DocumentFormat.OpenXml.Wordprocessing.SemiHidden? SemiHidden
         {
-            get => GetElement<SemiHidden>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SemiHidden>();
             set => SetElement(value);
         }
 
@@ -48902,9 +48902,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UnhideWhenUsed? UnhideWhenUsed
+        public DocumentFormat.OpenXml.Wordprocessing.UnhideWhenUsed? UnhideWhenUsed
         {
-            get => GetElement<UnhideWhenUsed>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.UnhideWhenUsed>();
             set => SetElement(value);
         }
 
@@ -48915,9 +48915,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PrimaryStyle? PrimaryStyle
+        public DocumentFormat.OpenXml.Wordprocessing.PrimaryStyle? PrimaryStyle
         {
-            get => GetElement<PrimaryStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PrimaryStyle>();
             set => SetElement(value);
         }
 
@@ -48928,9 +48928,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Locked? Locked
+        public DocumentFormat.OpenXml.Wordprocessing.Locked? Locked
         {
-            get => GetElement<Locked>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Locked>();
             set => SetElement(value);
         }
 
@@ -48941,9 +48941,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Personal? Personal
+        public DocumentFormat.OpenXml.Wordprocessing.Personal? Personal
         {
-            get => GetElement<Personal>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Personal>();
             set => SetElement(value);
         }
 
@@ -48954,9 +48954,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PersonalCompose? PersonalCompose
+        public DocumentFormat.OpenXml.Wordprocessing.PersonalCompose? PersonalCompose
         {
-            get => GetElement<PersonalCompose>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PersonalCompose>();
             set => SetElement(value);
         }
 
@@ -48967,9 +48967,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PersonalReply? PersonalReply
+        public DocumentFormat.OpenXml.Wordprocessing.PersonalReply? PersonalReply
         {
-            get => GetElement<PersonalReply>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PersonalReply>();
             set => SetElement(value);
         }
 
@@ -48980,9 +48980,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Rsid? Rsid
+        public DocumentFormat.OpenXml.Wordprocessing.Rsid? Rsid
         {
-            get => GetElement<Rsid>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Rsid>();
             set => SetElement(value);
         }
 
@@ -48993,9 +48993,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StyleParagraphProperties? StyleParagraphProperties
+        public DocumentFormat.OpenXml.Wordprocessing.StyleParagraphProperties? StyleParagraphProperties
         {
-            get => GetElement<StyleParagraphProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StyleParagraphProperties>();
             set => SetElement(value);
         }
 
@@ -49006,9 +49006,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StyleRunProperties? StyleRunProperties
+        public DocumentFormat.OpenXml.Wordprocessing.StyleRunProperties? StyleRunProperties
         {
-            get => GetElement<StyleRunProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StyleRunProperties>();
             set => SetElement(value);
         }
 
@@ -49019,9 +49019,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StyleTableProperties? StyleTableProperties
+        public DocumentFormat.OpenXml.Wordprocessing.StyleTableProperties? StyleTableProperties
         {
-            get => GetElement<StyleTableProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StyleTableProperties>();
             set => SetElement(value);
         }
 
@@ -49032,9 +49032,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableStyleConditionalFormattingTableRowProperties? TableStyleConditionalFormattingTableRowProperties
+        public DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableRowProperties? TableStyleConditionalFormattingTableRowProperties
         {
-            get => GetElement<TableStyleConditionalFormattingTableRowProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableRowProperties>();
             set => SetElement(value);
         }
 
@@ -49045,9 +49045,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StyleTableCellProperties? StyleTableCellProperties
+        public DocumentFormat.OpenXml.Wordprocessing.StyleTableCellProperties? StyleTableCellProperties
         {
-            get => GetElement<StyleTableCellProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StyleTableCellProperties>();
             set => SetElement(value);
         }
 
@@ -49174,9 +49174,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public AltName? AltName
+        public DocumentFormat.OpenXml.Wordprocessing.AltName? AltName
         {
-            get => GetElement<AltName>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AltName>();
             set => SetElement(value);
         }
 
@@ -49187,9 +49187,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Panose1Number? Panose1Number
+        public DocumentFormat.OpenXml.Wordprocessing.Panose1Number? Panose1Number
         {
-            get => GetElement<Panose1Number>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Panose1Number>();
             set => SetElement(value);
         }
 
@@ -49200,9 +49200,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FontCharSet? FontCharSet
+        public DocumentFormat.OpenXml.Wordprocessing.FontCharSet? FontCharSet
         {
-            get => GetElement<FontCharSet>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FontCharSet>();
             set => SetElement(value);
         }
 
@@ -49213,9 +49213,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FontFamily? FontFamily
+        public DocumentFormat.OpenXml.Wordprocessing.FontFamily? FontFamily
         {
-            get => GetElement<FontFamily>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FontFamily>();
             set => SetElement(value);
         }
 
@@ -49226,9 +49226,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NotTrueType? NotTrueType
+        public DocumentFormat.OpenXml.Wordprocessing.NotTrueType? NotTrueType
         {
-            get => GetElement<NotTrueType>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NotTrueType>();
             set => SetElement(value);
         }
 
@@ -49239,9 +49239,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Pitch? Pitch
+        public DocumentFormat.OpenXml.Wordprocessing.Pitch? Pitch
         {
-            get => GetElement<Pitch>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Pitch>();
             set => SetElement(value);
         }
 
@@ -49252,9 +49252,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FontSignature? FontSignature
+        public DocumentFormat.OpenXml.Wordprocessing.FontSignature? FontSignature
         {
-            get => GetElement<FontSignature>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FontSignature>();
             set => SetElement(value);
         }
 
@@ -49265,9 +49265,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EmbedRegularFont? EmbedRegularFont
+        public DocumentFormat.OpenXml.Wordprocessing.EmbedRegularFont? EmbedRegularFont
         {
-            get => GetElement<EmbedRegularFont>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EmbedRegularFont>();
             set => SetElement(value);
         }
 
@@ -49278,9 +49278,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EmbedBoldFont? EmbedBoldFont
+        public DocumentFormat.OpenXml.Wordprocessing.EmbedBoldFont? EmbedBoldFont
         {
-            get => GetElement<EmbedBoldFont>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EmbedBoldFont>();
             set => SetElement(value);
         }
 
@@ -49291,9 +49291,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EmbedItalicFont? EmbedItalicFont
+        public DocumentFormat.OpenXml.Wordprocessing.EmbedItalicFont? EmbedItalicFont
         {
-            get => GetElement<EmbedItalicFont>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EmbedItalicFont>();
             set => SetElement(value);
         }
 
@@ -49304,9 +49304,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EmbedBoldItalicFont? EmbedBoldItalicFont
+        public DocumentFormat.OpenXml.Wordprocessing.EmbedBoldItalicFont? EmbedBoldItalicFont
         {
-            get => GetElement<EmbedBoldItalicFont>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EmbedBoldItalicFont>();
             set => SetElement(value);
         }
 
@@ -49546,9 +49546,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TopBorder? TopBorder
+        public DocumentFormat.OpenXml.Wordprocessing.TopBorder? TopBorder
         {
-            get => GetElement<TopBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopBorder>();
             set => SetElement(value);
         }
 
@@ -49559,9 +49559,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public LeftBorder? LeftBorder
+        public DocumentFormat.OpenXml.Wordprocessing.LeftBorder? LeftBorder
         {
-            get => GetElement<LeftBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LeftBorder>();
             set => SetElement(value);
         }
 
@@ -49572,9 +49572,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public BottomBorder? BottomBorder
+        public DocumentFormat.OpenXml.Wordprocessing.BottomBorder? BottomBorder
         {
-            get => GetElement<BottomBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BottomBorder>();
             set => SetElement(value);
         }
 
@@ -49585,9 +49585,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public RightBorder? RightBorder
+        public DocumentFormat.OpenXml.Wordprocessing.RightBorder? RightBorder
         {
-            get => GetElement<RightBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RightBorder>();
             set => SetElement(value);
         }
 
@@ -49884,9 +49884,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-1L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public BlockQuote? BlockQuote
+        public DocumentFormat.OpenXml.Wordprocessing.BlockQuote? BlockQuote
         {
-            get => GetElement<BlockQuote>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BlockQuote>();
             set => SetElement(value);
         }
 
@@ -49897,9 +49897,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-1L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public BodyDiv? BodyDiv
+        public DocumentFormat.OpenXml.Wordprocessing.BodyDiv? BodyDiv
         {
-            get => GetElement<BodyDiv>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BodyDiv>();
             set => SetElement(value);
         }
 
@@ -49910,9 +49910,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-1L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public LeftMarginDiv? LeftMarginDiv
+        public DocumentFormat.OpenXml.Wordprocessing.LeftMarginDiv? LeftMarginDiv
         {
-            get => GetElement<LeftMarginDiv>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LeftMarginDiv>();
             set => SetElement(value);
         }
 
@@ -49923,9 +49923,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-1L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public RightMarginDiv? RightMarginDiv
+        public DocumentFormat.OpenXml.Wordprocessing.RightMarginDiv? RightMarginDiv
         {
-            get => GetElement<RightMarginDiv>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RightMarginDiv>();
             set => SetElement(value);
         }
 
@@ -49936,9 +49936,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-1L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TopMarginDiv? TopMarginDiv
+        public DocumentFormat.OpenXml.Wordprocessing.TopMarginDiv? TopMarginDiv
         {
-            get => GetElement<TopMarginDiv>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopMarginDiv>();
             set => SetElement(value);
         }
 
@@ -49949,9 +49949,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-1L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public BottomMarginDiv? BottomMarginDiv
+        public DocumentFormat.OpenXml.Wordprocessing.BottomMarginDiv? BottomMarginDiv
         {
-            get => GetElement<BottomMarginDiv>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BottomMarginDiv>();
             set => SetElement(value);
         }
 
@@ -49962,9 +49962,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-1L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DivBorder? DivBorder
+        public DocumentFormat.OpenXml.Wordprocessing.DivBorder? DivBorder
         {
-            get => GetElement<DivBorder>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DivBorder>();
             set => SetElement(value);
         }
 
@@ -51606,9 +51606,9 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Name? Name
+        public DocumentFormat.OpenXml.Wordprocessing.Name? Name
         {
-            get => GetElement<Name>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Name>();
             set => SetElement(value);
         }
 
@@ -51619,9 +51619,9 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Gallery? Gallery
+        public DocumentFormat.OpenXml.Wordprocessing.Gallery? Gallery
         {
-            get => GetElement<Gallery>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Gallery>();
             set => SetElement(value);
         }
 
@@ -51909,9 +51909,9 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DocPartName? DocPartName
+        public DocumentFormat.OpenXml.Wordprocessing.DocPartName? DocPartName
         {
-            get => GetElement<DocPartName>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DocPartName>();
             set => SetElement(value);
         }
 
@@ -51922,9 +51922,9 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StyleId? StyleId
+        public DocumentFormat.OpenXml.Wordprocessing.StyleId? StyleId
         {
-            get => GetElement<StyleId>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StyleId>();
             set => SetElement(value);
         }
 
@@ -51935,9 +51935,9 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Category? Category
+        public DocumentFormat.OpenXml.Wordprocessing.Category? Category
         {
-            get => GetElement<Category>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Category>();
             set => SetElement(value);
         }
 
@@ -51948,9 +51948,9 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DocPartTypes? DocPartTypes
+        public DocumentFormat.OpenXml.Wordprocessing.DocPartTypes? DocPartTypes
         {
-            get => GetElement<DocPartTypes>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DocPartTypes>();
             set => SetElement(value);
         }
 
@@ -51961,9 +51961,9 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Behaviors? Behaviors
+        public DocumentFormat.OpenXml.Wordprocessing.Behaviors? Behaviors
         {
-            get => GetElement<Behaviors>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Behaviors>();
             set => SetElement(value);
         }
 
@@ -51974,9 +51974,9 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Description? Description
+        public DocumentFormat.OpenXml.Wordprocessing.Description? Description
         {
-            get => GetElement<Description>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Description>();
             set => SetElement(value);
         }
 
@@ -51987,9 +51987,9 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DocPartId? DocPartId
+        public DocumentFormat.OpenXml.Wordprocessing.DocPartId? DocPartId
         {
-            get => GetElement<DocPartId>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DocPartId>();
             set => SetElement(value);
         }
 
@@ -52580,9 +52580,9 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DocPartProperties? DocPartProperties
+        public DocumentFormat.OpenXml.Wordprocessing.DocPartProperties? DocPartProperties
         {
-            get => GetElement<DocPartProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DocPartProperties>();
             set => SetElement(value);
         }
 
@@ -52593,9 +52593,9 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DocPartBody? DocPartBody
+        public DocumentFormat.OpenXml.Wordprocessing.DocPartBody? DocPartBody
         {
-            get => GetElement<DocPartBody>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DocPartBody>();
             set => SetElement(value);
         }
 
@@ -52921,9 +52921,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableWidth? TableWidth
+        public DocumentFormat.OpenXml.Wordprocessing.TableWidth? TableWidth
         {
-            get => GetElement<TableWidth>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableWidth>();
             set => SetElement(value);
         }
 
@@ -52934,9 +52934,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableJustification? TableJustification
+        public DocumentFormat.OpenXml.Wordprocessing.TableJustification? TableJustification
         {
-            get => GetElement<TableJustification>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableJustification>();
             set => SetElement(value);
         }
 
@@ -52947,9 +52947,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellSpacing? TableCellSpacing
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing? TableCellSpacing
         {
-            get => GetElement<TableCellSpacing>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing>();
             set => SetElement(value);
         }
 
@@ -52960,9 +52960,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableIndentation? TableIndentation
+        public DocumentFormat.OpenXml.Wordprocessing.TableIndentation? TableIndentation
         {
-            get => GetElement<TableIndentation>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableIndentation>();
             set => SetElement(value);
         }
 
@@ -52973,9 +52973,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableBorders? TableBorders
+        public DocumentFormat.OpenXml.Wordprocessing.TableBorders? TableBorders
         {
-            get => GetElement<TableBorders>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableBorders>();
             set => SetElement(value);
         }
 
@@ -52986,9 +52986,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Shading? Shading
+        public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
-            get => GetElement<Shading>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
             set => SetElement(value);
         }
 
@@ -52999,9 +52999,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableLayout? TableLayout
+        public DocumentFormat.OpenXml.Wordprocessing.TableLayout? TableLayout
         {
-            get => GetElement<TableLayout>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableLayout>();
             set => SetElement(value);
         }
 
@@ -53012,9 +53012,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableCellMarginDefault? TableCellMarginDefault
+        public DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault? TableCellMarginDefault
         {
-            get => GetElement<TableCellMarginDefault>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault>();
             set => SetElement(value);
         }
 
@@ -53025,9 +53025,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TableLook? TableLook
+        public DocumentFormat.OpenXml.Wordprocessing.TableLook? TableLook
         {
-            get => GetElement<TableLook>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableLook>();
             set => SetElement(value);
         }
 
@@ -53038,9 +53038,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TablePropertyExceptionsChange? TablePropertyExceptionsChange
+        public DocumentFormat.OpenXml.Wordprocessing.TablePropertyExceptionsChange? TablePropertyExceptionsChange
         {
-            get => GetElement<TablePropertyExceptionsChange>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TablePropertyExceptionsChange>();
             set => SetElement(value);
         }
 
@@ -53324,9 +53324,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PreviousTableRowProperties? PreviousTableRowProperties
+        public DocumentFormat.OpenXml.Wordprocessing.PreviousTableRowProperties? PreviousTableRowProperties
         {
-            get => GetElement<PreviousTableRowProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PreviousTableRowProperties>();
             set => SetElement(value);
         }
 
@@ -53534,9 +53534,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ParagraphStyleId? ParagraphStyleId
+        public DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleId? ParagraphStyleId
         {
-            get => GetElement<ParagraphStyleId>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleId>();
             set => SetElement(value);
         }
 
@@ -53547,9 +53547,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public KeepNext? KeepNext
+        public DocumentFormat.OpenXml.Wordprocessing.KeepNext? KeepNext
         {
-            get => GetElement<KeepNext>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.KeepNext>();
             set => SetElement(value);
         }
 
@@ -53560,9 +53560,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public KeepLines? KeepLines
+        public DocumentFormat.OpenXml.Wordprocessing.KeepLines? KeepLines
         {
-            get => GetElement<KeepLines>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.KeepLines>();
             set => SetElement(value);
         }
 
@@ -53573,9 +53573,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PageBreakBefore? PageBreakBefore
+        public DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore? PageBreakBefore
         {
-            get => GetElement<PageBreakBefore>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore>();
             set => SetElement(value);
         }
 
@@ -53586,9 +53586,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FrameProperties? FrameProperties
+        public DocumentFormat.OpenXml.Wordprocessing.FrameProperties? FrameProperties
         {
-            get => GetElement<FrameProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FrameProperties>();
             set => SetElement(value);
         }
 
@@ -53599,9 +53599,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public WidowControl? WidowControl
+        public DocumentFormat.OpenXml.Wordprocessing.WidowControl? WidowControl
         {
-            get => GetElement<WidowControl>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WidowControl>();
             set => SetElement(value);
         }
 
@@ -53612,9 +53612,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NumberingProperties? NumberingProperties
+        public DocumentFormat.OpenXml.Wordprocessing.NumberingProperties? NumberingProperties
         {
-            get => GetElement<NumberingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingProperties>();
             set => SetElement(value);
         }
 
@@ -53625,9 +53625,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SuppressLineNumbers? SuppressLineNumbers
+        public DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers? SuppressLineNumbers
         {
-            get => GetElement<SuppressLineNumbers>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers>();
             set => SetElement(value);
         }
 
@@ -53638,9 +53638,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ParagraphBorders? ParagraphBorders
+        public DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders? ParagraphBorders
         {
-            get => GetElement<ParagraphBorders>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders>();
             set => SetElement(value);
         }
 
@@ -53651,9 +53651,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Shading? Shading
+        public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
-            get => GetElement<Shading>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
             set => SetElement(value);
         }
 
@@ -53664,9 +53664,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Tabs? Tabs
+        public DocumentFormat.OpenXml.Wordprocessing.Tabs? Tabs
         {
-            get => GetElement<Tabs>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Tabs>();
             set => SetElement(value);
         }
 
@@ -53677,9 +53677,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SuppressAutoHyphens? SuppressAutoHyphens
+        public DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens? SuppressAutoHyphens
         {
-            get => GetElement<SuppressAutoHyphens>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens>();
             set => SetElement(value);
         }
 
@@ -53690,9 +53690,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Kinsoku? Kinsoku
+        public DocumentFormat.OpenXml.Wordprocessing.Kinsoku? Kinsoku
         {
-            get => GetElement<Kinsoku>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Kinsoku>();
             set => SetElement(value);
         }
 
@@ -53703,9 +53703,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public WordWrap? WordWrap
+        public DocumentFormat.OpenXml.Wordprocessing.WordWrap? WordWrap
         {
-            get => GetElement<WordWrap>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WordWrap>();
             set => SetElement(value);
         }
 
@@ -53716,9 +53716,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OverflowPunctuation? OverflowPunctuation
+        public DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation? OverflowPunctuation
         {
-            get => GetElement<OverflowPunctuation>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation>();
             set => SetElement(value);
         }
 
@@ -53729,9 +53729,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TopLinePunctuation? TopLinePunctuation
+        public DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation? TopLinePunctuation
         {
-            get => GetElement<TopLinePunctuation>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation>();
             set => SetElement(value);
         }
 
@@ -53742,9 +53742,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public AutoSpaceDE? AutoSpaceDE
+        public DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE? AutoSpaceDE
         {
-            get => GetElement<AutoSpaceDE>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE>();
             set => SetElement(value);
         }
 
@@ -53755,9 +53755,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public AutoSpaceDN? AutoSpaceDN
+        public DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN? AutoSpaceDN
         {
-            get => GetElement<AutoSpaceDN>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN>();
             set => SetElement(value);
         }
 
@@ -53768,9 +53768,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public BiDi? BiDi
+        public DocumentFormat.OpenXml.Wordprocessing.BiDi? BiDi
         {
-            get => GetElement<BiDi>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BiDi>();
             set => SetElement(value);
         }
 
@@ -53781,9 +53781,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public AdjustRightIndent? AdjustRightIndent
+        public DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent? AdjustRightIndent
         {
-            get => GetElement<AdjustRightIndent>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent>();
             set => SetElement(value);
         }
 
@@ -53794,9 +53794,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SnapToGrid? SnapToGrid
+        public DocumentFormat.OpenXml.Wordprocessing.SnapToGrid? SnapToGrid
         {
-            get => GetElement<SnapToGrid>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
             set => SetElement(value);
         }
 
@@ -53807,9 +53807,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SpacingBetweenLines? SpacingBetweenLines
+        public DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines? SpacingBetweenLines
         {
-            get => GetElement<SpacingBetweenLines>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines>();
             set => SetElement(value);
         }
 
@@ -53820,9 +53820,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Indentation? Indentation
+        public DocumentFormat.OpenXml.Wordprocessing.Indentation? Indentation
         {
-            get => GetElement<Indentation>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Indentation>();
             set => SetElement(value);
         }
 
@@ -53833,9 +53833,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ContextualSpacing? ContextualSpacing
+        public DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing? ContextualSpacing
         {
-            get => GetElement<ContextualSpacing>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing>();
             set => SetElement(value);
         }
 
@@ -53846,9 +53846,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public MirrorIndents? MirrorIndents
+        public DocumentFormat.OpenXml.Wordprocessing.MirrorIndents? MirrorIndents
         {
-            get => GetElement<MirrorIndents>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MirrorIndents>();
             set => SetElement(value);
         }
 
@@ -53859,9 +53859,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SuppressOverlap? SuppressOverlap
+        public DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap? SuppressOverlap
         {
-            get => GetElement<SuppressOverlap>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap>();
             set => SetElement(value);
         }
 
@@ -53872,9 +53872,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Justification? Justification
+        public DocumentFormat.OpenXml.Wordprocessing.Justification? Justification
         {
-            get => GetElement<Justification>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Justification>();
             set => SetElement(value);
         }
 
@@ -53885,9 +53885,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TextDirection? TextDirection
+        public DocumentFormat.OpenXml.Wordprocessing.TextDirection? TextDirection
         {
-            get => GetElement<TextDirection>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextDirection>();
             set => SetElement(value);
         }
 
@@ -53898,9 +53898,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TextAlignment? TextAlignment
+        public DocumentFormat.OpenXml.Wordprocessing.TextAlignment? TextAlignment
         {
-            get => GetElement<TextAlignment>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextAlignment>();
             set => SetElement(value);
         }
 
@@ -53911,9 +53911,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TextBoxTightWrap? TextBoxTightWrap
+        public DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap? TextBoxTightWrap
         {
-            get => GetElement<TextBoxTightWrap>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap>();
             set => SetElement(value);
         }
 
@@ -53924,9 +53924,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OutlineLevel? OutlineLevel
+        public DocumentFormat.OpenXml.Wordprocessing.OutlineLevel? OutlineLevel
         {
-            get => GetElement<OutlineLevel>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.OutlineLevel>();
             set => SetElement(value);
         }
 
@@ -53937,9 +53937,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DivId? DivId
+        public DocumentFormat.OpenXml.Wordprocessing.DivId? DivId
         {
-            get => GetElement<DivId>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DivId>();
             set => SetElement(value);
         }
 
@@ -53950,9 +53950,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ConditionalFormatStyle? ConditionalFormatStyle
+        public DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle? ConditionalFormatStyle
         {
-            get => GetElement<ConditionalFormatStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle>();
             set => SetElement(value);
         }
 
@@ -53963,9 +53963,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ParagraphMarkRunProperties? ParagraphMarkRunProperties
+        public DocumentFormat.OpenXml.Wordprocessing.ParagraphMarkRunProperties? ParagraphMarkRunProperties
         {
-            get => GetElement<ParagraphMarkRunProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphMarkRunProperties>();
             set => SetElement(value);
         }
 
@@ -53976,9 +53976,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SectionProperties? SectionProperties
+        public DocumentFormat.OpenXml.Wordprocessing.SectionProperties? SectionProperties
         {
-            get => GetElement<SectionProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SectionProperties>();
             set => SetElement(value);
         }
 
@@ -53989,9 +53989,9 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ParagraphPropertiesChange? ParagraphPropertiesChange
+        public DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesChange? ParagraphPropertiesChange
         {
-            get => GetElement<ParagraphPropertiesChange>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesChange>();
             set => SetElement(value);
         }
 
@@ -54572,9 +54572,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DocPartReference? DocPartReference
+        public DocumentFormat.OpenXml.Wordprocessing.DocPartReference? DocPartReference
         {
-            get => GetElement<DocPartReference>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DocPartReference>();
             set => SetElement(value);
         }
 
@@ -54854,9 +54854,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DateFormat? DateFormat
+        public DocumentFormat.OpenXml.Wordprocessing.DateFormat? DateFormat
         {
-            get => GetElement<DateFormat>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DateFormat>();
             set => SetElement(value);
         }
 
@@ -54867,9 +54867,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public LanguageId? LanguageId
+        public DocumentFormat.OpenXml.Wordprocessing.LanguageId? LanguageId
         {
-            get => GetElement<LanguageId>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LanguageId>();
             set => SetElement(value);
         }
 
@@ -54880,9 +54880,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SdtDateMappingType? SdtDateMappingType
+        public DocumentFormat.OpenXml.Wordprocessing.SdtDateMappingType? SdtDateMappingType
         {
-            get => GetElement<SdtDateMappingType>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SdtDateMappingType>();
             set => SetElement(value);
         }
 
@@ -54893,9 +54893,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Calendar? Calendar
+        public DocumentFormat.OpenXml.Wordprocessing.Calendar? Calendar
         {
-            get => GetElement<Calendar>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Calendar>();
             set => SetElement(value);
         }
 
@@ -55094,9 +55094,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DocPartGallery? DocPartGallery
+        public DocumentFormat.OpenXml.Wordprocessing.DocPartGallery? DocPartGallery
         {
-            get => GetElement<DocPartGallery>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DocPartGallery>();
             set => SetElement(value);
         }
 
@@ -55107,9 +55107,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DocPartCategory? DocPartCategory
+        public DocumentFormat.OpenXml.Wordprocessing.DocPartCategory? DocPartCategory
         {
-            get => GetElement<DocPartCategory>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DocPartCategory>();
             set => SetElement(value);
         }
 
@@ -55120,9 +55120,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DocPartUnique? DocPartUnique
+        public DocumentFormat.OpenXml.Wordprocessing.DocPartUnique? DocPartUnique
         {
-            get => GetElement<DocPartUnique>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DocPartUnique>();
             set => SetElement(value);
         }
     }
@@ -56623,9 +56623,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public MainDocumentType? MainDocumentType
+        public DocumentFormat.OpenXml.Wordprocessing.MainDocumentType? MainDocumentType
         {
-            get => GetElement<MainDocumentType>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MainDocumentType>();
             set => SetElement(value);
         }
 
@@ -56636,9 +56636,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public LinkToQuery? LinkToQuery
+        public DocumentFormat.OpenXml.Wordprocessing.LinkToQuery? LinkToQuery
         {
-            get => GetElement<LinkToQuery>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LinkToQuery>();
             set => SetElement(value);
         }
 
@@ -56649,9 +56649,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DataType? DataType
+        public DocumentFormat.OpenXml.Wordprocessing.DataType? DataType
         {
-            get => GetElement<DataType>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DataType>();
             set => SetElement(value);
         }
 
@@ -56662,9 +56662,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ConnectString? ConnectString
+        public DocumentFormat.OpenXml.Wordprocessing.ConnectString? ConnectString
         {
-            get => GetElement<ConnectString>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ConnectString>();
             set => SetElement(value);
         }
 
@@ -56675,9 +56675,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Query? Query
+        public DocumentFormat.OpenXml.Wordprocessing.Query? Query
         {
-            get => GetElement<Query>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Query>();
             set => SetElement(value);
         }
 
@@ -56688,9 +56688,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DataSourceReference? DataSourceReference
+        public DocumentFormat.OpenXml.Wordprocessing.DataSourceReference? DataSourceReference
         {
-            get => GetElement<DataSourceReference>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DataSourceReference>();
             set => SetElement(value);
         }
 
@@ -56701,9 +56701,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HeaderSource? HeaderSource
+        public DocumentFormat.OpenXml.Wordprocessing.HeaderSource? HeaderSource
         {
-            get => GetElement<HeaderSource>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.HeaderSource>();
             set => SetElement(value);
         }
 
@@ -56714,9 +56714,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DoNotSuppressBlankLines? DoNotSuppressBlankLines
+        public DocumentFormat.OpenXml.Wordprocessing.DoNotSuppressBlankLines? DoNotSuppressBlankLines
         {
-            get => GetElement<DoNotSuppressBlankLines>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotSuppressBlankLines>();
             set => SetElement(value);
         }
 
@@ -56727,9 +56727,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Destination? Destination
+        public DocumentFormat.OpenXml.Wordprocessing.Destination? Destination
         {
-            get => GetElement<Destination>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Destination>();
             set => SetElement(value);
         }
 
@@ -56740,9 +56740,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public AddressFieldName? AddressFieldName
+        public DocumentFormat.OpenXml.Wordprocessing.AddressFieldName? AddressFieldName
         {
-            get => GetElement<AddressFieldName>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AddressFieldName>();
             set => SetElement(value);
         }
 
@@ -56753,9 +56753,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public MailSubject? MailSubject
+        public DocumentFormat.OpenXml.Wordprocessing.MailSubject? MailSubject
         {
-            get => GetElement<MailSubject>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MailSubject>();
             set => SetElement(value);
         }
 
@@ -56766,9 +56766,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public MailAsAttachment? MailAsAttachment
+        public DocumentFormat.OpenXml.Wordprocessing.MailAsAttachment? MailAsAttachment
         {
-            get => GetElement<MailAsAttachment>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MailAsAttachment>();
             set => SetElement(value);
         }
 
@@ -56779,9 +56779,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ViewMergedData? ViewMergedData
+        public DocumentFormat.OpenXml.Wordprocessing.ViewMergedData? ViewMergedData
         {
-            get => GetElement<ViewMergedData>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ViewMergedData>();
             set => SetElement(value);
         }
 
@@ -56792,9 +56792,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ActiveRecord? ActiveRecord
+        public DocumentFormat.OpenXml.Wordprocessing.ActiveRecord? ActiveRecord
         {
-            get => GetElement<ActiveRecord>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ActiveRecord>();
             set => SetElement(value);
         }
 
@@ -56805,9 +56805,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public CheckErrors? CheckErrors
+        public DocumentFormat.OpenXml.Wordprocessing.CheckErrors? CheckErrors
         {
-            get => GetElement<CheckErrors>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.CheckErrors>();
             set => SetElement(value);
         }
 
@@ -56818,9 +56818,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DataSourceObject? DataSourceObject
+        public DocumentFormat.OpenXml.Wordprocessing.DataSourceObject? DataSourceObject
         {
-            get => GetElement<DataSourceObject>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DataSourceObject>();
             set => SetElement(value);
         }
 
@@ -58227,9 +58227,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FootnotePosition? FootnotePosition
+        public DocumentFormat.OpenXml.Wordprocessing.FootnotePosition? FootnotePosition
         {
-            get => GetElement<FootnotePosition>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FootnotePosition>();
             set => SetElement(value);
         }
 
@@ -58240,9 +58240,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NumberingFormat? NumberingFormat
+        public DocumentFormat.OpenXml.Wordprocessing.NumberingFormat? NumberingFormat
         {
-            get => GetElement<NumberingFormat>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingFormat>();
             set => SetElement(value);
         }
 
@@ -58253,9 +58253,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NumberingStart? NumberingStart
+        public DocumentFormat.OpenXml.Wordprocessing.NumberingStart? NumberingStart
         {
-            get => GetElement<NumberingStart>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingStart>();
             set => SetElement(value);
         }
 
@@ -58266,9 +58266,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NumberingRestart? NumberingRestart
+        public DocumentFormat.OpenXml.Wordprocessing.NumberingRestart? NumberingRestart
         {
-            get => GetElement<NumberingRestart>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingRestart>();
             set => SetElement(value);
         }
 
@@ -58365,9 +58365,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EndnotePosition? EndnotePosition
+        public DocumentFormat.OpenXml.Wordprocessing.EndnotePosition? EndnotePosition
         {
-            get => GetElement<EndnotePosition>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EndnotePosition>();
             set => SetElement(value);
         }
 
@@ -58378,9 +58378,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NumberingFormat? NumberingFormat
+        public DocumentFormat.OpenXml.Wordprocessing.NumberingFormat? NumberingFormat
         {
-            get => GetElement<NumberingFormat>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingFormat>();
             set => SetElement(value);
         }
 
@@ -58391,9 +58391,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NumberingStart? NumberingStart
+        public DocumentFormat.OpenXml.Wordprocessing.NumberingStart? NumberingStart
         {
-            get => GetElement<NumberingStart>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingStart>();
             set => SetElement(value);
         }
 
@@ -58404,9 +58404,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NumberingRestart? NumberingRestart
+        public DocumentFormat.OpenXml.Wordprocessing.NumberingRestart? NumberingRestart
         {
-            get => GetElement<NumberingRestart>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingRestart>();
             set => SetElement(value);
         }
 
@@ -58674,9 +58674,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UseSingleBorderForContiguousCells? UseSingleBorderForContiguousCells
+        public DocumentFormat.OpenXml.Wordprocessing.UseSingleBorderForContiguousCells? UseSingleBorderForContiguousCells
         {
-            get => GetElement<UseSingleBorderForContiguousCells>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.UseSingleBorderForContiguousCells>();
             set => SetElement(value);
         }
 
@@ -58687,9 +58687,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public WordPerfectJustification? WordPerfectJustification
+        public DocumentFormat.OpenXml.Wordprocessing.WordPerfectJustification? WordPerfectJustification
         {
-            get => GetElement<WordPerfectJustification>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WordPerfectJustification>();
             set => SetElement(value);
         }
 
@@ -58700,9 +58700,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NoTabHangIndent? NoTabHangIndent
+        public DocumentFormat.OpenXml.Wordprocessing.NoTabHangIndent? NoTabHangIndent
         {
-            get => GetElement<NoTabHangIndent>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoTabHangIndent>();
             set => SetElement(value);
         }
 
@@ -58713,9 +58713,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NoLeading? NoLeading
+        public DocumentFormat.OpenXml.Wordprocessing.NoLeading? NoLeading
         {
-            get => GetElement<NoLeading>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoLeading>();
             set => SetElement(value);
         }
 
@@ -58726,9 +58726,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SpaceForUnderline? SpaceForUnderline
+        public DocumentFormat.OpenXml.Wordprocessing.SpaceForUnderline? SpaceForUnderline
         {
-            get => GetElement<SpaceForUnderline>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SpaceForUnderline>();
             set => SetElement(value);
         }
 
@@ -58739,9 +58739,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NoColumnBalance? NoColumnBalance
+        public DocumentFormat.OpenXml.Wordprocessing.NoColumnBalance? NoColumnBalance
         {
-            get => GetElement<NoColumnBalance>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoColumnBalance>();
             set => SetElement(value);
         }
 
@@ -58752,9 +58752,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public BalanceSingleByteDoubleByteWidth? BalanceSingleByteDoubleByteWidth
+        public DocumentFormat.OpenXml.Wordprocessing.BalanceSingleByteDoubleByteWidth? BalanceSingleByteDoubleByteWidth
         {
-            get => GetElement<BalanceSingleByteDoubleByteWidth>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BalanceSingleByteDoubleByteWidth>();
             set => SetElement(value);
         }
 
@@ -58765,9 +58765,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NoExtraLineSpacing? NoExtraLineSpacing
+        public DocumentFormat.OpenXml.Wordprocessing.NoExtraLineSpacing? NoExtraLineSpacing
         {
-            get => GetElement<NoExtraLineSpacing>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoExtraLineSpacing>();
             set => SetElement(value);
         }
 
@@ -58778,9 +58778,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DoNotLeaveBackslashAlone? DoNotLeaveBackslashAlone
+        public DocumentFormat.OpenXml.Wordprocessing.DoNotLeaveBackslashAlone? DoNotLeaveBackslashAlone
         {
-            get => GetElement<DoNotLeaveBackslashAlone>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotLeaveBackslashAlone>();
             set => SetElement(value);
         }
 
@@ -58791,9 +58791,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UnderlineTrailingSpaces? UnderlineTrailingSpaces
+        public DocumentFormat.OpenXml.Wordprocessing.UnderlineTrailingSpaces? UnderlineTrailingSpaces
         {
-            get => GetElement<UnderlineTrailingSpaces>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.UnderlineTrailingSpaces>();
             set => SetElement(value);
         }
 
@@ -58804,9 +58804,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DoNotExpandShiftReturn? DoNotExpandShiftReturn
+        public DocumentFormat.OpenXml.Wordprocessing.DoNotExpandShiftReturn? DoNotExpandShiftReturn
         {
-            get => GetElement<DoNotExpandShiftReturn>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotExpandShiftReturn>();
             set => SetElement(value);
         }
 
@@ -58817,9 +58817,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SpacingInWholePoints? SpacingInWholePoints
+        public DocumentFormat.OpenXml.Wordprocessing.SpacingInWholePoints? SpacingInWholePoints
         {
-            get => GetElement<SpacingInWholePoints>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SpacingInWholePoints>();
             set => SetElement(value);
         }
 
@@ -58830,9 +58830,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public LineWrapLikeWord6? LineWrapLikeWord6
+        public DocumentFormat.OpenXml.Wordprocessing.LineWrapLikeWord6? LineWrapLikeWord6
         {
-            get => GetElement<LineWrapLikeWord6>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LineWrapLikeWord6>();
             set => SetElement(value);
         }
 
@@ -58843,9 +58843,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PrintBodyTextBeforeHeader? PrintBodyTextBeforeHeader
+        public DocumentFormat.OpenXml.Wordprocessing.PrintBodyTextBeforeHeader? PrintBodyTextBeforeHeader
         {
-            get => GetElement<PrintBodyTextBeforeHeader>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PrintBodyTextBeforeHeader>();
             set => SetElement(value);
         }
 
@@ -58856,9 +58856,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public PrintColorBlackWhite? PrintColorBlackWhite
+        public DocumentFormat.OpenXml.Wordprocessing.PrintColorBlackWhite? PrintColorBlackWhite
         {
-            get => GetElement<PrintColorBlackWhite>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PrintColorBlackWhite>();
             set => SetElement(value);
         }
 
@@ -58869,9 +58869,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public WordPerfectSpaceWidth? WordPerfectSpaceWidth
+        public DocumentFormat.OpenXml.Wordprocessing.WordPerfectSpaceWidth? WordPerfectSpaceWidth
         {
-            get => GetElement<WordPerfectSpaceWidth>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WordPerfectSpaceWidth>();
             set => SetElement(value);
         }
 
@@ -58882,9 +58882,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ShowBreaksInFrames? ShowBreaksInFrames
+        public DocumentFormat.OpenXml.Wordprocessing.ShowBreaksInFrames? ShowBreaksInFrames
         {
-            get => GetElement<ShowBreaksInFrames>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ShowBreaksInFrames>();
             set => SetElement(value);
         }
 
@@ -58895,9 +58895,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SubFontBySize? SubFontBySize
+        public DocumentFormat.OpenXml.Wordprocessing.SubFontBySize? SubFontBySize
         {
-            get => GetElement<SubFontBySize>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SubFontBySize>();
             set => SetElement(value);
         }
 
@@ -58908,9 +58908,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SuppressBottomSpacing? SuppressBottomSpacing
+        public DocumentFormat.OpenXml.Wordprocessing.SuppressBottomSpacing? SuppressBottomSpacing
         {
-            get => GetElement<SuppressBottomSpacing>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressBottomSpacing>();
             set => SetElement(value);
         }
 
@@ -58921,9 +58921,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SuppressTopSpacing? SuppressTopSpacing
+        public DocumentFormat.OpenXml.Wordprocessing.SuppressTopSpacing? SuppressTopSpacing
         {
-            get => GetElement<SuppressTopSpacing>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressTopSpacing>();
             set => SetElement(value);
         }
 
@@ -58934,9 +58934,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SuppressSpacingAtTopOfPage? SuppressSpacingAtTopOfPage
+        public DocumentFormat.OpenXml.Wordprocessing.SuppressSpacingAtTopOfPage? SuppressSpacingAtTopOfPage
         {
-            get => GetElement<SuppressSpacingAtTopOfPage>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressSpacingAtTopOfPage>();
             set => SetElement(value);
         }
 
@@ -58947,9 +58947,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SuppressTopSpacingWordPerfect? SuppressTopSpacingWordPerfect
+        public DocumentFormat.OpenXml.Wordprocessing.SuppressTopSpacingWordPerfect? SuppressTopSpacingWordPerfect
         {
-            get => GetElement<SuppressTopSpacingWordPerfect>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressTopSpacingWordPerfect>();
             set => SetElement(value);
         }
 
@@ -58960,9 +58960,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SuppressSpacingBeforeAfterPageBreak? SuppressSpacingBeforeAfterPageBreak
+        public DocumentFormat.OpenXml.Wordprocessing.SuppressSpacingBeforeAfterPageBreak? SuppressSpacingBeforeAfterPageBreak
         {
-            get => GetElement<SuppressSpacingBeforeAfterPageBreak>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressSpacingBeforeAfterPageBreak>();
             set => SetElement(value);
         }
 
@@ -58973,9 +58973,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SwapBordersFacingPages? SwapBordersFacingPages
+        public DocumentFormat.OpenXml.Wordprocessing.SwapBordersFacingPages? SwapBordersFacingPages
         {
-            get => GetElement<SwapBordersFacingPages>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SwapBordersFacingPages>();
             set => SetElement(value);
         }
 
@@ -58986,9 +58986,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ConvertMailMergeEscape? ConvertMailMergeEscape
+        public DocumentFormat.OpenXml.Wordprocessing.ConvertMailMergeEscape? ConvertMailMergeEscape
         {
-            get => GetElement<ConvertMailMergeEscape>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ConvertMailMergeEscape>();
             set => SetElement(value);
         }
 
@@ -58999,9 +58999,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public TruncateFontHeightsLikeWordPerfect? TruncateFontHeightsLikeWordPerfect
+        public DocumentFormat.OpenXml.Wordprocessing.TruncateFontHeightsLikeWordPerfect? TruncateFontHeightsLikeWordPerfect
         {
-            get => GetElement<TruncateFontHeightsLikeWordPerfect>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TruncateFontHeightsLikeWordPerfect>();
             set => SetElement(value);
         }
 
@@ -59012,9 +59012,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public MacWordSmallCaps? MacWordSmallCaps
+        public DocumentFormat.OpenXml.Wordprocessing.MacWordSmallCaps? MacWordSmallCaps
         {
-            get => GetElement<MacWordSmallCaps>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MacWordSmallCaps>();
             set => SetElement(value);
         }
 
@@ -59025,9 +59025,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UsePrinterMetrics? UsePrinterMetrics
+        public DocumentFormat.OpenXml.Wordprocessing.UsePrinterMetrics? UsePrinterMetrics
         {
-            get => GetElement<UsePrinterMetrics>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.UsePrinterMetrics>();
             set => SetElement(value);
         }
 
@@ -59038,9 +59038,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DoNotSuppressParagraphBorders? DoNotSuppressParagraphBorders
+        public DocumentFormat.OpenXml.Wordprocessing.DoNotSuppressParagraphBorders? DoNotSuppressParagraphBorders
         {
-            get => GetElement<DoNotSuppressParagraphBorders>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotSuppressParagraphBorders>();
             set => SetElement(value);
         }
 
@@ -59051,9 +59051,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public WrapTrailSpaces? WrapTrailSpaces
+        public DocumentFormat.OpenXml.Wordprocessing.WrapTrailSpaces? WrapTrailSpaces
         {
-            get => GetElement<WrapTrailSpaces>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WrapTrailSpaces>();
             set => SetElement(value);
         }
 
@@ -59064,9 +59064,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public FootnoteLayoutLikeWord8? FootnoteLayoutLikeWord8
+        public DocumentFormat.OpenXml.Wordprocessing.FootnoteLayoutLikeWord8? FootnoteLayoutLikeWord8
         {
-            get => GetElement<FootnoteLayoutLikeWord8>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FootnoteLayoutLikeWord8>();
             set => SetElement(value);
         }
 
@@ -59077,9 +59077,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ShapeLayoutLikeWord8? ShapeLayoutLikeWord8
+        public DocumentFormat.OpenXml.Wordprocessing.ShapeLayoutLikeWord8? ShapeLayoutLikeWord8
         {
-            get => GetElement<ShapeLayoutLikeWord8>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ShapeLayoutLikeWord8>();
             set => SetElement(value);
         }
 
@@ -59090,9 +59090,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public AlignTablesRowByRow? AlignTablesRowByRow
+        public DocumentFormat.OpenXml.Wordprocessing.AlignTablesRowByRow? AlignTablesRowByRow
         {
-            get => GetElement<AlignTablesRowByRow>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AlignTablesRowByRow>();
             set => SetElement(value);
         }
 
@@ -59103,9 +59103,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ForgetLastTabAlignment? ForgetLastTabAlignment
+        public DocumentFormat.OpenXml.Wordprocessing.ForgetLastTabAlignment? ForgetLastTabAlignment
         {
-            get => GetElement<ForgetLastTabAlignment>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ForgetLastTabAlignment>();
             set => SetElement(value);
         }
 
@@ -59116,9 +59116,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public AdjustLineHeightInTable? AdjustLineHeightInTable
+        public DocumentFormat.OpenXml.Wordprocessing.AdjustLineHeightInTable? AdjustLineHeightInTable
         {
-            get => GetElement<AdjustLineHeightInTable>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AdjustLineHeightInTable>();
             set => SetElement(value);
         }
 
@@ -59129,9 +59129,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public AutoSpaceLikeWord95? AutoSpaceLikeWord95
+        public DocumentFormat.OpenXml.Wordprocessing.AutoSpaceLikeWord95? AutoSpaceLikeWord95
         {
-            get => GetElement<AutoSpaceLikeWord95>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceLikeWord95>();
             set => SetElement(value);
         }
 
@@ -59142,9 +59142,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public NoSpaceRaiseLower? NoSpaceRaiseLower
+        public DocumentFormat.OpenXml.Wordprocessing.NoSpaceRaiseLower? NoSpaceRaiseLower
         {
-            get => GetElement<NoSpaceRaiseLower>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoSpaceRaiseLower>();
             set => SetElement(value);
         }
 
@@ -59155,9 +59155,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DoNotUseHTMLParagraphAutoSpacing? DoNotUseHTMLParagraphAutoSpacing
+        public DocumentFormat.OpenXml.Wordprocessing.DoNotUseHTMLParagraphAutoSpacing? DoNotUseHTMLParagraphAutoSpacing
         {
-            get => GetElement<DoNotUseHTMLParagraphAutoSpacing>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotUseHTMLParagraphAutoSpacing>();
             set => SetElement(value);
         }
 
@@ -59168,9 +59168,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public LayoutRawTableWidth? LayoutRawTableWidth
+        public DocumentFormat.OpenXml.Wordprocessing.LayoutRawTableWidth? LayoutRawTableWidth
         {
-            get => GetElement<LayoutRawTableWidth>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LayoutRawTableWidth>();
             set => SetElement(value);
         }
 
@@ -59181,9 +59181,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public LayoutTableRowsApart? LayoutTableRowsApart
+        public DocumentFormat.OpenXml.Wordprocessing.LayoutTableRowsApart? LayoutTableRowsApart
         {
-            get => GetElement<LayoutTableRowsApart>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LayoutTableRowsApart>();
             set => SetElement(value);
         }
 
@@ -59194,9 +59194,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UseWord97LineBreakRules? UseWord97LineBreakRules
+        public DocumentFormat.OpenXml.Wordprocessing.UseWord97LineBreakRules? UseWord97LineBreakRules
         {
-            get => GetElement<UseWord97LineBreakRules>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.UseWord97LineBreakRules>();
             set => SetElement(value);
         }
 
@@ -59207,9 +59207,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DoNotBreakWrappedTables? DoNotBreakWrappedTables
+        public DocumentFormat.OpenXml.Wordprocessing.DoNotBreakWrappedTables? DoNotBreakWrappedTables
         {
-            get => GetElement<DoNotBreakWrappedTables>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotBreakWrappedTables>();
             set => SetElement(value);
         }
 
@@ -59220,9 +59220,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DoNotSnapToGridInCell? DoNotSnapToGridInCell
+        public DocumentFormat.OpenXml.Wordprocessing.DoNotSnapToGridInCell? DoNotSnapToGridInCell
         {
-            get => GetElement<DoNotSnapToGridInCell>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotSnapToGridInCell>();
             set => SetElement(value);
         }
 
@@ -59233,9 +59233,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SelectFieldWithFirstOrLastChar? SelectFieldWithFirstOrLastChar
+        public DocumentFormat.OpenXml.Wordprocessing.SelectFieldWithFirstOrLastChar? SelectFieldWithFirstOrLastChar
         {
-            get => GetElement<SelectFieldWithFirstOrLastChar>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SelectFieldWithFirstOrLastChar>();
             set => SetElement(value);
         }
 
@@ -59246,9 +59246,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ApplyBreakingRules? ApplyBreakingRules
+        public DocumentFormat.OpenXml.Wordprocessing.ApplyBreakingRules? ApplyBreakingRules
         {
-            get => GetElement<ApplyBreakingRules>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ApplyBreakingRules>();
             set => SetElement(value);
         }
 
@@ -59259,9 +59259,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DoNotWrapTextWithPunctuation? DoNotWrapTextWithPunctuation
+        public DocumentFormat.OpenXml.Wordprocessing.DoNotWrapTextWithPunctuation? DoNotWrapTextWithPunctuation
         {
-            get => GetElement<DoNotWrapTextWithPunctuation>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotWrapTextWithPunctuation>();
             set => SetElement(value);
         }
 
@@ -59272,9 +59272,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DoNotUseEastAsianBreakRules? DoNotUseEastAsianBreakRules
+        public DocumentFormat.OpenXml.Wordprocessing.DoNotUseEastAsianBreakRules? DoNotUseEastAsianBreakRules
         {
-            get => GetElement<DoNotUseEastAsianBreakRules>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotUseEastAsianBreakRules>();
             set => SetElement(value);
         }
 
@@ -59285,9 +59285,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UseWord2002TableStyleRules? UseWord2002TableStyleRules
+        public DocumentFormat.OpenXml.Wordprocessing.UseWord2002TableStyleRules? UseWord2002TableStyleRules
         {
-            get => GetElement<UseWord2002TableStyleRules>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.UseWord2002TableStyleRules>();
             set => SetElement(value);
         }
 
@@ -59298,9 +59298,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public GrowAutofit? GrowAutofit
+        public DocumentFormat.OpenXml.Wordprocessing.GrowAutofit? GrowAutofit
         {
-            get => GetElement<GrowAutofit>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.GrowAutofit>();
             set => SetElement(value);
         }
 
@@ -59311,9 +59311,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UseFarEastLayout? UseFarEastLayout
+        public DocumentFormat.OpenXml.Wordprocessing.UseFarEastLayout? UseFarEastLayout
         {
-            get => GetElement<UseFarEastLayout>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.UseFarEastLayout>();
             set => SetElement(value);
         }
 
@@ -59324,9 +59324,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UseNormalStyleForList? UseNormalStyleForList
+        public DocumentFormat.OpenXml.Wordprocessing.UseNormalStyleForList? UseNormalStyleForList
         {
-            get => GetElement<UseNormalStyleForList>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.UseNormalStyleForList>();
             set => SetElement(value);
         }
 
@@ -59337,9 +59337,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DoNotUseIndentAsNumberingTabStop? DoNotUseIndentAsNumberingTabStop
+        public DocumentFormat.OpenXml.Wordprocessing.DoNotUseIndentAsNumberingTabStop? DoNotUseIndentAsNumberingTabStop
         {
-            get => GetElement<DoNotUseIndentAsNumberingTabStop>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotUseIndentAsNumberingTabStop>();
             set => SetElement(value);
         }
 
@@ -59350,9 +59350,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UseAltKinsokuLineBreakRules? UseAltKinsokuLineBreakRules
+        public DocumentFormat.OpenXml.Wordprocessing.UseAltKinsokuLineBreakRules? UseAltKinsokuLineBreakRules
         {
-            get => GetElement<UseAltKinsokuLineBreakRules>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.UseAltKinsokuLineBreakRules>();
             set => SetElement(value);
         }
 
@@ -59363,9 +59363,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public AllowSpaceOfSameStyleInTable? AllowSpaceOfSameStyleInTable
+        public DocumentFormat.OpenXml.Wordprocessing.AllowSpaceOfSameStyleInTable? AllowSpaceOfSameStyleInTable
         {
-            get => GetElement<AllowSpaceOfSameStyleInTable>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AllowSpaceOfSameStyleInTable>();
             set => SetElement(value);
         }
 
@@ -59376,9 +59376,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DoNotSuppressIndentation? DoNotSuppressIndentation
+        public DocumentFormat.OpenXml.Wordprocessing.DoNotSuppressIndentation? DoNotSuppressIndentation
         {
-            get => GetElement<DoNotSuppressIndentation>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotSuppressIndentation>();
             set => SetElement(value);
         }
 
@@ -59389,9 +59389,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DoNotAutofitConstrainedTables? DoNotAutofitConstrainedTables
+        public DocumentFormat.OpenXml.Wordprocessing.DoNotAutofitConstrainedTables? DoNotAutofitConstrainedTables
         {
-            get => GetElement<DoNotAutofitConstrainedTables>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotAutofitConstrainedTables>();
             set => SetElement(value);
         }
 
@@ -59402,9 +59402,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public AutofitToFirstFixedWidthCell? AutofitToFirstFixedWidthCell
+        public DocumentFormat.OpenXml.Wordprocessing.AutofitToFirstFixedWidthCell? AutofitToFirstFixedWidthCell
         {
-            get => GetElement<AutofitToFirstFixedWidthCell>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AutofitToFirstFixedWidthCell>();
             set => SetElement(value);
         }
 
@@ -59415,9 +59415,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UnderlineTabInNumberingList? UnderlineTabInNumberingList
+        public DocumentFormat.OpenXml.Wordprocessing.UnderlineTabInNumberingList? UnderlineTabInNumberingList
         {
-            get => GetElement<UnderlineTabInNumberingList>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.UnderlineTabInNumberingList>();
             set => SetElement(value);
         }
 
@@ -59428,9 +59428,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DisplayHangulFixedWidth? DisplayHangulFixedWidth
+        public DocumentFormat.OpenXml.Wordprocessing.DisplayHangulFixedWidth? DisplayHangulFixedWidth
         {
-            get => GetElement<DisplayHangulFixedWidth>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DisplayHangulFixedWidth>();
             set => SetElement(value);
         }
 
@@ -59441,9 +59441,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public SplitPageBreakAndParagraphMark? SplitPageBreakAndParagraphMark
+        public DocumentFormat.OpenXml.Wordprocessing.SplitPageBreakAndParagraphMark? SplitPageBreakAndParagraphMark
         {
-            get => GetElement<SplitPageBreakAndParagraphMark>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SplitPageBreakAndParagraphMark>();
             set => SetElement(value);
         }
 
@@ -59454,9 +59454,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DoNotVerticallyAlignCellWithShape? DoNotVerticallyAlignCellWithShape
+        public DocumentFormat.OpenXml.Wordprocessing.DoNotVerticallyAlignCellWithShape? DoNotVerticallyAlignCellWithShape
         {
-            get => GetElement<DoNotVerticallyAlignCellWithShape>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotVerticallyAlignCellWithShape>();
             set => SetElement(value);
         }
 
@@ -59467,9 +59467,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DoNotBreakConstrainedForcedTable? DoNotBreakConstrainedForcedTable
+        public DocumentFormat.OpenXml.Wordprocessing.DoNotBreakConstrainedForcedTable? DoNotBreakConstrainedForcedTable
         {
-            get => GetElement<DoNotBreakConstrainedForcedTable>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotBreakConstrainedForcedTable>();
             set => SetElement(value);
         }
 
@@ -59480,9 +59480,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DoNotVerticallyAlignInTextBox? DoNotVerticallyAlignInTextBox
+        public DocumentFormat.OpenXml.Wordprocessing.DoNotVerticallyAlignInTextBox? DoNotVerticallyAlignInTextBox
         {
-            get => GetElement<DoNotVerticallyAlignInTextBox>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotVerticallyAlignInTextBox>();
             set => SetElement(value);
         }
 
@@ -59493,9 +59493,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UseAnsiKerningPairs? UseAnsiKerningPairs
+        public DocumentFormat.OpenXml.Wordprocessing.UseAnsiKerningPairs? UseAnsiKerningPairs
         {
-            get => GetElement<UseAnsiKerningPairs>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.UseAnsiKerningPairs>();
             set => SetElement(value);
         }
 
@@ -59506,9 +59506,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public CachedColumnBalance? CachedColumnBalance
+        public DocumentFormat.OpenXml.Wordprocessing.CachedColumnBalance? CachedColumnBalance
         {
-            get => GetElement<CachedColumnBalance>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.CachedColumnBalance>();
             set => SetElement(value);
         }
 
@@ -59646,9 +59646,9 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public RsidRoot? RsidRoot
+        public DocumentFormat.OpenXml.Wordprocessing.RsidRoot? RsidRoot
         {
-            get => GetElement<RsidRoot>();
+            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RsidRoot>();
             set => SetElement(value);
         }
 
