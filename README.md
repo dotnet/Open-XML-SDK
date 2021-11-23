@@ -4,6 +4,7 @@ Open XML SDK
 [![NuGet](https://img.shields.io/nuget/v/DocumentFormat.OpenXml.svg)](https://www.nuget.org/packages/DocumentFormat.OpenXml)
 [![Downloads](https://img.shields.io/nuget/dt/DocumentFormat.OpenXml.svg)](https://www.nuget.org/packages/DocumentFormat.OpenXml)
 [![Build Status](https://office.visualstudio.com/OC/_apis/build/status/OpenXmlSdk/OfficeDev.Open-XML-SDK?branchName=main)](https://office.visualstudio.com/OC/_build/latest?definitionId=7420&branchName=main)
+[![Backend Status](https://ointprotocol.visualstudio.com/OInteropTools/_apis/build/status/OpenXML-Schemas?branchName=main)](https://ointprotocol.visualstudio.com/OInteropTools/_build/latest?definitionId=21&branchName=main)
 
 &nbsp;
 >## Open XML SDK 2.5 Productivity Tool
@@ -47,7 +48,16 @@ Releases
 
 The official release NuGet packages for Open XML SDK are [available on Nuget.org](https://www.nuget.org/packages/DocumentFormat.OpenXml).
 
-The NuGet package for the latest builds of the Open XML SDK is available as a custom feed on MyGet. You can trust this package source, since the custom feed is locked and only this project feeds into the source. Stable releases here will be mirrored onto NuGet and will be identical.
+The NuGet package for the latest builds of the Open XML SDK is available as a custom feed on MyGet. You can trust this package source, since the custom feed is locked and only this project feeds into the source. Stable releases here will be mirrored onto NuGet and will be identical. You must set up a [NuGet.config](https://docs.microsoft.com/en-us/nuget/reference/nuget-config-file) file that looks similar to this:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <packageSources>
+    <add key="OpenXmlCI" value="https://openxmlsdk.blob.core.windows.net/feed/index.json" />
+  </packageSources>
+</configuration>
+```
 
 For latests changes, please see the [changelog](CHANGELOG.md)
 
