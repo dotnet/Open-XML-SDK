@@ -41,7 +41,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "model3d")]
+    [SchemaAttr("am3d:model3d")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Model3D : OpenXmlCompositeElement
     {
@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "embed")]
+        [SchemaAttr("r:embed")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Embed
@@ -105,7 +105,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "link")]
+        [SchemaAttr("r:link")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Link
@@ -117,7 +117,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "model3d");
+            builder.SetSchema("am3d:model3d");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PictureAttributionSourceURL>();
@@ -133,8 +133,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.UnknownLight>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.WindowViewport>();
             builder.AddElement<Model3D>()
-.AddAttribute(19, "embed", a => a.Embed)
-.AddAttribute(19, "link", a => a.Link);
+.AddAttribute("r:embed", a => a.Embed)
+.AddAttribute("r:link", a => a.Link);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ShapeProperties), 1, 1, version: FileFormatVersions.Office2019),
@@ -247,7 +247,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:sx.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "sx")]
+    [SchemaAttr("am3d:sx")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SxRatio : RatioType
     {
@@ -261,7 +261,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "sx");
+            builder.SetSchema("am3d:sx");
             builder.Availability = FileFormatVersions.Office2019;
         }
 
@@ -275,7 +275,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:sy.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "sy")]
+    [SchemaAttr("am3d:sy")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SyRatio : RatioType
     {
@@ -289,7 +289,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "sy");
+            builder.SetSchema("am3d:sy");
             builder.Availability = FileFormatVersions.Office2019;
         }
 
@@ -303,7 +303,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:sz.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "sz")]
+    [SchemaAttr("am3d:sz")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SzRatio : RatioType
     {
@@ -317,7 +317,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "sz");
+            builder.SetSchema("am3d:sz");
             builder.Availability = FileFormatVersions.Office2019;
         }
 
@@ -346,7 +346,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "n")]
+        [SchemaAttr("n")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? Numerator
@@ -362,7 +362,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "d")]
+        [SchemaAttr("d")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? Denominator
@@ -375,11 +375,11 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<RatioType>()
-                           .AddAttribute(0, "n", a => a.Numerator, aBuilder =>
+                           .AddAttribute("n", a => a.Numerator, aBuilder =>
                            {
                                aBuilder.AddValidator(RequiredValidator.Instance);
                            })
-                           .AddAttribute(0, "d", a => a.Denominator, aBuilder =>
+                           .AddAttribute("d", a => a.Denominator, aBuilder =>
                            {
                                aBuilder.AddValidator(RequiredValidator.Instance);
                            });
@@ -392,7 +392,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:meterPerModelUnit.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "meterPerModelUnit")]
+    [SchemaAttr("am3d:meterPerModelUnit")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class MeterPerModelUnitPositiveRatio : OpenXmlPositiveRatioElement
     {
@@ -406,7 +406,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "meterPerModelUnit");
+            builder.SetSchema("am3d:meterPerModelUnit");
             builder.Availability = FileFormatVersions.Office2019;
         }
 
@@ -420,7 +420,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:sz.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "sz")]
+    [SchemaAttr("am3d:sz")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SzPositiveRatio : OpenXmlPositiveRatioElement
     {
@@ -434,7 +434,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "sz");
+            builder.SetSchema("am3d:sz");
             builder.Availability = FileFormatVersions.Office2019;
         }
 
@@ -448,7 +448,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:illuminance.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "illuminance")]
+    [SchemaAttr("am3d:illuminance")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class IlluminancePositiveRatio : OpenXmlPositiveRatioElement
     {
@@ -462,7 +462,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "illuminance");
+            builder.SetSchema("am3d:illuminance");
             builder.Availability = FileFormatVersions.Office2019;
         }
 
@@ -476,7 +476,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:intensity.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "intensity")]
+    [SchemaAttr("am3d:intensity")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class IntensityPositiveRatio : OpenXmlPositiveRatioElement
     {
@@ -490,7 +490,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "intensity");
+            builder.SetSchema("am3d:intensity");
             builder.Availability = FileFormatVersions.Office2019;
         }
 
@@ -519,7 +519,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "n")]
+        [SchemaAttr("n")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt64Value? N
@@ -535,7 +535,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "d")]
+        [SchemaAttr("d")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt64Value? D
@@ -548,11 +548,11 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<OpenXmlPositiveRatioElement>()
-                           .AddAttribute(0, "n", a => a.N, aBuilder =>
+                           .AddAttribute("n", a => a.N, aBuilder =>
                            {
                                aBuilder.AddValidator(RequiredValidator.Instance);
                            })
-                           .AddAttribute(0, "d", a => a.D, aBuilder =>
+                           .AddAttribute("d", a => a.D, aBuilder =>
                            {
                                aBuilder.AddValidator(RequiredValidator.Instance);
                            });
@@ -565,7 +565,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:preTrans.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "preTrans")]
+    [SchemaAttr("am3d:preTrans")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PreTransVector3D : Vector3DType
     {
@@ -579,7 +579,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "preTrans");
+            builder.SetSchema("am3d:preTrans");
             builder.Availability = FileFormatVersions.Office2019;
         }
 
@@ -593,7 +593,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:postTrans.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "postTrans")]
+    [SchemaAttr("am3d:postTrans")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PostTransVector3D : Vector3DType
     {
@@ -607,7 +607,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "postTrans");
+            builder.SetSchema("am3d:postTrans");
             builder.Availability = FileFormatVersions.Office2019;
         }
 
@@ -621,7 +621,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:up.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "up")]
+    [SchemaAttr("am3d:up")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class UpVector3D : Vector3DType
     {
@@ -635,7 +635,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "up");
+            builder.SetSchema("am3d:up");
             builder.Availability = FileFormatVersions.Office2019;
         }
 
@@ -664,7 +664,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "dx")]
+        [SchemaAttr("dx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int64Value? Dx
@@ -680,7 +680,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "dy")]
+        [SchemaAttr("dy")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int64Value? Dy
@@ -696,7 +696,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "dz")]
+        [SchemaAttr("dz")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int64Value? Dz
@@ -709,17 +709,17 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<Vector3DType>()
-                           .AddAttribute(0, "dx", a => a.Dx, aBuilder =>
+                           .AddAttribute("dx", a => a.Dx, aBuilder =>
                            {
                                aBuilder.AddValidator(RequiredValidator.Instance);
                                aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
                            })
-                           .AddAttribute(0, "dy", a => a.Dy, aBuilder =>
+                           .AddAttribute("dy", a => a.Dy, aBuilder =>
                            {
                                aBuilder.AddValidator(RequiredValidator.Instance);
                                aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
                            })
-                           .AddAttribute(0, "dz", a => a.Dz, aBuilder =>
+                           .AddAttribute("dz", a => a.Dz, aBuilder =>
                            {
                                aBuilder.AddValidator(RequiredValidator.Instance);
                                aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
@@ -741,7 +741,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "scale")]
+    [SchemaAttr("am3d:scale")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Scale3D : OpenXmlCompositeElement
     {
@@ -779,7 +779,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "scale");
+            builder.SetSchema("am3d:scale");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SxRatio>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SyRatio>();
@@ -841,7 +841,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:rot.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "rot")]
+    [SchemaAttr("am3d:rot")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Rotate3D : OpenXmlLeafElement
     {
@@ -859,7 +859,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ax")]
+        [SchemaAttr("ax")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? Ax
@@ -875,7 +875,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ay")]
+        [SchemaAttr("ay")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? Ay
@@ -891,7 +891,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "az")]
+        [SchemaAttr("az")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? Az
@@ -903,12 +903,12 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "rot");
+            builder.SetSchema("am3d:rot");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<Rotate3D>()
-.AddAttribute(0, "ax", a => a.Ax)
-.AddAttribute(0, "ay", a => a.Ay)
-.AddAttribute(0, "az", a => a.Az);
+.AddAttribute("ax", a => a.Ax)
+.AddAttribute("ay", a => a.Ay)
+.AddAttribute("az", a => a.Az);
         }
 
         /// <inheritdoc/>
@@ -927,7 +927,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "extLst")]
+    [SchemaAttr("am3d:extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
@@ -965,7 +965,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "extLst");
+            builder.SetSchema("am3d:extLst");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -990,7 +990,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:pos.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "pos")]
+    [SchemaAttr("am3d:pos")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PosPoint3D : OpenXmlPoint3DElement
     {
@@ -1004,7 +1004,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "pos");
+            builder.SetSchema("am3d:pos");
             builder.Availability = FileFormatVersions.Office2019;
         }
 
@@ -1018,7 +1018,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:lookAt.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "lookAt")]
+    [SchemaAttr("am3d:lookAt")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class LookAtPoint3D : OpenXmlPoint3DElement
     {
@@ -1032,7 +1032,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "lookAt");
+            builder.SetSchema("am3d:lookAt");
             builder.Availability = FileFormatVersions.Office2019;
         }
 
@@ -1061,7 +1061,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "x")]
+        [SchemaAttr("x")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int64Value? X
@@ -1077,7 +1077,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "y")]
+        [SchemaAttr("y")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int64Value? Y
@@ -1093,7 +1093,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "z")]
+        [SchemaAttr("z")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int64Value? Z
@@ -1106,17 +1106,17 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<OpenXmlPoint3DElement>()
-                           .AddAttribute(0, "x", a => a.X, aBuilder =>
+                           .AddAttribute("x", a => a.X, aBuilder =>
                            {
                                aBuilder.AddValidator(RequiredValidator.Instance);
                                aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
                            })
-                           .AddAttribute(0, "y", a => a.Y, aBuilder =>
+                           .AddAttribute("y", a => a.Y, aBuilder =>
                            {
                                aBuilder.AddValidator(RequiredValidator.Instance);
                                aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
                            })
-                           .AddAttribute(0, "z", a => a.Z, aBuilder =>
+                           .AddAttribute("z", a => a.Z, aBuilder =>
                            {
                                aBuilder.AddValidator(RequiredValidator.Instance);
                                aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
@@ -1137,7 +1137,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "orthographic")]
+    [SchemaAttr("am3d:orthographic")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class OrthographicProjection : OpenXmlCompositeElement
     {
@@ -1175,7 +1175,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "orthographic");
+            builder.SetSchema("am3d:orthographic");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzPositiveRatio>();
@@ -1228,7 +1228,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "perspective")]
+    [SchemaAttr("am3d:perspective")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PerspectiveProjection : OpenXmlCompositeElement
     {
@@ -1270,7 +1270,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fov")]
+        [SchemaAttr("fov")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? Fov
@@ -1282,11 +1282,11 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "perspective");
+            builder.SetSchema("am3d:perspective");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
             builder.AddElement<PerspectiveProjection>()
-.AddAttribute(0, "fov", a => a.Fov, aBuilder =>
+.AddAttribute("fov", a => a.Fov, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10800000L) });
@@ -1343,7 +1343,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "blip")]
+    [SchemaAttr("am3d:blip")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Blip : OpenXmlCompositeElement
     {
@@ -1388,7 +1388,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "embed")]
+        [SchemaAttr("r:embed")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Embed
@@ -1407,7 +1407,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "link")]
+        [SchemaAttr("r:link")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Link
@@ -1423,7 +1423,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "cstate")]
+        [SchemaAttr("cstate")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues>? CompressionState
@@ -1435,7 +1435,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "blip");
+            builder.SetSchema("am3d:blip");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaBiLevel>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaCeiling>();
@@ -1456,9 +1456,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddChild<DocumentFormat.OpenXml.Drawing.LuminanceEffect>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.TintEffect>();
             builder.AddElement<Blip>()
-.AddAttribute(19, "embed", a => a.Embed)
-.AddAttribute(19, "link", a => a.Link)
-.AddAttribute(0, "cstate", a => a.CompressionState, aBuilder =>
+.AddAttribute("r:embed", a => a.Embed)
+.AddAttribute("r:link", a => a.Link)
+.AddAttribute("cstate", a => a.CompressionState, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
@@ -1509,7 +1509,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "clr")]
+    [SchemaAttr("am3d:clr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColorType : OpenXmlCompositeElement
     {
@@ -1547,7 +1547,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "clr");
+            builder.SetSchema("am3d:clr");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
@@ -1667,7 +1667,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "ext")]
+    [SchemaAttr("am3d:ext")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Model3DExtension : OpenXmlCompositeElement
     {
@@ -1709,7 +1709,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uri")]
+        [SchemaAttr("uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uri
@@ -1721,12 +1721,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "ext");
+            builder.SetSchema("am3d:ext");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.EmbeddedAnimation>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.PosterFrame>();
             builder.AddElement<Model3DExtension>()
-.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+.AddAttribute("uri", a => a.Uri, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
@@ -1769,7 +1769,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "spPr")]
+    [SchemaAttr("am3d:spPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
@@ -1811,7 +1811,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "bwMode")]
+        [SchemaAttr("bwMode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
@@ -1823,7 +1823,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "spPr");
+            builder.SetSchema("am3d:spPr");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
@@ -1841,7 +1841,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddElement<ShapeProperties>()
-.AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+.AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
@@ -1917,7 +1917,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "camera")]
+    [SchemaAttr("am3d:camera")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Model3DCamera : OpenXmlCompositeElement
     {
@@ -1955,7 +1955,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "camera");
+            builder.SetSchema("am3d:camera");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D>();
@@ -2037,7 +2037,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "trans")]
+    [SchemaAttr("am3d:trans")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Model3DTransform : OpenXmlCompositeElement
     {
@@ -2075,7 +2075,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "trans");
+            builder.SetSchema("am3d:trans");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PreTransVector3D>();
@@ -2182,7 +2182,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:attrSrcUrl.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "attrSrcUrl")]
+    [SchemaAttr("am3d:attrSrcUrl")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PictureAttributionSourceURL : OpenXmlLeafElement
     {
@@ -2203,7 +2203,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "id")]
+        [SchemaAttr("r:id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -2215,10 +2215,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "attrSrcUrl");
+            builder.SetSchema("am3d:attrSrcUrl");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<PictureAttributionSourceURL>()
-.AddAttribute(19, "id", a => a.Id, aBuilder =>
+.AddAttribute("r:id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -2240,7 +2240,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "raster")]
+    [SchemaAttr("am3d:raster")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Model3DRaster : OpenXmlCompositeElement
     {
@@ -2282,7 +2282,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rName")]
+        [SchemaAttr("rName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? RName
@@ -2298,7 +2298,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rVer")]
+        [SchemaAttr("rVer")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? RVer
@@ -2310,15 +2310,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "raster");
+            builder.SetSchema("am3d:raster");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Blip>();
             builder.AddElement<Model3DRaster>()
-.AddAttribute(0, "rName", a => a.RName, aBuilder =>
+.AddAttribute("rName", a => a.RName, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "rVer", a => a.RVer, aBuilder =>
+.AddAttribute("rVer", a => a.RVer, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -2357,7 +2357,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "extLst")]
+    [SchemaAttr("am3d:extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Model3DExtensionList : OpenXmlCompositeElement
     {
@@ -2395,7 +2395,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "extLst");
+            builder.SetSchema("am3d:extLst");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -2420,7 +2420,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "objViewport")]
+    [SchemaAttr("am3d:objViewport")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ObjectViewport : OpenXmlCompositeElement
     {
@@ -2462,7 +2462,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "viewportSz")]
+        [SchemaAttr("viewportSz")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int64Value? ViewportSz
@@ -2474,11 +2474,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "objViewport");
+            builder.SetSchema("am3d:objViewport");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
             builder.AddElement<ObjectViewport>()
-.AddAttribute(0, "viewportSz", a => a.ViewportSz, aBuilder =>
+.AddAttribute("viewportSz", a => a.ViewportSz, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
@@ -2518,7 +2518,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "winViewport")]
+    [SchemaAttr("am3d:winViewport")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class WindowViewport : OpenXmlCompositeElement
     {
@@ -2556,7 +2556,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "winViewport");
+            builder.SetSchema("am3d:winViewport");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -2596,7 +2596,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "ambientLight")]
+    [SchemaAttr("am3d:ambientLight")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AmbientLight : OpenXmlCompositeElement
     {
@@ -2638,7 +2638,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "enabled")]
+        [SchemaAttr("enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Enabled
@@ -2650,13 +2650,13 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "ambientLight");
+            builder.SetSchema("am3d:ambientLight");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio>();
             builder.AddElement<AmbientLight>()
-.AddAttribute(0, "enabled", a => a.Enabled);
+.AddAttribute("enabled", a => a.Enabled);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType), 1, 1, version: FileFormatVersions.Office2019),
@@ -2723,7 +2723,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "ptLight")]
+    [SchemaAttr("am3d:ptLight")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PointLight : OpenXmlCompositeElement
     {
@@ -2765,7 +2765,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "enabled")]
+        [SchemaAttr("enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Enabled
@@ -2781,7 +2781,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rad")]
+        [SchemaAttr("rad")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int64Value? Rad
@@ -2793,15 +2793,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "ptLight");
+            builder.SetSchema("am3d:ptLight");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio>();
             builder.AddElement<PointLight>()
-.AddAttribute(0, "enabled", a => a.Enabled)
-.AddAttribute(0, "rad", a => a.Rad, aBuilder =>
+.AddAttribute("enabled", a => a.Enabled)
+.AddAttribute("rad", a => a.Rad, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
@@ -2887,7 +2887,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "spotLight")]
+    [SchemaAttr("am3d:spotLight")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SpotLight : OpenXmlCompositeElement
     {
@@ -2929,7 +2929,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "enabled")]
+        [SchemaAttr("enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Enabled
@@ -2945,7 +2945,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rad")]
+        [SchemaAttr("rad")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int64Value? Rad
@@ -2961,7 +2961,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "spotAng")]
+        [SchemaAttr("spotAng")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? SpotAng
@@ -2973,7 +2973,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "spotLight");
+            builder.SetSchema("am3d:spotLight");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
@@ -2981,13 +2981,13 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio>();
             builder.AddElement<SpotLight>()
-.AddAttribute(0, "enabled", a => a.Enabled)
-.AddAttribute(0, "rad", a => a.Rad, aBuilder =>
+.AddAttribute("enabled", a => a.Enabled)
+.AddAttribute("rad", a => a.Rad, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
 })
-.AddAttribute(0, "spotAng", a => a.SpotAng, aBuilder =>
+.AddAttribute("spotAng", a => a.SpotAng, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10800000L) });
@@ -3087,7 +3087,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "dirLight")]
+    [SchemaAttr("am3d:dirLight")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DirectionalLight : OpenXmlCompositeElement
     {
@@ -3129,7 +3129,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "enabled")]
+        [SchemaAttr("enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Enabled
@@ -3145,7 +3145,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "angularRad")]
+        [SchemaAttr("angularRad")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? AngularRad
@@ -3157,7 +3157,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "dirLight");
+            builder.SetSchema("am3d:dirLight");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
@@ -3165,8 +3165,8 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio>();
             builder.AddElement<DirectionalLight>()
-.AddAttribute(0, "enabled", a => a.Enabled)
-.AddAttribute(0, "angularRad", a => a.AngularRad, aBuilder =>
+.AddAttribute("enabled", a => a.Enabled)
+.AddAttribute("angularRad", a => a.AngularRad, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (5400000L) });
@@ -3256,7 +3256,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:unkLight.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "unkLight")]
+    [SchemaAttr("am3d:unkLight")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class UnknownLight : OpenXmlLeafElement
     {
@@ -3270,7 +3270,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "unkLight");
+            builder.SetSchema("am3d:unkLight");
             builder.Availability = FileFormatVersions.Office2019;
         }
 

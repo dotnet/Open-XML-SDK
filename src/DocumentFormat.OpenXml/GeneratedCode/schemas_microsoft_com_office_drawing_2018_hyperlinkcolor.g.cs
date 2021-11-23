@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor
     /// <para>When the object is serialized out as xml, it's qualified name is ahyp:hlinkClr.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(115, "hlinkClr")]
+    [SchemaAttr("ahyp:hlinkClr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class HyperlinkColor : OpenXmlLeafElement
     {
@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "val")]
+        [SchemaAttr("val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColorEnum>? Val
@@ -50,10 +50,10 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(115, "hlinkClr");
+            builder.SetSchema("ahyp:hlinkClr");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<HyperlinkColor>()
-.AddAttribute(0, "val", a => a.Val, aBuilder =>
+.AddAttribute("val", a => a.Val, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });

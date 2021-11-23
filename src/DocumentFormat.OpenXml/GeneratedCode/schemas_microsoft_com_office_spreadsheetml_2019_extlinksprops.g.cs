@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ExternalLinks
     /// <para>When the object is serialized out as xml, it's qualified name is xxlnp:externalLinksPr.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(133, "externalLinksPr")]
+    [SchemaAttr("xxlnp:externalLinksPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ExternalLinksPr : OpenXmlLeafElement
     {
@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ExternalLinks
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "autoRefresh")]
+        [SchemaAttr("autoRefresh")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? AutoRefresh
@@ -50,10 +50,10 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ExternalLinks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(133, "externalLinksPr");
+            builder.SetSchema("xxlnp:externalLinksPr");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<ExternalLinksPr>()
-.AddAttribute(0, "autoRefresh", a => a.AutoRefresh);
+.AddAttribute("autoRefresh", a => a.AutoRefresh);
         }
 
         /// <inheritdoc/>

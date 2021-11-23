@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
     /// <para>When the object is serialized out as xml, it's qualified name is ma:DummyContentTypeElement.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(41, "DummyContentTypeElement")]
+    [SchemaAttr("ma:DummyContentTypeElement")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Dummy : OpenXmlLeafElement
     {
@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "decimals")]
+        [SchemaAttr("decimals")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Decimals
@@ -54,7 +54,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "default")]
+        [SchemaAttr("default")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Default
@@ -70,7 +70,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "description")]
+        [SchemaAttr("description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Description
@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "displayName")]
+        [SchemaAttr("displayName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? DisplayName
@@ -102,7 +102,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fieldsID")]
+        [SchemaAttr("fieldsID")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? FieldsID
@@ -118,7 +118,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "format")]
+        [SchemaAttr("format")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Format
@@ -134,7 +134,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "hidden")]
+        [SchemaAttr("hidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Hidden
@@ -150,7 +150,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "index")]
+        [SchemaAttr("index")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? Index
@@ -166,7 +166,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "internalName")]
+        [SchemaAttr("internalName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? InternalName
@@ -182,7 +182,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "LCID")]
+        [SchemaAttr("LCID")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? LCID
@@ -198,7 +198,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "list")]
+        [SchemaAttr("list")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? List
@@ -214,7 +214,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "percentage")]
+        [SchemaAttr("percentage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Percentage
@@ -230,7 +230,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "readOnly")]
+        [SchemaAttr("readOnly")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ReadOnly
@@ -246,7 +246,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "requiredMultiChoice")]
+        [SchemaAttr("requiredMultiChoice")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? RequiredMultiChoice
@@ -262,7 +262,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "root")]
+        [SchemaAttr("root")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office.MetaAttributes.TrueOnlyValues>? Root
@@ -278,7 +278,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "showField")]
+        [SchemaAttr("showField")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ShowField
@@ -294,7 +294,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "web")]
+        [SchemaAttr("web")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Web
@@ -306,28 +306,28 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(41, "DummyContentTypeElement");
+            builder.SetSchema("ma:DummyContentTypeElement");
             builder.AddElement<Dummy>()
-.AddAttribute(0, "decimals", a => a.Decimals)
-.AddAttribute(0, "default", a => a.Default)
-.AddAttribute(0, "description", a => a.Description)
-.AddAttribute(0, "displayName", a => a.DisplayName)
-.AddAttribute(0, "fieldsID", a => a.FieldsID)
-.AddAttribute(0, "format", a => a.Format)
-.AddAttribute(0, "hidden", a => a.Hidden)
-.AddAttribute(0, "index", a => a.Index, aBuilder =>
+.AddAttribute("decimals", a => a.Decimals)
+.AddAttribute("default", a => a.Default)
+.AddAttribute("description", a => a.Description)
+.AddAttribute("displayName", a => a.DisplayName)
+.AddAttribute("fieldsID", a => a.FieldsID)
+.AddAttribute("format", a => a.Format)
+.AddAttribute("hidden", a => a.Hidden)
+.AddAttribute("index", a => a.Index, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 })
-.AddAttribute(0, "internalName", a => a.InternalName)
-.AddAttribute(0, "LCID", a => a.LCID)
-.AddAttribute(0, "list", a => a.List)
-.AddAttribute(0, "percentage", a => a.Percentage)
-.AddAttribute(0, "readOnly", a => a.ReadOnly)
-.AddAttribute(0, "requiredMultiChoice", a => a.RequiredMultiChoice)
-.AddAttribute(0, "root", a => a.Root)
-.AddAttribute(0, "showField", a => a.ShowField)
-.AddAttribute(0, "web", a => a.Web, aBuilder =>
+.AddAttribute("internalName", a => a.InternalName)
+.AddAttribute("LCID", a => a.LCID)
+.AddAttribute("list", a => a.List)
+.AddAttribute("percentage", a => a.Percentage)
+.AddAttribute("readOnly", a => a.ReadOnly)
+.AddAttribute("requiredMultiChoice", a => a.RequiredMultiChoice)
+.AddAttribute("root", a => a.Root)
+.AddAttribute("showField", a => a.ShowField)
+.AddAttribute("web", a => a.Web, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}") });
 });

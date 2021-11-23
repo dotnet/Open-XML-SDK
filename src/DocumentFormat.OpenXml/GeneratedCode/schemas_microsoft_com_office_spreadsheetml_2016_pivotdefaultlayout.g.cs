@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.PivotDefaultLayout
     /// <para>When the object is serialized out as xml, it's qualified name is xpdl:pivotTableDefinition16.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(92, "pivotTableDefinition16")]
+    [SchemaAttr("xpdl:pivotTableDefinition16")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PivotTableDefinition16 : OpenXmlLeafElement
     {
@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.PivotDefaultLayout
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "EnabledSubtotalsDefault")]
+        [SchemaAttr("EnabledSubtotalsDefault")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? EnabledSubtotalsDefault
@@ -55,7 +55,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.PivotDefaultLayout
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "SubtotalsOnTopDefault")]
+        [SchemaAttr("SubtotalsOnTopDefault")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? SubtotalsOnTopDefault
@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.PivotDefaultLayout
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "InsertBlankRowDefault")]
+        [SchemaAttr("InsertBlankRowDefault")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? InsertBlankRowDefault
@@ -83,12 +83,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.PivotDefaultLayout
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(92, "pivotTableDefinition16");
+            builder.SetSchema("xpdl:pivotTableDefinition16");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<PivotTableDefinition16>()
-.AddAttribute(0, "EnabledSubtotalsDefault", a => a.EnabledSubtotalsDefault)
-.AddAttribute(0, "SubtotalsOnTopDefault", a => a.SubtotalsOnTopDefault)
-.AddAttribute(0, "InsertBlankRowDefault", a => a.InsertBlankRowDefault);
+.AddAttribute("EnabledSubtotalsDefault", a => a.EnabledSubtotalsDefault)
+.AddAttribute("SubtotalsOnTopDefault", a => a.SubtotalsOnTopDefault)
+.AddAttribute("InsertBlankRowDefault", a => a.InsertBlankRowDefault);
         }
 
         /// <inheritdoc/>

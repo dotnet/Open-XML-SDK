@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(73, "themeFamily")]
+    [SchemaAttr("thm15:themeFamily")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ThemeFamily : OpenXmlCompositeElement
     {
@@ -70,7 +70,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "name")]
+        [SchemaAttr("name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -102,7 +102,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "vid")]
+        [SchemaAttr("vid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Vid
@@ -114,20 +114,20 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(73, "themeFamily");
+            builder.SetSchema("thm15:themeFamily");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList>();
             builder.AddElement<ThemeFamily>()
-.AddAttribute(0, "name", a => a.Name, aBuilder =>
+.AddAttribute("name", a => a.Name, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "id", a => a.Id, aBuilder =>
+.AddAttribute("id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "vid", a => a.Vid, aBuilder =>
+.AddAttribute("vid", a => a.Vid, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
@@ -168,7 +168,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(73, "extLst")]
+    [SchemaAttr("thm15:extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
@@ -206,7 +206,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(73, "extLst");
+            builder.SetSchema("thm15:extLst");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -237,7 +237,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(73, "themeVariant")]
+    [SchemaAttr("thm15:themeVariant")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ThemeVariant : OpenXmlCompositeElement
     {
@@ -279,7 +279,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "name")]
+        [SchemaAttr("name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -295,7 +295,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "vid")]
+        [SchemaAttr("vid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Vid
@@ -311,7 +311,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "cx")]
+        [SchemaAttr("cx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int64Value? X
@@ -327,7 +327,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "cy")]
+        [SchemaAttr("cy")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int64Value? Y
@@ -346,7 +346,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "id")]
+        [SchemaAttr("r:id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -358,30 +358,30 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(73, "themeVariant");
+            builder.SetSchema("thm15:themeVariant");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList>();
             builder.AddElement<ThemeVariant>()
-.AddAttribute(0, "name", a => a.Name, aBuilder =>
+.AddAttribute("name", a => a.Name, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "vid", a => a.Vid, aBuilder =>
+.AddAttribute("vid", a => a.Vid, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "cx", a => a.X, aBuilder =>
+.AddAttribute("cx", a => a.X, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
 })
-.AddAttribute(0, "cy", a => a.Y, aBuilder =>
+.AddAttribute("cy", a => a.Y, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
 })
-.AddAttribute(19, "id", a => a.Id, aBuilder =>
+.AddAttribute("r:id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -420,7 +420,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(73, "themeVariantLst")]
+    [SchemaAttr("thm15:themeVariantLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ThemeVariantList : OpenXmlCompositeElement
     {
@@ -458,7 +458,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(73, "themeVariantLst");
+            builder.SetSchema("thm15:themeVariantLst");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Theme.ThemeVariant>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)

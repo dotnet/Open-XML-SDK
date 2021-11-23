@@ -117,7 +117,7 @@ namespace DocumentFormat.OpenXml
             builder.SetSchema(AlternateContent.InternalQName.Namespace.Uri, Name);
 
             builder.AddElement<AlternateContentChoice>()
-                .AddAttribute(0, "Requires", a => a.Requires);
+                .AddAttribute("Requires", a => a.Requires);
         }
     }
 }

@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(84, "modelTimeGroupings")]
+    [SchemaAttr("x16:modelTimeGroupings")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ModelTimeGroupings : OpenXmlCompositeElement
     {
@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(84, "modelTimeGroupings");
+            builder.SetSchema("x16:modelTimeGroupings");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGrouping>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -90,7 +90,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(84, "modelTimeGrouping")]
+    [SchemaAttr("x16:modelTimeGrouping")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ModelTimeGrouping : OpenXmlCompositeElement
     {
@@ -132,7 +132,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "tableName")]
+        [SchemaAttr("tableName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? TableName
@@ -148,7 +148,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "columnName")]
+        [SchemaAttr("columnName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ColumnName
@@ -164,7 +164,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "columnId")]
+        [SchemaAttr("columnId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ColumnId
@@ -176,19 +176,19 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(84, "modelTimeGrouping");
+            builder.SetSchema("x16:modelTimeGrouping");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.ExcelAc.CalculatedTimeColumn>();
             builder.AddElement<ModelTimeGrouping>()
-.AddAttribute(0, "tableName", a => a.TableName, aBuilder =>
+.AddAttribute("tableName", a => a.TableName, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "columnName", a => a.ColumnName, aBuilder =>
+.AddAttribute("columnName", a => a.ColumnName, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "columnId", a => a.ColumnId, aBuilder =>
+.AddAttribute("columnId", a => a.ColumnId, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -208,7 +208,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is x16:calculatedTimeColumn.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(84, "calculatedTimeColumn")]
+    [SchemaAttr("x16:calculatedTimeColumn")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CalculatedTimeColumn : OpenXmlLeafElement
     {
@@ -226,7 +226,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "columnName")]
+        [SchemaAttr("columnName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ColumnName
@@ -242,7 +242,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "columnId")]
+        [SchemaAttr("columnId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ColumnId
@@ -258,7 +258,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "contentType")]
+        [SchemaAttr("contentType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGroupingContentType>? ContentType
@@ -274,7 +274,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "isSelected")]
+        [SchemaAttr("isSelected")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? IsSelected
@@ -286,22 +286,22 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(84, "calculatedTimeColumn");
+            builder.SetSchema("x16:calculatedTimeColumn");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<CalculatedTimeColumn>()
-.AddAttribute(0, "columnName", a => a.ColumnName, aBuilder =>
+.AddAttribute("columnName", a => a.ColumnName, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "columnId", a => a.ColumnId, aBuilder =>
+.AddAttribute("columnId", a => a.ColumnId, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "contentType", a => a.ContentType, aBuilder =>
+.AddAttribute("contentType", a => a.ContentType, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "isSelected", a => a.IsSelected, aBuilder =>
+.AddAttribute("isSelected", a => a.IsSelected, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });

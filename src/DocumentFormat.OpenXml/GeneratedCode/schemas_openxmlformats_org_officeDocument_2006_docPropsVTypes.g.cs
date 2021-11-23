@@ -61,7 +61,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "variant")]
+    [SchemaAttr("vt:variant")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Variant : OpenXmlCompositeElement
     {
@@ -99,7 +99,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(5, "variant");
+            builder.SetSchema("vt:variant");
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTArray>();
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTClipboardData>();
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTEmpty>();
@@ -666,7 +666,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "vector")]
+    [SchemaAttr("vt:vector")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTVector : OpenXmlCompositeElement
     {
@@ -708,7 +708,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "baseType")]
+        [SchemaAttr("baseType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.VariantTypes.VectorBaseValues>? BaseType
@@ -724,7 +724,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "size")]
+        [SchemaAttr("size")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Size
@@ -736,7 +736,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(5, "vector");
+            builder.SetSchema("vt:vector");
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTClipboardData>();
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.Variant>();
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTClassId>();
@@ -759,11 +759,11 @@ namespace DocumentFormat.OpenXml.VariantTypes
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64>();
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort>();
             builder.AddElement<VTVector>()
-.AddAttribute(0, "baseType", a => a.BaseType, aBuilder =>
+.AddAttribute("baseType", a => a.BaseType, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "size", a => a.Size, aBuilder =>
+.AddAttribute("size", a => a.Size, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -825,7 +825,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "array")]
+    [SchemaAttr("vt:array")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTArray : OpenXmlCompositeElement
     {
@@ -867,7 +867,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "lBound")]
+        [SchemaAttr("lBound")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? LowerBounds
@@ -883,7 +883,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uBound")]
+        [SchemaAttr("uBound")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? UpperBounds
@@ -899,7 +899,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "baseType")]
+        [SchemaAttr("baseType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.VariantTypes.ArrayBaseValues>? BaseType
@@ -911,7 +911,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(5, "array");
+            builder.SetSchema("vt:array");
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.Variant>();
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTCurrency>();
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTError>();
@@ -930,15 +930,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger>();
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort>();
             builder.AddElement<VTArray>()
-.AddAttribute(0, "lBound", a => a.LowerBounds, aBuilder =>
+.AddAttribute("lBound", a => a.LowerBounds, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "uBound", a => a.UpperBounds, aBuilder =>
+.AddAttribute("uBound", a => a.UpperBounds, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "baseType", a => a.BaseType, aBuilder =>
+.AddAttribute("baseType", a => a.BaseType, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -974,7 +974,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:blob.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "blob")]
+    [SchemaAttr("vt:blob")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTBlob : OpenXmlLeafTextElement
     {
@@ -1002,7 +1002,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Base64BinaryValue>(NumberValidator.Instance);
-            builder.SetSchema(5, "blob");
+            builder.SetSchema("vt:blob");
         }
 
         /// <inheritdoc/>
@@ -1015,7 +1015,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:oblob.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "oblob")]
+    [SchemaAttr("vt:oblob")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTOBlob : OpenXmlLeafTextElement
     {
@@ -1043,7 +1043,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Base64BinaryValue>(NumberValidator.Instance);
-            builder.SetSchema(5, "oblob");
+            builder.SetSchema("vt:oblob");
         }
 
         /// <inheritdoc/>
@@ -1056,7 +1056,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:stream.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "stream")]
+    [SchemaAttr("vt:stream")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTStreamData : OpenXmlLeafTextElement
     {
@@ -1084,7 +1084,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Base64BinaryValue>(NumberValidator.Instance);
-            builder.SetSchema(5, "stream");
+            builder.SetSchema("vt:stream");
         }
 
         /// <inheritdoc/>
@@ -1097,7 +1097,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ostream.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "ostream")]
+    [SchemaAttr("vt:ostream")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTOStreamData : OpenXmlLeafTextElement
     {
@@ -1125,7 +1125,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Base64BinaryValue>(NumberValidator.Instance);
-            builder.SetSchema(5, "ostream");
+            builder.SetSchema("vt:ostream");
         }
 
         /// <inheritdoc/>
@@ -1138,7 +1138,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:storage.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "storage")]
+    [SchemaAttr("vt:storage")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTStorage : OpenXmlLeafTextElement
     {
@@ -1166,7 +1166,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Base64BinaryValue>(NumberValidator.Instance);
-            builder.SetSchema(5, "storage");
+            builder.SetSchema("vt:storage");
         }
 
         /// <inheritdoc/>
@@ -1179,7 +1179,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ostorage.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "ostorage")]
+    [SchemaAttr("vt:ostorage")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTOStorage : OpenXmlLeafTextElement
     {
@@ -1207,7 +1207,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Base64BinaryValue>(NumberValidator.Instance);
-            builder.SetSchema(5, "ostorage");
+            builder.SetSchema("vt:ostorage");
         }
 
         /// <inheritdoc/>
@@ -1220,7 +1220,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:empty.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "empty")]
+    [SchemaAttr("vt:empty")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTEmpty : OpenXmlLeafElement
     {
@@ -1234,7 +1234,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(5, "empty");
+            builder.SetSchema("vt:empty");
         }
 
         /// <inheritdoc/>
@@ -1247,7 +1247,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:null.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "null")]
+    [SchemaAttr("vt:null")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTNull : OpenXmlLeafElement
     {
@@ -1261,7 +1261,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(5, "null");
+            builder.SetSchema("vt:null");
         }
 
         /// <inheritdoc/>
@@ -1274,7 +1274,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:i1.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "i1")]
+    [SchemaAttr("vt:i1")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTByte : OpenXmlLeafTextElement
     {
@@ -1302,7 +1302,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<SByteValue>(NumberValidator.Instance);
-            builder.SetSchema(5, "i1");
+            builder.SetSchema("vt:i1");
         }
 
         /// <inheritdoc/>
@@ -1315,7 +1315,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:i2.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "i2")]
+    [SchemaAttr("vt:i2")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTShort : OpenXmlLeafTextElement
     {
@@ -1343,7 +1343,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Int16Value>(NumberValidator.Instance);
-            builder.SetSchema(5, "i2");
+            builder.SetSchema("vt:i2");
         }
 
         /// <inheritdoc/>
@@ -1356,7 +1356,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:i4.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "i4")]
+    [SchemaAttr("vt:i4")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTInt32 : OpenXmlLeafTextElement
     {
@@ -1384,7 +1384,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Int32Value>(NumberValidator.Instance);
-            builder.SetSchema(5, "i4");
+            builder.SetSchema("vt:i4");
         }
 
         /// <inheritdoc/>
@@ -1397,7 +1397,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:int.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "int")]
+    [SchemaAttr("vt:int")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTInteger : OpenXmlLeafTextElement
     {
@@ -1425,7 +1425,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Int32Value>(NumberValidator.Instance);
-            builder.SetSchema(5, "int");
+            builder.SetSchema("vt:int");
         }
 
         /// <inheritdoc/>
@@ -1438,7 +1438,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:i8.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "i8")]
+    [SchemaAttr("vt:i8")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTInt64 : OpenXmlLeafTextElement
     {
@@ -1466,7 +1466,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Int64Value>(NumberValidator.Instance);
-            builder.SetSchema(5, "i8");
+            builder.SetSchema("vt:i8");
         }
 
         /// <inheritdoc/>
@@ -1479,7 +1479,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ui1.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "ui1")]
+    [SchemaAttr("vt:ui1")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTUnsignedByte : OpenXmlLeafTextElement
     {
@@ -1507,7 +1507,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<ByteValue>(NumberValidator.Instance);
-            builder.SetSchema(5, "ui1");
+            builder.SetSchema("vt:ui1");
         }
 
         /// <inheritdoc/>
@@ -1520,7 +1520,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ui2.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "ui2")]
+    [SchemaAttr("vt:ui2")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTUnsignedShort : OpenXmlLeafTextElement
     {
@@ -1548,7 +1548,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<UInt16Value>(NumberValidator.Instance);
-            builder.SetSchema(5, "ui2");
+            builder.SetSchema("vt:ui2");
         }
 
         /// <inheritdoc/>
@@ -1561,7 +1561,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ui4.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "ui4")]
+    [SchemaAttr("vt:ui4")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTUnsignedInt32 : OpenXmlLeafTextElement
     {
@@ -1589,7 +1589,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<UInt32Value>(NumberValidator.Instance);
-            builder.SetSchema(5, "ui4");
+            builder.SetSchema("vt:ui4");
         }
 
         /// <inheritdoc/>
@@ -1602,7 +1602,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:uint.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "uint")]
+    [SchemaAttr("vt:uint")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTUnsignedInteger : OpenXmlLeafTextElement
     {
@@ -1630,7 +1630,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<UInt32Value>(NumberValidator.Instance);
-            builder.SetSchema(5, "uint");
+            builder.SetSchema("vt:uint");
         }
 
         /// <inheritdoc/>
@@ -1643,7 +1643,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ui8.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "ui8")]
+    [SchemaAttr("vt:ui8")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTUnsignedInt64 : OpenXmlLeafTextElement
     {
@@ -1671,7 +1671,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<UInt64Value>(NumberValidator.Instance);
-            builder.SetSchema(5, "ui8");
+            builder.SetSchema("vt:ui8");
         }
 
         /// <inheritdoc/>
@@ -1684,7 +1684,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:r4.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "r4")]
+    [SchemaAttr("vt:r4")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTFloat : OpenXmlLeafTextElement
     {
@@ -1712,7 +1712,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<SingleValue>(NumberValidator.Instance);
-            builder.SetSchema(5, "r4");
+            builder.SetSchema("vt:r4");
         }
 
         /// <inheritdoc/>
@@ -1725,7 +1725,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:r8.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "r8")]
+    [SchemaAttr("vt:r8")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTDouble : OpenXmlLeafTextElement
     {
@@ -1753,7 +1753,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<DoubleValue>(NumberValidator.Instance);
-            builder.SetSchema(5, "r8");
+            builder.SetSchema("vt:r8");
         }
 
         /// <inheritdoc/>
@@ -1766,7 +1766,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:decimal.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "decimal")]
+    [SchemaAttr("vt:decimal")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTDecimal : OpenXmlLeafTextElement
     {
@@ -1794,7 +1794,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<DecimalValue>(NumberValidator.Instance);
-            builder.SetSchema(5, "decimal");
+            builder.SetSchema("vt:decimal");
         }
 
         /// <inheritdoc/>
@@ -1807,7 +1807,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:lpstr.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "lpstr")]
+    [SchemaAttr("vt:lpstr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTLPSTR : OpenXmlLeafTextElement
     {
@@ -1834,7 +1834,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(5, "lpstr");
+            builder.SetSchema("vt:lpstr");
         }
 
         /// <inheritdoc/>
@@ -1847,7 +1847,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:lpwstr.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "lpwstr")]
+    [SchemaAttr("vt:lpwstr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTLPWSTR : OpenXmlLeafTextElement
     {
@@ -1874,7 +1874,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(5, "lpwstr");
+            builder.SetSchema("vt:lpwstr");
         }
 
         /// <inheritdoc/>
@@ -1887,7 +1887,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:bstr.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "bstr")]
+    [SchemaAttr("vt:bstr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTBString : OpenXmlLeafTextElement
     {
@@ -1914,7 +1914,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(5, "bstr");
+            builder.SetSchema("vt:bstr");
         }
 
         /// <inheritdoc/>
@@ -1927,7 +1927,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:date.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "date")]
+    [SchemaAttr("vt:date")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTDate : OpenXmlLeafTextElement
     {
@@ -1955,7 +1955,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<DateTimeValue>(NumberValidator.Instance);
-            builder.SetSchema(5, "date");
+            builder.SetSchema("vt:date");
         }
 
         /// <inheritdoc/>
@@ -1968,7 +1968,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:filetime.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "filetime")]
+    [SchemaAttr("vt:filetime")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTFileTime : OpenXmlLeafTextElement
     {
@@ -1996,7 +1996,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<DateTimeValue>(NumberValidator.Instance);
-            builder.SetSchema(5, "filetime");
+            builder.SetSchema("vt:filetime");
         }
 
         /// <inheritdoc/>
@@ -2009,7 +2009,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:bool.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "bool")]
+    [SchemaAttr("vt:bool")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTBool : OpenXmlLeafTextElement
     {
@@ -2037,7 +2037,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<BooleanValue>(NumberValidator.Instance);
-            builder.SetSchema(5, "bool");
+            builder.SetSchema("vt:bool");
         }
 
         /// <inheritdoc/>
@@ -2050,7 +2050,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:cy.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "cy")]
+    [SchemaAttr("vt:cy")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTCurrency : OpenXmlLeafTextElement
     {
@@ -2078,7 +2078,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { Pattern = ("\\s*[0-9]*\\.[0-9]{4}\\s*") });
-            builder.SetSchema(5, "cy");
+            builder.SetSchema("vt:cy");
         }
 
         /// <inheritdoc/>
@@ -2091,7 +2091,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:error.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "error")]
+    [SchemaAttr("vt:error")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTError : OpenXmlLeafTextElement
     {
@@ -2119,7 +2119,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { Pattern = ("0x[0-9A-Fa-f]{8}") });
-            builder.SetSchema(5, "error");
+            builder.SetSchema("vt:error");
         }
 
         /// <inheritdoc/>
@@ -2132,7 +2132,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is vt:vstream.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "vstream")]
+    [SchemaAttr("vt:vstream")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTVStreamData : OpenXmlLeafTextElement
     {
@@ -2163,7 +2163,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "version")]
+        [SchemaAttr("version")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Version
@@ -2175,9 +2175,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(5, "vstream");
+            builder.SetSchema("vt:vstream");
             builder.AddElement<VTVStreamData>()
-.AddAttribute(0, "version", a => a.Version, aBuilder =>
+.AddAttribute("version", a => a.Version, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}\\s*") });
@@ -2195,7 +2195,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-
     /// <para>When the object is serialized out as xml, it's qualified name is vt:clsid.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "clsid")]
+    [SchemaAttr("vt:clsid")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTClassId : OpenXmlLeafTextElement
     {
@@ -2223,7 +2223,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}\\s*") });
-            builder.SetSchema(5, "clsid");
+            builder.SetSchema("vt:clsid");
         }
 
         /// <inheritdoc/>
@@ -2236,7 +2236,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-
     /// <para>When the object is serialized out as xml, it's qualified name is vt:cf.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(5, "cf")]
+    [SchemaAttr("vt:cf")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTClipboardData : OpenXmlLeafTextElement
     {
@@ -2267,7 +2267,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "format")]
+        [SchemaAttr("format")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? Format
@@ -2283,7 +2283,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "size")]
+        [SchemaAttr("size")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Size
@@ -2295,16 +2295,16 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(5, "cf");
+            builder.SetSchema("vt:cf");
             builder.AddElement<VTClipboardData>()
- .AddAttribute(0, "format", a => a.Format, aBuilder =>
- {
-     aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-3L) });
- })
- .AddAttribute(0, "size", a => a.Size, aBuilder =>
- {
-     aBuilder.AddValidator(RequiredValidator.Instance);
- });
+.AddAttribute("format", a => a.Format, aBuilder =>
+{
+    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-3L) });
+})
+.AddAttribute("size", a => a.Size, aBuilder =>
+{
+    aBuilder.AddValidator(RequiredValidator.Instance);
+});
         }
 
         /// <inheritdoc/>

@@ -53,7 +53,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(3, "Properties")]
+    [SchemaAttr("ap:Properties")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Properties : OpenXmlPartRootElement
     {
@@ -91,7 +91,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(3, "Properties");
+            builder.SetSchema("ap:Properties");
             builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.DigitalSignature>();
             builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts>();
             builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.HeadingPairs>();
@@ -543,7 +543,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Template.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(3, "Template")]
+    [SchemaAttr("ap:Template")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Template : OpenXmlLeafTextElement
     {
@@ -570,7 +570,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(3, "Template");
+            builder.SetSchema("ap:Template");
         }
 
         /// <inheritdoc/>
@@ -583,7 +583,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Manager.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(3, "Manager")]
+    [SchemaAttr("ap:Manager")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Manager : OpenXmlLeafTextElement
     {
@@ -610,7 +610,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(3, "Manager");
+            builder.SetSchema("ap:Manager");
         }
 
         /// <inheritdoc/>
@@ -623,7 +623,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Company.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(3, "Company")]
+    [SchemaAttr("ap:Company")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Company : OpenXmlLeafTextElement
     {
@@ -650,7 +650,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(3, "Company");
+            builder.SetSchema("ap:Company");
         }
 
         /// <inheritdoc/>
@@ -663,7 +663,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>When the object is serialized out as xml, it's qualified name is ap:PresentationFormat.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(3, "PresentationFormat")]
+    [SchemaAttr("ap:PresentationFormat")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PresentationFormat : OpenXmlLeafTextElement
     {
@@ -690,7 +690,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(3, "PresentationFormat");
+            builder.SetSchema("ap:PresentationFormat");
         }
 
         /// <inheritdoc/>
@@ -703,7 +703,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>When the object is serialized out as xml, it's qualified name is ap:HyperlinkBase.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(3, "HyperlinkBase")]
+    [SchemaAttr("ap:HyperlinkBase")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class HyperlinkBase : OpenXmlLeafTextElement
     {
@@ -730,7 +730,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(3, "HyperlinkBase");
+            builder.SetSchema("ap:HyperlinkBase");
         }
 
         /// <inheritdoc/>
@@ -743,7 +743,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Application.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(3, "Application")]
+    [SchemaAttr("ap:Application")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Application : OpenXmlLeafTextElement
     {
@@ -770,7 +770,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(3, "Application");
+            builder.SetSchema("ap:Application");
         }
 
         /// <inheritdoc/>
@@ -783,7 +783,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>When the object is serialized out as xml, it's qualified name is ap:AppVersion.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(3, "AppVersion")]
+    [SchemaAttr("ap:AppVersion")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ApplicationVersion : OpenXmlLeafTextElement
     {
@@ -810,7 +810,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(3, "AppVersion");
+            builder.SetSchema("ap:AppVersion");
         }
 
         /// <inheritdoc/>
@@ -823,7 +823,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Pages.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(3, "Pages")]
+    [SchemaAttr("ap:Pages")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Pages : OpenXmlLeafTextElement
     {
@@ -851,7 +851,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Int32Value>(NumberValidator.Instance);
-            builder.SetSchema(3, "Pages");
+            builder.SetSchema("ap:Pages");
         }
 
         /// <inheritdoc/>
@@ -864,7 +864,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Words.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(3, "Words")]
+    [SchemaAttr("ap:Words")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Words : OpenXmlLeafTextElement
     {
@@ -892,7 +892,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Int32Value>(NumberValidator.Instance);
-            builder.SetSchema(3, "Words");
+            builder.SetSchema("ap:Words");
         }
 
         /// <inheritdoc/>
@@ -905,7 +905,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Characters.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(3, "Characters")]
+    [SchemaAttr("ap:Characters")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Characters : OpenXmlLeafTextElement
     {
@@ -933,7 +933,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Int32Value>(NumberValidator.Instance);
-            builder.SetSchema(3, "Characters");
+            builder.SetSchema("ap:Characters");
         }
 
         /// <inheritdoc/>
@@ -946,7 +946,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Lines.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(3, "Lines")]
+    [SchemaAttr("ap:Lines")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Lines : OpenXmlLeafTextElement
     {
@@ -974,7 +974,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Int32Value>(NumberValidator.Instance);
-            builder.SetSchema(3, "Lines");
+            builder.SetSchema("ap:Lines");
         }
 
         /// <inheritdoc/>
@@ -987,7 +987,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Paragraphs.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(3, "Paragraphs")]
+    [SchemaAttr("ap:Paragraphs")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Paragraphs : OpenXmlLeafTextElement
     {
@@ -1015,7 +1015,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Int32Value>(NumberValidator.Instance);
-            builder.SetSchema(3, "Paragraphs");
+            builder.SetSchema("ap:Paragraphs");
         }
 
         /// <inheritdoc/>
@@ -1028,7 +1028,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Slides.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(3, "Slides")]
+    [SchemaAttr("ap:Slides")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Slides : OpenXmlLeafTextElement
     {
@@ -1056,7 +1056,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Int32Value>(NumberValidator.Instance);
-            builder.SetSchema(3, "Slides");
+            builder.SetSchema("ap:Slides");
         }
 
         /// <inheritdoc/>
@@ -1069,7 +1069,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Notes.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(3, "Notes")]
+    [SchemaAttr("ap:Notes")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Notes : OpenXmlLeafTextElement
     {
@@ -1097,7 +1097,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Int32Value>(NumberValidator.Instance);
-            builder.SetSchema(3, "Notes");
+            builder.SetSchema("ap:Notes");
         }
 
         /// <inheritdoc/>
@@ -1110,7 +1110,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>When the object is serialized out as xml, it's qualified name is ap:TotalTime.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(3, "TotalTime")]
+    [SchemaAttr("ap:TotalTime")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TotalTime : OpenXmlLeafTextElement
     {
@@ -1138,7 +1138,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Int32Value>(NumberValidator.Instance);
-            builder.SetSchema(3, "TotalTime");
+            builder.SetSchema("ap:TotalTime");
         }
 
         /// <inheritdoc/>
@@ -1151,7 +1151,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>When the object is serialized out as xml, it's qualified name is ap:HiddenSlides.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(3, "HiddenSlides")]
+    [SchemaAttr("ap:HiddenSlides")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class HiddenSlides : OpenXmlLeafTextElement
     {
@@ -1179,7 +1179,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Int32Value>(NumberValidator.Instance);
-            builder.SetSchema(3, "HiddenSlides");
+            builder.SetSchema("ap:HiddenSlides");
         }
 
         /// <inheritdoc/>
@@ -1192,7 +1192,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>When the object is serialized out as xml, it's qualified name is ap:MMClips.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(3, "MMClips")]
+    [SchemaAttr("ap:MMClips")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class MultimediaClips : OpenXmlLeafTextElement
     {
@@ -1220,7 +1220,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Int32Value>(NumberValidator.Instance);
-            builder.SetSchema(3, "MMClips");
+            builder.SetSchema("ap:MMClips");
         }
 
         /// <inheritdoc/>
@@ -1233,7 +1233,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>When the object is serialized out as xml, it's qualified name is ap:CharactersWithSpaces.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(3, "CharactersWithSpaces")]
+    [SchemaAttr("ap:CharactersWithSpaces")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CharactersWithSpaces : OpenXmlLeafTextElement
     {
@@ -1261,7 +1261,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Int32Value>(NumberValidator.Instance);
-            builder.SetSchema(3, "CharactersWithSpaces");
+            builder.SetSchema("ap:CharactersWithSpaces");
         }
 
         /// <inheritdoc/>
@@ -1274,7 +1274,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>When the object is serialized out as xml, it's qualified name is ap:DocSecurity.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(3, "DocSecurity")]
+    [SchemaAttr("ap:DocSecurity")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DocumentSecurity : OpenXmlLeafTextElement
     {
@@ -1302,7 +1302,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Int32Value>(NumberValidator.Instance);
-            builder.SetSchema(3, "DocSecurity");
+            builder.SetSchema("ap:DocSecurity");
         }
 
         /// <inheritdoc/>
@@ -1315,7 +1315,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>When the object is serialized out as xml, it's qualified name is ap:ScaleCrop.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(3, "ScaleCrop")]
+    [SchemaAttr("ap:ScaleCrop")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ScaleCrop : OpenXmlLeafTextElement
     {
@@ -1343,7 +1343,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<BooleanValue>(NumberValidator.Instance);
-            builder.SetSchema(3, "ScaleCrop");
+            builder.SetSchema("ap:ScaleCrop");
         }
 
         /// <inheritdoc/>
@@ -1356,7 +1356,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>When the object is serialized out as xml, it's qualified name is ap:LinksUpToDate.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(3, "LinksUpToDate")]
+    [SchemaAttr("ap:LinksUpToDate")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class LinksUpToDate : OpenXmlLeafTextElement
     {
@@ -1384,7 +1384,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<BooleanValue>(NumberValidator.Instance);
-            builder.SetSchema(3, "LinksUpToDate");
+            builder.SetSchema("ap:LinksUpToDate");
         }
 
         /// <inheritdoc/>
@@ -1397,7 +1397,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>When the object is serialized out as xml, it's qualified name is ap:SharedDoc.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(3, "SharedDoc")]
+    [SchemaAttr("ap:SharedDoc")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SharedDocument : OpenXmlLeafTextElement
     {
@@ -1425,7 +1425,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<BooleanValue>(NumberValidator.Instance);
-            builder.SetSchema(3, "SharedDoc");
+            builder.SetSchema("ap:SharedDoc");
         }
 
         /// <inheritdoc/>
@@ -1438,7 +1438,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>When the object is serialized out as xml, it's qualified name is ap:HyperlinksChanged.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(3, "HyperlinksChanged")]
+    [SchemaAttr("ap:HyperlinksChanged")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class HyperlinksChanged : OpenXmlLeafTextElement
     {
@@ -1466,7 +1466,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<BooleanValue>(NumberValidator.Instance);
-            builder.SetSchema(3, "HyperlinksChanged");
+            builder.SetSchema("ap:HyperlinksChanged");
         }
 
         /// <inheritdoc/>
@@ -1485,7 +1485,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(3, "HeadingPairs")]
+    [SchemaAttr("ap:HeadingPairs")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class HeadingPairs : VectorVariantType
     {
@@ -1523,7 +1523,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(3, "HeadingPairs");
+            builder.SetSchema("ap:HeadingPairs");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1, 1)
@@ -1546,7 +1546,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(3, "HLinks")]
+    [SchemaAttr("ap:HLinks")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class HyperlinkList : VectorVariantType
     {
@@ -1584,7 +1584,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(3, "HLinks");
+            builder.SetSchema("ap:HLinks");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1, 1)
@@ -1671,7 +1671,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(3, "TitlesOfParts")]
+    [SchemaAttr("ap:TitlesOfParts")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TitlesOfParts : OpenXmlCompositeElement
     {
@@ -1709,7 +1709,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(3, "TitlesOfParts");
+            builder.SetSchema("ap:TitlesOfParts");
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTVector>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -1746,7 +1746,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(3, "DigSig")]
+    [SchemaAttr("ap:DigSig")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DigitalSignature : OpenXmlCompositeElement
     {
@@ -1784,7 +1784,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(3, "DigSig");
+            builder.SetSchema("ap:DigSig");
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTBlob>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {

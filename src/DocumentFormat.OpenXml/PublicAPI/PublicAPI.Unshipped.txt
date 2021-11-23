@@ -1,2 +1,2 @@
 ﻿#nullable enable
-
+DocumentFormat.OpenXml.SchemaAttrAttribute.SchemaAttrAttribute(string! qname) -> void

@@ -37,7 +37,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "twoCellAnchor")]
+    [SchemaAttr("xdr:twoCellAnchor")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TwoCellAnchor : OpenXmlCompositeElement
     {
@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "editAs")]
+        [SchemaAttr("editAs")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Drawing.Spreadsheet.EditAsValues>? EditAs
@@ -91,7 +91,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "twoCellAnchor");
+            builder.SetSchema("xdr:twoCellAnchor");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame>();
@@ -102,7 +102,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart>();
             builder.AddElement<TwoCellAnchor>()
-.AddAttribute(0, "editAs", a => a.EditAs, aBuilder =>
+.AddAttribute("editAs", a => a.EditAs, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
@@ -179,7 +179,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "oneCellAnchor")]
+    [SchemaAttr("xdr:oneCellAnchor")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class OneCellAnchor : OpenXmlCompositeElement
     {
@@ -217,7 +217,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "oneCellAnchor");
+            builder.SetSchema("xdr:oneCellAnchor");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape>();
@@ -300,7 +300,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "absoluteAnchor")]
+    [SchemaAttr("xdr:absoluteAnchor")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AbsoluteAnchor : OpenXmlCompositeElement
     {
@@ -338,7 +338,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "absoluteAnchor");
+            builder.SetSchema("xdr:absoluteAnchor");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Position>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData>();
@@ -416,7 +416,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "sp")]
+    [SchemaAttr("xdr:sp")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Shape : OpenXmlCompositeElement
     {
@@ -458,7 +458,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "macro")]
+        [SchemaAttr("macro")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Macro
@@ -474,7 +474,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "textlink")]
+        [SchemaAttr("textlink")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? TextLink
@@ -490,7 +490,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fLocksText")]
+        [SchemaAttr("fLocksText")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? LockText
@@ -506,7 +506,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fPublished")]
+        [SchemaAttr("fPublished")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Published
@@ -518,16 +518,16 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "sp");
+            builder.SetSchema("xdr:sp");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeProperties>();
             builder.AddElement<Shape>()
-.AddAttribute(0, "macro", a => a.Macro)
-.AddAttribute(0, "textlink", a => a.TextLink)
-.AddAttribute(0, "fLocksText", a => a.LockText)
-.AddAttribute(0, "fPublished", a => a.Published);
+.AddAttribute("macro", a => a.Macro)
+.AddAttribute("textlink", a => a.TextLink)
+.AddAttribute("fLocksText", a => a.LockText)
+.AddAttribute("fPublished", a => a.Published);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeProperties), 1, 1),
@@ -613,7 +613,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "grpSp")]
+    [SchemaAttr("xdr:grpSp")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class GroupShape : OpenXmlCompositeElement
     {
@@ -651,7 +651,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "grpSp");
+            builder.SetSchema("xdr:grpSp");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame>();
@@ -720,7 +720,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "graphicFrame")]
+    [SchemaAttr("xdr:graphicFrame")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class GraphicFrame : OpenXmlCompositeElement
     {
@@ -762,7 +762,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "macro")]
+        [SchemaAttr("macro")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Macro
@@ -778,7 +778,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fPublished")]
+        [SchemaAttr("fPublished")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Published
@@ -790,13 +790,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "graphicFrame");
+            builder.SetSchema("xdr:graphicFrame");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Graphic>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Transform>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties>();
             builder.AddElement<GraphicFrame>()
-.AddAttribute(0, "macro", a => a.Macro)
-.AddAttribute(0, "fPublished", a => a.Published);
+.AddAttribute("macro", a => a.Macro)
+.AddAttribute("fPublished", a => a.Published);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties), 1, 1),
@@ -863,7 +863,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "cxnSp")]
+    [SchemaAttr("xdr:cxnSp")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ConnectionShape : OpenXmlCompositeElement
     {
@@ -905,7 +905,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "macro")]
+        [SchemaAttr("macro")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Macro
@@ -921,7 +921,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fPublished")]
+        [SchemaAttr("fPublished")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Published
@@ -933,13 +933,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "cxnSp");
+            builder.SetSchema("xdr:cxnSp");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties>();
             builder.AddElement<ConnectionShape>()
-.AddAttribute(0, "macro", a => a.Macro)
-.AddAttribute(0, "fPublished", a => a.Published);
+.AddAttribute("macro", a => a.Macro)
+.AddAttribute("fPublished", a => a.Published);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties), 1, 1),
@@ -1007,7 +1007,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "pic")]
+    [SchemaAttr("xdr:pic")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Picture : OpenXmlCompositeElement
     {
@@ -1049,7 +1049,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "macro")]
+        [SchemaAttr("macro")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Macro
@@ -1065,7 +1065,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fPublished")]
+        [SchemaAttr("fPublished")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Published
@@ -1077,14 +1077,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "pic");
+            builder.SetSchema("xdr:pic");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.BlipFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureProperties>();
             builder.AddElement<Picture>()
-.AddAttribute(0, "macro", a => a.Macro)
-.AddAttribute(0, "fPublished", a => a.Published);
+.AddAttribute("macro", a => a.Macro)
+.AddAttribute("fPublished", a => a.Published);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureProperties), 1, 1),
@@ -1165,7 +1165,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "contentPart")]
+    [SchemaAttr("xdr:contentPart")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ContentPart : OpenXmlCompositeElement
     {
@@ -1210,7 +1210,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "id")]
+        [SchemaAttr("r:id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? RelationshipId
@@ -1226,7 +1226,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "bwMode")]
+        [SchemaAttr("bwMode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
@@ -1238,18 +1238,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "contentPart");
+            builder.SetSchema("xdr:contentPart");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties>();
             builder.AddElement<ContentPart>()
-.AddAttribute(19, "id", a => a.RelationshipId, aBuilder =>
+.AddAttribute("r:id", a => a.RelationshipId, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+.AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
@@ -1332,7 +1332,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "wsDr")]
+    [SchemaAttr("xdr:wsDr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class WorksheetDrawing : OpenXmlPartRootElement
     {
@@ -1370,7 +1370,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "wsDr");
+            builder.SetSchema("xdr:wsDr");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.AbsoluteAnchor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.OneCellAnchor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.TwoCellAnchor>();
@@ -1436,7 +1436,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "nvSpPr")]
+    [SchemaAttr("xdr:nvSpPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualShapeProperties : OpenXmlCompositeElement
     {
@@ -1474,7 +1474,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "nvSpPr");
+            builder.SetSchema("xdr:nvSpPr");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeDrawingProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -1540,7 +1540,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "spPr")]
+    [SchemaAttr("xdr:spPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
@@ -1582,7 +1582,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "bwMode")]
+        [SchemaAttr("bwMode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
@@ -1594,7 +1594,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "spPr");
+            builder.SetSchema("xdr:spPr");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
@@ -1611,7 +1611,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddElement<ShapeProperties>()
-.AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+.AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
@@ -1685,7 +1685,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "style")]
+    [SchemaAttr("xdr:style")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShapeStyle : OpenXmlCompositeElement
     {
@@ -1723,7 +1723,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "style");
+            builder.SetSchema("xdr:style");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.FontReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.LineReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.FillReference>();
@@ -1807,7 +1807,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "txBody")]
+    [SchemaAttr("xdr:txBody")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TextBody : OpenXmlCompositeElement
     {
@@ -1845,7 +1845,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "txBody");
+            builder.SetSchema("xdr:txBody");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BodyProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ListStyle>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Paragraph>();
@@ -1900,7 +1900,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "nvCxnSpPr")]
+    [SchemaAttr("xdr:nvCxnSpPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElement
     {
@@ -1938,7 +1938,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "nvCxnSpPr");
+            builder.SetSchema("xdr:nvCxnSpPr");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectorShapeDrawingProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -1991,7 +1991,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "nvPicPr")]
+    [SchemaAttr("xdr:nvPicPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     {
@@ -2029,7 +2029,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "nvPicPr");
+            builder.SetSchema("xdr:nvPicPr");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureDrawingProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -2084,7 +2084,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "blipFill")]
+    [SchemaAttr("xdr:blipFill")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class BlipFill : OpenXmlCompositeElement
     {
@@ -2126,7 +2126,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rotWithShape")]
+        [SchemaAttr("rotWithShape")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? RotateWithShape
@@ -2138,13 +2138,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "blipFill");
+            builder.SetSchema("xdr:blipFill");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Blip>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SourceRectangle>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Stretch>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Tile>();
             builder.AddElement<BlipFill>()
-.AddAttribute(0, "rotWithShape", a => a.RotateWithShape);
+.AddAttribute("rotWithShape", a => a.RotateWithShape);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Blip), 0, 1),
@@ -2203,7 +2203,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "nvGraphicFramePr")]
+    [SchemaAttr("xdr:nvGraphicFramePr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     {
@@ -2241,7 +2241,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "nvGraphicFramePr");
+            builder.SetSchema("xdr:nvGraphicFramePr");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameDrawingProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -2294,7 +2294,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "xfrm")]
+    [SchemaAttr("xdr:xfrm")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Transform : OpenXmlCompositeElement
     {
@@ -2336,7 +2336,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rot")]
+        [SchemaAttr("rot")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? Rotation
@@ -2352,7 +2352,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "flipH")]
+        [SchemaAttr("flipH")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? HorizontalFlip
@@ -2368,7 +2368,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "flipV")]
+        [SchemaAttr("flipV")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? VerticalFlip
@@ -2380,13 +2380,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "xfrm");
+            builder.SetSchema("xdr:xfrm");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
             builder.AddElement<Transform>()
-.AddAttribute(0, "rot", a => a.Rotation)
-.AddAttribute(0, "flipH", a => a.HorizontalFlip)
-.AddAttribute(0, "flipV", a => a.VerticalFlip);
+.AddAttribute("rot", a => a.Rotation)
+.AddAttribute("flipH", a => a.HorizontalFlip)
+.AddAttribute("flipV", a => a.VerticalFlip);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0, 1),
@@ -2430,7 +2430,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:col.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "col")]
+    [SchemaAttr("xdr:col")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColumnId : OpenXmlLeafTextElement
     {
@@ -2458,7 +2458,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
-            builder.SetSchema(18, "col");
+            builder.SetSchema("xdr:col");
         }
 
         /// <inheritdoc/>
@@ -2471,7 +2471,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:colOff.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "colOff")]
+    [SchemaAttr("xdr:colOff")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColumnOffset : OpenXmlLeafTextElement
     {
@@ -2499,7 +2499,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Int64Value>(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-            builder.SetSchema(18, "colOff");
+            builder.SetSchema("xdr:colOff");
         }
 
         /// <inheritdoc/>
@@ -2512,7 +2512,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:rowOff.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "rowOff")]
+    [SchemaAttr("xdr:rowOff")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RowOffset : OpenXmlLeafTextElement
     {
@@ -2540,7 +2540,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Int64Value>(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-            builder.SetSchema(18, "rowOff");
+            builder.SetSchema("xdr:rowOff");
         }
 
         /// <inheritdoc/>
@@ -2553,7 +2553,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:row.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "row")]
+    [SchemaAttr("xdr:row")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RowId : OpenXmlLeafTextElement
     {
@@ -2581,7 +2581,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
-            builder.SetSchema(18, "row");
+            builder.SetSchema("xdr:row");
         }
 
         /// <inheritdoc/>
@@ -2603,7 +2603,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "from")]
+    [SchemaAttr("xdr:from")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FromMarker : MarkerType
     {
@@ -2641,7 +2641,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "from");
+            builder.SetSchema("xdr:from");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId), 1, 1),
@@ -2670,7 +2670,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "to")]
+    [SchemaAttr("xdr:to")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ToMarker : MarkerType
     {
@@ -2708,7 +2708,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "to");
+            builder.SetSchema("xdr:to");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId), 1, 1),
@@ -2837,7 +2837,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:clientData.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "clientData")]
+    [SchemaAttr("xdr:clientData")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ClientData : OpenXmlLeafElement
     {
@@ -2855,7 +2855,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fLocksWithSheet")]
+        [SchemaAttr("fLocksWithSheet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? LockWithSheet
@@ -2871,7 +2871,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fPrintsWithSheet")]
+        [SchemaAttr("fPrintsWithSheet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? PrintWithSheet
@@ -2883,10 +2883,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "clientData");
+            builder.SetSchema("xdr:clientData");
             builder.AddElement<ClientData>()
-.AddAttribute(0, "fLocksWithSheet", a => a.LockWithSheet)
-.AddAttribute(0, "fPrintsWithSheet", a => a.PrintWithSheet);
+.AddAttribute("fLocksWithSheet", a => a.LockWithSheet)
+.AddAttribute("fPrintsWithSheet", a => a.PrintWithSheet);
         }
 
         /// <inheritdoc/>
@@ -2899,7 +2899,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:ext.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "ext")]
+    [SchemaAttr("xdr:ext")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Extent : OpenXmlLeafElement
     {
@@ -2917,7 +2917,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "cx")]
+        [SchemaAttr("cx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int64Value? Cx
@@ -2933,7 +2933,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "cy")]
+        [SchemaAttr("cy")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int64Value? Cy
@@ -2945,17 +2945,17 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "ext");
+            builder.SetSchema("xdr:ext");
             builder.AddElement<Extent>()
-.AddAttribute(0, "cx", a => a.Cx, aBuilder =>
+.AddAttribute("cx", a => a.Cx, aBuilder =>
 {
-   aBuilder.AddValidator(RequiredValidator.Instance);
-   aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+  aBuilder.AddValidator(RequiredValidator.Instance);
+  aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
 })
-.AddAttribute(0, "cy", a => a.Cy, aBuilder =>
+.AddAttribute("cy", a => a.Cy, aBuilder =>
 {
-   aBuilder.AddValidator(RequiredValidator.Instance);
-   aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+  aBuilder.AddValidator(RequiredValidator.Instance);
+  aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
 });
         }
 
@@ -2969,7 +2969,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:pos.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "pos")]
+    [SchemaAttr("xdr:pos")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Position : OpenXmlLeafElement
     {
@@ -2987,7 +2987,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "x")]
+        [SchemaAttr("x")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int64Value? X
@@ -3003,7 +3003,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "y")]
+        [SchemaAttr("y")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int64Value? Y
@@ -3015,17 +3015,17 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "pos");
+            builder.SetSchema("xdr:pos");
             builder.AddElement<Position>()
-.AddAttribute(0, "x", a => a.X, aBuilder =>
+.AddAttribute("x", a => a.X, aBuilder =>
 {
-   aBuilder.AddValidator(RequiredValidator.Instance);
-   aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+  aBuilder.AddValidator(RequiredValidator.Instance);
+  aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
 })
-.AddAttribute(0, "y", a => a.Y, aBuilder =>
+.AddAttribute("y", a => a.Y, aBuilder =>
 {
-   aBuilder.AddValidator(RequiredValidator.Instance);
-   aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+  aBuilder.AddValidator(RequiredValidator.Instance);
+  aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
 });
         }
 
@@ -3047,7 +3047,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "cNvPr")]
+    [SchemaAttr("xdr:cNvPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
@@ -3089,7 +3089,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Id
@@ -3105,7 +3105,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "name")]
+        [SchemaAttr("name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -3121,7 +3121,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "descr")]
+        [SchemaAttr("descr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Description
@@ -3137,7 +3137,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "hidden")]
+        [SchemaAttr("hidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Hidden
@@ -3153,7 +3153,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "title")]
+        [SchemaAttr("title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Title
@@ -3165,22 +3165,22 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "cNvPr");
+            builder.SetSchema("xdr:cNvPr");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
             builder.AddElement<NonVisualDrawingProperties>()
-.AddAttribute(0, "id", a => a.Id, aBuilder =>
+.AddAttribute("id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "name", a => a.Name, aBuilder =>
+.AddAttribute("name", a => a.Name, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "descr", a => a.Description)
-.AddAttribute(0, "hidden", a => a.Hidden)
-.AddAttribute(0, "title", a => a.Title);
+.AddAttribute("descr", a => a.Description)
+.AddAttribute("hidden", a => a.Hidden)
+.AddAttribute("title", a => a.Title);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
@@ -3246,7 +3246,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "cNvSpPr")]
+    [SchemaAttr("xdr:cNvSpPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     {
@@ -3288,7 +3288,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "txBox")]
+        [SchemaAttr("txBox")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? TextBox
@@ -3300,11 +3300,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "cNvSpPr");
+            builder.SetSchema("xdr:cNvSpPr");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapeLocks>();
             builder.AddElement<NonVisualShapeDrawingProperties>()
-.AddAttribute(0, "txBox", a => a.TextBox);
+.AddAttribute("txBox", a => a.TextBox);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeLocks), 0, 1),
@@ -3357,7 +3357,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "cNvCxnSpPr")]
+    [SchemaAttr("xdr:cNvCxnSpPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlCompositeElement
     {
@@ -3395,7 +3395,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "cNvCxnSpPr");
+            builder.SetSchema("xdr:cNvCxnSpPr");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.StartConnection>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EndConnection>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks>();
@@ -3478,7 +3478,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "cNvPicPr")]
+    [SchemaAttr("xdr:cNvPicPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     {
@@ -3520,7 +3520,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "preferRelativeResize")]
+        [SchemaAttr("preferRelativeResize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? PreferRelativeResize
@@ -3532,11 +3532,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "cNvPicPr");
+            builder.SetSchema("xdr:cNvPicPr");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.PictureLocks>();
             builder.AddElement<NonVisualPictureDrawingProperties>()
-.AddAttribute(0, "preferRelativeResize", a => a.PreferRelativeResize);
+.AddAttribute("preferRelativeResize", a => a.PreferRelativeResize);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PictureLocks), 0, 1),
@@ -3587,7 +3587,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "cNvGraphicFramePr")]
+    [SchemaAttr("xdr:cNvGraphicFramePr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement
     {
@@ -3625,7 +3625,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "cNvGraphicFramePr");
+            builder.SetSchema("xdr:cNvGraphicFramePr");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -3678,7 +3678,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "cNvGrpSpPr")]
+    [SchemaAttr("xdr:cNvGrpSpPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElement
     {
@@ -3716,7 +3716,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "cNvGrpSpPr");
+            builder.SetSchema("xdr:cNvGrpSpPr");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -3769,7 +3769,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "nvGrpSpPr")]
+    [SchemaAttr("xdr:nvGrpSpPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
     {
@@ -3807,7 +3807,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "nvGrpSpPr");
+            builder.SetSchema("xdr:nvGrpSpPr");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeDrawingProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -3869,7 +3869,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(18, "grpSpPr")]
+    [SchemaAttr("xdr:grpSpPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class GroupShapeProperties : OpenXmlCompositeElement
     {
@@ -3911,7 +3911,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "bwMode")]
+        [SchemaAttr("bwMode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
@@ -3923,7 +3923,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(18, "grpSpPr");
+            builder.SetSchema("xdr:grpSpPr");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
@@ -3936,7 +3936,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddElement<GroupShapeProperties>()
-.AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+.AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });

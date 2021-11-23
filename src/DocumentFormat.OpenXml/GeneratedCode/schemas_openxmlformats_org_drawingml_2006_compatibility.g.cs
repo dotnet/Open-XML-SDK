@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
     /// <para>When the object is serialized out as xml, it's qualified name is comp:legacyDrawing.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(13, "legacyDrawing")]
+    [SchemaAttr("comp:legacyDrawing")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class LegacyDrawing : OpenXmlLeafElement
     {
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "spid")]
+        [SchemaAttr("spid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ShapeId
@@ -52,9 +52,9 @@ namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(13, "legacyDrawing");
+            builder.SetSchema("comp:legacyDrawing");
             builder.AddElement<LegacyDrawing>()
-.AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
+.AddAttribute("spid", a => a.ShapeId, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });

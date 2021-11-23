@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.LegacyCompatibility
     /// <para>When the object is serialized out as xml, it's qualified name is com14:compatSp.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(63, "compatSp")]
+    [SchemaAttr("com14:compatSp")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CompatibilityShape : OpenXmlLeafElement
     {
@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.LegacyCompatibility
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "spid")]
+        [SchemaAttr("spid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ShapeId
@@ -51,10 +51,10 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.LegacyCompatibility
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(63, "compatSp");
+            builder.SetSchema("com14:compatSp");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<CompatibilityShape>()
-.AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
+.AddAttribute("spid", a => a.ShapeId, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });

@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(20, "datastoreItem")]
+    [SchemaAttr("ds:datastoreItem")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataStoreItem : OpenXmlPartRootElement
     {
@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(20, "itemID")]
+        [SchemaAttr("ds:itemID")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ItemId
@@ -83,10 +83,10 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(20, "datastoreItem");
+            builder.SetSchema("ds:datastoreItem");
             builder.AddChild<DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences>();
             builder.AddElement<DataStoreItem>()
-.AddAttribute(20, "itemID", a => a.ItemId, aBuilder =>
+.AddAttribute("ds:itemID", a => a.ItemId, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
@@ -151,7 +151,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is ds:schemaRef.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(20, "schemaRef")]
+    [SchemaAttr("ds:schemaRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SchemaReference : OpenXmlLeafElement
     {
@@ -172,7 +172,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(20, "uri")]
+        [SchemaAttr("ds:uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uri
@@ -184,9 +184,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(20, "schemaRef");
+            builder.SetSchema("ds:schemaRef");
             builder.AddElement<SchemaReference>()
-.AddAttribute(20, "uri", a => a.Uri, aBuilder =>
+.AddAttribute("ds:uri", a => a.Uri, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -208,7 +208,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(20, "schemaRefs")]
+    [SchemaAttr("ds:schemaRefs")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SchemaReferences : OpenXmlCompositeElement
     {
@@ -246,7 +246,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(20, "schemaRefs");
+            builder.SetSchema("ds:schemaRefs");
             builder.AddChild<DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReference>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {

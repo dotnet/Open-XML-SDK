@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(134, "refreshIntervals")]
+    [SchemaAttr("xlrvr:refreshIntervals")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RichValueRefreshIntervals : OpenXmlCompositeElement
     {
@@ -64,7 +64,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(134, "refreshIntervals");
+            builder.SetSchema("xlrvr:refreshIntervals");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals.RichValueRefreshInterval>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -83,7 +83,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals
     /// <para>When the object is serialized out as xml, it's qualified name is xlrvr:refreshInterval.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(134, "refreshInterval")]
+    [SchemaAttr("xlrvr:refreshInterval")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RichValueRefreshInterval : OpenXmlLeafElement
     {
@@ -101,7 +101,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "resourceIdInt")]
+        [SchemaAttr("resourceIdInt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? ResourceIdInt
@@ -117,7 +117,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "resourceIdStr")]
+        [SchemaAttr("resourceIdStr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ResourceIdStr
@@ -133,7 +133,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "interval")]
+        [SchemaAttr("interval")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? Interval
@@ -145,12 +145,12 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(134, "refreshInterval");
+            builder.SetSchema("xlrvr:refreshInterval");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<RichValueRefreshInterval>()
-.AddAttribute(0, "resourceIdInt", a => a.ResourceIdInt)
-.AddAttribute(0, "resourceIdStr", a => a.ResourceIdStr)
-.AddAttribute(0, "interval", a => a.Interval, aBuilder =>
+.AddAttribute("resourceIdInt", a => a.ResourceIdInt)
+.AddAttribute("resourceIdStr", a => a.ResourceIdStr)
+.AddAttribute("interval", a => a.Interval, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });

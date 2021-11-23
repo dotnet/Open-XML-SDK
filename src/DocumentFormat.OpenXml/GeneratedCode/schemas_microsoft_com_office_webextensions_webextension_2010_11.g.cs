@@ -33,7 +33,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(66, "webextension")]
+    [SchemaAttr("we:webextension")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebExtension : OpenXmlPartRootElement
     {
@@ -75,7 +75,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -91,7 +91,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "frozen")]
+        [SchemaAttr("frozen")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Frozen
@@ -103,7 +103,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(66, "webextension");
+            builder.SetSchema("we:webextension");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.Snapshot>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList>();
@@ -112,11 +112,11 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
             builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionReferenceList>();
             builder.AddElement<WebExtension>()
-.AddAttribute(0, "id", a => a.Id, aBuilder =>
+.AddAttribute("id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "frozen", a => a.Frozen);
+.AddAttribute("frozen", a => a.Frozen);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference), 1, 1, version: FileFormatVersions.Office2013),
@@ -248,7 +248,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is we:webextensionref.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(66, "webextensionref")]
+    [SchemaAttr("we:webextensionref")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebExtensionReference : OpenXmlLeafElement
     {
@@ -269,7 +269,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "id")]
+        [SchemaAttr("r:id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -281,10 +281,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(66, "webextensionref");
+            builder.SetSchema("we:webextensionref");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<WebExtensionReference>()
-.AddAttribute(19, "id", a => a.Id, aBuilder =>
+.AddAttribute("r:id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -300,7 +300,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is we:property.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(66, "property")]
+    [SchemaAttr("we:property")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebExtensionProperty : OpenXmlLeafElement
     {
@@ -318,7 +318,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "name")]
+        [SchemaAttr("name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -334,7 +334,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "value")]
+        [SchemaAttr("value")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Value
@@ -346,14 +346,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(66, "property");
+            builder.SetSchema("we:property");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<WebExtensionProperty>()
-.AddAttribute(0, "name", a => a.Name, aBuilder =>
+.AddAttribute("name", a => a.Name, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "value", a => a.Value, aBuilder =>
+.AddAttribute("value", a => a.Value, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -375,7 +375,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(66, "extLst")]
+    [SchemaAttr("we:extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
@@ -413,7 +413,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(66, "extLst");
+            builder.SetSchema("we:extLst");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -444,7 +444,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(66, "binding")]
+    [SchemaAttr("we:binding")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebExtensionBinding : OpenXmlCompositeElement
     {
@@ -486,7 +486,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -502,7 +502,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "type")]
+        [SchemaAttr("type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Type
@@ -518,7 +518,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "appref")]
+        [SchemaAttr("appref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? AppReference
@@ -530,19 +530,19 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(66, "binding");
+            builder.SetSchema("we:binding");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList>();
             builder.AddElement<WebExtensionBinding>()
-.AddAttribute(0, "id", a => a.Id, aBuilder =>
+.AddAttribute("id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "type", a => a.Type, aBuilder =>
+.AddAttribute("type", a => a.Type, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "appref", a => a.AppReference, aBuilder =>
+.AddAttribute("appref", a => a.AppReference, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -581,7 +581,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(66, "reference")]
+    [SchemaAttr("we:reference")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebExtensionStoreReference : OpenXmlCompositeElement
     {
@@ -623,7 +623,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -639,7 +639,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "version")]
+        [SchemaAttr("version")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Version
@@ -655,7 +655,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "store")]
+        [SchemaAttr("store")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Store
@@ -671,7 +671,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "storeType")]
+        [SchemaAttr("storeType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? StoreType
@@ -683,20 +683,20 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(66, "reference");
+            builder.SetSchema("we:reference");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList>();
             builder.AddElement<WebExtensionStoreReference>()
-.AddAttribute(0, "id", a => a.Id, aBuilder =>
+.AddAttribute("id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "version", a => a.Version, aBuilder =>
+.AddAttribute("version", a => a.Version, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "store", a => a.Store)
-.AddAttribute(0, "storeType", a => a.StoreType);
+.AddAttribute("store", a => a.Store)
+.AddAttribute("storeType", a => a.StoreType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
@@ -733,7 +733,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(66, "alternateReferences")]
+    [SchemaAttr("we:alternateReferences")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebExtensionReferenceList : OpenXmlCompositeElement
     {
@@ -771,7 +771,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(66, "alternateReferences");
+            builder.SetSchema("we:alternateReferences");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -796,7 +796,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(66, "properties")]
+    [SchemaAttr("we:properties")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebExtensionPropertyBag : OpenXmlCompositeElement
     {
@@ -834,7 +834,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(66, "properties");
+            builder.SetSchema("we:properties");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionProperty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -859,7 +859,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(66, "bindings")]
+    [SchemaAttr("we:bindings")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebExtensionBindingList : OpenXmlCompositeElement
     {
@@ -897,7 +897,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(66, "bindings");
+            builder.SetSchema("we:bindings");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionBinding>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -939,7 +939,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(66, "snapshot")]
+    [SchemaAttr("we:snapshot")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Snapshot : OpenXmlCompositeElement
     {
@@ -984,7 +984,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "embed")]
+        [SchemaAttr("r:embed")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Embed
@@ -1003,7 +1003,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "link")]
+        [SchemaAttr("r:link")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Link
@@ -1019,7 +1019,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "cstate")]
+        [SchemaAttr("cstate")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues>? CompressionState
@@ -1031,7 +1031,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(66, "snapshot");
+            builder.SetSchema("we:snapshot");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaBiLevel>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaCeiling>();
@@ -1052,9 +1052,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.LuminanceEffect>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.TintEffect>();
             builder.AddElement<Snapshot>()
-.AddAttribute(19, "embed", a => a.Embed)
-.AddAttribute(19, "link", a => a.Link)
-.AddAttribute(0, "cstate", a => a.CompressionState, aBuilder =>
+.AddAttribute("r:embed", a => a.Embed)
+.AddAttribute("r:link", a => a.Link)
+.AddAttribute("cstate", a => a.CompressionState, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });

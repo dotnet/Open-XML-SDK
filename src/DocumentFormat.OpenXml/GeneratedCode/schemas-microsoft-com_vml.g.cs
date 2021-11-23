@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Vml
     /// <para>When the object is serialized out as xml, it's qualified name is v:path.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(26, "path")]
+    [SchemaAttr("v:path")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Path : OpenXmlLeafElement
     {
@@ -44,7 +44,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -60,7 +60,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "v")]
+        [SchemaAttr("v")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Value
@@ -76,7 +76,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "limo")]
+        [SchemaAttr("limo")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Limo
@@ -92,7 +92,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "textboxrect")]
+        [SchemaAttr("textboxrect")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? TextboxRectangle
@@ -108,7 +108,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fillok")]
+        [SchemaAttr("fillok")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowFill
@@ -124,7 +124,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "strokeok")]
+        [SchemaAttr("strokeok")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowStroke
@@ -140,7 +140,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "shadowok")]
+        [SchemaAttr("shadowok")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowShading
@@ -156,7 +156,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "arrowok")]
+        [SchemaAttr("arrowok")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? ShowArrowhead
@@ -172,7 +172,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "gradientshapeok")]
+        [SchemaAttr("gradientshapeok")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowGradientShape
@@ -188,7 +188,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "textpathok")]
+        [SchemaAttr("textpathok")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowTextPath
@@ -204,7 +204,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "insetpenok")]
+        [SchemaAttr("insetpenok")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowInsetPen
@@ -223,7 +223,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "connecttype")]
+        [SchemaAttr("o:connecttype")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectValues>? ConnectionPointType
@@ -242,7 +242,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "connectlocs")]
+        [SchemaAttr("o:connectlocs")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ConnectionPoints
@@ -261,7 +261,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "connectangles")]
+        [SchemaAttr("o:connectangles")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ConnectAngles
@@ -280,7 +280,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "extrusionok")]
+        [SchemaAttr("o:extrusionok")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowExtrusion
@@ -292,23 +292,23 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(26, "path");
+            builder.SetSchema("v:path");
             builder.AddElement<Path>()
-.AddAttribute(0, "id", a => a.Id)
-.AddAttribute(0, "v", a => a.Value)
-.AddAttribute(0, "limo", a => a.Limo)
-.AddAttribute(0, "textboxrect", a => a.TextboxRectangle)
-.AddAttribute(0, "fillok", a => a.AllowFill)
-.AddAttribute(0, "strokeok", a => a.AllowStroke)
-.AddAttribute(0, "shadowok", a => a.AllowShading)
-.AddAttribute(0, "arrowok", a => a.ShowArrowhead)
-.AddAttribute(0, "gradientshapeok", a => a.AllowGradientShape)
-.AddAttribute(0, "textpathok", a => a.AllowTextPath)
-.AddAttribute(0, "insetpenok", a => a.AllowInsetPen)
-.AddAttribute(27, "connecttype", a => a.ConnectionPointType)
-.AddAttribute(27, "connectlocs", a => a.ConnectionPoints)
-.AddAttribute(27, "connectangles", a => a.ConnectAngles)
-.AddAttribute(27, "extrusionok", a => a.AllowExtrusion);
+.AddAttribute("id", a => a.Id)
+.AddAttribute("v", a => a.Value)
+.AddAttribute("limo", a => a.Limo)
+.AddAttribute("textboxrect", a => a.TextboxRectangle)
+.AddAttribute("fillok", a => a.AllowFill)
+.AddAttribute("strokeok", a => a.AllowStroke)
+.AddAttribute("shadowok", a => a.AllowShading)
+.AddAttribute("arrowok", a => a.ShowArrowhead)
+.AddAttribute("gradientshapeok", a => a.AllowGradientShape)
+.AddAttribute("textpathok", a => a.AllowTextPath)
+.AddAttribute("insetpenok", a => a.AllowInsetPen)
+.AddAttribute("o:connecttype", a => a.ConnectionPointType)
+.AddAttribute("o:connectlocs", a => a.ConnectionPoints)
+.AddAttribute("o:connectangles", a => a.ConnectAngles)
+.AddAttribute("o:extrusionok", a => a.AllowExtrusion);
             builder.AddConstraint(new UniqueAttributeValueConstraint(":id", true, null));
         }
 
@@ -328,7 +328,7 @@ namespace DocumentFormat.OpenXml.Vml
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(26, "formulas")]
+    [SchemaAttr("v:formulas")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Formulas : OpenXmlCompositeElement
     {
@@ -366,7 +366,7 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(26, "formulas");
+            builder.SetSchema("v:formulas");
             builder.AddChild<DocumentFormat.OpenXml.Vml.Formula>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -390,7 +390,7 @@ namespace DocumentFormat.OpenXml.Vml
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(26, "handles")]
+    [SchemaAttr("v:handles")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShapeHandles : OpenXmlCompositeElement
     {
@@ -428,7 +428,7 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(26, "handles");
+            builder.SetSchema("v:handles");
             builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandle>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -452,7 +452,7 @@ namespace DocumentFormat.OpenXml.Vml
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(26, "fill")]
+    [SchemaAttr("v:fill")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Fill : OpenXmlCompositeElement
     {
@@ -494,7 +494,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -510,7 +510,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "type")]
+        [SchemaAttr("type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.FillTypeValues>? Type
@@ -526,7 +526,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "on")]
+        [SchemaAttr("on")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? On
@@ -542,7 +542,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "color")]
+        [SchemaAttr("color")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Color
@@ -558,7 +558,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "opacity")]
+        [SchemaAttr("opacity")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Opacity
@@ -574,7 +574,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "color2")]
+        [SchemaAttr("color2")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Color2
@@ -590,7 +590,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "src")]
+        [SchemaAttr("src")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Source
@@ -609,7 +609,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "href")]
+        [SchemaAttr("o:href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Href
@@ -628,7 +628,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "althref")]
+        [SchemaAttr("o:althref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? AlternateImageReference
@@ -644,7 +644,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "size")]
+        [SchemaAttr("size")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Size
@@ -660,7 +660,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "origin")]
+        [SchemaAttr("origin")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Origin
@@ -676,7 +676,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "position")]
+        [SchemaAttr("position")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Position
@@ -692,7 +692,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "aspect")]
+        [SchemaAttr("aspect")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues>? Aspect
@@ -708,7 +708,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "colors")]
+        [SchemaAttr("colors")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Colors
@@ -724,7 +724,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "angle")]
+        [SchemaAttr("angle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public DecimalValue? Angle
@@ -740,7 +740,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "alignshape")]
+        [SchemaAttr("alignshape")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AlignShape
@@ -756,7 +756,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "focus")]
+        [SchemaAttr("focus")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Focus
@@ -772,7 +772,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "focussize")]
+        [SchemaAttr("focussize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? FocusSize
@@ -788,7 +788,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "focusposition")]
+        [SchemaAttr("focusposition")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? FocusPosition
@@ -804,7 +804,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "method")]
+        [SchemaAttr("method")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.FillMethodValues>? Method
@@ -823,7 +823,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "detectmouseclick")]
+        [SchemaAttr("o:detectmouseclick")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? DetectMouseClick
@@ -842,7 +842,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "title")]
+        [SchemaAttr("o:title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Title
@@ -861,7 +861,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "opacity2")]
+        [SchemaAttr("o:opacity2")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Opacity2
@@ -877,7 +877,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "recolor")]
+        [SchemaAttr("recolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Recolor
@@ -893,7 +893,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rotate")]
+        [SchemaAttr("rotate")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Rotate
@@ -912,7 +912,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "id")]
+        [SchemaAttr("r:id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? RelationshipId
@@ -924,35 +924,35 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(26, "fill");
+            builder.SetSchema("v:fill");
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties>();
             builder.AddElement<Fill>()
-.AddAttribute(0, "id", a => a.Id)
-.AddAttribute(0, "type", a => a.Type)
-.AddAttribute(0, "on", a => a.On)
-.AddAttribute(0, "color", a => a.Color)
-.AddAttribute(0, "opacity", a => a.Opacity)
-.AddAttribute(0, "color2", a => a.Color2)
-.AddAttribute(0, "src", a => a.Source)
-.AddAttribute(27, "href", a => a.Href)
-.AddAttribute(27, "althref", a => a.AlternateImageReference)
-.AddAttribute(0, "size", a => a.Size)
-.AddAttribute(0, "origin", a => a.Origin)
-.AddAttribute(0, "position", a => a.Position)
-.AddAttribute(0, "aspect", a => a.Aspect)
-.AddAttribute(0, "colors", a => a.Colors)
-.AddAttribute(0, "angle", a => a.Angle)
-.AddAttribute(0, "alignshape", a => a.AlignShape)
-.AddAttribute(0, "focus", a => a.Focus)
-.AddAttribute(0, "focussize", a => a.FocusSize)
-.AddAttribute(0, "focusposition", a => a.FocusPosition)
-.AddAttribute(0, "method", a => a.Method)
-.AddAttribute(27, "detectmouseclick", a => a.DetectMouseClick)
-.AddAttribute(27, "title", a => a.Title)
-.AddAttribute(27, "opacity2", a => a.Opacity2)
-.AddAttribute(0, "recolor", a => a.Recolor)
-.AddAttribute(0, "rotate", a => a.Rotate)
-.AddAttribute(19, "id", a => a.RelationshipId);
+.AddAttribute("id", a => a.Id)
+.AddAttribute("type", a => a.Type)
+.AddAttribute("on", a => a.On)
+.AddAttribute("color", a => a.Color)
+.AddAttribute("opacity", a => a.Opacity)
+.AddAttribute("color2", a => a.Color2)
+.AddAttribute("src", a => a.Source)
+.AddAttribute("o:href", a => a.Href)
+.AddAttribute("o:althref", a => a.AlternateImageReference)
+.AddAttribute("size", a => a.Size)
+.AddAttribute("origin", a => a.Origin)
+.AddAttribute("position", a => a.Position)
+.AddAttribute("aspect", a => a.Aspect)
+.AddAttribute("colors", a => a.Colors)
+.AddAttribute("angle", a => a.Angle)
+.AddAttribute("alignshape", a => a.AlignShape)
+.AddAttribute("focus", a => a.Focus)
+.AddAttribute("focussize", a => a.FocusSize)
+.AddAttribute("focusposition", a => a.FocusPosition)
+.AddAttribute("method", a => a.Method)
+.AddAttribute("o:detectmouseclick", a => a.DetectMouseClick)
+.AddAttribute("o:title", a => a.Title)
+.AddAttribute("o:opacity2", a => a.Opacity2)
+.AddAttribute("recolor", a => a.Recolor)
+.AddAttribute("rotate", a => a.Rotate)
+.AddAttribute("r:id", a => a.RelationshipId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties), 0, 1)
@@ -999,7 +999,7 @@ namespace DocumentFormat.OpenXml.Vml
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(26, "stroke")]
+    [SchemaAttr("v:stroke")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Stroke : OpenXmlCompositeElement
     {
@@ -1041,7 +1041,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -1057,7 +1057,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "on")]
+        [SchemaAttr("on")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? On
@@ -1073,7 +1073,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "weight")]
+        [SchemaAttr("weight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Weight
@@ -1089,7 +1089,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "color")]
+        [SchemaAttr("color")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Color
@@ -1105,7 +1105,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "opacity")]
+        [SchemaAttr("opacity")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Opacity
@@ -1121,7 +1121,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "linestyle")]
+        [SchemaAttr("linestyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.StrokeLineStyleValues>? LineStyle
@@ -1137,7 +1137,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "miterlimit")]
+        [SchemaAttr("miterlimit")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Miterlimit
@@ -1153,7 +1153,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "joinstyle")]
+        [SchemaAttr("joinstyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.StrokeJoinStyleValues>? JoinStyle
@@ -1169,7 +1169,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "endcap")]
+        [SchemaAttr("endcap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.StrokeEndCapValues>? EndCap
@@ -1185,7 +1185,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "dashstyle")]
+        [SchemaAttr("dashstyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? DashStyle
@@ -1201,7 +1201,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "filltype")]
+        [SchemaAttr("filltype")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.StrokeFillTypeValues>? FillType
@@ -1217,7 +1217,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "src")]
+        [SchemaAttr("src")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Source
@@ -1233,7 +1233,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "imageaspect")]
+        [SchemaAttr("imageaspect")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues>? ImageAspect
@@ -1249,7 +1249,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "imagesize")]
+        [SchemaAttr("imagesize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ImageSize
@@ -1265,7 +1265,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "imagealignshape")]
+        [SchemaAttr("imagealignshape")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? ImageAlignShape
@@ -1281,7 +1281,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "color2")]
+        [SchemaAttr("color2")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Color2
@@ -1297,7 +1297,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "startarrow")]
+        [SchemaAttr("startarrow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues>? StartArrow
@@ -1313,7 +1313,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "startarrowwidth")]
+        [SchemaAttr("startarrowwidth")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues>? StartArrowWidth
@@ -1329,7 +1329,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "startarrowlength")]
+        [SchemaAttr("startarrowlength")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues>? StartArrowLength
@@ -1345,7 +1345,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "endarrow")]
+        [SchemaAttr("endarrow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues>? EndArrow
@@ -1361,7 +1361,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "endarrowwidth")]
+        [SchemaAttr("endarrowwidth")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues>? EndArrowWidth
@@ -1377,7 +1377,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "endarrowlength")]
+        [SchemaAttr("endarrowlength")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues>? EndArrowLength
@@ -1396,7 +1396,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "href")]
+        [SchemaAttr("o:href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Href
@@ -1415,7 +1415,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "althref")]
+        [SchemaAttr("o:althref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? AlternateImageReference
@@ -1434,7 +1434,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "title")]
+        [SchemaAttr("o:title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Title
@@ -1453,7 +1453,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "forcedash")]
+        [SchemaAttr("o:forcedash")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? ForceDash
@@ -1472,7 +1472,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "id")]
+        [SchemaAttr("r:id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? RelationshipId
@@ -1488,7 +1488,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "insetpen")]
+        [SchemaAttr("insetpen")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Insetpen
@@ -1500,41 +1500,41 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(26, "stroke");
+            builder.SetSchema("v:stroke");
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.LeftStroke>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.TopStroke>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.RightStroke>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.BottomStroke>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ColumnStroke>();
             builder.AddElement<Stroke>()
-.AddAttribute(0, "id", a => a.Id)
-.AddAttribute(0, "on", a => a.On)
-.AddAttribute(0, "weight", a => a.Weight)
-.AddAttribute(0, "color", a => a.Color)
-.AddAttribute(0, "opacity", a => a.Opacity)
-.AddAttribute(0, "linestyle", a => a.LineStyle)
-.AddAttribute(0, "miterlimit", a => a.Miterlimit)
-.AddAttribute(0, "joinstyle", a => a.JoinStyle)
-.AddAttribute(0, "endcap", a => a.EndCap)
-.AddAttribute(0, "dashstyle", a => a.DashStyle)
-.AddAttribute(0, "filltype", a => a.FillType)
-.AddAttribute(0, "src", a => a.Source)
-.AddAttribute(0, "imageaspect", a => a.ImageAspect)
-.AddAttribute(0, "imagesize", a => a.ImageSize)
-.AddAttribute(0, "imagealignshape", a => a.ImageAlignShape)
-.AddAttribute(0, "color2", a => a.Color2)
-.AddAttribute(0, "startarrow", a => a.StartArrow)
-.AddAttribute(0, "startarrowwidth", a => a.StartArrowWidth)
-.AddAttribute(0, "startarrowlength", a => a.StartArrowLength)
-.AddAttribute(0, "endarrow", a => a.EndArrow)
-.AddAttribute(0, "endarrowwidth", a => a.EndArrowWidth)
-.AddAttribute(0, "endarrowlength", a => a.EndArrowLength)
-.AddAttribute(27, "href", a => a.Href)
-.AddAttribute(27, "althref", a => a.AlternateImageReference)
-.AddAttribute(27, "title", a => a.Title)
-.AddAttribute(27, "forcedash", a => a.ForceDash)
-.AddAttribute(19, "id", a => a.RelationshipId)
-.AddAttribute(0, "insetpen", a => a.Insetpen);
+.AddAttribute("id", a => a.Id)
+.AddAttribute("on", a => a.On)
+.AddAttribute("weight", a => a.Weight)
+.AddAttribute("color", a => a.Color)
+.AddAttribute("opacity", a => a.Opacity)
+.AddAttribute("linestyle", a => a.LineStyle)
+.AddAttribute("miterlimit", a => a.Miterlimit)
+.AddAttribute("joinstyle", a => a.JoinStyle)
+.AddAttribute("endcap", a => a.EndCap)
+.AddAttribute("dashstyle", a => a.DashStyle)
+.AddAttribute("filltype", a => a.FillType)
+.AddAttribute("src", a => a.Source)
+.AddAttribute("imageaspect", a => a.ImageAspect)
+.AddAttribute("imagesize", a => a.ImageSize)
+.AddAttribute("imagealignshape", a => a.ImageAlignShape)
+.AddAttribute("color2", a => a.Color2)
+.AddAttribute("startarrow", a => a.StartArrow)
+.AddAttribute("startarrowwidth", a => a.StartArrowWidth)
+.AddAttribute("startarrowlength", a => a.StartArrowLength)
+.AddAttribute("endarrow", a => a.EndArrow)
+.AddAttribute("endarrowwidth", a => a.EndArrowWidth)
+.AddAttribute("endarrowlength", a => a.EndArrowLength)
+.AddAttribute("o:href", a => a.Href)
+.AddAttribute("o:althref", a => a.AlternateImageReference)
+.AddAttribute("o:title", a => a.Title)
+.AddAttribute("o:forcedash", a => a.ForceDash)
+.AddAttribute("r:id", a => a.RelationshipId)
+.AddAttribute("insetpen", a => a.Insetpen);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.LeftStroke), 0, 1),
@@ -1625,7 +1625,7 @@ namespace DocumentFormat.OpenXml.Vml
     /// <para>When the object is serialized out as xml, it's qualified name is v:shadow.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(26, "shadow")]
+    [SchemaAttr("v:shadow")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Shadow : OpenXmlLeafElement
     {
@@ -1643,7 +1643,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -1659,7 +1659,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "on")]
+        [SchemaAttr("on")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? On
@@ -1675,7 +1675,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "type")]
+        [SchemaAttr("type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.ShadowValues>? Type
@@ -1691,7 +1691,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "obscured")]
+        [SchemaAttr("obscured")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Obscured
@@ -1707,7 +1707,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "color")]
+        [SchemaAttr("color")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Color
@@ -1723,7 +1723,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "opacity")]
+        [SchemaAttr("opacity")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Opacity
@@ -1739,7 +1739,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "offset")]
+        [SchemaAttr("offset")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Offset
@@ -1755,7 +1755,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "color2")]
+        [SchemaAttr("color2")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Color2
@@ -1771,7 +1771,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "offset2")]
+        [SchemaAttr("offset2")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Offset2
@@ -1787,7 +1787,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "origin")]
+        [SchemaAttr("origin")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Origin
@@ -1803,7 +1803,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "matrix")]
+        [SchemaAttr("matrix")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Matrix
@@ -1815,19 +1815,19 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(26, "shadow");
+            builder.SetSchema("v:shadow");
             builder.AddElement<Shadow>()
-.AddAttribute(0, "id", a => a.Id)
-.AddAttribute(0, "on", a => a.On)
-.AddAttribute(0, "type", a => a.Type)
-.AddAttribute(0, "obscured", a => a.Obscured)
-.AddAttribute(0, "color", a => a.Color)
-.AddAttribute(0, "opacity", a => a.Opacity)
-.AddAttribute(0, "offset", a => a.Offset)
-.AddAttribute(0, "color2", a => a.Color2)
-.AddAttribute(0, "offset2", a => a.Offset2)
-.AddAttribute(0, "origin", a => a.Origin)
-.AddAttribute(0, "matrix", a => a.Matrix);
+.AddAttribute("id", a => a.Id)
+.AddAttribute("on", a => a.On)
+.AddAttribute("type", a => a.Type)
+.AddAttribute("obscured", a => a.Obscured)
+.AddAttribute("color", a => a.Color)
+.AddAttribute("opacity", a => a.Opacity)
+.AddAttribute("offset", a => a.Offset)
+.AddAttribute("color2", a => a.Color2)
+.AddAttribute("offset2", a => a.Offset2)
+.AddAttribute("origin", a => a.Origin)
+.AddAttribute("matrix", a => a.Matrix);
             builder.AddConstraint(new UniqueAttributeValueConstraint(":id", true, null));
         }
 
@@ -1847,7 +1847,7 @@ namespace DocumentFormat.OpenXml.Vml
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(26, "textbox")]
+    [SchemaAttr("v:textbox")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TextBox : OpenXmlCompositeElement
     {
@@ -1889,7 +1889,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -1905,7 +1905,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "style")]
+        [SchemaAttr("style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Style
@@ -1921,7 +1921,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "inset")]
+        [SchemaAttr("inset")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Inset
@@ -1940,7 +1940,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "singleclick")]
+        [SchemaAttr("o:singleclick")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? SingleClick
@@ -1952,13 +1952,13 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(26, "textbox");
+            builder.SetSchema("v:textbox");
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextBoxContent>();
             builder.AddElement<TextBox>()
-.AddAttribute(0, "id", a => a.Id)
-.AddAttribute(0, "style", a => a.Style)
-.AddAttribute(0, "inset", a => a.Inset)
-.AddAttribute(27, "singleclick", a => a.SingleClick);
+.AddAttribute("id", a => a.Id)
+.AddAttribute("style", a => a.Style)
+.AddAttribute("inset", a => a.Inset)
+.AddAttribute("o:singleclick", a => a.SingleClick);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent), 0, 1),
@@ -1977,7 +1977,7 @@ namespace DocumentFormat.OpenXml.Vml
     /// <para>When the object is serialized out as xml, it's qualified name is v:textpath.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(26, "textpath")]
+    [SchemaAttr("v:textpath")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TextPath : OpenXmlLeafElement
     {
@@ -1995,7 +1995,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -2011,7 +2011,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "style")]
+        [SchemaAttr("style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Style
@@ -2027,7 +2027,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "on")]
+        [SchemaAttr("on")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? On
@@ -2043,7 +2043,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fitshape")]
+        [SchemaAttr("fitshape")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? FitShape
@@ -2059,7 +2059,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fitpath")]
+        [SchemaAttr("fitpath")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? FitPath
@@ -2075,7 +2075,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "trim")]
+        [SchemaAttr("trim")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Trim
@@ -2091,7 +2091,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "xscale")]
+        [SchemaAttr("xscale")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? XScale
@@ -2107,7 +2107,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "string")]
+        [SchemaAttr("string")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? String
@@ -2119,16 +2119,16 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(26, "textpath");
+            builder.SetSchema("v:textpath");
             builder.AddElement<TextPath>()
-.AddAttribute(0, "id", a => a.Id)
-.AddAttribute(0, "style", a => a.Style)
-.AddAttribute(0, "on", a => a.On)
-.AddAttribute(0, "fitshape", a => a.FitShape)
-.AddAttribute(0, "fitpath", a => a.FitPath)
-.AddAttribute(0, "trim", a => a.Trim)
-.AddAttribute(0, "xscale", a => a.XScale)
-.AddAttribute(0, "string", a => a.String);
+.AddAttribute("id", a => a.Id)
+.AddAttribute("style", a => a.Style)
+.AddAttribute("on", a => a.On)
+.AddAttribute("fitshape", a => a.FitShape)
+.AddAttribute("fitpath", a => a.FitPath)
+.AddAttribute("trim", a => a.Trim)
+.AddAttribute("xscale", a => a.XScale)
+.AddAttribute("string", a => a.String);
             builder.AddConstraint(new UniqueAttributeValueConstraint(":id", true, null));
         }
 
@@ -2142,7 +2142,7 @@ namespace DocumentFormat.OpenXml.Vml
     /// <para>When the object is serialized out as xml, it's qualified name is v:imagedata.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(26, "imagedata")]
+    [SchemaAttr("v:imagedata")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ImageData : OpenXmlLeafElement
     {
@@ -2160,7 +2160,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -2176,7 +2176,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "chromakey")]
+        [SchemaAttr("chromakey")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ChromAKey
@@ -2192,7 +2192,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "cropleft")]
+        [SchemaAttr("cropleft")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CropLeft
@@ -2208,7 +2208,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "croptop")]
+        [SchemaAttr("croptop")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CropTop
@@ -2224,7 +2224,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "cropright")]
+        [SchemaAttr("cropright")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CropRight
@@ -2240,7 +2240,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "cropbottom")]
+        [SchemaAttr("cropbottom")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CropBottom
@@ -2256,7 +2256,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "gain")]
+        [SchemaAttr("gain")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Gain
@@ -2272,7 +2272,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "blacklevel")]
+        [SchemaAttr("blacklevel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BlackLevel
@@ -2288,7 +2288,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "gamma")]
+        [SchemaAttr("gamma")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Gamma
@@ -2304,7 +2304,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "grayscale")]
+        [SchemaAttr("grayscale")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Grayscale
@@ -2320,7 +2320,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "bilevel")]
+        [SchemaAttr("bilevel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? BiLevel
@@ -2336,7 +2336,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "embosscolor")]
+        [SchemaAttr("embosscolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? EmbossColor
@@ -2352,7 +2352,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "recolortarget")]
+        [SchemaAttr("recolortarget")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? RecolorTarget
@@ -2371,7 +2371,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "title")]
+        [SchemaAttr("o:title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Title
@@ -2390,7 +2390,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "detectmouseclick")]
+        [SchemaAttr("o:detectmouseclick")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? DetectMouseClick
@@ -2409,7 +2409,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "relid")]
+        [SchemaAttr("o:relid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? RelId
@@ -2428,7 +2428,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "id")]
+        [SchemaAttr("r:id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? RelationshipId
@@ -2447,7 +2447,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "pict")]
+        [SchemaAttr("r:pict")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Picture
@@ -2466,7 +2466,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "href")]
+        [SchemaAttr("r:href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? RelHref
@@ -2478,27 +2478,27 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(26, "imagedata");
+            builder.SetSchema("v:imagedata");
             builder.AddElement<ImageData>()
-.AddAttribute(0, "id", a => a.Id)
-.AddAttribute(0, "chromakey", a => a.ChromAKey)
-.AddAttribute(0, "cropleft", a => a.CropLeft)
-.AddAttribute(0, "croptop", a => a.CropTop)
-.AddAttribute(0, "cropright", a => a.CropRight)
-.AddAttribute(0, "cropbottom", a => a.CropBottom)
-.AddAttribute(0, "gain", a => a.Gain)
-.AddAttribute(0, "blacklevel", a => a.BlackLevel)
-.AddAttribute(0, "gamma", a => a.Gamma)
-.AddAttribute(0, "grayscale", a => a.Grayscale)
-.AddAttribute(0, "bilevel", a => a.BiLevel)
-.AddAttribute(0, "embosscolor", a => a.EmbossColor)
-.AddAttribute(0, "recolortarget", a => a.RecolorTarget)
-.AddAttribute(27, "title", a => a.Title)
-.AddAttribute(27, "detectmouseclick", a => a.DetectMouseClick)
-.AddAttribute(27, "relid", a => a.RelId)
-.AddAttribute(19, "id", a => a.RelationshipId)
-.AddAttribute(19, "pict", a => a.Picture)
-.AddAttribute(19, "href", a => a.RelHref);
+.AddAttribute("id", a => a.Id)
+.AddAttribute("chromakey", a => a.ChromAKey)
+.AddAttribute("cropleft", a => a.CropLeft)
+.AddAttribute("croptop", a => a.CropTop)
+.AddAttribute("cropright", a => a.CropRight)
+.AddAttribute("cropbottom", a => a.CropBottom)
+.AddAttribute("gain", a => a.Gain)
+.AddAttribute("blacklevel", a => a.BlackLevel)
+.AddAttribute("gamma", a => a.Gamma)
+.AddAttribute("grayscale", a => a.Grayscale)
+.AddAttribute("bilevel", a => a.BiLevel)
+.AddAttribute("embosscolor", a => a.EmbossColor)
+.AddAttribute("recolortarget", a => a.RecolorTarget)
+.AddAttribute("o:title", a => a.Title)
+.AddAttribute("o:detectmouseclick", a => a.DetectMouseClick)
+.AddAttribute("o:relid", a => a.RelId)
+.AddAttribute("r:id", a => a.RelationshipId)
+.AddAttribute("r:pict", a => a.Picture)
+.AddAttribute("r:href", a => a.RelHref);
             builder.AddConstraint(new RelationshipTypeConstraint("r:href", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"));
             builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"));
             builder.AddConstraint(new RelationshipTypeConstraint("r:pict", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"));
@@ -2549,7 +2549,7 @@ namespace DocumentFormat.OpenXml.Vml
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(26, "shape")]
+    [SchemaAttr("v:shape")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Shape : OpenXmlCompositeElement
     {
@@ -2591,7 +2591,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -2607,7 +2607,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "style")]
+        [SchemaAttr("style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Style
@@ -2623,7 +2623,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "href")]
+        [SchemaAttr("href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Href
@@ -2639,7 +2639,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "target")]
+        [SchemaAttr("target")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Target
@@ -2655,7 +2655,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "class")]
+        [SchemaAttr("class")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Class
@@ -2671,7 +2671,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "title")]
+        [SchemaAttr("title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Title
@@ -2687,7 +2687,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "alt")]
+        [SchemaAttr("alt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Alternate
@@ -2703,7 +2703,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "coordsize")]
+        [SchemaAttr("coordsize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CoordinateSize
@@ -2719,7 +2719,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "coordorigin")]
+        [SchemaAttr("coordorigin")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CoordinateOrigin
@@ -2735,7 +2735,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "wrapcoords")]
+        [SchemaAttr("wrapcoords")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? WrapCoordinates
@@ -2751,7 +2751,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "print")]
+        [SchemaAttr("print")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Print
@@ -2770,7 +2770,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "spid")]
+        [SchemaAttr("o:spid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? OptionalString
@@ -2789,7 +2789,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "oned")]
+        [SchemaAttr("o:oned")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Oned
@@ -2808,7 +2808,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "regroupid")]
+        [SchemaAttr("o:regroupid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? RegroupId
@@ -2827,7 +2827,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "doubleclicknotify")]
+        [SchemaAttr("o:doubleclicknotify")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? DoubleClickNotify
@@ -2846,7 +2846,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "button")]
+        [SchemaAttr("o:button")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Button
@@ -2865,7 +2865,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "userhidden")]
+        [SchemaAttr("o:userhidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? UserHidden
@@ -2884,7 +2884,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bullet")]
+        [SchemaAttr("o:bullet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Bullet
@@ -2903,7 +2903,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hr")]
+        [SchemaAttr("o:hr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Horizontal
@@ -2922,7 +2922,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrstd")]
+        [SchemaAttr("o:hrstd")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? HorizontalStandard
@@ -2941,7 +2941,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrnoshade")]
+        [SchemaAttr("o:hrnoshade")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? HorizontalNoShade
@@ -2960,7 +2960,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrpct")]
+        [SchemaAttr("o:hrpct")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public SingleValue? HorizontalPercentage
@@ -2979,7 +2979,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hralign")]
+        [SchemaAttr("o:hralign")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>? HorizontalAlignment
@@ -2998,7 +2998,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "allowincell")]
+        [SchemaAttr("o:allowincell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowInCell
@@ -3017,7 +3017,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "allowoverlap")]
+        [SchemaAttr("o:allowoverlap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowOverlap
@@ -3036,7 +3036,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "userdrawn")]
+        [SchemaAttr("o:userdrawn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? UserDrawn
@@ -3055,7 +3055,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bordertopcolor")]
+        [SchemaAttr("o:bordertopcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderTopColor
@@ -3074,7 +3074,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderleftcolor")]
+        [SchemaAttr("o:borderleftcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderLeftColor
@@ -3093,7 +3093,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderbottomcolor")]
+        [SchemaAttr("o:borderbottomcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderBottomColor
@@ -3112,7 +3112,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderrightcolor")]
+        [SchemaAttr("o:borderrightcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderRightColor
@@ -3131,7 +3131,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmlayout")]
+        [SchemaAttr("o:dgmlayout")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramLayout
@@ -3150,7 +3150,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmnodekind")]
+        [SchemaAttr("o:dgmnodekind")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramNodeKind
@@ -3169,7 +3169,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmlayoutmru")]
+        [SchemaAttr("o:dgmlayoutmru")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramLayoutMostRecentUsed
@@ -3188,7 +3188,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "insetmode")]
+        [SchemaAttr("o:insetmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>? InsetMode
@@ -3204,7 +3204,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "filled")]
+        [SchemaAttr("filled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Filled
@@ -3220,7 +3220,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fillcolor")]
+        [SchemaAttr("fillcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? FillColor
@@ -3236,7 +3236,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "stroked")]
+        [SchemaAttr("stroked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Stroked
@@ -3252,7 +3252,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "strokecolor")]
+        [SchemaAttr("strokecolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? StrokeColor
@@ -3268,7 +3268,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "strokeweight")]
+        [SchemaAttr("strokeweight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? StrokeWeight
@@ -3284,7 +3284,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "insetpen")]
+        [SchemaAttr("insetpen")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? InsetPen
@@ -3303,7 +3303,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "spt")]
+        [SchemaAttr("o:spt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? OptionalNumber
@@ -3322,7 +3322,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "connectortype")]
+        [SchemaAttr("o:connectortype")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>? ConnectorType
@@ -3341,7 +3341,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwmode")]
+        [SchemaAttr("o:bwmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? BlackWhiteMode
@@ -3360,7 +3360,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwpure")]
+        [SchemaAttr("o:bwpure")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? PureBlackWhiteMode
@@ -3379,7 +3379,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwnormal")]
+        [SchemaAttr("o:bwnormal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? NormalBlackWhiteMode
@@ -3398,7 +3398,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "forcedash")]
+        [SchemaAttr("o:forcedash")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? ForceDash
@@ -3417,7 +3417,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "oleicon")]
+        [SchemaAttr("o:oleicon")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? OleIcon
@@ -3436,7 +3436,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "ole")]
+        [SchemaAttr("o:ole")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseBlankValue? Ole
@@ -3455,7 +3455,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "preferrelative")]
+        [SchemaAttr("o:preferrelative")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? PreferRelative
@@ -3474,7 +3474,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "cliptowrap")]
+        [SchemaAttr("o:cliptowrap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? ClipToWrap
@@ -3493,7 +3493,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "clip")]
+        [SchemaAttr("o:clip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Clip
@@ -3509,7 +3509,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "type")]
+        [SchemaAttr("type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Type
@@ -3525,7 +3525,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "adj")]
+        [SchemaAttr("adj")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Adjustment
@@ -3541,7 +3541,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "path")]
+        [SchemaAttr("path")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? EdgePath
@@ -3560,7 +3560,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "gfxdata")]
+        [SchemaAttr("o:gfxdata")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Base64BinaryValue? EncodedPackage
@@ -3576,7 +3576,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "equationxml")]
+        [SchemaAttr("equationxml")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? EquationXml
@@ -3588,7 +3588,7 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(26, "shape");
+            builder.SetSchema("v:shape");
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
@@ -3615,65 +3615,65 @@ namespace DocumentFormat.OpenXml.Vml
             builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
             builder.AddElement<Shape>()
-.AddAttribute(0, "id", a => a.Id)
-.AddAttribute(0, "style", a => a.Style)
-.AddAttribute(0, "href", a => a.Href)
-.AddAttribute(0, "target", a => a.Target)
-.AddAttribute(0, "class", a => a.Class)
-.AddAttribute(0, "title", a => a.Title)
-.AddAttribute(0, "alt", a => a.Alternate)
-.AddAttribute(0, "coordsize", a => a.CoordinateSize)
-.AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
-.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
-.AddAttribute(0, "print", a => a.Print)
-.AddAttribute(27, "spid", a => a.OptionalString)
-.AddAttribute(27, "oned", a => a.Oned)
-.AddAttribute(27, "regroupid", a => a.RegroupId)
-.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
-.AddAttribute(27, "button", a => a.Button)
-.AddAttribute(27, "userhidden", a => a.UserHidden)
-.AddAttribute(27, "bullet", a => a.Bullet)
-.AddAttribute(27, "hr", a => a.Horizontal)
-.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
-.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
-.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
-.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
-.AddAttribute(27, "allowincell", a => a.AllowInCell)
-.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
-.AddAttribute(27, "userdrawn", a => a.UserDrawn)
-.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
-.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
-.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
-.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
-.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
-.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
-.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
-.AddAttribute(27, "insetmode", a => a.InsetMode)
-.AddAttribute(0, "filled", a => a.Filled)
-.AddAttribute(0, "fillcolor", a => a.FillColor)
-.AddAttribute(0, "stroked", a => a.Stroked)
-.AddAttribute(0, "strokecolor", a => a.StrokeColor)
-.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
-.AddAttribute(0, "insetpen", a => a.InsetPen)
-.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+.AddAttribute("id", a => a.Id)
+.AddAttribute("style", a => a.Style)
+.AddAttribute("href", a => a.Href)
+.AddAttribute("target", a => a.Target)
+.AddAttribute("class", a => a.Class)
+.AddAttribute("title", a => a.Title)
+.AddAttribute("alt", a => a.Alternate)
+.AddAttribute("coordsize", a => a.CoordinateSize)
+.AddAttribute("coordorigin", a => a.CoordinateOrigin)
+.AddAttribute("wrapcoords", a => a.WrapCoordinates)
+.AddAttribute("print", a => a.Print)
+.AddAttribute("o:spid", a => a.OptionalString)
+.AddAttribute("o:oned", a => a.Oned)
+.AddAttribute("o:regroupid", a => a.RegroupId)
+.AddAttribute("o:doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute("o:button", a => a.Button)
+.AddAttribute("o:userhidden", a => a.UserHidden)
+.AddAttribute("o:bullet", a => a.Bullet)
+.AddAttribute("o:hr", a => a.Horizontal)
+.AddAttribute("o:hrstd", a => a.HorizontalStandard)
+.AddAttribute("o:hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute("o:hrpct", a => a.HorizontalPercentage)
+.AddAttribute("o:hralign", a => a.HorizontalAlignment)
+.AddAttribute("o:allowincell", a => a.AllowInCell)
+.AddAttribute("o:allowoverlap", a => a.AllowOverlap)
+.AddAttribute("o:userdrawn", a => a.UserDrawn)
+.AddAttribute("o:bordertopcolor", a => a.BorderTopColor)
+.AddAttribute("o:borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute("o:borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute("o:borderrightcolor", a => a.BorderRightColor)
+.AddAttribute("o:dgmlayout", a => a.DiagramLayout)
+.AddAttribute("o:dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute("o:dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute("o:insetmode", a => a.InsetMode)
+.AddAttribute("filled", a => a.Filled)
+.AddAttribute("fillcolor", a => a.FillColor)
+.AddAttribute("stroked", a => a.Stroked)
+.AddAttribute("strokecolor", a => a.StrokeColor)
+.AddAttribute("strokeweight", a => a.StrokeWeight)
+.AddAttribute("insetpen", a => a.InsetPen)
+.AddAttribute("o:spt", a => a.OptionalNumber, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (202L) });
 })
-.AddAttribute(27, "connectortype", a => a.ConnectorType)
-.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
-.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
-.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
-.AddAttribute(27, "forcedash", a => a.ForceDash)
-.AddAttribute(27, "oleicon", a => a.OleIcon)
-.AddAttribute(27, "ole", a => a.Ole)
-.AddAttribute(27, "preferrelative", a => a.PreferRelative)
-.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
-.AddAttribute(27, "clip", a => a.Clip)
-.AddAttribute(0, "type", a => a.Type)
-.AddAttribute(0, "adj", a => a.Adjustment)
-.AddAttribute(0, "path", a => a.EdgePath)
-.AddAttribute(27, "gfxdata", a => a.EncodedPackage)
-.AddAttribute(0, "equationxml", a => a.EquationXml);
+.AddAttribute("o:connectortype", a => a.ConnectorType)
+.AddAttribute("o:bwmode", a => a.BlackWhiteMode)
+.AddAttribute("o:bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute("o:bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute("o:forcedash", a => a.ForceDash)
+.AddAttribute("o:oleicon", a => a.OleIcon)
+.AddAttribute("o:ole", a => a.Ole)
+.AddAttribute("o:preferrelative", a => a.PreferRelative)
+.AddAttribute("o:cliptowrap", a => a.ClipToWrap)
+.AddAttribute("o:clip", a => a.Clip)
+.AddAttribute("type", a => a.Type)
+.AddAttribute("adj", a => a.Adjustment)
+.AddAttribute("path", a => a.EdgePath)
+.AddAttribute("o:gfxdata", a => a.EncodedPackage)
+.AddAttribute("equationxml", a => a.EquationXml);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -3752,7 +3752,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(26, "shapetype")]
+    [SchemaAttr("v:shapetype")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Shapetype : OpenXmlCompositeElement
     {
@@ -3794,7 +3794,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -3810,7 +3810,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "style")]
+        [SchemaAttr("style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Style
@@ -3826,7 +3826,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "href")]
+        [SchemaAttr("href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Href
@@ -3842,7 +3842,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "target")]
+        [SchemaAttr("target")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Target
@@ -3858,7 +3858,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "class")]
+        [SchemaAttr("class")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Class
@@ -3874,7 +3874,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "title")]
+        [SchemaAttr("title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Title
@@ -3890,7 +3890,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "alt")]
+        [SchemaAttr("alt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Alternate
@@ -3906,7 +3906,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "coordsize")]
+        [SchemaAttr("coordsize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CoordinateSize
@@ -3922,7 +3922,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "coordorigin")]
+        [SchemaAttr("coordorigin")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CoordinateOrigin
@@ -3938,7 +3938,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "wrapcoords")]
+        [SchemaAttr("wrapcoords")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? WrapCoordinates
@@ -3954,7 +3954,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "print")]
+        [SchemaAttr("print")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Print
@@ -3973,7 +3973,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "spid")]
+        [SchemaAttr("o:spid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? OptionalString
@@ -3992,7 +3992,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "oned")]
+        [SchemaAttr("o:oned")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Oned
@@ -4011,7 +4011,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "regroupid")]
+        [SchemaAttr("o:regroupid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? RegroupId
@@ -4030,7 +4030,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "doubleclicknotify")]
+        [SchemaAttr("o:doubleclicknotify")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? DoubleClickNotify
@@ -4049,7 +4049,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "button")]
+        [SchemaAttr("o:button")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Button
@@ -4068,7 +4068,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "userhidden")]
+        [SchemaAttr("o:userhidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? UserHidden
@@ -4087,7 +4087,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bullet")]
+        [SchemaAttr("o:bullet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Bullet
@@ -4106,7 +4106,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hr")]
+        [SchemaAttr("o:hr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Horizontal
@@ -4125,7 +4125,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrstd")]
+        [SchemaAttr("o:hrstd")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? HorizontalStandard
@@ -4144,7 +4144,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrnoshade")]
+        [SchemaAttr("o:hrnoshade")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? HorizontalNoShade
@@ -4163,7 +4163,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrpct")]
+        [SchemaAttr("o:hrpct")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public SingleValue? HorizontalPercentage
@@ -4182,7 +4182,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hralign")]
+        [SchemaAttr("o:hralign")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>? HorizontalAlignment
@@ -4201,7 +4201,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "allowincell")]
+        [SchemaAttr("o:allowincell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowInCell
@@ -4220,7 +4220,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "allowoverlap")]
+        [SchemaAttr("o:allowoverlap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowOverlap
@@ -4239,7 +4239,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "userdrawn")]
+        [SchemaAttr("o:userdrawn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? UserDrawn
@@ -4258,7 +4258,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bordertopcolor")]
+        [SchemaAttr("o:bordertopcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderTopColor
@@ -4277,7 +4277,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderleftcolor")]
+        [SchemaAttr("o:borderleftcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderLeftColor
@@ -4296,7 +4296,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderbottomcolor")]
+        [SchemaAttr("o:borderbottomcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderBottomColor
@@ -4315,7 +4315,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderrightcolor")]
+        [SchemaAttr("o:borderrightcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderRightColor
@@ -4334,7 +4334,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmlayout")]
+        [SchemaAttr("o:dgmlayout")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramLayout
@@ -4353,7 +4353,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmnodekind")]
+        [SchemaAttr("o:dgmnodekind")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramNodeKind
@@ -4372,7 +4372,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmlayoutmru")]
+        [SchemaAttr("o:dgmlayoutmru")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramLayoutMostRecentUsed
@@ -4391,7 +4391,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "insetmode")]
+        [SchemaAttr("o:insetmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>? InsetMode
@@ -4407,7 +4407,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "filled")]
+        [SchemaAttr("filled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Filled
@@ -4423,7 +4423,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fillcolor")]
+        [SchemaAttr("fillcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? FillColor
@@ -4439,7 +4439,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "stroked")]
+        [SchemaAttr("stroked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Stroked
@@ -4455,7 +4455,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "strokecolor")]
+        [SchemaAttr("strokecolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? StrokeColor
@@ -4471,7 +4471,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "strokeweight")]
+        [SchemaAttr("strokeweight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? StrokeWeight
@@ -4487,7 +4487,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "insetpen")]
+        [SchemaAttr("insetpen")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? InsetPen
@@ -4506,7 +4506,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "spt")]
+        [SchemaAttr("o:spt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? OptionalNumber
@@ -4525,7 +4525,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "connectortype")]
+        [SchemaAttr("o:connectortype")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>? ConnectorType
@@ -4544,7 +4544,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwmode")]
+        [SchemaAttr("o:bwmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? BlackWhiteMode
@@ -4563,7 +4563,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwpure")]
+        [SchemaAttr("o:bwpure")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? PureBlackWhiteMode
@@ -4582,7 +4582,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwnormal")]
+        [SchemaAttr("o:bwnormal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? NormalBlackWhiteMode
@@ -4601,7 +4601,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "forcedash")]
+        [SchemaAttr("o:forcedash")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? ForceDash
@@ -4620,7 +4620,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "oleicon")]
+        [SchemaAttr("o:oleicon")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? OleIcon
@@ -4639,7 +4639,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "ole")]
+        [SchemaAttr("o:ole")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseBlankValue? Ole
@@ -4658,7 +4658,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "preferrelative")]
+        [SchemaAttr("o:preferrelative")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? PreferRelative
@@ -4677,7 +4677,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "cliptowrap")]
+        [SchemaAttr("o:cliptowrap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? ClipToWrap
@@ -4696,7 +4696,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "clip")]
+        [SchemaAttr("o:clip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Clip
@@ -4712,7 +4712,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "adj")]
+        [SchemaAttr("adj")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Adjustment
@@ -4728,7 +4728,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "path")]
+        [SchemaAttr("path")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? EdgePath
@@ -4747,7 +4747,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "master")]
+        [SchemaAttr("o:master")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Master
@@ -4759,7 +4759,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(26, "shapetype");
+            builder.SetSchema("v:shapetype");
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Complex>();
@@ -4785,63 +4785,63 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
             builder.AddElement<Shapetype>()
-.AddAttribute(0, "id", a => a.Id)
-.AddAttribute(0, "style", a => a.Style)
-.AddAttribute(0, "href", a => a.Href)
-.AddAttribute(0, "target", a => a.Target)
-.AddAttribute(0, "class", a => a.Class)
-.AddAttribute(0, "title", a => a.Title)
-.AddAttribute(0, "alt", a => a.Alternate)
-.AddAttribute(0, "coordsize", a => a.CoordinateSize)
-.AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
-.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
-.AddAttribute(0, "print", a => a.Print)
-.AddAttribute(27, "spid", a => a.OptionalString)
-.AddAttribute(27, "oned", a => a.Oned)
-.AddAttribute(27, "regroupid", a => a.RegroupId)
-.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
-.AddAttribute(27, "button", a => a.Button)
-.AddAttribute(27, "userhidden", a => a.UserHidden)
-.AddAttribute(27, "bullet", a => a.Bullet)
-.AddAttribute(27, "hr", a => a.Horizontal)
-.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
-.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
-.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
-.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
-.AddAttribute(27, "allowincell", a => a.AllowInCell)
-.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
-.AddAttribute(27, "userdrawn", a => a.UserDrawn)
-.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
-.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
-.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
-.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
-.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
-.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
-.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
-.AddAttribute(27, "insetmode", a => a.InsetMode)
-.AddAttribute(0, "filled", a => a.Filled)
-.AddAttribute(0, "fillcolor", a => a.FillColor)
-.AddAttribute(0, "stroked", a => a.Stroked)
-.AddAttribute(0, "strokecolor", a => a.StrokeColor)
-.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
-.AddAttribute(0, "insetpen", a => a.InsetPen)
-.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+.AddAttribute("id", a => a.Id)
+.AddAttribute("style", a => a.Style)
+.AddAttribute("href", a => a.Href)
+.AddAttribute("target", a => a.Target)
+.AddAttribute("class", a => a.Class)
+.AddAttribute("title", a => a.Title)
+.AddAttribute("alt", a => a.Alternate)
+.AddAttribute("coordsize", a => a.CoordinateSize)
+.AddAttribute("coordorigin", a => a.CoordinateOrigin)
+.AddAttribute("wrapcoords", a => a.WrapCoordinates)
+.AddAttribute("print", a => a.Print)
+.AddAttribute("o:spid", a => a.OptionalString)
+.AddAttribute("o:oned", a => a.Oned)
+.AddAttribute("o:regroupid", a => a.RegroupId)
+.AddAttribute("o:doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute("o:button", a => a.Button)
+.AddAttribute("o:userhidden", a => a.UserHidden)
+.AddAttribute("o:bullet", a => a.Bullet)
+.AddAttribute("o:hr", a => a.Horizontal)
+.AddAttribute("o:hrstd", a => a.HorizontalStandard)
+.AddAttribute("o:hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute("o:hrpct", a => a.HorizontalPercentage)
+.AddAttribute("o:hralign", a => a.HorizontalAlignment)
+.AddAttribute("o:allowincell", a => a.AllowInCell)
+.AddAttribute("o:allowoverlap", a => a.AllowOverlap)
+.AddAttribute("o:userdrawn", a => a.UserDrawn)
+.AddAttribute("o:bordertopcolor", a => a.BorderTopColor)
+.AddAttribute("o:borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute("o:borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute("o:borderrightcolor", a => a.BorderRightColor)
+.AddAttribute("o:dgmlayout", a => a.DiagramLayout)
+.AddAttribute("o:dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute("o:dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute("o:insetmode", a => a.InsetMode)
+.AddAttribute("filled", a => a.Filled)
+.AddAttribute("fillcolor", a => a.FillColor)
+.AddAttribute("stroked", a => a.Stroked)
+.AddAttribute("strokecolor", a => a.StrokeColor)
+.AddAttribute("strokeweight", a => a.StrokeWeight)
+.AddAttribute("insetpen", a => a.InsetPen)
+.AddAttribute("o:spt", a => a.OptionalNumber, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (202L) });
 })
-.AddAttribute(27, "connectortype", a => a.ConnectorType)
-.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
-.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
-.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
-.AddAttribute(27, "forcedash", a => a.ForceDash)
-.AddAttribute(27, "oleicon", a => a.OleIcon)
-.AddAttribute(27, "ole", a => a.Ole)
-.AddAttribute(27, "preferrelative", a => a.PreferRelative)
-.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
-.AddAttribute(27, "clip", a => a.Clip)
-.AddAttribute(0, "adj", a => a.Adjustment)
-.AddAttribute(0, "path", a => a.EdgePath)
-.AddAttribute(27, "master", a => a.Master);
+.AddAttribute("o:connectortype", a => a.ConnectorType)
+.AddAttribute("o:bwmode", a => a.BlackWhiteMode)
+.AddAttribute("o:bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute("o:bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute("o:forcedash", a => a.ForceDash)
+.AddAttribute("o:oleicon", a => a.OleIcon)
+.AddAttribute("o:ole", a => a.Ole)
+.AddAttribute("o:preferrelative", a => a.PreferRelative)
+.AddAttribute("o:cliptowrap", a => a.ClipToWrap)
+.AddAttribute("o:clip", a => a.Clip)
+.AddAttribute("adj", a => a.Adjustment)
+.AddAttribute("path", a => a.EdgePath)
+.AddAttribute("o:master", a => a.Master);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -4912,7 +4912,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(26, "group")]
+    [SchemaAttr("v:group")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Group : OpenXmlCompositeElement
     {
@@ -4954,7 +4954,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -4970,7 +4970,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "style")]
+        [SchemaAttr("style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Style
@@ -4986,7 +4986,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "href")]
+        [SchemaAttr("href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Href
@@ -5002,7 +5002,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "target")]
+        [SchemaAttr("target")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Target
@@ -5018,7 +5018,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "class")]
+        [SchemaAttr("class")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Class
@@ -5034,7 +5034,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "title")]
+        [SchemaAttr("title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Title
@@ -5050,7 +5050,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "alt")]
+        [SchemaAttr("alt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Alternate
@@ -5066,7 +5066,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "coordsize")]
+        [SchemaAttr("coordsize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CoordinateSize
@@ -5082,7 +5082,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "coordorigin")]
+        [SchemaAttr("coordorigin")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CoordinateOrigin
@@ -5098,7 +5098,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "wrapcoords")]
+        [SchemaAttr("wrapcoords")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? WrapCoordinates
@@ -5114,7 +5114,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "print")]
+        [SchemaAttr("print")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Print
@@ -5133,7 +5133,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "spid")]
+        [SchemaAttr("o:spid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? OptionalString
@@ -5152,7 +5152,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "oned")]
+        [SchemaAttr("o:oned")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Oned
@@ -5171,7 +5171,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "regroupid")]
+        [SchemaAttr("o:regroupid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? RegroupId
@@ -5190,7 +5190,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "doubleclicknotify")]
+        [SchemaAttr("o:doubleclicknotify")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? DoubleClickNotify
@@ -5209,7 +5209,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "button")]
+        [SchemaAttr("o:button")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Button
@@ -5228,7 +5228,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "userhidden")]
+        [SchemaAttr("o:userhidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? UserHidden
@@ -5247,7 +5247,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bullet")]
+        [SchemaAttr("o:bullet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Bullet
@@ -5266,7 +5266,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hr")]
+        [SchemaAttr("o:hr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Horizontal
@@ -5285,7 +5285,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrstd")]
+        [SchemaAttr("o:hrstd")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? HorizontalStandard
@@ -5304,7 +5304,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrnoshade")]
+        [SchemaAttr("o:hrnoshade")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? HorizontalNoShade
@@ -5323,7 +5323,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrpct")]
+        [SchemaAttr("o:hrpct")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public SingleValue? HorizontalPercentage
@@ -5342,7 +5342,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hralign")]
+        [SchemaAttr("o:hralign")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>? HorizontalAlignment
@@ -5361,7 +5361,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "allowincell")]
+        [SchemaAttr("o:allowincell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowInCell
@@ -5380,7 +5380,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "allowoverlap")]
+        [SchemaAttr("o:allowoverlap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowOverlap
@@ -5399,7 +5399,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "userdrawn")]
+        [SchemaAttr("o:userdrawn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? UserDrawn
@@ -5418,7 +5418,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmlayout")]
+        [SchemaAttr("o:dgmlayout")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramLayout
@@ -5437,7 +5437,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmnodekind")]
+        [SchemaAttr("o:dgmnodekind")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramNodeKind
@@ -5456,7 +5456,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmlayoutmru")]
+        [SchemaAttr("o:dgmlayoutmru")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramLayoutMostRecentUsed
@@ -5475,7 +5475,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "insetmode")]
+        [SchemaAttr("o:insetmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>? InsetMode
@@ -5494,7 +5494,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "gfxdata")]
+        [SchemaAttr("o:gfxdata")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Base64BinaryValue? Gfxdata
@@ -5510,7 +5510,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "editas")]
+        [SchemaAttr("editas")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.EditAsValues>? EditAs
@@ -5529,7 +5529,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "tableproperties")]
+        [SchemaAttr("o:tableproperties")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? TableProperties
@@ -5548,7 +5548,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "tablelimits")]
+        [SchemaAttr("o:tablelimits")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? TableLimits
@@ -5560,7 +5560,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(26, "group");
+            builder.SetSchema("v:group");
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Diagram>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
@@ -5579,40 +5579,40 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
             builder.AddElement<Group>()
-.AddAttribute(0, "id", a => a.Id)
-.AddAttribute(0, "style", a => a.Style)
-.AddAttribute(0, "href", a => a.Href)
-.AddAttribute(0, "target", a => a.Target)
-.AddAttribute(0, "class", a => a.Class)
-.AddAttribute(0, "title", a => a.Title)
-.AddAttribute(0, "alt", a => a.Alternate)
-.AddAttribute(0, "coordsize", a => a.CoordinateSize)
-.AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
-.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
-.AddAttribute(0, "print", a => a.Print)
-.AddAttribute(27, "spid", a => a.OptionalString)
-.AddAttribute(27, "oned", a => a.Oned)
-.AddAttribute(27, "regroupid", a => a.RegroupId)
-.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
-.AddAttribute(27, "button", a => a.Button)
-.AddAttribute(27, "userhidden", a => a.UserHidden)
-.AddAttribute(27, "bullet", a => a.Bullet)
-.AddAttribute(27, "hr", a => a.Horizontal)
-.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
-.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
-.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
-.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
-.AddAttribute(27, "allowincell", a => a.AllowInCell)
-.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
-.AddAttribute(27, "userdrawn", a => a.UserDrawn)
-.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
-.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
-.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
-.AddAttribute(27, "insetmode", a => a.InsetMode)
-.AddAttribute(27, "gfxdata", a => a.Gfxdata)
-.AddAttribute(0, "editas", a => a.EditAs)
-.AddAttribute(27, "tableproperties", a => a.TableProperties)
-.AddAttribute(27, "tablelimits", a => a.TableLimits);
+.AddAttribute("id", a => a.Id)
+.AddAttribute("style", a => a.Style)
+.AddAttribute("href", a => a.Href)
+.AddAttribute("target", a => a.Target)
+.AddAttribute("class", a => a.Class)
+.AddAttribute("title", a => a.Title)
+.AddAttribute("alt", a => a.Alternate)
+.AddAttribute("coordsize", a => a.CoordinateSize)
+.AddAttribute("coordorigin", a => a.CoordinateOrigin)
+.AddAttribute("wrapcoords", a => a.WrapCoordinates)
+.AddAttribute("print", a => a.Print)
+.AddAttribute("o:spid", a => a.OptionalString)
+.AddAttribute("o:oned", a => a.Oned)
+.AddAttribute("o:regroupid", a => a.RegroupId)
+.AddAttribute("o:doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute("o:button", a => a.Button)
+.AddAttribute("o:userhidden", a => a.UserHidden)
+.AddAttribute("o:bullet", a => a.Bullet)
+.AddAttribute("o:hr", a => a.Horizontal)
+.AddAttribute("o:hrstd", a => a.HorizontalStandard)
+.AddAttribute("o:hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute("o:hrpct", a => a.HorizontalPercentage)
+.AddAttribute("o:hralign", a => a.HorizontalAlignment)
+.AddAttribute("o:allowincell", a => a.AllowInCell)
+.AddAttribute("o:allowoverlap", a => a.AllowOverlap)
+.AddAttribute("o:userdrawn", a => a.UserDrawn)
+.AddAttribute("o:dgmlayout", a => a.DiagramLayout)
+.AddAttribute("o:dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute("o:dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute("o:insetmode", a => a.InsetMode)
+.AddAttribute("o:gfxdata", a => a.Gfxdata)
+.AddAttribute("editas", a => a.EditAs)
+.AddAttribute("o:tableproperties", a => a.TableProperties)
+.AddAttribute("o:tablelimits", a => a.TableLimits);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Group), 1, 1),
@@ -5655,7 +5655,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(26, "background")]
+    [SchemaAttr("v:background")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Background : OpenXmlCompositeElement
     {
@@ -5697,7 +5697,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -5713,7 +5713,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fill")]
+        [SchemaAttr("fill")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Filled
@@ -5729,7 +5729,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fillcolor")]
+        [SchemaAttr("fillcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Fillcolor
@@ -5748,7 +5748,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwmode")]
+        [SchemaAttr("o:bwmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? BlackWhiteMode
@@ -5767,7 +5767,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwpure")]
+        [SchemaAttr("o:bwpure")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? PureBlackWhiteMode
@@ -5786,7 +5786,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwnormal")]
+        [SchemaAttr("o:bwnormal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? NormalBlackWhiteMode
@@ -5805,7 +5805,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "targetscreensize")]
+        [SchemaAttr("o:targetscreensize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.ScreenSizeValues>? TargetScreenSize
@@ -5817,19 +5817,19 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(26, "background");
+            builder.SetSchema("v:background");
             builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
             builder.AddElement<Background>()
-.AddAttribute(0, "id", a => a.Id, aBuilder =>
+.AddAttribute("id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255L) });
 })
-.AddAttribute(0, "fill", a => a.Filled)
-.AddAttribute(0, "fillcolor", a => a.Fillcolor)
-.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
-.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
-.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
-.AddAttribute(27, "targetscreensize", a => a.TargetScreenSize);
+.AddAttribute("fill", a => a.Filled)
+.AddAttribute("fillcolor", a => a.Fillcolor)
+.AddAttribute("o:bwmode", a => a.BlackWhiteMode)
+.AddAttribute("o:bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute("o:bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute("o:targetscreensize", a => a.TargetScreenSize);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 0, 1)
@@ -5888,7 +5888,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(26, "arc")]
+    [SchemaAttr("v:arc")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Arc : OpenXmlCompositeElement
     {
@@ -5933,7 +5933,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "spid")]
+        [SchemaAttr("o:spid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? OptionalString
@@ -5952,7 +5952,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "oned")]
+        [SchemaAttr("o:oned")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Oned
@@ -5971,7 +5971,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "regroupid")]
+        [SchemaAttr("o:regroupid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? RegroupId
@@ -5990,7 +5990,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "doubleclicknotify")]
+        [SchemaAttr("o:doubleclicknotify")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? DoubleClickNotify
@@ -6009,7 +6009,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "button")]
+        [SchemaAttr("o:button")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Button
@@ -6028,7 +6028,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "userhidden")]
+        [SchemaAttr("o:userhidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? UserHidden
@@ -6047,7 +6047,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bullet")]
+        [SchemaAttr("o:bullet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Bullet
@@ -6066,7 +6066,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hr")]
+        [SchemaAttr("o:hr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Horizontal
@@ -6085,7 +6085,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrstd")]
+        [SchemaAttr("o:hrstd")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? HorizontalStandard
@@ -6104,7 +6104,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrnoshade")]
+        [SchemaAttr("o:hrnoshade")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? HorizontalNoShade
@@ -6123,7 +6123,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrpct")]
+        [SchemaAttr("o:hrpct")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public SingleValue? HorizontalPercentage
@@ -6142,7 +6142,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hralign")]
+        [SchemaAttr("o:hralign")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>? HorizontalAlignment
@@ -6161,7 +6161,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "allowincell")]
+        [SchemaAttr("o:allowincell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowInCell
@@ -6180,7 +6180,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "allowoverlap")]
+        [SchemaAttr("o:allowoverlap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowOverlap
@@ -6199,7 +6199,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "userdrawn")]
+        [SchemaAttr("o:userdrawn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? UserDrawn
@@ -6218,7 +6218,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bordertopcolor")]
+        [SchemaAttr("o:bordertopcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderTopColor
@@ -6237,7 +6237,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderleftcolor")]
+        [SchemaAttr("o:borderleftcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderLeftColor
@@ -6256,7 +6256,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderbottomcolor")]
+        [SchemaAttr("o:borderbottomcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderBottomColor
@@ -6275,7 +6275,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderrightcolor")]
+        [SchemaAttr("o:borderrightcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderRightColor
@@ -6294,7 +6294,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmlayout")]
+        [SchemaAttr("o:dgmlayout")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramLayout
@@ -6313,7 +6313,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmnodekind")]
+        [SchemaAttr("o:dgmnodekind")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramNodeKind
@@ -6332,7 +6332,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmlayoutmru")]
+        [SchemaAttr("o:dgmlayoutmru")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramLayoutMostRecentUsed
@@ -6351,7 +6351,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "insetmode")]
+        [SchemaAttr("o:insetmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>? InsetMode
@@ -6367,7 +6367,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "filled")]
+        [SchemaAttr("filled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Filled
@@ -6383,7 +6383,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fillcolor")]
+        [SchemaAttr("fillcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? FillColor
@@ -6399,7 +6399,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "stroked")]
+        [SchemaAttr("stroked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Stroked
@@ -6415,7 +6415,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "strokecolor")]
+        [SchemaAttr("strokecolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? StrokeColor
@@ -6431,7 +6431,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "strokeweight")]
+        [SchemaAttr("strokeweight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? StrokeWeight
@@ -6447,7 +6447,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "insetpen")]
+        [SchemaAttr("insetpen")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? InsetPen
@@ -6466,7 +6466,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "spt")]
+        [SchemaAttr("o:spt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? OptionalNumber
@@ -6485,7 +6485,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "connectortype")]
+        [SchemaAttr("o:connectortype")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>? ConnectorType
@@ -6504,7 +6504,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwmode")]
+        [SchemaAttr("o:bwmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? BlackWhiteMode
@@ -6523,7 +6523,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwpure")]
+        [SchemaAttr("o:bwpure")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? PureBlackWhiteMode
@@ -6542,7 +6542,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwnormal")]
+        [SchemaAttr("o:bwnormal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? NormalBlackWhiteMode
@@ -6561,7 +6561,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "forcedash")]
+        [SchemaAttr("o:forcedash")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? ForceDash
@@ -6580,7 +6580,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "oleicon")]
+        [SchemaAttr("o:oleicon")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? OleIcon
@@ -6599,7 +6599,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "ole")]
+        [SchemaAttr("o:ole")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseBlankValue? Ole
@@ -6618,7 +6618,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "preferrelative")]
+        [SchemaAttr("o:preferrelative")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? PreferRelative
@@ -6637,7 +6637,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "cliptowrap")]
+        [SchemaAttr("o:cliptowrap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? ClipToWrap
@@ -6656,7 +6656,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "clip")]
+        [SchemaAttr("o:clip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Clip
@@ -6675,7 +6675,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "gfxdata")]
+        [SchemaAttr("o:gfxdata")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Base64BinaryValue? Gfxdata
@@ -6691,7 +6691,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -6707,7 +6707,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "style")]
+        [SchemaAttr("style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Style
@@ -6723,7 +6723,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "href")]
+        [SchemaAttr("href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Href
@@ -6739,7 +6739,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "target")]
+        [SchemaAttr("target")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Target
@@ -6755,7 +6755,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "title")]
+        [SchemaAttr("title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Title
@@ -6771,7 +6771,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "alt")]
+        [SchemaAttr("alt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Alternate
@@ -6787,7 +6787,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "coordsize")]
+        [SchemaAttr("coordsize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CoordinateSize
@@ -6803,7 +6803,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "coordorigin")]
+        [SchemaAttr("coordorigin")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CoordinateOrigin
@@ -6819,7 +6819,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "wrapcoords")]
+        [SchemaAttr("wrapcoords")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Wrapcoords
@@ -6835,7 +6835,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "print")]
+        [SchemaAttr("print")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Print
@@ -6851,7 +6851,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "startangle")]
+        [SchemaAttr("startangle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public DecimalValue? StartAngle
@@ -6867,7 +6867,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "endangle")]
+        [SchemaAttr("endangle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public DecimalValue? EndAngle
@@ -6879,7 +6879,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(26, "arc");
+            builder.SetSchema("v:arc");
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
@@ -6904,65 +6904,65 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
             builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
             builder.AddElement<Arc>()
-.AddAttribute(27, "spid", a => a.OptionalString)
-.AddAttribute(27, "oned", a => a.Oned)
-.AddAttribute(27, "regroupid", a => a.RegroupId)
-.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
-.AddAttribute(27, "button", a => a.Button)
-.AddAttribute(27, "userhidden", a => a.UserHidden)
-.AddAttribute(27, "bullet", a => a.Bullet)
-.AddAttribute(27, "hr", a => a.Horizontal)
-.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
-.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
-.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
-.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
-.AddAttribute(27, "allowincell", a => a.AllowInCell)
-.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
-.AddAttribute(27, "userdrawn", a => a.UserDrawn)
-.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
-.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
-.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
-.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
-.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
-.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
-.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
-.AddAttribute(27, "insetmode", a => a.InsetMode)
-.AddAttribute(0, "filled", a => a.Filled)
-.AddAttribute(0, "fillcolor", a => a.FillColor)
-.AddAttribute(0, "stroked", a => a.Stroked)
-.AddAttribute(0, "strokecolor", a => a.StrokeColor)
-.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
-.AddAttribute(0, "insetpen", a => a.InsetPen)
-.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+.AddAttribute("o:spid", a => a.OptionalString)
+.AddAttribute("o:oned", a => a.Oned)
+.AddAttribute("o:regroupid", a => a.RegroupId)
+.AddAttribute("o:doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute("o:button", a => a.Button)
+.AddAttribute("o:userhidden", a => a.UserHidden)
+.AddAttribute("o:bullet", a => a.Bullet)
+.AddAttribute("o:hr", a => a.Horizontal)
+.AddAttribute("o:hrstd", a => a.HorizontalStandard)
+.AddAttribute("o:hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute("o:hrpct", a => a.HorizontalPercentage)
+.AddAttribute("o:hralign", a => a.HorizontalAlignment)
+.AddAttribute("o:allowincell", a => a.AllowInCell)
+.AddAttribute("o:allowoverlap", a => a.AllowOverlap)
+.AddAttribute("o:userdrawn", a => a.UserDrawn)
+.AddAttribute("o:bordertopcolor", a => a.BorderTopColor)
+.AddAttribute("o:borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute("o:borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute("o:borderrightcolor", a => a.BorderRightColor)
+.AddAttribute("o:dgmlayout", a => a.DiagramLayout)
+.AddAttribute("o:dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute("o:dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute("o:insetmode", a => a.InsetMode)
+.AddAttribute("filled", a => a.Filled)
+.AddAttribute("fillcolor", a => a.FillColor)
+.AddAttribute("stroked", a => a.Stroked)
+.AddAttribute("strokecolor", a => a.StrokeColor)
+.AddAttribute("strokeweight", a => a.StrokeWeight)
+.AddAttribute("insetpen", a => a.InsetPen)
+.AddAttribute("o:spt", a => a.OptionalNumber, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (202L) });
 })
-.AddAttribute(27, "connectortype", a => a.ConnectorType)
-.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
-.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
-.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
-.AddAttribute(27, "forcedash", a => a.ForceDash)
-.AddAttribute(27, "oleicon", a => a.OleIcon)
-.AddAttribute(27, "ole", a => a.Ole)
-.AddAttribute(27, "preferrelative", a => a.PreferRelative)
-.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
-.AddAttribute(27, "clip", a => a.Clip)
-.AddAttribute(27, "gfxdata", a => a.Gfxdata)
-.AddAttribute(0, "id", a => a.Id, aBuilder =>
+.AddAttribute("o:connectortype", a => a.ConnectorType)
+.AddAttribute("o:bwmode", a => a.BlackWhiteMode)
+.AddAttribute("o:bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute("o:bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute("o:forcedash", a => a.ForceDash)
+.AddAttribute("o:oleicon", a => a.OleIcon)
+.AddAttribute("o:ole", a => a.Ole)
+.AddAttribute("o:preferrelative", a => a.PreferRelative)
+.AddAttribute("o:cliptowrap", a => a.ClipToWrap)
+.AddAttribute("o:clip", a => a.Clip)
+.AddAttribute("o:gfxdata", a => a.Gfxdata)
+.AddAttribute("id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255L) });
 })
-.AddAttribute(0, "style", a => a.Style)
-.AddAttribute(0, "href", a => a.Href)
-.AddAttribute(0, "target", a => a.Target)
-.AddAttribute(0, "title", a => a.Title)
-.AddAttribute(0, "alt", a => a.Alternate)
-.AddAttribute(0, "coordsize", a => a.CoordinateSize)
-.AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
-.AddAttribute(0, "wrapcoords", a => a.Wrapcoords)
-.AddAttribute(0, "print", a => a.Print)
-.AddAttribute(0, "startangle", a => a.StartAngle)
-.AddAttribute(0, "endangle", a => a.EndAngle);
+.AddAttribute("style", a => a.Style)
+.AddAttribute("href", a => a.Href)
+.AddAttribute("target", a => a.Target)
+.AddAttribute("title", a => a.Title)
+.AddAttribute("alt", a => a.Alternate)
+.AddAttribute("coordsize", a => a.CoordinateSize)
+.AddAttribute("coordorigin", a => a.CoordinateOrigin)
+.AddAttribute("wrapcoords", a => a.Wrapcoords)
+.AddAttribute("print", a => a.Print)
+.AddAttribute("startangle", a => a.StartAngle)
+.AddAttribute("endangle", a => a.EndAngle);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -7041,7 +7041,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(26, "curve")]
+    [SchemaAttr("v:curve")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Curve : OpenXmlCompositeElement
     {
@@ -7083,7 +7083,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -7099,7 +7099,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "style")]
+        [SchemaAttr("style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Style
@@ -7115,7 +7115,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "href")]
+        [SchemaAttr("href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Href
@@ -7131,7 +7131,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "target")]
+        [SchemaAttr("target")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Target
@@ -7147,7 +7147,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "class")]
+        [SchemaAttr("class")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Class
@@ -7163,7 +7163,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "title")]
+        [SchemaAttr("title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Title
@@ -7179,7 +7179,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "alt")]
+        [SchemaAttr("alt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Alternate
@@ -7195,7 +7195,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "coordsize")]
+        [SchemaAttr("coordsize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CoordinateSize
@@ -7211,7 +7211,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "coordorigin")]
+        [SchemaAttr("coordorigin")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CoordinateOrigin
@@ -7227,7 +7227,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "wrapcoords")]
+        [SchemaAttr("wrapcoords")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? WrapCoordinates
@@ -7243,7 +7243,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "print")]
+        [SchemaAttr("print")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Print
@@ -7262,7 +7262,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "spid")]
+        [SchemaAttr("o:spid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? OptionalString
@@ -7281,7 +7281,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "oned")]
+        [SchemaAttr("o:oned")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Oned
@@ -7300,7 +7300,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "regroupid")]
+        [SchemaAttr("o:regroupid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? RegroupId
@@ -7319,7 +7319,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "doubleclicknotify")]
+        [SchemaAttr("o:doubleclicknotify")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? DoubleClickNotify
@@ -7338,7 +7338,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "button")]
+        [SchemaAttr("o:button")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Button
@@ -7357,7 +7357,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "userhidden")]
+        [SchemaAttr("o:userhidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? UserHidden
@@ -7376,7 +7376,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bullet")]
+        [SchemaAttr("o:bullet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Bullet
@@ -7395,7 +7395,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hr")]
+        [SchemaAttr("o:hr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Horizontal
@@ -7414,7 +7414,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrstd")]
+        [SchemaAttr("o:hrstd")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? HorizontalStandard
@@ -7433,7 +7433,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrnoshade")]
+        [SchemaAttr("o:hrnoshade")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? HorizontalNoShade
@@ -7452,7 +7452,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrpct")]
+        [SchemaAttr("o:hrpct")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public SingleValue? HorizontalPercentage
@@ -7471,7 +7471,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hralign")]
+        [SchemaAttr("o:hralign")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>? HorizontalAlignment
@@ -7490,7 +7490,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "allowincell")]
+        [SchemaAttr("o:allowincell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowInCell
@@ -7509,7 +7509,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "allowoverlap")]
+        [SchemaAttr("o:allowoverlap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowOverlap
@@ -7528,7 +7528,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "userdrawn")]
+        [SchemaAttr("o:userdrawn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? UserDrawn
@@ -7547,7 +7547,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bordertopcolor")]
+        [SchemaAttr("o:bordertopcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderTopColor
@@ -7566,7 +7566,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderleftcolor")]
+        [SchemaAttr("o:borderleftcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderLeftColor
@@ -7585,7 +7585,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderbottomcolor")]
+        [SchemaAttr("o:borderbottomcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderBottomColor
@@ -7604,7 +7604,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderrightcolor")]
+        [SchemaAttr("o:borderrightcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderRightColor
@@ -7623,7 +7623,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmlayout")]
+        [SchemaAttr("o:dgmlayout")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramLayout
@@ -7642,7 +7642,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmnodekind")]
+        [SchemaAttr("o:dgmnodekind")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramNodeKind
@@ -7661,7 +7661,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmlayoutmru")]
+        [SchemaAttr("o:dgmlayoutmru")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramLayoutMostRecentUsed
@@ -7680,7 +7680,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "insetmode")]
+        [SchemaAttr("o:insetmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>? InsetMode
@@ -7696,7 +7696,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "filled")]
+        [SchemaAttr("filled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Filled
@@ -7712,7 +7712,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fillcolor")]
+        [SchemaAttr("fillcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? FillColor
@@ -7728,7 +7728,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "stroked")]
+        [SchemaAttr("stroked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Stroked
@@ -7744,7 +7744,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "strokecolor")]
+        [SchemaAttr("strokecolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? StrokeColor
@@ -7760,7 +7760,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "strokeweight")]
+        [SchemaAttr("strokeweight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? StrokeWeight
@@ -7776,7 +7776,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "insetpen")]
+        [SchemaAttr("insetpen")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? InsetPen
@@ -7795,7 +7795,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "spt")]
+        [SchemaAttr("o:spt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? OptionalNumber
@@ -7814,7 +7814,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "connectortype")]
+        [SchemaAttr("o:connectortype")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>? ConnectorType
@@ -7833,7 +7833,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwmode")]
+        [SchemaAttr("o:bwmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? BlackWhiteMode
@@ -7852,7 +7852,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwpure")]
+        [SchemaAttr("o:bwpure")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? PureBlackWhiteMode
@@ -7871,7 +7871,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwnormal")]
+        [SchemaAttr("o:bwnormal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? NormalBlackWhiteMode
@@ -7890,7 +7890,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "forcedash")]
+        [SchemaAttr("o:forcedash")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? ForceDash
@@ -7909,7 +7909,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "oleicon")]
+        [SchemaAttr("o:oleicon")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? OleIcon
@@ -7928,7 +7928,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "ole")]
+        [SchemaAttr("o:ole")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseBlankValue? Ole
@@ -7947,7 +7947,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "preferrelative")]
+        [SchemaAttr("o:preferrelative")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? PreferRelative
@@ -7966,7 +7966,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "cliptowrap")]
+        [SchemaAttr("o:cliptowrap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? ClipToWrap
@@ -7985,7 +7985,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "clip")]
+        [SchemaAttr("o:clip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Clip
@@ -8004,7 +8004,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "gfxdata")]
+        [SchemaAttr("o:gfxdata")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Base64BinaryValue? Gfxdata
@@ -8020,7 +8020,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "from")]
+        [SchemaAttr("from")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? From
@@ -8036,7 +8036,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "control1")]
+        [SchemaAttr("control1")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Control1
@@ -8052,7 +8052,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "control2")]
+        [SchemaAttr("control2")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Control2
@@ -8068,7 +8068,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "to")]
+        [SchemaAttr("to")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? To
@@ -8080,7 +8080,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(26, "curve");
+            builder.SetSchema("v:curve");
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
@@ -8105,65 +8105,65 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
             builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
             builder.AddElement<Curve>()
-.AddAttribute(0, "id", a => a.Id)
-.AddAttribute(0, "style", a => a.Style)
-.AddAttribute(0, "href", a => a.Href)
-.AddAttribute(0, "target", a => a.Target)
-.AddAttribute(0, "class", a => a.Class)
-.AddAttribute(0, "title", a => a.Title)
-.AddAttribute(0, "alt", a => a.Alternate)
-.AddAttribute(0, "coordsize", a => a.CoordinateSize)
-.AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
-.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
-.AddAttribute(0, "print", a => a.Print)
-.AddAttribute(27, "spid", a => a.OptionalString)
-.AddAttribute(27, "oned", a => a.Oned)
-.AddAttribute(27, "regroupid", a => a.RegroupId)
-.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
-.AddAttribute(27, "button", a => a.Button)
-.AddAttribute(27, "userhidden", a => a.UserHidden)
-.AddAttribute(27, "bullet", a => a.Bullet)
-.AddAttribute(27, "hr", a => a.Horizontal)
-.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
-.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
-.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
-.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
-.AddAttribute(27, "allowincell", a => a.AllowInCell)
-.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
-.AddAttribute(27, "userdrawn", a => a.UserDrawn)
-.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
-.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
-.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
-.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
-.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
-.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
-.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
-.AddAttribute(27, "insetmode", a => a.InsetMode)
-.AddAttribute(0, "filled", a => a.Filled)
-.AddAttribute(0, "fillcolor", a => a.FillColor)
-.AddAttribute(0, "stroked", a => a.Stroked)
-.AddAttribute(0, "strokecolor", a => a.StrokeColor)
-.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
-.AddAttribute(0, "insetpen", a => a.InsetPen)
-.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+.AddAttribute("id", a => a.Id)
+.AddAttribute("style", a => a.Style)
+.AddAttribute("href", a => a.Href)
+.AddAttribute("target", a => a.Target)
+.AddAttribute("class", a => a.Class)
+.AddAttribute("title", a => a.Title)
+.AddAttribute("alt", a => a.Alternate)
+.AddAttribute("coordsize", a => a.CoordinateSize)
+.AddAttribute("coordorigin", a => a.CoordinateOrigin)
+.AddAttribute("wrapcoords", a => a.WrapCoordinates)
+.AddAttribute("print", a => a.Print)
+.AddAttribute("o:spid", a => a.OptionalString)
+.AddAttribute("o:oned", a => a.Oned)
+.AddAttribute("o:regroupid", a => a.RegroupId)
+.AddAttribute("o:doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute("o:button", a => a.Button)
+.AddAttribute("o:userhidden", a => a.UserHidden)
+.AddAttribute("o:bullet", a => a.Bullet)
+.AddAttribute("o:hr", a => a.Horizontal)
+.AddAttribute("o:hrstd", a => a.HorizontalStandard)
+.AddAttribute("o:hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute("o:hrpct", a => a.HorizontalPercentage)
+.AddAttribute("o:hralign", a => a.HorizontalAlignment)
+.AddAttribute("o:allowincell", a => a.AllowInCell)
+.AddAttribute("o:allowoverlap", a => a.AllowOverlap)
+.AddAttribute("o:userdrawn", a => a.UserDrawn)
+.AddAttribute("o:bordertopcolor", a => a.BorderTopColor)
+.AddAttribute("o:borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute("o:borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute("o:borderrightcolor", a => a.BorderRightColor)
+.AddAttribute("o:dgmlayout", a => a.DiagramLayout)
+.AddAttribute("o:dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute("o:dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute("o:insetmode", a => a.InsetMode)
+.AddAttribute("filled", a => a.Filled)
+.AddAttribute("fillcolor", a => a.FillColor)
+.AddAttribute("stroked", a => a.Stroked)
+.AddAttribute("strokecolor", a => a.StrokeColor)
+.AddAttribute("strokeweight", a => a.StrokeWeight)
+.AddAttribute("insetpen", a => a.InsetPen)
+.AddAttribute("o:spt", a => a.OptionalNumber, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (202L) });
 })
-.AddAttribute(27, "connectortype", a => a.ConnectorType)
-.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
-.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
-.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
-.AddAttribute(27, "forcedash", a => a.ForceDash)
-.AddAttribute(27, "oleicon", a => a.OleIcon)
-.AddAttribute(27, "ole", a => a.Ole)
-.AddAttribute(27, "preferrelative", a => a.PreferRelative)
-.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
-.AddAttribute(27, "clip", a => a.Clip)
-.AddAttribute(27, "gfxdata", a => a.Gfxdata)
-.AddAttribute(0, "from", a => a.From)
-.AddAttribute(0, "control1", a => a.Control1)
-.AddAttribute(0, "control2", a => a.Control2)
-.AddAttribute(0, "to", a => a.To);
+.AddAttribute("o:connectortype", a => a.ConnectorType)
+.AddAttribute("o:bwmode", a => a.BlackWhiteMode)
+.AddAttribute("o:bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute("o:bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute("o:forcedash", a => a.ForceDash)
+.AddAttribute("o:oleicon", a => a.OleIcon)
+.AddAttribute("o:ole", a => a.Ole)
+.AddAttribute("o:preferrelative", a => a.PreferRelative)
+.AddAttribute("o:cliptowrap", a => a.ClipToWrap)
+.AddAttribute("o:clip", a => a.Clip)
+.AddAttribute("o:gfxdata", a => a.Gfxdata)
+.AddAttribute("from", a => a.From)
+.AddAttribute("control1", a => a.Control1)
+.AddAttribute("control2", a => a.Control2)
+.AddAttribute("to", a => a.To);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -8240,7 +8240,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(26, "image")]
+    [SchemaAttr("v:image")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ImageFile : OpenXmlCompositeElement
     {
@@ -8282,7 +8282,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -8298,7 +8298,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "style")]
+        [SchemaAttr("style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Style
@@ -8314,7 +8314,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "href")]
+        [SchemaAttr("href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Href
@@ -8330,7 +8330,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "target")]
+        [SchemaAttr("target")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Target
@@ -8346,7 +8346,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "class")]
+        [SchemaAttr("class")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Class
@@ -8362,7 +8362,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "title")]
+        [SchemaAttr("title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Title
@@ -8378,7 +8378,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "alt")]
+        [SchemaAttr("alt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Alternate
@@ -8394,7 +8394,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "coordsize")]
+        [SchemaAttr("coordsize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CoordinateSize
@@ -8410,7 +8410,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "wrapcoords")]
+        [SchemaAttr("wrapcoords")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? WrapCoordinates
@@ -8426,7 +8426,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "print")]
+        [SchemaAttr("print")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Print
@@ -8445,7 +8445,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "spid")]
+        [SchemaAttr("o:spid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? OptionalString
@@ -8464,7 +8464,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "oned")]
+        [SchemaAttr("o:oned")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Oned
@@ -8483,7 +8483,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "regroupid")]
+        [SchemaAttr("o:regroupid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? RegroupId
@@ -8502,7 +8502,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "doubleclicknotify")]
+        [SchemaAttr("o:doubleclicknotify")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? DoubleClickNotify
@@ -8521,7 +8521,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "button")]
+        [SchemaAttr("o:button")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Button
@@ -8540,7 +8540,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "userhidden")]
+        [SchemaAttr("o:userhidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? UserHidden
@@ -8559,7 +8559,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bullet")]
+        [SchemaAttr("o:bullet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Bullet
@@ -8578,7 +8578,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hr")]
+        [SchemaAttr("o:hr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Horizontal
@@ -8597,7 +8597,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrstd")]
+        [SchemaAttr("o:hrstd")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? HorizontalStandard
@@ -8616,7 +8616,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrnoshade")]
+        [SchemaAttr("o:hrnoshade")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? HorizontalNoShade
@@ -8635,7 +8635,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrpct")]
+        [SchemaAttr("o:hrpct")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public SingleValue? HorizontalPercentage
@@ -8654,7 +8654,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hralign")]
+        [SchemaAttr("o:hralign")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>? HorizontalAlignment
@@ -8673,7 +8673,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "allowincell")]
+        [SchemaAttr("o:allowincell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowInCell
@@ -8692,7 +8692,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "allowoverlap")]
+        [SchemaAttr("o:allowoverlap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowOverlap
@@ -8711,7 +8711,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "userdrawn")]
+        [SchemaAttr("o:userdrawn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? UserDrawn
@@ -8730,7 +8730,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bordertopcolor")]
+        [SchemaAttr("o:bordertopcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderTopColor
@@ -8749,7 +8749,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderleftcolor")]
+        [SchemaAttr("o:borderleftcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderLeftColor
@@ -8768,7 +8768,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderbottomcolor")]
+        [SchemaAttr("o:borderbottomcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderBottomColor
@@ -8787,7 +8787,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderrightcolor")]
+        [SchemaAttr("o:borderrightcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderRightColor
@@ -8806,7 +8806,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmlayout")]
+        [SchemaAttr("o:dgmlayout")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramLayout
@@ -8825,7 +8825,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmnodekind")]
+        [SchemaAttr("o:dgmnodekind")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramNodeKind
@@ -8844,7 +8844,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmlayoutmru")]
+        [SchemaAttr("o:dgmlayoutmru")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramLayoutMostRecentUsed
@@ -8863,7 +8863,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "insetmode")]
+        [SchemaAttr("o:insetmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>? InsetMode
@@ -8879,7 +8879,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "filled")]
+        [SchemaAttr("filled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Filled
@@ -8895,7 +8895,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fillcolor")]
+        [SchemaAttr("fillcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? FillColor
@@ -8911,7 +8911,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "stroked")]
+        [SchemaAttr("stroked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Stroked
@@ -8927,7 +8927,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "strokecolor")]
+        [SchemaAttr("strokecolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? StrokeColor
@@ -8943,7 +8943,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "strokeweight")]
+        [SchemaAttr("strokeweight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? StrokeWeight
@@ -8959,7 +8959,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "insetpen")]
+        [SchemaAttr("insetpen")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? InsetPen
@@ -8978,7 +8978,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "spt")]
+        [SchemaAttr("o:spt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? OptionalNumber
@@ -8997,7 +8997,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "connectortype")]
+        [SchemaAttr("o:connectortype")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>? ConnectorType
@@ -9016,7 +9016,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwmode")]
+        [SchemaAttr("o:bwmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? BlackWhiteMode
@@ -9035,7 +9035,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwpure")]
+        [SchemaAttr("o:bwpure")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? PureBlackWhiteMode
@@ -9054,7 +9054,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwnormal")]
+        [SchemaAttr("o:bwnormal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? NormalBlackWhiteMode
@@ -9073,7 +9073,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "forcedash")]
+        [SchemaAttr("o:forcedash")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? ForceDash
@@ -9092,7 +9092,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "oleicon")]
+        [SchemaAttr("o:oleicon")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? OleIcon
@@ -9111,7 +9111,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "ole")]
+        [SchemaAttr("o:ole")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseBlankValue? Ole
@@ -9130,7 +9130,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "preferrelative")]
+        [SchemaAttr("o:preferrelative")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? PreferRelative
@@ -9149,7 +9149,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "cliptowrap")]
+        [SchemaAttr("o:cliptowrap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? ClipToWrap
@@ -9168,7 +9168,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "clip")]
+        [SchemaAttr("o:clip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Clip
@@ -9184,7 +9184,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "src")]
+        [SchemaAttr("src")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Source
@@ -9200,7 +9200,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "cropleft")]
+        [SchemaAttr("cropleft")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CropLeft
@@ -9216,7 +9216,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "croptop")]
+        [SchemaAttr("croptop")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CropTop
@@ -9232,7 +9232,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "cropright")]
+        [SchemaAttr("cropright")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CropRight
@@ -9248,7 +9248,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "cropbottom")]
+        [SchemaAttr("cropbottom")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CropBottom
@@ -9264,7 +9264,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "gain")]
+        [SchemaAttr("gain")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Gain
@@ -9280,7 +9280,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "blacklevel")]
+        [SchemaAttr("blacklevel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BlackLevel
@@ -9296,7 +9296,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "gamma")]
+        [SchemaAttr("gamma")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Gamma
@@ -9312,7 +9312,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "grayscale")]
+        [SchemaAttr("grayscale")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? GrayScale
@@ -9328,7 +9328,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "bilevel")]
+        [SchemaAttr("bilevel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? BiLevel
@@ -9347,7 +9347,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "gfxdata")]
+        [SchemaAttr("o:gfxdata")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Base64BinaryValue? Gfxdata
@@ -9359,7 +9359,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(26, "image");
+            builder.SetSchema("v:image");
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
@@ -9384,70 +9384,70 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
             builder.AddElement<ImageFile>()
-.AddAttribute(0, "id", a => a.Id)
-.AddAttribute(0, "style", a => a.Style)
-.AddAttribute(0, "href", a => a.Href)
-.AddAttribute(0, "target", a => a.Target)
-.AddAttribute(0, "class", a => a.Class)
-.AddAttribute(0, "title", a => a.Title)
-.AddAttribute(0, "alt", a => a.Alternate)
-.AddAttribute(0, "coordsize", a => a.CoordinateSize)
-.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
-.AddAttribute(0, "print", a => a.Print)
-.AddAttribute(27, "spid", a => a.OptionalString)
-.AddAttribute(27, "oned", a => a.Oned)
-.AddAttribute(27, "regroupid", a => a.RegroupId)
-.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
-.AddAttribute(27, "button", a => a.Button)
-.AddAttribute(27, "userhidden", a => a.UserHidden)
-.AddAttribute(27, "bullet", a => a.Bullet)
-.AddAttribute(27, "hr", a => a.Horizontal)
-.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
-.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
-.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
-.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
-.AddAttribute(27, "allowincell", a => a.AllowInCell)
-.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
-.AddAttribute(27, "userdrawn", a => a.UserDrawn)
-.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
-.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
-.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
-.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
-.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
-.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
-.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
-.AddAttribute(27, "insetmode", a => a.InsetMode)
-.AddAttribute(0, "filled", a => a.Filled)
-.AddAttribute(0, "fillcolor", a => a.FillColor)
-.AddAttribute(0, "stroked", a => a.Stroked)
-.AddAttribute(0, "strokecolor", a => a.StrokeColor)
-.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
-.AddAttribute(0, "insetpen", a => a.InsetPen)
-.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+.AddAttribute("id", a => a.Id)
+.AddAttribute("style", a => a.Style)
+.AddAttribute("href", a => a.Href)
+.AddAttribute("target", a => a.Target)
+.AddAttribute("class", a => a.Class)
+.AddAttribute("title", a => a.Title)
+.AddAttribute("alt", a => a.Alternate)
+.AddAttribute("coordsize", a => a.CoordinateSize)
+.AddAttribute("wrapcoords", a => a.WrapCoordinates)
+.AddAttribute("print", a => a.Print)
+.AddAttribute("o:spid", a => a.OptionalString)
+.AddAttribute("o:oned", a => a.Oned)
+.AddAttribute("o:regroupid", a => a.RegroupId)
+.AddAttribute("o:doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute("o:button", a => a.Button)
+.AddAttribute("o:userhidden", a => a.UserHidden)
+.AddAttribute("o:bullet", a => a.Bullet)
+.AddAttribute("o:hr", a => a.Horizontal)
+.AddAttribute("o:hrstd", a => a.HorizontalStandard)
+.AddAttribute("o:hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute("o:hrpct", a => a.HorizontalPercentage)
+.AddAttribute("o:hralign", a => a.HorizontalAlignment)
+.AddAttribute("o:allowincell", a => a.AllowInCell)
+.AddAttribute("o:allowoverlap", a => a.AllowOverlap)
+.AddAttribute("o:userdrawn", a => a.UserDrawn)
+.AddAttribute("o:bordertopcolor", a => a.BorderTopColor)
+.AddAttribute("o:borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute("o:borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute("o:borderrightcolor", a => a.BorderRightColor)
+.AddAttribute("o:dgmlayout", a => a.DiagramLayout)
+.AddAttribute("o:dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute("o:dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute("o:insetmode", a => a.InsetMode)
+.AddAttribute("filled", a => a.Filled)
+.AddAttribute("fillcolor", a => a.FillColor)
+.AddAttribute("stroked", a => a.Stroked)
+.AddAttribute("strokecolor", a => a.StrokeColor)
+.AddAttribute("strokeweight", a => a.StrokeWeight)
+.AddAttribute("insetpen", a => a.InsetPen)
+.AddAttribute("o:spt", a => a.OptionalNumber, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (202L) });
 })
-.AddAttribute(27, "connectortype", a => a.ConnectorType)
-.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
-.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
-.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
-.AddAttribute(27, "forcedash", a => a.ForceDash)
-.AddAttribute(27, "oleicon", a => a.OleIcon)
-.AddAttribute(27, "ole", a => a.Ole)
-.AddAttribute(27, "preferrelative", a => a.PreferRelative)
-.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
-.AddAttribute(27, "clip", a => a.Clip)
-.AddAttribute(0, "src", a => a.Source)
-.AddAttribute(0, "cropleft", a => a.CropLeft)
-.AddAttribute(0, "croptop", a => a.CropTop)
-.AddAttribute(0, "cropright", a => a.CropRight)
-.AddAttribute(0, "cropbottom", a => a.CropBottom)
-.AddAttribute(0, "gain", a => a.Gain)
-.AddAttribute(0, "blacklevel", a => a.BlackLevel)
-.AddAttribute(0, "gamma", a => a.Gamma)
-.AddAttribute(0, "grayscale", a => a.GrayScale)
-.AddAttribute(0, "bilevel", a => a.BiLevel)
-.AddAttribute(27, "gfxdata", a => a.Gfxdata);
+.AddAttribute("o:connectortype", a => a.ConnectorType)
+.AddAttribute("o:bwmode", a => a.BlackWhiteMode)
+.AddAttribute("o:bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute("o:bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute("o:forcedash", a => a.ForceDash)
+.AddAttribute("o:oleicon", a => a.OleIcon)
+.AddAttribute("o:ole", a => a.Ole)
+.AddAttribute("o:preferrelative", a => a.PreferRelative)
+.AddAttribute("o:cliptowrap", a => a.ClipToWrap)
+.AddAttribute("o:clip", a => a.Clip)
+.AddAttribute("src", a => a.Source)
+.AddAttribute("cropleft", a => a.CropLeft)
+.AddAttribute("croptop", a => a.CropTop)
+.AddAttribute("cropright", a => a.CropRight)
+.AddAttribute("cropbottom", a => a.CropBottom)
+.AddAttribute("gain", a => a.Gain)
+.AddAttribute("blacklevel", a => a.BlackLevel)
+.AddAttribute("gamma", a => a.Gamma)
+.AddAttribute("grayscale", a => a.GrayScale)
+.AddAttribute("bilevel", a => a.BiLevel)
+.AddAttribute("o:gfxdata", a => a.Gfxdata);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -9524,7 +9524,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(26, "line")]
+    [SchemaAttr("v:line")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Line : OpenXmlCompositeElement
     {
@@ -9566,7 +9566,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -9582,7 +9582,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "style")]
+        [SchemaAttr("style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Style
@@ -9598,7 +9598,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "href")]
+        [SchemaAttr("href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Href
@@ -9614,7 +9614,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "target")]
+        [SchemaAttr("target")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Target
@@ -9630,7 +9630,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "class")]
+        [SchemaAttr("class")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Class
@@ -9646,7 +9646,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "title")]
+        [SchemaAttr("title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Title
@@ -9662,7 +9662,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "alt")]
+        [SchemaAttr("alt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Alternate
@@ -9678,7 +9678,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "coordsize")]
+        [SchemaAttr("coordsize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CoordinateSize
@@ -9694,7 +9694,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "coordorigin")]
+        [SchemaAttr("coordorigin")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CoordinateOrigin
@@ -9710,7 +9710,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "wrapcoords")]
+        [SchemaAttr("wrapcoords")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? WrapCoordinates
@@ -9726,7 +9726,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "print")]
+        [SchemaAttr("print")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Print
@@ -9745,7 +9745,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "spid")]
+        [SchemaAttr("o:spid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? OptionalString
@@ -9764,7 +9764,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "oned")]
+        [SchemaAttr("o:oned")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Oned
@@ -9783,7 +9783,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "regroupid")]
+        [SchemaAttr("o:regroupid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? RegroupId
@@ -9802,7 +9802,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "doubleclicknotify")]
+        [SchemaAttr("o:doubleclicknotify")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? DoubleClickNotify
@@ -9821,7 +9821,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "button")]
+        [SchemaAttr("o:button")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Button
@@ -9840,7 +9840,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "userhidden")]
+        [SchemaAttr("o:userhidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? UserHidden
@@ -9859,7 +9859,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bullet")]
+        [SchemaAttr("o:bullet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Bullet
@@ -9878,7 +9878,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hr")]
+        [SchemaAttr("o:hr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Horizontal
@@ -9897,7 +9897,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrstd")]
+        [SchemaAttr("o:hrstd")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? HorizontalStandard
@@ -9916,7 +9916,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrnoshade")]
+        [SchemaAttr("o:hrnoshade")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? HorizontalNoShade
@@ -9935,7 +9935,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrpct")]
+        [SchemaAttr("o:hrpct")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public SingleValue? HorizontalPercentage
@@ -9954,7 +9954,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hralign")]
+        [SchemaAttr("o:hralign")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>? HorizontalAlignment
@@ -9973,7 +9973,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "allowincell")]
+        [SchemaAttr("o:allowincell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowInCell
@@ -9992,7 +9992,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "allowoverlap")]
+        [SchemaAttr("o:allowoverlap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowOverlap
@@ -10011,7 +10011,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "userdrawn")]
+        [SchemaAttr("o:userdrawn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? UserDrawn
@@ -10030,7 +10030,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bordertopcolor")]
+        [SchemaAttr("o:bordertopcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderTopColor
@@ -10049,7 +10049,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderleftcolor")]
+        [SchemaAttr("o:borderleftcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderLeftColor
@@ -10068,7 +10068,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderbottomcolor")]
+        [SchemaAttr("o:borderbottomcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderBottomColor
@@ -10087,7 +10087,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderrightcolor")]
+        [SchemaAttr("o:borderrightcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderRightColor
@@ -10106,7 +10106,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmlayout")]
+        [SchemaAttr("o:dgmlayout")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramLayout
@@ -10125,7 +10125,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmnodekind")]
+        [SchemaAttr("o:dgmnodekind")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramNodeKind
@@ -10144,7 +10144,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmlayoutmru")]
+        [SchemaAttr("o:dgmlayoutmru")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramLayoutMostRecentUsed
@@ -10163,7 +10163,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "insetmode")]
+        [SchemaAttr("o:insetmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>? InsetMode
@@ -10179,7 +10179,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "filled")]
+        [SchemaAttr("filled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Filled
@@ -10195,7 +10195,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fillcolor")]
+        [SchemaAttr("fillcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? FillColor
@@ -10211,7 +10211,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "stroked")]
+        [SchemaAttr("stroked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Stroked
@@ -10227,7 +10227,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "strokecolor")]
+        [SchemaAttr("strokecolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? StrokeColor
@@ -10243,7 +10243,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "strokeweight")]
+        [SchemaAttr("strokeweight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? StrokeWeight
@@ -10259,7 +10259,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "insetpen")]
+        [SchemaAttr("insetpen")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? InsetPen
@@ -10278,7 +10278,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "spt")]
+        [SchemaAttr("o:spt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? OptionalNumber
@@ -10297,7 +10297,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "connectortype")]
+        [SchemaAttr("o:connectortype")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>? ConnectorType
@@ -10316,7 +10316,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwmode")]
+        [SchemaAttr("o:bwmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? BlackWhiteMode
@@ -10335,7 +10335,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwpure")]
+        [SchemaAttr("o:bwpure")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? PureBlackWhiteMode
@@ -10354,7 +10354,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwnormal")]
+        [SchemaAttr("o:bwnormal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? NormalBlackWhiteMode
@@ -10373,7 +10373,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "forcedash")]
+        [SchemaAttr("o:forcedash")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? ForceDash
@@ -10392,7 +10392,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "oleicon")]
+        [SchemaAttr("o:oleicon")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? OleIcon
@@ -10411,7 +10411,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "ole")]
+        [SchemaAttr("o:ole")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseBlankValue? Ole
@@ -10430,7 +10430,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "preferrelative")]
+        [SchemaAttr("o:preferrelative")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? PreferRelative
@@ -10449,7 +10449,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "cliptowrap")]
+        [SchemaAttr("o:cliptowrap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? ClipToWrap
@@ -10468,7 +10468,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "clip")]
+        [SchemaAttr("o:clip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Clip
@@ -10487,7 +10487,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "gfxdata")]
+        [SchemaAttr("o:gfxdata")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Base64BinaryValue? Gfxdata
@@ -10503,7 +10503,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "from")]
+        [SchemaAttr("from")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? From
@@ -10519,7 +10519,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "to")]
+        [SchemaAttr("to")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? To
@@ -10531,7 +10531,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(26, "line");
+            builder.SetSchema("v:line");
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
@@ -10556,63 +10556,63 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
             builder.AddElement<Line>()
-.AddAttribute(0, "id", a => a.Id)
-.AddAttribute(0, "style", a => a.Style)
-.AddAttribute(0, "href", a => a.Href)
-.AddAttribute(0, "target", a => a.Target)
-.AddAttribute(0, "class", a => a.Class)
-.AddAttribute(0, "title", a => a.Title)
-.AddAttribute(0, "alt", a => a.Alternate)
-.AddAttribute(0, "coordsize", a => a.CoordinateSize)
-.AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
-.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
-.AddAttribute(0, "print", a => a.Print)
-.AddAttribute(27, "spid", a => a.OptionalString)
-.AddAttribute(27, "oned", a => a.Oned)
-.AddAttribute(27, "regroupid", a => a.RegroupId)
-.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
-.AddAttribute(27, "button", a => a.Button)
-.AddAttribute(27, "userhidden", a => a.UserHidden)
-.AddAttribute(27, "bullet", a => a.Bullet)
-.AddAttribute(27, "hr", a => a.Horizontal)
-.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
-.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
-.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
-.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
-.AddAttribute(27, "allowincell", a => a.AllowInCell)
-.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
-.AddAttribute(27, "userdrawn", a => a.UserDrawn)
-.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
-.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
-.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
-.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
-.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
-.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
-.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
-.AddAttribute(27, "insetmode", a => a.InsetMode)
-.AddAttribute(0, "filled", a => a.Filled)
-.AddAttribute(0, "fillcolor", a => a.FillColor)
-.AddAttribute(0, "stroked", a => a.Stroked)
-.AddAttribute(0, "strokecolor", a => a.StrokeColor)
-.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
-.AddAttribute(0, "insetpen", a => a.InsetPen)
-.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+.AddAttribute("id", a => a.Id)
+.AddAttribute("style", a => a.Style)
+.AddAttribute("href", a => a.Href)
+.AddAttribute("target", a => a.Target)
+.AddAttribute("class", a => a.Class)
+.AddAttribute("title", a => a.Title)
+.AddAttribute("alt", a => a.Alternate)
+.AddAttribute("coordsize", a => a.CoordinateSize)
+.AddAttribute("coordorigin", a => a.CoordinateOrigin)
+.AddAttribute("wrapcoords", a => a.WrapCoordinates)
+.AddAttribute("print", a => a.Print)
+.AddAttribute("o:spid", a => a.OptionalString)
+.AddAttribute("o:oned", a => a.Oned)
+.AddAttribute("o:regroupid", a => a.RegroupId)
+.AddAttribute("o:doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute("o:button", a => a.Button)
+.AddAttribute("o:userhidden", a => a.UserHidden)
+.AddAttribute("o:bullet", a => a.Bullet)
+.AddAttribute("o:hr", a => a.Horizontal)
+.AddAttribute("o:hrstd", a => a.HorizontalStandard)
+.AddAttribute("o:hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute("o:hrpct", a => a.HorizontalPercentage)
+.AddAttribute("o:hralign", a => a.HorizontalAlignment)
+.AddAttribute("o:allowincell", a => a.AllowInCell)
+.AddAttribute("o:allowoverlap", a => a.AllowOverlap)
+.AddAttribute("o:userdrawn", a => a.UserDrawn)
+.AddAttribute("o:bordertopcolor", a => a.BorderTopColor)
+.AddAttribute("o:borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute("o:borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute("o:borderrightcolor", a => a.BorderRightColor)
+.AddAttribute("o:dgmlayout", a => a.DiagramLayout)
+.AddAttribute("o:dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute("o:dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute("o:insetmode", a => a.InsetMode)
+.AddAttribute("filled", a => a.Filled)
+.AddAttribute("fillcolor", a => a.FillColor)
+.AddAttribute("stroked", a => a.Stroked)
+.AddAttribute("strokecolor", a => a.StrokeColor)
+.AddAttribute("strokeweight", a => a.StrokeWeight)
+.AddAttribute("insetpen", a => a.InsetPen)
+.AddAttribute("o:spt", a => a.OptionalNumber, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (202L) });
 })
-.AddAttribute(27, "connectortype", a => a.ConnectorType)
-.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
-.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
-.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
-.AddAttribute(27, "forcedash", a => a.ForceDash)
-.AddAttribute(27, "oleicon", a => a.OleIcon)
-.AddAttribute(27, "ole", a => a.Ole)
-.AddAttribute(27, "preferrelative", a => a.PreferRelative)
-.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
-.AddAttribute(27, "clip", a => a.Clip)
-.AddAttribute(27, "gfxdata", a => a.Gfxdata)
-.AddAttribute(0, "from", a => a.From)
-.AddAttribute(0, "to", a => a.To);
+.AddAttribute("o:connectortype", a => a.ConnectorType)
+.AddAttribute("o:bwmode", a => a.BlackWhiteMode)
+.AddAttribute("o:bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute("o:bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute("o:forcedash", a => a.ForceDash)
+.AddAttribute("o:oleicon", a => a.OleIcon)
+.AddAttribute("o:ole", a => a.Ole)
+.AddAttribute("o:preferrelative", a => a.PreferRelative)
+.AddAttribute("o:cliptowrap", a => a.ClipToWrap)
+.AddAttribute("o:clip", a => a.Clip)
+.AddAttribute("o:gfxdata", a => a.Gfxdata)
+.AddAttribute("from", a => a.From)
+.AddAttribute("to", a => a.To);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -10687,7 +10687,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(26, "oval")]
+    [SchemaAttr("v:oval")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Oval : OpenXmlCompositeElement
     {
@@ -10729,7 +10729,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -10745,7 +10745,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "style")]
+        [SchemaAttr("style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Style
@@ -10761,7 +10761,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "href")]
+        [SchemaAttr("href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Href
@@ -10777,7 +10777,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "target")]
+        [SchemaAttr("target")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Target
@@ -10793,7 +10793,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "class")]
+        [SchemaAttr("class")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Class
@@ -10809,7 +10809,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "title")]
+        [SchemaAttr("title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Title
@@ -10825,7 +10825,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "alt")]
+        [SchemaAttr("alt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Alternate
@@ -10841,7 +10841,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "coordsize")]
+        [SchemaAttr("coordsize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CoordinateSize
@@ -10857,7 +10857,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "coordorigin")]
+        [SchemaAttr("coordorigin")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CoordinateOrigin
@@ -10873,7 +10873,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "wrapcoords")]
+        [SchemaAttr("wrapcoords")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? WrapCoordinates
@@ -10889,7 +10889,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "print")]
+        [SchemaAttr("print")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Print
@@ -10908,7 +10908,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "spid")]
+        [SchemaAttr("o:spid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? OptionalString
@@ -10927,7 +10927,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "oned")]
+        [SchemaAttr("o:oned")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Oned
@@ -10946,7 +10946,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "regroupid")]
+        [SchemaAttr("o:regroupid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? RegroupId
@@ -10965,7 +10965,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "doubleclicknotify")]
+        [SchemaAttr("o:doubleclicknotify")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? DoubleClickNotify
@@ -10984,7 +10984,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "button")]
+        [SchemaAttr("o:button")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Button
@@ -11003,7 +11003,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "userhidden")]
+        [SchemaAttr("o:userhidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? UserHidden
@@ -11022,7 +11022,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bullet")]
+        [SchemaAttr("o:bullet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Bullet
@@ -11041,7 +11041,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hr")]
+        [SchemaAttr("o:hr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Horizontal
@@ -11060,7 +11060,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrstd")]
+        [SchemaAttr("o:hrstd")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? HorizontalStandard
@@ -11079,7 +11079,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrnoshade")]
+        [SchemaAttr("o:hrnoshade")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? HorizontalNoShade
@@ -11098,7 +11098,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrpct")]
+        [SchemaAttr("o:hrpct")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public SingleValue? HorizontalPercentage
@@ -11117,7 +11117,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hralign")]
+        [SchemaAttr("o:hralign")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>? HorizontalAlignment
@@ -11136,7 +11136,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "allowincell")]
+        [SchemaAttr("o:allowincell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowInCell
@@ -11155,7 +11155,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "allowoverlap")]
+        [SchemaAttr("o:allowoverlap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowOverlap
@@ -11174,7 +11174,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "userdrawn")]
+        [SchemaAttr("o:userdrawn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? UserDrawn
@@ -11193,7 +11193,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bordertopcolor")]
+        [SchemaAttr("o:bordertopcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderTopColor
@@ -11212,7 +11212,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderleftcolor")]
+        [SchemaAttr("o:borderleftcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderLeftColor
@@ -11231,7 +11231,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderbottomcolor")]
+        [SchemaAttr("o:borderbottomcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderBottomColor
@@ -11250,7 +11250,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderrightcolor")]
+        [SchemaAttr("o:borderrightcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderRightColor
@@ -11269,7 +11269,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmlayout")]
+        [SchemaAttr("o:dgmlayout")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramLayout
@@ -11288,7 +11288,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmnodekind")]
+        [SchemaAttr("o:dgmnodekind")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramNodeKind
@@ -11307,7 +11307,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmlayoutmru")]
+        [SchemaAttr("o:dgmlayoutmru")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramLayoutMostRecentUsed
@@ -11326,7 +11326,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "insetmode")]
+        [SchemaAttr("o:insetmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>? InsetMode
@@ -11342,7 +11342,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "filled")]
+        [SchemaAttr("filled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Filled
@@ -11358,7 +11358,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fillcolor")]
+        [SchemaAttr("fillcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? FillColor
@@ -11374,7 +11374,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "stroked")]
+        [SchemaAttr("stroked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Stroked
@@ -11390,7 +11390,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "strokecolor")]
+        [SchemaAttr("strokecolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? StrokeColor
@@ -11406,7 +11406,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "strokeweight")]
+        [SchemaAttr("strokeweight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? StrokeWeight
@@ -11422,7 +11422,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "insetpen")]
+        [SchemaAttr("insetpen")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? InsetPen
@@ -11441,7 +11441,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "spt")]
+        [SchemaAttr("o:spt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? OptionalNumber
@@ -11460,7 +11460,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "connectortype")]
+        [SchemaAttr("o:connectortype")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>? ConnectorType
@@ -11479,7 +11479,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwmode")]
+        [SchemaAttr("o:bwmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? BlackWhiteMode
@@ -11498,7 +11498,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwpure")]
+        [SchemaAttr("o:bwpure")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? PureBlackWhiteMode
@@ -11517,7 +11517,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwnormal")]
+        [SchemaAttr("o:bwnormal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? NormalBlackWhiteMode
@@ -11536,7 +11536,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "forcedash")]
+        [SchemaAttr("o:forcedash")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? ForceDash
@@ -11555,7 +11555,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "oleicon")]
+        [SchemaAttr("o:oleicon")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? OleIcon
@@ -11574,7 +11574,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "ole")]
+        [SchemaAttr("o:ole")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseBlankValue? Ole
@@ -11593,7 +11593,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "preferrelative")]
+        [SchemaAttr("o:preferrelative")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? PreferRelative
@@ -11612,7 +11612,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "cliptowrap")]
+        [SchemaAttr("o:cliptowrap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? ClipToWrap
@@ -11631,7 +11631,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "clip")]
+        [SchemaAttr("o:clip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Clip
@@ -11650,7 +11650,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "gfxdata")]
+        [SchemaAttr("o:gfxdata")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Base64BinaryValue? Gfxdata
@@ -11662,7 +11662,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(26, "oval");
+            builder.SetSchema("v:oval");
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
@@ -11687,61 +11687,61 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
             builder.AddElement<Oval>()
-.AddAttribute(0, "id", a => a.Id)
-.AddAttribute(0, "style", a => a.Style)
-.AddAttribute(0, "href", a => a.Href)
-.AddAttribute(0, "target", a => a.Target)
-.AddAttribute(0, "class", a => a.Class)
-.AddAttribute(0, "title", a => a.Title)
-.AddAttribute(0, "alt", a => a.Alternate)
-.AddAttribute(0, "coordsize", a => a.CoordinateSize)
-.AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
-.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
-.AddAttribute(0, "print", a => a.Print)
-.AddAttribute(27, "spid", a => a.OptionalString)
-.AddAttribute(27, "oned", a => a.Oned)
-.AddAttribute(27, "regroupid", a => a.RegroupId)
-.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
-.AddAttribute(27, "button", a => a.Button)
-.AddAttribute(27, "userhidden", a => a.UserHidden)
-.AddAttribute(27, "bullet", a => a.Bullet)
-.AddAttribute(27, "hr", a => a.Horizontal)
-.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
-.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
-.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
-.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
-.AddAttribute(27, "allowincell", a => a.AllowInCell)
-.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
-.AddAttribute(27, "userdrawn", a => a.UserDrawn)
-.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
-.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
-.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
-.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
-.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
-.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
-.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
-.AddAttribute(27, "insetmode", a => a.InsetMode)
-.AddAttribute(0, "filled", a => a.Filled)
-.AddAttribute(0, "fillcolor", a => a.FillColor)
-.AddAttribute(0, "stroked", a => a.Stroked)
-.AddAttribute(0, "strokecolor", a => a.StrokeColor)
-.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
-.AddAttribute(0, "insetpen", a => a.InsetPen)
-.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+.AddAttribute("id", a => a.Id)
+.AddAttribute("style", a => a.Style)
+.AddAttribute("href", a => a.Href)
+.AddAttribute("target", a => a.Target)
+.AddAttribute("class", a => a.Class)
+.AddAttribute("title", a => a.Title)
+.AddAttribute("alt", a => a.Alternate)
+.AddAttribute("coordsize", a => a.CoordinateSize)
+.AddAttribute("coordorigin", a => a.CoordinateOrigin)
+.AddAttribute("wrapcoords", a => a.WrapCoordinates)
+.AddAttribute("print", a => a.Print)
+.AddAttribute("o:spid", a => a.OptionalString)
+.AddAttribute("o:oned", a => a.Oned)
+.AddAttribute("o:regroupid", a => a.RegroupId)
+.AddAttribute("o:doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute("o:button", a => a.Button)
+.AddAttribute("o:userhidden", a => a.UserHidden)
+.AddAttribute("o:bullet", a => a.Bullet)
+.AddAttribute("o:hr", a => a.Horizontal)
+.AddAttribute("o:hrstd", a => a.HorizontalStandard)
+.AddAttribute("o:hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute("o:hrpct", a => a.HorizontalPercentage)
+.AddAttribute("o:hralign", a => a.HorizontalAlignment)
+.AddAttribute("o:allowincell", a => a.AllowInCell)
+.AddAttribute("o:allowoverlap", a => a.AllowOverlap)
+.AddAttribute("o:userdrawn", a => a.UserDrawn)
+.AddAttribute("o:bordertopcolor", a => a.BorderTopColor)
+.AddAttribute("o:borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute("o:borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute("o:borderrightcolor", a => a.BorderRightColor)
+.AddAttribute("o:dgmlayout", a => a.DiagramLayout)
+.AddAttribute("o:dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute("o:dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute("o:insetmode", a => a.InsetMode)
+.AddAttribute("filled", a => a.Filled)
+.AddAttribute("fillcolor", a => a.FillColor)
+.AddAttribute("stroked", a => a.Stroked)
+.AddAttribute("strokecolor", a => a.StrokeColor)
+.AddAttribute("strokeweight", a => a.StrokeWeight)
+.AddAttribute("insetpen", a => a.InsetPen)
+.AddAttribute("o:spt", a => a.OptionalNumber, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (202L) });
 })
-.AddAttribute(27, "connectortype", a => a.ConnectorType)
-.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
-.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
-.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
-.AddAttribute(27, "forcedash", a => a.ForceDash)
-.AddAttribute(27, "oleicon", a => a.OleIcon)
-.AddAttribute(27, "ole", a => a.Ole)
-.AddAttribute(27, "preferrelative", a => a.PreferRelative)
-.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
-.AddAttribute(27, "clip", a => a.Clip)
-.AddAttribute(27, "gfxdata", a => a.Gfxdata);
+.AddAttribute("o:connectortype", a => a.ConnectorType)
+.AddAttribute("o:bwmode", a => a.BlackWhiteMode)
+.AddAttribute("o:bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute("o:bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute("o:forcedash", a => a.ForceDash)
+.AddAttribute("o:oleicon", a => a.OleIcon)
+.AddAttribute("o:ole", a => a.Ole)
+.AddAttribute("o:preferrelative", a => a.PreferRelative)
+.AddAttribute("o:cliptowrap", a => a.ClipToWrap)
+.AddAttribute("o:clip", a => a.Clip)
+.AddAttribute("o:gfxdata", a => a.Gfxdata);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -11819,7 +11819,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(26, "polyline")]
+    [SchemaAttr("v:polyline")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PolyLine : OpenXmlCompositeElement
     {
@@ -11861,7 +11861,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -11877,7 +11877,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "style")]
+        [SchemaAttr("style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Style
@@ -11893,7 +11893,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "href")]
+        [SchemaAttr("href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Href
@@ -11909,7 +11909,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "target")]
+        [SchemaAttr("target")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Target
@@ -11925,7 +11925,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "class")]
+        [SchemaAttr("class")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Class
@@ -11941,7 +11941,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "title")]
+        [SchemaAttr("title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Title
@@ -11957,7 +11957,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "alt")]
+        [SchemaAttr("alt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Alternate
@@ -11973,7 +11973,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "coordsize")]
+        [SchemaAttr("coordsize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CoordinateSize
@@ -11989,7 +11989,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "coordorigin")]
+        [SchemaAttr("coordorigin")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CoordinateOrigin
@@ -12005,7 +12005,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "wrapcoords")]
+        [SchemaAttr("wrapcoords")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? WrapCoordinates
@@ -12021,7 +12021,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "print")]
+        [SchemaAttr("print")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Print
@@ -12040,7 +12040,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "spid")]
+        [SchemaAttr("o:spid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? OptionalString
@@ -12059,7 +12059,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "oned")]
+        [SchemaAttr("o:oned")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Oned
@@ -12078,7 +12078,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "regroupid")]
+        [SchemaAttr("o:regroupid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? RegroupId
@@ -12097,7 +12097,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "doubleclicknotify")]
+        [SchemaAttr("o:doubleclicknotify")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? DoubleClickNotify
@@ -12116,7 +12116,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "button")]
+        [SchemaAttr("o:button")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Button
@@ -12135,7 +12135,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "userhidden")]
+        [SchemaAttr("o:userhidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? UserHidden
@@ -12154,7 +12154,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bullet")]
+        [SchemaAttr("o:bullet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Bullet
@@ -12173,7 +12173,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hr")]
+        [SchemaAttr("o:hr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Horizontal
@@ -12192,7 +12192,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrstd")]
+        [SchemaAttr("o:hrstd")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? HorizontalStandard
@@ -12211,7 +12211,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrnoshade")]
+        [SchemaAttr("o:hrnoshade")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? HorizontalNoShade
@@ -12230,7 +12230,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrpct")]
+        [SchemaAttr("o:hrpct")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public SingleValue? HorizontalPercentage
@@ -12249,7 +12249,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hralign")]
+        [SchemaAttr("o:hralign")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>? HorizontalAlignment
@@ -12268,7 +12268,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "allowincell")]
+        [SchemaAttr("o:allowincell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowInCell
@@ -12287,7 +12287,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "allowoverlap")]
+        [SchemaAttr("o:allowoverlap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowOverlap
@@ -12306,7 +12306,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "userdrawn")]
+        [SchemaAttr("o:userdrawn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? UserDrawn
@@ -12325,7 +12325,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bordertopcolor")]
+        [SchemaAttr("o:bordertopcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderTopColor
@@ -12344,7 +12344,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderleftcolor")]
+        [SchemaAttr("o:borderleftcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderLeftColor
@@ -12363,7 +12363,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderbottomcolor")]
+        [SchemaAttr("o:borderbottomcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderBottomColor
@@ -12382,7 +12382,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderrightcolor")]
+        [SchemaAttr("o:borderrightcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderRightColor
@@ -12401,7 +12401,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmlayout")]
+        [SchemaAttr("o:dgmlayout")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramLayout
@@ -12420,7 +12420,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmnodekind")]
+        [SchemaAttr("o:dgmnodekind")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramNodeKind
@@ -12439,7 +12439,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmlayoutmru")]
+        [SchemaAttr("o:dgmlayoutmru")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramLayoutMostRecentUsed
@@ -12458,7 +12458,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "insetmode")]
+        [SchemaAttr("o:insetmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>? InsetMode
@@ -12474,7 +12474,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "filled")]
+        [SchemaAttr("filled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Filled
@@ -12490,7 +12490,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fillcolor")]
+        [SchemaAttr("fillcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? FillColor
@@ -12506,7 +12506,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "stroked")]
+        [SchemaAttr("stroked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Stroked
@@ -12522,7 +12522,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "strokecolor")]
+        [SchemaAttr("strokecolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? StrokeColor
@@ -12538,7 +12538,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "strokeweight")]
+        [SchemaAttr("strokeweight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? StrokeWeight
@@ -12554,7 +12554,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "insetpen")]
+        [SchemaAttr("insetpen")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? InsetPen
@@ -12573,7 +12573,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "spt")]
+        [SchemaAttr("o:spt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? OptionalNumber
@@ -12592,7 +12592,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "connectortype")]
+        [SchemaAttr("o:connectortype")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>? ConnectorType
@@ -12611,7 +12611,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwmode")]
+        [SchemaAttr("o:bwmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? BlackWhiteMode
@@ -12630,7 +12630,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwpure")]
+        [SchemaAttr("o:bwpure")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? PureBlackWhiteMode
@@ -12649,7 +12649,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwnormal")]
+        [SchemaAttr("o:bwnormal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? NormalBlackWhiteMode
@@ -12668,7 +12668,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "forcedash")]
+        [SchemaAttr("o:forcedash")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? ForceDash
@@ -12687,7 +12687,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "oleicon")]
+        [SchemaAttr("o:oleicon")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? OleIcon
@@ -12706,7 +12706,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "ole")]
+        [SchemaAttr("o:ole")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseBlankValue? Ole
@@ -12725,7 +12725,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "preferrelative")]
+        [SchemaAttr("o:preferrelative")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? PreferRelative
@@ -12744,7 +12744,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "cliptowrap")]
+        [SchemaAttr("o:cliptowrap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? ClipToWrap
@@ -12763,7 +12763,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "clip")]
+        [SchemaAttr("o:clip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Clip
@@ -12782,7 +12782,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "gfxdata")]
+        [SchemaAttr("o:gfxdata")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Base64BinaryValue? Gfxdata
@@ -12798,7 +12798,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "points")]
+        [SchemaAttr("points")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Points
@@ -12810,7 +12810,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(26, "polyline");
+            builder.SetSchema("v:polyline");
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
@@ -12836,62 +12836,62 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
             builder.AddElement<PolyLine>()
-.AddAttribute(0, "id", a => a.Id)
-.AddAttribute(0, "style", a => a.Style)
-.AddAttribute(0, "href", a => a.Href)
-.AddAttribute(0, "target", a => a.Target)
-.AddAttribute(0, "class", a => a.Class)
-.AddAttribute(0, "title", a => a.Title)
-.AddAttribute(0, "alt", a => a.Alternate)
-.AddAttribute(0, "coordsize", a => a.CoordinateSize)
-.AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
-.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
-.AddAttribute(0, "print", a => a.Print)
-.AddAttribute(27, "spid", a => a.OptionalString)
-.AddAttribute(27, "oned", a => a.Oned)
-.AddAttribute(27, "regroupid", a => a.RegroupId)
-.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
-.AddAttribute(27, "button", a => a.Button)
-.AddAttribute(27, "userhidden", a => a.UserHidden)
-.AddAttribute(27, "bullet", a => a.Bullet)
-.AddAttribute(27, "hr", a => a.Horizontal)
-.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
-.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
-.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
-.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
-.AddAttribute(27, "allowincell", a => a.AllowInCell)
-.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
-.AddAttribute(27, "userdrawn", a => a.UserDrawn)
-.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
-.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
-.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
-.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
-.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
-.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
-.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
-.AddAttribute(27, "insetmode", a => a.InsetMode)
-.AddAttribute(0, "filled", a => a.Filled)
-.AddAttribute(0, "fillcolor", a => a.FillColor)
-.AddAttribute(0, "stroked", a => a.Stroked)
-.AddAttribute(0, "strokecolor", a => a.StrokeColor)
-.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
-.AddAttribute(0, "insetpen", a => a.InsetPen)
-.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+.AddAttribute("id", a => a.Id)
+.AddAttribute("style", a => a.Style)
+.AddAttribute("href", a => a.Href)
+.AddAttribute("target", a => a.Target)
+.AddAttribute("class", a => a.Class)
+.AddAttribute("title", a => a.Title)
+.AddAttribute("alt", a => a.Alternate)
+.AddAttribute("coordsize", a => a.CoordinateSize)
+.AddAttribute("coordorigin", a => a.CoordinateOrigin)
+.AddAttribute("wrapcoords", a => a.WrapCoordinates)
+.AddAttribute("print", a => a.Print)
+.AddAttribute("o:spid", a => a.OptionalString)
+.AddAttribute("o:oned", a => a.Oned)
+.AddAttribute("o:regroupid", a => a.RegroupId)
+.AddAttribute("o:doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute("o:button", a => a.Button)
+.AddAttribute("o:userhidden", a => a.UserHidden)
+.AddAttribute("o:bullet", a => a.Bullet)
+.AddAttribute("o:hr", a => a.Horizontal)
+.AddAttribute("o:hrstd", a => a.HorizontalStandard)
+.AddAttribute("o:hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute("o:hrpct", a => a.HorizontalPercentage)
+.AddAttribute("o:hralign", a => a.HorizontalAlignment)
+.AddAttribute("o:allowincell", a => a.AllowInCell)
+.AddAttribute("o:allowoverlap", a => a.AllowOverlap)
+.AddAttribute("o:userdrawn", a => a.UserDrawn)
+.AddAttribute("o:bordertopcolor", a => a.BorderTopColor)
+.AddAttribute("o:borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute("o:borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute("o:borderrightcolor", a => a.BorderRightColor)
+.AddAttribute("o:dgmlayout", a => a.DiagramLayout)
+.AddAttribute("o:dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute("o:dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute("o:insetmode", a => a.InsetMode)
+.AddAttribute("filled", a => a.Filled)
+.AddAttribute("fillcolor", a => a.FillColor)
+.AddAttribute("stroked", a => a.Stroked)
+.AddAttribute("strokecolor", a => a.StrokeColor)
+.AddAttribute("strokeweight", a => a.StrokeWeight)
+.AddAttribute("insetpen", a => a.InsetPen)
+.AddAttribute("o:spt", a => a.OptionalNumber, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (202L) });
 })
-.AddAttribute(27, "connectortype", a => a.ConnectorType)
-.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
-.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
-.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
-.AddAttribute(27, "forcedash", a => a.ForceDash)
-.AddAttribute(27, "oleicon", a => a.OleIcon)
-.AddAttribute(27, "ole", a => a.Ole)
-.AddAttribute(27, "preferrelative", a => a.PreferRelative)
-.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
-.AddAttribute(27, "clip", a => a.Clip)
-.AddAttribute(27, "gfxdata", a => a.Gfxdata)
-.AddAttribute(0, "points", a => a.Points);
+.AddAttribute("o:connectortype", a => a.ConnectorType)
+.AddAttribute("o:bwmode", a => a.BlackWhiteMode)
+.AddAttribute("o:bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute("o:bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute("o:forcedash", a => a.ForceDash)
+.AddAttribute("o:oleicon", a => a.OleIcon)
+.AddAttribute("o:ole", a => a.Ole)
+.AddAttribute("o:preferrelative", a => a.PreferRelative)
+.AddAttribute("o:cliptowrap", a => a.ClipToWrap)
+.AddAttribute("o:clip", a => a.Clip)
+.AddAttribute("o:gfxdata", a => a.Gfxdata)
+.AddAttribute("points", a => a.Points);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -12968,7 +12968,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(26, "rect")]
+    [SchemaAttr("v:rect")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Rectangle : OpenXmlCompositeElement
     {
@@ -13010,7 +13010,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -13026,7 +13026,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "style")]
+        [SchemaAttr("style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Style
@@ -13042,7 +13042,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "href")]
+        [SchemaAttr("href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Href
@@ -13058,7 +13058,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "target")]
+        [SchemaAttr("target")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Target
@@ -13074,7 +13074,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "class")]
+        [SchemaAttr("class")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Class
@@ -13090,7 +13090,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "title")]
+        [SchemaAttr("title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Title
@@ -13106,7 +13106,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "alt")]
+        [SchemaAttr("alt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Alternate
@@ -13122,7 +13122,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "coordsize")]
+        [SchemaAttr("coordsize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CoordinateSize
@@ -13138,7 +13138,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "coordorigin")]
+        [SchemaAttr("coordorigin")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CoordinateOrigin
@@ -13154,7 +13154,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "wrapcoords")]
+        [SchemaAttr("wrapcoords")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? WrapCoordinates
@@ -13170,7 +13170,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "print")]
+        [SchemaAttr("print")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Print
@@ -13189,7 +13189,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "spid")]
+        [SchemaAttr("o:spid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? OptionalString
@@ -13208,7 +13208,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "oned")]
+        [SchemaAttr("o:oned")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Oned
@@ -13227,7 +13227,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "regroupid")]
+        [SchemaAttr("o:regroupid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? RegroupId
@@ -13246,7 +13246,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "doubleclicknotify")]
+        [SchemaAttr("o:doubleclicknotify")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? DoubleClickNotify
@@ -13265,7 +13265,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "button")]
+        [SchemaAttr("o:button")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Button
@@ -13284,7 +13284,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "userhidden")]
+        [SchemaAttr("o:userhidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? UserHidden
@@ -13303,7 +13303,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bullet")]
+        [SchemaAttr("o:bullet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Bullet
@@ -13322,7 +13322,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hr")]
+        [SchemaAttr("o:hr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Horizontal
@@ -13341,7 +13341,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrstd")]
+        [SchemaAttr("o:hrstd")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? HorizontalStandard
@@ -13360,7 +13360,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrnoshade")]
+        [SchemaAttr("o:hrnoshade")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? HorizontalNoShade
@@ -13379,7 +13379,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrpct")]
+        [SchemaAttr("o:hrpct")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public SingleValue? HorizontalPercentage
@@ -13398,7 +13398,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hralign")]
+        [SchemaAttr("o:hralign")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>? HorizontalAlignment
@@ -13417,7 +13417,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "allowincell")]
+        [SchemaAttr("o:allowincell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowInCell
@@ -13436,7 +13436,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "allowoverlap")]
+        [SchemaAttr("o:allowoverlap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowOverlap
@@ -13455,7 +13455,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "userdrawn")]
+        [SchemaAttr("o:userdrawn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? UserDrawn
@@ -13474,7 +13474,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bordertopcolor")]
+        [SchemaAttr("o:bordertopcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderTopColor
@@ -13493,7 +13493,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderleftcolor")]
+        [SchemaAttr("o:borderleftcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderLeftColor
@@ -13512,7 +13512,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderbottomcolor")]
+        [SchemaAttr("o:borderbottomcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderBottomColor
@@ -13531,7 +13531,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderrightcolor")]
+        [SchemaAttr("o:borderrightcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderRightColor
@@ -13550,7 +13550,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmlayout")]
+        [SchemaAttr("o:dgmlayout")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramLayout
@@ -13569,7 +13569,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmnodekind")]
+        [SchemaAttr("o:dgmnodekind")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramNodeKind
@@ -13588,7 +13588,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmlayoutmru")]
+        [SchemaAttr("o:dgmlayoutmru")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramLayoutMostRecentUsed
@@ -13607,7 +13607,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "insetmode")]
+        [SchemaAttr("o:insetmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>? InsetMode
@@ -13623,7 +13623,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "filled")]
+        [SchemaAttr("filled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Filled
@@ -13639,7 +13639,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fillcolor")]
+        [SchemaAttr("fillcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? FillColor
@@ -13655,7 +13655,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "stroked")]
+        [SchemaAttr("stroked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Stroked
@@ -13671,7 +13671,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "strokecolor")]
+        [SchemaAttr("strokecolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? StrokeColor
@@ -13687,7 +13687,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "strokeweight")]
+        [SchemaAttr("strokeweight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? StrokeWeight
@@ -13703,7 +13703,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "insetpen")]
+        [SchemaAttr("insetpen")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? InsetPen
@@ -13722,7 +13722,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "spt")]
+        [SchemaAttr("o:spt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? OptionalNumber
@@ -13741,7 +13741,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "connectortype")]
+        [SchemaAttr("o:connectortype")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>? ConnectorType
@@ -13760,7 +13760,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwmode")]
+        [SchemaAttr("o:bwmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? BlackWhiteMode
@@ -13779,7 +13779,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwpure")]
+        [SchemaAttr("o:bwpure")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? PureBlackWhiteMode
@@ -13798,7 +13798,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwnormal")]
+        [SchemaAttr("o:bwnormal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? NormalBlackWhiteMode
@@ -13817,7 +13817,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "forcedash")]
+        [SchemaAttr("o:forcedash")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? ForceDash
@@ -13836,7 +13836,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "oleicon")]
+        [SchemaAttr("o:oleicon")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? OleIcon
@@ -13855,7 +13855,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "ole")]
+        [SchemaAttr("o:ole")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseBlankValue? Ole
@@ -13874,7 +13874,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "preferrelative")]
+        [SchemaAttr("o:preferrelative")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? PreferRelative
@@ -13893,7 +13893,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "cliptowrap")]
+        [SchemaAttr("o:cliptowrap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? ClipToWrap
@@ -13912,7 +13912,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "clip")]
+        [SchemaAttr("o:clip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Clip
@@ -13931,7 +13931,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "gfxdata")]
+        [SchemaAttr("o:gfxdata")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Base64BinaryValue? Gfxdata
@@ -13943,7 +13943,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(26, "rect");
+            builder.SetSchema("v:rect");
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
@@ -13968,61 +13968,61 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
             builder.AddElement<Rectangle>()
-.AddAttribute(0, "id", a => a.Id)
-.AddAttribute(0, "style", a => a.Style)
-.AddAttribute(0, "href", a => a.Href)
-.AddAttribute(0, "target", a => a.Target)
-.AddAttribute(0, "class", a => a.Class)
-.AddAttribute(0, "title", a => a.Title)
-.AddAttribute(0, "alt", a => a.Alternate)
-.AddAttribute(0, "coordsize", a => a.CoordinateSize)
-.AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
-.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
-.AddAttribute(0, "print", a => a.Print)
-.AddAttribute(27, "spid", a => a.OptionalString)
-.AddAttribute(27, "oned", a => a.Oned)
-.AddAttribute(27, "regroupid", a => a.RegroupId)
-.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
-.AddAttribute(27, "button", a => a.Button)
-.AddAttribute(27, "userhidden", a => a.UserHidden)
-.AddAttribute(27, "bullet", a => a.Bullet)
-.AddAttribute(27, "hr", a => a.Horizontal)
-.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
-.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
-.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
-.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
-.AddAttribute(27, "allowincell", a => a.AllowInCell)
-.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
-.AddAttribute(27, "userdrawn", a => a.UserDrawn)
-.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
-.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
-.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
-.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
-.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
-.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
-.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
-.AddAttribute(27, "insetmode", a => a.InsetMode)
-.AddAttribute(0, "filled", a => a.Filled)
-.AddAttribute(0, "fillcolor", a => a.FillColor)
-.AddAttribute(0, "stroked", a => a.Stroked)
-.AddAttribute(0, "strokecolor", a => a.StrokeColor)
-.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
-.AddAttribute(0, "insetpen", a => a.InsetPen)
-.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+.AddAttribute("id", a => a.Id)
+.AddAttribute("style", a => a.Style)
+.AddAttribute("href", a => a.Href)
+.AddAttribute("target", a => a.Target)
+.AddAttribute("class", a => a.Class)
+.AddAttribute("title", a => a.Title)
+.AddAttribute("alt", a => a.Alternate)
+.AddAttribute("coordsize", a => a.CoordinateSize)
+.AddAttribute("coordorigin", a => a.CoordinateOrigin)
+.AddAttribute("wrapcoords", a => a.WrapCoordinates)
+.AddAttribute("print", a => a.Print)
+.AddAttribute("o:spid", a => a.OptionalString)
+.AddAttribute("o:oned", a => a.Oned)
+.AddAttribute("o:regroupid", a => a.RegroupId)
+.AddAttribute("o:doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute("o:button", a => a.Button)
+.AddAttribute("o:userhidden", a => a.UserHidden)
+.AddAttribute("o:bullet", a => a.Bullet)
+.AddAttribute("o:hr", a => a.Horizontal)
+.AddAttribute("o:hrstd", a => a.HorizontalStandard)
+.AddAttribute("o:hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute("o:hrpct", a => a.HorizontalPercentage)
+.AddAttribute("o:hralign", a => a.HorizontalAlignment)
+.AddAttribute("o:allowincell", a => a.AllowInCell)
+.AddAttribute("o:allowoverlap", a => a.AllowOverlap)
+.AddAttribute("o:userdrawn", a => a.UserDrawn)
+.AddAttribute("o:bordertopcolor", a => a.BorderTopColor)
+.AddAttribute("o:borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute("o:borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute("o:borderrightcolor", a => a.BorderRightColor)
+.AddAttribute("o:dgmlayout", a => a.DiagramLayout)
+.AddAttribute("o:dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute("o:dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute("o:insetmode", a => a.InsetMode)
+.AddAttribute("filled", a => a.Filled)
+.AddAttribute("fillcolor", a => a.FillColor)
+.AddAttribute("stroked", a => a.Stroked)
+.AddAttribute("strokecolor", a => a.StrokeColor)
+.AddAttribute("strokeweight", a => a.StrokeWeight)
+.AddAttribute("insetpen", a => a.InsetPen)
+.AddAttribute("o:spt", a => a.OptionalNumber, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (202L) });
 })
-.AddAttribute(27, "connectortype", a => a.ConnectorType)
-.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
-.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
-.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
-.AddAttribute(27, "forcedash", a => a.ForceDash)
-.AddAttribute(27, "oleicon", a => a.OleIcon)
-.AddAttribute(27, "ole", a => a.Ole)
-.AddAttribute(27, "preferrelative", a => a.PreferRelative)
-.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
-.AddAttribute(27, "clip", a => a.Clip)
-.AddAttribute(27, "gfxdata", a => a.Gfxdata);
+.AddAttribute("o:connectortype", a => a.ConnectorType)
+.AddAttribute("o:bwmode", a => a.BlackWhiteMode)
+.AddAttribute("o:bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute("o:bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute("o:forcedash", a => a.ForceDash)
+.AddAttribute("o:oleicon", a => a.OleIcon)
+.AddAttribute("o:ole", a => a.Ole)
+.AddAttribute("o:preferrelative", a => a.PreferRelative)
+.AddAttribute("o:cliptowrap", a => a.ClipToWrap)
+.AddAttribute("o:clip", a => a.Clip)
+.AddAttribute("o:gfxdata", a => a.Gfxdata);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -14099,7 +14099,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(26, "roundrect")]
+    [SchemaAttr("v:roundrect")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RoundRectangle : OpenXmlCompositeElement
     {
@@ -14141,7 +14141,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -14157,7 +14157,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "style")]
+        [SchemaAttr("style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Style
@@ -14173,7 +14173,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "href")]
+        [SchemaAttr("href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Href
@@ -14189,7 +14189,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "target")]
+        [SchemaAttr("target")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Target
@@ -14205,7 +14205,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "class")]
+        [SchemaAttr("class")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Class
@@ -14221,7 +14221,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "title")]
+        [SchemaAttr("title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Title
@@ -14237,7 +14237,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "alt")]
+        [SchemaAttr("alt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Alternate
@@ -14253,7 +14253,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "coordsize")]
+        [SchemaAttr("coordsize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CoordinateSize
@@ -14269,7 +14269,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "wrapcoords")]
+        [SchemaAttr("wrapcoords")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? WrapCoordinates
@@ -14285,7 +14285,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "print")]
+        [SchemaAttr("print")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Print
@@ -14304,7 +14304,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "spid")]
+        [SchemaAttr("o:spid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? OptionalString
@@ -14323,7 +14323,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "oned")]
+        [SchemaAttr("o:oned")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Oned
@@ -14342,7 +14342,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "regroupid")]
+        [SchemaAttr("o:regroupid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? RegroupId
@@ -14361,7 +14361,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "doubleclicknotify")]
+        [SchemaAttr("o:doubleclicknotify")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? DoubleClickNotify
@@ -14380,7 +14380,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "button")]
+        [SchemaAttr("o:button")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Button
@@ -14399,7 +14399,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "userhidden")]
+        [SchemaAttr("o:userhidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? UserHidden
@@ -14418,7 +14418,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bullet")]
+        [SchemaAttr("o:bullet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Bullet
@@ -14437,7 +14437,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hr")]
+        [SchemaAttr("o:hr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Horizontal
@@ -14456,7 +14456,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrstd")]
+        [SchemaAttr("o:hrstd")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? HorizontalStandard
@@ -14475,7 +14475,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrnoshade")]
+        [SchemaAttr("o:hrnoshade")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? HorizontalNoShade
@@ -14494,7 +14494,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hrpct")]
+        [SchemaAttr("o:hrpct")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public SingleValue? HorizontalPercentage
@@ -14513,7 +14513,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "hralign")]
+        [SchemaAttr("o:hralign")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>? HorizontalAlignment
@@ -14532,7 +14532,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "allowincell")]
+        [SchemaAttr("o:allowincell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowInCell
@@ -14551,7 +14551,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "allowoverlap")]
+        [SchemaAttr("o:allowoverlap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? AllowOverlap
@@ -14570,7 +14570,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "userdrawn")]
+        [SchemaAttr("o:userdrawn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? UserDrawn
@@ -14589,7 +14589,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bordertopcolor")]
+        [SchemaAttr("o:bordertopcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderTopColor
@@ -14608,7 +14608,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderleftcolor")]
+        [SchemaAttr("o:borderleftcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderLeftColor
@@ -14627,7 +14627,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderbottomcolor")]
+        [SchemaAttr("o:borderbottomcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderBottomColor
@@ -14646,7 +14646,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "borderrightcolor")]
+        [SchemaAttr("o:borderrightcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BorderRightColor
@@ -14665,7 +14665,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmlayout")]
+        [SchemaAttr("o:dgmlayout")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramLayout
@@ -14684,7 +14684,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmnodekind")]
+        [SchemaAttr("o:dgmnodekind")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramNodeKind
@@ -14703,7 +14703,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "dgmlayoutmru")]
+        [SchemaAttr("o:dgmlayoutmru")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? DiagramLayoutMostRecentUsed
@@ -14722,7 +14722,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "insetmode")]
+        [SchemaAttr("o:insetmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>? InsetMode
@@ -14738,7 +14738,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "filled")]
+        [SchemaAttr("filled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Filled
@@ -14754,7 +14754,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fillcolor")]
+        [SchemaAttr("fillcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? FillColor
@@ -14770,7 +14770,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "stroked")]
+        [SchemaAttr("stroked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Stroked
@@ -14786,7 +14786,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "strokecolor")]
+        [SchemaAttr("strokecolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? StrokeColor
@@ -14802,7 +14802,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "strokeweight")]
+        [SchemaAttr("strokeweight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? StrokeWeight
@@ -14818,7 +14818,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "insetpen")]
+        [SchemaAttr("insetpen")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? InsetPen
@@ -14837,7 +14837,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "spt")]
+        [SchemaAttr("o:spt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? OptionalNumber
@@ -14856,7 +14856,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "connectortype")]
+        [SchemaAttr("o:connectortype")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>? ConnectorType
@@ -14875,7 +14875,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwmode")]
+        [SchemaAttr("o:bwmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? BlackWhiteMode
@@ -14894,7 +14894,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwpure")]
+        [SchemaAttr("o:bwpure")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? PureBlackWhiteMode
@@ -14913,7 +14913,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "bwnormal")]
+        [SchemaAttr("o:bwnormal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? NormalBlackWhiteMode
@@ -14932,7 +14932,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "forcedash")]
+        [SchemaAttr("o:forcedash")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? ForceDash
@@ -14951,7 +14951,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "oleicon")]
+        [SchemaAttr("o:oleicon")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? OleIcon
@@ -14970,7 +14970,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "ole")]
+        [SchemaAttr("o:ole")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseBlankValue? Ole
@@ -14989,7 +14989,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "preferrelative")]
+        [SchemaAttr("o:preferrelative")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? PreferRelative
@@ -15008,7 +15008,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "cliptowrap")]
+        [SchemaAttr("o:cliptowrap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? ClipToWrap
@@ -15027,7 +15027,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "clip")]
+        [SchemaAttr("o:clip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Clip
@@ -15046,7 +15046,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(27, "gfxdata")]
+        [SchemaAttr("o:gfxdata")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Base64BinaryValue? Gfxdata
@@ -15062,7 +15062,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "arcsize")]
+        [SchemaAttr("arcsize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ArcSize
@@ -15074,7 +15074,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(26, "roundrect");
+            builder.SetSchema("v:roundrect");
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
@@ -15099,61 +15099,61 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
             builder.AddElement<RoundRectangle>()
-.AddAttribute(0, "id", a => a.Id)
-.AddAttribute(0, "style", a => a.Style)
-.AddAttribute(0, "href", a => a.Href)
-.AddAttribute(0, "target", a => a.Target)
-.AddAttribute(0, "class", a => a.Class)
-.AddAttribute(0, "title", a => a.Title)
-.AddAttribute(0, "alt", a => a.Alternate)
-.AddAttribute(0, "coordsize", a => a.CoordinateSize)
-.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
-.AddAttribute(0, "print", a => a.Print)
-.AddAttribute(27, "spid", a => a.OptionalString)
-.AddAttribute(27, "oned", a => a.Oned)
-.AddAttribute(27, "regroupid", a => a.RegroupId)
-.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
-.AddAttribute(27, "button", a => a.Button)
-.AddAttribute(27, "userhidden", a => a.UserHidden)
-.AddAttribute(27, "bullet", a => a.Bullet)
-.AddAttribute(27, "hr", a => a.Horizontal)
-.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
-.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
-.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
-.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
-.AddAttribute(27, "allowincell", a => a.AllowInCell)
-.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
-.AddAttribute(27, "userdrawn", a => a.UserDrawn)
-.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
-.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
-.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
-.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
-.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
-.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
-.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
-.AddAttribute(27, "insetmode", a => a.InsetMode)
-.AddAttribute(0, "filled", a => a.Filled)
-.AddAttribute(0, "fillcolor", a => a.FillColor)
-.AddAttribute(0, "stroked", a => a.Stroked)
-.AddAttribute(0, "strokecolor", a => a.StrokeColor)
-.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
-.AddAttribute(0, "insetpen", a => a.InsetPen)
-.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+.AddAttribute("id", a => a.Id)
+.AddAttribute("style", a => a.Style)
+.AddAttribute("href", a => a.Href)
+.AddAttribute("target", a => a.Target)
+.AddAttribute("class", a => a.Class)
+.AddAttribute("title", a => a.Title)
+.AddAttribute("alt", a => a.Alternate)
+.AddAttribute("coordsize", a => a.CoordinateSize)
+.AddAttribute("wrapcoords", a => a.WrapCoordinates)
+.AddAttribute("print", a => a.Print)
+.AddAttribute("o:spid", a => a.OptionalString)
+.AddAttribute("o:oned", a => a.Oned)
+.AddAttribute("o:regroupid", a => a.RegroupId)
+.AddAttribute("o:doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute("o:button", a => a.Button)
+.AddAttribute("o:userhidden", a => a.UserHidden)
+.AddAttribute("o:bullet", a => a.Bullet)
+.AddAttribute("o:hr", a => a.Horizontal)
+.AddAttribute("o:hrstd", a => a.HorizontalStandard)
+.AddAttribute("o:hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute("o:hrpct", a => a.HorizontalPercentage)
+.AddAttribute("o:hralign", a => a.HorizontalAlignment)
+.AddAttribute("o:allowincell", a => a.AllowInCell)
+.AddAttribute("o:allowoverlap", a => a.AllowOverlap)
+.AddAttribute("o:userdrawn", a => a.UserDrawn)
+.AddAttribute("o:bordertopcolor", a => a.BorderTopColor)
+.AddAttribute("o:borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute("o:borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute("o:borderrightcolor", a => a.BorderRightColor)
+.AddAttribute("o:dgmlayout", a => a.DiagramLayout)
+.AddAttribute("o:dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute("o:dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute("o:insetmode", a => a.InsetMode)
+.AddAttribute("filled", a => a.Filled)
+.AddAttribute("fillcolor", a => a.FillColor)
+.AddAttribute("stroked", a => a.Stroked)
+.AddAttribute("strokecolor", a => a.StrokeColor)
+.AddAttribute("strokeweight", a => a.StrokeWeight)
+.AddAttribute("insetpen", a => a.InsetPen)
+.AddAttribute("o:spt", a => a.OptionalNumber, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (202L) });
 })
-.AddAttribute(27, "connectortype", a => a.ConnectorType)
-.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
-.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
-.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
-.AddAttribute(27, "forcedash", a => a.ForceDash)
-.AddAttribute(27, "oleicon", a => a.OleIcon)
-.AddAttribute(27, "ole", a => a.Ole)
-.AddAttribute(27, "preferrelative", a => a.PreferRelative)
-.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
-.AddAttribute(27, "clip", a => a.Clip)
-.AddAttribute(27, "gfxdata", a => a.Gfxdata)
-.AddAttribute(0, "arcsize", a => a.ArcSize);
+.AddAttribute("o:connectortype", a => a.ConnectorType)
+.AddAttribute("o:bwmode", a => a.BlackWhiteMode)
+.AddAttribute("o:bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute("o:bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute("o:forcedash", a => a.ForceDash)
+.AddAttribute("o:oleicon", a => a.OleIcon)
+.AddAttribute("o:ole", a => a.Ole)
+.AddAttribute("o:preferrelative", a => a.PreferRelative)
+.AddAttribute("o:cliptowrap", a => a.ClipToWrap)
+.AddAttribute("o:clip", a => a.Clip)
+.AddAttribute("o:gfxdata", a => a.Gfxdata)
+.AddAttribute("arcsize", a => a.ArcSize);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -15202,7 +15202,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <para>When the object is serialized out as xml, it's qualified name is v:h.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(26, "h")]
+    [SchemaAttr("v:h")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShapeHandle : OpenXmlLeafElement
     {
@@ -15220,7 +15220,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "position")]
+        [SchemaAttr("position")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Position
@@ -15236,7 +15236,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "polar")]
+        [SchemaAttr("polar")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Polar
@@ -15252,7 +15252,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "map")]
+        [SchemaAttr("map")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Map
@@ -15268,7 +15268,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "invx")]
+        [SchemaAttr("invx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseBlankValue? InvertX
@@ -15284,7 +15284,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "invy")]
+        [SchemaAttr("invy")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseBlankValue? InvertY
@@ -15300,7 +15300,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "switch")]
+        [SchemaAttr("switch")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseBlankValue? Switch
@@ -15316,7 +15316,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "xrange")]
+        [SchemaAttr("xrange")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? XRange
@@ -15332,7 +15332,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "yrange")]
+        [SchemaAttr("yrange")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? YRange
@@ -15348,7 +15348,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "radiusrange")]
+        [SchemaAttr("radiusrange")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? RadiusRange
@@ -15360,17 +15360,17 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(26, "h");
+            builder.SetSchema("v:h");
             builder.AddElement<ShapeHandle>()
- .AddAttribute(0, "position", a => a.Position)
- .AddAttribute(0, "polar", a => a.Polar)
- .AddAttribute(0, "map", a => a.Map)
- .AddAttribute(0, "invx", a => a.InvertX)
- .AddAttribute(0, "invy", a => a.InvertY)
- .AddAttribute(0, "switch", a => a.Switch)
- .AddAttribute(0, "xrange", a => a.XRange)
- .AddAttribute(0, "yrange", a => a.YRange)
- .AddAttribute(0, "radiusrange", a => a.RadiusRange);
+  .AddAttribute("position", a => a.Position)
+  .AddAttribute("polar", a => a.Polar)
+  .AddAttribute("map", a => a.Map)
+  .AddAttribute("invx", a => a.InvertX)
+  .AddAttribute("invy", a => a.InvertY)
+  .AddAttribute("switch", a => a.Switch)
+  .AddAttribute("xrange", a => a.XRange)
+  .AddAttribute("yrange", a => a.YRange)
+  .AddAttribute("radiusrange", a => a.RadiusRange);
         }
 
         /// <inheritdoc/>
@@ -15383,7 +15383,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <para>When the object is serialized out as xml, it's qualified name is v:f.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(26, "f")]
+    [SchemaAttr("v:f")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Formula : OpenXmlLeafElement
     {
@@ -15401,7 +15401,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "eqn")]
+        [SchemaAttr("eqn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Equation
@@ -15413,9 +15413,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(26, "f");
+            builder.SetSchema("v:f");
             builder.AddElement<Formula>()
- .AddAttribute(0, "eqn", a => a.Equation);
+  .AddAttribute("eqn", a => a.Equation);
         }
 
         /// <inheritdoc/>

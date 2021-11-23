@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(70, "taskpanes")]
+    [SchemaAttr("wetp:taskpanes")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Taskpanes : OpenXmlPartRootElement
     {
@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(70, "taskpanes");
+            builder.SetSchema("wetp:taskpanes");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionTaskpane>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -117,7 +117,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
     /// <para>When the object is serialized out as xml, it's qualified name is wetp:webextensionref.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(70, "webextensionref")]
+    [SchemaAttr("wetp:webextensionref")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebExtensionPartReference : OpenXmlLeafElement
     {
@@ -138,7 +138,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "id")]
+        [SchemaAttr("r:id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -150,10 +150,10 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(70, "webextensionref");
+            builder.SetSchema("wetp:webextensionref");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<WebExtensionPartReference>()
-.AddAttribute(19, "id", a => a.Id, aBuilder =>
+.AddAttribute("r:id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -176,7 +176,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(70, "extLst")]
+    [SchemaAttr("wetp:extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
@@ -214,7 +214,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(70, "extLst");
+            builder.SetSchema("wetp:extLst");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -246,7 +246,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(70, "taskpane")]
+    [SchemaAttr("wetp:taskpane")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     {
@@ -288,7 +288,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "dockstate")]
+        [SchemaAttr("dockstate")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? DockState
@@ -304,7 +304,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "visibility")]
+        [SchemaAttr("visibility")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Visibility
@@ -320,7 +320,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "width")]
+        [SchemaAttr("width")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public DoubleValue? Width
@@ -336,7 +336,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "row")]
+        [SchemaAttr("row")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Row
@@ -352,7 +352,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "locked")]
+        [SchemaAttr("locked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Locked
@@ -364,28 +364,28 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(70, "taskpane");
+            builder.SetSchema("wetp:taskpane");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtentionPane.OfficeArtExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionPartReference>();
             builder.AddElement<WebExtensionTaskpane>()
-.AddAttribute(0, "dockstate", a => a.DockState, aBuilder =>
+.AddAttribute("dockstate", a => a.DockState, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "visibility", a => a.Visibility, aBuilder =>
+.AddAttribute("visibility", a => a.Visibility, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "width", a => a.Width, aBuilder =>
+.AddAttribute("width", a => a.Width, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "row", a => a.Row, aBuilder =>
+.AddAttribute("row", a => a.Row, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "locked", a => a.Locked);
+.AddAttribute("locked", a => a.Locked);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionPartReference), 1, 1, version: FileFormatVersions.Office2013),

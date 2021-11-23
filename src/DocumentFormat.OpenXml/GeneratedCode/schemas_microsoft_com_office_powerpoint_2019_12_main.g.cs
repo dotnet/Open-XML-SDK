@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(136, "taskHistoryDetails")]
+    [SchemaAttr("ppt1912SchemaUri:taskHistoryDetails")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskHistoryDetails : OpenXmlCompositeElement
     {
@@ -72,7 +72,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -84,12 +84,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(136, "taskHistoryDetails");
+            builder.SetSchema("ppt1912SchemaUri:taskHistoryDetails");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistory>();
             builder.AddElement<TaskHistoryDetails>()
-.AddAttribute(0, "id", a => a.Id, aBuilder =>
+.AddAttribute("id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
@@ -137,7 +137,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is ppt1912SchemaUri:comment.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(136, "comment")]
+    [SchemaAttr("ppt1912SchemaUri:comment")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentAnchor : OpenXmlLeafElement
     {
@@ -155,7 +155,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -167,10 +167,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(136, "comment");
+            builder.SetSchema("ppt1912SchemaUri:comment");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<CommentAnchor>()
-.AddAttribute(0, "id", a => a.Id, aBuilder =>
+.AddAttribute("id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
@@ -193,7 +193,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(136, "extLst")]
+    [SchemaAttr("ppt1912SchemaUri:extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ExtensionList : OpenXmlCompositeElement
     {
@@ -231,7 +231,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(136, "extLst");
+            builder.SetSchema("ppt1912SchemaUri:extLst");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -256,7 +256,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is ppt1912SchemaUri:atrbtn.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(136, "atrbtn")]
+    [SchemaAttr("ppt1912SchemaUri:atrbtn")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AtrbtnTaskAssignUnassignUser : OpenXmlTaskAssignUnassignUserElement
     {
@@ -270,7 +270,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(136, "atrbtn");
+            builder.SetSchema("ppt1912SchemaUri:atrbtn");
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -284,7 +284,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is ppt1912SchemaUri:asgn.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(136, "asgn")]
+    [SchemaAttr("ppt1912SchemaUri:asgn")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AsgnTaskAssignUnassignUser : OpenXmlTaskAssignUnassignUserElement
     {
@@ -298,7 +298,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(136, "asgn");
+            builder.SetSchema("ppt1912SchemaUri:asgn");
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -312,7 +312,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is ppt1912SchemaUri:unAsgn.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(136, "unAsgn")]
+    [SchemaAttr("ppt1912SchemaUri:unAsgn")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class UnAsgnTaskAssignUnassignUser : OpenXmlTaskAssignUnassignUserElement
     {
@@ -326,7 +326,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(136, "unAsgn");
+            builder.SetSchema("ppt1912SchemaUri:unAsgn");
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -355,7 +355,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "authorId")]
+        [SchemaAttr("authorId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? AuthorId
@@ -368,7 +368,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<OpenXmlTaskAssignUnassignUserElement>()
-                           .AddAttribute(0, "authorId", a => a.AuthorId, aBuilder =>
+                           .AddAttribute("authorId", a => a.AuthorId, aBuilder =>
                            {
                                aBuilder.AddValidator(RequiredValidator.Instance);
                                aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
@@ -389,7 +389,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(136, "anchr")]
+    [SchemaAttr("ppt1912SchemaUri:anchr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskAnchor : OpenXmlCompositeElement
     {
@@ -427,7 +427,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(136, "anchr");
+            builder.SetSchema("ppt1912SchemaUri:anchr");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.CommentAnchor>();
@@ -474,7 +474,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is ppt1912SchemaUri:add.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(136, "add")]
+    [SchemaAttr("ppt1912SchemaUri:add")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AddEmpty : EmptyType
     {
@@ -488,7 +488,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(136, "add");
+            builder.SetSchema("ppt1912SchemaUri:add");
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -502,7 +502,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is ppt1912SchemaUri:unasgnAll.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(136, "unasgnAll")]
+    [SchemaAttr("ppt1912SchemaUri:unasgnAll")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class UnasgnAllEmpty : EmptyType
     {
@@ -516,7 +516,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(136, "unasgnAll");
+            builder.SetSchema("ppt1912SchemaUri:unasgnAll");
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -550,7 +550,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is ppt1912SchemaUri:title.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(136, "title")]
+    [SchemaAttr("ppt1912SchemaUri:title")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskTitleEventInfo : OpenXmlLeafElement
     {
@@ -568,7 +568,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "val")]
+        [SchemaAttr("val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Val
@@ -580,10 +580,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(136, "title");
+            builder.SetSchema("ppt1912SchemaUri:title");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<TaskTitleEventInfo>()
-.AddAttribute(0, "val", a => a.Val, aBuilder =>
+.AddAttribute("val", a => a.Val, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -599,7 +599,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is ppt1912SchemaUri:date.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(136, "date")]
+    [SchemaAttr("ppt1912SchemaUri:date")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskScheduleEventInfo : OpenXmlLeafElement
     {
@@ -617,7 +617,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "stDt")]
+        [SchemaAttr("stDt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public DateTimeValue? StDt
@@ -633,7 +633,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "endDt")]
+        [SchemaAttr("endDt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public DateTimeValue? EndDt
@@ -645,11 +645,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(136, "date");
+            builder.SetSchema("ppt1912SchemaUri:date");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<TaskScheduleEventInfo>()
-.AddAttribute(0, "stDt", a => a.StDt)
-.AddAttribute(0, "endDt", a => a.EndDt);
+.AddAttribute("stDt", a => a.StDt)
+.AddAttribute("endDt", a => a.EndDt);
         }
 
         /// <inheritdoc/>
@@ -662,7 +662,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is ppt1912SchemaUri:pcntCmplt.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(136, "pcntCmplt")]
+    [SchemaAttr("ppt1912SchemaUri:pcntCmplt")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskProgressEventInfo : OpenXmlLeafElement
     {
@@ -680,7 +680,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "val")]
+        [SchemaAttr("val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? Val
@@ -692,10 +692,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(136, "pcntCmplt");
+            builder.SetSchema("ppt1912SchemaUri:pcntCmplt");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<TaskProgressEventInfo>()
-.AddAttribute(0, "val", a => a.Val, aBuilder =>
+.AddAttribute("val", a => a.Val, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
@@ -712,7 +712,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <para>When the object is serialized out as xml, it's qualified name is ppt1912SchemaUri:pri.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(136, "pri")]
+    [SchemaAttr("ppt1912SchemaUri:pri")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskPriorityRecord : OpenXmlLeafElement
     {
@@ -730,7 +730,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "val")]
+        [SchemaAttr("val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? Val
@@ -742,10 +742,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(136, "pri");
+            builder.SetSchema("ppt1912SchemaUri:pri");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<TaskPriorityRecord>()
-.AddAttribute(0, "val", a => a.Val, aBuilder =>
+.AddAttribute("val", a => a.Val, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10L) });
@@ -762,7 +762,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <para>When the object is serialized out as xml, it's qualified name is ppt1912SchemaUri:undo.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(136, "undo")]
+    [SchemaAttr("ppt1912SchemaUri:undo")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskUndo : OpenXmlLeafElement
     {
@@ -780,7 +780,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -792,10 +792,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(136, "undo");
+            builder.SetSchema("ppt1912SchemaUri:undo");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<TaskUndo>()
-.AddAttribute(0, "id", a => a.Id, aBuilder =>
+.AddAttribute("id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
@@ -812,7 +812,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is ppt1912SchemaUri:unknown.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(136, "unknown")]
+    [SchemaAttr("ppt1912SchemaUri:unknown")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskUnknownRecord : OpenXmlLeafElement
     {
@@ -826,7 +826,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(136, "unknown");
+            builder.SetSchema("ppt1912SchemaUri:unknown");
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -858,7 +858,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(136, "event")]
+    [SchemaAttr("ppt1912SchemaUri:event")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskHistoryEvent : OpenXmlCompositeElement
     {
@@ -900,7 +900,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "time")]
+        [SchemaAttr("time")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public DateTimeValue? Time
@@ -916,7 +916,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -928,7 +928,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(136, "event");
+            builder.SetSchema("ppt1912SchemaUri:event");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AddEmpty>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.UnasgnAllEmpty>();
@@ -944,11 +944,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskUndo>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskUnknownRecord>();
             builder.AddElement<TaskHistoryEvent>()
-.AddAttribute(0, "time", a => a.Time, aBuilder =>
+.AddAttribute("time", a => a.Time, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "id", a => a.Id, aBuilder =>
+.AddAttribute("id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
@@ -1016,7 +1016,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(136, "history")]
+    [SchemaAttr("ppt1912SchemaUri:history")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskHistory : OpenXmlCompositeElement
     {
@@ -1054,7 +1054,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(136, "history");
+            builder.SetSchema("ppt1912SchemaUri:history");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistoryEvent>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)

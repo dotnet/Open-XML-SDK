@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// <para>When the object is serialized out as xml, it's qualified name is ask:lineSketchNone.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(120, "lineSketchNone")]
+    [SchemaAttr("ask:lineSketchNone")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class LineSketchNoneEmpty : OpenXmlEmptyElement
     {
@@ -35,7 +35,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(120, "lineSketchNone");
+            builder.SetSchema("ask:lineSketchNone");
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// <para>When the object is serialized out as xml, it's qualified name is ask:lineSketchCurved.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(120, "lineSketchCurved")]
+    [SchemaAttr("ask:lineSketchCurved")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class LineSketchCurvedEmpty : OpenXmlEmptyElement
     {
@@ -63,7 +63,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(120, "lineSketchCurved");
+            builder.SetSchema("ask:lineSketchCurved");
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -77,7 +77,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// <para>When the object is serialized out as xml, it's qualified name is ask:lineSketchFreehand.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(120, "lineSketchFreehand")]
+    [SchemaAttr("ask:lineSketchFreehand")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class LineSketchFreehandEmpty : OpenXmlEmptyElement
     {
@@ -91,7 +91,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(120, "lineSketchFreehand");
+            builder.SetSchema("ask:lineSketchFreehand");
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -105,7 +105,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// <para>When the object is serialized out as xml, it's qualified name is ask:lineSketchScribble.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(120, "lineSketchScribble")]
+    [SchemaAttr("ask:lineSketchScribble")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class LineSketchScribbleEmpty : OpenXmlEmptyElement
     {
@@ -119,7 +119,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(120, "lineSketchScribble");
+            builder.SetSchema("ask:lineSketchScribble");
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -163,7 +163,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(120, "lineSketchStyleProps")]
+    [SchemaAttr("ask:lineSketchStyleProps")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class LineSketchStyleProperties : OpenXmlCompositeElement
     {
@@ -205,7 +205,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sd")]
+        [SchemaAttr("sd")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Sd
@@ -217,7 +217,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(120, "lineSketchStyleProps");
+            builder.SetSchema("ask:lineSketchStyleProps");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.OfficeArtExtensionList>();
@@ -225,7 +225,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchTypeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchSeed>();
             builder.AddElement<LineSketchStyleProperties>()
-.AddAttribute(0, "sd", a => a.Sd);
+.AddAttribute("sd", a => a.Sd);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -261,7 +261,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(120, "type")]
+    [SchemaAttr("ask:type")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class LineSketchTypeProperties : OpenXmlCompositeElement
     {
@@ -299,7 +299,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(120, "type");
+            builder.SetSchema("ask:type");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchNoneEmpty>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchCurvedEmpty>();
@@ -382,7 +382,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// <para>When the object is serialized out as xml, it's qualified name is ask:seed.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(120, "seed")]
+    [SchemaAttr("ask:seed")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class LineSketchSeed : OpenXmlLeafTextElement
     {
@@ -410,7 +410,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<UInt32Value>(NumberValidator.Instance);
-            builder.SetSchema(120, "seed");
+            builder.SetSchema("ask:seed");
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -430,7 +430,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(120, "extLst")]
+    [SchemaAttr("ask:extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
@@ -468,7 +468,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(120, "extLst");
+            builder.SetSchema("ask:extLst");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
