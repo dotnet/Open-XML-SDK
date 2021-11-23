@@ -1190,9 +1190,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 {
    aBuilder.AddValidator(new StringValidator() { Length = (1L) });
 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*wne:name*/, 0, 255) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueSetConstraint(3 /*wne:bEncrypt*/, true, new string[] { "0" }) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueSetConstraint(4 /*wne:cmg*/, true, new string[] { "56" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("wne:name", 0, 255) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint("wne:bEncrypt", true, new string[] { "0" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint("wne:cmg", true, new string[] { "56" }) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>

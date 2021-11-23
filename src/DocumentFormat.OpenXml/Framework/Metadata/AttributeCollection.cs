@@ -113,7 +113,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 _index = index;
             }
 
-            public bool IsNil => _index == -1;
+            public bool IsNil => _index == -1 || _collection._attributes.IsNull;
 
             public ref readonly AttributeMetadata Property => ref _collection._attributes[_index];
 

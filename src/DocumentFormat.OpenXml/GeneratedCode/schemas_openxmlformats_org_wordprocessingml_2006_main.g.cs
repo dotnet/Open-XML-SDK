@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "cellIns");
-            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "cellDel");
-            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -99,7 +99,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "customXmlInsRangeStart");
-            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -127,7 +127,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "customXmlDelRangeStart");
-            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*w:id*/, false, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", false, null));
         }
 
         /// <inheritdoc/>
@@ -155,7 +155,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "customXmlMoveFromRangeStart");
-            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -183,7 +183,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "customXmlMoveToRangeStart");
-            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -211,7 +211,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "ins");
-            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -239,7 +239,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "del");
-            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -527,7 +527,7 @@ aBuilder.AddUnion(union =>
  union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
 });
 });
-            builder.AddConstraint(new UniqueAttributeValueConstraint(4 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -668,7 +668,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
 union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
 });
 });
-            builder.AddConstraint(new UniqueAttributeValueConstraint(4 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -696,7 +696,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "bookmarkEnd");
-            builder.AddConstraint(new UniqueAttributeValueConstraint(1 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -724,8 +724,8 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "commentRangeStart");
-            builder.AddConstraint(new UniqueAttributeValueConstraint(1 /*w:id*/, true, null));
-            builder.AddConstraint(new ReferenceExistConstraint(1 /*w:id*/, "WordprocessingCommentsPart", typeof(DocumentFormat.OpenXml.Wordprocessing.Comment), "DocumentFormat.OpenXml.Wordprocessing.Comment", 3 /*w:id*/));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
+            builder.AddConstraint(new ReferenceExistConstraint("w:id", "WordprocessingCommentsPart", typeof(DocumentFormat.OpenXml.Wordprocessing.Comment), "DocumentFormat.OpenXml.Wordprocessing.Comment", "w:id"));
         }
 
         /// <inheritdoc/>
@@ -753,8 +753,8 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "commentRangeEnd");
-            builder.AddConstraint(new UniqueAttributeValueConstraint(1 /*w:id*/, true, null));
-            builder.AddConstraint(new ReferenceExistConstraint(1 /*w:id*/, "WordprocessingCommentsPart", typeof(DocumentFormat.OpenXml.Wordprocessing.Comment), "DocumentFormat.OpenXml.Wordprocessing.Comment", 3 /*w:id*/));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
+            builder.AddConstraint(new ReferenceExistConstraint("w:id", "WordprocessingCommentsPart", typeof(DocumentFormat.OpenXml.Wordprocessing.Comment), "DocumentFormat.OpenXml.Wordprocessing.Comment", "w:id"));
         }
 
         /// <inheritdoc/>
@@ -782,7 +782,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "moveFromRangeEnd");
-            builder.AddConstraint(new UniqueAttributeValueConstraint(1 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -810,7 +810,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "moveToRangeEnd");
-            builder.AddConstraint(new UniqueAttributeValueConstraint(1 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -907,7 +907,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "moveFromRangeStart");
-            builder.AddConstraint(new UniqueAttributeValueConstraint(6 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -935,7 +935,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "moveToRangeStart");
-            builder.AddConstraint(new UniqueAttributeValueConstraint(6 /*w:id*/, false, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", false, null));
         }
 
         /// <inheritdoc/>
@@ -1142,7 +1142,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "customXmlInsRangeEnd");
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -1170,7 +1170,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "customXmlDelRangeEnd");
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*w:id*/, false, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", false, null));
         }
 
         /// <inheritdoc/>
@@ -1198,7 +1198,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "customXmlMoveFromRangeEnd");
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -1253,8 +1253,8 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "commentReference");
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*w:id*/, true, null));
-            builder.AddConstraint(new ReferenceExistConstraint(0 /*w:id*/, "WordprocessingCommentsPart", typeof(DocumentFormat.OpenXml.Wordprocessing.Comment), "DocumentFormat.OpenXml.Wordprocessing.Comment", 3 /*w:id*/));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
+            builder.AddConstraint(new ReferenceExistConstraint("w:id", "WordprocessingCommentsPart", typeof(DocumentFormat.OpenXml.Wordprocessing.Comment), "DocumentFormat.OpenXml.Wordprocessing.Comment", "w:id"));
         }
 
         /// <inheritdoc/>
@@ -1331,7 +1331,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "pStyle");
-            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*w:val*/, 0, 253) { Application = ApplicationType.Word });
+            builder.AddConstraint(new AttributeValueLengthConstraint("w:val", 0, 253) { Application = ApplicationType.Word });
         }
 
         /// <inheritdoc/>
@@ -1550,7 +1550,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "name");
-            builder.AddConstraint(new AttributeValuePatternConstraint(0 /*w:val*/, @"[^,]*") { Application = ApplicationType.Word });
+            builder.AddConstraint(new AttributeValuePatternConstraint("w:val", @"[^,]*") { Application = ApplicationType.Word });
         }
 
         /// <inheritdoc/>
@@ -1929,7 +1929,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "decimalSymbol");
-            builder.AddConstraint(new AttributeValuePatternConstraint(0 /*w:val*/, @".{1}"));
+            builder.AddConstraint(new AttributeValuePatternConstraint("w:val", @".{1}"));
         }
 
         /// <inheritdoc/>
@@ -1957,7 +1957,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "listSeparator");
-            builder.AddConstraint(new AttributeValuePatternConstraint(0 /*w:val*/, @".{1}"));
+            builder.AddConstraint(new AttributeValuePatternConstraint("w:val", @".{1}"));
         }
 
         /// <inheritdoc/>
@@ -8837,7 +8837,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "outlineLvl");
-            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*w:val*/, true, 0, true, 9, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint("w:val", true, 0, true, 9, true));
         }
 
         /// <inheritdoc/>
@@ -9344,7 +9344,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesExtended), 1, 1)
                 }
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <summary>
@@ -9385,8 +9385,8 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "headerReference");
-            builder.AddConstraint(new RelationshipTypeConstraint(1 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/header"));
-            builder.AddConstraint(new RelationshipExistConstraint(1 /*r:id*/));
+            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/header"));
+            builder.AddConstraint(new RelationshipExistConstraint("r:id"));
         }
 
         /// <inheritdoc/>
@@ -9414,8 +9414,8 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "footerReference");
-            builder.AddConstraint(new RelationshipTypeConstraint(1 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer"));
-            builder.AddConstraint(new RelationshipExistConstraint(1 /*r:id*/));
+            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer"));
+            builder.AddConstraint(new RelationshipExistConstraint("r:id"));
         }
 
         /// <inheritdoc/>
@@ -11137,7 +11137,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "footnoteReference");
-            builder.AddConstraint(new ReferenceExistConstraint(1 /*w:id*/, "FootnotesPart", typeof(DocumentFormat.OpenXml.Wordprocessing.Footnote), "DocumentFormat.OpenXml.Wordprocessing.Footnote", 1 /*w:id*/));
+            builder.AddConstraint(new ReferenceExistConstraint("w:id", "FootnotesPart", typeof(DocumentFormat.OpenXml.Wordprocessing.Footnote), "DocumentFormat.OpenXml.Wordprocessing.Footnote", "w:id"));
         }
 
         /// <inheritdoc/>
@@ -13926,7 +13926,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PreviousRunProperties), 1, 1)
                 }
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <summary>
@@ -15034,7 +15034,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
                     }
                 }
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -15179,7 +15179,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
                     }
                 }
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -16581,7 +16581,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
                     }
                 }
             };
-            builder.AddConstraint(new RelationshipExistConstraint(5 /*r:id*/));
+            builder.AddConstraint(new RelationshipExistConstraint("r:id"));
         }
 
         /// <inheritdoc/>
@@ -17202,7 +17202,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(23, "displacedByCustomXml", a => a.DisplacedByCustomXml);
-            builder.AddConstraint(new UniqueAttributeValueConstraint(4 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -17274,7 +17274,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(23, "displacedByCustomXml", a => a.DisplacedByCustomXml);
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -17527,7 +17527,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                     }
                 }
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -17780,7 +17780,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                     }
                 }
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -18033,7 +18033,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                     }
                 }
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -18286,7 +18286,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                     }
                 }
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -19622,8 +19622,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
                     }
                 }
             };
-            builder.AddConstraint(new AttributeValueRangeConstraint(5 /*w14:paraId*/, true, 0, false, 2147483648, false) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueRangeConstraint(6 /*w14:textId*/, true, 0, false, 2147483648, false) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint("w14:paraId", true, 0, false, 2147483648, false) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint("w14:textId", true, 0, false, 2147483648, false) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -20228,8 +20228,8 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
                     }
                 }
             };
-            builder.AddConstraint(new AttributeValueRangeConstraint(4 /*w14:paraId*/, true, 0, false, 2147483648, false) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueRangeConstraint(5 /*w14:textId*/, true, 0, false, 2147483648, false) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint("w14:paraId", true, 0, false, 2147483648, false) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint("w14:textId", true, 0, false, 2147483648, false) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -22426,7 +22426,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference), 1, 1)
                 }
             };
-            builder.AddConstraint(new RelationshipExistConstraint(5 /*r:id*/));
+            builder.AddConstraint(new RelationshipExistConstraint("r:id"));
         }
 
         /// <inheritdoc/>
@@ -23150,7 +23150,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "subDoc");
-            builder.AddConstraint(new RelationshipTypeConstraint(0 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/subDocument"));
+            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/subDocument"));
         }
 
         /// <inheritdoc/>
@@ -23178,7 +23178,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "printerSettings");
-            builder.AddConstraint(new RelationshipTypeConstraint(0 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings"));
+            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings"));
         }
 
         /// <inheritdoc/>
@@ -23206,7 +23206,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "src");
-            builder.AddConstraint(new RelationshipTypeConstraint(0 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/mailMergeSource"));
+            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/mailMergeSource"));
         }
 
         /// <inheritdoc/>
@@ -23234,7 +23234,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "recipientData");
-            builder.AddConstraint(new RelationshipTypeConstraint(0 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/recipientData"));
+            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/recipientData"));
         }
 
         /// <inheritdoc/>
@@ -23262,7 +23262,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "dataSource");
-            builder.AddConstraint(new RelationshipTypeConstraint(0 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/mailMergeSource"));
+            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/mailMergeSource"));
         }
 
         /// <inheritdoc/>
@@ -23317,7 +23317,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "sourceFileName");
-            builder.AddConstraint(new RelationshipTypeConstraint(0 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/frame"));
+            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/frame"));
         }
 
         /// <inheritdoc/>
@@ -23372,8 +23372,8 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "attachedTemplate");
-            builder.AddConstraint(new RelationshipTypeConstraint(0 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/attachedTemplate"));
-            builder.AddConstraint(new RelationshipExistConstraint(0 /*r:id*/));
+            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/attachedTemplate"));
+            builder.AddConstraint(new RelationshipExistConstraint("r:id"));
         }
 
         /// <inheritdoc/>
@@ -23965,8 +23965,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "bottom");
-            builder.AddConstraint(new AttributeCannotOmitConstraint(1 /*w:type*/) { Application = ApplicationType.Word });
-            builder.AddConstraint(new AttributeCannotOmitConstraint(0 /*w:w*/) { Application = ApplicationType.Word });
+            builder.AddConstraint(new AttributeCannotOmitConstraint("w:type") { Application = ApplicationType.Word });
+            builder.AddConstraint(new AttributeCannotOmitConstraint("w:w") { Application = ApplicationType.Word });
         }
 
         /// <inheritdoc/>
@@ -25254,7 +25254,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
      union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-1L) });
  });
 });
-            builder.AddConstraint(new AttributeValueSetConstraint(0 /*w:val*/, false, new string[] { "0" }) { Application = ApplicationType.Word });
+            builder.AddConstraint(new AttributeValueSetConstraint("w:val", false, new string[] { "0" }) { Application = ApplicationType.Word });
         }
 
         /// <inheritdoc/>
@@ -26416,8 +26416,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.AltChunkProperties), 0, 1)
             };
-            builder.AddConstraint(new RelationshipTypeConstraint(0 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk"));
-            builder.AddConstraint(new RelationshipExistConstraint(0 /*r:id*/));
+            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk"));
+            builder.AddConstraint(new RelationshipExistConstraint("r:id"));
         }
 
         /// <summary>
@@ -33700,8 +33700,8 @@ union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
 union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
 });
 });
-            builder.AddConstraint(new UniqueAttributeValueConstraint(3 /*w:id*/, true, null));
-            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*w:original*/, 0, 15));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
+            builder.AddConstraint(new AttributeValueLengthConstraint("w:original", 0, 15));
         }
 
         /// <inheritdoc/>
@@ -35658,7 +35658,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PreviousSectionProperties), 0, 1)
                 }
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <summary>
@@ -35810,7 +35810,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PreviousParagraphMarkRunProperties), 1, 1)
                 }
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <summary>
@@ -38777,7 +38777,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PreviousTableGrid), 0, 1, version: FileFormatVersions.Office2010)
                 }
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <summary>
@@ -38929,7 +38929,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PreviousTableCellProperties), 1, 1)
                 }
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <summary>
@@ -39414,7 +39414,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PreviousTableProperties), 1, 1)
                 }
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <summary>
@@ -39566,7 +39566,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PreviousTablePropertyExceptions), 1, 1)
                 }
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <summary>
@@ -40211,8 +40211,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "footnote");
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*w:id*/, true, null));
-            builder.AddConstraint(new ReferenceExistConstraint(0 /*w:id*/, "/MainDocumentPart/FootnotesPart", typeof(DocumentFormat.OpenXml.Wordprocessing.Footnote), "DocumentFormat.OpenXml.Wordprocessing.Footnote", 1 /*w:id*/));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
+            builder.AddConstraint(new ReferenceExistConstraint("w:id", "/MainDocumentPart/FootnotesPart", typeof(DocumentFormat.OpenXml.Wordprocessing.Footnote), "DocumentFormat.OpenXml.Wordprocessing.Footnote", "w:id"));
         }
 
         /// <inheritdoc/>
@@ -40240,8 +40240,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "endnote");
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*w:id*/, true, null));
-            builder.AddConstraint(new ReferenceExistConstraint(0 /*w:id*/, "/MainDocumentPart/EndnotesPart", typeof(DocumentFormat.OpenXml.Wordprocessing.Endnote), "DocumentFormat.OpenXml.Wordprocessing.Endnote", 1 /*w:id*/));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
+            builder.AddConstraint(new ReferenceExistConstraint("w:id", "/MainDocumentPart/EndnotesPart", typeof(DocumentFormat.OpenXml.Wordprocessing.Endnote), "DocumentFormat.OpenXml.Wordprocessing.Endnote", "w:id"));
         }
 
         /// <inheritdoc/>
@@ -45582,7 +45582,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Drawing), 1, 1)
                 }
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*w:numPicBulletId*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:numPicBulletId", true, null));
         }
 
         /// <summary>
@@ -45714,7 +45714,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.NumberingStyleLink), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Level), 0, 9)
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*w:abstractNumId*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:abstractNumId", true, null));
         }
 
         /// <summary>
@@ -45882,7 +45882,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.AbstractNumId), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.LevelOverride), 0, 9)
             };
-            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*w:numId*/, 0, 32) { Application = ApplicationType.Word });
+            builder.AddConstraint(new AttributeValueLengthConstraint("w:numId", 0, 32) { Application = ApplicationType.Word });
         }
 
         /// <summary>
@@ -48775,7 +48775,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.StyleTableCellProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableStyleProperties), 0, 0)
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(1 /*w:styleId*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:styleId", true, null));
         }
 
         /// <summary>
@@ -49874,7 +49874,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-1L) });
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DivBorder), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DivsChild), 0, 0)
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <summary>
@@ -50208,7 +50208,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
                     }
                 }
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(3 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -50404,7 +50404,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
                     }
                 }
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(1 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -50600,7 +50600,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
                     }
                 }
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(1 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -50994,7 +50994,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
 });
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*w:name*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:name", true, null));
         }
 
         /// <inheritdoc/>
@@ -51819,7 +51819,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
 {
   aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*w:val*/, false, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:val", false, null));
         }
 
         /// <inheritdoc/>
@@ -52694,7 +52694,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.AddConstraint(new AttributeValueConditionToAnother(2 /*w:val*/, 0 /*w:name*/, new string[] { "11", "12", "14", "15" }, new string[] { "compatibilityMode" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueConditionToAnother("w:val", "w:name", new string[] { "11", "12", "14", "15" }, new string[] { "compatibilityMode" }) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -53314,7 +53314,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PreviousTableRowProperties), 1, 1)
                 }
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*w:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <summary>
@@ -54084,8 +54084,8 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
 aBuilder.AddValidator(new StringValidator() { MaxLength = (254L) });
 })
 .AddAttribute(19, "id", a => a.Id);
-            builder.AddConstraint(new RelationshipTypeConstraint(2 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control"));
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*w:name*/, true, null));
+            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control"));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:name", true, null));
         }
 
         /// <inheritdoc/>
@@ -56402,7 +56402,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 {
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 });
-            builder.AddConstraint(new AttributeValueSetConstraint(0 /*w:val*/, false, new string[] { "0x0040", "0x0080", "0x0800" }) { Application = ApplicationType.Word });
+            builder.AddConstraint(new AttributeValueSetConstraint("w:val", false, new string[] { "0x0040", "0x0080", "0x0800" }) { Application = ApplicationType.Word });
         }
 
         /// <inheritdoc/>
@@ -57379,7 +57379,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 {
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 });
-            builder.AddConstraint(new AttributeValueSetConstraint(6 /*w:cryptAlgorithmSid*/, true, new string[] { "1", "2", "3", "4", "12", "13", "14" }));
+            builder.AddConstraint(new AttributeValueSetConstraint("w:cryptAlgorithmSid", true, new string[] { "1", "2", "3", "4", "12", "13", "14" }));
         }
 
         /// <inheritdoc/>
@@ -57952,7 +57952,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
             builder.AddElement<SaveThroughXslt>()
 .AddAttribute(19, "id", a => a.Id)
 .AddAttribute(23, "solutionID", a => a.SolutionId);
-            builder.AddConstraint(new RelationshipTypeConstraint(0 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/transform"));
+            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/transform"));
         }
 
         /// <inheritdoc/>
@@ -60651,8 +60651,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
    aBuilder.AddValidator(RequiredValidator.Instance);
    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 });
-            builder.AddConstraint(new AttributeValuePatternConstraint(4 /*w:csb0*/, @"[0-9a-fA-F]{8}") { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValuePatternConstraint(5 /*w:csb1*/, @"[0-9a-fA-F]{8}") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValuePatternConstraint("w:csb0", @"[0-9a-fA-F]{8}") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValuePatternConstraint("w:csb1", @"[0-9a-fA-F]{8}") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -60680,8 +60680,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "embedRegular");
-            builder.AddConstraint(new RelationshipTypeConstraint(2 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font"));
-            builder.AddConstraint(new RelationshipExistConstraint(2 /*r:id*/));
+            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font"));
+            builder.AddConstraint(new RelationshipExistConstraint("r:id"));
         }
 
         /// <inheritdoc/>
@@ -60709,7 +60709,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "embedBold");
-            builder.AddConstraint(new RelationshipTypeConstraint(2 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font"));
+            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font"));
         }
 
         /// <inheritdoc/>
@@ -60737,7 +60737,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "embedItalic");
-            builder.AddConstraint(new RelationshipTypeConstraint(2 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font"));
+            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font"));
         }
 
         /// <inheritdoc/>
@@ -60765,7 +60765,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "embedBoldItalic");
-            builder.AddConstraint(new RelationshipTypeConstraint(2 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font"));
+            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font"));
         }
 
         /// <inheritdoc/>

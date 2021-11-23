@@ -121,7 +121,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformStyleLabel), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
             };
-            builder.AddConstraint(new AttributeValueSetConstraint(1 /*:minVer*/, true, new string[] { "12.0" }));
+            builder.AddConstraint(new AttributeValueSetConstraint(":minVer", true, new string[] { "12.0" }));
         }
 
         /// <inheritdoc/>
@@ -1002,11 +1002,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.AddConstraint(new RelationshipTypeConstraint(3 /*r:cs*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors"));
-            builder.AddConstraint(new RelationshipTypeConstraint(0 /*r:dm*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData"));
-            builder.AddConstraint(new RelationshipTypeConstraint(1 /*r:lo*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout"));
-            builder.AddConstraint(new RelationshipTypeConstraint(2 /*r:qs*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle"));
-            builder.AddConstraint(new RelationshipExistConstraint(0 /*r:dm*/));
+            builder.AddConstraint(new RelationshipTypeConstraint("r:cs", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors"));
+            builder.AddConstraint(new RelationshipTypeConstraint("r:dm", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData"));
+            builder.AddConstraint(new RelationshipTypeConstraint("r:lo", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout"));
+            builder.AddConstraint(new RelationshipTypeConstraint("r:qs", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle"));
+            builder.AddConstraint(new RelationshipExistConstraint("r:dm"));
         }
 
         /// <inheritdoc/>
@@ -2879,8 +2879,8 @@ union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:modelId*/, true, typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionList)));
-            builder.AddConstraint(new UniqueAttributeValueConstraint(6 /*:parTransId*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":modelId", true, typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionList)));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":parTransId", true, null));
         }
 
         /// <summary>
@@ -3921,8 +3921,8 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShape
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.AdjustList), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
             };
-            builder.AddConstraint(new RelationshipTypeConstraint(2 /*r:blip*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"));
-            builder.AddConstraint(new RelationshipExistConstraint(2 /*r:blip*/));
+            builder.AddConstraint(new RelationshipTypeConstraint("r:blip", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"));
+            builder.AddConstraint(new RelationshipExistConstraint("r:blip"));
         }
 
         /// <summary>
@@ -4812,7 +4812,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShape
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Choose), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:name*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", true, null));
         }
 
         /// <inheritdoc/>
@@ -4974,7 +4974,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Choose), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:name*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", true, null));
         }
 
         /// <inheritdoc/>
@@ -5058,7 +5058,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DiagramChooseIf), 1, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DiagramChooseElse), 0, 1)
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:name*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", true, null));
         }
 
         /// <inheritdoc/>
@@ -5360,7 +5360,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandl
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Choose), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:name*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", true, null));
         }
 
         /// <inheritdoc/>
@@ -5465,7 +5465,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandl
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Choose), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:name*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", true, null));
         }
 
         /// <inheritdoc/>

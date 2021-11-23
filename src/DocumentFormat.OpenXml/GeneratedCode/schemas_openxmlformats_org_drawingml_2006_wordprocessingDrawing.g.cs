@@ -2106,7 +2106,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0, 1)
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":id", true, null));
         }
 
         /// <summary>

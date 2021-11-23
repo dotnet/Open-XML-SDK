@@ -464,8 +464,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new RelationshipExistConstraint(1 /*r:link*/) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new RelationshipExistConstraint(0 /*r:embed*/) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new RelationshipExistConstraint("r:link") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new RelationshipExistConstraint("r:embed") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -2866,8 +2866,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddElement<MediaBookmark>()
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "time", a => a.Time);
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:name*/, true, typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList)) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new UniqueAttributeValueConstraint(1 /*:time*/, true, typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList)) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", true, typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList)) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":time", true, typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList)) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>

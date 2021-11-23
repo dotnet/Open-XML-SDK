@@ -1110,7 +1110,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "lum");
-            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:val*/, true, 0, true, 100000, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(":val", true, 0, true, 100000, true));
         }
 
         /// <inheritdoc/>
@@ -12689,8 +12689,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipExtensionList), 0, 1)
             };
-            builder.AddConstraint(new RelationshipExistConstraint(0 /*r:embed*/));
-            builder.AddConstraint(new RelationshipExistConstraint(1 /*r:link*/));
+            builder.AddConstraint(new RelationshipExistConstraint("r:embed"));
+            builder.AddConstraint(new RelationshipExistConstraint("r:link"));
         }
 
         /// <inheritdoc/>
@@ -22686,8 +22686,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     aBuilder.AddValidator(RequiredValidator.Instance);
     aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 });
-            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:d*/, true, 1, true, double.PositiveInfinity, true));
-            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:sp*/, true, 1, true, double.PositiveInfinity, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(":d", true, 1, true, double.PositiveInfinity, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(":sp", true, 1, true, double.PositiveInfinity, true));
         }
 
         /// <inheritdoc/>
@@ -25144,8 +25144,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
             };
-            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:rowSpan*/, true, 1, true, double.PositiveInfinity, true));
-            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:gridSpan*/, true, 1, true, double.PositiveInfinity, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(":rowSpan", true, 1, true, double.PositiveInfinity, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(":gridSpan", true, 1, true, double.PositiveInfinity, true));
         }
 
         /// <summary>
@@ -25274,7 +25274,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NorthwestCell), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:styleId*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":styleId", true, null));
         }
 
         /// <inheritdoc/>
@@ -25364,7 +25364,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NorthwestCell), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:styleId*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":styleId", true, null));
         }
 
         /// <inheritdoc/>
@@ -33744,8 +33744,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkSound), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkExtensionList), 0, 1)
             };
-            builder.AddConstraint(new AttributeCannotOmitConstraint(0 /*r:id*/));
-            builder.AddConstraint(new RelationshipExistConstraint(0 /*r:id*/));
+            builder.AddConstraint(new AttributeCannotOmitConstraint("r:id"));
+            builder.AddConstraint(new RelationshipExistConstraint("r:id"));
         }
 
         /// <inheritdoc/>
@@ -33809,8 +33809,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkSound), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkExtensionList), 0, 1)
             };
-            builder.AddConstraint(new AttributeCannotOmitConstraint(0 /*r:id*/));
-            builder.AddConstraint(new RelationshipExistConstraint(0 /*r:id*/));
+            builder.AddConstraint(new AttributeCannotOmitConstraint("r:id"));
+            builder.AddConstraint(new RelationshipExistConstraint("r:id"));
         }
 
         /// <inheritdoc/>
@@ -33874,7 +33874,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkSound), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkExtensionList), 0, 1)
             };
-            builder.AddConstraint(new AttributeCannotOmitConstraint(0 /*r:id*/));
+            builder.AddConstraint(new AttributeCannotOmitConstraint("r:id"));
         }
 
         /// <inheritdoc/>

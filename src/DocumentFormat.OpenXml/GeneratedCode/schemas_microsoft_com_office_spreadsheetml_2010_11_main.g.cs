@@ -6208,7 +6208,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
             };
-            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:name*/, 1, 1000) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2013 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":name", 1, 1000) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2013 });
         }
 
         /// <summary>

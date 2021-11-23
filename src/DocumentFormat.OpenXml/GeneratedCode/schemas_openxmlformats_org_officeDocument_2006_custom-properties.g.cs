@@ -340,8 +340,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTClassId), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTClipboardData), 1, 1)
             };
-            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:pid*/, true, 2, true, double.PositiveInfinity, true));
-            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*:name*/, false, null));
+            builder.AddConstraint(new AttributeValueRangeConstraint(":pid", true, 2, true, double.PositiveInfinity, true));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", false, null));
         }
 
         /// <summary>

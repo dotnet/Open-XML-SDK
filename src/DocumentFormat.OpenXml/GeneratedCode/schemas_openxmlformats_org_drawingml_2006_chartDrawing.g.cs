@@ -387,7 +387,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.Style), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.TextBody), 0, 1)
             };
-            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:macro*/, 0, 256));
+            builder.AddConstraint(new AttributeValueLengthConstraint(":macro", 0, 256));
         }
 
         /// <summary>
@@ -655,7 +655,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.Transform), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Graphic), 1, 1)
             };
-            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:macro*/, 0, 256));
+            builder.AddConstraint(new AttributeValueLengthConstraint(":macro", 0, 256));
         }
 
         /// <summary>
@@ -798,7 +798,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.ShapeProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.Style), 0, 1)
             };
-            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:macro*/, 0, 256));
+            builder.AddConstraint(new AttributeValueLengthConstraint(":macro", 0, 256));
         }
 
         /// <summary>
@@ -944,7 +944,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.ShapeProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.Style), 0, 1)
             };
-            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:macro*/, 0, 256));
+            builder.AddConstraint(new AttributeValueLengthConstraint(":macro", 0, 256));
         }
 
         /// <summary>
@@ -1157,7 +1157,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0, 1)
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":id", true, null));
         }
 
         /// <summary>

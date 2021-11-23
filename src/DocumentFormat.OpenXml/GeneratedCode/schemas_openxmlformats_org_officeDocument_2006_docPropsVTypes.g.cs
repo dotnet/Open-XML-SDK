@@ -2182,7 +2182,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}\\s*") });
 });
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:version*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":version", true, null));
         }
 
         /// <inheritdoc/>

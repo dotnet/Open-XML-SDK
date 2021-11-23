@@ -13,13 +13,13 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// </summary>
     internal class ReferenceExistConstraint : SemanticConstraint
     {
-        private readonly byte _refAttribute;
+        private readonly OpenXmlQualifiedName _refAttribute;
         private readonly string _partPath;
         private readonly Type _element;
         private readonly string _elementName;
-        private readonly byte _attribute;
+        private readonly OpenXmlQualifiedName _attribute;
 
-        public ReferenceExistConstraint(byte refAttribute, string part, Type element, string elementName, byte attribute)
+        public ReferenceExistConstraint(OpenXmlQualifiedName refAttribute, string part, Type element, string elementName, OpenXmlQualifiedName attribute)
             : base(SemanticValidationLevel.Package)
         {
             Debug.Assert(!string.IsNullOrEmpty(part));
@@ -42,7 +42,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            var attribute = element.ParsedState.Attributes[_refAttribute];
+            if (!TryFindAttribute(element, _refAttribute, out var attribute))
+            {
+                return null;
+            }
 
             if (attribute.Value is null || attribute.Value.InnerText.IsNullOrEmpty())
             {
@@ -67,7 +70,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                     ValidationResources.Sem_MissingReferenceElement,
                     _elementName,
                     element.LocalName,
-                    GetAttributeQualifiedName(element, _refAttribute),
+                    attribute.Property.QName,
                     result.Part is null ? _partPath : result.Part.PackagePart.Uri.ToString(),
                     attribute.Value.InnerText),
             };

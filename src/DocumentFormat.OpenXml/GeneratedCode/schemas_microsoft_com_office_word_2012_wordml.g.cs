@@ -975,8 +975,8 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 {
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
 });
-            builder.AddConstraint(new AttributeValuePatternConstraint(0 /*w15:paraId*/, @"[0-9a-fA-F]{8}") { Application = ApplicationType.Word, Version = FileFormatVersions.Office2013 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(2 /*w15:done*/, 1, int.MaxValue) { Application = ApplicationType.Word, Version = FileFormatVersions.Office2013 });
+            builder.AddConstraint(new AttributeValuePatternConstraint("w15:paraId", @"[0-9a-fA-F]{8}") { Application = ApplicationType.Word, Version = FileFormatVersions.Office2013 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("w15:done", 1, int.MaxValue) { Application = ApplicationType.Word, Version = FileFormatVersions.Office2013 });
         }
 
         /// <inheritdoc/>
@@ -1155,8 +1155,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*w15:providerId*/, 1, 100) { Application = ApplicationType.Word, Version = FileFormatVersions.Office2013 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*w15:userId*/, 1, 300) { Application = ApplicationType.Word, Version = FileFormatVersions.Office2013 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("w15:providerId", 1, 100) { Application = ApplicationType.Word, Version = FileFormatVersions.Office2013 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("w15:userId", 1, 300) { Application = ApplicationType.Word, Version = FileFormatVersions.Office2013 });
         }
 
         /// <inheritdoc/>

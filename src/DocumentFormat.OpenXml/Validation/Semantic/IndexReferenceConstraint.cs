@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using System;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
@@ -10,13 +11,13 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// </summary>
     internal class IndexReferenceConstraint : SemanticConstraint
     {
-        private readonly byte _attribute;
+        private readonly OpenXmlQualifiedName _attribute;
         private readonly string _refPartType;
         private readonly Type? _refElementParent;
         private readonly Type _refElement;
         private readonly int _indexBase;
 
-        public IndexReferenceConstraint(byte attribute, string referencedPart, Type? referencedElementParent, Type referencedElement, string referencedElementName, int indexBase)
+        public IndexReferenceConstraint(OpenXmlQualifiedName attribute, string referencedPart, Type? referencedElementParent, Type referencedElement, string referencedElementName, int indexBase)
             : base(SemanticValidationLevel.Package)
         {
             _attribute = attribute;
@@ -37,7 +38,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            var attribute = element.ParsedState.Attributes[_attribute];
+            if (!TryFindAttribute(element, _attribute, out var attribute))
+            {
+                return null;
+            }
 
             // if the attribute is omitted, semantic validation will do nothing
             if (attribute.Value is null || string.IsNullOrEmpty(attribute.Value.InnerText))
@@ -67,7 +71,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Description = SR.Format(
                     ValidationResources.Sem_MissingIndexedElement,
                     _refElement.FullName, element.LocalName,
-                    GetAttributeQualifiedName(element, _attribute),
+                    _attribute,
                     result.Part is null ? _refPartType : result.Part.PackagePart.Uri.ToString(),
                     index),
             };

@@ -1,13 +1,15 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
+
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     internal class AttributeCannotOmitConstraint : SemanticConstraint
     {
-        private readonly byte _attribute;
+        private readonly OpenXmlQualifiedName _attribute;
 
-        public AttributeCannotOmitConstraint(byte attribute)
+        public AttributeCannotOmitConstraint(OpenXmlQualifiedName attribute)
             : base(SemanticValidationLevel.Element)
         {
             _attribute = attribute;
@@ -17,7 +19,17 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         {
             var element = context.Stack.Current?.Element;
 
-            if (element is null || element.ParsedState.Attributes[_attribute].Value is not null)
+            if (element is null)
+            {
+                return null;
+            }
+
+            if (!TryFindAttribute(element, _attribute, out var attribute))
+            {
+                return null;
+            }
+
+            if (attribute.Value is not null)
             {
                 return null;
             }
@@ -27,7 +39,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Id = "Sem_MissRequiredAttribute",
                 ErrorType = ValidationErrorType.Schema,
                 Node = element,
-                Description = SR.Format(ValidationResources.Sch_MissRequiredAttribute, GetAttributeQualifiedName(element, _attribute)),
+                Description = SR.Format(ValidationResources.Sch_MissRequiredAttribute, attribute.Property.QName),
             };
         }
     }

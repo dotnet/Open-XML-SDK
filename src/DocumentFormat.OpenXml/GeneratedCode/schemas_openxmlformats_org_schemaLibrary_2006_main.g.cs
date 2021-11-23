@@ -159,9 +159,9 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
 .AddAttribute(25, "uri", a => a.Uri)
 .AddAttribute(25, "manifestLocation", a => a.ManifestLocation)
 .AddAttribute(25, "schemaLocation", a => a.SchemaLocation);
-            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*sl:manifestLocation*/, 0, 2083) { Application = ApplicationType.Word });
-            builder.AddConstraint(new AttributeValueLengthConstraint(2 /*sl:schemaLocation*/, 0, 2083) { Application = ApplicationType.Word });
-            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*sl:uri*/, 0, 255) { Application = ApplicationType.Word });
+            builder.AddConstraint(new AttributeValueLengthConstraint("sl:manifestLocation", 0, 2083) { Application = ApplicationType.Word });
+            builder.AddConstraint(new AttributeValueLengthConstraint("sl:schemaLocation", 0, 2083) { Application = ApplicationType.Word });
+            builder.AddConstraint(new AttributeValueLengthConstraint("sl:uri", 0, 255) { Application = ApplicationType.Word });
         }
 
         /// <inheritdoc/>

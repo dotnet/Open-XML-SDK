@@ -47,33 +47,37 @@ namespace DocumentFormat.OpenXml.Framework
             return hashcode.ToHashCode();
         }
 
+        public static implicit operator OpenXmlQualifiedName(string input) => Parse(input);
+
         public static OpenXmlQualifiedName Create(string nsUri, string prefix, string name)
             => new OpenXmlQualifiedName(new OpenXmlNamespace(nsUri, prefix), name);
 
         public static OpenXmlQualifiedName Parse(string name, string? nsUri = null)
         {
 #if NET5_0
-            var length = name.IndexOf(':', StringComparison.Ordinal);
+            var idx = name.IndexOf(':', StringComparison.Ordinal);
 #else
-            var length = name.IndexOf(':');
+            var idx = name.IndexOf(':');
 #endif
 
-            if (((length == -1) || (length == 0)) || ((name.Length - 1) == length))
+            if (((idx == -1) || (idx == 0)) || ((name.Length - 1) == idx))
             {
+                var start = idx + 1;
+
                 if (nsUri is null)
                 {
-                    return new OpenXmlQualifiedName(string.Empty, name);
+                    return new OpenXmlQualifiedName(string.Empty, name.Substring(start));
                 }
                 else
                 {
-                    return new OpenXmlQualifiedName(nsUri, name);
+                    return new OpenXmlQualifiedName(nsUri, name.Substring(start));
                 }
             }
             else
             {
-                var prefix = name.Substring(0, length);
+                var prefix = name.Substring(0, idx);
                 var uri = nsUri ?? OpenXmlNamespace.GetNamespaceUri(prefix) ?? string.Empty;
-                var localName = name.Substring(length + 1);
+                var localName = name.Substring(idx + 1);
 
                 return new OpenXmlQualifiedName(new OpenXmlNamespace(uri, prefix), localName);
             }

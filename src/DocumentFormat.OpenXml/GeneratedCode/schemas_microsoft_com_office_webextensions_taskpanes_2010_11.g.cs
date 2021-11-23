@@ -157,7 +157,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.AddConstraint(new RelationshipExistConstraint(0 /*r:id*/) { Application = ApplicationType.Word | ApplicationType.Excel, Version = FileFormatVersions.Office2013 });
+            builder.AddConstraint(new RelationshipExistConstraint("r:id") { Application = ApplicationType.Word | ApplicationType.Excel, Version = FileFormatVersions.Office2013 });
         }
 
         /// <inheritdoc/>

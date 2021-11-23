@@ -59,7 +59,7 @@ namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:spid*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":spid", true, null));
         }
 
         /// <inheritdoc/>

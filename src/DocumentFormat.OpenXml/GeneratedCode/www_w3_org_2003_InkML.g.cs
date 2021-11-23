@@ -753,7 +753,7 @@ union.AddValidator(StringValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, 0)
             };
-            builder.AddConstraint(new AttributeValueSetConstraint(8 /*:units*/, true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint(":units", true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -947,7 +947,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsV
 union.AddValidator(StringValidator.Instance);
 });
 });
-            builder.AddConstraint(new AttributeValueSetConstraint(3 /*:units*/, true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint(":units", true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -1259,7 +1259,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsV
 union.AddValidator(StringValidator.Instance);
 });
 });
-            builder.AddConstraint(new AttributeValueSetConstraint(3 /*:units*/, true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint(":units", true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -1361,7 +1361,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsV
 union.AddValidator(StringValidator.Instance);
 });
 });
-            builder.AddConstraint(new AttributeValueSetConstraint(2 /*:units*/, true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint(":units", true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -1781,7 +1781,7 @@ union.AddValidator(StringValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 0)
             };
-            builder.AddConstraint(new AttributeValueSetConstraint(2 /*:units*/, true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint(":units", true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
