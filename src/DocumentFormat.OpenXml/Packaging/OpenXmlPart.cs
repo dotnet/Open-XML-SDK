@@ -76,21 +76,18 @@ namespace DocumentFormat.OpenXml.Packaging
             // TODO: should we delay load?
             var metroPart = openXmlPackage.Package.GetPart(uriTarget);
 
-            if (IsContentTypeFixed && metroPart.ContentType != ContentType)
-            {
-                if (!((metroPart.ContentType == "model/gltf.binary") && (ContentType == "model/gltf-binary")))
-                {
-                    var errorMessage = SR.Format(
-                    ExceptionMessages.InvalidPartContentType,
-                    metroPart.Uri.OriginalString,
-                    metroPart.ContentType,
-                    ContentType);
-
-                    throw new OpenXmlPackageException(errorMessage);
-                }
-            }
-
             _packagePart = metroPart;
+
+            if (!IsValidContentType(metroPart))
+            {
+                var errorMessage = SR.Format(
+                ExceptionMessages.InvalidPartContentType,
+                metroPart.Uri.OriginalString,
+                metroPart.ContentType,
+                ContentType);
+
+                throw new OpenXmlPackageException(errorMessage);
+            }
 
             // add the _uri to be reserved
             openXmlPackage.ReserveUri(ContentType, Uri);
@@ -498,6 +495,16 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets a value indicating whether the ContentType for the current part is fixed.
         /// </summary>
         internal bool IsContentTypeFixed => this is IFixedContentTypePart;
+
+        /// <summary>
+        /// Determines if the content type agrees with this part's constraints.
+        /// </summary>
+        /// <param name="metroPart"></param>
+        /// <returns></returns>
+        private protected virtual bool IsValidContentType(PackagePart metroPart)
+        {
+            return (metroPart.ContentType == ContentType) || IsContentTypeFixed;
+        }
 
         // find all reachable parts from the package root, the dictionary also used for cycle reference defense
         internal sealed override void FindAllReachableParts(IDictionary<OpenXmlPart, bool> reachableParts)
