@@ -53,5 +53,30 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Single(results);
             }
         }
+
+        // Boolean
+        [InlineData(false, CellValues.Boolean, true)]
+        [InlineData(true, CellValues.Boolean, true)]
+        [Theory]
+        public void CellBooleanValueValidationTest(bool value, CellValues type, bool isValid)
+        {
+            var cell = new Cell
+            {
+                CellValue = new CellValue(value),
+                DataType = type,
+            };
+
+            var validator = new OpenXmlValidator();
+            var results = validator.Validate(cell);
+
+            if (isValid)
+            {
+                Assert.Empty(results);
+            }
+            else
+            {
+                Assert.Single(results);
+            }
+        }
     }
 }
