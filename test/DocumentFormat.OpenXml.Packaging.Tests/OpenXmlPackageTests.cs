@@ -268,20 +268,11 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         [Fact]
         public void TestOpenModel3DWrittenByPowerPoint()
         {
-            bool validationResult = true;
-            try
+            using (var testFile = GetStream(TestFiles._3DTest, false))
+            using (var presDoc = PresentationDocument.Open(testFile, false))
             {
-                using (var presDoc = PresentationDocument.Open(TestFiles._3DTest, false))
-                {
-                    Assert.NotNull(presDoc);
-                }
+                Assert.NotNull(presDoc);
             }
-            catch (OpenXmlPackageException)
-            {
-                validationResult = false;
-            }
-
-            Assert.True(validationResult);
         }
     }
 }
