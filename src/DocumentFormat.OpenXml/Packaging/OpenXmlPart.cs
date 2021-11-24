@@ -74,16 +74,16 @@ namespace DocumentFormat.OpenXml.Packaging
             _uri = uriTarget;
 
             // TODO: should we delay load?
-            var metroPart = openXmlPackage.Package.GetPart(uriTarget);
+            var part = openXmlPackage.Package.GetPart(uriTarget);
 
-            _packagePart = metroPart;
+            _packagePart = part;
 
-            if (IsContentTypeFixed && !IsValidContentType(metroPart))
+            if (IsContentTypeFixed && !IsValidContentType(part))
             {
                 var errorMessage = SR.Format(
                     ExceptionMessages.InvalidPartContentType,
-                    metroPart.Uri.OriginalString,
-                    metroPart.ContentType,
+                    part.Uri.OriginalString,
+                    part.ContentType,
                     ContentType);
 
                 throw new OpenXmlPackageException(errorMessage);

@@ -18,6 +18,8 @@ namespace DocumentFormat.OpenXml.Tests
                 public const string Spreadsheet = "TestFiles.Spreadsheet.xltx";
             }
 
+            public const string _3DTest = "TestFiles.3dtest.pptx";
+
             public const string _5Errors = "TestFiles.5Errors.docx";
 
             public const string Algn_tab_TabAlignment = "TestFiles.Algn_tab_TabAlignment.pptx";

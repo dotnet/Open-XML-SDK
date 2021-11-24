@@ -9,7 +9,7 @@ using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 using Xunit;
-
+using static DocumentFormat.OpenXml.Tests.TestAssets;
 using Text = DocumentFormat.OpenXml.Wordprocessing.Text;
 
 namespace DocumentFormat.OpenXml.Packaging.Tests
@@ -260,6 +260,28 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             var mediaDataPart = new MediaDataPart(ppt.InternalOpenXmlPackage, MediaDataPartType.Mp3);
             MediaReferenceRelationship mrr = slidePart.AddMediaReferenceRelationship(mediaDataPart, "rId4");
             Assert.Equal("rId4", mrr.Id);
+        }
+
+        // This is a regression test for issue #1069
+        // Opening a PowerPoint presentation with a 3d model graphic will fail if the Model3dReferenceRelationshipPart doesn't
+        //     accept both model/gltf-binary *and* model/gltf.binary MIME types. PowerPoint writes the latter.
+        [Fact]
+        public void TestOpenModel3DWrittenByPowerPoint()
+        {
+            bool validationResult = true;
+            try
+            {
+                using (var presDoc = PresentationDocument.Open(TestFiles._3DTest, false))
+                {
+                    Assert.NotNull(presDoc);
+                }
+            }
+            catch (OpenXmlPackageException)
+            {
+                validationResult = false;
+            }
+
+            Assert.True(validationResult);
         }
     }
 }
