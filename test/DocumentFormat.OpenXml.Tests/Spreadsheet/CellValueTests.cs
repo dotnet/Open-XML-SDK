@@ -244,6 +244,17 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(expected, result);
         }
 
+        [InlineData(false, false)]
+        [InlineData(true, true)]
+        [Theory]
+        public void CellBooleanConstructorTest(bool input, bool expected)
+        {
+            var value = new CellValue(input);
+
+            Assert.True(value.TryGetBoolean(out var result));
+            Assert.Equal(expected, result);
+        }
+
         [InlineData(null)]
         [InlineData("")]
         [InlineData("other")]
