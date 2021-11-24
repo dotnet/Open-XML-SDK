@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </summary>
         /// <param name="value">Boolean value</param>
         public CellValue(bool value)
-            : this(value.ToString())
+            : this(value ? "true" : "false")
         {
         }
 
