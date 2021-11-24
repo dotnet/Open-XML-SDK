@@ -15,18 +15,18 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     {
         private readonly OpenXmlQualifiedName _refAttribute;
         private readonly string _partPath;
-        private readonly Type _element;
+        private readonly OpenXmlQualifiedName _element;
         private readonly string _elementName;
         private readonly OpenXmlQualifiedName _attribute;
 
-        public ReferenceExistConstraint(OpenXmlQualifiedName refAttribute, string part, Type element, string elementName, OpenXmlQualifiedName attribute)
+        public ReferenceExistConstraint(OpenXmlQualifiedName refAttribute, string part, OpenXmlQualifiedName element, string elementName, OpenXmlQualifiedName attribute)
             : base(SemanticValidationLevel.Package)
         {
             Debug.Assert(!string.IsNullOrEmpty(part));
 
             _refAttribute = refAttribute;
             _partPath = part;
-            _element = element ?? throw new ArgumentNullException(nameof(element));
+            _element = element;
             _elementName = elementName;
             _attribute = attribute;
         }
@@ -91,7 +91,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
                 foreach (var element in key.part.RootElement.Descendants(context.FileFormat, TraversalOptions.SelectAlternateContent))
                 {
-                    if (element.GetType() == key.constraint._element)
+                    if (element.QName.Equals(key.constraint._element))
                     {
                         var attribute = element.ParsedState.Attributes[key.constraint._attribute];
 

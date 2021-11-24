@@ -546,6 +546,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
+            builder.AddConstraint(new AttributeMutualExclusive(":size", ":getSize") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -1164,6 +1165,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
             builder.AddConstraint(new AttributeMutualExclusive(":insertAfterMso", ":insertAfterQ", ":insertBeforeMso", ":insertBeforeQ") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeMutualExclusive(":size", ":getSize") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -8191,6 +8193,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
+            builder.AddConstraint(new AttributeMutualExclusive(":insertAfterMso", ":insertAfterQ", ":insertBeforeMso", ":insertBeforeQ") { Version = FileFormatVersions.Office2010 });
             builder.AddConstraint(new AttributeMutualExclusive(":size", ":getSize") { Version = FileFormatVersions.Office2010 });
         }
 
@@ -15008,6 +15011,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
+            builder.AddConstraint(new AttributeMutualExclusive(":insertAfterMso", ":insertAfterQ", ":insertBeforeMso", ":insertBeforeQ") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeMutualExclusive(":size", ":getSize") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -16552,6 +16557,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
+            builder.AddConstraint(new AttributeMutualExclusive(":insertAfterMso", ":insertAfterQ", ":insertBeforeMso", ":insertBeforeQ") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeMutualExclusive(":size", ":getSize") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -22011,6 +22018,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
+            builder.AddConstraint(new AttributeMutualExclusive(":insertAfterMso", ":insertAfterQ", ":insertBeforeMso", ":insertBeforeQ") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeMutualExclusive(":size", ":getSize") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -25737,6 +25746,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
+            builder.AddConstraint(new AttributeMutualExclusive(":insertAfterMso", ":insertAfterQ", ":insertBeforeMso", ":insertBeforeQ") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeMutualExclusive(":size", ":getSize") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -29714,6 +29725,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
+            builder.AddConstraint(new AttributeMutualExclusive(":insertAfterMso", ":insertAfterQ", ":insertBeforeMso", ":insertBeforeQ") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeMutualExclusive(":size", ":getSize") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>

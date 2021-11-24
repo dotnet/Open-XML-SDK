@@ -13,10 +13,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     internal class UniqueAttributeValueConstraint : SemanticConstraint
     {
         private readonly OpenXmlQualifiedName _attribute;
-        private readonly Type? _parent;
+        private readonly OpenXmlQualifiedName? _parent;
         private readonly StringComparer _comparer;
 
-        public UniqueAttributeValueConstraint(OpenXmlQualifiedName attribute, bool caseSensitive, Type? parent)
+        public UniqueAttributeValueConstraint(OpenXmlQualifiedName attribute, bool caseSensitive, OpenXmlQualifiedName? parent)
             : base(SemanticValidationLevel.Part)
         {
             _attribute = attribute;
@@ -98,14 +98,16 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         private OpenXmlElement? GetRoot(OpenXmlElement element)
         {
-            if (_parent is null)
+            if (!_parent.HasValue)
             {
                 return element.GetPart()?.RootElement;
             }
 
+            var parent = _parent.Value;
+
             foreach (var ancestor in element.Ancestors())
             {
-                if (ancestor.GetType() == _parent)
+                if (ancestor.QName.Equals(parent))
                 {
                     return ancestor;
                 }

@@ -2520,7 +2520,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList), 0, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(":autoFormatId", true, 0, true, 16, true));
-            builder.AddConstraint(new ReferenceExistConstraint(":cacheId", "/WorkbookPart", typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCache), "DocumentFormat.OpenXml.Spreadsheet.PivotCache", ":cacheId"));
+            builder.AddConstraint(new ReferenceExistConstraint(":cacheId", "/WorkbookPart", "x:pivotCache", "x:pivotCache", ":cacheId"));
             builder.AddConstraint(new AttributeValueRangeConstraint(":indent", true, double.NegativeInfinity, true, 127, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(":pageWrap", true, double.NegativeInfinity, true, 255, true));
             builder.AddConstraint(new AttributeValueLengthConstraint(":dataCaption", 0, 255) { Application = ApplicationType.Excel });
@@ -3232,7 +3232,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             };
             builder.AddConstraint(new AttributeValueConditionToAnother(":backgroundRefresh", ":firstBackgroundRefresh", new string[] { "true" }, new string[] { "true" }));
             builder.AddConstraint(new AttributeValueRangeConstraint(":connectionId", true, 1, true, double.PositiveInfinity, true));
-            builder.AddConstraint(new ReferenceExistConstraint(":connectionId", "/WorkbookPart/ConnectionsPart", typeof(DocumentFormat.OpenXml.Spreadsheet.Connection), "DocumentFormat.OpenXml.Spreadsheet.Connection", ":id"));
+            builder.AddConstraint(new ReferenceExistConstraint(":connectionId", "/WorkbookPart/ConnectionsPart", "x:connection", "x:connection", ":id"));
             builder.AddConstraint(new AttributeValueLengthConstraint(":name", 1, 255));
         }
 
@@ -5959,13 +5959,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableStyleInfo), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableExtensionList), 0, 1)
             };
-            builder.AddConstraint(new IndexReferenceConstraint(":dataDxfId", "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0));
-            builder.AddConstraint(new IndexReferenceConstraint(":headerRowBorderDxfId", "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0));
-            builder.AddConstraint(new IndexReferenceConstraint(":headerRowDxfId", "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0));
-            builder.AddConstraint(new IndexReferenceConstraint(":tableBorderDxfId", "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0));
-            builder.AddConstraint(new IndexReferenceConstraint(":totalsRowBorderDxfId", "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0));
-            builder.AddConstraint(new IndexReferenceConstraint(":totalsRowDxfId", "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0));
-            builder.AddConstraint(new ReferenceExistConstraint(":connectionId", "/WorkbookPart/ConnectionsPart", typeof(DocumentFormat.OpenXml.Spreadsheet.Connection), "DocumentFormat.OpenXml.Spreadsheet.Connection", ":id"));
+            builder.AddConstraint(new IndexReferenceConstraint(":dataDxfId", "/WorkbookPart/WorkbookStylesPart", null, "x:dxf", "x:dxf", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":headerRowBorderDxfId", "/WorkbookPart/WorkbookStylesPart", null, "x:dxf", "x:dxf", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":headerRowDxfId", "/WorkbookPart/WorkbookStylesPart", null, "x:dxf", "x:dxf", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":tableBorderDxfId", "/WorkbookPart/WorkbookStylesPart", null, "x:dxf", "x:dxf", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":totalsRowBorderDxfId", "/WorkbookPart/WorkbookStylesPart", null, "x:dxf", "x:dxf", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":totalsRowDxfId", "/WorkbookPart/WorkbookStylesPart", null, "x:dxf", "x:dxf", 0));
+            builder.AddConstraint(new ReferenceExistConstraint(":connectionId", "/WorkbookPart/ConnectionsPart", "x:connection", "x:connection", ":id"));
             builder.AddConstraint(new AttributeValueSetConstraint(":id", false, new string[] { "0", "" }));
             builder.AddConstraint(new AttributeValueRangeConstraint(":id", true, 1, true, 4294967294, true) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueLengthConstraint(":name", 0, 255) { Application = ApplicationType.Excel });
@@ -7187,8 +7187,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
   .AddAttribute("l", a => a.NewLevel)
   .AddAttribute("t", a => a.NewThread)
   .AddAttribute("a", a => a.Array);
+            builder.AddConstraint(new AttributeValueRangeConstraint(":cm", true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new IndexReferenceConstraint(":cm", "/WorkbookPart/CellMetadataPart", "x:cellMetadata", "x:bk", "x:bk", 1));
+            builder.AddConstraint(new AttributeValueRangeConstraint(":vm", true, double.NegativeInfinity, true, 2147483648, true));
+            builder.AddConstraint(new IndexReferenceConstraint(":vm", "/WorkbookPart/CellMetadataPart", "x:valueMetadata", "x:bk", "x:bk", 1));
+            builder.AddConstraint(new AttributeValueRangeConstraint(":s", true, 0, true, 65490, true));
+            builder.AddConstraint(new IndexReferenceConstraint(":s", "/WorkbookPart/WorkbookStylesPart", "x:cellXfs", "x:xf", "x:xf", 0));
             builder.AddConstraint(new AttributeMutualExclusive(":l", ":s"));
-            builder.AddConstraint(new ReferenceExistConstraint(":i", "/WorkbookPart", typeof(DocumentFormat.OpenXml.Spreadsheet.Sheet), "DocumentFormat.OpenXml.Spreadsheet.Sheet", ":sheetId"));
+            builder.AddConstraint(new ReferenceExistConstraint(":i", "/WorkbookPart", "x:sheet", "x:sheet", ":sheetId"));
             builder.AddConstraint(new AttributeValueRangeConstraint(":i", true, 1, true, 65534, true) { Application = ApplicationType.Excel });
         }
 
@@ -7460,7 +7466,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CommentText), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CommentProperties), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new IndexReferenceConstraint(":authorId", ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.Author), "DocumentFormat.OpenXml.Spreadsheet.Author", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":authorId", ".", null, "x:author", "x:author", 0));
             builder.AddConstraint(new UniqueAttributeValueConstraint(":guid", false, null));
         }
 
@@ -7568,6 +7574,10 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:t");
+            builder.AddConstraint(new AttributeValueRangeConstraint(":si", true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new IndexReferenceConstraint(":si", "/WorkbookPart/CellMetadataPart", "x:metadataStrings", "x:s", "x:s", 0));
+            builder.AddConstraint(new AttributeValueRangeConstraint(":c", true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(":fi", true, double.NegativeInfinity, true, 58, true));
         }
 
         /// <inheritdoc/>
@@ -9496,6 +9506,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:m");
+            builder.AddConstraint(new IndexReferenceConstraint(":in", ".", null, "x:serverFormat", "x:serverFormat", 0));
+            builder.AddConstraint(new AttributeValueLengthConstraint(":c", 0, 65535) { Application = ApplicationType.Excel });
         }
 
         /// <inheritdoc/>
@@ -9544,6 +9556,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
   {
       aBuilder.AddValidator(RequiredValidator.Instance);
   });
+            builder.AddConstraint(new IndexReferenceConstraint(":in", ".", null, "x:serverFormat", "x:serverFormat", 0));
+            builder.AddConstraint(new AttributeValueLengthConstraint(":c", 0, 65535) { Application = ApplicationType.Excel });
         }
 
         /// <inheritdoc/>
@@ -10694,7 +10708,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
             };
-            builder.AddConstraint(new IndexReferenceConstraint(":in", ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.ServerFormat), "DocumentFormat.OpenXml.Spreadsheet.ServerFormat", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":in", ".", null, "x:serverFormat", "x:serverFormat", 0));
             builder.AddConstraint(new AttributeValueLengthConstraint(":c", 0, 65535) { Application = ApplicationType.Excel });
         }
 
@@ -10975,7 +10989,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
             };
-            builder.AddConstraint(new IndexReferenceConstraint(":in", ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.ServerFormat), "DocumentFormat.OpenXml.Spreadsheet.ServerFormat", 0));
+            builder.AddConstraint(new AttributeValueRangeConstraint(":x", true, 0, true, double.PositiveInfinity, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(":x", true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new IndexReferenceConstraint(":in", ".", null, "x:serverFormat", "x:serverFormat", 0));
             builder.AddConstraint(new AttributeValueLengthConstraint(":c", 0, 65535) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueSetConstraint(":v", false, new string[] { "INF", "-INF", "NaN" }) { Application = ApplicationType.Excel });
         }
@@ -11409,7 +11425,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
             };
-            builder.AddConstraint(new IndexReferenceConstraint(":in", ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.ServerFormat), "DocumentFormat.OpenXml.Spreadsheet.ServerFormat", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":in", ".", null, "x:serverFormat", "x:serverFormat", 0));
             builder.AddConstraint(new AttributeValueLengthConstraint(":c", 0, 65535) { Application = ApplicationType.Excel });
         }
 
@@ -11703,7 +11719,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
             };
-            builder.AddConstraint(new IndexReferenceConstraint(":in", ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.ServerFormat), "DocumentFormat.OpenXml.Spreadsheet.ServerFormat", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":in", ".", null, "x:serverFormat", "x:serverFormat", 0));
             builder.AddConstraint(new AttributeValueLengthConstraint(":c", 0, 65535) { Application = ApplicationType.Excel });
         }
 
@@ -12102,7 +12118,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:mpMap");
-            builder.AddConstraint(new IndexReferenceConstraint(":v", ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CacheField), "DocumentFormat.OpenXml.Spreadsheet.CacheField", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":v", ".", null, "x:cacheField", "x:cacheField", 0));
         }
 
         /// <inheritdoc/>
@@ -12486,7 +12502,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.AddConstraint(new IndexReferenceConstraint(":x", ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CacheField), "DocumentFormat.OpenXml.Spreadsheet.CacheField", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":x", ".", null, "x:cacheField", "x:cacheField", 0));
             builder.AddConstraint(new AttributeValueRangeConstraint(":x", true, -1, true, double.PositiveInfinity, true));
         }
 
@@ -12892,7 +12908,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GroupMembers), 1, 1)
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":id", true, typeof(DocumentFormat.OpenXml.Spreadsheet.Groups)));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":id", true, "x:groups"));
             builder.AddConstraint(new AttributeValueRangeConstraint(":id", true, 1, true, double.PositiveInfinity, true));
             builder.AddConstraint(new AttributeValueLengthConstraint(":uniqueParent", 0, 65535));
             builder.AddConstraint(new UniqueAttributeValueConstraint(":uniqueName", true, null));
@@ -13532,8 +13548,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
     aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.AddConstraint(new IndexReferenceConstraint(":fld", ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CacheField), "DocumentFormat.OpenXml.Spreadsheet.CacheField", 0));
-            builder.AddConstraint(new IndexReferenceConstraint(":hier", ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CacheHierarchy), "DocumentFormat.OpenXml.Spreadsheet.CacheHierarchy", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":fld", ".", null, "x:cacheField", "x:cacheField", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":hier", ".", null, "x:cacheHierarchy", "x:cacheHierarchy", 0));
             builder.AddConstraint(new AttributeMutualExclusive(":fld", ":hier") { Application = ApplicationType.Excel });
         }
 
@@ -15564,7 +15580,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute("x", a => a.Index)
 .AddAttribute("d", a => a.Expanded)
 .AddAttribute("e", a => a.DrillAcrossAttributes);
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":n", true, typeof(DocumentFormat.OpenXml.Spreadsheet.PivotField)));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":n", true, "x:pivotField"));
             builder.AddConstraint(new AttributeValueSetConstraint(":t", false, new string[] { "blank", "grand" }));
             builder.AddConstraint(new AttributeRequiredConditionToValue(":x", ":t", "data") { Application = ApplicationType.Excel });
         }
@@ -15752,7 +15768,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataFieldExtensionList), 0, 1)
             };
-            builder.AddConstraint(new IndexReferenceConstraint(":fld", ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.PivotField), "DocumentFormat.OpenXml.Spreadsheet.PivotField", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":fld", ".", null, "x:pivotField", "x:pivotField", 0));
         }
 
         /// <summary>
@@ -15880,7 +15896,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
             };
-            builder.AddConstraint(new IndexReferenceConstraint(":i", ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DataField), "DocumentFormat.OpenXml.Spreadsheet.DataField", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":i", ".", null, "x:dataField", "x:dataField", 0));
         }
 
         /// <inheritdoc/>
@@ -15929,7 +15945,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
   aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":x", true, typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnFields)));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":x", true, "x:colFields"));
         }
 
         /// <inheritdoc/>
@@ -16030,7 +16046,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
-            builder.AddConstraint(new IndexReferenceConstraint(":dxfId", "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":dxfId", "/WorkbookPart/WorkbookStylesPart", null, "x:dxf", "x:dxf", 0));
         }
 
         /// <summary>
@@ -16966,7 +16982,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
  {
      aBuilder.AddValidator(RequiredValidator.Instance);
  });
-            builder.AddConstraint(new IndexReferenceConstraint(":field", "PivotTableCacheDefinitionPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CacheField), "DocumentFormat.OpenXml.Spreadsheet.CacheField", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":field", "PivotTableCacheDefinitionPart", null, "x:cacheField", "x:cacheField", 0));
         }
 
         /// <inheritdoc/>
@@ -17524,10 +17540,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.AutoFilter), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtensionList), 0, 1)
             };
-            builder.AddConstraint(new IndexReferenceConstraint(":fld", ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.PivotField), "DocumentFormat.OpenXml.Spreadsheet.PivotField", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":fld", ".", null, "x:pivotField", "x:pivotField", 0));
             builder.AddConstraint(new UniqueAttributeValueConstraint(":id", false, null));
-            builder.AddConstraint(new IndexReferenceConstraint(":iMeasureFld", ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.PivotField), "DocumentFormat.OpenXml.Spreadsheet.PivotField", 0));
-            builder.AddConstraint(new IndexReferenceConstraint(":iMeasureHier", ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.PivotHierarchy), "DocumentFormat.OpenXml.Spreadsheet.PivotHierarchy", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":iMeasureFld", ".", null, "x:pivotField", "x:pivotField", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":iMeasureHier", ".", null, "x:pivotHierarchy", "x:pivotHierarchy", 0));
         }
 
         /// <summary>
@@ -18539,7 +18555,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
-            builder.AddConstraint(new IndexReferenceConstraint(":fld", "PivotTableCacheDefinitionPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CacheField), "DocumentFormat.OpenXml.Spreadsheet.CacheField", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":fld", "PivotTableCacheDefinitionPart", null, "x:cacheField", "x:cacheField", 0));
             builder.AddConstraint(new UniqueAttributeValueConstraint(":name", true, null));
         }
 
@@ -19700,6 +19716,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:b");
+            builder.AddConstraint(new AttributeValueLengthConstraint(":c", 0, 65535) { Application = ApplicationType.Excel });
         }
 
         /// <inheritdoc/>
@@ -19727,6 +19744,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:i");
+            builder.AddConstraint(new IndexReferenceConstraint(":i", ".", null, "x:dataField", "x:dataField", 0));
         }
 
         /// <inheritdoc/>
@@ -20854,7 +20872,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute("type", a => a.Type)
 .AddAttribute("alignment", a => a.Alignment);
-            builder.AddConstraint(new IndexReferenceConstraint(":fontId", "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.Font), "DocumentFormat.OpenXml.Spreadsheet.Font", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":fontId", "/WorkbookPart/WorkbookStylesPart", null, "x:font", "x:font", 0));
         }
 
         /// <inheritdoc/>
@@ -23196,7 +23214,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddConstraint(new AttributeValueLengthConstraint(":oldHelp", 0, 32767));
             builder.AddConstraint(new AttributeValueLengthConstraint(":statusBar", 0, 32767));
             builder.AddConstraint(new AttributeValueLengthConstraint(":oldStatusBar", 0, 32767));
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", true, typeof(DocumentFormat.OpenXml.Spreadsheet.Revisions)));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", true, "x:revisions"));
             builder.AddConstraint(new AttributeValuePatternConstraint(":name", @"[a-zA-Z_\\][a-zA-Z0-9_.]*"));
             builder.AddConstraint(new AttributeValueLengthConstraint(":comment", 0, 255) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueLengthConstraint(":oldComment", 0, 255) { Application = ApplicationType.Excel });
@@ -24161,9 +24179,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.InlineString), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
-            builder.AddConstraint(new IndexReferenceConstraint(":cm", "/WorkbookPart/CellMetadataPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CellMetadata), "DocumentFormat.OpenXml.Spreadsheet.CellMetadata", 0));
-            builder.AddConstraint(new IndexReferenceConstraint(":s", "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CellStyle), "DocumentFormat.OpenXml.Spreadsheet.CellStyle", 0));
-            builder.AddConstraint(new IndexReferenceConstraint(":vm", "/WorkbookPart/CellMetadataPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.ValueMetadata), "DocumentFormat.OpenXml.Spreadsheet.ValueMetadata", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":cm", "/WorkbookPart/CellMetadataPart", null, "x:cellMetadata", "x:cellMetadata", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":s", "/WorkbookPart/WorkbookStylesPart", null, "x:cellStyle", "x:cellStyle", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":vm", "/WorkbookPart/CellMetadataPart", null, "x:valueMetadata", "x:valueMetadata", 0));
         }
 
         /// <inheritdoc/>
@@ -24232,11 +24250,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(":cm", true, double.NegativeInfinity, true, 2147483647, true));
-            builder.AddConstraint(new IndexReferenceConstraint(":cm", "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.CellMetadata), typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataBlock), "DocumentFormat.OpenXml.Spreadsheet.MetadataBlock", 1));
+            builder.AddConstraint(new IndexReferenceConstraint(":cm", "/WorkbookPart/CellMetadataPart", "x:cellMetadata", "x:bk", "x:bk", 1));
             builder.AddConstraint(new AttributeValueRangeConstraint(":vm", true, double.NegativeInfinity, true, 2147483648, true));
-            builder.AddConstraint(new IndexReferenceConstraint(":vm", "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.ValueMetadata), typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataBlock), "DocumentFormat.OpenXml.Spreadsheet.MetadataBlock", 1));
+            builder.AddConstraint(new IndexReferenceConstraint(":vm", "/WorkbookPart/CellMetadataPart", "x:valueMetadata", "x:bk", "x:bk", 1));
             builder.AddConstraint(new AttributeValueRangeConstraint(":s", true, 0, true, 65490, true));
-            builder.AddConstraint(new IndexReferenceConstraint(":s", "/WorkbookPart/WorkbookStylesPart", typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormats), typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormat), "DocumentFormat.OpenXml.Spreadsheet.CellFormat", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":s", "/WorkbookPart/WorkbookStylesPart", "x:cellXfs", "x:xf", "x:xf", 0));
+            builder.AddConstraint(new AttributeMutualExclusive(":l", ":s"));
+            builder.AddConstraint(new ReferenceExistConstraint(":i", "/WorkbookPart", "x:sheet", "x:sheet", ":sheetId"));
+            builder.AddConstraint(new AttributeValueRangeConstraint(":i", true, 1, true, 65534, true) { Application = ApplicationType.Excel });
         }
 
         /// <inheritdoc/>
@@ -25823,6 +25844,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.AddConstraint(new AttributeValueRangeConstraint(":r", true, 1, true, 1048576, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(":outlineLevel", true, 0, true, 7, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(":s", true, 0, true, 65490, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(":r", true, double.NegativeInfinity, true, 1048576, true));
         }
 
         /// <inheritdoc/>
@@ -26032,7 +26054,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.AddConstraint(new AttributeValueRangeConstraint(":max", true, 1, true, 16384, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(":width", true, 0, true, 255, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(":style", true, 0, true, 65429, true));
-            builder.AddConstraint(new IndexReferenceConstraint(":style", "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormat), "DocumentFormat.OpenXml.Spreadsheet.CellFormat", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":style", "/WorkbookPart/WorkbookStylesPart", null, "x:xf", "x:xf", 0));
             builder.AddConstraint(new AttributeValueLessEqualToAnother(":min", ":max", true) { Application = ApplicationType.Excel });
         }
 
@@ -28409,7 +28431,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             };
             builder.AddConstraint(new AttributeRequiredConditionToValue(":operator", ":type", "cells"));
             builder.AddConstraint(new AttributeRequiredConditionToValue(":timePeriod", ":type", "timePeriod"));
-            builder.AddConstraint(new IndexReferenceConstraint(":dxfId", "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":dxfId", "/WorkbookPart/WorkbookStylesPart", null, "x:dxf", "x:dxf", 0));
         }
 
         /// <inheritdoc/>
@@ -28831,7 +28853,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.InputCells), 1, 32)
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", true, typeof(DocumentFormat.OpenXml.Spreadsheet.Worksheet)));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", true, "x:worksheet"));
             builder.AddConstraint(new AttributeValueRangeConstraint(":count", true, 1, true, 32, true) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueLengthConstraint(":name", 0, 255) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueLengthConstraint(":user", 1, 54) { Application = ApplicationType.Excel });
@@ -29009,7 +29031,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute("securityDescriptor", a => a.SecurityDescriptor);
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", true, typeof(DocumentFormat.OpenXml.Spreadsheet.ProtectedRanges)));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", true, "x:protectedRanges"));
             builder.AddConstraint(new AttributeValueLengthConstraint(":name", 1, 255) { Application = ApplicationType.Word });
             builder.AddConstraint(new AttributeValueRangeConstraint(":sqref", true, 1, true, double.PositiveInfinity, true));
         }
@@ -29060,7 +29082,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":r", true, typeof(DocumentFormat.OpenXml.Spreadsheet.CellWatches)));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":r", true, "x:cellWatches"));
         }
 
         /// <inheritdoc/>
@@ -29279,6 +29301,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute("verticalDpi", a => a.VerticalDpi)
 .AddAttribute("copies", a => a.Copies)
 .AddAttribute("r:id", a => a.Id);
+            builder.AddConstraint(new AttributeValueRangeConstraint(":fitToWidth", true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueRangeConstraint(":fitToHeight", true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueRangeConstraint(":copies", true, 1, true, 32767, true) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueRangeConstraint(":horizontalDpi", true, 1, true, double.PositiveInfinity, true) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueRangeConstraint(":verticalDpi", true, 1, true, double.PositiveInfinity, true) { Application = ApplicationType.Excel });
@@ -29722,8 +29746,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
-            builder.AddConstraint(new IndexReferenceConstraint(":workbookViewId", "/WorkbookPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.WorkbookView), "DocumentFormat.OpenXml.Spreadsheet.WorkbookView", 0));
+            builder.AddConstraint(new AttributeValueRangeConstraint(":colorId", true, double.NegativeInfinity, true, 64, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(":zoomScale", true, 10, true, 400, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(":zoomScaleNormal", true, 10, true, 400, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(":zoomScalePageLayoutView", true, 10, true, 400, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(":zoomScaleSheetLayoutView", true, 10, true, 400, true));
+            builder.AddConstraint(new IndexReferenceConstraint(":workbookViewId", "/WorkbookPart", null, "x:workbookView", "x:workbookView", 0));
         }
 
         /// <summary>
@@ -29879,6 +29907,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.HeaderFooter), 0, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(":scale", true, 10, true, 400, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(":colorId", true, double.NegativeInfinity, true, 64, true));
+            builder.AddConstraint(new AttributeValueSetConstraint(":guid", false, new string[] { "00000000-0000-0000-0000-000000000000" }));
         }
 
         /// <summary>
@@ -31165,6 +31195,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddConstraint(new AttributeValueRangeConstraint(":zoomScaleNormal", true, 10, true, 400, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(":zoomScalePageLayoutView", true, 10, true, 400, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(":zoomScaleSheetLayoutView", true, 10, true, 400, true));
+            builder.AddConstraint(new IndexReferenceConstraint(":workbookViewId", "/WorkbookPart", null, "x:workbookView", "x:workbookView", 0));
         }
 
         /// <summary>
@@ -31612,6 +31643,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.AutoFilter), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(":scale", true, 10, true, 400, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(":colorId", true, double.NegativeInfinity, true, 64, true));
             builder.AddConstraint(new AttributeValueSetConstraint(":guid", false, new string[] { "00000000-0000-0000-0000-000000000000" }));
         }
@@ -32295,7 +32327,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(":count", true, double.NegativeInfinity, true, 2147483647, true));
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", true, typeof(DocumentFormat.OpenXml.Spreadsheet.Metadata)));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", true, "x:metadata"));
             builder.AddConstraint(new AttributeValueSetConstraint(":name", false, new string[] { "XLMDX" }));
             builder.AddConstraint(new AttributeValueLengthConstraint(":name", 1, 65535));
         }
@@ -33001,7 +33033,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute("coerce", a => a.Coerce)
 .AddAttribute("adjust", a => a.Adjust)
 .AddAttribute("cellMeta", a => a.CellMeta);
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", true, typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataTypes)));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", true, "x:metadataTypes"));
             builder.AddConstraint(new AttributeValueLengthConstraint(":name", 1, 65535));
         }
 
@@ -33133,7 +33165,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
  {
      aBuilder.AddValidator(RequiredValidator.Instance);
  });
-            builder.AddConstraint(new IndexReferenceConstraint(":t", ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataType), "DocumentFormat.OpenXml.Spreadsheet.MetadataType", 1));
+            builder.AddConstraint(new IndexReferenceConstraint(":t", ".", null, "x:metadataType", "x:metadataType", 1));
             builder.AddConstraint(new AttributeValueRangeConstraint(":t", true, double.NegativeInfinity, true, 2147483647, true));
         }
 
@@ -33322,7 +33354,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MdxMemberProp), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MdxKpi), 1, 1)
             };
-            builder.AddConstraint(new IndexReferenceConstraint(":n", "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), "DocumentFormat.OpenXml.Spreadsheet.CharacterValue", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":n", "/WorkbookPart/CellMetadataPart", "x:metadataStrings", "x:s", "x:s", 0));
             builder.AddConstraint(new AttributeValueRangeConstraint(":n", true, double.NegativeInfinity, true, 2147483647, true));
         }
 
@@ -33616,7 +33648,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NameIndex), 0, 0)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(":si", true, double.NegativeInfinity, true, 2147483647, true));
-            builder.AddConstraint(new IndexReferenceConstraint(":si", "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), "DocumentFormat.OpenXml.Spreadsheet.CharacterValue", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":si", "/WorkbookPart/CellMetadataPart", "x:metadataStrings", "x:s", "x:s", 0));
             builder.AddConstraint(new AttributeValueRangeConstraint(":c", true, double.NegativeInfinity, true, 2147483647, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(":fi", true, double.NegativeInfinity, true, 58, true));
         }
@@ -33736,7 +33768,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NameIndex), 0, 0)
             };
-            builder.AddConstraint(new IndexReferenceConstraint(":ns", "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), "DocumentFormat.OpenXml.Spreadsheet.CharacterValue", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":ns", "/WorkbookPart/CellMetadataPart", "x:metadataStrings", "x:s", "x:s", 0));
             builder.AddConstraint(new AttributeValueRangeConstraint(":ns", true, 0, true, 2147483647, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(":c", true, 0, true, 2147483647, true));
         }
@@ -33807,9 +33839,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
   {
       aBuilder.AddValidator(RequiredValidator.Instance);
   });
-            builder.AddConstraint(new IndexReferenceConstraint(":n", "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), "DocumentFormat.OpenXml.Spreadsheet.CharacterValue", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":n", "/WorkbookPart/CellMetadataPart", "x:metadataStrings", "x:s", "x:s", 0));
             builder.AddConstraint(new AttributeValueRangeConstraint(":n", true, double.NegativeInfinity, true, 2147483647, true));
-            builder.AddConstraint(new IndexReferenceConstraint(":np", "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), "DocumentFormat.OpenXml.Spreadsheet.CharacterValue", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":np", "/WorkbookPart/CellMetadataPart", "x:metadataStrings", "x:s", "x:s", 0));
             builder.AddConstraint(new AttributeValueRangeConstraint(":np", true, double.NegativeInfinity, true, 2147483647, true));
         }
 
@@ -33899,9 +33931,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
   {
       aBuilder.AddValidator(RequiredValidator.Instance);
   });
-            builder.AddConstraint(new IndexReferenceConstraint(":n", ".", typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), "DocumentFormat.OpenXml.Spreadsheet.CharacterValue", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":n", ".", "x:metadataStrings", "x:s", "x:s", 0));
             builder.AddConstraint(new AttributeValueRangeConstraint(":n", true, double.NegativeInfinity, true, 2147483647, true));
-            builder.AddConstraint(new IndexReferenceConstraint(":np", "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), "DocumentFormat.OpenXml.Spreadsheet.CharacterValue", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":np", "/WorkbookPart/CellMetadataPart", "x:metadataStrings", "x:s", "x:s", 0));
             builder.AddConstraint(new AttributeValueRangeConstraint(":np", true, double.NegativeInfinity, true, 2147483647, true));
         }
 
@@ -33970,6 +34002,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
   .AddAttribute("s", a => a.IsASet);
             builder.AddConstraint(new AttributeValueRangeConstraint(":x", true, 0, true, double.PositiveInfinity, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(":x", true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new IndexReferenceConstraint(":in", ".", null, "x:serverFormat", "x:serverFormat", 0));
+            builder.AddConstraint(new AttributeValueLengthConstraint(":c", 0, 65535) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueSetConstraint(":v", false, new string[] { "INF", "-INF", "NaN" }) { Application = ApplicationType.Excel });
         }
 
         /// <inheritdoc/>
@@ -36229,8 +36264,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddConstraint(new AttributeValueLengthConstraint(":name", 0, 255));
             builder.AddConstraint(new AttributeValueRangeConstraint(":builtinId", true, 0, true, 53, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(":iLevel", true, 0, true, 7, true));
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":xfId", true, typeof(DocumentFormat.OpenXml.Spreadsheet.CellStyles)));
-            builder.AddConstraint(new IndexReferenceConstraint(":xfId", "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormat), "DocumentFormat.OpenXml.Spreadsheet.CellFormat", 0));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":xfId", true, "x:cellStyles"));
+            builder.AddConstraint(new IndexReferenceConstraint(":xfId", "/WorkbookPart/WorkbookStylesPart", null, "x:xf", "x:xf", 0));
         }
 
         /// <summary>
@@ -36534,11 +36569,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
-            builder.AddConstraint(new IndexReferenceConstraint(":borderId", "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.Border), "DocumentFormat.OpenXml.Spreadsheet.Border", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":borderId", "/WorkbookPart/WorkbookStylesPart", null, "x:border", "x:border", 0));
             builder.AddConstraint(new AttributeValueRangeConstraint(":borderId", true, 0, true, double.PositiveInfinity, true));
-            builder.AddConstraint(new IndexReferenceConstraint(":fillId", "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.Fill), "DocumentFormat.OpenXml.Spreadsheet.Fill", 0));
-            builder.AddConstraint(new IndexReferenceConstraint(":fontId", "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.Font), "DocumentFormat.OpenXml.Spreadsheet.Font", 0));
-            builder.AddConstraint(new IndexReferenceConstraint(":xfId", "/WorkbookPart/WorkbookStylesPart", typeof(DocumentFormat.OpenXml.Spreadsheet.CellStyleFormats), typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormat), "DocumentFormat.OpenXml.Spreadsheet.CellFormat", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":fillId", "/WorkbookPart/WorkbookStylesPart", null, "x:fill", "x:fill", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":fontId", "/WorkbookPart/WorkbookStylesPart", null, "x:font", "x:font", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":xfId", "/WorkbookPart/WorkbookStylesPart", "x:cellStyleXfs", "x:xf", "x:xf", 0));
         }
 
         /// <summary>
@@ -36677,6 +36712,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
  aBuilder.AddValidator(RequiredValidator.Instance);
  aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (5L) });
 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(":val", true, 0, true, 5, true) { Application = ApplicationType.Excel });
         }
 
         /// <inheritdoc/>
@@ -36726,6 +36762,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (255L) });
 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(":val", true, 0, true, 255, true));
         }
 
         /// <inheritdoc/>
@@ -36809,7 +36846,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute("size", a => a.Size)
 .AddAttribute("dxfId", a => a.FormatId);
             builder.AddConstraint(new AttributeValueRangeConstraint(":size", true, 1, true, 9, true));
-            builder.AddConstraint(new IndexReferenceConstraint(":dxfId", "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":dxfId", "/WorkbookPart/WorkbookStylesPart", null, "x:dxf", "x:dxf", 0));
         }
 
         /// <inheritdoc/>
@@ -37079,6 +37116,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute("refersTo", a => a.RefersTo)
 .AddAttribute("sheetId", a => a.SheetId);
             builder.AddConstraint(new AttributeValueRangeConstraint(":sheetId", true, 0, true, 65533, true));
+            builder.AddConstraint(new AttributeValueLengthConstraint(":comment", 0, 255) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":name", 1, 255) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueRangeConstraint(":localSheetId", true, double.NegativeInfinity, true, 32766, true) { Application = ApplicationType.Excel });
         }
 
         /// <inheritdoc/>
@@ -37263,6 +37303,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalCell), 0, 0)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(":r", true, 1, true, 1048576, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(":outlineLevel", true, 0, true, 7, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(":s", true, 0, true, 65490, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(":r", true, double.NegativeInfinity, true, 1048576, true));
         }
 
@@ -37382,7 +37425,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Xstring), 0, 1)
             };
             builder.AddConstraint(new AttributeValueSetConstraint(":t", false, new string[] { "s" }));
-            builder.AddConstraint(new IndexReferenceConstraint(":vm", "/WorkbookPart/CellMetadataPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.ValueMetadata), "DocumentFormat.OpenXml.Spreadsheet.ValueMetadata", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":vm", "/WorkbookPart/CellMetadataPart", null, "x:valueMetadata", "x:valueMetadata", 0));
         }
 
         /// <summary>
@@ -38606,11 +38649,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddConstraint(new AttributeValueRangeConstraint(":id", true, 1, true, double.PositiveInfinity, true));
             builder.AddConstraint(new AttributeValueLengthConstraint(":totalsRowLabel", 0, 32767));
             builder.AddConstraint(new AttributeValueLengthConstraint(":dataCellStyle", 1, 255));
-            builder.AddConstraint(new IndexReferenceConstraint(":dataDxfId", "/WorkbookPart/WorkbookStylesPart", typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormats), typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0));
-            builder.AddConstraint(new IndexReferenceConstraint(":headerRowDxfId", "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0));
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":id", true, typeof(DocumentFormat.OpenXml.Spreadsheet.Table)));
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", true, typeof(DocumentFormat.OpenXml.Spreadsheet.Table)));
-            builder.AddConstraint(new IndexReferenceConstraint(":totalsRowDxfId", "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":dataDxfId", "/WorkbookPart/WorkbookStylesPart", "x:dxfs", "x:dxf", "x:dxf", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":headerRowDxfId", "/WorkbookPart/WorkbookStylesPart", null, "x:dxf", "x:dxf", 0));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":id", true, "x:table"));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", true, "x:table"));
+            builder.AddConstraint(new IndexReferenceConstraint(":totalsRowDxfId", "/WorkbookPart/WorkbookStylesPart", null, "x:dxf", "x:dxf", 0));
             builder.AddConstraint(new AttributeValueLengthConstraint(":uniqueName", 0, 255) { Application = ApplicationType.Excel });
         }
 
@@ -38956,7 +38999,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(":xpath", 0, 32000));
-            builder.AddConstraint(new ReferenceExistConstraint(":mapId", "CustomXmlMappingsPart", typeof(DocumentFormat.OpenXml.Spreadsheet.Map), "DocumentFormat.OpenXml.Spreadsheet.Map", ":ID"));
+            builder.AddConstraint(new ReferenceExistConstraint(":mapId", "CustomXmlMappingsPart", "x:Map", "x:Map", ":ID"));
             builder.AddConstraint(new AttributeValueRangeConstraint(":mapId", true, 1, true, 21474836477, true) { Application = ApplicationType.Excel });
         }
 
@@ -39377,7 +39420,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":cacheId", true, typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCaches)));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":cacheId", true, "x:pivotCaches"));
             builder.AddConstraint(new RelationshipExistConstraint("r:id"));
         }
 
@@ -40788,6 +40831,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute("shortcutKey", a => a.ShortcutKey)
 .AddAttribute("publishToServer", a => a.PublishToServer)
 .AddAttribute("workbookParameter", a => a.WorkbookParameter);
+            builder.AddConstraint(new AttributeValueRangeConstraint(":sheetId", true, 0, true, 65533, true));
             builder.AddConstraint(new AttributeValueLengthConstraint(":comment", 0, 255) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueLengthConstraint(":name", 1, 255) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueRangeConstraint(":localSheetId", true, double.NegativeInfinity, true, 32766, true) { Application = ApplicationType.Excel });
@@ -44971,6 +45015,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageSetupProperties), 0, 1)
             };
             builder.AddConstraint(new AttributeValuePatternConstraint(":codeName", @"[\p{L}\P{IsBasicLatin}][_\d\p{L}\P{IsBasicLatin}]*"));
+            builder.AddConstraint(new AttributeValueLengthConstraint(":codeName", 0, 32));
         }
 
         /// <summary>
@@ -45908,6 +45953,10 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":uniqueName", true, null));
+            builder.AddConstraint(new AttributeValueLengthConstraint(":caption", 1, 65535) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":name", 1, 65535) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":uniqueName", 1, 32767) { Application = ApplicationType.Excel });
         }
 
         /// <inheritdoc/>
@@ -46032,6 +46081,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Row), 0, 0)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(":sheetId", true, 0, true, 65533, true));
         }
 
         /// <inheritdoc/>
@@ -47618,6 +47668,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
  aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new IndexReferenceConstraint(":fld", ".", null, "x:pivotField", "x:pivotField", 0));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":id", false, null));
+            builder.AddConstraint(new IndexReferenceConstraint(":iMeasureFld", ".", null, "x:pivotField", "x:pivotField", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":iMeasureHier", ".", null, "x:pivotHierarchy", "x:pivotHierarchy", 0));
         }
 
         /// <inheritdoc/>
@@ -48246,7 +48300,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute("cellColor", a => a.CellColor);
-            builder.AddConstraint(new IndexReferenceConstraint(":dxfId", "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(":dxfId", "/WorkbookPart/WorkbookStylesPart", null, "x:dxf", "x:dxf", 0));
         }
 
         /// <inheritdoc/>
@@ -49926,7 +49980,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Consolidation), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtensionList), 0, 1)
             };
-            builder.AddConstraint(new ReferenceExistConstraint(":connectionId", "/WorkbookPart/ConnectionsPart", typeof(DocumentFormat.OpenXml.Spreadsheet.Connection), "DocumentFormat.OpenXml.Spreadsheet.Connection", ":id"));
+            builder.AddConstraint(new ReferenceExistConstraint(":connectionId", "/WorkbookPart/ConnectionsPart", "x:connection", "x:connection", ":id"));
             builder.AddConstraint(new UniqueAttributeValueConstraint(":connectionId", true, null));
         }
 

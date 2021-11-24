@@ -2879,7 +2879,7 @@ union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":modelId", true, typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionList)));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":modelId", true, "dgm:cxnLst"));
             builder.AddConstraint(new UniqueAttributeValueConstraint(":parTransId", true, null));
         }
 

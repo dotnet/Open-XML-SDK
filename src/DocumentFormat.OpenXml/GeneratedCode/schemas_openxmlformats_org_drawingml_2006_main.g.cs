@@ -6388,6 +6388,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInc
 {
     aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(":val", true, 0, true, 100000, true));
         }
 
         /// <inheritdoc/>

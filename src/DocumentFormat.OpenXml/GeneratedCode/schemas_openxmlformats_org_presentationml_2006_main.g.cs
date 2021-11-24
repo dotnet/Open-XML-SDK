@@ -2691,6 +2691,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Timing), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideExtensionList), 0, 1)
             };
+            builder.AddConstraint(new RelationshipExistConstraint("r:id"));
         }
 
         /// <summary>
@@ -9882,7 +9883,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeNodeList), 1, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(":lvl", true, double.NegativeInfinity, true, 9, true) { Application = ApplicationType.PowerPoint });
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":lvl", true, typeof(DocumentFormat.OpenXml.Presentation.TemplateList)) { Application = ApplicationType.PowerPoint });
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":lvl", true, "p:tmplLst") { Application = ApplicationType.PowerPoint });
         }
 
         /// <summary>
@@ -10289,7 +10290,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeD
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TemplateList), 0, 1)
             };
-            builder.AddConstraint(new ReferenceExistConstraint(":spid", ".", typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), "DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties", ":id") { Application = ApplicationType.PowerPoint });
+            builder.AddConstraint(new ReferenceExistConstraint(":spid", ".", "p:cNvPr", "p:cNvPr", ":id") { Application = ApplicationType.PowerPoint });
         }
 
         /// <summary>
@@ -10411,8 +10412,8 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeD
 {
  aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.AddConstraint(new ReferenceExistConstraint(":grpId", ".", typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), "DocumentFormat.OpenXml.Presentation.CommonTimeNode", ":grpId") { Application = ApplicationType.PowerPoint });
-            builder.AddConstraint(new ReferenceExistConstraint(":spid", ".", typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), "DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties", ":id") { Application = ApplicationType.PowerPoint });
+            builder.AddConstraint(new ReferenceExistConstraint(":grpId", ".", "p:cTn", "p:cTn", ":grpId") { Application = ApplicationType.PowerPoint });
+            builder.AddConstraint(new ReferenceExistConstraint(":spid", ".", "p:cNvPr", "p:cNvPr", ":id") { Application = ApplicationType.PowerPoint });
         }
 
         /// <inheritdoc/>
@@ -10538,8 +10539,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute("animBg", a => a.AnimateBackground);
-            builder.AddConstraint(new ReferenceExistConstraint(":spid", ".", typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), "DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties", ":id") { Application = ApplicationType.PowerPoint });
-            builder.AddConstraint(new ReferenceExistConstraint(":grpId", ".", typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), "DocumentFormat.OpenXml.Presentation.CommonTimeNode", ":grpId") { Application = ApplicationType.PowerPoint });
+            builder.AddConstraint(new ReferenceExistConstraint(":spid", ".", "p:cNvPr", "p:cNvPr", ":id") { Application = ApplicationType.PowerPoint });
+            builder.AddConstraint(new ReferenceExistConstraint(":grpId", ".", "p:cTn", "p:cTn", ":grpId") { Application = ApplicationType.PowerPoint });
         }
 
         /// <inheritdoc/>
@@ -10666,8 +10667,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildAsOne), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildSubElement), 1, 1)
             };
-            builder.AddConstraint(new ReferenceExistConstraint(":spid", ".", typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), "DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties", ":id") { Application = ApplicationType.PowerPoint });
-            builder.AddConstraint(new ReferenceExistConstraint(":grpId", ".", typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), "DocumentFormat.OpenXml.Presentation.CommonTimeNode", ":grpId") { Application = ApplicationType.PowerPoint });
+            builder.AddConstraint(new ReferenceExistConstraint(":spid", ".", "p:cNvPr", "p:cNvPr", ":id") { Application = ApplicationType.PowerPoint });
+            builder.AddConstraint(new ReferenceExistConstraint(":grpId", ".", "p:cTn", "p:cTn", ":grpId") { Application = ApplicationType.PowerPoint });
         }
 
         /// <summary>
@@ -11542,7 +11543,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             };
             builder.AddConstraint(new UniqueAttributeValueConstraint(":id", false, null));
             builder.AddConstraint(new AttributeValueRangeConstraint(":id", true, 0, true, double.PositiveInfinity, true));
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":clrIdx", true, typeof(DocumentFormat.OpenXml.Presentation.CommentAuthorList)));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":clrIdx", true, "p:cmAuthorLst"));
         }
 
         /// <summary>
@@ -12996,6 +12997,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideList), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":id", false, null) { Application = ApplicationType.PowerPoint });
         }
 
         /// <summary>
@@ -15928,7 +15930,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
     aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", false, typeof(DocumentFormat.OpenXml.Presentation.TagList)) { Application = ApplicationType.PowerPoint });
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", false, "p:tagLst") { Application = ApplicationType.PowerPoint });
         }
 
         /// <inheritdoc/>
@@ -16427,6 +16429,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute("collapse", a => a.Collapse);
+            builder.AddConstraint(new RelationshipExistConstraint("r:id"));
         }
 
         /// <inheritdoc/>

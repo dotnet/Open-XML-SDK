@@ -2527,7 +2527,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.FieldCodes), 0, 1)
             };
             builder.AddConstraint(new AttributeValuePatternConstraint(":ObjectID", @"_(\d{1,9}|1\d{9}|20\d{8}|21[0-3]\d{7}|214[0-6]\d{6}|2147[0-3]\d{5}|21474[0-7]\d{4}|214748[0-2]\d{3}|2147483[0-5]\d{2}|21474836[0-3]\d|214748364[0-7])"));
-            builder.AddConstraint(new ReferenceExistConstraint(":ShapeID", ".", typeof(DocumentFormat.OpenXml.Vml.Shape), "DocumentFormat.OpenXml.Vml.Shape", ":id"));
+            builder.AddConstraint(new ReferenceExistConstraint(":ShapeID", ".", "v:shape", "v:shape", ":id"));
         }
 
         /// <summary>

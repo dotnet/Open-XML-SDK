@@ -48,7 +48,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 }
             }
 
-            return result.IsNil;
+            return !result.IsNil;
         }
 
         /// <summary>

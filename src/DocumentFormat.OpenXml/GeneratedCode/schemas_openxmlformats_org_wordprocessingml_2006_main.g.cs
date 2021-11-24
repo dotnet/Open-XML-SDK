@@ -267,6 +267,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:moveFrom");
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -294,6 +295,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:moveTo");
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -725,7 +727,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:commentRangeStart");
             builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
-            builder.AddConstraint(new ReferenceExistConstraint("w:id", "WordprocessingCommentsPart", typeof(DocumentFormat.OpenXml.Wordprocessing.Comment), "DocumentFormat.OpenXml.Wordprocessing.Comment", "w:id"));
+            builder.AddConstraint(new ReferenceExistConstraint("w:id", "WordprocessingCommentsPart", "w:comment", "w:comment", "w:id"));
         }
 
         /// <inheritdoc/>
@@ -754,7 +756,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:commentRangeEnd");
             builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
-            builder.AddConstraint(new ReferenceExistConstraint("w:id", "WordprocessingCommentsPart", typeof(DocumentFormat.OpenXml.Wordprocessing.Comment), "DocumentFormat.OpenXml.Wordprocessing.Comment", "w:id"));
+            builder.AddConstraint(new ReferenceExistConstraint("w:id", "WordprocessingCommentsPart", "w:comment", "w:comment", "w:id"));
         }
 
         /// <inheritdoc/>
@@ -1254,7 +1256,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:commentReference");
             builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
-            builder.AddConstraint(new ReferenceExistConstraint("w:id", "WordprocessingCommentsPart", typeof(DocumentFormat.OpenXml.Wordprocessing.Comment), "DocumentFormat.OpenXml.Wordprocessing.Comment", "w:id"));
+            builder.AddConstraint(new ReferenceExistConstraint("w:id", "WordprocessingCommentsPart", "w:comment", "w:comment", "w:id"));
         }
 
         /// <inheritdoc/>
@@ -1794,6 +1796,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:style");
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:styleId", true, null));
         }
 
         /// <inheritdoc/>
@@ -11137,7 +11140,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:footnoteReference");
-            builder.AddConstraint(new ReferenceExistConstraint("w:id", "FootnotesPart", typeof(DocumentFormat.OpenXml.Wordprocessing.Footnote), "DocumentFormat.OpenXml.Wordprocessing.Footnote", "w:id"));
+            builder.AddConstraint(new ReferenceExistConstraint("w:id", "FootnotesPart", "w:footnote", "w:footnote", "w:id"));
         }
 
         /// <inheritdoc/>
@@ -11499,6 +11502,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:pStyle");
+            builder.AddConstraint(new AttributeValueLengthConstraint("w:val", 0, 253) { Application = ApplicationType.Word });
         }
 
         /// <inheritdoc/>
@@ -11526,6 +11530,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:name");
+            builder.AddConstraint(new AttributeValuePatternConstraint("w:val", @"[^,]*") { Application = ApplicationType.Word });
         }
 
         /// <inheritdoc/>
@@ -12877,6 +12882,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:bottom");
+            builder.AddConstraint(new AttributeCannotOmitConstraint("w:type") { Application = ApplicationType.Word });
+            builder.AddConstraint(new AttributeCannotOmitConstraint("w:w") { Application = ApplicationType.Word });
         }
 
         /// <inheritdoc/>
@@ -15266,6 +15273,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
                     }
                 }
             };
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -15352,6 +15360,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
                     }
                 }
             };
+            builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -34570,6 +34579,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 {
    aBuilder.AddValidator(new StringValidator() { MaxLength = (20L) });
 });
+            builder.AddConstraint(new AttributeValuePatternConstraint("w:val", @"[^,]*") { Application = ApplicationType.Word });
         }
 
         /// <inheritdoc/>
@@ -35236,6 +35246,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:name");
+            builder.AddConstraint(new AttributeValuePatternConstraint("w:val", @"[^,]*") { Application = ApplicationType.Word });
         }
 
         /// <inheritdoc/>
@@ -40212,7 +40223,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:footnote");
             builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
-            builder.AddConstraint(new ReferenceExistConstraint("w:id", "/MainDocumentPart/FootnotesPart", typeof(DocumentFormat.OpenXml.Wordprocessing.Footnote), "DocumentFormat.OpenXml.Wordprocessing.Footnote", "w:id"));
+            builder.AddConstraint(new ReferenceExistConstraint("w:id", "/MainDocumentPart/FootnotesPart", "w:footnote", "w:footnote", "w:id"));
         }
 
         /// <inheritdoc/>
@@ -40241,7 +40252,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:endnote");
             builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
-            builder.AddConstraint(new ReferenceExistConstraint("w:id", "/MainDocumentPart/EndnotesPart", typeof(DocumentFormat.OpenXml.Wordprocessing.Endnote), "DocumentFormat.OpenXml.Wordprocessing.Endnote", "w:id"));
+            builder.AddConstraint(new ReferenceExistConstraint("w:id", "/MainDocumentPart/EndnotesPart", "w:endnote", "w:endnote", "w:id"));
         }
 
         /// <inheritdoc/>
@@ -40504,6 +40515,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ColumnIndex), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.UniqueTag), 1, 1)
             };
+            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/recipientData"));
         }
 
         /// <summary>
@@ -46925,6 +46937,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
    aBuilder.AddValidator(RequiredValidator.Instance);
    aBuilder.AddValidator(new StringValidator() { Pattern = ("[^,]*") });
 });
+            builder.AddConstraint(new AttributeValuePatternConstraint("w:val", @"[^,]*") { Application = ApplicationType.Word });
         }
 
         /// <inheritdoc/>
@@ -50405,6 +50418,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
                 }
             };
             builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
+            builder.AddConstraint(new ReferenceExistConstraint("w:id", "/MainDocumentPart/FootnotesPart", "w:footnote", "w:footnote", "w:id"));
         }
 
         /// <inheritdoc/>
@@ -50601,6 +50615,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
                 }
             };
             builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
+            builder.AddConstraint(new ReferenceExistConstraint("w:id", "/MainDocumentPart/EndnotesPart", "w:endnote", "w:endnote", "w:id"));
         }
 
         /// <inheritdoc/>
@@ -51532,6 +51547,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
    aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute("w:decorated", a => a.Decorated);
+            builder.AddConstraint(new AttributeValuePatternConstraint("w:val", @"[^,]*") { Application = ApplicationType.Word });
         }
 
         /// <inheritdoc/>

@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
-using System;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
@@ -13,16 +12,16 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     {
         private readonly OpenXmlQualifiedName _attribute;
         private readonly string _refPartType;
-        private readonly Type? _refElementParent;
-        private readonly Type _refElement;
+        private readonly OpenXmlQualifiedName? _refElementParent;
+        private readonly OpenXmlQualifiedName _refElement;
         private readonly int _indexBase;
 
-        public IndexReferenceConstraint(OpenXmlQualifiedName attribute, string referencedPart, Type? referencedElementParent, Type referencedElement, string referencedElementName, int indexBase)
+        public IndexReferenceConstraint(OpenXmlQualifiedName attribute, string referencedPart, OpenXmlQualifiedName? referencedElementParent, OpenXmlQualifiedName referencedElement, string referencedElementName, int indexBase)
             : base(SemanticValidationLevel.Package)
         {
             _attribute = attribute;
             _refPartType = referencedPart;
-            _refElement = referencedElement ?? throw new ArgumentNullException(nameof(referencedElement));
+            _refElement = referencedElement;
             _refElementParent = referencedElementParent;
             _indexBase = indexBase;
         }
@@ -70,7 +69,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 RelatedNode = null,
                 Description = SR.Format(
                     ValidationResources.Sem_MissingIndexedElement,
-                    _refElement.FullName, element.LocalName,
+                    _refElement, element.LocalName,
                     _attribute,
                     result.Part is null ? _refPartType : result.Part.PackagePart.Uri.ToString(),
                     index),
@@ -92,7 +91,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
                 foreach (var element in key.part.RootElement.Descendants(context.FileFormat, TraversalOptions.SelectAlternateContent))
                 {
-                    if (key.constraint._refElementParent is null || element.Parent?.GetType() == key.constraint._refElementParent)
+                    if (!key.constraint._refElementParent.HasValue || key.constraint._refElementParent.Value.Equals(element.Parent?.QName))
                     {
                         count++;
                     }
