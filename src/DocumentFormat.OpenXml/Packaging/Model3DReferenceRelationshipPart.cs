@@ -13,18 +13,16 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the Model3DReferenceRelationshipPart
     /// </summary>
-    public partial class Model3DReferenceRelationshipPart : OpenXmlPart, IFixedContentTypePart
+    public partial class Model3DReferenceRelationshipPart
     {
-        /// <summary>
-        /// Determines if the content type agrees with this part's constraints.
-        /// </summary>
-        /// <param name="metroPart"></param>
-        /// <returns></returns>
-        private protected override bool IsValidContentType(PackagePart metroPart)
+        /// <inheritdoc/>
+        private protected override bool IsValidContentType(PackagePart part)
         {
-            if (IsContentTypeFixed && metroPart.ContentType != ContentType)
+            base.IsValidContentType(part);
+            if (part.ContentType != ContentType)
             {
-                return metroPart.ContentType == "model/gltf.binary";
+                // model/gltf.binary is an acceptable MIME for this part, PowerPoint writes this on save.
+                return part.ContentType == "model/gltf.binary";
             }
 
             return true;

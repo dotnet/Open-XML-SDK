@@ -78,13 +78,13 @@ namespace DocumentFormat.OpenXml.Packaging
 
             _packagePart = metroPart;
 
-            if (!IsValidContentType(metroPart))
+            if (IsContentTypeFixed && !IsValidContentType(metroPart))
             {
                 var errorMessage = SR.Format(
-                ExceptionMessages.InvalidPartContentType,
-                metroPart.Uri.OriginalString,
-                metroPart.ContentType,
-                ContentType);
+                    ExceptionMessages.InvalidPartContentType,
+                    metroPart.Uri.OriginalString,
+                    metroPart.ContentType,
+                    ContentType);
 
                 throw new OpenXmlPackageException(errorMessage);
             }
@@ -499,11 +499,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Determines if the content type agrees with this part's constraints.
         /// </summary>
-        /// <param name="metroPart"></param>
-        /// <returns></returns>
-        private protected virtual bool IsValidContentType(PackagePart metroPart)
+        /// <param name="part"></param>
+        /// <returns>True if the content type is valid for this part. False otherwise.</returns>
+        private protected virtual bool IsValidContentType(PackagePart part)
         {
-            return (metroPart.ContentType == ContentType) || IsContentTypeFixed;
+            return part.ContentType == ContentType;
         }
 
         // find all reachable parts from the package root, the dictionary also used for cycle reference defense

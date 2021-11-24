@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [2.14.x] - 2021-11-23
 
 ### Added
-- Virtual content type checking for OpenXmlPart and derived types and model/gltf.binary fix (#1069)
+- Added virtual method for content type checking in `OpenXmlPart` and fix issue for `model/gltf.binary` (#1069)
 
 ## [2.14.0] - 2021-10-28
 
