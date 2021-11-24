@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable enable
-
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -18,14 +16,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         private protected override bool IsValidContentType(PackagePart part)
         {
-            base.IsValidContentType(part);
-            if (part.ContentType != ContentType)
+            if (base.IsValidContentType(part))
             {
-                // model/gltf.binary is an acceptable MIME for this part, PowerPoint writes this on save.
-                return part.ContentType == "model/gltf.binary";
+                return true;
             }
 
-            return true;
+            // model/gltf.binary is an acceptable MIME for this part, PowerPoint writes this on save.
+            return part.ContentType == "model/gltf.binary";
         }
     }
 }
