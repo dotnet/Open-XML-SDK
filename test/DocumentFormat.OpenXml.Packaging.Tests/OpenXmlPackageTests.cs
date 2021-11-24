@@ -268,7 +268,13 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         [Fact]
         public void TestOpenModel3DWrittenByPowerPoint()
         {
-            using (var testFile = GetStream(TestFiles._3DTest, false))
+            using (var testFile = GetStream(TestFiles._3DTestDash, false))
+            using (var presDoc = PresentationDocument.Open(testFile, false))
+            {
+                Assert.NotNull(presDoc);
+            }
+
+            using (var testFile = GetStream(TestFiles._3DTestDot, false))
             using (var presDoc = PresentationDocument.Open(testFile, false))
             {
                 Assert.NotNull(presDoc);
