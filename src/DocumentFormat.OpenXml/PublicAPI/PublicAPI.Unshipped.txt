@@ -1,2 +1,2 @@
 ﻿#nullable enable
-
+DocumentFormat.OpenXml.FileFormatVersions.Microsoft365 = 64 -> DocumentFormat.OpenXml.FileFormatVersions

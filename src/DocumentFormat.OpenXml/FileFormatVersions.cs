@@ -45,5 +45,10 @@ namespace DocumentFormat.OpenXml
         /// Represents Microsoft Office 2021.
         /// </summary>
         Office2021 = 0x20,
+
+        /// <summary>
+        /// Represents Microsoft Microsoft 365.
+        /// </summary>
+        Microsoft365 = 0x40,
     }
 }
