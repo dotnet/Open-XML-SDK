@@ -275,6 +275,13 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             using var presDoc = PresentationDocument.Open(testFile, false);
 
             Assert.NotNull(presDoc);
+
+            // Check to see that the Model3DReferenceRelationshippart has content type 'model/gltf-binary'
+            SlidePart slidePart = presDoc.PresentationPart.GetPartsOfType<SlidePart>().FirstOrDefault();
+            IEnumerable<Model3DReferenceRelationshipPart> model3DReferenceRelationshipParts = slidePart.Model3DReferenceRelationshipParts;
+            Model3DReferenceRelationshipPart model3DReferenceRelationshipPart = model3DReferenceRelationshipParts.FirstOrDefault();
+
+            Assert.Equal("model/gltf-binary", model3DReferenceRelationshipPart.ContentType);
         }
 
         // Also test the acceptance of model/gltf-binary that the SDK writes.
@@ -286,6 +293,13 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             using var presDoc = PresentationDocument.Open(testFile, false);
 
             Assert.NotNull(presDoc);
+
+            // Check to see that the Model3DReferenceRelationshippart has content type 'model/gltf-binary'
+            SlidePart slidePart = presDoc.PresentationPart.GetPartsOfType<SlidePart>().FirstOrDefault();
+            IEnumerable<Model3DReferenceRelationshipPart> model3DReferenceRelationshipParts = slidePart.Model3DReferenceRelationshipParts;
+            Model3DReferenceRelationshipPart model3DReferenceRelationshipPart = model3DReferenceRelationshipParts.FirstOrDefault();
+
+            Assert.Equal("model/gltf-binary", model3DReferenceRelationshipPart.ContentType);
         }
     }
 }
