@@ -9,7 +9,9 @@ using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 using Xunit;
+
 using static DocumentFormat.OpenXml.Tests.TestAssets;
+
 using Text = DocumentFormat.OpenXml.Wordprocessing.Text;
 
 namespace DocumentFormat.OpenXml.Packaging.Tests
