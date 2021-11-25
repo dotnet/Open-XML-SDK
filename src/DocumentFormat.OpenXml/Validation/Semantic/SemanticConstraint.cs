@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
@@ -28,6 +29,27 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         public ApplicationType Application { get; set; } = ApplicationType.All;
 
         public FileFormatVersions Version { get; set; } = FileFormatVersions.Office2007;
+
+        protected static bool TryFindAttribute(OpenXmlElement element, OpenXmlQualifiedName attribute, out AttributeCollection.AttributeEntry result)
+        {
+            result = default;
+
+            foreach (var entry in element.ParsedState.Attributes)
+            {
+                // Some schematron expressions don't have the right namespace, so we'll allow that if there's no exact match
+                if (string.Equals(entry.Property.QName.Name, attribute.Name, StringComparison.Ordinal))
+                {
+                    result = entry;
+
+                    if (entry.Property.QName.Namespace.Equals(attribute.Namespace))
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return !result.IsNil;
+        }
 
         /// <summary>
         /// Semantic validation logic

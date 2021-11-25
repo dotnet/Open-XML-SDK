@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// <para>When the object is serialized out as xml, it's qualified name is w10:bordertop.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(28, "bordertop")]
+    [SchemaAttr("w10:bordertop")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TopBorder : BorderType
     {
@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(28, "bordertop");
+            builder.SetSchema("w10:bordertop");
         }
 
         /// <inheritdoc/>
@@ -47,7 +47,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// <para>When the object is serialized out as xml, it's qualified name is w10:borderleft.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(28, "borderleft")]
+    [SchemaAttr("w10:borderleft")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class LeftBorder : BorderType
     {
@@ -61,7 +61,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(28, "borderleft");
+            builder.SetSchema("w10:borderleft");
         }
 
         /// <inheritdoc/>
@@ -74,7 +74,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// <para>When the object is serialized out as xml, it's qualified name is w10:borderright.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(28, "borderright")]
+    [SchemaAttr("w10:borderright")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RightBorder : BorderType
     {
@@ -88,7 +88,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(28, "borderright");
+            builder.SetSchema("w10:borderright");
         }
 
         /// <inheritdoc/>
@@ -101,7 +101,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// <para>When the object is serialized out as xml, it's qualified name is w10:borderbottom.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(28, "borderbottom")]
+    [SchemaAttr("w10:borderbottom")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class BottomBorder : BorderType
     {
@@ -115,7 +115,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(28, "borderbottom");
+            builder.SetSchema("w10:borderbottom");
         }
 
         /// <inheritdoc/>
@@ -143,7 +143,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "type")]
+        [SchemaAttr("type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.BorderValues>? Type
@@ -159,7 +159,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "width")]
+        [SchemaAttr("width")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? Width
@@ -175,7 +175,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "shadow")]
+        [SchemaAttr("shadow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public TrueFalseValue? Shadow
@@ -188,12 +188,12 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<BorderType>()
-                           .AddAttribute(0, "type", a => a.Type)
-                           .AddAttribute(0, "width", a => a.Width, aBuilder =>
+                           .AddAttribute("type", a => a.Type)
+                           .AddAttribute("width", a => a.Width, aBuilder =>
                            {
                                aBuilder.AddValidator(new NumberValidator() { IsPositive = (true) });
                            })
-                           .AddAttribute(0, "shadow", a => a.Shadow);
+                           .AddAttribute("shadow", a => a.Shadow);
         }
     }
 
@@ -203,7 +203,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// <para>When the object is serialized out as xml, it's qualified name is w10:wrap.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(28, "wrap")]
+    [SchemaAttr("w10:wrap")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TextWrap : OpenXmlLeafElement
     {
@@ -221,7 +221,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "type")]
+        [SchemaAttr("type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapValues>? Type
@@ -237,7 +237,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "side")]
+        [SchemaAttr("side")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapSideValues>? Side
@@ -253,7 +253,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "anchorx")]
+        [SchemaAttr("anchorx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.HorizontalAnchorValues>? AnchorX
@@ -269,7 +269,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "anchory")]
+        [SchemaAttr("anchory")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.VerticalAnchorValues>? AnchorY
@@ -281,12 +281,12 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(28, "wrap");
+            builder.SetSchema("w10:wrap");
             builder.AddElement<TextWrap>()
-.AddAttribute(0, "type", a => a.Type)
-.AddAttribute(0, "side", a => a.Side)
-.AddAttribute(0, "anchorx", a => a.AnchorX)
-.AddAttribute(0, "anchory", a => a.AnchorY);
+.AddAttribute("type", a => a.Type)
+.AddAttribute("side", a => a.Side)
+.AddAttribute("anchorx", a => a.AnchorX)
+.AddAttribute("anchory", a => a.AnchorY);
         }
 
         /// <inheritdoc/>
@@ -299,7 +299,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// <para>When the object is serialized out as xml, it's qualified name is w10:anchorlock.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(28, "anchorlock")]
+    [SchemaAttr("w10:anchorlock")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AnchorLock : OpenXmlLeafElement
     {
@@ -313,7 +313,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(28, "anchorlock");
+            builder.SetSchema("w10:anchorlock");
         }
 
         /// <inheritdoc/>

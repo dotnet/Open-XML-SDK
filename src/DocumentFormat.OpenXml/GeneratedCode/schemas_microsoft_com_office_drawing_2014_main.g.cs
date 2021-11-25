@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
     /// <para>When the object is serialized out as xml, it's qualified name is a16:creationId.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(79, "creationId")]
+    [SchemaAttr("a16:creationId")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CreationId : OpenXmlLeafElement
     {
@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -51,10 +51,10 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(79, "creationId");
+            builder.SetSchema("a16:creationId");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<CreationId>()
-.AddAttribute(0, "id", a => a.Id, aBuilder =>
+.AddAttribute("id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
@@ -70,7 +70,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is a16:predDERef.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(79, "predDERef")]
+    [SchemaAttr("a16:predDERef")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PredecessorDrawingElementReference : OpenXmlLeafElement
     {
@@ -88,7 +88,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "pred")]
+        [SchemaAttr("pred")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Pred
@@ -100,10 +100,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(79, "predDERef");
+            builder.SetSchema("a16:predDERef");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<PredecessorDrawingElementReference>()
-.AddAttribute(0, "pred", a => a.Pred, aBuilder =>
+.AddAttribute("pred", a => a.Pred, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
@@ -119,7 +119,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is a16:cxnDERefs.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(79, "cxnDERefs")]
+    [SchemaAttr("a16:cxnDERefs")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ConnectableReferences : OpenXmlLeafElement
     {
@@ -137,7 +137,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "st")]
+        [SchemaAttr("st")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? St
@@ -153,7 +153,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "end")]
+        [SchemaAttr("end")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? End
@@ -165,14 +165,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(79, "cxnDERefs");
+            builder.SetSchema("a16:cxnDERefs");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ConnectableReferences>()
-.AddAttribute(0, "st", a => a.St, aBuilder =>
+.AddAttribute("st", a => a.St, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "end", a => a.End, aBuilder =>
+.AddAttribute("end", a => a.End, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
@@ -188,7 +188,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is a16:rowId.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(79, "rowId")]
+    [SchemaAttr("a16:rowId")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RowIdIdentifier : OpenXmlIdentifierElement
     {
@@ -202,7 +202,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(79, "rowId");
+            builder.SetSchema("a16:rowId");
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -216,7 +216,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is a16:colId.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(79, "colId")]
+    [SchemaAttr("a16:colId")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColIdIdentifier : OpenXmlIdentifierElement
     {
@@ -230,7 +230,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(79, "colId");
+            builder.SetSchema("a16:colId");
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -259,7 +259,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "val")]
+        [SchemaAttr("val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Val
@@ -272,7 +272,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<OpenXmlIdentifierElement>()
-                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           .AddAttribute("val", a => a.Val, aBuilder =>
                            {
                                aBuilder.AddValidator(RequiredValidator.Instance);
                            });

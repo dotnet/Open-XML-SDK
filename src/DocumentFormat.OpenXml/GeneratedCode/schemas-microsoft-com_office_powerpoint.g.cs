@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
     /// <para>When the object is serialized out as xml, it's qualified name is pvml:iscomment.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(30, "iscomment")]
+    [SchemaAttr("pvml:iscomment")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class InkAnnotationFlag : OpenXmlLeafElement
     {
@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(30, "iscomment");
+            builder.SetSchema("pvml:iscomment");
         }
 
         /// <inheritdoc/>
@@ -47,7 +47,7 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
     /// <para>When the object is serialized out as xml, it's qualified name is pvml:textdata.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(30, "textdata")]
+    [SchemaAttr("pvml:textdata")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TextData : OpenXmlLeafElement
     {
@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -77,9 +77,9 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(30, "textdata");
+            builder.SetSchema("pvml:textdata");
             builder.AddElement<TextData>()
-.AddAttribute(0, "id", a => a.Id);
+.AddAttribute("id", a => a.Id);
         }
 
         /// <inheritdoc/>

@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.SVG
     /// <para>When the object is serialized out as xml, it's qualified name is asvg:svgBlip.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(117, "svgBlip")]
+    [SchemaAttr("asvg:svgBlip")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SVGBlip : OpenXmlLeafElement
     {
@@ -42,7 +42,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.SVG
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "embed")]
+        [SchemaAttr("r:embed")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Embed
@@ -61,7 +61,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.SVG
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "link")]
+        [SchemaAttr("r:link")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Link
@@ -73,11 +73,11 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.SVG
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(117, "svgBlip");
+            builder.SetSchema("asvg:svgBlip");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<SVGBlip>()
-.AddAttribute(19, "embed", a => a.Embed)
-.AddAttribute(19, "link", a => a.Link);
+.AddAttribute("r:embed", a => a.Embed)
+.AddAttribute("r:link", a => a.Link);
         }
 
         /// <inheritdoc/>

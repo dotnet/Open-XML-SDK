@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using System;
+using DocumentFormat.OpenXml.Framework;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
@@ -10,18 +10,18 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// </summary>
     internal class IndexReferenceConstraint : SemanticConstraint
     {
-        private readonly byte _attribute;
+        private readonly OpenXmlQualifiedName _attribute;
         private readonly string _refPartType;
-        private readonly Type? _refElementParent;
-        private readonly Type _refElement;
+        private readonly OpenXmlQualifiedName? _refElementParent;
+        private readonly OpenXmlQualifiedName _refElement;
         private readonly int _indexBase;
 
-        public IndexReferenceConstraint(byte attribute, string referencedPart, Type? referencedElementParent, Type referencedElement, string referencedElementName, int indexBase)
+        public IndexReferenceConstraint(OpenXmlQualifiedName attribute, string referencedPart, OpenXmlQualifiedName? referencedElementParent, OpenXmlQualifiedName referencedElement, string referencedElementName, int indexBase)
             : base(SemanticValidationLevel.Package)
         {
             _attribute = attribute;
             _refPartType = referencedPart;
-            _refElement = referencedElement ?? throw new ArgumentNullException(nameof(referencedElement));
+            _refElement = referencedElement;
             _refElementParent = referencedElementParent;
             _indexBase = indexBase;
         }
@@ -37,7 +37,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            var attribute = element.ParsedState.Attributes[_attribute];
+            if (!TryFindAttribute(element, _attribute, out var attribute))
+            {
+                return null;
+            }
 
             // if the attribute is omitted, semantic validation will do nothing
             if (attribute.Value is null || string.IsNullOrEmpty(attribute.Value.InnerText))
@@ -66,8 +69,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 RelatedNode = null,
                 Description = SR.Format(
                     ValidationResources.Sem_MissingIndexedElement,
-                    _refElement.FullName, element.LocalName,
-                    GetAttributeQualifiedName(element, _attribute),
+                    _refElement, element.LocalName,
+                    _attribute,
                     result.Part is null ? _refPartType : result.Part.PackagePart.Uri.ToString(),
                     index),
             };
@@ -88,7 +91,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
                 foreach (var element in key.part.RootElement.Descendants(context.FileFormat, TraversalOptions.SelectAlternateContent))
                 {
-                    if (key.constraint._refElementParent is null || element.Parent?.GetType() == key.constraint._refElementParent)
+                    if (!key.constraint._refElementParent.HasValue || key.constraint._refElementParent.Value.Equals(element.Parent?.QName))
                     {
                         count++;
                     }

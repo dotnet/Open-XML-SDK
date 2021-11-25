@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(77, "timeslicer")]
+    [SchemaAttr("tsle:timeslicer")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TimeSlicer : OpenXmlCompositeElement
     {
@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "name")]
+        [SchemaAttr("name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -81,11 +81,11 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(77, "timeslicer");
+            builder.SetSchema("tsle:timeslicer");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.OfficeArtExtensionList>();
             builder.AddElement<TimeSlicer>()
-.AddAttribute(0, "name", a => a.Name, aBuilder =>
+.AddAttribute("name", a => a.Name, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -124,7 +124,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(77, "extLst")]
+    [SchemaAttr("tsle:extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
@@ -162,7 +162,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(77, "extLst");
+            builder.SetSchema("tsle:extLst");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)

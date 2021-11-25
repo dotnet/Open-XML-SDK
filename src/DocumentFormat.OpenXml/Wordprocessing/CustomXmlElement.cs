@@ -82,8 +82,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             base.ConfigureMetadata(builder);
 
             builder.AddElement<CustomXmlElement>()
-                .AddAttribute(0, "uri", a => a.Uri)
-                .AddAttribute(23, "element", a => a.Element, a =>
+                .AddAttribute("uri", a => a.Uri)
+                .AddAttribute("w:element", a => a.Element, a =>
                 {
                     a.AddValidator(new StringValidator { IsNcName = true });
                 });

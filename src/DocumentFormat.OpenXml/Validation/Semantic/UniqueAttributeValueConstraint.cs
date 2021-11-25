@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
 
@@ -11,11 +12,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// </summary>
     internal class UniqueAttributeValueConstraint : SemanticConstraint
     {
-        private readonly byte _attribute;
-        private readonly Type? _parent;
+        private readonly OpenXmlQualifiedName _attribute;
+        private readonly OpenXmlQualifiedName? _parent;
         private readonly StringComparer _comparer;
 
-        public UniqueAttributeValueConstraint(byte attribute, bool caseSensitive, Type? parent)
+        public UniqueAttributeValueConstraint(OpenXmlQualifiedName attribute, bool caseSensitive, OpenXmlQualifiedName? parent)
             : base(SemanticValidationLevel.Part)
         {
             _attribute = attribute;
@@ -37,7 +38,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            var attribute = element.ParsedState.Attributes[_attribute];
+            if (!TryFindAttribute(element, _attribute, out var attribute))
+            {
+                return null;
+            }
 
             // if the attribute is omitted, semantic validation will do nothing
             if (attribute.Value is null || string.IsNullOrEmpty(attribute.Value.InnerText))
@@ -61,9 +65,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 {
                     if (e.GetType() == key.elementType)
                     {
-                        var eValue = e.ParsedState.Attributes[key.constraint._attribute];
-
-                        if (eValue.Value is not null)
+                        if (TryFindAttribute(e, key.constraint._attribute, out var eValue) && eValue.Value is not null)
                         {
                             set.Add(eValue.Value.InnerText);
                         }
@@ -89,21 +91,23 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Node = element,
                 Description = SR.Format(
                     ValidationResources.Sem_UniqueAttributeValue,
-                    GetAttributeQualifiedName(element, _attribute),
+                    attribute.Property.QName,
                     attribute.Value.InnerText),
             };
         }
 
         private OpenXmlElement? GetRoot(OpenXmlElement element)
         {
-            if (_parent is null)
+            if (!_parent.HasValue)
             {
                 return element.GetPart()?.RootElement;
             }
 
+            var parent = _parent.Value;
+
             foreach (var ancestor in element.Ancestors())
             {
-                if (ancestor.GetType() == _parent)
+                if (ancestor.QName.Equals(parent))
                 {
                     return ancestor;
                 }

@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         {
             var builder = new ElementMetadata.Builder(typeof(OpenXmlElement));
             builder.AddElement<SomeElement>()
-                .AddAttribute(0, "s", a => a.Str, a =>
+                .AddAttribute("s", a => a.Str, a =>
                 {
                 });
             var data = builder.Build();
@@ -44,7 +44,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         {
             var builder = new ElementMetadata.Builder(typeof(OpenXmlElement));
             builder.AddElement<SomeElement>()
-                .AddAttribute(0, "s", a => a.Str, a =>
+                .AddAttribute("s", a => a.Str, a =>
                 {
                     a.AddValidator(new RequiredValidator());
                 });

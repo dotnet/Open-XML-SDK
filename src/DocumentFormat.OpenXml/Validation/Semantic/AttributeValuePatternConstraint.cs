@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
@@ -12,10 +13,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// </summary>
     internal class AttributeValuePatternConstraint : SemanticConstraint
     {
-        private readonly byte _attribute;
+        private readonly OpenXmlQualifiedName _attribute;
         private readonly Regex _pattern;
 
-        public AttributeValuePatternConstraint(byte attribute, string pattern)
+        public AttributeValuePatternConstraint(OpenXmlQualifiedName attribute, string pattern)
             : base(SemanticValidationLevel.Element)
         {
             Debug.Assert(!string.IsNullOrEmpty(pattern));
@@ -39,7 +40,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            var attribute = element.ParsedState.Attributes[_attribute];
+            if (!TryFindAttribute(element, _attribute, out var attribute))
+            {
+                return null;
+            }
 
             // if the attribute is omitted, semantic validation will do nothing
             if (attribute.Value is null || string.IsNullOrEmpty(attribute.Value.InnerText))
@@ -59,7 +63,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Node = element,
                 Description = SR.Format(
                     ValidationResources.Sem_AttributeValueDataTypeDetailed,
-                    GetAttributeQualifiedName(element, _attribute),
+                    attribute.Property.QName,
                     attribute.Value.InnerText,
                     SR.Format(ValidationResources.Sch_PatternConstraintFailed, _pattern)),
             };

@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "tcg")]
+    [SchemaAttr("wne:tcg")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TemplateCommandGroup : OpenXmlPartRootElement
     {
@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "tcg");
+            builder.SetSchema("wne:tcg");
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.AllocatedCommands>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.KeyMapCustomizations>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.MismatchedKeyMapCustomization>();
@@ -129,7 +129,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "mcds")]
+    [SchemaAttr("wne:mcds")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Mcds : OpenXmlCompositeElement
     {
@@ -167,7 +167,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "mcds");
+            builder.SetSchema("wne:mcds");
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.Mcd>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -192,7 +192,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "vbaSuppData")]
+    [SchemaAttr("wne:vbaSuppData")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VbaSuppData : OpenXmlPartRootElement
     {
@@ -230,7 +230,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "vbaSuppData");
+            builder.SetSchema("wne:vbaSuppData");
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.DocEvents>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.Mcds>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -313,7 +313,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "recipients")]
+    [SchemaAttr("wne:recipients")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class MailMergeRecipients : OpenXmlPartRootElement
     {
@@ -351,7 +351,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "recipients");
+            builder.SetSchema("wne:recipients");
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.SingleDataSourceRecord>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -369,7 +369,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>When the object is serialized out as xml, it's qualified name is wne:fci.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "fci")]
+    [SchemaAttr("wne:fci")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
     {
@@ -390,7 +390,7 @@ namespace DocumentFormat.OpenXml.Office.Word
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(33, "fciName")]
+        [SchemaAttr("wne:fciName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CommandName
@@ -409,7 +409,7 @@ namespace DocumentFormat.OpenXml.Office.Word
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(33, "fciIndex")]
+        [SchemaAttr("wne:fciIndex")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public HexBinaryValue? CommandIndex
@@ -428,7 +428,7 @@ namespace DocumentFormat.OpenXml.Office.Word
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(33, "swArg")]
+        [SchemaAttr("wne:swArg")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public HexBinaryValue? Argument
@@ -440,16 +440,16 @@ namespace DocumentFormat.OpenXml.Office.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "fci");
+            builder.SetSchema("wne:fci");
             builder.AddElement<FixedCommandKeyboardCustomization>()
-.AddAttribute(33, "fciName", a => a.CommandName)
-.AddAttribute(33, "fciIndex", a => a.CommandIndex, aBuilder =>
+.AddAttribute("wne:fciName", a => a.CommandName)
+.AddAttribute("wne:fciIndex", a => a.CommandIndex, aBuilder =>
 {
-   aBuilder.AddValidator(new StringValidator() { Length = (2L) });
+  aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 })
-.AddAttribute(33, "swArg", a => a.Argument, aBuilder =>
+.AddAttribute("wne:swArg", a => a.Argument, aBuilder =>
 {
-   aBuilder.AddValidator(new StringValidator() { Length = (2L) });
+  aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 });
         }
 
@@ -463,7 +463,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>When the object is serialized out as xml, it's qualified name is wne:macro.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "macro")]
+    [SchemaAttr("wne:macro")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class MacroKeyboardCustomization : MacroWllType
     {
@@ -477,7 +477,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "macro");
+            builder.SetSchema("wne:macro");
         }
 
         /// <inheritdoc/>
@@ -490,7 +490,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>When the object is serialized out as xml, it's qualified name is wne:wll.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "wll")]
+    [SchemaAttr("wne:wll")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class WllMacroKeyboardCustomization : MacroWllType
     {
@@ -504,7 +504,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "wll");
+            builder.SetSchema("wne:wll");
         }
 
         /// <inheritdoc/>
@@ -535,7 +535,7 @@ namespace DocumentFormat.OpenXml.Office.Word
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(33, "macroName")]
+        [SchemaAttr("wne:macroName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? MacroName
@@ -548,7 +548,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<MacroWllType>()
-                           .AddAttribute(33, "macroName", a => a.MacroName);
+                           .AddAttribute("wne:macroName", a => a.MacroName);
         }
     }
 
@@ -558,7 +558,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>When the object is serialized out as xml, it's qualified name is wne:acd.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "acd")]
+    [SchemaAttr("wne:acd")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AllocatedCommandKeyboardCustomization : AcceleratorKeymapType
     {
@@ -572,7 +572,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "acd");
+            builder.SetSchema("wne:acd");
         }
 
         /// <inheritdoc/>
@@ -585,7 +585,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>When the object is serialized out as xml, it's qualified name is wne:acdEntry.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "acdEntry")]
+    [SchemaAttr("wne:acdEntry")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AllocatedCommandManifestEntry : AcceleratorKeymapType
     {
@@ -599,7 +599,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "acdEntry");
+            builder.SetSchema("wne:acdEntry");
         }
 
         /// <inheritdoc/>
@@ -630,7 +630,7 @@ namespace DocumentFormat.OpenXml.Office.Word
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(33, "acdName")]
+        [SchemaAttr("wne:acdName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? AcceleratorName
@@ -643,7 +643,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<AcceleratorKeymapType>()
-                           .AddAttribute(33, "acdName", a => a.AcceleratorName);
+                           .AddAttribute("wne:acdName", a => a.AcceleratorName);
         }
     }
 
@@ -653,7 +653,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>When the object is serialized out as xml, it's qualified name is wne:wch.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "wch")]
+    [SchemaAttr("wne:wch")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CharacterInsertion : OpenXmlLeafElement
     {
@@ -674,7 +674,7 @@ namespace DocumentFormat.OpenXml.Office.Word
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(33, "val")]
+        [SchemaAttr("wne:val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public HexBinaryValue? Val
@@ -686,12 +686,12 @@ namespace DocumentFormat.OpenXml.Office.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "wch");
+            builder.SetSchema("wne:wch");
             builder.AddElement<CharacterInsertion>()
-.AddAttribute(33, "val", a => a.Val, aBuilder =>
+.AddAttribute("wne:val", a => a.Val, aBuilder =>
 {
-   aBuilder.AddValidator(RequiredValidator.Instance);
-   aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+  aBuilder.AddValidator(RequiredValidator.Instance);
+  aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 });
         }
 
@@ -715,7 +715,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "keymap")]
+    [SchemaAttr("wne:keymap")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class KeyMapEntry : OpenXmlCompositeElement
     {
@@ -760,7 +760,7 @@ namespace DocumentFormat.OpenXml.Office.Word
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(33, "chmPrimary")]
+        [SchemaAttr("wne:chmPrimary")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public HexBinaryValue? CharacterMapPrimary
@@ -779,7 +779,7 @@ namespace DocumentFormat.OpenXml.Office.Word
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(33, "chmSecondary")]
+        [SchemaAttr("wne:chmSecondary")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public HexBinaryValue? CharacterMapSecondary
@@ -798,7 +798,7 @@ namespace DocumentFormat.OpenXml.Office.Word
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(33, "kcmPrimary")]
+        [SchemaAttr("wne:kcmPrimary")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public HexBinaryValue? KeyCodePrimary
@@ -817,7 +817,7 @@ namespace DocumentFormat.OpenXml.Office.Word
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(33, "kcmSecondary")]
+        [SchemaAttr("wne:kcmSecondary")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public HexBinaryValue? KeyCodeSecondary
@@ -836,7 +836,7 @@ namespace DocumentFormat.OpenXml.Office.Word
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(33, "mask")]
+        [SchemaAttr("wne:mask")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public OnOffValue? Mask
@@ -848,30 +848,30 @@ namespace DocumentFormat.OpenXml.Office.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "keymap");
+            builder.SetSchema("wne:keymap");
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.AllocatedCommandKeyboardCustomization>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.FixedCommandKeyboardCustomization>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.CharacterInsertion>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.MacroKeyboardCustomization>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.WllMacroKeyboardCustomization>();
             builder.AddElement<KeyMapEntry>()
-.AddAttribute(33, "chmPrimary", a => a.CharacterMapPrimary, aBuilder =>
+.AddAttribute("wne:chmPrimary", a => a.CharacterMapPrimary, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 })
-.AddAttribute(33, "chmSecondary", a => a.CharacterMapSecondary, aBuilder =>
+.AddAttribute("wne:chmSecondary", a => a.CharacterMapSecondary, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 })
-.AddAttribute(33, "kcmPrimary", a => a.KeyCodePrimary, aBuilder =>
+.AddAttribute("wne:kcmPrimary", a => a.KeyCodePrimary, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 })
-.AddAttribute(33, "kcmSecondary", a => a.KeyCodeSecondary, aBuilder =>
+.AddAttribute("wne:kcmSecondary", a => a.KeyCodeSecondary, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 })
-.AddAttribute(33, "mask", a => a.Mask);
+.AddAttribute("wne:mask", a => a.Mask);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.FixedCommandKeyboardCustomization), 1, 1),
@@ -957,7 +957,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>When the object is serialized out as xml, it's qualified name is wne:acd.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "acd")]
+    [SchemaAttr("wne:acd")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AllocatedCommand : OpenXmlLeafElement
     {
@@ -978,7 +978,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(33, "argValue")]
+        [SchemaAttr("wne:argValue")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ArgumentValue
@@ -997,7 +997,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(33, "fciBasedOn")]
+        [SchemaAttr("wne:fciBasedOn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CommandBasedOn
@@ -1016,7 +1016,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(33, "fciIndexBasedOn")]
+        [SchemaAttr("wne:fciIndexBasedOn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public HexBinaryValue? CommandIndexBasedOn
@@ -1035,7 +1035,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(33, "acdName")]
+        [SchemaAttr("wne:acdName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? AcceleratorName
@@ -1047,15 +1047,15 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "acd");
+            builder.SetSchema("wne:acd");
             builder.AddElement<AllocatedCommand>()
-.AddAttribute(33, "argValue", a => a.ArgumentValue)
-.AddAttribute(33, "fciBasedOn", a => a.CommandBasedOn)
-.AddAttribute(33, "fciIndexBasedOn", a => a.CommandIndexBasedOn, aBuilder =>
+.AddAttribute("wne:argValue", a => a.ArgumentValue)
+.AddAttribute("wne:fciBasedOn", a => a.CommandBasedOn)
+.AddAttribute("wne:fciIndexBasedOn", a => a.CommandIndexBasedOn, aBuilder =>
 {
-   aBuilder.AddValidator(new StringValidator() { Length = (2L) });
+  aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 })
-.AddAttribute(33, "acdName", a => a.AcceleratorName);
+.AddAttribute("wne:acdName", a => a.AcceleratorName);
         }
 
         /// <inheritdoc/>
@@ -1068,7 +1068,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>When the object is serialized out as xml, it's qualified name is wne:mcd.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "mcd")]
+    [SchemaAttr("wne:mcd")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Mcd : OpenXmlLeafElement
     {
@@ -1089,7 +1089,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(33, "macroName")]
+        [SchemaAttr("wne:macroName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? MacroName
@@ -1108,7 +1108,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(33, "name")]
+        [SchemaAttr("wne:name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -1127,7 +1127,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(33, "menuHelp")]
+        [SchemaAttr("wne:menuHelp")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? MenuHelp
@@ -1146,7 +1146,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(33, "bEncrypt")]
+        [SchemaAttr("wne:bEncrypt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public HexBinaryValue? BEncrypt
@@ -1165,7 +1165,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(33, "cmg")]
+        [SchemaAttr("wne:cmg")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public HexBinaryValue? Cmg
@@ -1177,22 +1177,22 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "mcd");
+            builder.SetSchema("wne:mcd");
             builder.AddElement<Mcd>()
-.AddAttribute(33, "macroName", a => a.MacroName)
-.AddAttribute(33, "name", a => a.Name)
-.AddAttribute(33, "menuHelp", a => a.MenuHelp)
-.AddAttribute(33, "bEncrypt", a => a.BEncrypt, aBuilder =>
+.AddAttribute("wne:macroName", a => a.MacroName)
+.AddAttribute("wne:name", a => a.Name)
+.AddAttribute("wne:menuHelp", a => a.MenuHelp)
+.AddAttribute("wne:bEncrypt", a => a.BEncrypt, aBuilder =>
 {
-   aBuilder.AddValidator(new StringValidator() { Length = (1L) });
+  aBuilder.AddValidator(new StringValidator() { Length = (1L) });
 })
-.AddAttribute(33, "cmg", a => a.Cmg, aBuilder =>
+.AddAttribute("wne:cmg", a => a.Cmg, aBuilder =>
 {
-   aBuilder.AddValidator(new StringValidator() { Length = (1L) });
+  aBuilder.AddValidator(new StringValidator() { Length = (1L) });
 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*wne:name*/, 0, 255) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueSetConstraint(3 /*wne:bEncrypt*/, true, new string[] { "0" }) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueSetConstraint(4 /*wne:cmg*/, true, new string[] { "56" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("wne:name", 0, 255) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint("wne:bEncrypt", true, new string[] { "0" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint("wne:cmg", true, new string[] { "56" }) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -1205,7 +1205,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocNew.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "eventDocNew")]
+    [SchemaAttr("wne:eventDocNew")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class EventDocNewXsdString : OpenXmlLeafTextElement
     {
@@ -1232,7 +1232,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "eventDocNew");
+            builder.SetSchema("wne:eventDocNew");
         }
 
         /// <inheritdoc/>
@@ -1245,7 +1245,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocOpen.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "eventDocOpen")]
+    [SchemaAttr("wne:eventDocOpen")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class EventDocOpenXsdString : OpenXmlLeafTextElement
     {
@@ -1272,7 +1272,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "eventDocOpen");
+            builder.SetSchema("wne:eventDocOpen");
         }
 
         /// <inheritdoc/>
@@ -1285,7 +1285,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocClose.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "eventDocClose")]
+    [SchemaAttr("wne:eventDocClose")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class EventDocCloseXsdString : OpenXmlLeafTextElement
     {
@@ -1312,7 +1312,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "eventDocClose");
+            builder.SetSchema("wne:eventDocClose");
         }
 
         /// <inheritdoc/>
@@ -1325,7 +1325,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocSync.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "eventDocSync")]
+    [SchemaAttr("wne:eventDocSync")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class EventDocSyncXsdString : OpenXmlLeafTextElement
     {
@@ -1352,7 +1352,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "eventDocSync");
+            builder.SetSchema("wne:eventDocSync");
         }
 
         /// <inheritdoc/>
@@ -1365,7 +1365,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocXmlAfterInsert.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "eventDocXmlAfterInsert")]
+    [SchemaAttr("wne:eventDocXmlAfterInsert")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class EventDocXmlAfterInsertXsdString : OpenXmlLeafTextElement
     {
@@ -1392,7 +1392,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "eventDocXmlAfterInsert");
+            builder.SetSchema("wne:eventDocXmlAfterInsert");
         }
 
         /// <inheritdoc/>
@@ -1405,7 +1405,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocXmlBeforeDelete.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "eventDocXmlBeforeDelete")]
+    [SchemaAttr("wne:eventDocXmlBeforeDelete")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class EventDocXmlBeforeDeleteXsdString : OpenXmlLeafTextElement
     {
@@ -1432,7 +1432,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "eventDocXmlBeforeDelete");
+            builder.SetSchema("wne:eventDocXmlBeforeDelete");
         }
 
         /// <inheritdoc/>
@@ -1445,7 +1445,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocContentControlAfterInsert.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "eventDocContentControlAfterInsert")]
+    [SchemaAttr("wne:eventDocContentControlAfterInsert")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class EventDocContentControlAfterInsertXsdString : OpenXmlLeafTextElement
     {
@@ -1472,7 +1472,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "eventDocContentControlAfterInsert");
+            builder.SetSchema("wne:eventDocContentControlAfterInsert");
         }
 
         /// <inheritdoc/>
@@ -1485,7 +1485,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocContentControlBeforeDelete.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "eventDocContentControlBeforeDelete")]
+    [SchemaAttr("wne:eventDocContentControlBeforeDelete")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class EventDocContentControlBeforeDeleteXsdString : OpenXmlLeafTextElement
     {
@@ -1512,7 +1512,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "eventDocContentControlBeforeDelete");
+            builder.SetSchema("wne:eventDocContentControlBeforeDelete");
         }
 
         /// <inheritdoc/>
@@ -1525,7 +1525,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocContentControlOnExit.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "eventDocContentControlOnExit")]
+    [SchemaAttr("wne:eventDocContentControlOnExit")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class EventDocContentControlOnExistXsdString : OpenXmlLeafTextElement
     {
@@ -1552,7 +1552,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "eventDocContentControlOnExit");
+            builder.SetSchema("wne:eventDocContentControlOnExit");
         }
 
         /// <inheritdoc/>
@@ -1565,7 +1565,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocContentControlOnEnter.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "eventDocContentControlOnEnter")]
+    [SchemaAttr("wne:eventDocContentControlOnEnter")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class EventDocContentControlOnEnterXsdString : OpenXmlLeafTextElement
     {
@@ -1592,7 +1592,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "eventDocContentControlOnEnter");
+            builder.SetSchema("wne:eventDocContentControlOnEnter");
         }
 
         /// <inheritdoc/>
@@ -1605,7 +1605,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocStoreUpdate.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "eventDocStoreUpdate")]
+    [SchemaAttr("wne:eventDocStoreUpdate")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class EventDocStoreUpdateXsdString : OpenXmlLeafTextElement
     {
@@ -1632,7 +1632,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "eventDocStoreUpdate");
+            builder.SetSchema("wne:eventDocStoreUpdate");
         }
 
         /// <inheritdoc/>
@@ -1645,7 +1645,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocContentControlContentUpdate.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "eventDocContentControlContentUpdate")]
+    [SchemaAttr("wne:eventDocContentControlContentUpdate")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class EventDocContentControlUpdateXsdString : OpenXmlLeafTextElement
     {
@@ -1672,7 +1672,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "eventDocContentControlContentUpdate");
+            builder.SetSchema("wne:eventDocContentControlContentUpdate");
         }
 
         /// <inheritdoc/>
@@ -1685,7 +1685,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocBuildingBlockAfterInsert.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "eventDocBuildingBlockAfterInsert")]
+    [SchemaAttr("wne:eventDocBuildingBlockAfterInsert")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class EventDocBuildingBlockAfterInsertXsdString : OpenXmlLeafTextElement
     {
@@ -1712,7 +1712,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "eventDocBuildingBlockAfterInsert");
+            builder.SetSchema("wne:eventDocBuildingBlockAfterInsert");
         }
 
         /// <inheritdoc/>
@@ -1743,7 +1743,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "docEvents")]
+    [SchemaAttr("wne:docEvents")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DocEvents : OpenXmlCompositeElement
     {
@@ -1781,7 +1781,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "docEvents");
+            builder.SetSchema("wne:docEvents");
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocNewXsdString>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocOpenXsdString>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocCloseXsdString>();
@@ -1998,7 +1998,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "acdManifest")]
+    [SchemaAttr("wne:acdManifest")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AllocatedCommandManifest : OpenXmlCompositeElement
     {
@@ -2036,7 +2036,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "acdManifest");
+            builder.SetSchema("wne:acdManifest");
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifestEntry>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -2054,7 +2054,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>When the object is serialized out as xml, it's qualified name is wne:toolbarData.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "toolbarData")]
+    [SchemaAttr("wne:toolbarData")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ToolbarData : OpenXmlLeafElement
     {
@@ -2075,7 +2075,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "id")]
+        [SchemaAttr("r:id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -2087,9 +2087,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "toolbarData");
+            builder.SetSchema("wne:toolbarData");
             builder.AddElement<ToolbarData>()
-.AddAttribute(19, "id", a => a.Id, aBuilder =>
+.AddAttribute("r:id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -2111,7 +2111,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "keymaps")]
+    [SchemaAttr("wne:keymaps")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class KeyMapCustomizations : KeymapsType
     {
@@ -2149,7 +2149,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "keymaps");
+            builder.SetSchema("wne:keymaps");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.KeyMapEntry), 0, 0)
@@ -2172,7 +2172,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "keymapsBad")]
+    [SchemaAttr("wne:keymapsBad")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class MismatchedKeyMapCustomization : KeymapsType
     {
@@ -2210,7 +2210,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "keymapsBad");
+            builder.SetSchema("wne:keymapsBad");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.KeyMapEntry), 0, 0)
@@ -2285,7 +2285,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "toolbars")]
+    [SchemaAttr("wne:toolbars")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Toolbars : OpenXmlCompositeElement
     {
@@ -2323,7 +2323,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "toolbars");
+            builder.SetSchema("wne:toolbars");
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifest>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.ToolbarData>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -2349,7 +2349,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "acds")]
+    [SchemaAttr("wne:acds")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AllocatedCommands : OpenXmlCompositeElement
     {
@@ -2387,7 +2387,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "acds");
+            builder.SetSchema("wne:acds");
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.AllocatedCommand>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -2405,7 +2405,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is wne:active.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "active")]
+    [SchemaAttr("wne:active")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RecordIncluded : OpenXmlLeafElement
     {
@@ -2426,7 +2426,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(33, "val")]
+        [SchemaAttr("wne:val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public OnOffValue? Val
@@ -2438,9 +2438,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "active");
+            builder.SetSchema("wne:active");
             builder.AddElement<RecordIncluded>()
-.AddAttribute(33, "val", a => a.Val);
+.AddAttribute("wne:val", a => a.Val);
         }
 
         /// <inheritdoc/>
@@ -2453,7 +2453,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is wne:hash.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "hash")]
+    [SchemaAttr("wne:hash")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RecordHashCode : OpenXmlLeafElement
     {
@@ -2474,7 +2474,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(33, "val")]
+        [SchemaAttr("wne:val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public IntegerValue? Val
@@ -2486,11 +2486,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "hash");
+            builder.SetSchema("wne:hash");
             builder.AddElement<RecordHashCode>()
-.AddAttribute(33, "val", a => a.Val, aBuilder =>
+.AddAttribute("wne:val", a => a.Val, aBuilder =>
 {
-  aBuilder.AddValidator(RequiredValidator.Instance);
+ aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -2511,7 +2511,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, "recipientData")]
+    [SchemaAttr("wne:recipientData")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SingleDataSourceRecord : OpenXmlCompositeElement
     {
@@ -2549,7 +2549,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(33, "recipientData");
+            builder.SetSchema("wne:recipientData");
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.RecordHashCode>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.RecordIncluded>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)

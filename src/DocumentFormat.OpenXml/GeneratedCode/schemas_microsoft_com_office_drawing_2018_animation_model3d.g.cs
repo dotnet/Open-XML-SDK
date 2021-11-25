@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(114, "embedAnim")]
+    [SchemaAttr("a3danim:embedAnim")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class EmbeddedAnimation : OpenXmlCompositeElement
     {
@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "animId")]
+        [SchemaAttr("animId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? AnimId
@@ -83,12 +83,12 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(114, "embedAnim");
+            builder.SetSchema("a3danim:embedAnim");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.OfficeArtExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties>();
             builder.AddElement<EmbeddedAnimation>()
-.AddAttribute(0, "animId", a => a.AnimId, aBuilder =>
+.AddAttribute("animId", a => a.AnimId, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -135,7 +135,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is a3danim:posterFrame.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(114, "posterFrame")]
+    [SchemaAttr("a3danim:posterFrame")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PosterFrame : OpenXmlLeafElement
     {
@@ -153,7 +153,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "animId")]
+        [SchemaAttr("animId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? AnimId
@@ -169,7 +169,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "frame")]
+        [SchemaAttr("frame")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? Frame
@@ -181,14 +181,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(114, "posterFrame");
+            builder.SetSchema("a3danim:posterFrame");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<PosterFrame>()
-.AddAttribute(0, "animId", a => a.AnimId, aBuilder =>
+.AddAttribute("animId", a => a.AnimId, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "frame", a => a.Frame, aBuilder =>
+.AddAttribute("frame", a => a.Frame, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 });
@@ -210,7 +210,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(114, "animPr")]
+    [SchemaAttr("a3danim:animPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AnimationProperties : OpenXmlCompositeElement
     {
@@ -252,7 +252,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "name")]
+        [SchemaAttr("name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -268,7 +268,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "length")]
+        [SchemaAttr("length")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Length
@@ -284,7 +284,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "count")]
+        [SchemaAttr("count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Count
@@ -300,7 +300,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "auto")]
+        [SchemaAttr("auto")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Auto
@@ -316,7 +316,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "offset")]
+        [SchemaAttr("offset")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Offset
@@ -332,7 +332,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "st")]
+        [SchemaAttr("st")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? St
@@ -348,7 +348,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "end")]
+        [SchemaAttr("end")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? End
@@ -360,16 +360,16 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(114, "animPr");
+            builder.SetSchema("a3danim:animPr");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList>();
             builder.AddElement<AnimationProperties>()
-.AddAttribute(0, "name", a => a.Name)
-.AddAttribute(0, "length", a => a.Length, aBuilder =>
+.AddAttribute("name", a => a.Name)
+.AddAttribute("length", a => a.Length, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "count", a => a.Count, aBuilder =>
+.AddAttribute("count", a => a.Count, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
@@ -377,10 +377,10 @@ union.AddValidator<UInt32Value>(NumberValidator.Instance);
 union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Indefinite>>(EnumValidator.Instance);
 });
 })
-.AddAttribute(0, "auto", a => a.Auto)
-.AddAttribute(0, "offset", a => a.Offset)
-.AddAttribute(0, "st", a => a.St)
-.AddAttribute(0, "end", a => a.End);
+.AddAttribute("auto", a => a.Auto)
+.AddAttribute("offset", a => a.Offset)
+.AddAttribute("st", a => a.St)
+.AddAttribute("end", a => a.End);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2019)
@@ -416,7 +416,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Animation
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(114, "extLst")]
+    [SchemaAttr("a3danim:extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
@@ -454,7 +454,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Animation
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(114, "extLst");
+            builder.SetSchema("a3danim:extLst");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)

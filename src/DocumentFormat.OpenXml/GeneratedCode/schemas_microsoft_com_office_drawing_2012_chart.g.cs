@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "pivotSource")]
+    [SchemaAttr("c15:pivotSource")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PivotSource : OpenXmlCompositeElement
     {
@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "pivotSource");
+            builder.SetSchema("c15:pivotSource");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.FormatId>();
@@ -130,7 +130,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <para>When the object is serialized out as xml, it's qualified name is c15:numFmt.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "numFmt")]
+    [SchemaAttr("c15:numFmt")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class NumberingFormat : OpenXmlLeafElement
     {
@@ -148,7 +148,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "formatCode")]
+        [SchemaAttr("formatCode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? FormatCode
@@ -164,7 +164,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sourceLinked")]
+        [SchemaAttr("sourceLinked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? SourceLinked
@@ -176,14 +176,14 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "numFmt");
+            builder.SetSchema("c15:numFmt");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<NumberingFormat>()
-.AddAttribute(0, "formatCode", a => a.FormatCode, aBuilder =>
+.AddAttribute("formatCode", a => a.FormatCode, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "sourceLinked", a => a.SourceLinked);
+.AddAttribute("sourceLinked", a => a.SourceLinked);
         }
 
         /// <inheritdoc/>
@@ -216,7 +216,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "spPr")]
+    [SchemaAttr("c15:spPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
@@ -258,7 +258,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "bwMode")]
+        [SchemaAttr("bwMode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
@@ -270,7 +270,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "spPr");
+            builder.SetSchema("c15:spPr");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
@@ -288,7 +288,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddElement<ShapeProperties>()
-.AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+.AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
@@ -360,7 +360,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "layout")]
+    [SchemaAttr("c15:layout")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Layout : OpenXmlCompositeElement
     {
@@ -398,7 +398,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "layout");
+            builder.SetSchema("c15:layout");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ManualLayout>();
@@ -451,7 +451,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "fullRef")]
+    [SchemaAttr("c15:fullRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FullReference : OpenXmlCompositeElement
     {
@@ -489,7 +489,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "fullRef");
+            builder.SetSchema("c15:fullRef");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -527,7 +527,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "levelRef")]
+    [SchemaAttr("c15:levelRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class LevelReference : OpenXmlCompositeElement
     {
@@ -565,7 +565,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "levelRef");
+            builder.SetSchema("c15:levelRef");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -603,7 +603,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "formulaRef")]
+    [SchemaAttr("c15:formulaRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FormulaReference : OpenXmlCompositeElement
     {
@@ -641,7 +641,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "formulaRef");
+            builder.SetSchema("c15:formulaRef");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -679,7 +679,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "filteredSeriesTitle")]
+    [SchemaAttr("c15:filteredSeriesTitle")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FilteredSeriesTitle : OpenXmlCompositeElement
     {
@@ -717,7 +717,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "filteredSeriesTitle");
+            builder.SetSchema("c15:filteredSeriesTitle");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ChartText>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -755,7 +755,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "filteredCategoryTitle")]
+    [SchemaAttr("c15:filteredCategoryTitle")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FilteredCategoryTitle : OpenXmlCompositeElement
     {
@@ -793,7 +793,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "filteredCategoryTitle");
+            builder.SetSchema("c15:filteredCategoryTitle");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.AxisDataSourceType>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -831,7 +831,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "filteredAreaSeries")]
+    [SchemaAttr("c15:filteredAreaSeries")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FilteredAreaSeries : OpenXmlCompositeElement
     {
@@ -869,7 +869,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "filteredAreaSeries");
+            builder.SetSchema("c15:filteredAreaSeries");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.AreaChartSeries>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -907,7 +907,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "filteredBarSeries")]
+    [SchemaAttr("c15:filteredBarSeries")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FilteredBarSeries : OpenXmlCompositeElement
     {
@@ -945,7 +945,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "filteredBarSeries");
+            builder.SetSchema("c15:filteredBarSeries");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.BarChartSeries>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -983,7 +983,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "filteredBubbleSeries")]
+    [SchemaAttr("c15:filteredBubbleSeries")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FilteredBubbleSeries : OpenXmlCompositeElement
     {
@@ -1021,7 +1021,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "filteredBubbleSeries");
+            builder.SetSchema("c15:filteredBubbleSeries");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.BubbleChartSeries>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -1059,7 +1059,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "filteredLineSeries")]
+    [SchemaAttr("c15:filteredLineSeries")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FilteredLineSeriesExtension : OpenXmlCompositeElement
     {
@@ -1097,7 +1097,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "filteredLineSeries");
+            builder.SetSchema("c15:filteredLineSeries");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.LineChartSeries>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -1135,7 +1135,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "filteredPieSeries")]
+    [SchemaAttr("c15:filteredPieSeries")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FilteredPieSeries : OpenXmlCompositeElement
     {
@@ -1173,7 +1173,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "filteredPieSeries");
+            builder.SetSchema("c15:filteredPieSeries");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.PieChartSeries>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -1211,7 +1211,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "filteredRadarSeries")]
+    [SchemaAttr("c15:filteredRadarSeries")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FilteredRadarSeries : OpenXmlCompositeElement
     {
@@ -1249,7 +1249,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "filteredRadarSeries");
+            builder.SetSchema("c15:filteredRadarSeries");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.RadarChartSeries>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -1287,7 +1287,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "filteredScatterSeries")]
+    [SchemaAttr("c15:filteredScatterSeries")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FilteredScatterSeries : OpenXmlCompositeElement
     {
@@ -1325,7 +1325,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "filteredScatterSeries");
+            builder.SetSchema("c15:filteredScatterSeries");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ScatterChartSeries>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -1363,7 +1363,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "filteredSurfaceSeries")]
+    [SchemaAttr("c15:filteredSurfaceSeries")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FilteredSurfaceSeries : OpenXmlCompositeElement
     {
@@ -1401,7 +1401,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "filteredSurfaceSeries");
+            builder.SetSchema("c15:filteredSurfaceSeries");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.SurfaceChartSeries>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -1440,7 +1440,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "datalabelsRange")]
+    [SchemaAttr("c15:datalabelsRange")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataLabelsRange : OpenXmlCompositeElement
     {
@@ -1478,7 +1478,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "datalabelsRange");
+            builder.SetSchema("c15:datalabelsRange");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRangeChache>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.Formula>();
@@ -1531,7 +1531,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "categoryFilterExceptions")]
+    [SchemaAttr("c15:categoryFilterExceptions")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CategoryFilterExceptions : OpenXmlCompositeElement
     {
@@ -1569,7 +1569,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "categoryFilterExceptions");
+            builder.SetSchema("c15:categoryFilterExceptions");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterException>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -1594,7 +1594,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "dlblFieldTable")]
+    [SchemaAttr("c15:dlblFieldTable")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataLabelFieldTable : OpenXmlCompositeElement
     {
@@ -1632,7 +1632,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "dlblFieldTable");
+            builder.SetSchema("c15:dlblFieldTable");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTableEntry>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -1651,7 +1651,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is c15:xForSave.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "xForSave")]
+    [SchemaAttr("c15:xForSave")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ExceptionForSave : BooleanType
     {
@@ -1665,7 +1665,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "xForSave");
+            builder.SetSchema("c15:xForSave");
             builder.Availability = FileFormatVersions.Office2013;
         }
 
@@ -1679,7 +1679,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is c15:showDataLabelsRange.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "showDataLabelsRange")]
+    [SchemaAttr("c15:showDataLabelsRange")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShowDataLabelsRange : BooleanType
     {
@@ -1693,7 +1693,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "showDataLabelsRange");
+            builder.SetSchema("c15:showDataLabelsRange");
             builder.Availability = FileFormatVersions.Office2013;
         }
 
@@ -1707,7 +1707,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is c15:showLeaderLines.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "showLeaderLines")]
+    [SchemaAttr("c15:showLeaderLines")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShowLeaderLines : BooleanType
     {
@@ -1721,7 +1721,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "showLeaderLines");
+            builder.SetSchema("c15:showLeaderLines");
             builder.Availability = FileFormatVersions.Office2013;
         }
 
@@ -1735,7 +1735,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is c15:autoCat.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "autoCat")]
+    [SchemaAttr("c15:autoCat")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AutoGeneneratedCategories : BooleanType
     {
@@ -1749,7 +1749,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "autoCat");
+            builder.SetSchema("c15:autoCat");
             builder.Availability = FileFormatVersions.Office2013;
         }
 
@@ -1763,7 +1763,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is c15:invertIfNegative.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "invertIfNegative")]
+    [SchemaAttr("c15:invertIfNegative")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class InvertIfNegativeBoolean : BooleanType
     {
@@ -1777,7 +1777,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "invertIfNegative");
+            builder.SetSchema("c15:invertIfNegative");
             builder.Availability = FileFormatVersions.Office2013;
         }
 
@@ -1791,7 +1791,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is c15:bubble3D.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "bubble3D")]
+    [SchemaAttr("c15:bubble3D")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Bubble3D : BooleanType
     {
@@ -1805,7 +1805,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "bubble3D");
+            builder.SetSchema("c15:bubble3D");
             builder.Availability = FileFormatVersions.Office2013;
         }
 
@@ -1834,7 +1834,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "val")]
+        [SchemaAttr("val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Val
@@ -1847,7 +1847,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<BooleanType>()
-                           .AddAttribute(0, "val", a => a.Val);
+                           .AddAttribute("val", a => a.Val);
         }
     }
 
@@ -1865,7 +1865,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "tx")]
+    [SchemaAttr("c15:tx")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ChartText : OpenXmlCompositeElement
     {
@@ -1903,7 +1903,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "tx");
+            builder.SetSchema("c15:tx");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RichText>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringLiteral>();
@@ -1974,7 +1974,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "leaderLines")]
+    [SchemaAttr("c15:leaderLines")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class LeaderLines : OpenXmlCompositeElement
     {
@@ -2012,7 +2012,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "leaderLines");
+            builder.SetSchema("c15:leaderLines");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -2044,7 +2044,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is c15:sqref.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "sqref")]
+    [SchemaAttr("c15:sqref")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SequenceOfReferences : OpenXmlLeafTextElement
     {
@@ -2071,7 +2071,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "sqref");
+            builder.SetSchema("c15:sqref");
             builder.Availability = FileFormatVersions.Office2013;
         }
 
@@ -2085,7 +2085,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is c15:f.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "f")]
+    [SchemaAttr("c15:f")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Formula : OpenXmlLeafTextElement
     {
@@ -2112,7 +2112,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "f");
+            builder.SetSchema("c15:f");
             builder.Availability = FileFormatVersions.Office2013;
         }
 
@@ -2126,7 +2126,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is c15:txfldGUID.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "txfldGUID")]
+    [SchemaAttr("c15:txfldGUID")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TextFieldGuid : OpenXmlLeafTextElement
     {
@@ -2153,7 +2153,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "txfldGUID");
+            builder.SetSchema("c15:txfldGUID");
             builder.Availability = FileFormatVersions.Office2013;
         }
 
@@ -2177,7 +2177,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "cat")]
+    [SchemaAttr("c15:cat")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AxisDataSourceType : OpenXmlCompositeElement
     {
@@ -2215,7 +2215,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "cat");
+            builder.SetSchema("c15:cat");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral>();
@@ -2329,7 +2329,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "ser")]
+    [SchemaAttr("c15:ser")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class BarChartSeries : OpenXmlCompositeElement
     {
@@ -2367,7 +2367,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "ser");
+            builder.SetSchema("c15:ser");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
@@ -2515,7 +2515,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "ser")]
+    [SchemaAttr("c15:ser")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class LineChartSeries : OpenXmlCompositeElement
     {
@@ -2553,7 +2553,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "ser");
+            builder.SetSchema("c15:ser");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
@@ -2700,7 +2700,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "ser")]
+    [SchemaAttr("c15:ser")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ScatterChartSeries : OpenXmlCompositeElement
     {
@@ -2738,7 +2738,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "ser");
+            builder.SetSchema("c15:ser");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.XValues>();
@@ -2869,7 +2869,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "ser")]
+    [SchemaAttr("c15:ser")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AreaChartSeries : OpenXmlCompositeElement
     {
@@ -2907,7 +2907,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "ser");
+            builder.SetSchema("c15:ser");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtensionList>();
@@ -3035,7 +3035,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "ser")]
+    [SchemaAttr("c15:ser")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PieChartSeries : OpenXmlCompositeElement
     {
@@ -3073,7 +3073,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "ser");
+            builder.SetSchema("c15:ser");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
@@ -3216,7 +3216,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "ser")]
+    [SchemaAttr("c15:ser")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class BubbleChartSeries : OpenXmlCompositeElement
     {
@@ -3254,7 +3254,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "ser");
+            builder.SetSchema("c15:ser");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.XValues>();
@@ -3401,7 +3401,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "ser")]
+    [SchemaAttr("c15:ser")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RadarChartSeries : OpenXmlCompositeElement
     {
@@ -3439,7 +3439,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "ser");
+            builder.SetSchema("c15:ser");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
@@ -3576,7 +3576,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "ser")]
+    [SchemaAttr("c15:ser")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SurfaceChartSeries : OpenXmlCompositeElement
     {
@@ -3614,7 +3614,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "ser");
+            builder.SetSchema("c15:ser");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
@@ -3780,7 +3780,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "dlblRangeCache")]
+    [SchemaAttr("c15:dlblRangeCache")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataLabelsRangeChache : StringDataType
     {
@@ -3818,7 +3818,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "dlblRangeCache");
+            builder.SetSchema("c15:dlblRangeCache");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -3846,7 +3846,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "dlblFieldTableCache")]
+    [SchemaAttr("c15:dlblFieldTableCache")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataLabelFieldTableCache : StringDataType
     {
@@ -3884,7 +3884,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "dlblFieldTableCache");
+            builder.SetSchema("c15:dlblFieldTableCache");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -3972,7 +3972,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is c15:explosion.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "explosion")]
+    [SchemaAttr("c15:explosion")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Explosion : OpenXmlLeafElement
     {
@@ -3990,7 +3990,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "val")]
+        [SchemaAttr("val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Val
@@ -4002,10 +4002,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "explosion");
+            builder.SetSchema("c15:explosion");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<Explosion>()
-.AddAttribute(0, "val", a => a.Val, aBuilder =>
+.AddAttribute("val", a => a.Val, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -4030,7 +4030,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "marker")]
+    [SchemaAttr("c15:marker")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Marker : OpenXmlCompositeElement
     {
@@ -4068,7 +4068,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "marker");
+            builder.SetSchema("c15:marker");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
@@ -4166,7 +4166,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "dLbl")]
+    [SchemaAttr("c15:dLbl")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataLabel : OpenXmlCompositeElement
     {
@@ -4204,7 +4204,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "dLbl");
+            builder.SetSchema("c15:dLbl");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
@@ -4293,7 +4293,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "categoryFilterException")]
+    [SchemaAttr("c15:categoryFilterException")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CategoryFilterException : OpenXmlCompositeElement
     {
@@ -4331,7 +4331,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "categoryFilterException");
+            builder.SetSchema("c15:categoryFilterException");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.InvertIfNegativeBoolean>();
@@ -4461,7 +4461,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, "dlblFTEntry")]
+    [SchemaAttr("c15:dlblFTEntry")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataLabelFieldTableEntry : OpenXmlCompositeElement
     {
@@ -4499,7 +4499,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(64, "dlblFTEntry");
+            builder.SetSchema("c15:dlblFTEntry");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTableCache>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.TextFieldGuid>();

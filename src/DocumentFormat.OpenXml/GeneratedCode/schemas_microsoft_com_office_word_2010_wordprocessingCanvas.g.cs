@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(59, "wpc")]
+    [SchemaAttr("wpc:wpc")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class WordprocessingCanvas : OpenXmlCompositeElement
     {
@@ -76,7 +76,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(59, "wpc");
+            builder.SetSchema("wpc:wpc");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.BackgroundFormatting>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.OfficeArtExtensionList>();
@@ -151,7 +151,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(59, "bg")]
+    [SchemaAttr("wpc:bg")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class BackgroundFormatting : OpenXmlCompositeElement
     {
@@ -189,7 +189,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(59, "bg");
+            builder.SetSchema("wpc:bg");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
@@ -242,7 +242,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(59, "whole")]
+    [SchemaAttr("wpc:whole")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class WholeFormatting : OpenXmlCompositeElement
     {
@@ -280,7 +280,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(59, "whole");
+            builder.SetSchema("wpc:whole");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
@@ -332,7 +332,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(59, "graphicFrame")]
+    [SchemaAttr("wpc:graphicFrame")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class GraphicFrameType : OpenXmlCompositeElement
     {
@@ -370,7 +370,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(59, "graphicFrame");
+            builder.SetSchema("wpc:graphicFrame");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Graphic>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties>();
@@ -468,7 +468,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(59, "extLst")]
+    [SchemaAttr("wpc:extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
@@ -506,7 +506,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(59, "extLst");
+            builder.SetSchema("wpc:extLst");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)

@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
     /// <para>When the object is serialized out as xml, it's qualified name is wp15:webVideoPr.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(75, "webVideoPr")]
+    [SchemaAttr("wp15:webVideoPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebVideoProperty : OpenXmlLeafElement
     {
@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "embeddedHtml")]
+        [SchemaAttr("embeddedHtml")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? EmbeddedHtml
@@ -55,7 +55,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "h")]
+        [SchemaAttr("h")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Height
@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "w")]
+        [SchemaAttr("w")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Width
@@ -83,12 +83,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(75, "webVideoPr");
+            builder.SetSchema("wp15:webVideoPr");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<WebVideoProperty>()
-.AddAttribute(0, "embeddedHtml", a => a.EmbeddedHtml)
-.AddAttribute(0, "h", a => a.Height)
-.AddAttribute(0, "w", a => a.Width);
+.AddAttribute("embeddedHtml", a => a.EmbeddedHtml)
+.AddAttribute("h", a => a.Height)
+.AddAttribute("w", a => a.Width);
         }
 
         /// <inheritdoc/>

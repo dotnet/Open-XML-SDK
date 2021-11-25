@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(45, "context")]
+    [SchemaAttr("msink:context")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ContextNode : OpenXmlCompositeElement
     {
@@ -70,7 +70,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "type")]
+        [SchemaAttr("type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Type
@@ -102,7 +102,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rotatedBoundingBox")]
+        [SchemaAttr("rotatedBoundingBox")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public ListValue<StringValue>? RotatedBoundingBox
@@ -118,7 +118,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "alignmentLevel")]
+        [SchemaAttr("alignmentLevel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? AlignmentLevel
@@ -134,7 +134,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "contentType")]
+        [SchemaAttr("contentType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? ContentType
@@ -150,7 +150,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ascender")]
+        [SchemaAttr("ascender")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Ascender
@@ -166,7 +166,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "descender")]
+        [SchemaAttr("descender")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Descender
@@ -182,7 +182,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "baseline")]
+        [SchemaAttr("baseline")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Baseline
@@ -198,7 +198,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "midline")]
+        [SchemaAttr("midline")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Midline
@@ -214,7 +214,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "customRecognizerId")]
+        [SchemaAttr("customRecognizerId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CustomRecognizerId
@@ -230,7 +230,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "mathML")]
+        [SchemaAttr("mathML")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? MathML
@@ -246,7 +246,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "mathStruct")]
+        [SchemaAttr("mathStruct")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? MathStruct
@@ -262,7 +262,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "mathSymbol")]
+        [SchemaAttr("mathSymbol")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? MathSymbol
@@ -278,7 +278,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "beginModifierType")]
+        [SchemaAttr("beginModifierType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? BeginModifierType
@@ -294,7 +294,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "endModifierType")]
+        [SchemaAttr("endModifierType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? EndModifierType
@@ -310,7 +310,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rotationAngle")]
+        [SchemaAttr("rotationAngle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? RotationAngle
@@ -326,7 +326,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "hotPoints")]
+        [SchemaAttr("hotPoints")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public ListValue<StringValue>? HotPoints
@@ -342,7 +342,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "centroid")]
+        [SchemaAttr("centroid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Centroid
@@ -358,7 +358,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "semanticType")]
+        [SchemaAttr("semanticType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? SemanticType
@@ -374,7 +374,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "shapeName")]
+        [SchemaAttr("shapeName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ShapeName
@@ -390,7 +390,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "shapeGeometry")]
+        [SchemaAttr("shapeGeometry")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public ListValue<StringValue>? ShapeGeometry
@@ -402,16 +402,16 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(45, "context");
+            builder.SetSchema("msink:context");
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Ink.SourceLink>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Ink.DestinationLink>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Ink.ContextNodeProperty>();
             builder.AddElement<ContextNode>()
-.AddAttribute(0, "id", a => a.Id, aBuilder =>
+.AddAttribute("id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "type", a => a.Type, aBuilder =>
+.AddAttribute("type", a => a.Type, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddUnion(union =>
@@ -420,13 +420,13 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2010.Ink.KnownContextN
 union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
 })
-.AddAttribute(0, "rotatedBoundingBox", a => a.RotatedBoundingBox, aBuilder =>
+.AddAttribute("rotatedBoundingBox", a => a.RotatedBoundingBox, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+,-?[0-9]+") });
 })
-.AddAttribute(0, "alignmentLevel", a => a.AlignmentLevel)
-.AddAttribute(0, "contentType", a => a.ContentType)
-.AddAttribute(0, "ascender", a => a.Ascender, aBuilder =>
+.AddAttribute("alignmentLevel", a => a.AlignmentLevel)
+.AddAttribute("contentType", a => a.ContentType)
+.AddAttribute("ascender", a => a.Ascender, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
@@ -434,7 +434,7 @@ union.AddValidator<ListValue<StringValue>>(NumberValidator.Instance);
 union.AddValidator<Int32Value>(NumberValidator.Instance);
 });
 })
-.AddAttribute(0, "descender", a => a.Descender, aBuilder =>
+.AddAttribute("descender", a => a.Descender, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
@@ -442,7 +442,7 @@ union.AddValidator<ListValue<StringValue>>(NumberValidator.Instance);
 union.AddValidator<Int32Value>(NumberValidator.Instance);
 });
 })
-.AddAttribute(0, "baseline", a => a.Baseline, aBuilder =>
+.AddAttribute("baseline", a => a.Baseline, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
@@ -450,7 +450,7 @@ union.AddValidator<ListValue<StringValue>>(NumberValidator.Instance);
 union.AddValidator<Int32Value>(NumberValidator.Instance);
 });
 })
-.AddAttribute(0, "midline", a => a.Midline, aBuilder =>
+.AddAttribute("midline", a => a.Midline, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
@@ -458,25 +458,25 @@ union.AddValidator<ListValue<StringValue>>(NumberValidator.Instance);
 union.AddValidator<Int32Value>(NumberValidator.Instance);
 });
 })
-.AddAttribute(0, "customRecognizerId", a => a.CustomRecognizerId, aBuilder =>
+.AddAttribute("customRecognizerId", a => a.CustomRecognizerId, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "mathML", a => a.MathML)
-.AddAttribute(0, "mathStruct", a => a.MathStruct)
-.AddAttribute(0, "mathSymbol", a => a.MathSymbol)
-.AddAttribute(0, "beginModifierType", a => a.BeginModifierType)
-.AddAttribute(0, "endModifierType", a => a.EndModifierType)
-.AddAttribute(0, "rotationAngle", a => a.RotationAngle)
-.AddAttribute(0, "hotPoints", a => a.HotPoints, aBuilder =>
+.AddAttribute("mathML", a => a.MathML)
+.AddAttribute("mathStruct", a => a.MathStruct)
+.AddAttribute("mathSymbol", a => a.MathSymbol)
+.AddAttribute("beginModifierType", a => a.BeginModifierType)
+.AddAttribute("endModifierType", a => a.EndModifierType)
+.AddAttribute("rotationAngle", a => a.RotationAngle)
+.AddAttribute("hotPoints", a => a.HotPoints, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+,-?[0-9]+") });
 })
-.AddAttribute(0, "centroid", a => a.Centroid, aBuilder =>
+.AddAttribute("centroid", a => a.Centroid, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+,-?[0-9]+") });
 })
-.AddAttribute(0, "semanticType", a => a.SemanticType, aBuilder =>
+.AddAttribute("semanticType", a => a.SemanticType, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
@@ -484,8 +484,8 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2010.Ink.KnownSemantic
 union.AddValidator<UInt32Value>(NumberValidator.Instance);
 });
 })
-.AddAttribute(0, "shapeName", a => a.ShapeName)
-.AddAttribute(0, "shapeGeometry", a => a.ShapeGeometry, aBuilder =>
+.AddAttribute("shapeName", a => a.ShapeName)
+.AddAttribute("shapeGeometry", a => a.ShapeGeometry, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+,-?[0-9]+") });
 });
@@ -507,7 +507,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+,-?[0-9]+") })
     /// <para>When the object is serialized out as xml, it's qualified name is msink:property.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(45, "property")]
+    [SchemaAttr("msink:property")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ContextNodeProperty : OpenXmlLeafTextElement
     {
@@ -538,7 +538,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+,-?[0-9]+") })
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "type")]
+        [SchemaAttr("type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Type
@@ -550,9 +550,9 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+,-?[0-9]+") })
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(45, "property");
+            builder.SetSchema("msink:property");
             builder.AddElement<ContextNodeProperty>()
-.AddAttribute(0, "type", a => a.Type, aBuilder =>
+.AddAttribute("type", a => a.Type, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
@@ -568,7 +568,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is msink:sourceLink.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(45, "sourceLink")]
+    [SchemaAttr("msink:sourceLink")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SourceLink : ContextLinkType
     {
@@ -582,7 +582,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(45, "sourceLink");
+            builder.SetSchema("msink:sourceLink");
         }
 
         /// <inheritdoc/>
@@ -595,7 +595,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is msink:destinationLink.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(45, "destinationLink")]
+    [SchemaAttr("msink:destinationLink")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DestinationLink : ContextLinkType
     {
@@ -609,7 +609,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(45, "destinationLink");
+            builder.SetSchema("msink:destinationLink");
         }
 
         /// <inheritdoc/>
@@ -637,7 +637,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "direction")]
+        [SchemaAttr("direction")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Ink.LinkDirectionValues>? Direction
@@ -653,7 +653,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ref")]
+        [SchemaAttr("ref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Reference
@@ -666,8 +666,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<ContextLinkType>()
-                           .AddAttribute(0, "direction", a => a.Direction)
-                           .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
+                           .AddAttribute("direction", a => a.Direction)
+                           .AddAttribute("ref", a => a.Reference, aBuilder =>
                            {
                                aBuilder.AddUnion(union =>
                                {

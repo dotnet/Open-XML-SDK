@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(50, "style")]
+    [SchemaAttr("pic14:style")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShapeStyle : OpenXmlCompositeElement
     {
@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(50, "style");
+            builder.SetSchema("pic14:style");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.FontReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.LineReference>();
@@ -151,7 +151,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(50, "extLst")]
+    [SchemaAttr("pic14:extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
@@ -189,7 +189,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(50, "extLst");
+            builder.SetSchema("pic14:extLst");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)

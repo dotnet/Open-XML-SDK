@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
+
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     /// <summary>
@@ -8,12 +10,12 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// </summary>
     internal class AttributeValueConditionToAnother : SemanticConstraint
     {
-        private readonly byte _attribute;
-        private readonly byte _conditionAttribute;
+        private readonly OpenXmlQualifiedName _attribute;
+        private readonly OpenXmlQualifiedName _conditionAttribute;
         private readonly string[] _values;
         private readonly string[] _otherValues;
 
-        public AttributeValueConditionToAnother(byte attribute, byte conditionAttribute, string[] values, string[] otherValues)
+        public AttributeValueConditionToAnother(OpenXmlQualifiedName attribute, OpenXmlQualifiedName conditionAttribute, string[] values, string[] otherValues)
             : base(SemanticValidationLevel.Element)
         {
             _attribute = attribute;
@@ -31,7 +33,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            var attribute = element.ParsedState.Attributes[_attribute];
+            if (!TryFindAttribute(element, _attribute, out var attribute))
+            {
+                return null;
+            }
 
             if (attribute.Value is null)
             {
@@ -46,7 +51,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 }
             }
 
-            var conditionAttribute = element.ParsedState.Attributes[_conditionAttribute];
+            if (!TryFindAttribute(element, _conditionAttribute, out var conditionAttribute))
+            {
+                return null;
+            }
 
             if (conditionAttribute.Value is null)
             {
@@ -86,9 +94,9 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                         Node = element,
                         Description = SR.Format(
                             ValidationResources.Sem_AttributeValueConditionToAnother,
-                            GetAttributeQualifiedName(element, _attribute), attributeValueString,
-                            GetAttributeQualifiedName(element, _conditionAttribute), otherAttributeValueString,
-                            GetAttributeQualifiedName(element, _attribute), attribute.Value),
+                            attribute.Property.QName, attributeValueString,
+                            conditionAttribute.Property.QName, otherAttributeValueString,
+                            attribute.Property.QName, attribute.Value),
                     };
                 }
             }

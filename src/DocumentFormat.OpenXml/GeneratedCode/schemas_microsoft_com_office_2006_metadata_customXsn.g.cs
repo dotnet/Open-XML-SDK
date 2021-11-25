@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(39, "customXsn")]
+    [SchemaAttr("ntns:customXsn")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomXsn : OpenXmlCompositeElement
     {
@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(39, "customXsn");
+            builder.SetSchema("ntns:customXsn");
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomXsn.CachedView>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault>();
@@ -143,7 +143,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:xsnLocation.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(39, "xsnLocation")]
+    [SchemaAttr("ntns:xsnLocation")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class XsnLocation : OpenXmlLeafTextElement
     {
@@ -170,7 +170,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(39, "xsnLocation");
+            builder.SetSchema("ntns:xsnLocation");
         }
 
         /// <inheritdoc/>
@@ -183,7 +183,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:cached.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(39, "cached")]
+    [SchemaAttr("ntns:cached")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CachedView : OpenXmlLeafTextElement
     {
@@ -210,7 +210,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(39, "cached");
+            builder.SetSchema("ntns:cached");
         }
 
         /// <inheritdoc/>
@@ -223,7 +223,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:openByDefault.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(39, "openByDefault")]
+    [SchemaAttr("ntns:openByDefault")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class OpenByDefault : OpenXmlLeafTextElement
     {
@@ -250,7 +250,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(39, "openByDefault");
+            builder.SetSchema("ntns:openByDefault");
         }
 
         /// <inheritdoc/>
@@ -263,7 +263,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:xsnScope.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(39, "xsnScope")]
+    [SchemaAttr("ntns:xsnScope")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Scope : OpenXmlLeafTextElement
     {
@@ -290,7 +290,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(39, "xsnScope");
+            builder.SetSchema("ntns:xsnScope");
         }
 
         /// <inheritdoc/>

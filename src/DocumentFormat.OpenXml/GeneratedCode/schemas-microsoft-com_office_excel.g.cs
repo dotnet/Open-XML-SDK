@@ -93,7 +93,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "ClientData")]
+    [SchemaAttr("xvml:ClientData")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ClientData : OpenXmlCompositeElement
     {
@@ -135,7 +135,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ObjectType")]
+        [SchemaAttr("ObjectType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues>? ObjectType
@@ -147,7 +147,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(29, "ClientData");
+            builder.SetSchema("xvml:ClientData");
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.CommentRowTarget>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.CommentColumnTarget>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.InputValidationType>();
@@ -216,7 +216,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.DdeObject>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.UIObject>();
             builder.AddElement<ClientData>()
-.AddAttribute(0, "ObjectType", a => a.ObjectType, aBuilder =>
+.AddAttribute("ObjectType", a => a.ObjectType, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -290,8 +290,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptLocation), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaTextBox), 1, 1)
             };
-            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:ObjectType*/, false, new string[] { "Movie" }) { Application = ApplicationType.Excel });
-            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:ObjectType*/, false, new string[] { "LineA", "RectA" }) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueSetConstraint(":ObjectType", false, new string[] { "Movie" }) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueSetConstraint(":ObjectType", false, new string[] { "LineA", "RectA" }) { Application = ApplicationType.Excel });
         }
 
         /// <inheritdoc/>
@@ -304,7 +304,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:MoveWithCells.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "MoveWithCells")]
+    [SchemaAttr("xvml:MoveWithCells")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class MoveWithCells : OpenXmlLeafTextElement
     {
@@ -332,7 +332,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "MoveWithCells");
+            builder.SetSchema("xvml:MoveWithCells");
         }
 
         /// <inheritdoc/>
@@ -345,7 +345,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:SizeWithCells.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "SizeWithCells")]
+    [SchemaAttr("xvml:SizeWithCells")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ResizeWithCells : OpenXmlLeafTextElement
     {
@@ -373,7 +373,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "SizeWithCells");
+            builder.SetSchema("xvml:SizeWithCells");
         }
 
         /// <inheritdoc/>
@@ -386,7 +386,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Locked.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "Locked")]
+    [SchemaAttr("xvml:Locked")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Locked : OpenXmlLeafTextElement
     {
@@ -414,7 +414,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "Locked");
+            builder.SetSchema("xvml:Locked");
         }
 
         /// <inheritdoc/>
@@ -427,7 +427,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:DefaultSize.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "DefaultSize")]
+    [SchemaAttr("xvml:DefaultSize")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DefaultSize : OpenXmlLeafTextElement
     {
@@ -455,7 +455,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "DefaultSize");
+            builder.SetSchema("xvml:DefaultSize");
         }
 
         /// <inheritdoc/>
@@ -468,7 +468,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:PrintObject.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "PrintObject")]
+    [SchemaAttr("xvml:PrintObject")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PrintObject : OpenXmlLeafTextElement
     {
@@ -496,7 +496,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "PrintObject");
+            builder.SetSchema("xvml:PrintObject");
         }
 
         /// <inheritdoc/>
@@ -509,7 +509,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Disabled.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "Disabled")]
+    [SchemaAttr("xvml:Disabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Disabled : OpenXmlLeafTextElement
     {
@@ -537,7 +537,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "Disabled");
+            builder.SetSchema("xvml:Disabled");
         }
 
         /// <inheritdoc/>
@@ -550,7 +550,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:AutoFill.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "AutoFill")]
+    [SchemaAttr("xvml:AutoFill")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AutoFill : OpenXmlLeafTextElement
     {
@@ -578,7 +578,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "AutoFill");
+            builder.SetSchema("xvml:AutoFill");
         }
 
         /// <inheritdoc/>
@@ -591,7 +591,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:AutoLine.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "AutoLine")]
+    [SchemaAttr("xvml:AutoLine")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AutoLine : OpenXmlLeafTextElement
     {
@@ -619,7 +619,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "AutoLine");
+            builder.SetSchema("xvml:AutoLine");
         }
 
         /// <inheritdoc/>
@@ -632,7 +632,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:AutoPict.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "AutoPict")]
+    [SchemaAttr("xvml:AutoPict")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AutoSizePicture : OpenXmlLeafTextElement
     {
@@ -660,7 +660,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "AutoPict");
+            builder.SetSchema("xvml:AutoPict");
         }
 
         /// <inheritdoc/>
@@ -673,7 +673,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:LockText.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "LockText")]
+    [SchemaAttr("xvml:LockText")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class LockText : OpenXmlLeafTextElement
     {
@@ -701,7 +701,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "LockText");
+            builder.SetSchema("xvml:LockText");
         }
 
         /// <inheritdoc/>
@@ -714,7 +714,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:JustLastX.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "JustLastX")]
+    [SchemaAttr("xvml:JustLastX")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class JustifyLastLine : OpenXmlLeafTextElement
     {
@@ -742,7 +742,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "JustLastX");
+            builder.SetSchema("xvml:JustLastX");
         }
 
         /// <inheritdoc/>
@@ -755,7 +755,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:SecretEdit.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "SecretEdit")]
+    [SchemaAttr("xvml:SecretEdit")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SecretEdit : OpenXmlLeafTextElement
     {
@@ -783,7 +783,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "SecretEdit");
+            builder.SetSchema("xvml:SecretEdit");
         }
 
         /// <inheritdoc/>
@@ -796,7 +796,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Default.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "Default")]
+    [SchemaAttr("xvml:Default")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DefaultButton : OpenXmlLeafTextElement
     {
@@ -824,7 +824,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "Default");
+            builder.SetSchema("xvml:Default");
         }
 
         /// <inheritdoc/>
@@ -837,7 +837,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Help.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "Help")]
+    [SchemaAttr("xvml:Help")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class HelpButton : OpenXmlLeafTextElement
     {
@@ -865,7 +865,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "Help");
+            builder.SetSchema("xvml:Help");
         }
 
         /// <inheritdoc/>
@@ -878,7 +878,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Cancel.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "Cancel")]
+    [SchemaAttr("xvml:Cancel")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CancelButton : OpenXmlLeafTextElement
     {
@@ -906,7 +906,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "Cancel");
+            builder.SetSchema("xvml:Cancel");
         }
 
         /// <inheritdoc/>
@@ -919,7 +919,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Dismiss.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "Dismiss")]
+    [SchemaAttr("xvml:Dismiss")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DismissButton : OpenXmlLeafTextElement
     {
@@ -947,7 +947,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "Dismiss");
+            builder.SetSchema("xvml:Dismiss");
         }
 
         /// <inheritdoc/>
@@ -960,7 +960,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Visible.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "Visible")]
+    [SchemaAttr("xvml:Visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Visible : OpenXmlLeafTextElement
     {
@@ -988,7 +988,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "Visible");
+            builder.SetSchema("xvml:Visible");
         }
 
         /// <inheritdoc/>
@@ -1001,7 +1001,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:RowHidden.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "RowHidden")]
+    [SchemaAttr("xvml:RowHidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RowHidden : OpenXmlLeafTextElement
     {
@@ -1029,7 +1029,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "RowHidden");
+            builder.SetSchema("xvml:RowHidden");
         }
 
         /// <inheritdoc/>
@@ -1042,7 +1042,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ColHidden.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "ColHidden")]
+    [SchemaAttr("xvml:ColHidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColumnHidden : OpenXmlLeafTextElement
     {
@@ -1070,7 +1070,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "ColHidden");
+            builder.SetSchema("xvml:ColHidden");
         }
 
         /// <inheritdoc/>
@@ -1083,7 +1083,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:MultiLine.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "MultiLine")]
+    [SchemaAttr("xvml:MultiLine")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class MultiLine : OpenXmlLeafTextElement
     {
@@ -1111,7 +1111,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "MultiLine");
+            builder.SetSchema("xvml:MultiLine");
         }
 
         /// <inheritdoc/>
@@ -1124,7 +1124,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:VScroll.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "VScroll")]
+    [SchemaAttr("xvml:VScroll")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VerticalScrollBar : OpenXmlLeafTextElement
     {
@@ -1152,7 +1152,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "VScroll");
+            builder.SetSchema("xvml:VScroll");
         }
 
         /// <inheritdoc/>
@@ -1165,7 +1165,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ValidIds.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "ValidIds")]
+    [SchemaAttr("xvml:ValidIds")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ValidIds : OpenXmlLeafTextElement
     {
@@ -1193,7 +1193,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "ValidIds");
+            builder.SetSchema("xvml:ValidIds");
         }
 
         /// <inheritdoc/>
@@ -1206,7 +1206,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:NoThreeD2.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "NoThreeD2")]
+    [SchemaAttr("xvml:NoThreeD2")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Disable3DForListBoxAndDropDown : OpenXmlLeafTextElement
     {
@@ -1234,7 +1234,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "NoThreeD2");
+            builder.SetSchema("xvml:NoThreeD2");
         }
 
         /// <inheritdoc/>
@@ -1247,7 +1247,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Colored.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "Colored")]
+    [SchemaAttr("xvml:Colored")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Colored : OpenXmlLeafTextElement
     {
@@ -1275,7 +1275,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "Colored");
+            builder.SetSchema("xvml:Colored");
         }
 
         /// <inheritdoc/>
@@ -1288,7 +1288,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:NoThreeD.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "NoThreeD")]
+    [SchemaAttr("xvml:NoThreeD")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Disable3D : OpenXmlLeafTextElement
     {
@@ -1316,7 +1316,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "NoThreeD");
+            builder.SetSchema("xvml:NoThreeD");
         }
 
         /// <inheritdoc/>
@@ -1329,7 +1329,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:FirstButton.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "FirstButton")]
+    [SchemaAttr("xvml:FirstButton")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FirstButton : OpenXmlLeafTextElement
     {
@@ -1357,7 +1357,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "FirstButton");
+            builder.SetSchema("xvml:FirstButton");
         }
 
         /// <inheritdoc/>
@@ -1370,7 +1370,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Horiz.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "Horiz")]
+    [SchemaAttr("xvml:Horiz")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class HorizontalScrollBar : OpenXmlLeafTextElement
     {
@@ -1398,7 +1398,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "Horiz");
+            builder.SetSchema("xvml:Horiz");
         }
 
         /// <inheritdoc/>
@@ -1411,7 +1411,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:MapOCX.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "MapOCX")]
+    [SchemaAttr("xvml:MapOCX")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class MapOcxControl : OpenXmlLeafTextElement
     {
@@ -1439,7 +1439,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "MapOCX");
+            builder.SetSchema("xvml:MapOCX");
         }
 
         /// <inheritdoc/>
@@ -1452,7 +1452,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Camera.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "Camera")]
+    [SchemaAttr("xvml:Camera")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CameraObject : OpenXmlLeafTextElement
     {
@@ -1480,7 +1480,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "Camera");
+            builder.SetSchema("xvml:Camera");
         }
 
         /// <inheritdoc/>
@@ -1493,7 +1493,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:RecalcAlways.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "RecalcAlways")]
+    [SchemaAttr("xvml:RecalcAlways")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RecalculateAlways : OpenXmlLeafTextElement
     {
@@ -1521,7 +1521,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "RecalcAlways");
+            builder.SetSchema("xvml:RecalcAlways");
         }
 
         /// <inheritdoc/>
@@ -1534,7 +1534,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:AutoScale.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "AutoScale")]
+    [SchemaAttr("xvml:AutoScale")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AutoScaleFont : OpenXmlLeafTextElement
     {
@@ -1562,7 +1562,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "AutoScale");
+            builder.SetSchema("xvml:AutoScale");
         }
 
         /// <inheritdoc/>
@@ -1575,7 +1575,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:DDE.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "DDE")]
+    [SchemaAttr("xvml:DDE")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DdeObject : OpenXmlLeafTextElement
     {
@@ -1603,7 +1603,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "DDE");
+            builder.SetSchema("xvml:DDE");
         }
 
         /// <inheritdoc/>
@@ -1616,7 +1616,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:UIObj.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "UIObj")]
+    [SchemaAttr("xvml:UIObj")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class UIObject : OpenXmlLeafTextElement
     {
@@ -1644,7 +1644,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "UIObj");
+            builder.SetSchema("xvml:UIObj");
         }
 
         /// <inheritdoc/>
@@ -1657,7 +1657,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Anchor.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "Anchor")]
+    [SchemaAttr("xvml:Anchor")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Anchor : OpenXmlLeafTextElement
     {
@@ -1684,7 +1684,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(29, "Anchor");
+            builder.SetSchema("xvml:Anchor");
         }
 
         /// <inheritdoc/>
@@ -1697,7 +1697,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:TextHAlign.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "TextHAlign")]
+    [SchemaAttr("xvml:TextHAlign")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class HorizontalTextAlignment : OpenXmlLeafTextElement
     {
@@ -1724,7 +1724,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(29, "TextHAlign");
+            builder.SetSchema("xvml:TextHAlign");
         }
 
         /// <inheritdoc/>
@@ -1737,7 +1737,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:TextVAlign.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "TextVAlign")]
+    [SchemaAttr("xvml:TextVAlign")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class VerticalTextAlignment : OpenXmlLeafTextElement
     {
@@ -1764,7 +1764,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(29, "TextVAlign");
+            builder.SetSchema("xvml:TextVAlign");
         }
 
         /// <inheritdoc/>
@@ -1777,7 +1777,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:FmlaRange.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "FmlaRange")]
+    [SchemaAttr("xvml:FmlaRange")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FormulaRange : OpenXmlLeafTextElement
     {
@@ -1804,7 +1804,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(29, "FmlaRange");
+            builder.SetSchema("xvml:FmlaRange");
         }
 
         /// <inheritdoc/>
@@ -1817,7 +1817,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:SelType.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "SelType")]
+    [SchemaAttr("xvml:SelType")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SelectionType : OpenXmlLeafTextElement
     {
@@ -1844,7 +1844,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(29, "SelType");
+            builder.SetSchema("xvml:SelType");
         }
 
         /// <inheritdoc/>
@@ -1857,7 +1857,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:MultiSel.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "MultiSel")]
+    [SchemaAttr("xvml:MultiSel")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class MultiSelections : OpenXmlLeafTextElement
     {
@@ -1884,7 +1884,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(29, "MultiSel");
+            builder.SetSchema("xvml:MultiSel");
         }
 
         /// <inheritdoc/>
@@ -1897,7 +1897,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:LCT.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "LCT")]
+    [SchemaAttr("xvml:LCT")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ListBoxCallbackType : OpenXmlLeafTextElement
     {
@@ -1924,7 +1924,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(29, "LCT");
+            builder.SetSchema("xvml:LCT");
         }
 
         /// <inheritdoc/>
@@ -1937,7 +1937,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ListItem.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "ListItem")]
+    [SchemaAttr("xvml:ListItem")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ListItem : OpenXmlLeafTextElement
     {
@@ -1964,7 +1964,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(29, "ListItem");
+            builder.SetSchema("xvml:ListItem");
         }
 
         /// <inheritdoc/>
@@ -1977,7 +1977,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:DropStyle.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "DropStyle")]
+    [SchemaAttr("xvml:DropStyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DropStyle : OpenXmlLeafTextElement
     {
@@ -2004,7 +2004,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(29, "DropStyle");
+            builder.SetSchema("xvml:DropStyle");
         }
 
         /// <inheritdoc/>
@@ -2017,7 +2017,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:FmlaLink.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "FmlaLink")]
+    [SchemaAttr("xvml:FmlaLink")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FormulaLink : OpenXmlLeafTextElement
     {
@@ -2044,7 +2044,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(29, "FmlaLink");
+            builder.SetSchema("xvml:FmlaLink");
         }
 
         /// <inheritdoc/>
@@ -2057,7 +2057,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:FmlaPict.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "FmlaPict")]
+    [SchemaAttr("xvml:FmlaPict")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FormulaPicture : OpenXmlLeafTextElement
     {
@@ -2084,7 +2084,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(29, "FmlaPict");
+            builder.SetSchema("xvml:FmlaPict");
         }
 
         /// <inheritdoc/>
@@ -2097,7 +2097,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:FmlaGroup.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "FmlaGroup")]
+    [SchemaAttr("xvml:FmlaGroup")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FormulaGroup : OpenXmlLeafTextElement
     {
@@ -2124,7 +2124,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(29, "FmlaGroup");
+            builder.SetSchema("xvml:FmlaGroup");
         }
 
         /// <inheritdoc/>
@@ -2137,7 +2137,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ScriptText.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "ScriptText")]
+    [SchemaAttr("xvml:ScriptText")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ScriptText : OpenXmlLeafTextElement
     {
@@ -2164,7 +2164,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(29, "ScriptText");
+            builder.SetSchema("xvml:ScriptText");
         }
 
         /// <inheritdoc/>
@@ -2177,7 +2177,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ScriptExtended.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "ScriptExtended")]
+    [SchemaAttr("xvml:ScriptExtended")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ScriptExtended : OpenXmlLeafTextElement
     {
@@ -2204,7 +2204,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(29, "ScriptExtended");
+            builder.SetSchema("xvml:ScriptExtended");
         }
 
         /// <inheritdoc/>
@@ -2217,7 +2217,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:FmlaTxbx.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "FmlaTxbx")]
+    [SchemaAttr("xvml:FmlaTxbx")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FormulaTextBox : OpenXmlLeafTextElement
     {
@@ -2244,7 +2244,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(29, "FmlaTxbx");
+            builder.SetSchema("xvml:FmlaTxbx");
         }
 
         /// <inheritdoc/>
@@ -2257,7 +2257,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:FmlaMacro.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "FmlaMacro")]
+    [SchemaAttr("xvml:FmlaMacro")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FormulaMacro : OpenXmlLeafTextElement
     {
@@ -2285,7 +2285,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (256L) });
-            builder.SetSchema(29, "FmlaMacro");
+            builder.SetSchema("xvml:FmlaMacro");
         }
 
         /// <inheritdoc/>
@@ -2298,7 +2298,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Accel.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "Accel")]
+    [SchemaAttr("xvml:Accel")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AcceleratorPrimary : OpenXmlLeafTextElement
     {
@@ -2326,7 +2326,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<ByteValue>(NumberValidator.Instance);
-            builder.SetSchema(29, "Accel");
+            builder.SetSchema("xvml:Accel");
         }
 
         /// <inheritdoc/>
@@ -2339,7 +2339,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Accel2.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "Accel2")]
+    [SchemaAttr("xvml:Accel2")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AcceleratorSecondary : OpenXmlLeafTextElement
     {
@@ -2367,7 +2367,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<ByteValue>(NumberValidator.Instance);
-            builder.SetSchema(29, "Accel2");
+            builder.SetSchema("xvml:Accel2");
         }
 
         /// <inheritdoc/>
@@ -2380,7 +2380,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Row.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "Row")]
+    [SchemaAttr("xvml:Row")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentRowTarget : OpenXmlLeafTextElement
     {
@@ -2408,7 +2408,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(NumberValidator.Instance);
-            builder.SetSchema(29, "Row");
+            builder.SetSchema("xvml:Row");
         }
 
         /// <inheritdoc/>
@@ -2421,7 +2421,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Column.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "Column")]
+    [SchemaAttr("xvml:Column")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentColumnTarget : OpenXmlLeafTextElement
     {
@@ -2449,7 +2449,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(NumberValidator.Instance);
-            builder.SetSchema(29, "Column");
+            builder.SetSchema("xvml:Column");
         }
 
         /// <inheritdoc/>
@@ -2462,7 +2462,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:VTEdit.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "VTEdit")]
+    [SchemaAttr("xvml:VTEdit")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class InputValidationType : OpenXmlLeafTextElement
     {
@@ -2490,7 +2490,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(NumberValidator.Instance);
-            builder.SetSchema(29, "VTEdit");
+            builder.SetSchema("xvml:VTEdit");
         }
 
         /// <inheritdoc/>
@@ -2503,7 +2503,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:WidthMin.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "WidthMin")]
+    [SchemaAttr("xvml:WidthMin")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class MinDropDownWidth : OpenXmlLeafTextElement
     {
@@ -2531,7 +2531,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(NumberValidator.Instance);
-            builder.SetSchema(29, "WidthMin");
+            builder.SetSchema("xvml:WidthMin");
         }
 
         /// <inheritdoc/>
@@ -2544,7 +2544,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Sel.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "Sel")]
+    [SchemaAttr("xvml:Sel")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SelectionEntry : OpenXmlLeafTextElement
     {
@@ -2572,7 +2572,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(NumberValidator.Instance);
-            builder.SetSchema(29, "Sel");
+            builder.SetSchema("xvml:Sel");
         }
 
         /// <inheritdoc/>
@@ -2585,7 +2585,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:DropLines.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "DropLines")]
+    [SchemaAttr("xvml:DropLines")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DropLines : OpenXmlLeafTextElement
     {
@@ -2613,7 +2613,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(NumberValidator.Instance);
-            builder.SetSchema(29, "DropLines");
+            builder.SetSchema("xvml:DropLines");
         }
 
         /// <inheritdoc/>
@@ -2626,7 +2626,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Checked.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "Checked")]
+    [SchemaAttr("xvml:Checked")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Checked : OpenXmlLeafTextElement
     {
@@ -2654,7 +2654,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(NumberValidator.Instance);
-            builder.SetSchema(29, "Checked");
+            builder.SetSchema("xvml:Checked");
         }
 
         /// <inheritdoc/>
@@ -2667,7 +2667,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Val.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "Val")]
+    [SchemaAttr("xvml:Val")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ScrollBarPosition : OpenXmlLeafTextElement
     {
@@ -2695,7 +2695,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(NumberValidator.Instance);
-            builder.SetSchema(29, "Val");
+            builder.SetSchema("xvml:Val");
         }
 
         /// <inheritdoc/>
@@ -2708,7 +2708,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Min.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "Min")]
+    [SchemaAttr("xvml:Min")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ScrollBarMin : OpenXmlLeafTextElement
     {
@@ -2736,7 +2736,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(NumberValidator.Instance);
-            builder.SetSchema(29, "Min");
+            builder.SetSchema("xvml:Min");
         }
 
         /// <inheritdoc/>
@@ -2749,7 +2749,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Max.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "Max")]
+    [SchemaAttr("xvml:Max")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ScrollBarMax : OpenXmlLeafTextElement
     {
@@ -2777,7 +2777,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(NumberValidator.Instance);
-            builder.SetSchema(29, "Max");
+            builder.SetSchema("xvml:Max");
         }
 
         /// <inheritdoc/>
@@ -2790,7 +2790,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Inc.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "Inc")]
+    [SchemaAttr("xvml:Inc")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ScrollBarIncrement : OpenXmlLeafTextElement
     {
@@ -2818,7 +2818,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(NumberValidator.Instance);
-            builder.SetSchema(29, "Inc");
+            builder.SetSchema("xvml:Inc");
         }
 
         /// <inheritdoc/>
@@ -2831,7 +2831,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Page.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "Page")]
+    [SchemaAttr("xvml:Page")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ScrollBarPageIncrement : OpenXmlLeafTextElement
     {
@@ -2859,7 +2859,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(NumberValidator.Instance);
-            builder.SetSchema(29, "Page");
+            builder.SetSchema("xvml:Page");
         }
 
         /// <inheritdoc/>
@@ -2872,7 +2872,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Dx.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "Dx")]
+    [SchemaAttr("xvml:Dx")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ScrollBarWidth : OpenXmlLeafTextElement
     {
@@ -2900,7 +2900,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(NumberValidator.Instance);
-            builder.SetSchema(29, "Dx");
+            builder.SetSchema("xvml:Dx");
         }
 
         /// <inheritdoc/>
@@ -2913,7 +2913,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:CF.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "CF")]
+    [SchemaAttr("xvml:CF")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ClipboardFormat : OpenXmlLeafTextElement
     {
@@ -2941,7 +2941,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ClipboardFormatValues>>(EnumValidator.Instance);
-            builder.SetSchema(29, "CF");
+            builder.SetSchema("xvml:CF");
         }
 
         /// <inheritdoc/>
@@ -2954,7 +2954,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ScriptLanguage.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "ScriptLanguage")]
+    [SchemaAttr("xvml:ScriptLanguage")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ScriptLanguage : OpenXmlLeafTextElement
     {
@@ -2982,7 +2982,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(new NumberValidator() { IsNonNegative = (true) });
-            builder.SetSchema(29, "ScriptLanguage");
+            builder.SetSchema("xvml:ScriptLanguage");
         }
 
         /// <inheritdoc/>
@@ -2995,7 +2995,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ScriptLocation.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(29, "ScriptLocation")]
+    [SchemaAttr("xvml:ScriptLocation")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ScriptLocation : OpenXmlLeafTextElement
     {
@@ -3023,7 +3023,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(new NumberValidator() { IsNonNegative = (true) });
-            builder.SetSchema(29, "ScriptLocation");
+            builder.SetSchema("xvml:ScriptLocation");
         }
 
         /// <inheritdoc/>

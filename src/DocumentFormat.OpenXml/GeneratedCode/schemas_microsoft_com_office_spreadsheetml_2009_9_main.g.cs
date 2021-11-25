@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "conditionalFormattings")]
+    [SchemaAttr("x14:conditionalFormattings")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ConditionalFormattings : OpenXmlCompositeElement
     {
@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "conditionalFormattings");
+            builder.SetSchema("x14:conditionalFormattings");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormatting>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -92,7 +92,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "dataValidations")]
+    [SchemaAttr("x14:dataValidations")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataValidations : OpenXmlCompositeElement
     {
@@ -134,7 +134,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "disablePrompts")]
+        [SchemaAttr("disablePrompts")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? DisablePrompts
@@ -150,7 +150,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "xWindow")]
+        [SchemaAttr("xWindow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? XWindow
@@ -166,7 +166,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "yWindow")]
+        [SchemaAttr("yWindow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? YWindow
@@ -182,7 +182,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "count")]
+        [SchemaAttr("count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Count
@@ -194,20 +194,20 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "dataValidations");
+            builder.SetSchema("x14:dataValidations");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DataValidation>();
             builder.AddElement<DataValidations>()
-.AddAttribute(0, "disablePrompts", a => a.DisablePrompts)
-.AddAttribute(0, "xWindow", a => a.XWindow)
-.AddAttribute(0, "yWindow", a => a.YWindow)
-.AddAttribute(0, "count", a => a.Count);
+.AddAttribute("disablePrompts", a => a.DisablePrompts)
+.AddAttribute("xWindow", a => a.XWindow)
+.AddAttribute("yWindow", a => a.YWindow)
+.AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DataValidation), 1, 0, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:xWindow*/, true, double.NegativeInfinity, true, 65535, true) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueRangeConstraint(2 /*:yWindow*/, true, double.NegativeInfinity, true, 65535, true) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(":xWindow", true, double.NegativeInfinity, true, 65535, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(":yWindow", true, double.NegativeInfinity, true, 65535, true) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -226,7 +226,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "sparklineGroups")]
+    [SchemaAttr("x14:sparklineGroups")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SparklineGroups : OpenXmlCompositeElement
     {
@@ -264,7 +264,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "sparklineGroups");
+            builder.SetSchema("x14:sparklineGroups");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SparklineGroup>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -289,7 +289,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "slicerList")]
+    [SchemaAttr("x14:slicerList")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SlicerList : OpenXmlCompositeElement
     {
@@ -327,7 +327,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "slicerList");
+            builder.SetSchema("x14:slicerList");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerRef>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -352,7 +352,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "protectedRanges")]
+    [SchemaAttr("x14:protectedRanges")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ProtectedRanges : OpenXmlCompositeElement
     {
@@ -390,7 +390,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "protectedRanges");
+            builder.SetSchema("x14:protectedRanges");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ProtectedRange>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -416,7 +416,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "ignoredErrors")]
+    [SchemaAttr("x14:ignoredErrors")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class IgnoredErrors : OpenXmlCompositeElement
     {
@@ -454,7 +454,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "ignoredErrors");
+            builder.SetSchema("x14:ignoredErrors");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.IgnoredError>();
@@ -481,7 +481,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "definedNames")]
+    [SchemaAttr("x14:definedNames")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DefinedNames : OpenXmlCompositeElement
     {
@@ -519,7 +519,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "definedNames");
+            builder.SetSchema("x14:definedNames");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DefinedName>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -544,7 +544,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "pivotCaches")]
+    [SchemaAttr("x14:pivotCaches")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PivotCaches : OpenXmlCompositeElement
     {
@@ -582,7 +582,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "pivotCaches");
+            builder.SetSchema("x14:pivotCaches");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotCache>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -607,7 +607,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "slicerCaches")]
+    [SchemaAttr("x14:slicerCaches")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SlicerCaches : OpenXmlCompositeElement
     {
@@ -645,7 +645,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "slicerCaches");
+            builder.SetSchema("x14:slicerCaches");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerCache>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -664,7 +664,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>When the object is serialized out as xml, it's qualified name is x14:workbookPr.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "workbookPr")]
+    [SchemaAttr("x14:workbookPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class WorkbookProperties : OpenXmlLeafElement
     {
@@ -682,7 +682,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "defaultImageDpi")]
+        [SchemaAttr("defaultImageDpi")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? DefaultImageDpi
@@ -698,7 +698,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "discardImageEditData")]
+        [SchemaAttr("discardImageEditData")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? DiscardImageEditData
@@ -714,7 +714,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "accuracyVersion")]
+        [SchemaAttr("accuracyVersion")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? AccuracyVersion
@@ -726,13 +726,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "workbookPr");
+            builder.SetSchema("x14:workbookPr");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<WorkbookProperties>()
-.AddAttribute(0, "defaultImageDpi", a => a.DefaultImageDpi)
-.AddAttribute(0, "discardImageEditData", a => a.DiscardImageEditData)
-.AddAttribute(0, "accuracyVersion", a => a.AccuracyVersion);
-            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:defaultImageDpi*/, true, new string[] { "96", "150", "220" }) { Version = FileFormatVersions.Office2010 });
+.AddAttribute("defaultImageDpi", a => a.DefaultImageDpi)
+.AddAttribute("discardImageEditData", a => a.DiscardImageEditData)
+.AddAttribute("accuracyVersion", a => a.AccuracyVersion);
+            builder.AddConstraint(new AttributeValueSetConstraint(":defaultImageDpi", true, new string[] { "96", "150", "220" }) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -751,7 +751,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "calculatedMember")]
+    [SchemaAttr("x14:calculatedMember")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CalculatedMember : OpenXmlCompositeElement
     {
@@ -793,7 +793,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "displayFolder")]
+        [SchemaAttr("displayFolder")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? DisplayFolder
@@ -809,7 +809,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "flattenHierarchies")]
+        [SchemaAttr("flattenHierarchies")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? FlattenHierarchies
@@ -825,7 +825,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "dynamicSet")]
+        [SchemaAttr("dynamicSet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? DynamicSet
@@ -841,7 +841,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "hierarchizeDistinct")]
+        [SchemaAttr("hierarchizeDistinct")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? HierarchizeDistinct
@@ -857,7 +857,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "mdxLong")]
+        [SchemaAttr("mdxLong")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? MdxLong
@@ -869,21 +869,21 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "calculatedMember");
+            builder.SetSchema("x14:calculatedMember");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TupleSet>();
             builder.AddElement<CalculatedMember>()
-.AddAttribute(0, "displayFolder", a => a.DisplayFolder)
-.AddAttribute(0, "flattenHierarchies", a => a.FlattenHierarchies)
-.AddAttribute(0, "dynamicSet", a => a.DynamicSet)
-.AddAttribute(0, "hierarchizeDistinct", a => a.HierarchizeDistinct)
-.AddAttribute(0, "mdxLong", a => a.MdxLong);
+.AddAttribute("displayFolder", a => a.DisplayFolder)
+.AddAttribute("flattenHierarchies", a => a.FlattenHierarchies)
+.AddAttribute("dynamicSet", a => a.DynamicSet)
+.AddAttribute("hierarchizeDistinct", a => a.HierarchizeDistinct)
+.AddAttribute("mdxLong", a => a.MdxLong);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.TupleSet), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:displayFolder*/, 0, 65535) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(4 /*:mdxLong*/, 32766, 1073741822) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":displayFolder", 0, 65535) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":mdxLong", 32766, 1073741822) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -915,7 +915,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "cacheHierarchy")]
+    [SchemaAttr("x14:cacheHierarchy")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CacheHierarchy : OpenXmlCompositeElement
     {
@@ -957,7 +957,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "flattenHierarchies")]
+        [SchemaAttr("flattenHierarchies")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? FlattenHierarchies
@@ -973,7 +973,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "measuresSet")]
+        [SchemaAttr("measuresSet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? MeasuresSet
@@ -989,7 +989,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "hierarchizeDistinct")]
+        [SchemaAttr("hierarchizeDistinct")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? HierarchizeDistinct
@@ -1005,7 +1005,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ignore")]
+        [SchemaAttr("ignore")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Ignore
@@ -1017,21 +1017,21 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "cacheHierarchy");
+            builder.SetSchema("x14:cacheHierarchy");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SetLevels>();
             builder.AddElement<CacheHierarchy>()
-.AddAttribute(0, "flattenHierarchies", a => a.FlattenHierarchies)
-.AddAttribute(0, "measuresSet", a => a.MeasuresSet)
-.AddAttribute(0, "hierarchizeDistinct", a => a.HierarchizeDistinct)
-.AddAttribute(0, "ignore", a => a.Ignore);
+.AddAttribute("flattenHierarchies", a => a.FlattenHierarchies)
+.AddAttribute("measuresSet", a => a.MeasuresSet)
+.AddAttribute("hierarchizeDistinct", a => a.HierarchizeDistinct)
+.AddAttribute("ignore", a => a.Ignore);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SetLevels), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueConditionToAnother(0 /*:flattenHierarchies*/, 3 /*:ignore*/, new string[] { "false" }, new string[] { "true" }) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueConditionToAnother(1 /*:measuresSet*/, 3 /*:ignore*/, new string[] { "false" }, new string[] { "true" }) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueConditionToAnother(2 /*:hierarchizeDistinct*/, 3 /*:ignore*/, new string[] { "false" }, new string[] { "true" }) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueConditionToAnother(":flattenHierarchies", ":ignore", new string[] { "false" }, new string[] { "true" }) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueConditionToAnother(":measuresSet", ":ignore", new string[] { "false" }, new string[] { "true" }) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueConditionToAnother(":hierarchizeDistinct", ":ignore", new string[] { "false" }, new string[] { "true" }) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -1057,7 +1057,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>When the object is serialized out as xml, it's qualified name is x14:dataField.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "dataField")]
+    [SchemaAttr("x14:dataField")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataField : OpenXmlLeafElement
     {
@@ -1075,7 +1075,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "pivotShowAs")]
+        [SchemaAttr("pivotShowAs")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.PivotShowAsValues>? PivotShowAs
@@ -1091,7 +1091,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sourceField")]
+        [SchemaAttr("sourceField")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? SourceField
@@ -1107,7 +1107,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uniqueName")]
+        [SchemaAttr("uniqueName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? UniqueName
@@ -1119,14 +1119,14 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "dataField");
+            builder.SetSchema("x14:dataField");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<DataField>()
-.AddAttribute(0, "pivotShowAs", a => a.PivotShowAs)
-.AddAttribute(0, "sourceField", a => a.SourceField)
-.AddAttribute(0, "uniqueName", a => a.UniqueName);
-            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*:uniqueName*/, true, null) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(2 /*:uniqueName*/, 0, 65535) { Version = FileFormatVersions.Office2010 });
+.AddAttribute("pivotShowAs", a => a.PivotShowAs)
+.AddAttribute("sourceField", a => a.SourceField)
+.AddAttribute("uniqueName", a => a.UniqueName);
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":uniqueName", true, null) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":uniqueName", 0, 65535) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -1139,7 +1139,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotField.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "pivotField")]
+    [SchemaAttr("x14:pivotField")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PivotField : OpenXmlLeafElement
     {
@@ -1157,7 +1157,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fillDownLabels")]
+        [SchemaAttr("fillDownLabels")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? FillDownLabels
@@ -1173,7 +1173,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ignore")]
+        [SchemaAttr("ignore")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Ignore
@@ -1185,11 +1185,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "pivotField");
+            builder.SetSchema("x14:pivotField");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<PivotField>()
-.AddAttribute(0, "fillDownLabels", a => a.FillDownLabels)
-.AddAttribute(0, "ignore", a => a.Ignore);
+.AddAttribute("fillDownLabels", a => a.FillDownLabels)
+.AddAttribute("ignore", a => a.Ignore);
         }
 
         /// <inheritdoc/>
@@ -1210,7 +1210,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "pivotTableDefinition")]
+    [SchemaAttr("x14:pivotTableDefinition")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PivotTableDefinition : OpenXmlCompositeElement
     {
@@ -1252,7 +1252,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fillDownLabelsDefault")]
+        [SchemaAttr("fillDownLabelsDefault")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? FillDownLabelsDefault
@@ -1268,7 +1268,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "visualTotalsForSets")]
+        [SchemaAttr("visualTotalsForSets")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? VisualTotalsForSets
@@ -1284,7 +1284,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "calculatedMembersInFilters")]
+        [SchemaAttr("calculatedMembersInFilters")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? CalculatedMembersInFilters
@@ -1300,7 +1300,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "altText")]
+        [SchemaAttr("altText")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? AltText
@@ -1316,7 +1316,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "altTextSummary")]
+        [SchemaAttr("altTextSummary")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? AltTextSummary
@@ -1332,7 +1332,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "enableEdit")]
+        [SchemaAttr("enableEdit")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? EnableEdit
@@ -1348,7 +1348,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "autoApply")]
+        [SchemaAttr("autoApply")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? AutoApply
@@ -1364,7 +1364,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "allocationMethod")]
+        [SchemaAttr("allocationMethod")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.AllocationMethodValues>? AllocationMethod
@@ -1380,7 +1380,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "weightExpression")]
+        [SchemaAttr("weightExpression")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? WeightExpression
@@ -1396,7 +1396,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "hideValuesRow")]
+        [SchemaAttr("hideValuesRow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? HideValuesRow
@@ -1408,31 +1408,31 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "pivotTableDefinition");
+            builder.SetSchema("x14:pivotTableDefinition");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormats>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotChanges>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotEdits>();
             builder.AddElement<PivotTableDefinition>()
-.AddAttribute(0, "fillDownLabelsDefault", a => a.FillDownLabelsDefault)
-.AddAttribute(0, "visualTotalsForSets", a => a.VisualTotalsForSets)
-.AddAttribute(0, "calculatedMembersInFilters", a => a.CalculatedMembersInFilters)
-.AddAttribute(0, "altText", a => a.AltText)
-.AddAttribute(0, "altTextSummary", a => a.AltTextSummary)
-.AddAttribute(0, "enableEdit", a => a.EnableEdit)
-.AddAttribute(0, "autoApply", a => a.AutoApply)
-.AddAttribute(0, "allocationMethod", a => a.AllocationMethod)
-.AddAttribute(0, "weightExpression", a => a.WeightExpression)
-.AddAttribute(0, "hideValuesRow", a => a.HideValuesRow);
+.AddAttribute("fillDownLabelsDefault", a => a.FillDownLabelsDefault)
+.AddAttribute("visualTotalsForSets", a => a.VisualTotalsForSets)
+.AddAttribute("calculatedMembersInFilters", a => a.CalculatedMembersInFilters)
+.AddAttribute("altText", a => a.AltText)
+.AddAttribute("altTextSummary", a => a.AltTextSummary)
+.AddAttribute("enableEdit", a => a.EnableEdit)
+.AddAttribute("autoApply", a => a.AutoApply)
+.AddAttribute("allocationMethod", a => a.AllocationMethod)
+.AddAttribute("weightExpression", a => a.WeightExpression)
+.AddAttribute("hideValuesRow", a => a.HideValuesRow);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotEdits), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotChanges), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormats), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueLengthConstraint(3 /*:altText*/, 0, 2000) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(4 /*:altTextSummary*/, 0, 2000) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(8 /*:weightExpression*/, 0, 65535) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":altText", 0, 2000) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":altTextSummary", 0, 2000) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":weightExpression", 0, 65535) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -1484,7 +1484,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotCacheDefinition.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "pivotCacheDefinition")]
+    [SchemaAttr("x14:pivotCacheDefinition")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PivotCacheDefinition : OpenXmlLeafElement
     {
@@ -1502,7 +1502,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "slicerData")]
+        [SchemaAttr("slicerData")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? SlicerData
@@ -1518,7 +1518,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "pivotCacheId")]
+        [SchemaAttr("pivotCacheId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? PivotCacheId
@@ -1534,7 +1534,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "supportSubqueryNonVisual")]
+        [SchemaAttr("supportSubqueryNonVisual")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? SupportSubqueryNonVisual
@@ -1550,7 +1550,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "supportSubqueryCalcMem")]
+        [SchemaAttr("supportSubqueryCalcMem")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? SupportSubqueryCalcMem
@@ -1566,7 +1566,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "supportAddCalcMems")]
+        [SchemaAttr("supportAddCalcMems")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? SupportAddCalcMems
@@ -1578,14 +1578,14 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "pivotCacheDefinition");
+            builder.SetSchema("x14:pivotCacheDefinition");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<PivotCacheDefinition>()
-.AddAttribute(0, "slicerData", a => a.SlicerData)
-.AddAttribute(0, "pivotCacheId", a => a.PivotCacheId)
-.AddAttribute(0, "supportSubqueryNonVisual", a => a.SupportSubqueryNonVisual)
-.AddAttribute(0, "supportSubqueryCalcMem", a => a.SupportSubqueryCalcMem)
-.AddAttribute(0, "supportAddCalcMems", a => a.SupportAddCalcMems);
+.AddAttribute("slicerData", a => a.SlicerData)
+.AddAttribute("pivotCacheId", a => a.PivotCacheId)
+.AddAttribute("supportSubqueryNonVisual", a => a.SupportSubqueryNonVisual)
+.AddAttribute("supportSubqueryCalcMem", a => a.SupportSubqueryCalcMem)
+.AddAttribute("supportAddCalcMems", a => a.SupportAddCalcMems);
         }
 
         /// <inheritdoc/>
@@ -1604,7 +1604,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "connection")]
+    [SchemaAttr("x14:connection")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Connection : OpenXmlCompositeElement
     {
@@ -1646,7 +1646,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "culture")]
+        [SchemaAttr("culture")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Culture
@@ -1662,7 +1662,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "embeddedDataId")]
+        [SchemaAttr("embeddedDataId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? EmbeddedDataId
@@ -1674,18 +1674,18 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "connection");
+            builder.SetSchema("x14:connection");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.CalculatedMembers>();
             builder.AddElement<Connection>()
-.AddAttribute(0, "culture", a => a.Culture)
-.AddAttribute(0, "embeddedDataId", a => a.EmbeddedDataId);
+.AddAttribute("culture", a => a.Culture)
+.AddAttribute("embeddedDataId", a => a.EmbeddedDataId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.CalculatedMembers), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:culture*/, 0, 84) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:embeddedDataId*/, 0, 65535) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":culture", 0, 84) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":embeddedDataId", 0, 65535) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -1711,7 +1711,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>When the object is serialized out as xml, it's qualified name is x14:table.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "table")]
+    [SchemaAttr("x14:table")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Table : OpenXmlLeafElement
     {
@@ -1729,7 +1729,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "altText")]
+        [SchemaAttr("altText")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? AltText
@@ -1745,7 +1745,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "altTextSummary")]
+        [SchemaAttr("altTextSummary")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? AltTextSummary
@@ -1757,13 +1757,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "table");
+            builder.SetSchema("x14:table");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<Table>()
-.AddAttribute(0, "altText", a => a.AltText)
-.AddAttribute(0, "altTextSummary", a => a.AltTextSummary);
-            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:altText*/, 0, 25000) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:altTextSummary*/, 0, 50000) { Version = FileFormatVersions.Office2010 });
+.AddAttribute("altText", a => a.AltText)
+.AddAttribute("altTextSummary", a => a.AltTextSummary);
+            builder.AddConstraint(new AttributeValueLengthConstraint(":altText", 0, 25000) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":altTextSummary", 0, 50000) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -1782,7 +1782,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "slicerStyles")]
+    [SchemaAttr("x14:slicerStyles")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SlicerStyles : OpenXmlCompositeElement
     {
@@ -1824,7 +1824,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "defaultSlicerStyle")]
+        [SchemaAttr("defaultSlicerStyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? DefaultSlicerStyle
@@ -1836,11 +1836,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "slicerStyles");
+            builder.SetSchema("x14:slicerStyles");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerStyle>();
             builder.AddElement<SlicerStyles>()
-.AddAttribute(0, "defaultSlicerStyle", a => a.DefaultSlicerStyle, aBuilder =>
+.AddAttribute("defaultSlicerStyle", a => a.DefaultSlicerStyle, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -1848,7 +1848,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerStyle), 0, 0, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:defaultSlicerStyle*/, 1, 255) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":defaultSlicerStyle", 1, 255) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -1867,7 +1867,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "dxfs")]
+    [SchemaAttr("x14:dxfs")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DifferentialFormats : OpenXmlCompositeElement
     {
@@ -1909,7 +1909,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "count")]
+        [SchemaAttr("count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Count
@@ -1921,11 +1921,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "dxfs");
+            builder.SetSchema("x14:dxfs");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat>();
             builder.AddElement<DifferentialFormats>()
-.AddAttribute(0, "count", a => a.Count);
+.AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), 0, 0)
@@ -1948,7 +1948,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "oleItem")]
+    [SchemaAttr("x14:oleItem")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class OleItem : OpenXmlCompositeElement
     {
@@ -1990,7 +1990,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "name")]
+        [SchemaAttr("name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -2006,7 +2006,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "icon")]
+        [SchemaAttr("icon")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Icon
@@ -2022,7 +2022,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "advise")]
+        [SchemaAttr("advise")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Advise
@@ -2038,7 +2038,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "preferPic")]
+        [SchemaAttr("preferPic")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? PreferPicture
@@ -2050,17 +2050,17 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "oleItem");
+            builder.SetSchema("x14:oleItem");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DdeValues>();
             builder.AddElement<OleItem>()
-.AddAttribute(0, "name", a => a.Name, aBuilder =>
+.AddAttribute("name", a => a.Name, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "icon", a => a.Icon)
-.AddAttribute(0, "advise", a => a.Advise)
-.AddAttribute(0, "preferPic", a => a.PreferPicture);
+.AddAttribute("icon", a => a.Icon)
+.AddAttribute("advise", a => a.Advise)
+.AddAttribute("preferPic", a => a.PreferPicture);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DdeValues), 0, 1, version: FileFormatVersions.Office2010)
@@ -2090,7 +2090,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotHierarchy.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "pivotHierarchy")]
+    [SchemaAttr("x14:pivotHierarchy")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PivotHierarchy : OpenXmlLeafElement
     {
@@ -2108,7 +2108,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ignore")]
+        [SchemaAttr("ignore")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Ignore
@@ -2120,10 +2120,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "pivotHierarchy");
+            builder.SetSchema("x14:pivotHierarchy");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<PivotHierarchy>()
-.AddAttribute(0, "ignore", a => a.Ignore);
+.AddAttribute("ignore", a => a.Ignore);
         }
 
         /// <inheritdoc/>
@@ -2136,7 +2136,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is x14:cacheField.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "cacheField")]
+    [SchemaAttr("x14:cacheField")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CacheField : OpenXmlLeafElement
     {
@@ -2154,7 +2154,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ignore")]
+        [SchemaAttr("ignore")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Ignore
@@ -2166,10 +2166,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "cacheField");
+            builder.SetSchema("x14:cacheField");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<CacheField>()
-.AddAttribute(0, "ignore", a => a.Ignore);
+.AddAttribute("ignore", a => a.Ignore);
         }
 
         /// <inheritdoc/>
@@ -2182,7 +2182,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is x14:id.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "id")]
+    [SchemaAttr("x14:id")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Id : OpenXmlLeafTextElement
     {
@@ -2210,7 +2210,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-            builder.SetSchema(53, "id");
+            builder.SetSchema("x14:id");
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -2224,7 +2224,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is x14:iconFilter.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "iconFilter")]
+    [SchemaAttr("x14:iconFilter")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class IconFilter : OpenXmlLeafElement
     {
@@ -2242,7 +2242,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "iconSet")]
+        [SchemaAttr("iconSet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>? IconSet
@@ -2258,7 +2258,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "iconId")]
+        [SchemaAttr("iconId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? IconId
@@ -2270,14 +2270,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "iconFilter");
+            builder.SetSchema("x14:iconFilter");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<IconFilter>()
-.AddAttribute(0, "iconSet", a => a.IconSet, aBuilder =>
+.AddAttribute("iconSet", a => a.IconSet, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "iconId", a => a.IconId, aBuilder =>
+.AddAttribute("iconId", a => a.IconId, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -2293,7 +2293,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is x14:filter.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "filter")]
+    [SchemaAttr("x14:filter")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Filter : OpenXmlLeafElement
     {
@@ -2311,7 +2311,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "val")]
+        [SchemaAttr("val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Val
@@ -2323,10 +2323,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "filter");
+            builder.SetSchema("x14:filter");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<Filter>()
-.AddAttribute(0, "val", a => a.Val);
+.AddAttribute("val", a => a.Val);
         }
 
         /// <inheritdoc/>
@@ -2345,7 +2345,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "customFilters")]
+    [SchemaAttr("x14:customFilters")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomFilters : OpenXmlCompositeElement
     {
@@ -2387,7 +2387,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "and")]
+        [SchemaAttr("and")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? And
@@ -2399,11 +2399,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "customFilters");
+            builder.SetSchema("x14:customFilters");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.CustomFilter>();
             builder.AddElement<CustomFilters>()
-.AddAttribute(0, "and", a => a.And);
+.AddAttribute("and", a => a.And);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.CustomFilter), 1, 2, version: FileFormatVersions.Office2010)
@@ -2420,7 +2420,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is x14:sortCondition.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "sortCondition")]
+    [SchemaAttr("x14:sortCondition")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SortCondition : OpenXmlLeafElement
     {
@@ -2438,7 +2438,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "descending")]
+        [SchemaAttr("descending")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Descending
@@ -2454,7 +2454,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sortBy")]
+        [SchemaAttr("sortBy")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>? SortBy
@@ -2470,7 +2470,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ref")]
+        [SchemaAttr("ref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Reference
@@ -2486,7 +2486,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "customList")]
+        [SchemaAttr("customList")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CustomList
@@ -2502,7 +2502,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "dxfId")]
+        [SchemaAttr("dxfId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? FormatId
@@ -2518,7 +2518,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "iconSet")]
+        [SchemaAttr("iconSet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>? IconSet
@@ -2534,7 +2534,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "iconId")]
+        [SchemaAttr("iconId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? IconId
@@ -2546,22 +2546,22 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "sortCondition");
+            builder.SetSchema("x14:sortCondition");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<SortCondition>()
-.AddAttribute(0, "descending", a => a.Descending)
-.AddAttribute(0, "sortBy", a => a.SortBy)
-.AddAttribute(0, "ref", a => a.Reference, aBuilder =>
+.AddAttribute("descending", a => a.Descending)
+.AddAttribute("sortBy", a => a.SortBy)
+.AddAttribute("ref", a => a.Reference, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "customList", a => a.CustomList)
-.AddAttribute(0, "dxfId", a => a.FormatId)
-.AddAttribute(0, "iconSet", a => a.IconSet)
-.AddAttribute(0, "iconId", a => a.IconId);
-            builder.AddConstraint(new AttributeAbsentConditionToValue(4 /*:dxfId*/, 1 /*:sortBy*/ , "icon", "value") { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeAbsentConditionToNonValue(5 /*:iconSet*/, 1 /*:sortBy*/ , "icon") { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeAbsentConditionToNonValue(6 /*:iconId*/, 1 /*:sortBy*/ , "icon") { Version = FileFormatVersions.Office2010 });
+.AddAttribute("customList", a => a.CustomList)
+.AddAttribute("dxfId", a => a.FormatId)
+.AddAttribute("iconSet", a => a.IconSet)
+.AddAttribute("iconId", a => a.IconId);
+            builder.AddConstraint(new AttributeAbsentConditionToValue(":dxfId", ":sortBy", "icon", "value") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeAbsentConditionToNonValue(":iconSet", ":sortBy", "icon") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeAbsentConditionToNonValue(":iconId", ":sortBy", "icon") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -2574,7 +2574,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is x14:sourceConnection.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "sourceConnection")]
+    [SchemaAttr("x14:sourceConnection")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SourceConnection : OpenXmlLeafElement
     {
@@ -2592,7 +2592,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "name")]
+        [SchemaAttr("name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -2604,10 +2604,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "sourceConnection");
+            builder.SetSchema("x14:sourceConnection");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<SourceConnection>()
-.AddAttribute(0, "name", a => a.Name, aBuilder =>
+.AddAttribute("name", a => a.Name, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -2629,7 +2629,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "datastoreItem")]
+    [SchemaAttr("x14:datastoreItem")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DatastoreItem : OpenXmlPartRootElement
     {
@@ -2671,7 +2671,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -2683,11 +2683,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "datastoreItem");
+            builder.SetSchema("x14:datastoreItem");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             builder.AddElement<DatastoreItem>()
-.AddAttribute(0, "id", a => a.Id, aBuilder =>
+.AddAttribute("id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -2695,7 +2695,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:id*/, 0, 65535) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":id", 0, 65535) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -2759,7 +2759,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "formControlPr")]
+    [SchemaAttr("x14:formControlPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FormControlProperties : OpenXmlPartRootElement
     {
@@ -2801,7 +2801,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "objectType")]
+        [SchemaAttr("objectType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.ObjectTypeValues>? ObjectType
@@ -2817,7 +2817,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "checked")]
+        [SchemaAttr("checked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.CheckedValues>? Checked
@@ -2833,7 +2833,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "colored")]
+        [SchemaAttr("colored")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Colored
@@ -2849,7 +2849,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "dropLines")]
+        [SchemaAttr("dropLines")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? DropLines
@@ -2865,7 +2865,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "dropStyle")]
+        [SchemaAttr("dropStyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DropStyleValues>? DropStyle
@@ -2881,7 +2881,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "dx")]
+        [SchemaAttr("dx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? ScrollBarWidth
@@ -2897,7 +2897,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "firstButton")]
+        [SchemaAttr("firstButton")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? FirstButton
@@ -2913,7 +2913,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fmlaGroup")]
+        [SchemaAttr("fmlaGroup")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? FmlaGroup
@@ -2929,7 +2929,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fmlaLink")]
+        [SchemaAttr("fmlaLink")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? FmlaLink
@@ -2945,7 +2945,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fmlaRange")]
+        [SchemaAttr("fmlaRange")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? FmlaRange
@@ -2961,7 +2961,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fmlaTxbx")]
+        [SchemaAttr("fmlaTxbx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? FmlaTextbox
@@ -2977,7 +2977,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "horiz")]
+        [SchemaAttr("horiz")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Horizontal
@@ -2993,7 +2993,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "inc")]
+        [SchemaAttr("inc")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Incremental
@@ -3009,7 +3009,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "justLastX")]
+        [SchemaAttr("justLastX")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? JustLastX
@@ -3025,7 +3025,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "lockText")]
+        [SchemaAttr("lockText")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? LockText
@@ -3041,7 +3041,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "max")]
+        [SchemaAttr("max")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Max
@@ -3057,7 +3057,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "min")]
+        [SchemaAttr("min")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Min
@@ -3073,7 +3073,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "multiSel")]
+        [SchemaAttr("multiSel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? MultipleSelection
@@ -3089,7 +3089,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "noThreeD")]
+        [SchemaAttr("noThreeD")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? NoThreeD
@@ -3105,7 +3105,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "noThreeD2")]
+        [SchemaAttr("noThreeD2")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? NoThreeD2
@@ -3121,7 +3121,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "page")]
+        [SchemaAttr("page")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Page
@@ -3137,7 +3137,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sel")]
+        [SchemaAttr("sel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Selected
@@ -3153,7 +3153,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "seltype")]
+        [SchemaAttr("seltype")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SelectionTypeValues>? SelectionType
@@ -3169,7 +3169,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "textHAlign")]
+        [SchemaAttr("textHAlign")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TextHorizontalAlignmentValues>? TextHorizontalAlign
@@ -3185,7 +3185,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "textVAlign")]
+        [SchemaAttr("textVAlign")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TextVerticalAlignmentValues>? TextVerticalAlign
@@ -3201,7 +3201,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "val")]
+        [SchemaAttr("val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Val
@@ -3217,7 +3217,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "widthMin")]
+        [SchemaAttr("widthMin")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? MinimumWidth
@@ -3233,7 +3233,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "editVal")]
+        [SchemaAttr("editVal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.EditValidationValues>? EditVal
@@ -3249,7 +3249,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "multiLine")]
+        [SchemaAttr("multiLine")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? MultipleLines
@@ -3265,7 +3265,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "verticalBar")]
+        [SchemaAttr("verticalBar")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? VerticalBar
@@ -3281,7 +3281,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "passwordEdit")]
+        [SchemaAttr("passwordEdit")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? PasswordEdit
@@ -3293,67 +3293,67 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "formControlPr");
+            builder.SetSchema("x14:formControlPr");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ListItems>();
             builder.AddElement<FormControlProperties>()
-.AddAttribute(0, "objectType", a => a.ObjectType, aBuilder =>
+.AddAttribute("objectType", a => a.ObjectType, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "checked", a => a.Checked, aBuilder =>
+.AddAttribute("checked", a => a.Checked, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "colored", a => a.Colored)
-.AddAttribute(0, "dropLines", a => a.DropLines)
-.AddAttribute(0, "dropStyle", a => a.DropStyle, aBuilder =>
+.AddAttribute("colored", a => a.Colored)
+.AddAttribute("dropLines", a => a.DropLines)
+.AddAttribute("dropStyle", a => a.DropStyle, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "dx", a => a.ScrollBarWidth)
-.AddAttribute(0, "firstButton", a => a.FirstButton)
-.AddAttribute(0, "fmlaGroup", a => a.FmlaGroup)
-.AddAttribute(0, "fmlaLink", a => a.FmlaLink)
-.AddAttribute(0, "fmlaRange", a => a.FmlaRange)
-.AddAttribute(0, "fmlaTxbx", a => a.FmlaTextbox)
-.AddAttribute(0, "horiz", a => a.Horizontal)
-.AddAttribute(0, "inc", a => a.Incremental)
-.AddAttribute(0, "justLastX", a => a.JustLastX)
-.AddAttribute(0, "lockText", a => a.LockText)
-.AddAttribute(0, "max", a => a.Max)
-.AddAttribute(0, "min", a => a.Min)
-.AddAttribute(0, "multiSel", a => a.MultipleSelection)
-.AddAttribute(0, "noThreeD", a => a.NoThreeD)
-.AddAttribute(0, "noThreeD2", a => a.NoThreeD2)
-.AddAttribute(0, "page", a => a.Page)
-.AddAttribute(0, "sel", a => a.Selected)
-.AddAttribute(0, "seltype", a => a.SelectionType, aBuilder =>
+.AddAttribute("dx", a => a.ScrollBarWidth)
+.AddAttribute("firstButton", a => a.FirstButton)
+.AddAttribute("fmlaGroup", a => a.FmlaGroup)
+.AddAttribute("fmlaLink", a => a.FmlaLink)
+.AddAttribute("fmlaRange", a => a.FmlaRange)
+.AddAttribute("fmlaTxbx", a => a.FmlaTextbox)
+.AddAttribute("horiz", a => a.Horizontal)
+.AddAttribute("inc", a => a.Incremental)
+.AddAttribute("justLastX", a => a.JustLastX)
+.AddAttribute("lockText", a => a.LockText)
+.AddAttribute("max", a => a.Max)
+.AddAttribute("min", a => a.Min)
+.AddAttribute("multiSel", a => a.MultipleSelection)
+.AddAttribute("noThreeD", a => a.NoThreeD)
+.AddAttribute("noThreeD2", a => a.NoThreeD2)
+.AddAttribute("page", a => a.Page)
+.AddAttribute("sel", a => a.Selected)
+.AddAttribute("seltype", a => a.SelectionType, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "textHAlign", a => a.TextHorizontalAlign)
-.AddAttribute(0, "textVAlign", a => a.TextVerticalAlign)
-.AddAttribute(0, "val", a => a.Val)
-.AddAttribute(0, "widthMin", a => a.MinimumWidth)
-.AddAttribute(0, "editVal", a => a.EditVal, aBuilder =>
+.AddAttribute("textHAlign", a => a.TextHorizontalAlign)
+.AddAttribute("textVAlign", a => a.TextVerticalAlign)
+.AddAttribute("val", a => a.Val)
+.AddAttribute("widthMin", a => a.MinimumWidth)
+.AddAttribute("editVal", a => a.EditVal, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "multiLine", a => a.MultipleLines)
-.AddAttribute(0, "verticalBar", a => a.VerticalBar)
-.AddAttribute(0, "passwordEdit", a => a.PasswordEdit);
+.AddAttribute("multiLine", a => a.MultipleLines)
+.AddAttribute("verticalBar", a => a.VerticalBar)
+.AddAttribute("passwordEdit", a => a.PasswordEdit);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ListItems), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueRangeConstraint(3 /*:dropLines*/, true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueRangeConstraint(12 /*:inc*/, true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueRangeConstraint(15 /*:max*/, true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueRangeConstraint(16 /*:min*/, true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueRangeConstraint(20 /*:page*/, true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(":dropLines", true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(":inc", true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(":max", true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(":min", true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(":page", true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -3429,7 +3429,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "slicers")]
+    [SchemaAttr("x14:slicers")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Slicers : OpenXmlPartRootElement
     {
@@ -3467,7 +3467,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "slicers");
+            builder.SetSchema("x14:slicers");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Slicer>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -3525,7 +3525,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "slicerCacheDefinition")]
+    [SchemaAttr("x14:slicerCacheDefinition")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SlicerCacheDefinition : OpenXmlPartRootElement
     {
@@ -3567,7 +3567,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "name")]
+        [SchemaAttr("name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -3583,7 +3583,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sourceName")]
+        [SchemaAttr("sourceName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? SourceName
@@ -3595,17 +3595,17 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "slicerCacheDefinition");
+            builder.SetSchema("x14:slicerCacheDefinition");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheDefinitionExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheData>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTables>();
             builder.AddElement<SlicerCacheDefinition>()
-.AddAttribute(0, "name", a => a.Name, aBuilder =>
+.AddAttribute("name", a => a.Name, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "sourceName", a => a.SourceName, aBuilder =>
+.AddAttribute("sourceName", a => a.SourceName, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -3705,7 +3705,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "conditionalFormatting")]
+    [SchemaAttr("x14:conditionalFormatting")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ConditionalFormatting : OpenXmlCompositeElement
     {
@@ -3747,7 +3747,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "pivot")]
+        [SchemaAttr("pivot")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Pivot
@@ -3759,13 +3759,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "conditionalFormatting");
+            builder.SetSchema("x14:conditionalFormatting");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingRule>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
             builder.AddElement<ConditionalFormatting>()
-.AddAttribute(0, "pivot", a => a.Pivot);
+.AddAttribute("pivot", a => a.Pivot);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingRule), 0, 0, version: FileFormatVersions.Office2010),
@@ -3795,7 +3795,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "cfRule")]
+    [SchemaAttr("x14:cfRule")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ConditionalFormattingRule : OpenXmlCompositeElement
     {
@@ -3837,7 +3837,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "type")]
+        [SchemaAttr("type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValues>? Type
@@ -3853,7 +3853,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "priority")]
+        [SchemaAttr("priority")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? Priority
@@ -3869,7 +3869,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "stopIfTrue")]
+        [SchemaAttr("stopIfTrue")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? StopIfTrue
@@ -3885,7 +3885,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "aboveAverage")]
+        [SchemaAttr("aboveAverage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? AboveAverage
@@ -3901,7 +3901,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "percent")]
+        [SchemaAttr("percent")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Percent
@@ -3917,7 +3917,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "bottom")]
+        [SchemaAttr("bottom")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Bottom
@@ -3933,7 +3933,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "operator")]
+        [SchemaAttr("operator")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingOperatorValues>? Operator
@@ -3949,7 +3949,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "text")]
+        [SchemaAttr("text")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Text
@@ -3965,7 +3965,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "timePeriod")]
+        [SchemaAttr("timePeriod")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TimePeriodValues>? TimePeriod
@@ -3981,7 +3981,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rank")]
+        [SchemaAttr("rank")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Rank
@@ -3997,7 +3997,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "stdDev")]
+        [SchemaAttr("stdDev")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? StandardDeviation
@@ -4013,7 +4013,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "equalAverage")]
+        [SchemaAttr("equalAverage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? EqualAverage
@@ -4029,7 +4029,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "activePresent")]
+        [SchemaAttr("activePresent")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ActivePresent
@@ -4045,7 +4045,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -4057,7 +4057,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "cfRule");
+            builder.SetSchema("x14:cfRule");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DifferentialType>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
@@ -4066,20 +4066,20 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DataBar>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.IconSet>();
             builder.AddElement<ConditionalFormattingRule>()
-.AddAttribute(0, "type", a => a.Type)
-.AddAttribute(0, "priority", a => a.Priority)
-.AddAttribute(0, "stopIfTrue", a => a.StopIfTrue)
-.AddAttribute(0, "aboveAverage", a => a.AboveAverage)
-.AddAttribute(0, "percent", a => a.Percent)
-.AddAttribute(0, "bottom", a => a.Bottom)
-.AddAttribute(0, "operator", a => a.Operator)
-.AddAttribute(0, "text", a => a.Text)
-.AddAttribute(0, "timePeriod", a => a.TimePeriod)
-.AddAttribute(0, "rank", a => a.Rank)
-.AddAttribute(0, "stdDev", a => a.StandardDeviation)
-.AddAttribute(0, "equalAverage", a => a.EqualAverage)
-.AddAttribute(0, "activePresent", a => a.ActivePresent)
-.AddAttribute(0, "id", a => a.Id, aBuilder =>
+.AddAttribute("type", a => a.Type)
+.AddAttribute("priority", a => a.Priority)
+.AddAttribute("stopIfTrue", a => a.StopIfTrue)
+.AddAttribute("aboveAverage", a => a.AboveAverage)
+.AddAttribute("percent", a => a.Percent)
+.AddAttribute("bottom", a => a.Bottom)
+.AddAttribute("operator", a => a.Operator)
+.AddAttribute("text", a => a.Text)
+.AddAttribute("timePeriod", a => a.TimePeriod)
+.AddAttribute("rank", a => a.Rank)
+.AddAttribute("stdDev", a => a.StandardDeviation)
+.AddAttribute("equalAverage", a => a.EqualAverage)
+.AddAttribute("activePresent", a => a.ActivePresent)
+.AddAttribute("id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
@@ -4092,15 +4092,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DifferentialType), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:priority*/, true, 0, false, double.PositiveInfinity, true) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new UniqueAttributeValueConstraint(1 /*:priority*/, true, null) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeAbsentConditionToNonValue(3 /*:aboveAverage*/, 0 /*:type*/ , "aboveAverage") { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeAbsentConditionToNonValue(4 /*:percent*/, 0 /*:type*/ , "top10") { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeAbsentConditionToNonValue(5 /*:bottom*/, 0 /*:type*/ , "top10") { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeAbsentConditionToNonValue(7 /*:text*/, 0 /*:type*/ , "beginsWith", "containsText", "endsWith", "notContainsText") { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeAbsentConditionToNonValue(8 /*:timePeriod*/, 0 /*:type*/ , "timePeriod") { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeAbsentConditionToNonValue(10 /*:stdDev*/, 0 /*:type*/ , "aboveAverage") { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeAbsentConditionToNonValue(11 /*:equalAverage*/, 0 /*:type*/ , "aboveAverage") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(":priority", true, 0, false, double.PositiveInfinity, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":priority", true, null) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeAbsentConditionToNonValue(":aboveAverage", ":type", "aboveAverage") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeAbsentConditionToNonValue(":percent", ":type", "top10") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeAbsentConditionToNonValue(":bottom", ":type", "top10") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeAbsentConditionToNonValue(":text", ":type", "beginsWith", "containsText", "endsWith", "notContainsText") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeAbsentConditionToNonValue(":timePeriod", ":type", "timePeriod") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeAbsentConditionToNonValue(":stdDev", ":type", "aboveAverage") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeAbsentConditionToNonValue(":equalAverage", ":type", "aboveAverage") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -4119,7 +4119,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "extLst")]
+    [SchemaAttr("x14:extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ExtensionList : OpenXmlCompositeElement
     {
@@ -4157,7 +4157,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "extLst");
+            builder.SetSchema("x14:extLst");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -4190,7 +4190,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "dataValidation")]
+    [SchemaAttr("x14:dataValidation")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataValidation : OpenXmlCompositeElement
     {
@@ -4232,7 +4232,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "type")]
+        [SchemaAttr("type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues>? Type
@@ -4248,7 +4248,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "errorStyle")]
+        [SchemaAttr("errorStyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues>? ErrorStyle
@@ -4264,7 +4264,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "imeMode")]
+        [SchemaAttr("imeMode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues>? ImeMode
@@ -4280,7 +4280,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "operator")]
+        [SchemaAttr("operator")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues>? Operator
@@ -4296,7 +4296,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "allowBlank")]
+        [SchemaAttr("allowBlank")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? AllowBlank
@@ -4312,7 +4312,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "showDropDown")]
+        [SchemaAttr("showDropDown")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ShowDropDown
@@ -4328,7 +4328,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "showInputMessage")]
+        [SchemaAttr("showInputMessage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ShowInputMessage
@@ -4344,7 +4344,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "showErrorMessage")]
+        [SchemaAttr("showErrorMessage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ShowErrorMessage
@@ -4360,7 +4360,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "errorTitle")]
+        [SchemaAttr("errorTitle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ErrorTitle
@@ -4376,7 +4376,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "error")]
+        [SchemaAttr("error")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Error
@@ -4392,7 +4392,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "promptTitle")]
+        [SchemaAttr("promptTitle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? PromptTitle
@@ -4408,7 +4408,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "prompt")]
+        [SchemaAttr("prompt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Prompt
@@ -4420,33 +4420,33 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "dataValidation");
+            builder.SetSchema("x14:dataValidation");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla1>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla2>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
             builder.AddElement<DataValidation>()
-.AddAttribute(0, "type", a => a.Type)
-.AddAttribute(0, "errorStyle", a => a.ErrorStyle)
-.AddAttribute(0, "imeMode", a => a.ImeMode)
-.AddAttribute(0, "operator", a => a.Operator)
-.AddAttribute(0, "allowBlank", a => a.AllowBlank)
-.AddAttribute(0, "showDropDown", a => a.ShowDropDown)
-.AddAttribute(0, "showInputMessage", a => a.ShowInputMessage)
-.AddAttribute(0, "showErrorMessage", a => a.ShowErrorMessage)
-.AddAttribute(0, "errorTitle", a => a.ErrorTitle)
-.AddAttribute(0, "error", a => a.Error)
-.AddAttribute(0, "promptTitle", a => a.PromptTitle)
-.AddAttribute(0, "prompt", a => a.Prompt);
+.AddAttribute("type", a => a.Type)
+.AddAttribute("errorStyle", a => a.ErrorStyle)
+.AddAttribute("imeMode", a => a.ImeMode)
+.AddAttribute("operator", a => a.Operator)
+.AddAttribute("allowBlank", a => a.AllowBlank)
+.AddAttribute("showDropDown", a => a.ShowDropDown)
+.AddAttribute("showInputMessage", a => a.ShowInputMessage)
+.AddAttribute("showErrorMessage", a => a.ShowErrorMessage)
+.AddAttribute("errorTitle", a => a.ErrorTitle)
+.AddAttribute("error", a => a.Error)
+.AddAttribute("promptTitle", a => a.PromptTitle)
+.AddAttribute("prompt", a => a.Prompt);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla1), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla2), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.ReferenceSequence), 1, 1)
             };
-            builder.AddConstraint(new AttributeValueLengthConstraint(9 /*:error*/, 0, 225) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(10 /*:promptTitle*/, 0, 32) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(11 /*:prompt*/, 0, 225) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":error", 0, 225) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":promptTitle", 0, 32) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":prompt", 0, 225) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -4504,7 +4504,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "formula1")]
+    [SchemaAttr("x14:formula1")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataValidationForumla1 : DataValidationFormulaType
     {
@@ -4542,7 +4542,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "formula1");
+            builder.SetSchema("x14:formula1");
             builder.Availability = FileFormatVersions.Office2010;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -4566,7 +4566,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "formula2")]
+    [SchemaAttr("x14:formula2")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataValidationForumla2 : DataValidationFormulaType
     {
@@ -4604,7 +4604,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "formula2");
+            builder.SetSchema("x14:formula2");
             builder.Availability = FileFormatVersions.Office2010;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -4701,7 +4701,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "sparklineGroup")]
+    [SchemaAttr("x14:sparklineGroup")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SparklineGroup : OpenXmlCompositeElement
     {
@@ -4743,7 +4743,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "manualMax")]
+        [SchemaAttr("manualMax")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public DoubleValue? ManualMax
@@ -4759,7 +4759,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "manualMin")]
+        [SchemaAttr("manualMin")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public DoubleValue? ManualMin
@@ -4775,7 +4775,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "lineWeight")]
+        [SchemaAttr("lineWeight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public DoubleValue? LineWeight
@@ -4791,7 +4791,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "type")]
+        [SchemaAttr("type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineTypeValues>? Type
@@ -4807,7 +4807,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "dateAxis")]
+        [SchemaAttr("dateAxis")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? DateAxis
@@ -4823,7 +4823,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "displayEmptyCellsAs")]
+        [SchemaAttr("displayEmptyCellsAs")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DisplayBlanksAsValues>? DisplayEmptyCellsAs
@@ -4839,7 +4839,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "markers")]
+        [SchemaAttr("markers")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Markers
@@ -4855,7 +4855,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "high")]
+        [SchemaAttr("high")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? High
@@ -4871,7 +4871,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "low")]
+        [SchemaAttr("low")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Low
@@ -4887,7 +4887,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "first")]
+        [SchemaAttr("first")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? First
@@ -4903,7 +4903,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "last")]
+        [SchemaAttr("last")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Last
@@ -4919,7 +4919,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "negative")]
+        [SchemaAttr("negative")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Negative
@@ -4935,7 +4935,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "displayXAxis")]
+        [SchemaAttr("displayXAxis")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? DisplayXAxis
@@ -4951,7 +4951,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "displayHidden")]
+        [SchemaAttr("displayHidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? DisplayHidden
@@ -4967,7 +4967,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "minAxisType")]
+        [SchemaAttr("minAxisType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues>? MinAxisType
@@ -4983,7 +4983,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "maxAxisType")]
+        [SchemaAttr("maxAxisType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues>? MaxAxisType
@@ -4999,7 +4999,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rightToLeft")]
+        [SchemaAttr("rightToLeft")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? RightToLeft
@@ -5011,7 +5011,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "sparklineGroup");
+            builder.SetSchema("x14:sparklineGroup");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SeriesColor>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.NegativeColor>();
@@ -5024,23 +5024,23 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Sparklines>();
             builder.AddElement<SparklineGroup>()
-.AddAttribute(0, "manualMax", a => a.ManualMax)
-.AddAttribute(0, "manualMin", a => a.ManualMin)
-.AddAttribute(0, "lineWeight", a => a.LineWeight)
-.AddAttribute(0, "type", a => a.Type)
-.AddAttribute(0, "dateAxis", a => a.DateAxis)
-.AddAttribute(0, "displayEmptyCellsAs", a => a.DisplayEmptyCellsAs)
-.AddAttribute(0, "markers", a => a.Markers)
-.AddAttribute(0, "high", a => a.High)
-.AddAttribute(0, "low", a => a.Low)
-.AddAttribute(0, "first", a => a.First)
-.AddAttribute(0, "last", a => a.Last)
-.AddAttribute(0, "negative", a => a.Negative)
-.AddAttribute(0, "displayXAxis", a => a.DisplayXAxis)
-.AddAttribute(0, "displayHidden", a => a.DisplayHidden)
-.AddAttribute(0, "minAxisType", a => a.MinAxisType)
-.AddAttribute(0, "maxAxisType", a => a.MaxAxisType)
-.AddAttribute(0, "rightToLeft", a => a.RightToLeft);
+.AddAttribute("manualMax", a => a.ManualMax)
+.AddAttribute("manualMin", a => a.ManualMin)
+.AddAttribute("lineWeight", a => a.LineWeight)
+.AddAttribute("type", a => a.Type)
+.AddAttribute("dateAxis", a => a.DateAxis)
+.AddAttribute("displayEmptyCellsAs", a => a.DisplayEmptyCellsAs)
+.AddAttribute("markers", a => a.Markers)
+.AddAttribute("high", a => a.High)
+.AddAttribute("low", a => a.Low)
+.AddAttribute("first", a => a.First)
+.AddAttribute("last", a => a.Last)
+.AddAttribute("negative", a => a.Negative)
+.AddAttribute("displayXAxis", a => a.DisplayXAxis)
+.AddAttribute("displayHidden", a => a.DisplayHidden)
+.AddAttribute("minAxisType", a => a.MinAxisType)
+.AddAttribute("maxAxisType", a => a.MaxAxisType)
+.AddAttribute("rightToLeft", a => a.RightToLeft);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SeriesColor), 0, 1, version: FileFormatVersions.Office2010),
@@ -5054,8 +5054,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Formula), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Sparklines), 1, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueConditionToAnother(1 /*:manualMin*/, 14 /*:minAxisType*/, new string[] { "0" }, new string[] { "individual", "group" }) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueRangeConstraint(2 /*:lineWeight*/, true, 0, true, 1584, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueConditionToAnother(":manualMin", ":minAxisType", new string[] { "0" }, new string[] { "individual", "group" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(":lineWeight", true, 0, true, 1584, true) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -5198,7 +5198,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorSeries.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "colorSeries")]
+    [SchemaAttr("x14:colorSeries")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SeriesColor : ColorType
     {
@@ -5212,9 +5212,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "colorSeries");
+            builder.SetSchema("x14:colorSeries");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint(":auto", true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -5227,7 +5227,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorNegative.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "colorNegative")]
+    [SchemaAttr("x14:colorNegative")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class NegativeColor : ColorType
     {
@@ -5241,9 +5241,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "colorNegative");
+            builder.SetSchema("x14:colorNegative");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint(":auto", true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -5256,7 +5256,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorAxis.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "colorAxis")]
+    [SchemaAttr("x14:colorAxis")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AxisColor : ColorType
     {
@@ -5270,9 +5270,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "colorAxis");
+            builder.SetSchema("x14:colorAxis");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint(":auto", true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -5285,7 +5285,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorMarkers.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "colorMarkers")]
+    [SchemaAttr("x14:colorMarkers")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class MarkersColor : ColorType
     {
@@ -5299,9 +5299,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "colorMarkers");
+            builder.SetSchema("x14:colorMarkers");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint(":auto", true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -5314,7 +5314,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorFirst.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "colorFirst")]
+    [SchemaAttr("x14:colorFirst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FirstMarkerColor : ColorType
     {
@@ -5328,9 +5328,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "colorFirst");
+            builder.SetSchema("x14:colorFirst");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint(":auto", true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -5343,7 +5343,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorLast.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "colorLast")]
+    [SchemaAttr("x14:colorLast")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class LastMarkerColor : ColorType
     {
@@ -5357,9 +5357,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "colorLast");
+            builder.SetSchema("x14:colorLast");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint(":auto", true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -5372,7 +5372,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorHigh.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "colorHigh")]
+    [SchemaAttr("x14:colorHigh")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class HighMarkerColor : ColorType
     {
@@ -5386,9 +5386,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "colorHigh");
+            builder.SetSchema("x14:colorHigh");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint(":auto", true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -5401,7 +5401,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorLow.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "colorLow")]
+    [SchemaAttr("x14:colorLow")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class LowMarkerColor : ColorType
     {
@@ -5415,7 +5415,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "colorLow");
+            builder.SetSchema("x14:colorLow");
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -5429,7 +5429,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is x14:color.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "color")]
+    [SchemaAttr("x14:color")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Color : ColorType
     {
@@ -5443,7 +5443,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "color");
+            builder.SetSchema("x14:color");
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -5457,7 +5457,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is x14:fillColor.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "fillColor")]
+    [SchemaAttr("x14:fillColor")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FillColor : ColorType
     {
@@ -5471,7 +5471,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "fillColor");
+            builder.SetSchema("x14:fillColor");
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -5485,7 +5485,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is x14:borderColor.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "borderColor")]
+    [SchemaAttr("x14:borderColor")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class BorderColor : ColorType
     {
@@ -5499,7 +5499,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "borderColor");
+            builder.SetSchema("x14:borderColor");
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -5513,7 +5513,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is x14:negativeFillColor.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "negativeFillColor")]
+    [SchemaAttr("x14:negativeFillColor")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class NegativeFillColor : ColorType
     {
@@ -5527,7 +5527,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "negativeFillColor");
+            builder.SetSchema("x14:negativeFillColor");
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -5541,7 +5541,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is x14:negativeBorderColor.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "negativeBorderColor")]
+    [SchemaAttr("x14:negativeBorderColor")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class NegativeBorderColor : ColorType
     {
@@ -5555,7 +5555,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "negativeBorderColor");
+            builder.SetSchema("x14:negativeBorderColor");
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -5569,7 +5569,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is x14:axisColor.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "axisColor")]
+    [SchemaAttr("x14:axisColor")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class BarAxisColor : ColorType
     {
@@ -5583,7 +5583,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "axisColor");
+            builder.SetSchema("x14:axisColor");
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -5612,7 +5612,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "auto")]
+        [SchemaAttr("auto")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Auto
@@ -5628,7 +5628,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "indexed")]
+        [SchemaAttr("indexed")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Indexed
@@ -5644,7 +5644,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rgb")]
+        [SchemaAttr("rgb")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public HexBinaryValue? Rgb
@@ -5660,7 +5660,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "theme")]
+        [SchemaAttr("theme")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Theme
@@ -5676,7 +5676,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "tint")]
+        [SchemaAttr("tint")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public DoubleValue? Tint
@@ -5689,14 +5689,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<ColorType>()
-                           .AddAttribute(0, "auto", a => a.Auto)
-                           .AddAttribute(0, "indexed", a => a.Indexed)
-                           .AddAttribute(0, "rgb", a => a.Rgb, aBuilder =>
+                           .AddAttribute("auto", a => a.Auto)
+                           .AddAttribute("indexed", a => a.Indexed)
+                           .AddAttribute("rgb", a => a.Rgb, aBuilder =>
                            {
                                aBuilder.AddValidator(new StringValidator() { Length = (4L) });
                            })
-                           .AddAttribute(0, "theme", a => a.Theme)
-                           .AddAttribute(0, "tint", a => a.Tint);
+                           .AddAttribute("theme", a => a.Theme)
+                           .AddAttribute("tint", a => a.Tint);
         }
     }
 
@@ -5712,7 +5712,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "sparklines")]
+    [SchemaAttr("x14:sparklines")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Sparklines : OpenXmlCompositeElement
     {
@@ -5750,7 +5750,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "sparklines");
+            builder.SetSchema("x14:sparklines");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Sparkline>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -5776,7 +5776,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "sparkline")]
+    [SchemaAttr("x14:sparkline")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Sparkline : OpenXmlCompositeElement
     {
@@ -5814,7 +5814,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "sparkline");
+            builder.SetSchema("x14:sparkline");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
@@ -5861,7 +5861,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicer.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "slicer")]
+    [SchemaAttr("x14:slicer")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SlicerRef : OpenXmlLeafElement
     {
@@ -5882,7 +5882,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "id")]
+        [SchemaAttr("r:id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -5894,14 +5894,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "slicer");
+            builder.SetSchema("x14:slicer");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<SlicerRef>()
-.AddAttribute(19, "id", a => a.Id, aBuilder =>
+.AddAttribute("r:id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.AddConstraint(new RelationshipExistConstraint(0 /*r:id*/) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", false, null) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":name", 1, 32767) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":caption", 1, int.MaxValue) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(":columnCount", true, 1, true, 20000, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new RelationshipExistConstraint("r:id") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -5914,7 +5918,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicerCache.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "slicerCache")]
+    [SchemaAttr("x14:slicerCache")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SlicerCache : OpenXmlLeafElement
     {
@@ -5935,7 +5939,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "id")]
+        [SchemaAttr("r:id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -5947,14 +5951,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "slicerCache");
+            builder.SetSchema("x14:slicerCache");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<SlicerCache>()
-.AddAttribute(19, "id", a => a.Id, aBuilder =>
+.AddAttribute("r:id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.AddConstraint(new RelationshipExistConstraint(0 /*r:id*/) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new RelationshipExistConstraint("r:id") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -5973,7 +5977,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "definedName")]
+    [SchemaAttr("x14:definedName")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DefinedName : OpenXmlCompositeElement
     {
@@ -6015,7 +6019,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "name")]
+        [SchemaAttr("name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -6027,11 +6031,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "definedName");
+            builder.SetSchema("x14:definedName");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescriptions>();
             builder.AddElement<DefinedName>()
-.AddAttribute(0, "name", a => a.Name, aBuilder =>
+.AddAttribute("name", a => a.Name, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -6039,7 +6043,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescriptions), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:name*/, true, typeof(DocumentFormat.OpenXml.Office2010.Excel.DefinedNames)) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", true, "x14:definedNames") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -6071,7 +6075,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "argumentDescriptions")]
+    [SchemaAttr("x14:argumentDescriptions")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ArgumentDescriptions : OpenXmlCompositeElement
     {
@@ -6113,7 +6117,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "count")]
+        [SchemaAttr("count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Count
@@ -6125,11 +6129,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "argumentDescriptions");
+            builder.SetSchema("x14:argumentDescriptions");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescription>();
             builder.AddElement<ArgumentDescriptions>()
-.AddAttribute(0, "count", a => a.Count);
+.AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescription), 1, 0, version: FileFormatVersions.Office2010)
@@ -6146,7 +6150,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is x14:argumentDescription.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "argumentDescription")]
+    [SchemaAttr("x14:argumentDescription")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ArgumentDescription : OpenXmlLeafTextElement
     {
@@ -6177,7 +6181,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "index")]
+        [SchemaAttr("index")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Index
@@ -6189,14 +6193,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "argumentDescription");
+            builder.SetSchema("x14:argumentDescription");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArgumentDescription>()
-.AddAttribute(0, "index", a => a.Index, aBuilder =>
+.AddAttribute("index", a => a.Index, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:index*/, true, typeof(DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescriptions)) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":index", true, "x14:argumentDescriptions") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -6216,7 +6220,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "tupleSet")]
+    [SchemaAttr("x14:tupleSet")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TupleSet : OpenXmlCompositeElement
     {
@@ -6258,7 +6262,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rowCount")]
+        [SchemaAttr("rowCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? RowCount
@@ -6274,7 +6278,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "columnCount")]
+        [SchemaAttr("columnCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? ColumnCount
@@ -6286,13 +6290,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "tupleSet");
+            builder.SetSchema("x14:tupleSet");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TupleSetHeaders>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TupleSetRows>();
             builder.AddElement<TupleSet>()
-.AddAttribute(0, "rowCount", a => a.RowCount)
-.AddAttribute(0, "columnCount", a => a.ColumnCount);
+.AddAttribute("rowCount", a => a.RowCount)
+.AddAttribute("columnCount", a => a.ColumnCount);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.TupleSetHeaders), 1, 1, version: FileFormatVersions.Office2010),
@@ -6342,7 +6346,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "headers")]
+    [SchemaAttr("x14:headers")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TupleSetHeaders : OpenXmlCompositeElement
     {
@@ -6380,7 +6384,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "headers");
+            builder.SetSchema("x14:headers");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TupleSetHeader>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -6405,7 +6409,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "rows")]
+    [SchemaAttr("x14:rows")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TupleSetRows : OpenXmlCompositeElement
     {
@@ -6443,7 +6447,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "rows");
+            builder.SetSchema("x14:rows");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TupleSetRow>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -6462,7 +6466,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is x14:header.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "header")]
+    [SchemaAttr("x14:header")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TupleSetHeader : OpenXmlLeafElement
     {
@@ -6480,7 +6484,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uniqueName")]
+        [SchemaAttr("uniqueName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? UniqueName
@@ -6496,7 +6500,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "hierarchyName")]
+        [SchemaAttr("hierarchyName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? HierarchyName
@@ -6508,13 +6512,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "header");
+            builder.SetSchema("x14:header");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<TupleSetHeader>()
-.AddAttribute(0, "uniqueName", a => a.UniqueName)
-.AddAttribute(0, "hierarchyName", a => a.HierarchyName);
-            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:uniqueName*/, 0, 65535) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:hierarchyName*/, 0, 65535) { Version = FileFormatVersions.Office2010 });
+.AddAttribute("uniqueName", a => a.UniqueName)
+.AddAttribute("hierarchyName", a => a.HierarchyName);
+            builder.AddConstraint(new AttributeValueLengthConstraint(":uniqueName", 0, 65535) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":hierarchyName", 0, 65535) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -6533,7 +6537,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "row")]
+    [SchemaAttr("x14:row")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TupleSetRow : OpenXmlCompositeElement
     {
@@ -6571,7 +6575,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "row");
+            builder.SetSchema("x14:row");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TupleSetRowItem>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -6590,7 +6594,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is x14:rowItem.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "rowItem")]
+    [SchemaAttr("x14:rowItem")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TupleSetRowItem : OpenXmlLeafElement
     {
@@ -6608,7 +6612,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "u")]
+        [SchemaAttr("u")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? UniqueName
@@ -6624,7 +6628,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "d")]
+        [SchemaAttr("d")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? DisplayName
@@ -6636,13 +6640,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "rowItem");
+            builder.SetSchema("x14:rowItem");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<TupleSetRowItem>()
-.AddAttribute(0, "u", a => a.UniqueName)
-.AddAttribute(0, "d", a => a.DisplayName);
-            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:u*/, 0, 65535) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:d*/, 0, 65535) { Version = FileFormatVersions.Office2010 });
+.AddAttribute("u", a => a.UniqueName)
+.AddAttribute("d", a => a.DisplayName);
+            builder.AddConstraint(new AttributeValueLengthConstraint(":u", 0, 65535) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":d", 0, 65535) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -6655,7 +6659,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is x14:setLevel.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "setLevel")]
+    [SchemaAttr("x14:setLevel")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SetLevel : OpenXmlLeafElement
     {
@@ -6673,7 +6677,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "hierarchy")]
+        [SchemaAttr("hierarchy")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? Hierarchy
@@ -6685,14 +6689,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "setLevel");
+            builder.SetSchema("x14:setLevel");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<SetLevel>()
-.AddAttribute(0, "hierarchy", a => a.Hierarchy, aBuilder =>
+.AddAttribute("hierarchy", a => a.Hierarchy, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:hierarchy*/, true, -2, true, double.PositiveInfinity, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(":hierarchy", true, -2, true, double.PositiveInfinity, true) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -6711,7 +6715,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "setLevels")]
+    [SchemaAttr("x14:setLevels")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SetLevels : OpenXmlCompositeElement
     {
@@ -6753,7 +6757,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "count")]
+        [SchemaAttr("count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Count
@@ -6765,11 +6769,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "setLevels");
+            builder.SetSchema("x14:setLevels");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SetLevel>();
             builder.AddElement<SetLevels>()
-.AddAttribute(0, "count", a => a.Count);
+.AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SetLevel), 1, 0, version: FileFormatVersions.Office2010)
@@ -6793,7 +6797,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "colorScale")]
+    [SchemaAttr("x14:colorScale")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColorScale : OpenXmlCompositeElement
     {
@@ -6831,7 +6835,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "colorScale");
+            builder.SetSchema("x14:colorScale");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Color>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject>();
@@ -6863,7 +6867,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "dataBar")]
+    [SchemaAttr("x14:dataBar")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataBar : OpenXmlCompositeElement
     {
@@ -6905,7 +6909,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "minLength")]
+        [SchemaAttr("minLength")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? MinLength
@@ -6921,7 +6925,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "maxLength")]
+        [SchemaAttr("maxLength")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? MaxLength
@@ -6937,7 +6941,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "showValue")]
+        [SchemaAttr("showValue")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ShowValue
@@ -6953,7 +6957,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "border")]
+        [SchemaAttr("border")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Border
@@ -6969,7 +6973,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "gradient")]
+        [SchemaAttr("gradient")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Gradient
@@ -6985,7 +6989,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "direction")]
+        [SchemaAttr("direction")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DataBarDirectionValues>? Direction
@@ -7001,7 +7005,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "negativeBarColorSameAsPositive")]
+        [SchemaAttr("negativeBarColorSameAsPositive")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? NegativeBarColorSameAsPositive
@@ -7017,7 +7021,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "negativeBarBorderColorSameAsPositive")]
+        [SchemaAttr("negativeBarBorderColorSameAsPositive")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? NegativeBarBorderColorSameAsPositive
@@ -7033,7 +7037,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "axisPosition")]
+        [SchemaAttr("axisPosition")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DataBarAxisPositionValues>? AxisPosition
@@ -7045,7 +7049,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "dataBar");
+            builder.SetSchema("x14:dataBar");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.FillColor>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.BorderColor>();
@@ -7054,15 +7058,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.BarAxisColor>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject>();
             builder.AddElement<DataBar>()
-.AddAttribute(0, "minLength", a => a.MinLength)
-.AddAttribute(0, "maxLength", a => a.MaxLength)
-.AddAttribute(0, "showValue", a => a.ShowValue)
-.AddAttribute(0, "border", a => a.Border)
-.AddAttribute(0, "gradient", a => a.Gradient)
-.AddAttribute(0, "direction", a => a.Direction)
-.AddAttribute(0, "negativeBarColorSameAsPositive", a => a.NegativeBarColorSameAsPositive)
-.AddAttribute(0, "negativeBarBorderColorSameAsPositive", a => a.NegativeBarBorderColorSameAsPositive)
-.AddAttribute(0, "axisPosition", a => a.AxisPosition);
+.AddAttribute("minLength", a => a.MinLength)
+.AddAttribute("maxLength", a => a.MaxLength)
+.AddAttribute("showValue", a => a.ShowValue)
+.AddAttribute("border", a => a.Border)
+.AddAttribute("gradient", a => a.Gradient)
+.AddAttribute("direction", a => a.Direction)
+.AddAttribute("negativeBarColorSameAsPositive", a => a.NegativeBarColorSameAsPositive)
+.AddAttribute("negativeBarBorderColorSameAsPositive", a => a.NegativeBarBorderColorSameAsPositive)
+.AddAttribute("axisPosition", a => a.AxisPosition);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject), 2, 2, version: FileFormatVersions.Office2010),
@@ -7072,8 +7076,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.NegativeBorderColor), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.BarAxisColor), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueLessEqualToAnother(0 /*:minLength*/, 1 /*:maxLength*/, true) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:maxLength*/, true, double.NegativeInfinity, true, 100, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLessEqualToAnother(":minLength", ":maxLength", true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(":maxLength", true, double.NegativeInfinity, true, 100, true) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -7093,7 +7097,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "iconSet")]
+    [SchemaAttr("x14:iconSet")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class IconSet : OpenXmlCompositeElement
     {
@@ -7135,7 +7139,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "iconSet")]
+        [SchemaAttr("iconSet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>? IconSetTypes
@@ -7151,7 +7155,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "showValue")]
+        [SchemaAttr("showValue")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ShowValue
@@ -7167,7 +7171,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "percent")]
+        [SchemaAttr("percent")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Percent
@@ -7183,7 +7187,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "reverse")]
+        [SchemaAttr("reverse")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Reverse
@@ -7199,7 +7203,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "custom")]
+        [SchemaAttr("custom")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Custom
@@ -7211,16 +7215,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "iconSet");
+            builder.SetSchema("x14:iconSet");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingIcon>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject>();
             builder.AddElement<IconSet>()
-.AddAttribute(0, "iconSet", a => a.IconSetTypes)
-.AddAttribute(0, "showValue", a => a.ShowValue)
-.AddAttribute(0, "percent", a => a.Percent)
-.AddAttribute(0, "reverse", a => a.Reverse)
-.AddAttribute(0, "custom", a => a.Custom);
+.AddAttribute("iconSet", a => a.IconSetTypes)
+.AddAttribute("showValue", a => a.ShowValue)
+.AddAttribute("percent", a => a.Percent)
+.AddAttribute("reverse", a => a.Reverse)
+.AddAttribute("custom", a => a.Custom);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject), 2, 0, version: FileFormatVersions.Office2010),
@@ -7250,7 +7254,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "dxf")]
+    [SchemaAttr("x14:dxf")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DifferentialType : OpenXmlCompositeElement
     {
@@ -7288,7 +7292,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "dxf");
+            builder.SetSchema("x14:dxf");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Border>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
@@ -7417,7 +7421,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "cfvo")]
+    [SchemaAttr("x14:cfvo")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ConditionalFormattingValueObject : OpenXmlCompositeElement
     {
@@ -7459,7 +7463,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "type")]
+        [SchemaAttr("type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObjectTypeValues>? Type
@@ -7475,7 +7479,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "gte")]
+        [SchemaAttr("gte")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? GreaterThanOrEqual
@@ -7487,16 +7491,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "cfvo");
+            builder.SetSchema("x14:cfvo");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
             builder.AddElement<ConditionalFormattingValueObject>()
-.AddAttribute(0, "type", a => a.Type, aBuilder =>
+.AddAttribute("type", a => a.Type, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "gte", a => a.GreaterThanOrEqual);
+.AddAttribute("gte", a => a.GreaterThanOrEqual);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Formula), 0, 1),
@@ -7540,7 +7544,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is x14:cfIcon.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "cfIcon")]
+    [SchemaAttr("x14:cfIcon")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ConditionalFormattingIcon : OpenXmlLeafElement
     {
@@ -7558,7 +7562,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "iconSet")]
+        [SchemaAttr("iconSet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>? IconSet
@@ -7574,7 +7578,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "iconId")]
+        [SchemaAttr("iconId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? IconId
@@ -7586,14 +7590,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "cfIcon");
+            builder.SetSchema("x14:cfIcon");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ConditionalFormattingIcon>()
-.AddAttribute(0, "iconSet", a => a.IconSet, aBuilder =>
+.AddAttribute("iconSet", a => a.IconSet, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "iconId", a => a.IconId, aBuilder =>
+.AddAttribute("iconId", a => a.IconId, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -7615,7 +7619,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "pivotEdits")]
+    [SchemaAttr("x14:pivotEdits")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PivotEdits : OpenXmlCompositeElement
     {
@@ -7653,7 +7657,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "pivotEdits");
+            builder.SetSchema("x14:pivotEdits");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotEdit>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -7678,7 +7682,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "pivotChanges")]
+    [SchemaAttr("x14:pivotChanges")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PivotChanges : OpenXmlCompositeElement
     {
@@ -7716,7 +7720,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "pivotChanges");
+            builder.SetSchema("x14:pivotChanges");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotChange>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -7741,7 +7745,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "conditionalFormats")]
+    [SchemaAttr("x14:conditionalFormats")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ConditionalFormats : OpenXmlCompositeElement
     {
@@ -7783,7 +7787,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "count")]
+        [SchemaAttr("count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Count
@@ -7795,11 +7799,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "conditionalFormats");
+            builder.SetSchema("x14:conditionalFormats");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormat>();
             builder.AddElement<ConditionalFormats>()
-.AddAttribute(0, "count", a => a.Count);
+.AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormat), 1, 0, version: FileFormatVersions.Office2010)
@@ -7822,7 +7826,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "calculatedMembers")]
+    [SchemaAttr("x14:calculatedMembers")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CalculatedMembers : OpenXmlCompositeElement
     {
@@ -7864,7 +7868,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "count")]
+        [SchemaAttr("count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Count
@@ -7876,11 +7880,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "calculatedMembers");
+            builder.SetSchema("x14:calculatedMembers");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CalculatedMember>();
             builder.AddElement<CalculatedMembers>()
-.AddAttribute(0, "count", a => a.Count);
+.AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedMember), 1, 0)
@@ -7906,7 +7910,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "pivotEdit")]
+    [SchemaAttr("x14:pivotEdit")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PivotEdit : OpenXmlCompositeElement
     {
@@ -7944,7 +7948,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "pivotEdit");
+            builder.SetSchema("x14:pivotEdit");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotArea>();
@@ -8028,7 +8032,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "userEdit")]
+    [SchemaAttr("x14:userEdit")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PivotUserEdit : OpenXmlCompositeElement
     {
@@ -8066,7 +8070,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "userEdit");
+            builder.SetSchema("x14:userEdit");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue>();
@@ -8119,7 +8123,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "tupleItems")]
+    [SchemaAttr("x14:tupleItems")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TupleItems : OpenXmlCompositeElement
     {
@@ -8157,7 +8161,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "tupleItems");
+            builder.SetSchema("x14:tupleItems");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Xstring>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -8183,7 +8187,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "pivotArea")]
+    [SchemaAttr("x14:pivotArea")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PivotArea : OpenXmlCompositeElement
     {
@@ -8225,7 +8229,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "field")]
+        [SchemaAttr("field")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? Field
@@ -8241,7 +8245,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "type")]
+        [SchemaAttr("type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotAreaValues>? Type
@@ -8257,7 +8261,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "dataOnly")]
+        [SchemaAttr("dataOnly")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? DataOnly
@@ -8273,7 +8277,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "labelOnly")]
+        [SchemaAttr("labelOnly")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? LabelOnly
@@ -8289,7 +8293,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "grandRow")]
+        [SchemaAttr("grandRow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? GrandRow
@@ -8305,7 +8309,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "grandCol")]
+        [SchemaAttr("grandCol")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? GrandColumn
@@ -8321,7 +8325,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "cacheIndex")]
+        [SchemaAttr("cacheIndex")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? CacheIndex
@@ -8337,7 +8341,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "outline")]
+        [SchemaAttr("outline")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Outline
@@ -8353,7 +8357,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "offset")]
+        [SchemaAttr("offset")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Offset
@@ -8369,7 +8373,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "collapsedLevelsAreSubtotals")]
+        [SchemaAttr("collapsedLevelsAreSubtotals")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? CollapsedLevelsAreSubtotals
@@ -8385,7 +8389,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "axis")]
+        [SchemaAttr("axis")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues>? Axis
@@ -8401,7 +8405,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fieldPosition")]
+        [SchemaAttr("fieldPosition")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? FieldPosition
@@ -8413,23 +8417,23 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "pivotArea");
+            builder.SetSchema("x14:pivotArea");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences>();
             builder.AddElement<PivotArea>()
-.AddAttribute(0, "field", a => a.Field)
-.AddAttribute(0, "type", a => a.Type)
-.AddAttribute(0, "dataOnly", a => a.DataOnly)
-.AddAttribute(0, "labelOnly", a => a.LabelOnly)
-.AddAttribute(0, "grandRow", a => a.GrandRow)
-.AddAttribute(0, "grandCol", a => a.GrandColumn)
-.AddAttribute(0, "cacheIndex", a => a.CacheIndex)
-.AddAttribute(0, "outline", a => a.Outline)
-.AddAttribute(0, "offset", a => a.Offset)
-.AddAttribute(0, "collapsedLevelsAreSubtotals", a => a.CollapsedLevelsAreSubtotals)
-.AddAttribute(0, "axis", a => a.Axis)
-.AddAttribute(0, "fieldPosition", a => a.FieldPosition);
+.AddAttribute("field", a => a.Field)
+.AddAttribute("type", a => a.Type)
+.AddAttribute("dataOnly", a => a.DataOnly)
+.AddAttribute("labelOnly", a => a.LabelOnly)
+.AddAttribute("grandRow", a => a.GrandRow)
+.AddAttribute("grandCol", a => a.GrandColumn)
+.AddAttribute("cacheIndex", a => a.CacheIndex)
+.AddAttribute("outline", a => a.Outline)
+.AddAttribute("offset", a => a.Offset)
+.AddAttribute("collapsedLevelsAreSubtotals", a => a.CollapsedLevelsAreSubtotals)
+.AddAttribute("axis", a => a.Axis)
+.AddAttribute("fieldPosition", a => a.FieldPosition);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences), 0, 1),
@@ -8481,7 +8485,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "pivotChange")]
+    [SchemaAttr("x14:pivotChange")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PivotChange : OpenXmlCompositeElement
     {
@@ -8523,7 +8527,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "allocationMethod")]
+        [SchemaAttr("allocationMethod")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.AllocationMethodValues>? AllocationMethod
@@ -8539,7 +8543,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "weightExpression")]
+        [SchemaAttr("weightExpression")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? WeightExpression
@@ -8551,21 +8555,21 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "pivotChange");
+            builder.SetSchema("x14:pivotChange");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TupleItems>();
             builder.AddElement<PivotChange>()
-.AddAttribute(0, "allocationMethod", a => a.AllocationMethod)
-.AddAttribute(0, "weightExpression", a => a.WeightExpression);
+.AddAttribute("allocationMethod", a => a.AllocationMethod)
+.AddAttribute("weightExpression", a => a.WeightExpression);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue), 1, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.TupleItems), 1, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:weightExpression*/, 1, 65535) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":weightExpression", 1, 65535) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -8617,7 +8621,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is x14:editValue.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "editValue")]
+    [SchemaAttr("x14:editValue")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PivotEditValue : OpenXmlLeafTextElement
     {
@@ -8648,7 +8652,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "valueType")]
+        [SchemaAttr("valueType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.PivotEditValueTypeValues>? ValueType
@@ -8660,14 +8664,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "editValue");
+            builder.SetSchema("x14:editValue");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<PivotEditValue>()
-.AddAttribute(0, "valueType", a => a.ValueType, aBuilder =>
+.AddAttribute("valueType", a => a.ValueType, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:valueType*/, 1, 32767) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":valueType", 1, 32767) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -8680,7 +8684,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is x14:tupleItem.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "tupleItem")]
+    [SchemaAttr("x14:tupleItem")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Xstring : OpenXmlLeafTextElement
     {
@@ -8707,7 +8711,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "tupleItem");
+            builder.SetSchema("x14:tupleItem");
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -8727,7 +8731,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "slicerStyleElements")]
+    [SchemaAttr("x14:slicerStyleElements")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SlicerStyleElements : OpenXmlCompositeElement
     {
@@ -8765,7 +8769,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "slicerStyleElements");
+            builder.SetSchema("x14:slicerStyleElements");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElement>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -8790,7 +8794,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "values")]
+    [SchemaAttr("x14:values")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DdeValues : OpenXmlCompositeElement
     {
@@ -8832,7 +8836,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rows")]
+        [SchemaAttr("rows")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Rows
@@ -8848,7 +8852,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "cols")]
+        [SchemaAttr("cols")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Columns
@@ -8860,12 +8864,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "values");
+            builder.SetSchema("x14:values");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Value>();
             builder.AddElement<DdeValues>()
-.AddAttribute(0, "rows", a => a.Rows)
-.AddAttribute(0, "cols", a => a.Columns);
+.AddAttribute("rows", a => a.Rows)
+.AddAttribute("cols", a => a.Columns);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Value), 1, 0)
@@ -8889,7 +8893,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "conditionalFormat")]
+    [SchemaAttr("x14:conditionalFormat")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ConditionalFormat : OpenXmlCompositeElement
     {
@@ -8931,7 +8935,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "scope")]
+        [SchemaAttr("scope")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ScopeValues>? Scope
@@ -8947,7 +8951,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "type")]
+        [SchemaAttr("type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.RuleValues>? Type
@@ -8963,7 +8967,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "priority")]
+        [SchemaAttr("priority")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Priority
@@ -8979,7 +8983,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -8991,15 +8995,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "conditionalFormat");
+            builder.SetSchema("x14:conditionalFormat");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotAreas>();
             builder.AddElement<ConditionalFormat>()
-.AddAttribute(0, "scope", a => a.Scope)
-.AddAttribute(0, "type", a => a.Type)
-.AddAttribute(0, "priority", a => a.Priority)
-.AddAttribute(0, "id", a => a.Id, aBuilder =>
+.AddAttribute("scope", a => a.Scope)
+.AddAttribute("type", a => a.Type)
+.AddAttribute("priority", a => a.Priority)
+.AddAttribute("id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
@@ -9009,9 +9013,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotAreas), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueSetConstraint(1 /*:type*/, true, new string[] { "none" }) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueRangeConstraint(2 /*:priority*/, true, 1, true, double.PositiveInfinity, true) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new ReferenceExistConstraint(2 /*:priority*/, "..", typeof(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingRule), "DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingRule", 1 /*:priority*/) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint(":type", true, new string[] { "none" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(":priority", true, 1, true, double.PositiveInfinity, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new ReferenceExistConstraint(":priority", "..", "x14:cfRule", "x14:cfRule", ":priority") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -9056,7 +9060,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "pivotAreas")]
+    [SchemaAttr("x14:pivotAreas")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PivotAreas : OpenXmlCompositeElement
     {
@@ -9098,7 +9102,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "count")]
+        [SchemaAttr("count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Count
@@ -9110,11 +9114,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "pivotAreas");
+            builder.SetSchema("x14:pivotAreas");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
             builder.AddElement<PivotAreas>()
-.AddAttribute(0, "count", a => a.Count);
+.AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 0, 0)
@@ -9137,7 +9141,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "slicerStyle")]
+    [SchemaAttr("x14:slicerStyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SlicerStyle : OpenXmlCompositeElement
     {
@@ -9179,7 +9183,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "name")]
+        [SchemaAttr("name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -9191,11 +9195,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "slicerStyle");
+            builder.SetSchema("x14:slicerStyle");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElements>();
             builder.AddElement<SlicerStyle>()
-.AddAttribute(0, "name", a => a.Name, aBuilder =>
+.AddAttribute("name", a => a.Name, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -9203,9 +9207,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElements), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:name*/, 1, 255) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new ReferenceExistConstraint(0 /*:name*/, ".", typeof(DocumentFormat.OpenXml.Spreadsheet.TableStyle), "DocumentFormat.OpenXml.Spreadsheet.TableStyle", 0 /*:name*/) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:name*/, true, typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerStyles)) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":name", 1, 255) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new ReferenceExistConstraint(":name", ".", "x:tableStyle", "x:tableStyle", ":name") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", true, "x14:slicerStyles") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -9231,7 +9235,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicerStyleElement.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "slicerStyleElement")]
+    [SchemaAttr("x14:slicerStyleElement")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SlicerStyleElement : OpenXmlLeafElement
     {
@@ -9249,7 +9253,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "type")]
+        [SchemaAttr("type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleTypeValues>? Type
@@ -9265,7 +9269,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "dxfId")]
+        [SchemaAttr("dxfId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? FormatId
@@ -9277,16 +9281,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "slicerStyleElement");
+            builder.SetSchema("x14:slicerStyleElement");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<SlicerStyleElement>()
-.AddAttribute(0, "type", a => a.Type, aBuilder =>
+.AddAttribute("type", a => a.Type, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "dxfId", a => a.FormatId);
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:type*/, true, typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElements)) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new IndexReferenceConstraint(1 /*:dxfId*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0) { Version = FileFormatVersions.Office2010 });
+.AddAttribute("dxfId", a => a.FormatId);
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":type", true, "x14:slicerStyleElements") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new IndexReferenceConstraint(":dxfId", ".", null, "x:dxf", "x:dxf", 0) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -9305,7 +9309,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "ignoredError")]
+    [SchemaAttr("x14:ignoredError")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class IgnoredError : OpenXmlCompositeElement
     {
@@ -9347,7 +9351,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "evalError")]
+        [SchemaAttr("evalError")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? EvalError
@@ -9363,7 +9367,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "twoDigitTextYear")]
+        [SchemaAttr("twoDigitTextYear")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? TwoDigitTextYear
@@ -9379,7 +9383,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "numberStoredAsText")]
+        [SchemaAttr("numberStoredAsText")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? NumberStoredAsText
@@ -9395,7 +9399,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "formula")]
+        [SchemaAttr("formula")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Formula
@@ -9411,7 +9415,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "formulaRange")]
+        [SchemaAttr("formulaRange")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? FormulaRange
@@ -9427,7 +9431,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "unlockedFormula")]
+        [SchemaAttr("unlockedFormula")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? UnlockedFormula
@@ -9443,7 +9447,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "emptyCellReference")]
+        [SchemaAttr("emptyCellReference")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? EmptyCellReference
@@ -9459,7 +9463,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "listDataValidation")]
+        [SchemaAttr("listDataValidation")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ListDataValidation
@@ -9475,7 +9479,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "calculatedColumn")]
+        [SchemaAttr("calculatedColumn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? CalculatedColumn
@@ -9487,19 +9491,19 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "ignoredError");
+            builder.SetSchema("x14:ignoredError");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
             builder.AddElement<IgnoredError>()
-.AddAttribute(0, "evalError", a => a.EvalError)
-.AddAttribute(0, "twoDigitTextYear", a => a.TwoDigitTextYear)
-.AddAttribute(0, "numberStoredAsText", a => a.NumberStoredAsText)
-.AddAttribute(0, "formula", a => a.Formula)
-.AddAttribute(0, "formulaRange", a => a.FormulaRange)
-.AddAttribute(0, "unlockedFormula", a => a.UnlockedFormula)
-.AddAttribute(0, "emptyCellReference", a => a.EmptyCellReference)
-.AddAttribute(0, "listDataValidation", a => a.ListDataValidation)
-.AddAttribute(0, "calculatedColumn", a => a.CalculatedColumn);
+.AddAttribute("evalError", a => a.EvalError)
+.AddAttribute("twoDigitTextYear", a => a.TwoDigitTextYear)
+.AddAttribute("numberStoredAsText", a => a.NumberStoredAsText)
+.AddAttribute("formula", a => a.Formula)
+.AddAttribute("formulaRange", a => a.FormulaRange)
+.AddAttribute("unlockedFormula", a => a.UnlockedFormula)
+.AddAttribute("emptyCellReference", a => a.EmptyCellReference)
+.AddAttribute("listDataValidation", a => a.ListDataValidation)
+.AddAttribute("calculatedColumn", a => a.CalculatedColumn);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.ReferenceSequence), 1, 1)
@@ -9535,7 +9539,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "protectedRange")]
+    [SchemaAttr("x14:protectedRange")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ProtectedRange : OpenXmlCompositeElement
     {
@@ -9577,7 +9581,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "password")]
+        [SchemaAttr("password")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public HexBinaryValue? Password
@@ -9593,7 +9597,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "algorithmName")]
+        [SchemaAttr("algorithmName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? AlgorithmName
@@ -9609,7 +9613,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "hashValue")]
+        [SchemaAttr("hashValue")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Base64BinaryValue? HashValue
@@ -9625,7 +9629,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "saltValue")]
+        [SchemaAttr("saltValue")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Base64BinaryValue? SaltValue
@@ -9641,7 +9645,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "spinCount")]
+        [SchemaAttr("spinCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? SpinCount
@@ -9657,7 +9661,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "name")]
+        [SchemaAttr("name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -9673,7 +9677,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "securityDescriptor")]
+        [SchemaAttr("securityDescriptor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? SecurityDescriptor
@@ -9685,30 +9689,30 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "protectedRange");
+            builder.SetSchema("x14:protectedRange");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
             builder.AddElement<ProtectedRange>()
-.AddAttribute(0, "password", a => a.Password, aBuilder =>
+.AddAttribute("password", a => a.Password, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 })
-.AddAttribute(0, "algorithmName", a => a.AlgorithmName)
-.AddAttribute(0, "hashValue", a => a.HashValue)
-.AddAttribute(0, "saltValue", a => a.SaltValue)
-.AddAttribute(0, "spinCount", a => a.SpinCount)
-.AddAttribute(0, "name", a => a.Name, aBuilder =>
+.AddAttribute("algorithmName", a => a.AlgorithmName)
+.AddAttribute("hashValue", a => a.HashValue)
+.AddAttribute("saltValue", a => a.SaltValue)
+.AddAttribute("spinCount", a => a.SpinCount)
+.AddAttribute("name", a => a.Name, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "securityDescriptor", a => a.SecurityDescriptor);
+.AddAttribute("securityDescriptor", a => a.SecurityDescriptor);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.ReferenceSequence), 1, 1)
             };
-            builder.AddConstraint(new AttributeMutualExclusive(0, 1) /*:password, :algorithmName*/ { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueRangeConstraint(4 /*:spinCount*/, true, double.NegativeInfinity, true, 10000000, true) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(5 /*:name*/, 1, 255) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeMutualExclusive(":password", ":algorithmName") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(":spinCount", true, double.NegativeInfinity, true, 10000000, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":name", 1, 255) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -9734,7 +9738,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is x14:customFilter.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "customFilter")]
+    [SchemaAttr("x14:customFilter")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomFilter : OpenXmlLeafElement
     {
@@ -9752,7 +9756,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "operator")]
+        [SchemaAttr("operator")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues>? Operator
@@ -9768,7 +9772,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "val")]
+        [SchemaAttr("val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Val
@@ -9780,11 +9784,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "customFilter");
+            builder.SetSchema("x14:customFilter");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<CustomFilter>()
-.AddAttribute(0, "operator", a => a.Operator)
-.AddAttribute(0, "val", a => a.Val);
+.AddAttribute("operator", a => a.Operator)
+.AddAttribute("val", a => a.Val);
         }
 
         /// <inheritdoc/>
@@ -9797,7 +9801,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is x14:item.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "item")]
+    [SchemaAttr("x14:item")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ListItem : OpenXmlLeafElement
     {
@@ -9815,7 +9819,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "val")]
+        [SchemaAttr("val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Val
@@ -9827,10 +9831,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "item");
+            builder.SetSchema("x14:item");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ListItem>()
-.AddAttribute(0, "val", a => a.Val, aBuilder =>
+.AddAttribute("val", a => a.Val, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -9853,7 +9857,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "itemLst")]
+    [SchemaAttr("x14:itemLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ListItems : OpenXmlCompositeElement
     {
@@ -9891,7 +9895,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "itemLst");
+            builder.SetSchema("x14:itemLst");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ListItem>();
@@ -9918,7 +9922,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "slicer")]
+    [SchemaAttr("x14:slicer")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Slicer : OpenXmlCompositeElement
     {
@@ -9960,7 +9964,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "name")]
+        [SchemaAttr("name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -9976,7 +9980,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "cache")]
+        [SchemaAttr("cache")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Cache
@@ -9992,7 +9996,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "caption")]
+        [SchemaAttr("caption")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Caption
@@ -10008,7 +10012,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "startItem")]
+        [SchemaAttr("startItem")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? StartItem
@@ -10024,7 +10028,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "columnCount")]
+        [SchemaAttr("columnCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? ColumnCount
@@ -10040,7 +10044,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "showCaption")]
+        [SchemaAttr("showCaption")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ShowCaption
@@ -10056,7 +10060,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "level")]
+        [SchemaAttr("level")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Level
@@ -10072,7 +10076,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "style")]
+        [SchemaAttr("style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Style
@@ -10088,7 +10092,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "lockedPosition")]
+        [SchemaAttr("lockedPosition")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? LockedPosition
@@ -10104,7 +10108,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rowHeight")]
+        [SchemaAttr("rowHeight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? RowHeight
@@ -10116,26 +10120,26 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "slicer");
+            builder.SetSchema("x14:slicer");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             builder.AddElement<Slicer>()
-.AddAttribute(0, "name", a => a.Name, aBuilder =>
+.AddAttribute("name", a => a.Name, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "cache", a => a.Cache, aBuilder =>
+.AddAttribute("cache", a => a.Cache, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "caption", a => a.Caption)
-.AddAttribute(0, "startItem", a => a.StartItem)
-.AddAttribute(0, "columnCount", a => a.ColumnCount)
-.AddAttribute(0, "showCaption", a => a.ShowCaption)
-.AddAttribute(0, "level", a => a.Level)
-.AddAttribute(0, "style", a => a.Style)
-.AddAttribute(0, "lockedPosition", a => a.LockedPosition)
-.AddAttribute(0, "rowHeight", a => a.RowHeight, aBuilder =>
+.AddAttribute("caption", a => a.Caption)
+.AddAttribute("startItem", a => a.StartItem)
+.AddAttribute("columnCount", a => a.ColumnCount)
+.AddAttribute("showCaption", a => a.ShowCaption)
+.AddAttribute("level", a => a.Level)
+.AddAttribute("style", a => a.Style)
+.AddAttribute("lockedPosition", a => a.LockedPosition)
+.AddAttribute("rowHeight", a => a.RowHeight, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -10143,10 +10147,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:name*/, false, null) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:name*/, 1, 32767) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(2 /*:caption*/, 1, int.MaxValue) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueRangeConstraint(4 /*:columnCount*/, true, 1, true, 20000, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", false, null) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":name", 1, 32767) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":caption", 1, int.MaxValue) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(":columnCount", true, 1, true, 20000, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new RelationshipExistConstraint("r:id") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -10180,7 +10185,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "olap")]
+    [SchemaAttr("x14:olap")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class OlapSlicerCache : OpenXmlCompositeElement
     {
@@ -10222,7 +10227,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "pivotCacheId")]
+        [SchemaAttr("pivotCacheId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? PivotCacheId
@@ -10234,13 +10239,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "olap");
+            builder.SetSchema("x14:olap");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheLevelsData>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSelections>();
             builder.AddElement<OlapSlicerCache>()
-.AddAttribute(0, "pivotCacheId", a => a.PivotCacheId, aBuilder =>
+.AddAttribute("pivotCacheId", a => a.PivotCacheId, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -10308,7 +10313,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "tabular")]
+    [SchemaAttr("x14:tabular")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TabularSlicerCache : OpenXmlCompositeElement
     {
@@ -10350,7 +10355,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "pivotCacheId")]
+        [SchemaAttr("pivotCacheId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? PivotCacheId
@@ -10366,7 +10371,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sortOrder")]
+        [SchemaAttr("sortOrder")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheSortOrderValues>? SortOrder
@@ -10382,7 +10387,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "customListSort")]
+        [SchemaAttr("customListSort")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? CustomListSort
@@ -10398,7 +10403,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "showMissing")]
+        [SchemaAttr("showMissing")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ShowMissing
@@ -10414,7 +10419,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "crossFilter")]
+        [SchemaAttr("crossFilter")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheCrossFilterValues>? CrossFilter
@@ -10426,19 +10431,19 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "tabular");
+            builder.SetSchema("x14:tabular");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItems>();
             builder.AddElement<TabularSlicerCache>()
-.AddAttribute(0, "pivotCacheId", a => a.PivotCacheId, aBuilder =>
+.AddAttribute("pivotCacheId", a => a.PivotCacheId, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "sortOrder", a => a.SortOrder)
-.AddAttribute(0, "customListSort", a => a.CustomListSort)
-.AddAttribute(0, "showMissing", a => a.ShowMissing)
-.AddAttribute(0, "crossFilter", a => a.CrossFilter);
+.AddAttribute("sortOrder", a => a.SortOrder)
+.AddAttribute("customListSort", a => a.CustomListSort)
+.AddAttribute("showMissing", a => a.ShowMissing)
+.AddAttribute("crossFilter", a => a.CrossFilter);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItems), 1, 1, version: FileFormatVersions.Office2010),
@@ -10482,7 +10487,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotTable.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "pivotTable")]
+    [SchemaAttr("x14:pivotTable")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SlicerCachePivotTable : OpenXmlLeafElement
     {
@@ -10500,7 +10505,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "tabId")]
+        [SchemaAttr("tabId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? TabId
@@ -10516,7 +10521,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "name")]
+        [SchemaAttr("name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -10528,18 +10533,18 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "pivotTable");
+            builder.SetSchema("x14:pivotTable");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<SlicerCachePivotTable>()
-.AddAttribute(0, "tabId", a => a.TabId, aBuilder =>
+.AddAttribute("tabId", a => a.TabId, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "name", a => a.Name, aBuilder =>
+.AddAttribute("name", a => a.Name, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.AddConstraint(new ReferenceExistConstraint(0 /*:tabId*/, "/WorkbookPart", typeof(DocumentFormat.OpenXml.Spreadsheet.Sheet), "DocumentFormat.OpenXml.Spreadsheet.Sheet", 1 /*:sheetId*/) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new ReferenceExistConstraint(":tabId", "/WorkbookPart", "x:sheet", "x:sheet", ":sheetId") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -10552,7 +10557,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is x14:p.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "p")]
+    [SchemaAttr("x14:p")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class OlapSlicerCacheItemParent : OpenXmlLeafElement
     {
@@ -10570,7 +10575,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "n")]
+        [SchemaAttr("n")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -10582,10 +10587,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "p");
+            builder.SetSchema("x14:p");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<OlapSlicerCacheItemParent>()
-.AddAttribute(0, "n", a => a.Name, aBuilder =>
+.AddAttribute("n", a => a.Name, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -10607,7 +10612,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "i")]
+    [SchemaAttr("x14:i")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class OlapSlicerCacheItem : OpenXmlCompositeElement
     {
@@ -10649,7 +10654,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "n")]
+        [SchemaAttr("n")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -10665,7 +10670,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "c")]
+        [SchemaAttr("c")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? DisplayName
@@ -10681,7 +10686,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "nd")]
+        [SchemaAttr("nd")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? NonDisplay
@@ -10693,20 +10698,21 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "i");
+            builder.SetSchema("x14:i");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItemParent>();
             builder.AddElement<OlapSlicerCacheItem>()
-.AddAttribute(0, "n", a => a.Name, aBuilder =>
+.AddAttribute("n", a => a.Name, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "c", a => a.DisplayName)
-.AddAttribute(0, "nd", a => a.NonDisplay);
+.AddAttribute("c", a => a.DisplayName)
+.AddAttribute("nd", a => a.NonDisplay);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItemParent), 0, 0, version: FileFormatVersions.Office2010)
             };
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":x", true, "x14:items") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -10725,7 +10731,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "range")]
+    [SchemaAttr("x14:range")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class OlapSlicerCacheRange : OpenXmlCompositeElement
     {
@@ -10767,7 +10773,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "startItem")]
+        [SchemaAttr("startItem")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? StartItem
@@ -10779,11 +10785,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "range");
+            builder.SetSchema("x14:range");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItem>();
             builder.AddElement<OlapSlicerCacheRange>()
-.AddAttribute(0, "startItem", a => a.StartItem, aBuilder =>
+.AddAttribute("startItem", a => a.StartItem, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -10791,7 +10797,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItem), 1, 0, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValuePatternConstraint(0 /*:startItem*/, @"(0|[1-9][0-9]*000)") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValuePatternConstraint(":startItem", @"(0|[1-9][0-9]*000)") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -10810,7 +10816,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "ranges")]
+    [SchemaAttr("x14:ranges")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class OlapSlicerCacheRanges : OpenXmlCompositeElement
     {
@@ -10848,7 +10854,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "ranges");
+            builder.SetSchema("x14:ranges");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRange>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -10873,7 +10879,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "level")]
+    [SchemaAttr("x14:level")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class OlapSlicerCacheLevelData : OpenXmlCompositeElement
     {
@@ -10915,7 +10921,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uniqueName")]
+        [SchemaAttr("uniqueName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? UniqueName
@@ -10931,7 +10937,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sourceCaption")]
+        [SchemaAttr("sourceCaption")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? SourceCaption
@@ -10947,7 +10953,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "count")]
+        [SchemaAttr("count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Count
@@ -10963,7 +10969,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sortOrder")]
+        [SchemaAttr("sortOrder")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSortOrderValues>? SortOrder
@@ -10979,7 +10985,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "crossFilter")]
+        [SchemaAttr("crossFilter")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheCrossFilterValues>? CrossFilter
@@ -10991,26 +10997,26 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "level");
+            builder.SetSchema("x14:level");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRanges>();
             builder.AddElement<OlapSlicerCacheLevelData>()
-.AddAttribute(0, "uniqueName", a => a.UniqueName, aBuilder =>
+.AddAttribute("uniqueName", a => a.UniqueName, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "sourceCaption", a => a.SourceCaption)
-.AddAttribute(0, "count", a => a.Count, aBuilder =>
+.AddAttribute("sourceCaption", a => a.SourceCaption)
+.AddAttribute("count", a => a.Count, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "sortOrder", a => a.SortOrder)
-.AddAttribute(0, "crossFilter", a => a.CrossFilter);
+.AddAttribute("sortOrder", a => a.SortOrder)
+.AddAttribute("crossFilter", a => a.CrossFilter);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRanges), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:uniqueName*/, 1, 32767) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(":uniqueName", 1, 32767) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -11042,7 +11048,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "levels")]
+    [SchemaAttr("x14:levels")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class OlapSlicerCacheLevelsData : OpenXmlCompositeElement
     {
@@ -11084,7 +11090,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "count")]
+        [SchemaAttr("count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Count
@@ -11096,11 +11102,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "levels");
+            builder.SetSchema("x14:levels");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheLevelData>();
             builder.AddElement<OlapSlicerCacheLevelsData>()
-.AddAttribute(0, "count", a => a.Count);
+.AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheLevelData), 1, 0, version: FileFormatVersions.Office2010)
@@ -11123,7 +11129,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "selections")]
+    [SchemaAttr("x14:selections")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class OlapSlicerCacheSelections : OpenXmlCompositeElement
     {
@@ -11165,7 +11171,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "count")]
+        [SchemaAttr("count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Count
@@ -11177,11 +11183,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "selections");
+            builder.SetSchema("x14:selections");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSelection>();
             builder.AddElement<OlapSlicerCacheSelections>()
-.AddAttribute(0, "count", a => a.Count);
+.AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSelection), 1, 0, version: FileFormatVersions.Office2010)
@@ -11204,7 +11210,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "selection")]
+    [SchemaAttr("x14:selection")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class OlapSlicerCacheSelection : OpenXmlCompositeElement
     {
@@ -11246,7 +11252,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "n")]
+        [SchemaAttr("n")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -11258,11 +11264,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "selection");
+            builder.SetSchema("x14:selection");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItemParent>();
             builder.AddElement<OlapSlicerCacheSelection>()
-.AddAttribute(0, "n", a => a.Name, aBuilder =>
+.AddAttribute("n", a => a.Name, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -11288,7 +11294,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "items")]
+    [SchemaAttr("x14:items")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TabularSlicerCacheItems : OpenXmlCompositeElement
     {
@@ -11330,7 +11336,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "count")]
+        [SchemaAttr("count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Count
@@ -11342,11 +11348,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "items");
+            builder.SetSchema("x14:items");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItem>();
             builder.AddElement<TabularSlicerCacheItems>()
-.AddAttribute(0, "count", a => a.Count);
+.AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItem), 1, 0, version: FileFormatVersions.Office2010)
@@ -11363,7 +11369,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is x14:i.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "i")]
+    [SchemaAttr("x14:i")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TabularSlicerCacheItem : OpenXmlLeafElement
     {
@@ -11381,7 +11387,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "x")]
+        [SchemaAttr("x")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Atom
@@ -11397,7 +11403,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "s")]
+        [SchemaAttr("s")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? IsSelected
@@ -11413,7 +11419,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "nd")]
+        [SchemaAttr("nd")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? NonDisplay
@@ -11425,16 +11431,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "i");
+            builder.SetSchema("x14:i");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<TabularSlicerCacheItem>()
-.AddAttribute(0, "x", a => a.Atom, aBuilder =>
+.AddAttribute("x", a => a.Atom, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "s", a => a.IsSelected)
-.AddAttribute(0, "nd", a => a.NonDisplay);
-            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:x*/, true, typeof(DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItems)) { Version = FileFormatVersions.Office2010 });
+.AddAttribute("s", a => a.IsSelected)
+.AddAttribute("nd", a => a.NonDisplay);
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":x", true, "x14:items") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -11453,7 +11459,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "pivotTables")]
+    [SchemaAttr("x14:pivotTables")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SlicerCachePivotTables : OpenXmlCompositeElement
     {
@@ -11491,7 +11497,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "pivotTables");
+            builder.SetSchema("x14:pivotTables");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -11517,7 +11523,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "data")]
+    [SchemaAttr("x14:data")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SlicerCacheData : OpenXmlCompositeElement
     {
@@ -11555,7 +11561,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "data");
+            builder.SetSchema("x14:data");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCache>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCache>();
@@ -11608,7 +11614,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(53, "extLst")]
+    [SchemaAttr("x14:extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SlicerCacheDefinitionExtensionList : OpenXmlCompositeElement
     {
@@ -11646,7 +11652,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(53, "extLst");
+            builder.SetSchema("x14:extLst");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SlicerCacheDefinitionExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)

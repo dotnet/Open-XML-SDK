@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation
     /// <para>When the object is serialized out as xml, it's qualified name is p16:designElem.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(78, "designElem")]
+    [SchemaAttr("p16:designElem")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DesignElement : OpenXmlLeafElement
     {
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "val")]
+        [SchemaAttr("val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Val
@@ -52,10 +52,10 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(78, "designElem");
+            builder.SetSchema("p16:designElem");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<DesignElement>()
-.AddAttribute(0, "val", a => a.Val);
+.AddAttribute("val", a => a.Val);
         }
 
         /// <inheritdoc/>

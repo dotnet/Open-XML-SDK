@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.Pivot
     /// <para>When the object is serialized out as xml, it's qualified name is xxpim:implicitMeasureSupport.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(135, "implicitMeasureSupport")]
+    [SchemaAttr("xxpim:implicitMeasureSupport")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Xsdboolean : OpenXmlLeafTextElement
     {
@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.Pivot
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<BooleanValue>(NumberValidator.Instance);
-            builder.SetSchema(135, "implicitMeasureSupport");
+            builder.SetSchema("xxpim:implicitMeasureSupport");
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -63,7 +63,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.Pivot
     /// <para>When the object is serialized out as xml, it's qualified name is xxpim:ignorableAfterVersion.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(135, "ignorableAfterVersion")]
+    [SchemaAttr("xxpim:ignorableAfterVersion")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Ignorable : OpenXmlLeafElement
     {
@@ -81,7 +81,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.Pivot
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "version")]
+        [SchemaAttr("version")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public ByteValue? Version
@@ -93,10 +93,10 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.Pivot
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(135, "ignorableAfterVersion");
+            builder.SetSchema("xxpim:ignorableAfterVersion");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<Ignorable>()
-.AddAttribute(0, "version", a => a.Version, aBuilder =>
+.AddAttribute("version", a => a.Version, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -112,7 +112,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xxpim:dataFieldFutureData.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(135, "dataFieldFutureData")]
+    [SchemaAttr("xxpim:dataFieldFutureData")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataFieldFutureData : OpenXmlLeafElement
     {
@@ -130,7 +130,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "version")]
+        [SchemaAttr("version")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public ByteValue? Version
@@ -146,7 +146,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sourceField")]
+        [SchemaAttr("sourceField")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? SourceField
@@ -158,14 +158,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(135, "dataFieldFutureData");
+            builder.SetSchema("xxpim:dataFieldFutureData");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<DataFieldFutureData>()
-.AddAttribute(0, "version", a => a.Version, aBuilder =>
+.AddAttribute("version", a => a.Version, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "sourceField", a => a.SourceField, aBuilder =>
+.AddAttribute("sourceField", a => a.SourceField, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });

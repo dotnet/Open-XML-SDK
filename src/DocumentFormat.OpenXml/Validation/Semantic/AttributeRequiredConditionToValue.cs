@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
+
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     /// <summary>
@@ -9,10 +11,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     internal class AttributeRequiredConditionToValue : SemanticConstraint
     {
         private readonly string _value;
-        private readonly byte _requiredAttribute;
-        private readonly byte _conditionAttribute;
+        private readonly OpenXmlQualifiedName _requiredAttribute;
+        private readonly OpenXmlQualifiedName _conditionAttribute;
 
-        public AttributeRequiredConditionToValue(byte requiredAttribute, byte conditionAttribute, string value)
+        public AttributeRequiredConditionToValue(OpenXmlQualifiedName requiredAttribute, OpenXmlQualifiedName conditionAttribute, string value)
             : base(SemanticValidationLevel.Element)
         {
             _requiredAttribute = requiredAttribute;
@@ -29,14 +31,20 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            var requiredAttribute = element.ParsedState.Attributes[_requiredAttribute];
+            if (!TryFindAttribute(element, _requiredAttribute, out var requiredAttribute))
+            {
+                return null;
+            }
 
             if (requiredAttribute.Value is not null)
             {
                 return null;
             }
 
-            var conditionAttribute = element.ParsedState.Attributes[_conditionAttribute];
+            if (!TryFindAttribute(element, _conditionAttribute, out var conditionAttribute))
+            {
+                return null;
+            }
 
             if (conditionAttribute.Value is null)
             {
@@ -52,8 +60,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                     Node = element,
                     Description = SR.Format(
                         ValidationResources.Sem_AttributeRequiredConditionToValue,
-                        GetAttributeQualifiedName(element, _requiredAttribute),
-                        GetAttributeQualifiedName(element, _conditionAttribute),
+                        requiredAttribute.Property.QName,
+                        conditionAttribute.Property.QName,
                         _value),
                 };
             }
