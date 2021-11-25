@@ -262,23 +262,28 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             Assert.Equal("rId4", mrr.Id);
         }
 
-        // This is a regression test for issue #1069
+        // Regression test for issue #1069
         // Opening a PowerPoint presentation with a 3d model graphic will fail if the Model3dReferenceRelationshipPart doesn't
         //     accept both model/gltf-binary *and* model/gltf.binary MIME types. PowerPoint writes the latter.
         [Fact]
-        public void TestOpenModel3DWrittenByPowerPoint()
+        public void TestOpenModel3DWrittenByPowerPoint_DotMime()
         {
-            using (var testFile = GetStream(TestFiles._3DTestDash, false))
-            using (var presDoc = PresentationDocument.Open(testFile, false))
-            {
-                Assert.NotNull(presDoc);
-            }
+            using var testFile = GetStream(TestFiles._3DTestDot, false);
 
-            using (var testFile = GetStream(TestFiles._3DTestDot, false))
-            using (var presDoc = PresentationDocument.Open(testFile, false))
-            {
-                Assert.NotNull(presDoc);
-            }
+            using var presDoc = PresentationDocument.Open(testFile, false);
+
+            Assert.NotNull(presDoc);
+        }
+
+        // Also test the acceptance of model/gltf-binary that the SDK writes.
+        [Fact]
+        public void TestOpenModel3DWrittenByPowerPoint_DashMime()
+        {
+            using var testFile = GetStream(TestFiles._3DTestDash, false);
+
+            using var presDoc = PresentationDocument.Open(testFile, false);
+
+            Assert.NotNull(presDoc);
         }
     }
 }
