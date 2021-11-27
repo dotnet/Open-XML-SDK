@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(36, "CoverPageProperties")]
+    [SchemaAttr("cppr:CoverPageProperties")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CoverPageProperties : OpenXmlCompositeElement
     {
@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(36, "CoverPageProperties");
+            builder.SetSchema("cppr:CoverPageProperties");
             builder.AddChild<DocumentFormat.OpenXml.Office.CoverPageProps.PublishDate>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CoverPageProps.DocumentAbstract>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CoverPageProps.CompanyAddress>();
@@ -175,7 +175,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:PublishDate.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(36, "PublishDate")]
+    [SchemaAttr("cppr:PublishDate")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PublishDate : OpenXmlLeafTextElement
     {
@@ -202,7 +202,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(36, "PublishDate");
+            builder.SetSchema("cppr:PublishDate");
         }
 
         /// <inheritdoc/>
@@ -215,7 +215,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:Abstract.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(36, "Abstract")]
+    [SchemaAttr("cppr:Abstract")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DocumentAbstract : OpenXmlLeafTextElement
     {
@@ -242,7 +242,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(36, "Abstract");
+            builder.SetSchema("cppr:Abstract");
         }
 
         /// <inheritdoc/>
@@ -255,7 +255,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:CompanyAddress.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(36, "CompanyAddress")]
+    [SchemaAttr("cppr:CompanyAddress")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CompanyAddress : OpenXmlLeafTextElement
     {
@@ -282,7 +282,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(36, "CompanyAddress");
+            builder.SetSchema("cppr:CompanyAddress");
         }
 
         /// <inheritdoc/>
@@ -295,7 +295,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:CompanyPhone.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(36, "CompanyPhone")]
+    [SchemaAttr("cppr:CompanyPhone")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CompanyPhoneNumber : OpenXmlLeafTextElement
     {
@@ -322,7 +322,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(36, "CompanyPhone");
+            builder.SetSchema("cppr:CompanyPhone");
         }
 
         /// <inheritdoc/>
@@ -335,7 +335,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:CompanyFax.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(36, "CompanyFax")]
+    [SchemaAttr("cppr:CompanyFax")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CompanyFaxNumber : OpenXmlLeafTextElement
     {
@@ -362,7 +362,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(36, "CompanyFax");
+            builder.SetSchema("cppr:CompanyFax");
         }
 
         /// <inheritdoc/>
@@ -375,7 +375,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:CompanyEmail.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(36, "CompanyEmail")]
+    [SchemaAttr("cppr:CompanyEmail")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CompanyEmailAddress : OpenXmlLeafTextElement
     {
@@ -402,7 +402,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(36, "CompanyEmail");
+            builder.SetSchema("cppr:CompanyEmail");
         }
 
         /// <inheritdoc/>

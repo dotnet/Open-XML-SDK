@@ -58,7 +58,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             public StringValue Val { get; set; }
 
             internal override void ConfigureMetadata(ElementMetadata.Builder builder) => builder.AddElement<NoValidatorsElement>()
-                .AddAttribute(0, "val", a => a.Val);
+                .AddAttribute("val", a => a.Val);
         }
 
         private class ContainsRequiredValidator : BaseElement
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             public StringValue Val { get; set; }
 
             internal override void ConfigureMetadata(ElementMetadata.Builder builder) => builder.AddElement<NoValidatorsElement>()
-                .AddAttribute(0, "val", a => a.Val, a =>
+                .AddAttribute("val", a => a.Val, a =>
                 {
                     a.AddValidator(new RequiredValidator());
                 });
@@ -77,7 +77,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             public StringValue Val { get; set; }
 
             internal override void ConfigureMetadata(ElementMetadata.Builder builder) => builder.AddElement<NoValidatorsElement>()
-                .AddAttribute(0, "val", a => a.Val, a =>
+                .AddAttribute("val", a => a.Val, a =>
                 {
                     a.AddUnion(aa =>
                     {

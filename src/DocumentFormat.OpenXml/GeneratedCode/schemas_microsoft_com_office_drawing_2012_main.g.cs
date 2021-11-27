@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
     /// <para>When the object is serialized out as xml, it's qualified name is a15:backgroundPr.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(67, "backgroundPr")]
+    [SchemaAttr("a15:backgroundPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class BackgroundProperties : OpenXmlLeafElement
     {
@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "bwMode")]
+        [SchemaAttr("bwMode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? Mode
@@ -55,7 +55,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "bwPure")]
+        [SchemaAttr("bwPure")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? Pure
@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "bwNormal")]
+        [SchemaAttr("bwNormal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? Normal
@@ -87,7 +87,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "targetScreenSize")]
+        [SchemaAttr("targetScreenSize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.TargetScreenSize>? TargetScreenSize
@@ -99,22 +99,22 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(67, "backgroundPr");
+            builder.SetSchema("a15:backgroundPr");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<BackgroundProperties>()
-.AddAttribute(0, "bwMode", a => a.Mode, aBuilder =>
+.AddAttribute("bwMode", a => a.Mode, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "bwPure", a => a.Pure, aBuilder =>
+.AddAttribute("bwPure", a => a.Pure, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "bwNormal", a => a.Normal, aBuilder =>
+.AddAttribute("bwNormal", a => a.Normal, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "targetScreenSize", a => a.TargetScreenSize, aBuilder =>
+.AddAttribute("targetScreenSize", a => a.TargetScreenSize, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
@@ -130,7 +130,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is a15:nonVisualGroupProps.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(67, "nonVisualGroupProps")]
+    [SchemaAttr("a15:nonVisualGroupProps")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualGroupProperties : OpenXmlLeafElement
     {
@@ -148,7 +148,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "isLegacyGroup")]
+        [SchemaAttr("isLegacyGroup")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? IsLegacyGroup
@@ -160,10 +160,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(67, "nonVisualGroupProps");
+            builder.SetSchema("a15:nonVisualGroupProps");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<NonVisualGroupProperties>()
-.AddAttribute(0, "isLegacyGroup", a => a.IsLegacyGroup);
+.AddAttribute("isLegacyGroup", a => a.IsLegacyGroup);
         }
 
         /// <inheritdoc/>
@@ -176,7 +176,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is a15:objectPr.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(67, "objectPr")]
+    [SchemaAttr("a15:objectPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ObjectProperties : OpenXmlLeafElement
     {
@@ -194,7 +194,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "objectId")]
+        [SchemaAttr("objectId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -210,7 +210,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "isActiveX")]
+        [SchemaAttr("isActiveX")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? IsActiveX
@@ -226,7 +226,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "linkType")]
+        [SchemaAttr("linkType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? LinkType
@@ -238,12 +238,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(67, "objectPr");
+            builder.SetSchema("a15:objectPr");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<ObjectProperties>()
-.AddAttribute(0, "objectId", a => a.Id)
-.AddAttribute(0, "isActiveX", a => a.IsActiveX)
-.AddAttribute(0, "linkType", a => a.LinkType);
+.AddAttribute("objectId", a => a.Id)
+.AddAttribute("isActiveX", a => a.IsActiveX)
+.AddAttribute("linkType", a => a.LinkType);
         }
 
         /// <inheritdoc/>
@@ -256,7 +256,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is a15:signatureLine.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(67, "signatureLine")]
+    [SchemaAttr("a15:signatureLine")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SignatureLine : OpenXmlLeafElement
     {
@@ -274,7 +274,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "isSignatureLine")]
+        [SchemaAttr("isSignatureLine")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? IsSignatureLine
@@ -290,7 +290,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -306,7 +306,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "provId")]
+        [SchemaAttr("provId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ProviderId
@@ -322,7 +322,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "signingInstructionsSet")]
+        [SchemaAttr("signingInstructionsSet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? SigningInstructionsSet
@@ -338,7 +338,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "allowComments")]
+        [SchemaAttr("allowComments")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? AllowComments
@@ -354,7 +354,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "showSignDate")]
+        [SchemaAttr("showSignDate")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ShowSignDate
@@ -370,7 +370,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "suggestedSigner")]
+        [SchemaAttr("suggestedSigner")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? SuggestedSigner
@@ -386,7 +386,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "suggestedSigner2")]
+        [SchemaAttr("suggestedSigner2")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? SuggestedSigner2
@@ -402,7 +402,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "suggestedSignerEmail")]
+        [SchemaAttr("suggestedSignerEmail")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? SuggestedSignerEmail
@@ -418,7 +418,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "signingInstructions")]
+        [SchemaAttr("signingInstructions")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? SigningInstructions
@@ -434,7 +434,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "addlXml")]
+        [SchemaAttr("addlXml")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? AdditionalXml
@@ -450,7 +450,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sigProvUrl")]
+        [SchemaAttr("sigProvUrl")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? SignatureProviderUrl
@@ -462,27 +462,27 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(67, "signatureLine");
+            builder.SetSchema("a15:signatureLine");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<SignatureLine>()
-.AddAttribute(0, "isSignatureLine", a => a.IsSignatureLine)
-.AddAttribute(0, "id", a => a.Id, aBuilder =>
+.AddAttribute("isSignatureLine", a => a.IsSignatureLine)
+.AddAttribute("id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "provId", a => a.ProviderId, aBuilder =>
+.AddAttribute("provId", a => a.ProviderId, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "signingInstructionsSet", a => a.SigningInstructionsSet)
-.AddAttribute(0, "allowComments", a => a.AllowComments)
-.AddAttribute(0, "showSignDate", a => a.ShowSignDate)
-.AddAttribute(0, "suggestedSigner", a => a.SuggestedSigner)
-.AddAttribute(0, "suggestedSigner2", a => a.SuggestedSigner2)
-.AddAttribute(0, "suggestedSignerEmail", a => a.SuggestedSignerEmail)
-.AddAttribute(0, "signingInstructions", a => a.SigningInstructions)
-.AddAttribute(0, "addlXml", a => a.AdditionalXml)
-.AddAttribute(0, "sigProvUrl", a => a.SignatureProviderUrl);
+.AddAttribute("signingInstructionsSet", a => a.SigningInstructionsSet)
+.AddAttribute("allowComments", a => a.AllowComments)
+.AddAttribute("showSignDate", a => a.ShowSignDate)
+.AddAttribute("suggestedSigner", a => a.SuggestedSigner)
+.AddAttribute("suggestedSigner2", a => a.SuggestedSigner2)
+.AddAttribute("suggestedSignerEmail", a => a.SuggestedSignerEmail)
+.AddAttribute("signingInstructions", a => a.SigningInstructions)
+.AddAttribute("addlXml", a => a.AdditionalXml)
+.AddAttribute("sigProvUrl", a => a.SignatureProviderUrl);
         }
 
         /// <inheritdoc/>

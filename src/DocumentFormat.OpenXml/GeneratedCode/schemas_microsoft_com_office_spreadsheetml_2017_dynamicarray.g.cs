@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(106, "dynamicArrayProperties")]
+    [SchemaAttr("xda:dynamicArrayProperties")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DynamicArrayProperties : OpenXmlCompositeElement
     {
@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fDynamic")]
+        [SchemaAttr("fDynamic")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? FDynamic
@@ -85,7 +85,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fCollapsed")]
+        [SchemaAttr("fCollapsed")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? FCollapsed
@@ -97,12 +97,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(106, "dynamicArrayProperties");
+            builder.SetSchema("xda:dynamicArrayProperties");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList>();
             builder.AddElement<DynamicArrayProperties>()
-.AddAttribute(0, "fDynamic", a => a.FDynamic)
-.AddAttribute(0, "fCollapsed", a => a.FCollapsed);
+.AddAttribute("fDynamic", a => a.FDynamic)
+.AddAttribute("fCollapsed", a => a.FCollapsed);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
@@ -138,7 +138,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(106, "extLst")]
+    [SchemaAttr("xda:extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ExtensionList : OpenXmlCompositeElement
     {
@@ -176,7 +176,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(106, "extLst");
+            builder.SetSchema("xda:extLst");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)

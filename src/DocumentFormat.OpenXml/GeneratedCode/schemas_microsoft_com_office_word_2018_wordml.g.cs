@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.ExtensionList
     /// <para>When the object is serialized out as xml, it's qualified name is w16cur:ext.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(126, "ext")]
+    [SchemaAttr("w16cur:ext")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Extension : OpenXmlCompositeElement
     {
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.ExtensionList
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(126, "uri")]
+        [SchemaAttr("w16cur:uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uri
@@ -78,10 +78,10 @@ namespace DocumentFormat.OpenXml.Office2021.Word.ExtensionList
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(126, "ext");
+            builder.SetSchema("w16cur:ext");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<Extension>()
-.AddAttribute(126, "uri", a => a.Uri, aBuilder =>
+.AddAttribute("w16cur:uri", a => a.Uri, aBuilder =>
 {
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2021));
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });

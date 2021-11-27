@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "revHdrs")]
+    [SchemaAttr("xr:revHdrs")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExHeaders : OpenXmlCompositeElement
     {
@@ -73,7 +73,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "minRev")]
+        [SchemaAttr("minRev")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt64Value? MinRev
@@ -89,7 +89,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "maxRev")]
+        [SchemaAttr("maxRev")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt64Value? MaxRev
@@ -105,7 +105,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "docId")]
+        [SchemaAttr("docId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? DocId
@@ -121,7 +121,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "endpointId")]
+        [SchemaAttr("endpointId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? EndpointId
@@ -133,23 +133,23 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "revHdrs");
+            builder.SetSchema("xr:revHdrs");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExHeader>();
             builder.AddElement<RevExHeaders>()
-.AddAttribute(0, "minRev", a => a.MinRev, aBuilder =>
+.AddAttribute("minRev", a => a.MinRev, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "maxRev", a => a.MaxRev, aBuilder =>
+.AddAttribute("maxRev", a => a.MaxRev, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "docId", a => a.DocId, aBuilder =>
+.AddAttribute("docId", a => a.DocId, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "endpointId", a => a.EndpointId, aBuilder =>
+.AddAttribute("endpointId", a => a.EndpointId, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -188,7 +188,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "revStream")]
+    [SchemaAttr("xr:revStream")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExStream : OpenXmlCompositeElement
     {
@@ -226,7 +226,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "revStream");
+            builder.SetSchema("xr:revStream");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExChangeCell>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExChgObj>();
@@ -283,7 +283,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "dxf")]
+    [SchemaAttr("xr:dxf")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DifferentialFormatType : OpenXmlCompositeElement
     {
@@ -321,7 +321,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "dxf");
+            builder.SetSchema("xr:dxf");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Border>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
@@ -443,7 +443,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xr:revisionPtr.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "revisionPtr")]
+    [SchemaAttr("xr:revisionPtr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevisionPtr : OpenXmlLeafElement
     {
@@ -461,7 +461,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "revIDLastSave")]
+        [SchemaAttr("revIDLastSave")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt64Value? RevIDLastSave
@@ -477,7 +477,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "documentId")]
+        [SchemaAttr("documentId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? DocumentId
@@ -489,14 +489,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "revisionPtr");
+            builder.SetSchema("xr:revisionPtr");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevisionPtr>()
-.AddAttribute(0, "revIDLastSave", a => a.RevIDLastSave, aBuilder =>
+.AddAttribute("revIDLastSave", a => a.RevIDLastSave, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "documentId", a => a.DocumentId, aBuilder =>
+.AddAttribute("documentId", a => a.DocumentId, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -523,7 +523,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "objectState")]
+    [SchemaAttr("xr:objectState")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class StateBasedObject : OpenXmlCompositeElement
     {
@@ -561,7 +561,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "objectState");
+            builder.SetSchema("xr:objectState");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.AutoFilter>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.Comments>();
@@ -668,7 +668,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xr:hdr.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "hdr")]
+    [SchemaAttr("xr:hdr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExHeader : OpenXmlLeafElement
     {
@@ -689,7 +689,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "id")]
+        [SchemaAttr("r:id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -705,7 +705,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "minRev")]
+        [SchemaAttr("minRev")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt64Value? MinRev
@@ -721,7 +721,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "maxRev")]
+        [SchemaAttr("maxRev")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt64Value? MaxRev
@@ -737,7 +737,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "time")]
+        [SchemaAttr("time")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public DateTimeValue? Time
@@ -749,16 +749,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "hdr");
+            builder.SetSchema("xr:hdr");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevExHeader>()
-.AddAttribute(19, "id", a => a.Id, aBuilder =>
+.AddAttribute("r:id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "minRev", a => a.MinRev)
-.AddAttribute(0, "maxRev", a => a.MaxRev)
-.AddAttribute(0, "time", a => a.Time, aBuilder =>
+.AddAttribute("minRev", a => a.MinRev)
+.AddAttribute("maxRev", a => a.MaxRev)
+.AddAttribute("time", a => a.Time, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -780,7 +780,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "xrrftr")]
+    [SchemaAttr("xr:xrrftr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExFuture : OpenXmlCompositeElement
     {
@@ -822,7 +822,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rev")]
+        [SchemaAttr("rev")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt64Value? Rev
@@ -838,7 +838,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uid")]
+        [SchemaAttr("uid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uid
@@ -854,7 +854,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sh")]
+        [SchemaAttr("sh")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Sh
@@ -870,7 +870,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uidp")]
+        [SchemaAttr("uidp")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uidp
@@ -886,7 +886,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ctx")]
+        [SchemaAttr("ctx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>? Ctx
@@ -902,7 +902,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sti")]
+        [SchemaAttr("sti")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Sti
@@ -914,30 +914,30 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "xrrftr");
+            builder.SetSchema("xr:xrrftr");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExTest>();
             builder.AddElement<RevExFuture>()
-.AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+.AddAttribute("rev", a => a.Rev, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+.AddAttribute("uid", a => a.Uid, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+.AddAttribute("sh", a => a.Sh, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute("uidp", a => a.Uidp, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "ctx", a => a.Ctx)
-.AddAttribute(0, "sti", a => a.Sti);
+.AddAttribute("ctx", a => a.Ctx)
+.AddAttribute("sti", a => a.Sti);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExTest), 0, 0, version: FileFormatVersions.Office2016)
@@ -954,7 +954,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrUspt.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "xrrUspt")]
+    [SchemaAttr("xr:xrrUspt")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExUnsupported : OpenXmlLeafElement
     {
@@ -972,7 +972,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rev")]
+        [SchemaAttr("rev")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt64Value? Rev
@@ -988,7 +988,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uid")]
+        [SchemaAttr("uid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uid
@@ -1004,7 +1004,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sh")]
+        [SchemaAttr("sh")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Sh
@@ -1020,7 +1020,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uidp")]
+        [SchemaAttr("uidp")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uidp
@@ -1036,7 +1036,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ctx")]
+        [SchemaAttr("ctx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>? Ctx
@@ -1048,28 +1048,28 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "xrrUspt");
+            builder.SetSchema("xr:xrrUspt");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevExUnsupported>()
-.AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+.AddAttribute("rev", a => a.Rev, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+.AddAttribute("uid", a => a.Uid, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+.AddAttribute("sh", a => a.Sh, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute("uidp", a => a.Uidp, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "ctx", a => a.Ctx);
+.AddAttribute("ctx", a => a.Ctx);
         }
 
         /// <inheritdoc/>
@@ -1082,7 +1082,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrTrim.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "xrrTrim")]
+    [SchemaAttr("xr:xrrTrim")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExTrimmed : OpenXmlLeafElement
     {
@@ -1100,7 +1100,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rev")]
+        [SchemaAttr("rev")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt64Value? Rev
@@ -1116,7 +1116,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uid")]
+        [SchemaAttr("uid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uid
@@ -1132,7 +1132,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sh")]
+        [SchemaAttr("sh")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Sh
@@ -1148,7 +1148,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uidp")]
+        [SchemaAttr("uidp")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uidp
@@ -1164,7 +1164,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ctx")]
+        [SchemaAttr("ctx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>? Ctx
@@ -1176,28 +1176,28 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "xrrTrim");
+            builder.SetSchema("xr:xrrTrim");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevExTrimmed>()
-.AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+.AddAttribute("rev", a => a.Rev, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+.AddAttribute("uid", a => a.Uid, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+.AddAttribute("sh", a => a.Sh, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute("uidp", a => a.Uidp, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "ctx", a => a.Ctx);
+.AddAttribute("ctx", a => a.Ctx);
         }
 
         /// <inheritdoc/>
@@ -1210,7 +1210,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrrc.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "xrrrc")]
+    [SchemaAttr("xr:xrrrc")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExRowColumn : OpenXmlLeafElement
     {
@@ -1228,7 +1228,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rev")]
+        [SchemaAttr("rev")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt64Value? Rev
@@ -1244,7 +1244,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uid")]
+        [SchemaAttr("uid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uid
@@ -1260,7 +1260,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sh")]
+        [SchemaAttr("sh")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Sh
@@ -1276,7 +1276,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uidp")]
+        [SchemaAttr("uidp")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uidp
@@ -1292,7 +1292,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ctx")]
+        [SchemaAttr("ctx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>? Ctx
@@ -1308,7 +1308,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "eol")]
+        [SchemaAttr("eol")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Eol
@@ -1324,7 +1324,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ref")]
+        [SchemaAttr("ref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Ref
@@ -1340,7 +1340,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "action")]
+        [SchemaAttr("action")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RwColAction>? Action
@@ -1352,34 +1352,34 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "xrrrc");
+            builder.SetSchema("xr:xrrrc");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevExRowColumn>()
-.AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+.AddAttribute("rev", a => a.Rev, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+.AddAttribute("uid", a => a.Uid, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+.AddAttribute("sh", a => a.Sh, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute("uidp", a => a.Uidp, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "ctx", a => a.Ctx)
-.AddAttribute(0, "eol", a => a.Eol)
-.AddAttribute(0, "ref", a => a.Ref, aBuilder =>
+.AddAttribute("ctx", a => a.Ctx)
+.AddAttribute("eol", a => a.Eol)
+.AddAttribute("ref", a => a.Ref, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "action", a => a.Action, aBuilder =>
+.AddAttribute("action", a => a.Action, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -1395,7 +1395,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrm.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "xrrm")]
+    [SchemaAttr("xr:xrrm")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExMove : OpenXmlLeafElement
     {
@@ -1413,7 +1413,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rev")]
+        [SchemaAttr("rev")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt64Value? Rev
@@ -1429,7 +1429,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uid")]
+        [SchemaAttr("uid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uid
@@ -1445,7 +1445,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sh")]
+        [SchemaAttr("sh")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Sh
@@ -1461,7 +1461,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uidp")]
+        [SchemaAttr("uidp")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uidp
@@ -1477,7 +1477,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ctx")]
+        [SchemaAttr("ctx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>? Ctx
@@ -1493,7 +1493,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "src")]
+        [SchemaAttr("src")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Src
@@ -1509,7 +1509,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "dst")]
+        [SchemaAttr("dst")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Dst
@@ -1525,7 +1525,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "srcSh")]
+        [SchemaAttr("srcSh")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? SrcSh
@@ -1537,37 +1537,37 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "xrrm");
+            builder.SetSchema("xr:xrrm");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevExMove>()
-.AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+.AddAttribute("rev", a => a.Rev, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+.AddAttribute("uid", a => a.Uid, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+.AddAttribute("sh", a => a.Sh, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute("uidp", a => a.Uidp, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "ctx", a => a.Ctx)
-.AddAttribute(0, "src", a => a.Src, aBuilder =>
+.AddAttribute("ctx", a => a.Ctx)
+.AddAttribute("src", a => a.Src, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "dst", a => a.Dst, aBuilder =>
+.AddAttribute("dst", a => a.Dst, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "srcSh", a => a.SrcSh, aBuilder =>
+.AddAttribute("srcSh", a => a.SrcSh, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
@@ -1590,7 +1590,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "xrrc")]
+    [SchemaAttr("xr:xrrc")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExChangeCell : OpenXmlCompositeElement
     {
@@ -1632,7 +1632,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "listUid")]
+        [SchemaAttr("listUid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ListUid
@@ -1648,7 +1648,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rev")]
+        [SchemaAttr("rev")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt64Value? Rev
@@ -1664,7 +1664,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uid")]
+        [SchemaAttr("uid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uid
@@ -1680,7 +1680,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sh")]
+        [SchemaAttr("sh")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Sh
@@ -1696,7 +1696,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uidp")]
+        [SchemaAttr("uidp")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uidp
@@ -1712,7 +1712,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ctx")]
+        [SchemaAttr("ctx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>? Ctx
@@ -1728,7 +1728,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "r")]
+        [SchemaAttr("r")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? R
@@ -1744,7 +1744,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "t")]
+        [SchemaAttr("t")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillType>? T
@@ -1760,7 +1760,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "x")]
+        [SchemaAttr("x")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillTypeExt>? X
@@ -1776,7 +1776,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "w")]
+        [SchemaAttr("w")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? W
@@ -1788,41 +1788,41 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "xrrc");
+            builder.SetSchema("xr:xrrc");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.ChangeCellSubEdit>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevCell>();
             builder.AddElement<RevExChangeCell>()
-.AddAttribute(0, "listUid", a => a.ListUid, aBuilder =>
+.AddAttribute("listUid", a => a.ListUid, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+.AddAttribute("rev", a => a.Rev, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+.AddAttribute("uid", a => a.Uid, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+.AddAttribute("sh", a => a.Sh, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute("uidp", a => a.Uidp, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "ctx", a => a.Ctx)
-.AddAttribute(0, "r", a => a.R, aBuilder =>
+.AddAttribute("ctx", a => a.Ctx)
+.AddAttribute("r", a => a.R, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "t", a => a.T)
-.AddAttribute(0, "x", a => a.X)
-.AddAttribute(0, "w", a => a.W);
+.AddAttribute("t", a => a.T)
+.AddAttribute("x", a => a.X)
+.AddAttribute("w", a => a.W);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevCell), 1, 0, version: FileFormatVersions.Office2016),
@@ -1847,7 +1847,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "xrrf")]
+    [SchemaAttr("xr:xrrf")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExFormatting : OpenXmlCompositeElement
     {
@@ -1889,7 +1889,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rev")]
+        [SchemaAttr("rev")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt64Value? Rev
@@ -1905,7 +1905,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uid")]
+        [SchemaAttr("uid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uid
@@ -1921,7 +1921,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sh")]
+        [SchemaAttr("sh")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Sh
@@ -1937,7 +1937,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uidp")]
+        [SchemaAttr("uidp")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uidp
@@ -1953,7 +1953,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ctx")]
+        [SchemaAttr("ctx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>? Ctx
@@ -1969,7 +1969,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "numFmtId")]
+        [SchemaAttr("numFmtId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? NumFmtId
@@ -1985,7 +1985,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "xfDxf")]
+        [SchemaAttr("xfDxf")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? XfDxf
@@ -2001,7 +2001,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "style")]
+        [SchemaAttr("style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Style
@@ -2017,7 +2017,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sqref")]
+        [SchemaAttr("sqref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public ListValue<StringValue>? Sqref
@@ -2033,7 +2033,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "start")]
+        [SchemaAttr("start")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Start
@@ -2049,7 +2049,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "length")]
+        [SchemaAttr("length")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Length
@@ -2065,7 +2065,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "styleUid")]
+        [SchemaAttr("styleUid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? StyleUid
@@ -2081,7 +2081,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fBlankCell")]
+        [SchemaAttr("fBlankCell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? FBlankCell
@@ -2097,7 +2097,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "applyNumberFormat")]
+        [SchemaAttr("applyNumberFormat")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ApplyNumberFormat
@@ -2113,7 +2113,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "applyFont")]
+        [SchemaAttr("applyFont")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ApplyFont
@@ -2129,7 +2129,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "applyFill")]
+        [SchemaAttr("applyFill")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ApplyFill
@@ -2145,7 +2145,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "applyBorder")]
+        [SchemaAttr("applyBorder")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ApplyBorder
@@ -2161,7 +2161,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "applyAlignment")]
+        [SchemaAttr("applyAlignment")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ApplyAlignment
@@ -2177,7 +2177,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "applyProtection")]
+        [SchemaAttr("applyProtection")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ApplyProtection
@@ -2189,50 +2189,50 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "xrrf");
+            builder.SetSchema("xr:xrrf");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.ExtensionList>();
             builder.AddElement<RevExFormatting>()
-.AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+.AddAttribute("rev", a => a.Rev, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+.AddAttribute("uid", a => a.Uid, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+.AddAttribute("sh", a => a.Sh, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute("uidp", a => a.Uidp, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "ctx", a => a.Ctx)
-.AddAttribute(0, "numFmtId", a => a.NumFmtId)
-.AddAttribute(0, "xfDxf", a => a.XfDxf)
-.AddAttribute(0, "style", a => a.Style)
-.AddAttribute(0, "sqref", a => a.Sqref, aBuilder =>
+.AddAttribute("ctx", a => a.Ctx)
+.AddAttribute("numFmtId", a => a.NumFmtId)
+.AddAttribute("xfDxf", a => a.XfDxf)
+.AddAttribute("style", a => a.Style)
+.AddAttribute("sqref", a => a.Sqref, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "start", a => a.Start)
-.AddAttribute(0, "length", a => a.Length)
-.AddAttribute(0, "styleUid", a => a.StyleUid, aBuilder =>
+.AddAttribute("start", a => a.Start)
+.AddAttribute("length", a => a.Length)
+.AddAttribute("styleUid", a => a.StyleUid, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "fBlankCell", a => a.FBlankCell)
-.AddAttribute(0, "applyNumberFormat", a => a.ApplyNumberFormat)
-.AddAttribute(0, "applyFont", a => a.ApplyFont)
-.AddAttribute(0, "applyFill", a => a.ApplyFill)
-.AddAttribute(0, "applyBorder", a => a.ApplyBorder)
-.AddAttribute(0, "applyAlignment", a => a.ApplyAlignment)
-.AddAttribute(0, "applyProtection", a => a.ApplyProtection);
+.AddAttribute("fBlankCell", a => a.FBlankCell)
+.AddAttribute("applyNumberFormat", a => a.ApplyNumberFormat)
+.AddAttribute("applyFont", a => a.ApplyFont)
+.AddAttribute("applyFill", a => a.ApplyFill)
+.AddAttribute("applyBorder", a => a.ApplyBorder)
+.AddAttribute("applyAlignment", a => a.ApplyAlignment)
+.AddAttribute("applyProtection", a => a.ApplyProtection);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType), 0, 1, version: FileFormatVersions.Office2016),
@@ -2283,7 +2283,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "xrrDefName")]
+    [SchemaAttr("xr:xrrDefName")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExDefinedName : OpenXmlCompositeElement
     {
@@ -2325,7 +2325,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rev")]
+        [SchemaAttr("rev")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt64Value? Rev
@@ -2341,7 +2341,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uid")]
+        [SchemaAttr("uid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uid
@@ -2357,7 +2357,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sh")]
+        [SchemaAttr("sh")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Sh
@@ -2373,7 +2373,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uidp")]
+        [SchemaAttr("uidp")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uidp
@@ -2389,7 +2389,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ctx")]
+        [SchemaAttr("ctx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>? Ctx
@@ -2405,7 +2405,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "customView")]
+        [SchemaAttr("customView")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? CustomView
@@ -2421,7 +2421,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "name")]
+        [SchemaAttr("name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -2437,7 +2437,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "function")]
+        [SchemaAttr("function")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Function
@@ -2453,7 +2453,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "functionGroupId")]
+        [SchemaAttr("functionGroupId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public ByteValue? FunctionGroupId
@@ -2469,7 +2469,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "shortcutKey")]
+        [SchemaAttr("shortcutKey")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public ByteValue? ShortcutKey
@@ -2485,7 +2485,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "hidden")]
+        [SchemaAttr("hidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Hidden
@@ -2501,7 +2501,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "customMenu")]
+        [SchemaAttr("customMenu")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? CustomMenu
@@ -2517,7 +2517,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "description")]
+        [SchemaAttr("description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Description
@@ -2533,7 +2533,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "help")]
+        [SchemaAttr("help")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Help
@@ -2549,7 +2549,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "statusBar")]
+        [SchemaAttr("statusBar")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? StatusBar
@@ -2565,7 +2565,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "comment")]
+        [SchemaAttr("comment")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Comment
@@ -2577,44 +2577,44 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "xrrDefName");
+            builder.SetSchema("xr:xrrDefName");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula>();
             builder.AddElement<RevExDefinedName>()
-.AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+.AddAttribute("rev", a => a.Rev, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+.AddAttribute("uid", a => a.Uid, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+.AddAttribute("sh", a => a.Sh, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute("uidp", a => a.Uidp, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "ctx", a => a.Ctx)
-.AddAttribute(0, "customView", a => a.CustomView)
-.AddAttribute(0, "name", a => a.Name, aBuilder =>
+.AddAttribute("ctx", a => a.Ctx)
+.AddAttribute("customView", a => a.CustomView)
+.AddAttribute("name", a => a.Name, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "function", a => a.Function)
-.AddAttribute(0, "functionGroupId", a => a.FunctionGroupId)
-.AddAttribute(0, "shortcutKey", a => a.ShortcutKey)
-.AddAttribute(0, "hidden", a => a.Hidden)
-.AddAttribute(0, "customMenu", a => a.CustomMenu)
-.AddAttribute(0, "description", a => a.Description)
-.AddAttribute(0, "help", a => a.Help)
-.AddAttribute(0, "statusBar", a => a.StatusBar)
-.AddAttribute(0, "comment", a => a.Comment);
+.AddAttribute("function", a => a.Function)
+.AddAttribute("functionGroupId", a => a.FunctionGroupId)
+.AddAttribute("shortcutKey", a => a.ShortcutKey)
+.AddAttribute("hidden", a => a.Hidden)
+.AddAttribute("customMenu", a => a.CustomMenu)
+.AddAttribute("description", a => a.Description)
+.AddAttribute("help", a => a.Help)
+.AddAttribute("statusBar", a => a.StatusBar)
+.AddAttribute("comment", a => a.Comment);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula), 0, 1, version: FileFormatVersions.Office2016),
@@ -2664,7 +2664,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "xrrdo")]
+    [SchemaAttr("xr:xrrdo")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExDelObj : OpenXmlCompositeElement
     {
@@ -2706,7 +2706,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rev")]
+        [SchemaAttr("rev")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt64Value? Rev
@@ -2722,7 +2722,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uid")]
+        [SchemaAttr("uid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uid
@@ -2738,7 +2738,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sh")]
+        [SchemaAttr("sh")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Sh
@@ -2754,7 +2754,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uidp")]
+        [SchemaAttr("uidp")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uidp
@@ -2770,7 +2770,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ctx")]
+        [SchemaAttr("ctx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>? Ctx
@@ -2782,29 +2782,29 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "xrrdo");
+            builder.SetSchema("xr:xrrdo");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader>();
             builder.AddElement<RevExDelObj>()
-.AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+.AddAttribute("rev", a => a.Rev, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+.AddAttribute("uid", a => a.Uid, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+.AddAttribute("sh", a => a.Sh, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute("uidp", a => a.Uidp, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "ctx", a => a.Ctx);
+.AddAttribute("ctx", a => a.Ctx);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader), 1, 1, version: FileFormatVersions.Office2016)
@@ -2842,7 +2842,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "xrrco")]
+    [SchemaAttr("xr:xrrco")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExChgObj : OpenXmlCompositeElement
     {
@@ -2884,7 +2884,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rev")]
+        [SchemaAttr("rev")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt64Value? Rev
@@ -2900,7 +2900,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uid")]
+        [SchemaAttr("uid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uid
@@ -2916,7 +2916,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sh")]
+        [SchemaAttr("sh")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Sh
@@ -2932,7 +2932,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uidp")]
+        [SchemaAttr("uidp")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uidp
@@ -2948,7 +2948,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ctx")]
+        [SchemaAttr("ctx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>? Ctx
@@ -2960,31 +2960,31 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "xrrco");
+            builder.SetSchema("xr:xrrco");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevisionState>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevisionStateLink>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader>();
             builder.AddElement<RevExChgObj>()
-.AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+.AddAttribute("rev", a => a.Rev, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+.AddAttribute("uid", a => a.Uid, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+.AddAttribute("sh", a => a.Sh, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute("uidp", a => a.Uidp, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "ctx", a => a.Ctx);
+.AddAttribute("ctx", a => a.Ctx);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader), 1, 1, version: FileFormatVersions.Office2016),
@@ -3019,7 +3019,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrSheet.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "xrrSheet")]
+    [SchemaAttr("xr:xrrSheet")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExSheetOp : OpenXmlLeafElement
     {
@@ -3037,7 +3037,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rev")]
+        [SchemaAttr("rev")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt64Value? Rev
@@ -3053,7 +3053,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uid")]
+        [SchemaAttr("uid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uid
@@ -3069,7 +3069,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sh")]
+        [SchemaAttr("sh")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Sh
@@ -3085,7 +3085,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uidp")]
+        [SchemaAttr("uidp")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uidp
@@ -3101,7 +3101,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ctx")]
+        [SchemaAttr("ctx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>? Ctx
@@ -3117,7 +3117,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "op")]
+        [SchemaAttr("op")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.SheetOp>? Op
@@ -3133,7 +3133,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "name")]
+        [SchemaAttr("name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -3149,7 +3149,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "idOrig")]
+        [SchemaAttr("idOrig")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? IdOrig
@@ -3165,7 +3165,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "idNew")]
+        [SchemaAttr("idNew")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? IdNew
@@ -3177,35 +3177,35 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "xrrSheet");
+            builder.SetSchema("xr:xrrSheet");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevExSheetOp>()
-.AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+.AddAttribute("rev", a => a.Rev, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+.AddAttribute("uid", a => a.Uid, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+.AddAttribute("sh", a => a.Sh, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute("uidp", a => a.Uidp, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "ctx", a => a.Ctx)
-.AddAttribute(0, "op", a => a.Op, aBuilder =>
+.AddAttribute("ctx", a => a.Ctx)
+.AddAttribute("op", a => a.Op, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "name", a => a.Name)
-.AddAttribute(0, "idOrig", a => a.IdOrig)
-.AddAttribute(0, "idNew", a => a.IdNew);
+.AddAttribute("name", a => a.Name)
+.AddAttribute("idOrig", a => a.IdOrig)
+.AddAttribute("idNew", a => a.IdNew);
         }
 
         /// <inheritdoc/>
@@ -3218,7 +3218,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrList.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "xrrList")]
+    [SchemaAttr("xr:xrrList")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevisionList : OpenXmlLeafElement
     {
@@ -3236,7 +3236,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rev")]
+        [SchemaAttr("rev")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt64Value? Rev
@@ -3252,7 +3252,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uid")]
+        [SchemaAttr("uid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uid
@@ -3268,7 +3268,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sh")]
+        [SchemaAttr("sh")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Sh
@@ -3284,7 +3284,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uidp")]
+        [SchemaAttr("uidp")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uidp
@@ -3300,7 +3300,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ctx")]
+        [SchemaAttr("ctx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>? Ctx
@@ -3316,7 +3316,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "Data")]
+        [SchemaAttr("Data")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Data
@@ -3332,7 +3332,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "Formatting")]
+        [SchemaAttr("Formatting")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Formatting
@@ -3348,7 +3348,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "RangeBased")]
+        [SchemaAttr("RangeBased")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? RangeBased
@@ -3364,7 +3364,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "Fake")]
+        [SchemaAttr("Fake")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Fake
@@ -3380,7 +3380,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ref")]
+        [SchemaAttr("ref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Ref
@@ -3396,7 +3396,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "Headers")]
+        [SchemaAttr("Headers")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Headers
@@ -3412,7 +3412,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "InsDelHeaders")]
+        [SchemaAttr("InsDelHeaders")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? InsDelHeaders
@@ -3428,7 +3428,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rId")]
+        [SchemaAttr("rId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? RId
@@ -3440,39 +3440,39 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "xrrList");
+            builder.SetSchema("xr:xrrList");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevisionList>()
-.AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+.AddAttribute("rev", a => a.Rev, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+.AddAttribute("uid", a => a.Uid, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+.AddAttribute("sh", a => a.Sh, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute("uidp", a => a.Uidp, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "ctx", a => a.Ctx)
-.AddAttribute(0, "Data", a => a.Data)
-.AddAttribute(0, "Formatting", a => a.Formatting)
-.AddAttribute(0, "RangeBased", a => a.RangeBased)
-.AddAttribute(0, "Fake", a => a.Fake)
-.AddAttribute(0, "ref", a => a.Ref, aBuilder =>
+.AddAttribute("ctx", a => a.Ctx)
+.AddAttribute("Data", a => a.Data)
+.AddAttribute("Formatting", a => a.Formatting)
+.AddAttribute("RangeBased", a => a.RangeBased)
+.AddAttribute("Fake", a => a.Fake)
+.AddAttribute("ref", a => a.Ref, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "Headers", a => a.Headers)
-.AddAttribute(0, "InsDelHeaders", a => a.InsDelHeaders)
-.AddAttribute(0, "rId", a => a.RId, aBuilder =>
+.AddAttribute("Headers", a => a.Headers)
+.AddAttribute("InsDelHeaders", a => a.InsDelHeaders)
+.AddAttribute("rId", a => a.RId, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -3488,7 +3488,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrListExpR.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "xrrListExpR")]
+    [SchemaAttr("xr:xrrListExpR")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevListAutoExpandRw : OpenXmlLeafElement
     {
@@ -3506,7 +3506,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rev")]
+        [SchemaAttr("rev")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt64Value? Rev
@@ -3522,7 +3522,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uid")]
+        [SchemaAttr("uid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uid
@@ -3538,7 +3538,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sh")]
+        [SchemaAttr("sh")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Sh
@@ -3554,7 +3554,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uidp")]
+        [SchemaAttr("uidp")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uidp
@@ -3570,7 +3570,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ctx")]
+        [SchemaAttr("ctx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>? Ctx
@@ -3586,7 +3586,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "refAdded")]
+        [SchemaAttr("refAdded")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? RefAdded
@@ -3602,7 +3602,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "listGuid")]
+        [SchemaAttr("listGuid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ListGuid
@@ -3614,33 +3614,33 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "xrrListExpR");
+            builder.SetSchema("xr:xrrListExpR");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevListAutoExpandRw>()
-.AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+.AddAttribute("rev", a => a.Rev, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+.AddAttribute("uid", a => a.Uid, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+.AddAttribute("sh", a => a.Sh, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute("uidp", a => a.Uidp, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "ctx", a => a.Ctx)
-.AddAttribute(0, "refAdded", a => a.RefAdded, aBuilder =>
+.AddAttribute("ctx", a => a.Ctx)
+.AddAttribute("refAdded", a => a.RefAdded, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "listGuid", a => a.ListGuid, aBuilder =>
+.AddAttribute("listGuid", a => a.ListGuid, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
@@ -3675,7 +3675,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "xrrg")]
+    [SchemaAttr("xr:xrrg")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevGroup : OpenXmlCompositeElement
     {
@@ -3717,7 +3717,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rev")]
+        [SchemaAttr("rev")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt64Value? Rev
@@ -3733,7 +3733,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uid")]
+        [SchemaAttr("uid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uid
@@ -3749,7 +3749,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sh")]
+        [SchemaAttr("sh")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Sh
@@ -3765,7 +3765,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uidp")]
+        [SchemaAttr("uidp")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uidp
@@ -3781,7 +3781,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ctx")]
+        [SchemaAttr("ctx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>? Ctx
@@ -3793,7 +3793,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "xrrg");
+            builder.SetSchema("xr:xrrg");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExChangeCell>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExChgObj>();
@@ -3809,25 +3809,25 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevisionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevListAutoExpandRw>();
             builder.AddElement<RevGroup>()
-.AddAttribute(0, "rev", a => a.Rev, aBuilder =>
+.AddAttribute("rev", a => a.Rev, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute(0, "sh", a => a.Sh, aBuilder =>
+.AddAttribute("uid", a => a.Uid, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "uidp", a => a.Uidp, aBuilder =>
+.AddAttribute("sh", a => a.Sh, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute("uidp", a => a.Uidp, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "ctx", a => a.Ctx);
+.AddAttribute("ctx", a => a.Ctx);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExFuture), 0, 0, version: FileFormatVersions.Office2016),
@@ -3856,7 +3856,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrtest.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "xrrtest")]
+    [SchemaAttr("xr:xrrtest")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExTest : OpenXmlLeafElement
     {
@@ -3870,7 +3870,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "xrrtest");
+            builder.SetSchema("xr:xrrtest");
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -3892,7 +3892,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "c")]
+    [SchemaAttr("xr:c")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevCell : OpenXmlCompositeElement
     {
@@ -3934,7 +3934,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "t")]
+        [SchemaAttr("t")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues>? T
@@ -3950,7 +3950,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "nop")]
+        [SchemaAttr("nop")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Nop
@@ -3966,7 +3966,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "tick")]
+        [SchemaAttr("tick")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Tick
@@ -3982,7 +3982,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rep")]
+        [SchemaAttr("rep")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Rep
@@ -3994,16 +3994,16 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "c");
+            builder.SetSchema("xr:c");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RstType>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.FFormula>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.Xstring>();
             builder.AddElement<RevCell>()
-.AddAttribute(0, "t", a => a.T)
-.AddAttribute(0, "nop", a => a.Nop)
-.AddAttribute(0, "tick", a => a.Tick)
-.AddAttribute(0, "rep", a => a.Rep);
+.AddAttribute("t", a => a.T)
+.AddAttribute("nop", a => a.Nop)
+.AddAttribute("tick", a => a.Tick)
+.AddAttribute("rep", a => a.Rep);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.FFormula), 0, 1, version: FileFormatVersions.Office2016),
@@ -4067,7 +4067,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "ccse")]
+    [SchemaAttr("xr:ccse")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ChangeCellSubEdit : OpenXmlCompositeElement
     {
@@ -4109,7 +4109,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "r")]
+        [SchemaAttr("r")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? R
@@ -4125,7 +4125,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "t")]
+        [SchemaAttr("t")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillType>? T
@@ -4141,7 +4141,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "x")]
+        [SchemaAttr("x")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillTypeExt>? X
@@ -4157,7 +4157,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "w")]
+        [SchemaAttr("w")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? W
@@ -4169,17 +4169,17 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "ccse");
+            builder.SetSchema("xr:ccse");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevCell>();
             builder.AddElement<ChangeCellSubEdit>()
-.AddAttribute(0, "r", a => a.R, aBuilder =>
+.AddAttribute("r", a => a.R, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "t", a => a.T)
-.AddAttribute(0, "x", a => a.X)
-.AddAttribute(0, "w", a => a.W);
+.AddAttribute("t", a => a.T)
+.AddAttribute("x", a => a.X)
+.AddAttribute("w", a => a.W);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevCell), 1, 0, version: FileFormatVersions.Office2016)
@@ -4202,7 +4202,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "extLst")]
+    [SchemaAttr("xr:extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ExtensionList : OpenXmlCompositeElement
     {
@@ -4240,7 +4240,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "extLst");
+            builder.SetSchema("xr:extLst");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -4265,7 +4265,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xr:formula.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "formula")]
+    [SchemaAttr("xr:formula")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FormulaFormula : OpenXmlLeafTextElement
     {
@@ -4292,7 +4292,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "formula");
+            builder.SetSchema("xr:formula");
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -4306,7 +4306,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xr:f.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "f")]
+    [SchemaAttr("xr:f")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FFormula : OpenXmlLeafTextElement
     {
@@ -4333,7 +4333,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "f");
+            builder.SetSchema("xr:f");
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -4353,7 +4353,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "hdr")]
+    [SchemaAttr("xr:hdr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class StateBasedHeader : OpenXmlCompositeElement
     {
@@ -4395,7 +4395,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uid")]
+        [SchemaAttr("uid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uid
@@ -4411,7 +4411,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "eft")]
+        [SchemaAttr("eft")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FeatureType>? Eft
@@ -4427,7 +4427,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "eftx")]
+        [SchemaAttr("eftx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.ExtFeatureType>? Eftx
@@ -4443,7 +4443,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "seft")]
+        [SchemaAttr("seft")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.SubFeatureType>? Seft
@@ -4459,7 +4459,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "seftx")]
+        [SchemaAttr("seftx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.ExtSubFeatureType>? Seftx
@@ -4471,22 +4471,22 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "hdr");
+            builder.SetSchema("xr:hdr");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RefMap>();
             builder.AddElement<StateBasedHeader>()
-.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+.AddAttribute("uid", a => a.Uid, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "eft", a => a.Eft, aBuilder =>
+.AddAttribute("eft", a => a.Eft, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "eftx", a => a.Eftx)
-.AddAttribute(0, "seft", a => a.Seft)
-.AddAttribute(0, "seftx", a => a.Seftx);
+.AddAttribute("eftx", a => a.Eftx)
+.AddAttribute("seft", a => a.Seft)
+.AddAttribute("seftx", a => a.Seftx);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RefMap), 0, 1, version: FileFormatVersions.Office2016)
@@ -4516,7 +4516,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xr:link.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "link")]
+    [SchemaAttr("xr:link")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevisionStateLink : OpenXmlLeafElement
     {
@@ -4537,7 +4537,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "id")]
+        [SchemaAttr("r:id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -4549,10 +4549,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "link");
+            builder.SetSchema("xr:link");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevisionStateLink>()
-.AddAttribute(19, "id", a => a.Id, aBuilder =>
+.AddAttribute("r:id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -4578,7 +4578,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "body")]
+    [SchemaAttr("xr:body")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevisionState : OpenXmlCompositeElement
     {
@@ -4616,7 +4616,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "body");
+            builder.SetSchema("xr:body");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.FreezePanes>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.HideUnhideSheet>();
@@ -4718,7 +4718,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "refmap")]
+    [SchemaAttr("xr:refmap")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RefMap : OpenXmlCompositeElement
     {
@@ -4756,7 +4756,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "refmap");
+            builder.SetSchema("xr:refmap");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RefCell>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RefFuture>();
@@ -4783,7 +4783,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xr:rowColVisualOps.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "rowColVisualOps")]
+    [SchemaAttr("xr:rowColVisualOps")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RowColVisualOps : OpenXmlLeafElement
     {
@@ -4801,7 +4801,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "action")]
+        [SchemaAttr("action")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOp>? Action
@@ -4817,7 +4817,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "isRow")]
+        [SchemaAttr("isRow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? IsRow
@@ -4833,7 +4833,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "size")]
+        [SchemaAttr("size")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Size
@@ -4849,7 +4849,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "userSized")]
+        [SchemaAttr("userSized")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? UserSized
@@ -4861,19 +4861,19 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "rowColVisualOps");
+            builder.SetSchema("xr:rowColVisualOps");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RowColVisualOps>()
-.AddAttribute(0, "action", a => a.Action, aBuilder =>
+.AddAttribute("action", a => a.Action, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "isRow", a => a.IsRow, aBuilder =>
+.AddAttribute("isRow", a => a.IsRow, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "size", a => a.Size)
-.AddAttribute(0, "userSized", a => a.UserSized);
+.AddAttribute("size", a => a.Size)
+.AddAttribute("userSized", a => a.UserSized);
         }
 
         /// <inheritdoc/>
@@ -4886,7 +4886,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xr:hideUnhideSheet.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "hideUnhideSheet")]
+    [SchemaAttr("xr:hideUnhideSheet")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class HideUnhideSheet : OpenXmlLeafElement
     {
@@ -4904,7 +4904,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "hide")]
+        [SchemaAttr("hide")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Hide
@@ -4916,10 +4916,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "hideUnhideSheet");
+            builder.SetSchema("xr:hideUnhideSheet");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<HideUnhideSheet>()
-.AddAttribute(0, "hide", a => a.Hide, aBuilder =>
+.AddAttribute("hide", a => a.Hide, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -4935,7 +4935,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xr:showGridlinesHeadings.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "showGridlinesHeadings")]
+    [SchemaAttr("xr:showGridlinesHeadings")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShowGridlinesHeadings : OpenXmlLeafElement
     {
@@ -4953,7 +4953,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "showGridLines")]
+        [SchemaAttr("showGridLines")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ShowGridLines
@@ -4969,7 +4969,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "showRowCol")]
+        [SchemaAttr("showRowCol")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ShowRowCol
@@ -4981,14 +4981,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "showGridlinesHeadings");
+            builder.SetSchema("xr:showGridlinesHeadings");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ShowGridlinesHeadings>()
-.AddAttribute(0, "showGridLines", a => a.ShowGridLines, aBuilder =>
+.AddAttribute("showGridLines", a => a.ShowGridLines, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "showRowCol", a => a.ShowRowCol, aBuilder =>
+.AddAttribute("showRowCol", a => a.ShowRowCol, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -5004,7 +5004,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xr:freezePanes.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "freezePanes")]
+    [SchemaAttr("xr:freezePanes")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FreezePanes : OpenXmlLeafElement
     {
@@ -5022,7 +5022,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sheetViewUid")]
+        [SchemaAttr("sheetViewUid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? SheetViewUid
@@ -5034,10 +5034,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "freezePanes");
+            builder.SetSchema("xr:freezePanes");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<FreezePanes>()
-.AddAttribute(0, "sheetViewUid", a => a.SheetViewUid, aBuilder =>
+.AddAttribute("sheetViewUid", a => a.SheetViewUid, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
@@ -5059,7 +5059,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "outlines")]
+    [SchemaAttr("xr:outlines")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Outlines : OpenXmlCompositeElement
     {
@@ -5101,7 +5101,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "isRow")]
+        [SchemaAttr("isRow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? IsRow
@@ -5113,11 +5113,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "outlines");
+            builder.SetSchema("xr:outlines");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.Outline>();
             builder.AddElement<Outlines>()
-.AddAttribute(0, "isRow", a => a.IsRow, aBuilder =>
+.AddAttribute("isRow", a => a.IsRow, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -5137,7 +5137,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xr:outline.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "outline")]
+    [SchemaAttr("xr:outline")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Outline : OpenXmlLeafElement
     {
@@ -5155,7 +5155,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "isCollapsed")]
+        [SchemaAttr("isCollapsed")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? IsCollapsed
@@ -5171,7 +5171,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "level")]
+        [SchemaAttr("level")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public ByteValue? Level
@@ -5183,14 +5183,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "outline");
+            builder.SetSchema("xr:outline");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<Outline>()
-.AddAttribute(0, "isCollapsed", a => a.IsCollapsed, aBuilder =>
+.AddAttribute("isCollapsed", a => a.IsCollapsed, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "level", a => a.Level, aBuilder =>
+.AddAttribute("level", a => a.Level, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -5206,7 +5206,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xr:v.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "v")]
+    [SchemaAttr("xr:v")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Xstring : OpenXmlLeafTextElement
     {
@@ -5233,7 +5233,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "v");
+            builder.SetSchema("xr:v");
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -5256,7 +5256,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "is")]
+    [SchemaAttr("xr:is")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RstType : OpenXmlCompositeElement
     {
@@ -5294,7 +5294,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "is");
+            builder.SetSchema("xr:is");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PhoneticRun>();
@@ -5332,7 +5332,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xr:ref.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "ref")]
+    [SchemaAttr("xr:ref")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RefCell : OpenXmlLeafElement
     {
@@ -5350,7 +5350,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "n")]
+        [SchemaAttr("n")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? N
@@ -5366,7 +5366,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ajt")]
+        [SchemaAttr("ajt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>? Ajt
@@ -5382,7 +5382,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ajtx")]
+        [SchemaAttr("ajtx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>? Ajtx
@@ -5398,7 +5398,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "homeRef")]
+        [SchemaAttr("homeRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? HomeRef
@@ -5414,7 +5414,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "r")]
+        [SchemaAttr("r")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public ListValue<StringValue>? R
@@ -5430,7 +5430,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uid")]
+        [SchemaAttr("uid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uid
@@ -5446,7 +5446,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uidLast")]
+        [SchemaAttr("uidLast")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? UidLast
@@ -5458,28 +5458,28 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "ref");
+            builder.SetSchema("xr:ref");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RefCell>()
-.AddAttribute(0, "n", a => a.N, aBuilder =>
+.AddAttribute("n", a => a.N, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "ajt", a => a.Ajt, aBuilder =>
+.AddAttribute("ajt", a => a.Ajt, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "ajtx", a => a.Ajtx)
-.AddAttribute(0, "homeRef", a => a.HomeRef)
-.AddAttribute(0, "r", a => a.R, aBuilder =>
+.AddAttribute("ajtx", a => a.Ajtx)
+.AddAttribute("homeRef", a => a.HomeRef)
+.AddAttribute("r", a => a.R, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+.AddAttribute("uid", a => a.Uid, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "uidLast", a => a.UidLast, aBuilder =>
+.AddAttribute("uidLast", a => a.UidLast, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
@@ -5495,7 +5495,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is xr:sheetUid.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "sheetUid")]
+    [SchemaAttr("xr:sheetUid")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SheetXluid : OpenXmlLeafElement
     {
@@ -5513,7 +5513,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "n")]
+        [SchemaAttr("n")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? N
@@ -5529,7 +5529,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ajt")]
+        [SchemaAttr("ajt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>? Ajt
@@ -5545,7 +5545,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ajtx")]
+        [SchemaAttr("ajtx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>? Ajtx
@@ -5561,7 +5561,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "homeRef")]
+        [SchemaAttr("homeRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? HomeRef
@@ -5577,7 +5577,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uid")]
+        [SchemaAttr("uid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uid
@@ -5589,20 +5589,20 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "sheetUid");
+            builder.SetSchema("xr:sheetUid");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<SheetXluid>()
-.AddAttribute(0, "n", a => a.N, aBuilder =>
+.AddAttribute("n", a => a.N, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "ajt", a => a.Ajt, aBuilder =>
+.AddAttribute("ajt", a => a.Ajt, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "ajtx", a => a.Ajtx)
-.AddAttribute(0, "homeRef", a => a.HomeRef)
-.AddAttribute(0, "uid", a => a.Uid, aBuilder =>
+.AddAttribute("ajtx", a => a.Ajtx)
+.AddAttribute("homeRef", a => a.HomeRef)
+.AddAttribute("uid", a => a.Uid, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
@@ -5619,7 +5619,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is xr:oartAnchor.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "oartAnchor")]
+    [SchemaAttr("xr:oartAnchor")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RefOartAnchor : OpenXmlLeafElement
     {
@@ -5637,7 +5637,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "n")]
+        [SchemaAttr("n")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? N
@@ -5653,7 +5653,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ajt")]
+        [SchemaAttr("ajt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>? Ajt
@@ -5669,7 +5669,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ajtx")]
+        [SchemaAttr("ajtx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>? Ajtx
@@ -5685,7 +5685,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "homeRef")]
+        [SchemaAttr("homeRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? HomeRef
@@ -5701,7 +5701,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "r")]
+        [SchemaAttr("r")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? R
@@ -5717,7 +5717,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fromRowOff")]
+        [SchemaAttr("fromRowOff")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int64Value? FromRowOff
@@ -5733,7 +5733,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fromColOff")]
+        [SchemaAttr("fromColOff")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int64Value? FromColOff
@@ -5749,7 +5749,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "toRowOff")]
+        [SchemaAttr("toRowOff")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int64Value? ToRowOff
@@ -5765,7 +5765,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "toColOff")]
+        [SchemaAttr("toColOff")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int64Value? ToColOff
@@ -5781,7 +5781,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "cx")]
+        [SchemaAttr("cx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int64Value? Cx
@@ -5797,7 +5797,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "cy")]
+        [SchemaAttr("cy")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int64Value? Cy
@@ -5813,7 +5813,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "x")]
+        [SchemaAttr("x")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int64Value? X
@@ -5829,7 +5829,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "y")]
+        [SchemaAttr("y")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int64Value? Y
@@ -5845,7 +5845,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "oat")]
+        [SchemaAttr("oat")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.OartAnchorType>? Oat
@@ -5857,53 +5857,53 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "oartAnchor");
+            builder.SetSchema("xr:oartAnchor");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RefOartAnchor>()
-.AddAttribute(0, "n", a => a.N, aBuilder =>
+.AddAttribute("n", a => a.N, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "ajt", a => a.Ajt, aBuilder =>
+.AddAttribute("ajt", a => a.Ajt, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "ajtx", a => a.Ajtx)
-.AddAttribute(0, "homeRef", a => a.HomeRef)
-.AddAttribute(0, "r", a => a.R)
-.AddAttribute(0, "fromRowOff", a => a.FromRowOff, aBuilder =>
+.AddAttribute("ajtx", a => a.Ajtx)
+.AddAttribute("homeRef", a => a.HomeRef)
+.AddAttribute("r", a => a.R)
+.AddAttribute("fromRowOff", a => a.FromRowOff, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
 })
-.AddAttribute(0, "fromColOff", a => a.FromColOff, aBuilder =>
+.AddAttribute("fromColOff", a => a.FromColOff, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
 })
-.AddAttribute(0, "toRowOff", a => a.ToRowOff, aBuilder =>
+.AddAttribute("toRowOff", a => a.ToRowOff, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
 })
-.AddAttribute(0, "toColOff", a => a.ToColOff, aBuilder =>
+.AddAttribute("toColOff", a => a.ToColOff, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
 })
-.AddAttribute(0, "cx", a => a.Cx, aBuilder =>
+.AddAttribute("cx", a => a.Cx, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
 })
-.AddAttribute(0, "cy", a => a.Cy, aBuilder =>
+.AddAttribute("cy", a => a.Cy, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
 })
-.AddAttribute(0, "x", a => a.X, aBuilder =>
+.AddAttribute("x", a => a.X, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
 })
-.AddAttribute(0, "y", a => a.Y, aBuilder =>
+.AddAttribute("y", a => a.Y, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
 })
-.AddAttribute(0, "oat", a => a.Oat, aBuilder =>
+.AddAttribute("oat", a => a.Oat, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -5919,7 +5919,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xr:future.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "future")]
+    [SchemaAttr("xr:future")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RefFuture : OpenXmlLeafElement
     {
@@ -5933,7 +5933,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "future");
+            builder.SetSchema("xr:future");
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -5947,7 +5947,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xr:test.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "test")]
+    [SchemaAttr("xr:test")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RefTest : OpenXmlLeafElement
     {
@@ -5965,7 +5965,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "n")]
+        [SchemaAttr("n")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? N
@@ -5981,7 +5981,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ajt")]
+        [SchemaAttr("ajt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>? Ajt
@@ -5997,7 +5997,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ajtx")]
+        [SchemaAttr("ajtx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>? Ajtx
@@ -6013,7 +6013,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "homeRef")]
+        [SchemaAttr("homeRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? HomeRef
@@ -6025,19 +6025,19 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "test");
+            builder.SetSchema("xr:test");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RefTest>()
-.AddAttribute(0, "n", a => a.N, aBuilder =>
+.AddAttribute("n", a => a.N, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "ajt", a => a.Ajt, aBuilder =>
+.AddAttribute("ajt", a => a.Ajt, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "ajtx", a => a.Ajtx)
-.AddAttribute(0, "homeRef", a => a.HomeRef);
+.AddAttribute("ajtx", a => a.Ajtx)
+.AddAttribute("homeRef", a => a.HomeRef);
         }
 
         /// <inheritdoc/>
@@ -6058,7 +6058,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "dataValidation")]
+    [SchemaAttr("xr:dataValidation")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataValidation : OpenXmlCompositeElement
     {
@@ -6100,7 +6100,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "type")]
+        [SchemaAttr("type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues>? Type
@@ -6116,7 +6116,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "errorStyle")]
+        [SchemaAttr("errorStyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues>? ErrorStyle
@@ -6132,7 +6132,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "imeMode")]
+        [SchemaAttr("imeMode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues>? ImeMode
@@ -6148,7 +6148,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "operator")]
+        [SchemaAttr("operator")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues>? Operator
@@ -6164,7 +6164,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "allowBlank")]
+        [SchemaAttr("allowBlank")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? AllowBlank
@@ -6180,7 +6180,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "showDropDown")]
+        [SchemaAttr("showDropDown")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ShowDropDown
@@ -6196,7 +6196,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "showInputMessage")]
+        [SchemaAttr("showInputMessage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ShowInputMessage
@@ -6212,7 +6212,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "showErrorMessage")]
+        [SchemaAttr("showErrorMessage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ShowErrorMessage
@@ -6228,7 +6228,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "errorTitle")]
+        [SchemaAttr("errorTitle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ErrorTitle
@@ -6244,7 +6244,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "error")]
+        [SchemaAttr("error")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Error
@@ -6260,7 +6260,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "promptTitle")]
+        [SchemaAttr("promptTitle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? PromptTitle
@@ -6276,7 +6276,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "prompt")]
+        [SchemaAttr("prompt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Prompt
@@ -6292,7 +6292,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sqref")]
+        [SchemaAttr("sqref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public ListValue<StringValue>? SequenceOfReferences
@@ -6304,25 +6304,25 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "dataValidation");
+            builder.SetSchema("xr:dataValidation");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formula1>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formula2>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.ExcelAc.List>();
             builder.AddElement<DataValidation>()
-.AddAttribute(0, "type", a => a.Type)
-.AddAttribute(0, "errorStyle", a => a.ErrorStyle)
-.AddAttribute(0, "imeMode", a => a.ImeMode)
-.AddAttribute(0, "operator", a => a.Operator)
-.AddAttribute(0, "allowBlank", a => a.AllowBlank)
-.AddAttribute(0, "showDropDown", a => a.ShowDropDown)
-.AddAttribute(0, "showInputMessage", a => a.ShowInputMessage)
-.AddAttribute(0, "showErrorMessage", a => a.ShowErrorMessage)
-.AddAttribute(0, "errorTitle", a => a.ErrorTitle)
-.AddAttribute(0, "error", a => a.Error)
-.AddAttribute(0, "promptTitle", a => a.PromptTitle)
-.AddAttribute(0, "prompt", a => a.Prompt)
-.AddAttribute(0, "sqref", a => a.SequenceOfReferences, aBuilder =>
+.AddAttribute("type", a => a.Type)
+.AddAttribute("errorStyle", a => a.ErrorStyle)
+.AddAttribute("imeMode", a => a.ImeMode)
+.AddAttribute("operator", a => a.Operator)
+.AddAttribute("allowBlank", a => a.AllowBlank)
+.AddAttribute("showDropDown", a => a.ShowDropDown)
+.AddAttribute("showInputMessage", a => a.ShowInputMessage)
+.AddAttribute("showErrorMessage", a => a.ShowErrorMessage)
+.AddAttribute("errorTitle", a => a.ErrorTitle)
+.AddAttribute("error", a => a.Error)
+.AddAttribute("promptTitle", a => a.PromptTitle)
+.AddAttribute("prompt", a => a.Prompt)
+.AddAttribute("sqref", a => a.SequenceOfReferences, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -6383,7 +6383,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xr:hyperlink.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "hyperlink")]
+    [SchemaAttr("xr:hyperlink")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Hyperlink : OpenXmlLeafElement
     {
@@ -6401,7 +6401,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ref")]
+        [SchemaAttr("ref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Reference
@@ -6420,7 +6420,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "id")]
+        [SchemaAttr("r:id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -6436,7 +6436,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "location")]
+        [SchemaAttr("location")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Location
@@ -6452,7 +6452,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "tooltip")]
+        [SchemaAttr("tooltip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Tooltip
@@ -6468,7 +6468,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "display")]
+        [SchemaAttr("display")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Display
@@ -6480,17 +6480,17 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "hyperlink");
+            builder.SetSchema("xr:hyperlink");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<Hyperlink>()
-.AddAttribute(0, "ref", a => a.Reference, aBuilder =>
+.AddAttribute("ref", a => a.Reference, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(19, "id", a => a.Id)
-.AddAttribute(0, "location", a => a.Location)
-.AddAttribute(0, "tooltip", a => a.Tooltip)
-.AddAttribute(0, "display", a => a.Display);
+.AddAttribute("r:id", a => a.Id)
+.AddAttribute("location", a => a.Location)
+.AddAttribute("tooltip", a => a.Tooltip)
+.AddAttribute("display", a => a.Display);
         }
 
         /// <inheritdoc/>
@@ -6518,7 +6518,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "sparklineGroup")]
+    [SchemaAttr("xr:sparklineGroup")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SparklineGroup : OpenXmlCompositeElement
     {
@@ -6560,7 +6560,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "manualMax")]
+        [SchemaAttr("manualMax")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public DoubleValue? ManualMax
@@ -6576,7 +6576,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "manualMin")]
+        [SchemaAttr("manualMin")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public DoubleValue? ManualMin
@@ -6592,7 +6592,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "lineWeight")]
+        [SchemaAttr("lineWeight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public DoubleValue? LineWeight
@@ -6608,7 +6608,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "type")]
+        [SchemaAttr("type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineTypeValues>? Type
@@ -6624,7 +6624,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "dateAxis")]
+        [SchemaAttr("dateAxis")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? DateAxis
@@ -6640,7 +6640,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "displayEmptyCellsAs")]
+        [SchemaAttr("displayEmptyCellsAs")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DisplayBlanksAsValues>? DisplayEmptyCellsAs
@@ -6656,7 +6656,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "markers")]
+        [SchemaAttr("markers")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Markers
@@ -6672,7 +6672,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "high")]
+        [SchemaAttr("high")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? High
@@ -6688,7 +6688,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "low")]
+        [SchemaAttr("low")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Low
@@ -6704,7 +6704,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "first")]
+        [SchemaAttr("first")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? First
@@ -6720,7 +6720,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "last")]
+        [SchemaAttr("last")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Last
@@ -6736,7 +6736,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "negative")]
+        [SchemaAttr("negative")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Negative
@@ -6752,7 +6752,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "displayXAxis")]
+        [SchemaAttr("displayXAxis")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? DisplayXAxis
@@ -6768,7 +6768,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "displayHidden")]
+        [SchemaAttr("displayHidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? DisplayHidden
@@ -6784,7 +6784,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "minAxisType")]
+        [SchemaAttr("minAxisType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues>? MinAxisType
@@ -6800,7 +6800,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "maxAxisType")]
+        [SchemaAttr("maxAxisType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues>? MaxAxisType
@@ -6816,7 +6816,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rightToLeft")]
+        [SchemaAttr("rightToLeft")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? RightToLeft
@@ -6828,7 +6828,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "sparklineGroup");
+            builder.SetSchema("xr:sparklineGroup");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SeriesColor>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.NegativeColor>();
@@ -6841,23 +6841,23 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Sparklines>();
             builder.AddElement<SparklineGroup>()
-.AddAttribute(0, "manualMax", a => a.ManualMax)
-.AddAttribute(0, "manualMin", a => a.ManualMin)
-.AddAttribute(0, "lineWeight", a => a.LineWeight)
-.AddAttribute(0, "type", a => a.Type)
-.AddAttribute(0, "dateAxis", a => a.DateAxis)
-.AddAttribute(0, "displayEmptyCellsAs", a => a.DisplayEmptyCellsAs)
-.AddAttribute(0, "markers", a => a.Markers)
-.AddAttribute(0, "high", a => a.High)
-.AddAttribute(0, "low", a => a.Low)
-.AddAttribute(0, "first", a => a.First)
-.AddAttribute(0, "last", a => a.Last)
-.AddAttribute(0, "negative", a => a.Negative)
-.AddAttribute(0, "displayXAxis", a => a.DisplayXAxis)
-.AddAttribute(0, "displayHidden", a => a.DisplayHidden)
-.AddAttribute(0, "minAxisType", a => a.MinAxisType)
-.AddAttribute(0, "maxAxisType", a => a.MaxAxisType)
-.AddAttribute(0, "rightToLeft", a => a.RightToLeft);
+.AddAttribute("manualMax", a => a.ManualMax)
+.AddAttribute("manualMin", a => a.ManualMin)
+.AddAttribute("lineWeight", a => a.LineWeight)
+.AddAttribute("type", a => a.Type)
+.AddAttribute("dateAxis", a => a.DateAxis)
+.AddAttribute("displayEmptyCellsAs", a => a.DisplayEmptyCellsAs)
+.AddAttribute("markers", a => a.Markers)
+.AddAttribute("high", a => a.High)
+.AddAttribute("low", a => a.Low)
+.AddAttribute("first", a => a.First)
+.AddAttribute("last", a => a.Last)
+.AddAttribute("negative", a => a.Negative)
+.AddAttribute("displayXAxis", a => a.DisplayXAxis)
+.AddAttribute("displayHidden", a => a.DisplayHidden)
+.AddAttribute("minAxisType", a => a.MinAxisType)
+.AddAttribute("maxAxisType", a => a.MaxAxisType)
+.AddAttribute("rightToLeft", a => a.RightToLeft);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SeriesColor), 0, 1, version: FileFormatVersions.Office2010),
@@ -7021,7 +7021,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "comments")]
+    [SchemaAttr("xr:comments")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Comments : OpenXmlCompositeElement
     {
@@ -7059,7 +7059,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "comments");
+            builder.SetSchema("xr:comments");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Authors>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CommentList>();
@@ -7129,7 +7129,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "autoFilter")]
+    [SchemaAttr("xr:autoFilter")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AutoFilter : OpenXmlCompositeElement
     {
@@ -7171,7 +7171,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "ref")]
+        [SchemaAttr("ref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Reference
@@ -7183,13 +7183,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "autoFilter");
+            builder.SetSchema("xr:autoFilter");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FilterColumn>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortState>();
             builder.AddElement<AutoFilter>()
-.AddAttribute(0, "ref", a => a.Reference);
+.AddAttribute("ref", a => a.Reference);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FilterColumn), 0, 0),
@@ -7230,7 +7230,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(83, "pivotTableDefinition")]
+    [SchemaAttr("xr:pivotTableDefinition")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class pivotTableDefinition : OpenXmlCompositeElement
     {
@@ -7272,7 +7272,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "name")]
+        [SchemaAttr("name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -7288,7 +7288,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "cacheId")]
+        [SchemaAttr("cacheId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? CacheId
@@ -7304,7 +7304,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "dataOnRows")]
+        [SchemaAttr("dataOnRows")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? DataOnRows
@@ -7320,7 +7320,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "dataPosition")]
+        [SchemaAttr("dataPosition")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? DataPosition
@@ -7336,7 +7336,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "autoFormatId")]
+        [SchemaAttr("autoFormatId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? AutoFormatId
@@ -7352,7 +7352,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "applyNumberFormats")]
+        [SchemaAttr("applyNumberFormats")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ApplyNumberFormats
@@ -7368,7 +7368,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "applyBorderFormats")]
+        [SchemaAttr("applyBorderFormats")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ApplyBorderFormats
@@ -7384,7 +7384,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "applyFontFormats")]
+        [SchemaAttr("applyFontFormats")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ApplyFontFormats
@@ -7400,7 +7400,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "applyPatternFormats")]
+        [SchemaAttr("applyPatternFormats")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ApplyPatternFormats
@@ -7416,7 +7416,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "applyAlignmentFormats")]
+        [SchemaAttr("applyAlignmentFormats")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ApplyAlignmentFormats
@@ -7432,7 +7432,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "applyWidthHeightFormats")]
+        [SchemaAttr("applyWidthHeightFormats")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ApplyWidthHeightFormats
@@ -7448,7 +7448,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "dataCaption")]
+        [SchemaAttr("dataCaption")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? DataCaption
@@ -7464,7 +7464,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "grandTotalCaption")]
+        [SchemaAttr("grandTotalCaption")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? GrandTotalCaption
@@ -7480,7 +7480,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "errorCaption")]
+        [SchemaAttr("errorCaption")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ErrorCaption
@@ -7496,7 +7496,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "showError")]
+        [SchemaAttr("showError")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ShowError
@@ -7512,7 +7512,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "missingCaption")]
+        [SchemaAttr("missingCaption")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? MissingCaption
@@ -7528,7 +7528,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "showMissing")]
+        [SchemaAttr("showMissing")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ShowMissing
@@ -7544,7 +7544,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "pageStyle")]
+        [SchemaAttr("pageStyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? PageStyle
@@ -7560,7 +7560,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "pivotTableStyle")]
+        [SchemaAttr("pivotTableStyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? PivotTableStyleName
@@ -7576,7 +7576,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "vacatedStyle")]
+        [SchemaAttr("vacatedStyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? VacatedStyle
@@ -7592,7 +7592,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "tag")]
+        [SchemaAttr("tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Tag
@@ -7608,7 +7608,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "updatedVersion")]
+        [SchemaAttr("updatedVersion")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public ByteValue? UpdatedVersion
@@ -7624,7 +7624,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "minRefreshableVersion")]
+        [SchemaAttr("minRefreshableVersion")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public ByteValue? MinRefreshableVersion
@@ -7640,7 +7640,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "asteriskTotals")]
+        [SchemaAttr("asteriskTotals")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? AsteriskTotals
@@ -7656,7 +7656,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "showItems")]
+        [SchemaAttr("showItems")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ShowItems
@@ -7672,7 +7672,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "editData")]
+        [SchemaAttr("editData")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? EditData
@@ -7688,7 +7688,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "disableFieldList")]
+        [SchemaAttr("disableFieldList")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? DisableFieldList
@@ -7704,7 +7704,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "showCalcMbrs")]
+        [SchemaAttr("showCalcMbrs")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ShowCalculatedMembers
@@ -7720,7 +7720,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "visualTotals")]
+        [SchemaAttr("visualTotals")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? VisualTotals
@@ -7736,7 +7736,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "showMultipleLabel")]
+        [SchemaAttr("showMultipleLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ShowMultipleLabel
@@ -7752,7 +7752,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "showDataDropDown")]
+        [SchemaAttr("showDataDropDown")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ShowDataDropDown
@@ -7768,7 +7768,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "showDrill")]
+        [SchemaAttr("showDrill")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ShowDrill
@@ -7784,7 +7784,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "printDrill")]
+        [SchemaAttr("printDrill")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? PrintDrill
@@ -7800,7 +7800,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "showMemberPropertyTips")]
+        [SchemaAttr("showMemberPropertyTips")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ShowMemberPropertyTips
@@ -7816,7 +7816,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "showDataTips")]
+        [SchemaAttr("showDataTips")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ShowDataTips
@@ -7832,7 +7832,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "enableWizard")]
+        [SchemaAttr("enableWizard")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? EnableWizard
@@ -7848,7 +7848,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "enableDrill")]
+        [SchemaAttr("enableDrill")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? EnableDrill
@@ -7864,7 +7864,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "enableFieldProperties")]
+        [SchemaAttr("enableFieldProperties")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? EnableFieldProperties
@@ -7880,7 +7880,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "preserveFormatting")]
+        [SchemaAttr("preserveFormatting")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? PreserveFormatting
@@ -7896,7 +7896,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "useAutoFormatting")]
+        [SchemaAttr("useAutoFormatting")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? UseAutoFormatting
@@ -7912,7 +7912,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "pageWrap")]
+        [SchemaAttr("pageWrap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? PageWrap
@@ -7928,7 +7928,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "pageOverThenDown")]
+        [SchemaAttr("pageOverThenDown")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? PageOverThenDown
@@ -7944,7 +7944,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "subtotalHiddenItems")]
+        [SchemaAttr("subtotalHiddenItems")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? SubtotalHiddenItems
@@ -7960,7 +7960,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rowGrandTotals")]
+        [SchemaAttr("rowGrandTotals")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? RowGrandTotals
@@ -7976,7 +7976,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "colGrandTotals")]
+        [SchemaAttr("colGrandTotals")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ColumnGrandTotals
@@ -7992,7 +7992,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fieldPrintTitles")]
+        [SchemaAttr("fieldPrintTitles")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? FieldPrintTitles
@@ -8008,7 +8008,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "itemPrintTitles")]
+        [SchemaAttr("itemPrintTitles")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ItemPrintTitles
@@ -8024,7 +8024,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "mergeItem")]
+        [SchemaAttr("mergeItem")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? MergeItem
@@ -8040,7 +8040,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "showDropZones")]
+        [SchemaAttr("showDropZones")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ShowDropZones
@@ -8056,7 +8056,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "createdVersion")]
+        [SchemaAttr("createdVersion")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public ByteValue? CreatedVersion
@@ -8072,7 +8072,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "indent")]
+        [SchemaAttr("indent")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Indent
@@ -8088,7 +8088,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "showEmptyRow")]
+        [SchemaAttr("showEmptyRow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ShowEmptyRow
@@ -8104,7 +8104,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "showEmptyCol")]
+        [SchemaAttr("showEmptyCol")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ShowEmptyColumn
@@ -8120,7 +8120,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "showHeaders")]
+        [SchemaAttr("showHeaders")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ShowHeaders
@@ -8136,7 +8136,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "compact")]
+        [SchemaAttr("compact")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Compact
@@ -8152,7 +8152,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "outline")]
+        [SchemaAttr("outline")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Outline
@@ -8168,7 +8168,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "outlineData")]
+        [SchemaAttr("outlineData")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? OutlineData
@@ -8184,7 +8184,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "compactData")]
+        [SchemaAttr("compactData")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? CompactData
@@ -8200,7 +8200,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "published")]
+        [SchemaAttr("published")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Published
@@ -8216,7 +8216,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "gridDropZones")]
+        [SchemaAttr("gridDropZones")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? GridDropZones
@@ -8232,7 +8232,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "immersive")]
+        [SchemaAttr("immersive")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? StopImmersiveUi
@@ -8248,7 +8248,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "multipleFieldFilters")]
+        [SchemaAttr("multipleFieldFilters")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? MultipleFieldFilters
@@ -8264,7 +8264,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "chartFormat")]
+        [SchemaAttr("chartFormat")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? ChartFormat
@@ -8280,7 +8280,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rowHeaderCaption")]
+        [SchemaAttr("rowHeaderCaption")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? RowHeaderCaption
@@ -8296,7 +8296,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "colHeaderCaption")]
+        [SchemaAttr("colHeaderCaption")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ColumnHeaderCaption
@@ -8312,7 +8312,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fieldListSortAscending")]
+        [SchemaAttr("fieldListSortAscending")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? FieldListSortAscending
@@ -8328,7 +8328,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "mdxSubqueries")]
+        [SchemaAttr("mdxSubqueries")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? MdxSubqueries
@@ -8344,7 +8344,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "customListSort")]
+        [SchemaAttr("customListSort")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? CustomListSort
@@ -8356,7 +8356,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(83, "pivotTableDefinition");
+            builder.SetSchema("xr:pivotTableDefinition");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ChartFormats>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColumnFields>();
@@ -8376,83 +8376,83 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowItems>();
             builder.AddElement<pivotTableDefinition>()
-.AddAttribute(0, "name", a => a.Name, aBuilder =>
+.AddAttribute("name", a => a.Name, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "cacheId", a => a.CacheId, aBuilder =>
+.AddAttribute("cacheId", a => a.CacheId, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "dataOnRows", a => a.DataOnRows)
-.AddAttribute(0, "dataPosition", a => a.DataPosition)
-.AddAttribute(0, "autoFormatId", a => a.AutoFormatId)
-.AddAttribute(0, "applyNumberFormats", a => a.ApplyNumberFormats)
-.AddAttribute(0, "applyBorderFormats", a => a.ApplyBorderFormats)
-.AddAttribute(0, "applyFontFormats", a => a.ApplyFontFormats)
-.AddAttribute(0, "applyPatternFormats", a => a.ApplyPatternFormats)
-.AddAttribute(0, "applyAlignmentFormats", a => a.ApplyAlignmentFormats)
-.AddAttribute(0, "applyWidthHeightFormats", a => a.ApplyWidthHeightFormats)
-.AddAttribute(0, "dataCaption", a => a.DataCaption, aBuilder =>
+.AddAttribute("dataOnRows", a => a.DataOnRows)
+.AddAttribute("dataPosition", a => a.DataPosition)
+.AddAttribute("autoFormatId", a => a.AutoFormatId)
+.AddAttribute("applyNumberFormats", a => a.ApplyNumberFormats)
+.AddAttribute("applyBorderFormats", a => a.ApplyBorderFormats)
+.AddAttribute("applyFontFormats", a => a.ApplyFontFormats)
+.AddAttribute("applyPatternFormats", a => a.ApplyPatternFormats)
+.AddAttribute("applyAlignmentFormats", a => a.ApplyAlignmentFormats)
+.AddAttribute("applyWidthHeightFormats", a => a.ApplyWidthHeightFormats)
+.AddAttribute("dataCaption", a => a.DataCaption, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "grandTotalCaption", a => a.GrandTotalCaption)
-.AddAttribute(0, "errorCaption", a => a.ErrorCaption)
-.AddAttribute(0, "showError", a => a.ShowError)
-.AddAttribute(0, "missingCaption", a => a.MissingCaption)
-.AddAttribute(0, "showMissing", a => a.ShowMissing)
-.AddAttribute(0, "pageStyle", a => a.PageStyle)
-.AddAttribute(0, "pivotTableStyle", a => a.PivotTableStyleName)
-.AddAttribute(0, "vacatedStyle", a => a.VacatedStyle)
-.AddAttribute(0, "tag", a => a.Tag)
-.AddAttribute(0, "updatedVersion", a => a.UpdatedVersion)
-.AddAttribute(0, "minRefreshableVersion", a => a.MinRefreshableVersion)
-.AddAttribute(0, "asteriskTotals", a => a.AsteriskTotals)
-.AddAttribute(0, "showItems", a => a.ShowItems)
-.AddAttribute(0, "editData", a => a.EditData)
-.AddAttribute(0, "disableFieldList", a => a.DisableFieldList)
-.AddAttribute(0, "showCalcMbrs", a => a.ShowCalculatedMembers)
-.AddAttribute(0, "visualTotals", a => a.VisualTotals)
-.AddAttribute(0, "showMultipleLabel", a => a.ShowMultipleLabel)
-.AddAttribute(0, "showDataDropDown", a => a.ShowDataDropDown)
-.AddAttribute(0, "showDrill", a => a.ShowDrill)
-.AddAttribute(0, "printDrill", a => a.PrintDrill)
-.AddAttribute(0, "showMemberPropertyTips", a => a.ShowMemberPropertyTips)
-.AddAttribute(0, "showDataTips", a => a.ShowDataTips)
-.AddAttribute(0, "enableWizard", a => a.EnableWizard)
-.AddAttribute(0, "enableDrill", a => a.EnableDrill)
-.AddAttribute(0, "enableFieldProperties", a => a.EnableFieldProperties)
-.AddAttribute(0, "preserveFormatting", a => a.PreserveFormatting)
-.AddAttribute(0, "useAutoFormatting", a => a.UseAutoFormatting)
-.AddAttribute(0, "pageWrap", a => a.PageWrap)
-.AddAttribute(0, "pageOverThenDown", a => a.PageOverThenDown)
-.AddAttribute(0, "subtotalHiddenItems", a => a.SubtotalHiddenItems)
-.AddAttribute(0, "rowGrandTotals", a => a.RowGrandTotals)
-.AddAttribute(0, "colGrandTotals", a => a.ColumnGrandTotals)
-.AddAttribute(0, "fieldPrintTitles", a => a.FieldPrintTitles)
-.AddAttribute(0, "itemPrintTitles", a => a.ItemPrintTitles)
-.AddAttribute(0, "mergeItem", a => a.MergeItem)
-.AddAttribute(0, "showDropZones", a => a.ShowDropZones)
-.AddAttribute(0, "createdVersion", a => a.CreatedVersion)
-.AddAttribute(0, "indent", a => a.Indent)
-.AddAttribute(0, "showEmptyRow", a => a.ShowEmptyRow)
-.AddAttribute(0, "showEmptyCol", a => a.ShowEmptyColumn)
-.AddAttribute(0, "showHeaders", a => a.ShowHeaders)
-.AddAttribute(0, "compact", a => a.Compact)
-.AddAttribute(0, "outline", a => a.Outline)
-.AddAttribute(0, "outlineData", a => a.OutlineData)
-.AddAttribute(0, "compactData", a => a.CompactData)
-.AddAttribute(0, "published", a => a.Published)
-.AddAttribute(0, "gridDropZones", a => a.GridDropZones)
-.AddAttribute(0, "immersive", a => a.StopImmersiveUi)
-.AddAttribute(0, "multipleFieldFilters", a => a.MultipleFieldFilters)
-.AddAttribute(0, "chartFormat", a => a.ChartFormat)
-.AddAttribute(0, "rowHeaderCaption", a => a.RowHeaderCaption)
-.AddAttribute(0, "colHeaderCaption", a => a.ColumnHeaderCaption)
-.AddAttribute(0, "fieldListSortAscending", a => a.FieldListSortAscending)
-.AddAttribute(0, "mdxSubqueries", a => a.MdxSubqueries)
-.AddAttribute(0, "customListSort", a => a.CustomListSort);
+.AddAttribute("grandTotalCaption", a => a.GrandTotalCaption)
+.AddAttribute("errorCaption", a => a.ErrorCaption)
+.AddAttribute("showError", a => a.ShowError)
+.AddAttribute("missingCaption", a => a.MissingCaption)
+.AddAttribute("showMissing", a => a.ShowMissing)
+.AddAttribute("pageStyle", a => a.PageStyle)
+.AddAttribute("pivotTableStyle", a => a.PivotTableStyleName)
+.AddAttribute("vacatedStyle", a => a.VacatedStyle)
+.AddAttribute("tag", a => a.Tag)
+.AddAttribute("updatedVersion", a => a.UpdatedVersion)
+.AddAttribute("minRefreshableVersion", a => a.MinRefreshableVersion)
+.AddAttribute("asteriskTotals", a => a.AsteriskTotals)
+.AddAttribute("showItems", a => a.ShowItems)
+.AddAttribute("editData", a => a.EditData)
+.AddAttribute("disableFieldList", a => a.DisableFieldList)
+.AddAttribute("showCalcMbrs", a => a.ShowCalculatedMembers)
+.AddAttribute("visualTotals", a => a.VisualTotals)
+.AddAttribute("showMultipleLabel", a => a.ShowMultipleLabel)
+.AddAttribute("showDataDropDown", a => a.ShowDataDropDown)
+.AddAttribute("showDrill", a => a.ShowDrill)
+.AddAttribute("printDrill", a => a.PrintDrill)
+.AddAttribute("showMemberPropertyTips", a => a.ShowMemberPropertyTips)
+.AddAttribute("showDataTips", a => a.ShowDataTips)
+.AddAttribute("enableWizard", a => a.EnableWizard)
+.AddAttribute("enableDrill", a => a.EnableDrill)
+.AddAttribute("enableFieldProperties", a => a.EnableFieldProperties)
+.AddAttribute("preserveFormatting", a => a.PreserveFormatting)
+.AddAttribute("useAutoFormatting", a => a.UseAutoFormatting)
+.AddAttribute("pageWrap", a => a.PageWrap)
+.AddAttribute("pageOverThenDown", a => a.PageOverThenDown)
+.AddAttribute("subtotalHiddenItems", a => a.SubtotalHiddenItems)
+.AddAttribute("rowGrandTotals", a => a.RowGrandTotals)
+.AddAttribute("colGrandTotals", a => a.ColumnGrandTotals)
+.AddAttribute("fieldPrintTitles", a => a.FieldPrintTitles)
+.AddAttribute("itemPrintTitles", a => a.ItemPrintTitles)
+.AddAttribute("mergeItem", a => a.MergeItem)
+.AddAttribute("showDropZones", a => a.ShowDropZones)
+.AddAttribute("createdVersion", a => a.CreatedVersion)
+.AddAttribute("indent", a => a.Indent)
+.AddAttribute("showEmptyRow", a => a.ShowEmptyRow)
+.AddAttribute("showEmptyCol", a => a.ShowEmptyColumn)
+.AddAttribute("showHeaders", a => a.ShowHeaders)
+.AddAttribute("compact", a => a.Compact)
+.AddAttribute("outline", a => a.Outline)
+.AddAttribute("outlineData", a => a.OutlineData)
+.AddAttribute("compactData", a => a.CompactData)
+.AddAttribute("published", a => a.Published)
+.AddAttribute("gridDropZones", a => a.GridDropZones)
+.AddAttribute("immersive", a => a.StopImmersiveUi)
+.AddAttribute("multipleFieldFilters", a => a.MultipleFieldFilters)
+.AddAttribute("chartFormat", a => a.ChartFormat)
+.AddAttribute("rowHeaderCaption", a => a.RowHeaderCaption)
+.AddAttribute("colHeaderCaption", a => a.ColumnHeaderCaption)
+.AddAttribute("fieldListSortAscending", a => a.FieldListSortAscending)
+.AddAttribute("mdxSubqueries", a => a.MdxSubqueries)
+.AddAttribute("customListSort", a => a.CustomListSort);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Location), 1, 1),

@@ -36,7 +36,7 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(15, "lockedCanvas")]
+    [SchemaAttr("lc:lockedCanvas")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class LockedCanvas : OpenXmlCompositeElement
     {
@@ -74,7 +74,7 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(15, "lockedCanvas");
+            builder.SetSchema("lc:lockedCanvas");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ConnectionShape>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GraphicFrame>();

@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "colorStyle")]
+    [SchemaAttr("cs:colorStyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColorStyle : OpenXmlPartRootElement
     {
@@ -76,7 +76,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "meth")]
+        [SchemaAttr("meth")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Method
@@ -92,7 +92,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Id
@@ -104,7 +104,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "colorStyle");
+            builder.SetSchema("cs:colorStyle");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList>();
@@ -115,7 +115,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyleVariation>();
             builder.AddElement<ColorStyle>()
-.AddAttribute(0, "meth", a => a.Method, aBuilder =>
+.AddAttribute("meth", a => a.Method, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddUnion(union =>
@@ -124,7 +124,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyl
 union.AddValidator(StringValidator.Instance);
 });
 })
-.AddAttribute(0, "id", a => a.Id);
+.AddAttribute("id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 0)
@@ -222,7 +222,7 @@ union.AddValidator(StringValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "chartStyle")]
+    [SchemaAttr("cs:chartStyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ChartStyle : OpenXmlPartRootElement
     {
@@ -264,7 +264,7 @@ union.AddValidator(StringValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Id
@@ -276,7 +276,7 @@ union.AddValidator(StringValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "chartStyle");
+            builder.SetSchema("cs:chartStyle");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerLayoutProperties>();
@@ -311,7 +311,7 @@ union.AddValidator(StringValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ValueAxis>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Wall>();
             builder.AddElement<ChartStyle>()
-.AddAttribute(0, "id", a => a.Id);
+.AddAttribute("id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.AxisTitle), 1, 1, version: FileFormatVersions.Office2013),
@@ -839,7 +839,7 @@ union.AddValidator(StringValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "variation")]
+    [SchemaAttr("cs:variation")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColorStyleVariation : OpenXmlCompositeElement
     {
@@ -877,7 +877,7 @@ union.AddValidator(StringValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "variation");
+            builder.SetSchema("cs:variation");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HueOffset>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Complement>();
@@ -962,7 +962,7 @@ union.AddValidator(StringValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "extLst")]
+    [SchemaAttr("cs:extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
@@ -1000,7 +1000,7 @@ union.AddValidator(StringValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "extLst");
+            builder.SetSchema("cs:extLst");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -1058,7 +1058,7 @@ union.AddValidator(StringValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "styleClr")]
+    [SchemaAttr("cs:styleClr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class StyleColor : OpenXmlCompositeElement
     {
@@ -1100,7 +1100,7 @@ union.AddValidator(StringValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "val")]
+        [SchemaAttr("val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Val
@@ -1112,7 +1112,7 @@ union.AddValidator(StringValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "styleClr");
+            builder.SetSchema("cs:styleClr");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HueOffset>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Complement>();
@@ -1143,7 +1143,7 @@ union.AddValidator(StringValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaModulation>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HueModulation>();
             builder.AddElement<StyleColor>()
-.AddAttribute(0, "val", a => a.Val, aBuilder =>
+.AddAttribute("val", a => a.Val, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
@@ -1213,7 +1213,7 @@ union.AddValidator(StringValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "lnRef")]
+    [SchemaAttr("cs:lnRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class LineReference : StyleReference
     {
@@ -1251,7 +1251,7 @@ union.AddValidator(StringValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "lnRef");
+            builder.SetSchema("cs:lnRef");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -1293,7 +1293,7 @@ union.AddValidator(StringValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "fillRef")]
+    [SchemaAttr("cs:fillRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FillReference : StyleReference
     {
@@ -1331,7 +1331,7 @@ union.AddValidator(StringValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "fillRef");
+            builder.SetSchema("cs:fillRef");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -1373,7 +1373,7 @@ union.AddValidator(StringValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "effectRef")]
+    [SchemaAttr("cs:effectRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class EffectReference : StyleReference
     {
@@ -1411,7 +1411,7 @@ union.AddValidator(StringValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "effectRef");
+            builder.SetSchema("cs:effectRef");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -1492,7 +1492,7 @@ union.AddValidator(StringValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "idx")]
+        [SchemaAttr("idx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Index
@@ -1508,7 +1508,7 @@ union.AddValidator(StringValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "mods")]
+        [SchemaAttr("mods")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public ListValue<StringValue>? Modifiers
@@ -1528,11 +1528,11 @@ union.AddValidator(StringValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor>();
             builder.AddElement<StyleReference>()
-.AddAttribute(0, "idx", a => a.Index, aBuilder =>
+.AddAttribute("idx", a => a.Index, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "mods", a => a.Modifiers);
+.AddAttribute("mods", a => a.Modifiers);
         }
     }
 
@@ -1542,7 +1542,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is cs:lineWidthScale.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "lineWidthScale")]
+    [SchemaAttr("cs:lineWidthScale")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class LineWidthScale : OpenXmlLeafTextElement
     {
@@ -1570,7 +1570,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<DoubleValue>(NumberValidator.Instance);
-            builder.SetSchema(65, "lineWidthScale");
+            builder.SetSchema("cs:lineWidthScale");
             builder.Availability = FileFormatVersions.Office2013;
         }
 
@@ -1596,7 +1596,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "fontRef")]
+    [SchemaAttr("cs:fontRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class FontReference : OpenXmlCompositeElement
     {
@@ -1638,7 +1638,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "idx")]
+        [SchemaAttr("idx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Drawing.FontCollectionIndexValues>? Index
@@ -1654,7 +1654,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "mods")]
+        [SchemaAttr("mods")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public ListValue<StringValue>? Modifiers
@@ -1666,7 +1666,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "fontRef");
+            builder.SetSchema("cs:fontRef");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
@@ -1676,12 +1676,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor>();
             builder.AddElement<FontReference>()
-.AddAttribute(0, "idx", a => a.Index, aBuilder =>
+.AddAttribute("idx", a => a.Index, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "mods", a => a.Modifiers);
+.AddAttribute("mods", a => a.Modifiers);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -1730,7 +1730,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "spPr")]
+    [SchemaAttr("cs:spPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
@@ -1772,7 +1772,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "bwMode")]
+        [SchemaAttr("bwMode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
@@ -1784,7 +1784,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "spPr");
+            builder.SetSchema("cs:spPr");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
@@ -1802,7 +1802,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddElement<ShapeProperties>()
-.AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+.AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
@@ -1894,7 +1894,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "defRPr")]
+    [SchemaAttr("cs:defRPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     {
@@ -1936,7 +1936,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "kumimoji")]
+        [SchemaAttr("kumimoji")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Kumimoji
@@ -1952,7 +1952,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "lang")]
+        [SchemaAttr("lang")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Language
@@ -1968,7 +1968,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "altLang")]
+        [SchemaAttr("altLang")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? AlternativeLanguage
@@ -1984,7 +1984,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "sz")]
+        [SchemaAttr("sz")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? FontSize
@@ -2000,7 +2000,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "b")]
+        [SchemaAttr("b")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Bold
@@ -2016,7 +2016,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "i")]
+        [SchemaAttr("i")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Italic
@@ -2032,7 +2032,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "u")]
+        [SchemaAttr("u")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextUnderlineValues>? Underline
@@ -2048,7 +2048,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "strike")]
+        [SchemaAttr("strike")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextStrikeValues>? Strike
@@ -2064,7 +2064,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "kern")]
+        [SchemaAttr("kern")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? Kerning
@@ -2080,7 +2080,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "cap")]
+        [SchemaAttr("cap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextCapsValues>? Capital
@@ -2096,7 +2096,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "spc")]
+        [SchemaAttr("spc")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? Spacing
@@ -2112,7 +2112,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "normalizeH")]
+        [SchemaAttr("normalizeH")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? NormalizeHeight
@@ -2128,7 +2128,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "baseline")]
+        [SchemaAttr("baseline")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? Baseline
@@ -2144,7 +2144,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "noProof")]
+        [SchemaAttr("noProof")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? NoProof
@@ -2160,7 +2160,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "dirty")]
+        [SchemaAttr("dirty")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Dirty
@@ -2176,7 +2176,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "err")]
+        [SchemaAttr("err")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? SpellingError
@@ -2192,7 +2192,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "smtClean")]
+        [SchemaAttr("smtClean")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? SmartTagClean
@@ -2208,7 +2208,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "smtId")]
+        [SchemaAttr("smtId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? SmartTagId
@@ -2224,7 +2224,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "bmk")]
+        [SchemaAttr("bmk")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Bookmark
@@ -2236,7 +2236,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "defRPr");
+            builder.SetSchema("cs:defRPr");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RightToLeft>();
@@ -2261,43 +2261,43 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.UnderlineFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.UnderlineFollowsText>();
             builder.AddElement<TextCharacterPropertiesType>()
-.AddAttribute(0, "kumimoji", a => a.Kumimoji)
-.AddAttribute(0, "lang", a => a.Language)
-.AddAttribute(0, "altLang", a => a.AlternativeLanguage)
-.AddAttribute(0, "sz", a => a.FontSize, aBuilder =>
+.AddAttribute("kumimoji", a => a.Kumimoji)
+.AddAttribute("lang", a => a.Language)
+.AddAttribute("altLang", a => a.AlternativeLanguage)
+.AddAttribute("sz", a => a.FontSize, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (100L), MaxInclusive = (400000L) });
 })
-.AddAttribute(0, "b", a => a.Bold)
-.AddAttribute(0, "i", a => a.Italic)
-.AddAttribute(0, "u", a => a.Underline, aBuilder =>
+.AddAttribute("b", a => a.Bold)
+.AddAttribute("i", a => a.Italic)
+.AddAttribute("u", a => a.Underline, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "strike", a => a.Strike, aBuilder =>
+.AddAttribute("strike", a => a.Strike, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "kern", a => a.Kerning, aBuilder =>
+.AddAttribute("kern", a => a.Kerning, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (400000L) });
 })
-.AddAttribute(0, "cap", a => a.Capital, aBuilder =>
+.AddAttribute("cap", a => a.Capital, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "spc", a => a.Spacing, aBuilder =>
+.AddAttribute("spc", a => a.Spacing, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxInclusive = (400000L) });
 })
-.AddAttribute(0, "normalizeH", a => a.NormalizeHeight)
-.AddAttribute(0, "baseline", a => a.Baseline)
-.AddAttribute(0, "noProof", a => a.NoProof)
-.AddAttribute(0, "dirty", a => a.Dirty)
-.AddAttribute(0, "err", a => a.SpellingError)
-.AddAttribute(0, "smtClean", a => a.SmartTagClean)
-.AddAttribute(0, "smtId", a => a.SmartTagId)
-.AddAttribute(0, "bmk", a => a.Bookmark);
+.AddAttribute("normalizeH", a => a.NormalizeHeight)
+.AddAttribute("baseline", a => a.Baseline)
+.AddAttribute("noProof", a => a.NoProof)
+.AddAttribute("dirty", a => a.Dirty)
+.AddAttribute("err", a => a.SpellingError)
+.AddAttribute("smtClean", a => a.SmartTagClean)
+.AddAttribute("smtId", a => a.SmartTagId)
+.AddAttribute("bmk", a => a.Bookmark);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
@@ -2385,7 +2385,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "bodyPr")]
+    [SchemaAttr("cs:bodyPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TextBodyProperties : OpenXmlCompositeElement
     {
@@ -2427,7 +2427,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rot")]
+        [SchemaAttr("rot")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? Rotation
@@ -2443,7 +2443,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "spcFirstLastPara")]
+        [SchemaAttr("spcFirstLastPara")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? UseParagraphSpacing
@@ -2459,7 +2459,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "vertOverflow")]
+        [SchemaAttr("vertOverflow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues>? VerticalOverflow
@@ -2475,7 +2475,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "horzOverflow")]
+        [SchemaAttr("horzOverflow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues>? HorizontalOverflow
@@ -2491,7 +2491,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "vert")]
+        [SchemaAttr("vert")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues>? Vertical
@@ -2507,7 +2507,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "wrap")]
+        [SchemaAttr("wrap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues>? Wrap
@@ -2523,7 +2523,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "lIns")]
+        [SchemaAttr("lIns")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? LeftInset
@@ -2539,7 +2539,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "tIns")]
+        [SchemaAttr("tIns")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? TopInset
@@ -2555,7 +2555,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rIns")]
+        [SchemaAttr("rIns")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? RightInset
@@ -2571,7 +2571,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "bIns")]
+        [SchemaAttr("bIns")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? BottomInset
@@ -2587,7 +2587,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "numCol")]
+        [SchemaAttr("numCol")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? ColumnCount
@@ -2603,7 +2603,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "spcCol")]
+        [SchemaAttr("spcCol")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? ColumnSpacing
@@ -2619,7 +2619,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rtlCol")]
+        [SchemaAttr("rtlCol")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? RightToLeftColumns
@@ -2635,7 +2635,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fromWordArt")]
+        [SchemaAttr("fromWordArt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? FromWordArt
@@ -2651,7 +2651,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "anchor")]
+        [SchemaAttr("anchor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues>? Anchor
@@ -2667,7 +2667,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "anchorCtr")]
+        [SchemaAttr("anchorCtr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? AnchorCenter
@@ -2683,7 +2683,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "forceAA")]
+        [SchemaAttr("forceAA")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? ForceAntiAlias
@@ -2699,7 +2699,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "upright")]
+        [SchemaAttr("upright")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? UpRight
@@ -2715,7 +2715,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "compatLnSpc")]
+        [SchemaAttr("compatLnSpc")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? CompatibleLineSpacing
@@ -2727,7 +2727,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "bodyPr");
+            builder.SetSchema("cs:bodyPr");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.FlatText>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
@@ -2738,46 +2738,46 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NormalAutoFit>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapeAutoFit>();
             builder.AddElement<TextBodyProperties>()
-.AddAttribute(0, "rot", a => a.Rotation)
-.AddAttribute(0, "spcFirstLastPara", a => a.UseParagraphSpacing)
-.AddAttribute(0, "vertOverflow", a => a.VerticalOverflow, aBuilder =>
+.AddAttribute("rot", a => a.Rotation)
+.AddAttribute("spcFirstLastPara", a => a.UseParagraphSpacing)
+.AddAttribute("vertOverflow", a => a.VerticalOverflow, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "horzOverflow", a => a.HorizontalOverflow, aBuilder =>
+.AddAttribute("horzOverflow", a => a.HorizontalOverflow, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "vert", a => a.Vertical, aBuilder =>
+.AddAttribute("vert", a => a.Vertical, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "wrap", a => a.Wrap, aBuilder =>
+.AddAttribute("wrap", a => a.Wrap, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "lIns", a => a.LeftInset)
-.AddAttribute(0, "tIns", a => a.TopInset)
-.AddAttribute(0, "rIns", a => a.RightInset)
-.AddAttribute(0, "bIns", a => a.BottomInset)
-.AddAttribute(0, "numCol", a => a.ColumnCount, aBuilder =>
+.AddAttribute("lIns", a => a.LeftInset)
+.AddAttribute("tIns", a => a.TopInset)
+.AddAttribute("rIns", a => a.RightInset)
+.AddAttribute("bIns", a => a.BottomInset)
+.AddAttribute("numCol", a => a.ColumnCount, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (16L) });
 })
-.AddAttribute(0, "spcCol", a => a.ColumnSpacing, aBuilder =>
+.AddAttribute("spcCol", a => a.ColumnSpacing, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 })
-.AddAttribute(0, "rtlCol", a => a.RightToLeftColumns)
-.AddAttribute(0, "fromWordArt", a => a.FromWordArt)
-.AddAttribute(0, "anchor", a => a.Anchor, aBuilder =>
+.AddAttribute("rtlCol", a => a.RightToLeftColumns)
+.AddAttribute("fromWordArt", a => a.FromWordArt)
+.AddAttribute("anchor", a => a.Anchor, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "anchorCtr", a => a.AnchorCenter)
-.AddAttribute(0, "forceAA", a => a.ForceAntiAlias)
-.AddAttribute(0, "upright", a => a.UpRight)
-.AddAttribute(0, "compatLnSpc", a => a.CompatibleLineSpacing);
+.AddAttribute("anchorCtr", a => a.AnchorCenter)
+.AddAttribute("forceAA", a => a.ForceAntiAlias)
+.AddAttribute("upright", a => a.UpRight)
+.AddAttribute("compatLnSpc", a => a.CompatibleLineSpacing);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetTextWrap), 0, 1),
@@ -2826,7 +2826,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is cs:categoryAxis.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "categoryAxis")]
+    [SchemaAttr("cs:categoryAxis")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CategoryAxisProperties : AxisProperties
     {
@@ -2840,7 +2840,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "categoryAxis");
+            builder.SetSchema("cs:categoryAxis");
             builder.Availability = FileFormatVersions.Office2013;
         }
 
@@ -2854,7 +2854,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is cs:seriesAxis.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "seriesAxis")]
+    [SchemaAttr("cs:seriesAxis")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SeriesAxisProperties : AxisProperties
     {
@@ -2868,7 +2868,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "seriesAxis");
+            builder.SetSchema("cs:seriesAxis");
             builder.Availability = FileFormatVersions.Office2013;
         }
 
@@ -2882,7 +2882,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is cs:valueAxis.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "valueAxis")]
+    [SchemaAttr("cs:valueAxis")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ValueAxisProperties : AxisProperties
     {
@@ -2896,7 +2896,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "valueAxis");
+            builder.SetSchema("cs:valueAxis");
             builder.Availability = FileFormatVersions.Office2013;
         }
 
@@ -2925,7 +2925,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "visible")]
+        [SchemaAttr("visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? Visible
@@ -2941,7 +2941,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "majorTick")]
+        [SchemaAttr("majorTick")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch>? MajorTick
@@ -2957,7 +2957,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "minorTick")]
+        [SchemaAttr("minorTick")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch>? MinorTickProp
@@ -2973,7 +2973,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "labelPosition")]
+        [SchemaAttr("labelPosition")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickLabelPositionNinch>? LabelPosition
@@ -2989,7 +2989,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "majorGridlines")]
+        [SchemaAttr("majorGridlines")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? MajorGridlines
@@ -3005,7 +3005,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "minorGridlines")]
+        [SchemaAttr("minorGridlines")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? MinorGridlinesProp
@@ -3021,7 +3021,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "title")]
+        [SchemaAttr("title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? TitleProp
@@ -3034,31 +3034,31 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<AxisProperties>()
-                           .AddAttribute(0, "visible", a => a.Visible, aBuilder =>
+                           .AddAttribute("visible", a => a.Visible, aBuilder =>
                            {
                                aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                            })
-                           .AddAttribute(0, "majorTick", a => a.MajorTick, aBuilder =>
+                           .AddAttribute("majorTick", a => a.MajorTick, aBuilder =>
                            {
                                aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                            })
-                           .AddAttribute(0, "minorTick", a => a.MinorTickProp, aBuilder =>
+                           .AddAttribute("minorTick", a => a.MinorTickProp, aBuilder =>
                            {
                                aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                            })
-                           .AddAttribute(0, "labelPosition", a => a.LabelPosition, aBuilder =>
+                           .AddAttribute("labelPosition", a => a.LabelPosition, aBuilder =>
                            {
                                aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                            })
-                           .AddAttribute(0, "majorGridlines", a => a.MajorGridlines, aBuilder =>
+                           .AddAttribute("majorGridlines", a => a.MajorGridlines, aBuilder =>
                            {
                                aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                            })
-                           .AddAttribute(0, "minorGridlines", a => a.MinorGridlinesProp, aBuilder =>
+                           .AddAttribute("minorGridlines", a => a.MinorGridlinesProp, aBuilder =>
                            {
                                aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                            })
-                           .AddAttribute(0, "title", a => a.TitleProp, aBuilder =>
+                           .AddAttribute("title", a => a.TitleProp, aBuilder =>
                            {
                                aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                            });
@@ -3071,7 +3071,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataSeries.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "dataSeries")]
+    [SchemaAttr("cs:dataSeries")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataSeries : OpenXmlLeafElement
     {
@@ -3089,7 +3089,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "overlap")]
+        [SchemaAttr("overlap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public SByteValue? Overlap
@@ -3105,7 +3105,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "gapWidth")]
+        [SchemaAttr("gapWidth")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt16Value? GapWidth
@@ -3121,7 +3121,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "gapDepth")]
+        [SchemaAttr("gapDepth")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt16Value? GapDepth
@@ -3137,7 +3137,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "doughnutHoleSize")]
+        [SchemaAttr("doughnutHoleSize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public ByteValue? DoughnutHoleSize
@@ -3153,7 +3153,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "markerVisible")]
+        [SchemaAttr("markerVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? MarkerVisible
@@ -3169,7 +3169,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "hiloLines")]
+        [SchemaAttr("hiloLines")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? HiloLines
@@ -3185,7 +3185,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "dropLines")]
+        [SchemaAttr("dropLines")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? DropLines
@@ -3201,7 +3201,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "seriesLines")]
+        [SchemaAttr("seriesLines")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? SeriesLines
@@ -3213,38 +3213,38 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "dataSeries");
+            builder.SetSchema("cs:dataSeries");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<DataSeries>()
-.AddAttribute(0, "overlap", a => a.Overlap, aBuilder =>
+.AddAttribute("overlap", a => a.Overlap, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100L), MaxInclusive = (100L) });
 })
-.AddAttribute(0, "gapWidth", a => a.GapWidth, aBuilder =>
+.AddAttribute("gapWidth", a => a.GapWidth, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (500L) });
 })
-.AddAttribute(0, "gapDepth", a => a.GapDepth, aBuilder =>
+.AddAttribute("gapDepth", a => a.GapDepth, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (500L) });
 })
-.AddAttribute(0, "doughnutHoleSize", a => a.DoughnutHoleSize, aBuilder =>
+.AddAttribute("doughnutHoleSize", a => a.DoughnutHoleSize, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (10L), MaxInclusive = (90L) });
 })
-.AddAttribute(0, "markerVisible", a => a.MarkerVisible, aBuilder =>
+.AddAttribute("markerVisible", a => a.MarkerVisible, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "hiloLines", a => a.HiloLines, aBuilder =>
+.AddAttribute("hiloLines", a => a.HiloLines, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "dropLines", a => a.DropLines, aBuilder =>
+.AddAttribute("dropLines", a => a.DropLines, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "seriesLines", a => a.SeriesLines, aBuilder =>
+.AddAttribute("seriesLines", a => a.SeriesLines, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
@@ -3260,7 +3260,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataLabels.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "dataLabels")]
+    [SchemaAttr("cs:dataLabels")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataLabels : OpenXmlLeafElement
     {
@@ -3278,7 +3278,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "position")]
+        [SchemaAttr("position")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelsPosition>? Position
@@ -3294,7 +3294,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "value")]
+        [SchemaAttr("value")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? Value
@@ -3310,7 +3310,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "seriesName")]
+        [SchemaAttr("seriesName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? SeriesName
@@ -3326,7 +3326,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "categoryName")]
+        [SchemaAttr("categoryName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? CategoryName
@@ -3342,7 +3342,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "legendKey")]
+        [SchemaAttr("legendKey")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? LegendKey
@@ -3358,7 +3358,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "percentage")]
+        [SchemaAttr("percentage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? Percentage
@@ -3370,30 +3370,30 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "dataLabels");
+            builder.SetSchema("cs:dataLabels");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<DataLabels>()
-.AddAttribute(0, "position", a => a.Position, aBuilder =>
+.AddAttribute("position", a => a.Position, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "value", a => a.Value, aBuilder =>
+.AddAttribute("value", a => a.Value, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "seriesName", a => a.SeriesName, aBuilder =>
+.AddAttribute("seriesName", a => a.SeriesName, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "categoryName", a => a.CategoryName, aBuilder =>
+.AddAttribute("categoryName", a => a.CategoryName, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "legendKey", a => a.LegendKey, aBuilder =>
+.AddAttribute("legendKey", a => a.LegendKey, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "percentage", a => a.Percentage, aBuilder =>
+.AddAttribute("percentage", a => a.Percentage, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
@@ -3409,7 +3409,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataTable.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "dataTable")]
+    [SchemaAttr("cs:dataTable")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataTable : OpenXmlLeafElement
     {
@@ -3427,7 +3427,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "legendKeys")]
+        [SchemaAttr("legendKeys")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? LegendKeys
@@ -3443,7 +3443,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "horizontalBorder")]
+        [SchemaAttr("horizontalBorder")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? HorizontalBorder
@@ -3459,7 +3459,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "verticalBorder")]
+        [SchemaAttr("verticalBorder")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? VerticalBorder
@@ -3475,7 +3475,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "outlineBorder")]
+        [SchemaAttr("outlineBorder")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? OutlineBorder
@@ -3487,22 +3487,22 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "dataTable");
+            builder.SetSchema("cs:dataTable");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<DataTable>()
-.AddAttribute(0, "legendKeys", a => a.LegendKeys, aBuilder =>
+.AddAttribute("legendKeys", a => a.LegendKeys, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "horizontalBorder", a => a.HorizontalBorder, aBuilder =>
+.AddAttribute("horizontalBorder", a => a.HorizontalBorder, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "verticalBorder", a => a.VerticalBorder, aBuilder =>
+.AddAttribute("verticalBorder", a => a.VerticalBorder, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "outlineBorder", a => a.OutlineBorder, aBuilder =>
+.AddAttribute("outlineBorder", a => a.OutlineBorder, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
@@ -3518,7 +3518,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is cs:legend.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "legend")]
+    [SchemaAttr("cs:legend")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Legend : OpenXmlLeafElement
     {
@@ -3536,7 +3536,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "visible")]
+        [SchemaAttr("visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? Visible
@@ -3552,7 +3552,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "includeInLayout")]
+        [SchemaAttr("includeInLayout")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? IncludeInLayout
@@ -3568,7 +3568,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "position")]
+        [SchemaAttr("position")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendPosition>? Position
@@ -3580,18 +3580,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "legend");
+            builder.SetSchema("cs:legend");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<Legend>()
-.AddAttribute(0, "visible", a => a.Visible, aBuilder =>
+.AddAttribute("visible", a => a.Visible, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "includeInLayout", a => a.IncludeInLayout, aBuilder =>
+.AddAttribute("includeInLayout", a => a.IncludeInLayout, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "position", a => a.Position, aBuilder =>
+.AddAttribute("position", a => a.Position, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
@@ -3607,7 +3607,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is cs:title.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "title")]
+    [SchemaAttr("cs:title")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Title : OpenXmlLeafElement
     {
@@ -3625,7 +3625,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "position")]
+        [SchemaAttr("position")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitlePosition>? Position
@@ -3637,10 +3637,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "title");
+            builder.SetSchema("cs:title");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<Title>()
-.AddAttribute(0, "position", a => a.Position, aBuilder =>
+.AddAttribute("position", a => a.Position, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
@@ -3656,7 +3656,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is cs:trendline.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "trendline")]
+    [SchemaAttr("cs:trendline")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Trendline : OpenXmlLeafElement
     {
@@ -3674,7 +3674,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "add")]
+        [SchemaAttr("add")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? Add
@@ -3690,7 +3690,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "equation")]
+        [SchemaAttr("equation")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? Equation
@@ -3706,7 +3706,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rsquared")]
+        [SchemaAttr("rsquared")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? RSquared
@@ -3718,18 +3718,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "trendline");
+            builder.SetSchema("cs:trendline");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<Trendline>()
-.AddAttribute(0, "add", a => a.Add, aBuilder =>
+.AddAttribute("add", a => a.Add, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "equation", a => a.Equation, aBuilder =>
+.AddAttribute("equation", a => a.Equation, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "rsquared", a => a.RSquared, aBuilder =>
+.AddAttribute("rsquared", a => a.RSquared, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
@@ -3745,7 +3745,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is cs:view3D.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "view3D")]
+    [SchemaAttr("cs:view3D")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class View3DProperties : OpenXmlLeafElement
     {
@@ -3763,7 +3763,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rotX")]
+        [SchemaAttr("rotX")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public SByteValue? RotX
@@ -3779,7 +3779,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rotY")]
+        [SchemaAttr("rotY")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt16Value? RotY
@@ -3795,7 +3795,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rAngAx")]
+        [SchemaAttr("rAngAx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? RightAngleAxes
@@ -3811,7 +3811,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "perspective")]
+        [SchemaAttr("perspective")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public ByteValue? Perspective
@@ -3827,7 +3827,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "heightPercent")]
+        [SchemaAttr("heightPercent")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt16Value? HeightPercent
@@ -3843,7 +3843,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "depthPercent")]
+        [SchemaAttr("depthPercent")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt16Value? DepthPercent
@@ -3855,30 +3855,30 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "view3D");
+            builder.SetSchema("cs:view3D");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<View3DProperties>()
-.AddAttribute(0, "rotX", a => a.RotX, aBuilder =>
+.AddAttribute("rotX", a => a.RotX, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-90L), MaxInclusive = (90L) });
 })
-.AddAttribute(0, "rotY", a => a.RotY, aBuilder =>
+.AddAttribute("rotY", a => a.RotY, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (360L) });
 })
-.AddAttribute(0, "rAngAx", a => a.RightAngleAxes, aBuilder =>
+.AddAttribute("rAngAx", a => a.RightAngleAxes, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "perspective", a => a.Perspective, aBuilder =>
+.AddAttribute("perspective", a => a.Perspective, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (240L) });
 })
-.AddAttribute(0, "heightPercent", a => a.HeightPercent, aBuilder =>
+.AddAttribute("heightPercent", a => a.HeightPercent, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (5L), MaxInclusive = (500L) });
 })
-.AddAttribute(0, "depthPercent", a => a.DepthPercent, aBuilder =>
+.AddAttribute("depthPercent", a => a.DepthPercent, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive = (2000L) });
 });
@@ -3908,7 +3908,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "axisTitle")]
+    [SchemaAttr("cs:axisTitle")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AxisTitle : StyleEntry
     {
@@ -3946,7 +3946,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "axisTitle");
+            builder.SetSchema("cs:axisTitle");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -3986,7 +3986,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "categoryAxis")]
+    [SchemaAttr("cs:categoryAxis")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CategoryAxis : StyleEntry
     {
@@ -4024,7 +4024,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "categoryAxis");
+            builder.SetSchema("cs:categoryAxis");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -4064,7 +4064,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "chartArea")]
+    [SchemaAttr("cs:chartArea")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ChartArea : StyleEntry
     {
@@ -4102,7 +4102,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "chartArea");
+            builder.SetSchema("cs:chartArea");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -4142,7 +4142,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "dataLabel")]
+    [SchemaAttr("cs:dataLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataLabel : StyleEntry
     {
@@ -4180,7 +4180,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "dataLabel");
+            builder.SetSchema("cs:dataLabel");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -4220,7 +4220,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "dataLabelCallout")]
+    [SchemaAttr("cs:dataLabelCallout")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataLabelCallout : StyleEntry
     {
@@ -4258,7 +4258,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "dataLabelCallout");
+            builder.SetSchema("cs:dataLabelCallout");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -4298,7 +4298,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "dataPoint")]
+    [SchemaAttr("cs:dataPoint")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataPoint : StyleEntry
     {
@@ -4336,7 +4336,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "dataPoint");
+            builder.SetSchema("cs:dataPoint");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -4376,7 +4376,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "dataPoint3D")]
+    [SchemaAttr("cs:dataPoint3D")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataPoint3D : StyleEntry
     {
@@ -4414,7 +4414,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "dataPoint3D");
+            builder.SetSchema("cs:dataPoint3D");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -4454,7 +4454,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "dataPointLine")]
+    [SchemaAttr("cs:dataPointLine")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataPointLine : StyleEntry
     {
@@ -4492,7 +4492,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "dataPointLine");
+            builder.SetSchema("cs:dataPointLine");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -4532,7 +4532,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "dataPointMarker")]
+    [SchemaAttr("cs:dataPointMarker")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataPointMarker : StyleEntry
     {
@@ -4570,7 +4570,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "dataPointMarker");
+            builder.SetSchema("cs:dataPointMarker");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -4610,7 +4610,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "dataPointWireframe")]
+    [SchemaAttr("cs:dataPointWireframe")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataPointWireframe : StyleEntry
     {
@@ -4648,7 +4648,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "dataPointWireframe");
+            builder.SetSchema("cs:dataPointWireframe");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -4688,7 +4688,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "dataTable")]
+    [SchemaAttr("cs:dataTable")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataTableStyle : StyleEntry
     {
@@ -4726,7 +4726,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "dataTable");
+            builder.SetSchema("cs:dataTable");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -4766,7 +4766,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "downBar")]
+    [SchemaAttr("cs:downBar")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DownBar : StyleEntry
     {
@@ -4804,7 +4804,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "downBar");
+            builder.SetSchema("cs:downBar");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -4844,7 +4844,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "dropLine")]
+    [SchemaAttr("cs:dropLine")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DropLine : StyleEntry
     {
@@ -4882,7 +4882,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "dropLine");
+            builder.SetSchema("cs:dropLine");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -4922,7 +4922,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "errorBar")]
+    [SchemaAttr("cs:errorBar")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ErrorBar : StyleEntry
     {
@@ -4960,7 +4960,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "errorBar");
+            builder.SetSchema("cs:errorBar");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -5000,7 +5000,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "floor")]
+    [SchemaAttr("cs:floor")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Floor : StyleEntry
     {
@@ -5038,7 +5038,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "floor");
+            builder.SetSchema("cs:floor");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -5078,7 +5078,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "gridlineMajor")]
+    [SchemaAttr("cs:gridlineMajor")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class GridlineMajor : StyleEntry
     {
@@ -5116,7 +5116,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "gridlineMajor");
+            builder.SetSchema("cs:gridlineMajor");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -5156,7 +5156,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "gridlineMinor")]
+    [SchemaAttr("cs:gridlineMinor")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class GridlineMinor : StyleEntry
     {
@@ -5194,7 +5194,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "gridlineMinor");
+            builder.SetSchema("cs:gridlineMinor");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -5234,7 +5234,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "hiLoLine")]
+    [SchemaAttr("cs:hiLoLine")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class HiLoLine : StyleEntry
     {
@@ -5272,7 +5272,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "hiLoLine");
+            builder.SetSchema("cs:hiLoLine");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -5312,7 +5312,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "leaderLine")]
+    [SchemaAttr("cs:leaderLine")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class LeaderLine : StyleEntry
     {
@@ -5350,7 +5350,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "leaderLine");
+            builder.SetSchema("cs:leaderLine");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -5390,7 +5390,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "legend")]
+    [SchemaAttr("cs:legend")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class LegendStyle : StyleEntry
     {
@@ -5428,7 +5428,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "legend");
+            builder.SetSchema("cs:legend");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -5468,7 +5468,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "plotArea")]
+    [SchemaAttr("cs:plotArea")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PlotArea : StyleEntry
     {
@@ -5506,7 +5506,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "plotArea");
+            builder.SetSchema("cs:plotArea");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -5546,7 +5546,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "plotArea3D")]
+    [SchemaAttr("cs:plotArea3D")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PlotArea3D : StyleEntry
     {
@@ -5584,7 +5584,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "plotArea3D");
+            builder.SetSchema("cs:plotArea3D");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -5624,7 +5624,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "seriesAxis")]
+    [SchemaAttr("cs:seriesAxis")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SeriesAxis : StyleEntry
     {
@@ -5662,7 +5662,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "seriesAxis");
+            builder.SetSchema("cs:seriesAxis");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -5702,7 +5702,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "seriesLine")]
+    [SchemaAttr("cs:seriesLine")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SeriesLine : StyleEntry
     {
@@ -5740,7 +5740,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "seriesLine");
+            builder.SetSchema("cs:seriesLine");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -5780,7 +5780,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "title")]
+    [SchemaAttr("cs:title")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TitleStyle : StyleEntry
     {
@@ -5818,7 +5818,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "title");
+            builder.SetSchema("cs:title");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -5858,7 +5858,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "trendline")]
+    [SchemaAttr("cs:trendline")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TrendlineStyle : StyleEntry
     {
@@ -5896,7 +5896,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "trendline");
+            builder.SetSchema("cs:trendline");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -5936,7 +5936,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "trendlineLabel")]
+    [SchemaAttr("cs:trendlineLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TrendlineLabel : StyleEntry
     {
@@ -5974,7 +5974,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "trendlineLabel");
+            builder.SetSchema("cs:trendlineLabel");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -6014,7 +6014,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "upBar")]
+    [SchemaAttr("cs:upBar")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class UpBar : StyleEntry
     {
@@ -6052,7 +6052,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "upBar");
+            builder.SetSchema("cs:upBar");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -6092,7 +6092,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "valueAxis")]
+    [SchemaAttr("cs:valueAxis")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ValueAxis : StyleEntry
     {
@@ -6130,7 +6130,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "valueAxis");
+            builder.SetSchema("cs:valueAxis");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -6170,7 +6170,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "wall")]
+    [SchemaAttr("cs:wall")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Wall : StyleEntry
     {
@@ -6208,7 +6208,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "wall");
+            builder.SetSchema("cs:wall");
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -6287,7 +6287,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "mods")]
+        [SchemaAttr("mods")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public ListValue<StringValue>? Modifiers
@@ -6309,7 +6309,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale>();
             builder.AddElement<StyleEntry>()
-.AddAttribute(0, "mods", a => a.Modifiers);
+.AddAttribute("mods", a => a.Modifiers);
         }
 
         /// <summary>
@@ -6436,7 +6436,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataPointMarkerLayout.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(65, "dataPointMarkerLayout")]
+    [SchemaAttr("cs:dataPointMarkerLayout")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class MarkerLayoutProperties : OpenXmlLeafElement
     {
@@ -6454,7 +6454,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "symbol")]
+        [SchemaAttr("symbol")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerStyle>? Symbol
@@ -6470,7 +6470,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "size")]
+        [SchemaAttr("size")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public ByteValue? Size
@@ -6482,14 +6482,14 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(65, "dataPointMarkerLayout");
+            builder.SetSchema("cs:dataPointMarkerLayout");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<MarkerLayoutProperties>()
-.AddAttribute(0, "symbol", a => a.Symbol, aBuilder =>
+.AddAttribute("symbol", a => a.Symbol, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
-.AddAttribute(0, "size", a => a.Size, aBuilder =>
+.AddAttribute("size", a => a.Size, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive = (72L) });
 });

@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
+
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     /// <summary>
@@ -8,9 +10,39 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// </summary>
     internal class AttributeMutualExclusive : SemanticConstraint
     {
-        private readonly byte[] _attributes;
+        private readonly OpenXmlQualifiedName[] _attributes;
 
-        public AttributeMutualExclusive(params byte[] attributes)
+        public AttributeMutualExclusive(OpenXmlQualifiedName attribute)
+            : this(new[] { attribute })
+        {
+        }
+
+        public AttributeMutualExclusive(OpenXmlQualifiedName attribute1, OpenXmlQualifiedName attribute2)
+            : this(new[] { attribute1, attribute2 })
+        {
+        }
+
+        public AttributeMutualExclusive(OpenXmlQualifiedName attribute1, OpenXmlQualifiedName attribute2, OpenXmlQualifiedName attribute3)
+            : this(new[] { attribute1, attribute2, attribute3 })
+        {
+        }
+
+        public AttributeMutualExclusive(OpenXmlQualifiedName attribute1, OpenXmlQualifiedName attribute2, OpenXmlQualifiedName attribute3, OpenXmlQualifiedName attribute4)
+            : this(new[] { attribute1, attribute2, attribute3, attribute4 })
+        {
+        }
+
+        public AttributeMutualExclusive(OpenXmlQualifiedName attribute1, OpenXmlQualifiedName attribute2, OpenXmlQualifiedName attribute3, OpenXmlQualifiedName attribute4, OpenXmlQualifiedName attribute5)
+            : this(new[] { attribute1, attribute2, attribute3, attribute4, attribute5 })
+        {
+        }
+
+        public AttributeMutualExclusive(OpenXmlQualifiedName attribute1, OpenXmlQualifiedName attribute2, OpenXmlQualifiedName attribute3, OpenXmlQualifiedName attribute4, OpenXmlQualifiedName attribute5, OpenXmlQualifiedName attribute6)
+            : this(new[] { attribute1, attribute2, attribute3, attribute4, attribute5, attribute6 })
+        {
+        }
+
+        private AttributeMutualExclusive(OpenXmlQualifiedName[] attributes)
             : base(SemanticValidationLevel.Element)
         {
             _attributes = attributes;
@@ -29,18 +61,23 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             var existAttribute = string.Empty;
             var existAttribute2 = string.Empty;
 
-            foreach (byte attribute in _attributes)
+            foreach (var attribute in _attributes)
             {
-                attributes += "," + GetAttributeQualifiedName(element, attribute);
+                attributes += "," + attribute;
 
-                if (element.ParsedState.Attributes[attribute].Value is not null)
+                if (!TryFindAttribute(element, attribute, out var found))
+                {
+                    continue;
+                }
+
+                if (found.Value is not null)
                 {
                     if (!string.IsNullOrEmpty(existAttribute2))
                     {
                         existAttribute += "," + existAttribute2;
                     }
 
-                    existAttribute2 = GetAttributeQualifiedName(element, attribute).ToString();
+                    existAttribute2 = found.ToString();
                 }
             }
 

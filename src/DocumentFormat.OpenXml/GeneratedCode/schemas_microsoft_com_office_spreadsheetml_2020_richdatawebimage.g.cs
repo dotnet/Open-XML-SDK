@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(130, "webImagesSrd")]
+    [SchemaAttr("xlrdwi:webImagesSrd")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebImagesSupportingRichData : OpenXmlPartRootElement
     {
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(130, "webImagesSrd");
+            builder.SetSchema("xlrdwi:webImagesSrd");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.WebImageSupportingRichData>();
@@ -126,7 +126,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(130, "webImageSrd")]
+    [SchemaAttr("xlrdwi:webImageSrd")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebImageSupportingRichData : OpenXmlCompositeElement
     {
@@ -164,7 +164,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(130, "webImageSrd");
+            builder.SetSchema("xlrdwi:webImageSrd");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.AddressWebImageSupportingRichDataRelationship>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.MoreImagesAddressWebImageSupportingRichDataRelationship>();
@@ -232,7 +232,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(130, "extLst")]
+    [SchemaAttr("xlrdwi:extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ExtensionList : OpenXmlCompositeElement
     {
@@ -270,7 +270,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(130, "extLst");
+            builder.SetSchema("xlrdwi:extLst");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -295,7 +295,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
     /// <para>When the object is serialized out as xml, it's qualified name is xlrdwi:address.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(130, "address")]
+    [SchemaAttr("xlrdwi:address")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AddressWebImageSupportingRichDataRelationship : OpenXmlWebImageSupportingRichDataRelationshipElement
     {
@@ -309,7 +309,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(130, "address");
+            builder.SetSchema("xlrdwi:address");
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -323,7 +323,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
     /// <para>When the object is serialized out as xml, it's qualified name is xlrdwi:moreImagesAddress.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(130, "moreImagesAddress")]
+    [SchemaAttr("xlrdwi:moreImagesAddress")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class MoreImagesAddressWebImageSupportingRichDataRelationship : OpenXmlWebImageSupportingRichDataRelationshipElement
     {
@@ -337,7 +337,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(130, "moreImagesAddress");
+            builder.SetSchema("xlrdwi:moreImagesAddress");
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -351,7 +351,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
     /// <para>When the object is serialized out as xml, it's qualified name is xlrdwi:blip.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(130, "blip")]
+    [SchemaAttr("xlrdwi:blip")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class BlipWebImageSupportingRichDataRelationship : OpenXmlWebImageSupportingRichDataRelationshipElement
     {
@@ -365,7 +365,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(130, "blip");
+            builder.SetSchema("xlrdwi:blip");
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -397,7 +397,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "id")]
+        [SchemaAttr("r:id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -410,7 +410,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<OpenXmlWebImageSupportingRichDataRelationshipElement>()
-                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
+                           .AddAttribute("r:id", a => a.Id, aBuilder =>
                            {
                                aBuilder.AddValidator(RequiredValidator.Instance);
                            });

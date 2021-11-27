@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2010.ExcelAc
     /// <para>When the object is serialized out as xml, it's qualified name is x12ac:list.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(72, "list")]
+    [SchemaAttr("x12ac:list")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class List : OpenXmlLeafTextElement
     {
@@ -48,7 +48,7 @@ namespace DocumentFormat.OpenXml.Office2010.ExcelAc
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(72, "list");
+            builder.SetSchema("x12ac:list");
             builder.Availability = FileFormatVersions.Office2013;
         }
 

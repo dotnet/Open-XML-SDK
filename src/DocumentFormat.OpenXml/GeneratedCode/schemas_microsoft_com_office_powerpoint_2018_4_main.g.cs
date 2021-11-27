@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
     /// <para>When the object is serialized out as xml, it's qualified name is p184:classification.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(91, "classification")]
+    [SchemaAttr("p184:classification")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ClassificationOutcome : OpenXmlLeafElement
     {
@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "val")]
+        [SchemaAttr("val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2019.Presentation.ClassificationOutcomeType>? Val
@@ -50,10 +50,10 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(91, "classification");
+            builder.SetSchema("p184:classification");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<ClassificationOutcome>()
-.AddAttribute(0, "val", a => a.Val, aBuilder =>
+.AddAttribute("val", a => a.Val, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });

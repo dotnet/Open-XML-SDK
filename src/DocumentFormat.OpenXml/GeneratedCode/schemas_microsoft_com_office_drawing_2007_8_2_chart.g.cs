@@ -33,7 +33,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(46, "pivotOptions")]
+    [SchemaAttr("c14:pivotOptions")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PivotOptions : OpenXmlCompositeElement
     {
@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(46, "pivotOptions");
+            builder.SetSchema("c14:pivotOptions");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneFilter>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneCategories>();
@@ -170,7 +170,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(46, "sketchOptions")]
+    [SchemaAttr("c14:sketchOptions")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SketchOptions : OpenXmlCompositeElement
     {
@@ -208,7 +208,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(46, "sketchOptions");
+            builder.SetSchema("c14:sketchOptions");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.InSketchMode>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShowSketchButton>();
@@ -261,7 +261,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(46, "invertSolidFillFmt")]
+    [SchemaAttr("c14:invertSolidFillFmt")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class InvertSolidFillFormat : OpenXmlCompositeElement
     {
@@ -299,7 +299,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(46, "invertSolidFillFmt");
+            builder.SetSchema("c14:invertSolidFillFmt");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShapeProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -331,7 +331,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <para>When the object is serialized out as xml, it's qualified name is c14:style.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(46, "style")]
+    [SchemaAttr("c14:style")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Style : OpenXmlLeafElement
     {
@@ -349,7 +349,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "val")]
+        [SchemaAttr("val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public ByteValue? Val
@@ -361,10 +361,10 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(46, "style");
+            builder.SetSchema("c14:style");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<Style>()
-.AddAttribute(0, "val", a => a.Val, aBuilder =>
+.AddAttribute("val", a => a.Val, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (101L), MaxInclusive = (148L) });
@@ -401,7 +401,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (101L), MaxInclusiv
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(46, "spPr")]
+    [SchemaAttr("c14:spPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
@@ -443,7 +443,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (101L), MaxInclusiv
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "bwMode")]
+        [SchemaAttr("bwMode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
@@ -455,7 +455,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (101L), MaxInclusiv
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(46, "spPr");
+            builder.SetSchema("c14:spPr");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
@@ -473,7 +473,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (101L), MaxInclusiv
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddElement<ShapeProperties>()
-.AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+.AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
@@ -538,7 +538,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZoneFilter.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(46, "dropZoneFilter")]
+    [SchemaAttr("c14:dropZoneFilter")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DropZoneFilter : BooleanFalseType
     {
@@ -552,7 +552,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(46, "dropZoneFilter");
+            builder.SetSchema("c14:dropZoneFilter");
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -566,7 +566,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZoneCategories.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(46, "dropZoneCategories")]
+    [SchemaAttr("c14:dropZoneCategories")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DropZoneCategories : BooleanFalseType
     {
@@ -580,7 +580,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(46, "dropZoneCategories");
+            builder.SetSchema("c14:dropZoneCategories");
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -594,7 +594,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZoneData.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(46, "dropZoneData")]
+    [SchemaAttr("c14:dropZoneData")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DropZoneData : BooleanFalseType
     {
@@ -608,7 +608,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(46, "dropZoneData");
+            builder.SetSchema("c14:dropZoneData");
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -622,7 +622,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZoneSeries.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(46, "dropZoneSeries")]
+    [SchemaAttr("c14:dropZoneSeries")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DropZoneSeries : BooleanFalseType
     {
@@ -636,7 +636,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(46, "dropZoneSeries");
+            builder.SetSchema("c14:dropZoneSeries");
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -650,7 +650,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZonesVisible.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(46, "dropZonesVisible")]
+    [SchemaAttr("c14:dropZonesVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DropZonesVisible : BooleanFalseType
     {
@@ -664,7 +664,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(46, "dropZonesVisible");
+            builder.SetSchema("c14:dropZonesVisible");
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -678,7 +678,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is c14:inSketchMode.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(46, "inSketchMode")]
+    [SchemaAttr("c14:inSketchMode")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class InSketchMode : BooleanFalseType
     {
@@ -692,7 +692,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(46, "inSketchMode");
+            builder.SetSchema("c14:inSketchMode");
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -721,7 +721,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "val")]
+        [SchemaAttr("val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Val
@@ -734,7 +734,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<BooleanFalseType>()
-                           .AddAttribute(0, "val", a => a.Val);
+                           .AddAttribute("val", a => a.Val);
         }
     }
 
@@ -744,7 +744,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is c14:showSketchBtn.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(46, "showSketchBtn")]
+    [SchemaAttr("c14:showSketchBtn")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShowSketchButton : OpenXmlLeafElement
     {
@@ -762,7 +762,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "val")]
+        [SchemaAttr("val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Val
@@ -774,10 +774,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(46, "showSketchBtn");
+            builder.SetSchema("c14:showSketchBtn");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ShowSketchButton>()
-.AddAttribute(0, "val", a => a.Val);
+.AddAttribute("val", a => a.Val);
         }
 
         /// <inheritdoc/>

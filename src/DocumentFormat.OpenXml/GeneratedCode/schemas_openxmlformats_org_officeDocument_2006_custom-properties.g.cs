@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(4, "Properties")]
+    [SchemaAttr("op:Properties")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Properties : OpenXmlPartRootElement
     {
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(4, "Properties");
+            builder.SetSchema("op:Properties");
             builder.AddChild<DocumentFormat.OpenXml.CustomProperties.CustomDocumentProperty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -154,7 +154,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(4, "property")]
+    [SchemaAttr("op:property")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomDocumentProperty : OpenXmlCompositeElement
     {
@@ -196,7 +196,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "fmtid")]
+        [SchemaAttr("fmtid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? FormatId
@@ -212,7 +212,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "pid")]
+        [SchemaAttr("pid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? PropertyId
@@ -228,7 +228,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "name")]
+        [SchemaAttr("name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -244,7 +244,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "linkTarget")]
+        [SchemaAttr("linkTarget")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? LinkTarget
@@ -256,7 +256,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(4, "property");
+            builder.SetSchema("op:property");
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTArray>();
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTClipboardData>();
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTEmpty>();
@@ -292,17 +292,17 @@ namespace DocumentFormat.OpenXml.CustomProperties
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64>();
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort>();
             builder.AddElement<CustomDocumentProperty>()
-.AddAttribute(0, "fmtid", a => a.FormatId, aBuilder =>
+.AddAttribute("fmtid", a => a.FormatId, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}\\s*") });
 })
-.AddAttribute(0, "pid", a => a.PropertyId, aBuilder =>
+.AddAttribute("pid", a => a.PropertyId, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "name", a => a.Name)
-.AddAttribute(0, "linkTarget", a => a.LinkTarget);
+.AddAttribute("name", a => a.Name)
+.AddAttribute("linkTarget", a => a.LinkTarget);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1, 1),
@@ -340,8 +340,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTClassId), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTClipboardData), 1, 1)
             };
-            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:pid*/, true, 2, true, double.PositiveInfinity, true));
-            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*:name*/, false, null));
+            builder.AddConstraint(new AttributeValueRangeConstraint(":pid", true, 2, true, double.PositiveInfinity, true));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", false, null));
         }
 
         /// <summary>

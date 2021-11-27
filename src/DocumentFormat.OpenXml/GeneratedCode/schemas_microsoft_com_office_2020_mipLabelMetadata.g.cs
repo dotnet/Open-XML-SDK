@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(118, "labelList")]
+    [SchemaAttr("clbl:labelList")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ClassificationLabelList : OpenXmlPartRootElement
     {
@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(118, "labelList");
+            builder.SetSchema("clbl:labelList");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationLabel>();
@@ -117,7 +117,7 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
     /// <para>When the object is serialized out as xml, it's qualified name is clbl:ext.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(118, "ext")]
+    [SchemaAttr("clbl:ext")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ClassificationExtension : OpenXmlCompositeElement
     {
@@ -159,7 +159,7 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uri")]
+        [SchemaAttr("uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uri
@@ -171,10 +171,10 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(118, "ext");
+            builder.SetSchema("clbl:ext");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<ClassificationExtension>()
-.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+.AddAttribute("uri", a => a.Uri, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
@@ -195,7 +195,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>When the object is serialized out as xml, it's qualified name is clbl:label.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(118, "label")]
+    [SchemaAttr("clbl:label")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ClassificationLabel : OpenXmlLeafElement
     {
@@ -213,7 +213,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -229,7 +229,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "enabled")]
+        [SchemaAttr("enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Enabled
@@ -245,7 +245,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "setDate")]
+        [SchemaAttr("setDate")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? SetDate
@@ -261,7 +261,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "method")]
+        [SchemaAttr("method")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Method
@@ -277,7 +277,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "name")]
+        [SchemaAttr("name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -293,7 +293,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "siteId")]
+        [SchemaAttr("siteId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? SiteId
@@ -309,7 +309,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "actionId")]
+        [SchemaAttr("actionId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ActionId
@@ -325,7 +325,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "contentBits")]
+        [SchemaAttr("contentBits")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? ContentBits
@@ -341,7 +341,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "removed")]
+        [SchemaAttr("removed")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Removed
@@ -353,31 +353,31 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(118, "label");
+            builder.SetSchema("clbl:label");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<ClassificationLabel>()
-.AddAttribute(0, "id", a => a.Id, aBuilder =>
+.AddAttribute("id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "enabled", a => a.Enabled, aBuilder =>
+.AddAttribute("enabled", a => a.Enabled, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "setDate", a => a.SetDate)
-.AddAttribute(0, "method", a => a.Method, aBuilder =>
+.AddAttribute("setDate", a => a.SetDate)
+.AddAttribute("method", a => a.Method, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "name", a => a.Name)
-.AddAttribute(0, "siteId", a => a.SiteId, aBuilder =>
+.AddAttribute("name", a => a.Name)
+.AddAttribute("siteId", a => a.SiteId, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}\\}") });
 })
-.AddAttribute(0, "actionId", a => a.ActionId)
-.AddAttribute(0, "contentBits", a => a.ContentBits)
-.AddAttribute(0, "removed", a => a.Removed, aBuilder =>
+.AddAttribute("actionId", a => a.ActionId)
+.AddAttribute("contentBits", a => a.ContentBits)
+.AddAttribute("removed", a => a.Removed, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -399,7 +399,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(118, "extLst")]
+    [SchemaAttr("clbl:extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ClassificationExtensionList : OpenXmlCompositeElement
     {
@@ -437,7 +437,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(118, "extLst");
+            builder.SetSchema("clbl:extLst");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)

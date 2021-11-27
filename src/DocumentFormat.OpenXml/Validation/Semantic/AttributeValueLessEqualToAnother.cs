@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
+
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     /// <summary>
@@ -8,11 +10,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// </summary>
     internal class AttributeValueLessEqualToAnother : SemanticConstraint
     {
-        private readonly byte _attribute;
-        private readonly byte _otherAttribute;
+        private readonly OpenXmlQualifiedName _attribute;
+        private readonly OpenXmlQualifiedName _otherAttribute;
         private readonly bool _canEqual;
 
-        public AttributeValueLessEqualToAnother(byte attribute, byte otherAttribute, bool canEqual)
+        public AttributeValueLessEqualToAnother(OpenXmlQualifiedName attribute, OpenXmlQualifiedName otherAttribute, bool canEqual)
             : base(SemanticValidationLevel.Element)
         {
             _attribute = attribute;
@@ -29,7 +31,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            var attribute = element.ParsedState.Attributes[_attribute];
+            if (!TryFindAttribute(element, _attribute, out var attribute))
+            {
+                return null;
+            }
 
             if (attribute.Value is null)
             {
@@ -41,7 +46,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            var other = element.ParsedState.Attributes[_otherAttribute];
+            if (!TryFindAttribute(element, _otherAttribute, out var other))
+            {
+                return null;
+            }
 
             if (other.Value is null)
             {
@@ -67,9 +75,9 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Node = element,
                 Description = SR.Format(
                     format,
-                    GetAttributeQualifiedName(element, _attribute),
+                    attribute.Property.QName,
                     attribute.Value.InnerText,
-                    GetAttributeQualifiedName(element, _otherAttribute),
+                    other.Property.QName,
                     other.Value.InnerText),
             };
         }

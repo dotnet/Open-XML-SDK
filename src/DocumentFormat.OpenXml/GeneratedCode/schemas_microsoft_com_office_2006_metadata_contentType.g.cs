@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
     /// <para>When the object is serialized out as xml, it's qualified name is ct:contentTypeSchema.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(38, "contentTypeSchema")]
+    [SchemaAttr("ct:contentTypeSchema")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ContentTypeSchema : OpenXmlCompositeElement
     {
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(38, "_")]
+        [SchemaAttr("ct:_")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? UnderScore
@@ -85,7 +85,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(41, "_")]
+        [SchemaAttr("ma:_")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ReservedAttributeString
@@ -104,7 +104,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(41, "contentTypeName")]
+        [SchemaAttr("ma:contentTypeName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ContentTypeName
@@ -123,7 +123,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(41, "contentTypeID")]
+        [SchemaAttr("ma:contentTypeID")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ContentTypeID
@@ -142,7 +142,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(41, "contentTypeVersion")]
+        [SchemaAttr("ma:contentTypeVersion")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? ContentTypeVersion
@@ -161,7 +161,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(41, "contentTypeDescription")]
+        [SchemaAttr("ma:contentTypeDescription")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ContentTypeDescription
@@ -180,7 +180,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(41, "contentTypeScope")]
+        [SchemaAttr("ma:contentTypeScope")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ContentTypeScope
@@ -199,7 +199,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(41, "versionID")]
+        [SchemaAttr("ma:versionID")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? VersionID
@@ -211,22 +211,22 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(38, "contentTypeSchema");
+            builder.SetSchema("ct:contentTypeSchema");
             builder.AddElement<ContentTypeSchema>()
-.AddAttribute(38, "_", a => a.UnderScore)
-.AddAttribute(41, "_", a => a.ReservedAttributeString)
-.AddAttribute(41, "contentTypeName", a => a.ContentTypeName)
-.AddAttribute(41, "contentTypeID", a => a.ContentTypeID, aBuilder =>
+.AddAttribute("ct:_", a => a.UnderScore)
+.AddAttribute("ma:_", a => a.ReservedAttributeString)
+.AddAttribute("ma:contentTypeName", a => a.ContentTypeName)
+.AddAttribute("ma:contentTypeID", a => a.ContentTypeID, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { Pattern = ("0x([0-9A-Fa-f][1-9A-Fa-f]|[1-9A-Fa-f][0-9A-Fa-f]|00[0-9A-Fa-f]{32})*"), MinLength = (2L), MaxLength = (1026L) });
 })
-.AddAttribute(41, "contentTypeVersion", a => a.ContentTypeVersion, aBuilder =>
+.AddAttribute("ma:contentTypeVersion", a => a.ContentTypeVersion, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 })
-.AddAttribute(41, "contentTypeDescription", a => a.ContentTypeDescription)
-.AddAttribute(41, "contentTypeScope", a => a.ContentTypeScope)
-.AddAttribute(41, "versionID", a => a.VersionID);
+.AddAttribute("ma:contentTypeDescription", a => a.ContentTypeDescription)
+.AddAttribute("ma:contentTypeScope", a => a.ContentTypeScope)
+.AddAttribute("ma:versionID", a => a.VersionID);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new AnyParticle(XsdAny.Any, 1, 0)

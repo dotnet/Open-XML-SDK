@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(37, "customPropertyEditors")]
+    [SchemaAttr("cdip:customPropertyEditors")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomPropertyEditors : OpenXmlCompositeElement
     {
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(37, "customPropertyEditors");
+            builder.SetSchema("cdip:customPropertyEditors");
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.CustomPropertyEditor>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen>();
@@ -114,7 +114,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:XMLNamespace.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(37, "XMLNamespace")]
+    [SchemaAttr("cdip:XMLNamespace")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PropertyEditorNamespace : OpenXmlLeafTextElement
     {
@@ -142,7 +142,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { IsUri = (true) });
-            builder.SetSchema(37, "XMLNamespace");
+            builder.SetSchema("cdip:XMLNamespace");
         }
 
         /// <inheritdoc/>
@@ -155,7 +155,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:defaultPropertyEditorNamespace.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(37, "defaultPropertyEditorNamespace")]
+    [SchemaAttr("cdip:defaultPropertyEditorNamespace")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DefaultPropertyEditorNamespace : OpenXmlLeafTextElement
     {
@@ -183,7 +183,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { IsUri = (true) });
-            builder.SetSchema(37, "defaultPropertyEditorNamespace");
+            builder.SetSchema("cdip:defaultPropertyEditorNamespace");
         }
 
         /// <inheritdoc/>
@@ -196,7 +196,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:XSNLocation.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(37, "XSNLocation")]
+    [SchemaAttr("cdip:XSNLocation")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class XsnFileLocation : OpenXmlLeafTextElement
     {
@@ -223,7 +223,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(37, "XSNLocation");
+            builder.SetSchema("cdip:XSNLocation");
         }
 
         /// <inheritdoc/>
@@ -236,7 +236,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:showOnOpen.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(37, "showOnOpen")]
+    [SchemaAttr("cdip:showOnOpen")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShowOnOpen : OpenXmlLeafTextElement
     {
@@ -264,7 +264,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<BooleanValue>(NumberValidator.Instance);
-            builder.SetSchema(37, "showOnOpen");
+            builder.SetSchema("cdip:showOnOpen");
         }
 
         /// <inheritdoc/>
@@ -284,7 +284,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(37, "customPropertyEditor")]
+    [SchemaAttr("cdip:customPropertyEditor")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomPropertyEditor : OpenXmlCompositeElement
     {
@@ -322,7 +322,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(37, "customPropertyEditor");
+            builder.SetSchema("cdip:customPropertyEditor");
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.PropertyEditorNamespace>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.XsnFileLocation>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)

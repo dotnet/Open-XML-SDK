@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(127, "commentsExtensible")]
+    [SchemaAttr("w16cex:commentsExtensible")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentsExtensible : OpenXmlPartRootElement
     {
@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(127, "commentsExtensible");
+            builder.SetSchema("w16cex:commentsExtensible");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList>();
@@ -125,7 +125,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(127, "commentExtensible")]
+    [SchemaAttr("w16cex:commentExtensible")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentExtensible : OpenXmlCompositeElement
     {
@@ -170,7 +170,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(127, "durableId")]
+        [SchemaAttr("w16cex:durableId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public HexBinaryValue? DurableId
@@ -189,7 +189,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(127, "dateUtc")]
+        [SchemaAttr("w16cex:dateUtc")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public DateTimeValue? DateUtc
@@ -208,7 +208,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(127, "intelligentPlaceholder")]
+        [SchemaAttr("w16cex:intelligentPlaceholder")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public OnOffValue? IntelligentPlaceholder
@@ -220,21 +220,21 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(127, "commentExtensible");
+            builder.SetSchema("w16cex:commentExtensible");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList>();
             builder.AddElement<CommentExtensible>()
-.AddAttribute(127, "durableId", a => a.DurableId, aBuilder =>
+.AddAttribute("w16cex:durableId", a => a.DurableId, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2021));
 aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 })
-.AddAttribute(127, "dateUtc", a => a.DateUtc, aBuilder =>
+.AddAttribute("w16cex:dateUtc", a => a.DateUtc, aBuilder =>
 {
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2021));
 })
-.AddAttribute(127, "intelligentPlaceholder", a => a.IntelligentPlaceholder, aBuilder =>
+.AddAttribute("w16cex:intelligentPlaceholder", a => a.IntelligentPlaceholder, aBuilder =>
 {
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2021));
 });
@@ -273,7 +273,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2021))
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(127, "extLst")]
+    [SchemaAttr("w16cex:extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ExtensionList : OpenXmlCompositeElement
     {
@@ -311,7 +311,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2021))
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(127, "extLst");
+            builder.SetSchema("w16cex:extLst");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Word.ExtensionList.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)

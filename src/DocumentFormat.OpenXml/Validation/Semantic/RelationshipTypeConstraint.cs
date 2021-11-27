@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using System.Diagnostics;
 using System.Linq;
 
@@ -8,10 +9,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     internal class RelationshipTypeConstraint : SemanticConstraint
     {
-        private readonly byte _attribute;
+        private readonly OpenXmlQualifiedName _attribute;
         private readonly string _type;
 
-        public RelationshipTypeConstraint(byte attribute, string type)
+        public RelationshipTypeConstraint(OpenXmlQualifiedName attribute, string type)
             : base(SemanticValidationLevel.Part)
         {
             Debug.Assert(!string.IsNullOrEmpty(type));
@@ -36,7 +37,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            var attribute = element.ParsedState.Attributes[_attribute];
+            if (!TryFindAttribute(element, _attribute, out var attribute))
+            {
+                return null;
+            }
 
             if (attribute.Value is null || string.IsNullOrEmpty(attribute.Value.InnerText))
             {
@@ -81,7 +85,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Description = SR.Format(
                     ValidationResources.Sem_IncorrectRelationshipType,
                     actualType,
-                    GetAttributeQualifiedName(element, _attribute),
+                    attribute.Property.QName,
                     _type),
             };
         }

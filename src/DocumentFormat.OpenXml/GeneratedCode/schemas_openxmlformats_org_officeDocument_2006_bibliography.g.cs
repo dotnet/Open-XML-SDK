@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Sources")]
+    [SchemaAttr("b:Sources")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Sources : OpenXmlPartRootElement
     {
@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Bibliography
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "SelectedStyle")]
+        [SchemaAttr("SelectedStyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? SelectedStyle
@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml.Bibliography
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "StyleName")]
+        [SchemaAttr("StyleName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? StyleName
@@ -100,7 +100,7 @@ namespace DocumentFormat.OpenXml.Bibliography
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "URI")]
+        [SchemaAttr("URI")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uri
@@ -112,18 +112,18 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(9, "Sources");
+            builder.SetSchema("b:Sources");
             builder.AddChild<DocumentFormat.OpenXml.Bibliography.Source>();
             builder.AddElement<Sources>()
-.AddAttribute(0, "SelectedStyle", a => a.SelectedStyle, aBuilder =>
+.AddAttribute("SelectedStyle", a => a.SelectedStyle, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
 })
-.AddAttribute(0, "StyleName", a => a.StyleName, aBuilder =>
+.AddAttribute("StyleName", a => a.StyleName, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
 })
-.AddAttribute(0, "URI", a => a.Uri, aBuilder =>
+.AddAttribute("URI", a => a.Uri, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
 });
@@ -151,7 +151,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Person")]
+    [SchemaAttr("b:Person")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Person : OpenXmlCompositeElement
     {
@@ -189,7 +189,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(9, "Person");
+            builder.SetSchema("b:Person");
             builder.AddChild<DocumentFormat.OpenXml.Bibliography.Last>();
             builder.AddChild<DocumentFormat.OpenXml.Bibliography.First>();
             builder.AddChild<DocumentFormat.OpenXml.Bibliography.Middle>();
@@ -211,7 +211,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:Last.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Last")]
+    [SchemaAttr("b:Last")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Last : OpenXmlLeafTextElement
     {
@@ -239,7 +239,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "Last");
+            builder.SetSchema("b:Last");
         }
 
         /// <inheritdoc/>
@@ -252,7 +252,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:First.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "First")]
+    [SchemaAttr("b:First")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class First : OpenXmlLeafTextElement
     {
@@ -280,7 +280,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "First");
+            builder.SetSchema("b:First");
         }
 
         /// <inheritdoc/>
@@ -293,7 +293,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:Middle.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Middle")]
+    [SchemaAttr("b:Middle")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Middle : OpenXmlLeafTextElement
     {
@@ -321,7 +321,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "Middle");
+            builder.SetSchema("b:Middle");
         }
 
         /// <inheritdoc/>
@@ -334,7 +334,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:Corporate.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Corporate")]
+    [SchemaAttr("b:Corporate")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Corporate : OpenXmlLeafTextElement
     {
@@ -362,7 +362,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "Corporate");
+            builder.SetSchema("b:Corporate");
         }
 
         /// <inheritdoc/>
@@ -375,7 +375,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:AbbreviatedCaseNumber.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "AbbreviatedCaseNumber")]
+    [SchemaAttr("b:AbbreviatedCaseNumber")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AbbreviatedCaseNumber : OpenXmlLeafTextElement
     {
@@ -403,7 +403,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "AbbreviatedCaseNumber");
+            builder.SetSchema("b:AbbreviatedCaseNumber");
         }
 
         /// <inheritdoc/>
@@ -416,7 +416,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:AlbumTitle.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "AlbumTitle")]
+    [SchemaAttr("b:AlbumTitle")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AlbumTitle : OpenXmlLeafTextElement
     {
@@ -444,7 +444,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "AlbumTitle");
+            builder.SetSchema("b:AlbumTitle");
         }
 
         /// <inheritdoc/>
@@ -457,7 +457,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:BookTitle.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "BookTitle")]
+    [SchemaAttr("b:BookTitle")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class BookTitle : OpenXmlLeafTextElement
     {
@@ -485,7 +485,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "BookTitle");
+            builder.SetSchema("b:BookTitle");
         }
 
         /// <inheritdoc/>
@@ -498,7 +498,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:Broadcaster.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Broadcaster")]
+    [SchemaAttr("b:Broadcaster")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Broadcaster : OpenXmlLeafTextElement
     {
@@ -526,7 +526,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "Broadcaster");
+            builder.SetSchema("b:Broadcaster");
         }
 
         /// <inheritdoc/>
@@ -539,7 +539,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:BroadcastTitle.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "BroadcastTitle")]
+    [SchemaAttr("b:BroadcastTitle")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class BroadcastTitle : OpenXmlLeafTextElement
     {
@@ -567,7 +567,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "BroadcastTitle");
+            builder.SetSchema("b:BroadcastTitle");
         }
 
         /// <inheritdoc/>
@@ -580,7 +580,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:CaseNumber.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "CaseNumber")]
+    [SchemaAttr("b:CaseNumber")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CaseNumber : OpenXmlLeafTextElement
     {
@@ -608,7 +608,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "CaseNumber");
+            builder.SetSchema("b:CaseNumber");
         }
 
         /// <inheritdoc/>
@@ -621,7 +621,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:ChapterNumber.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "ChapterNumber")]
+    [SchemaAttr("b:ChapterNumber")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ChapterNumber : OpenXmlLeafTextElement
     {
@@ -649,7 +649,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "ChapterNumber");
+            builder.SetSchema("b:ChapterNumber");
         }
 
         /// <inheritdoc/>
@@ -662,7 +662,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:City.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "City")]
+    [SchemaAttr("b:City")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class City : OpenXmlLeafTextElement
     {
@@ -690,7 +690,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "City");
+            builder.SetSchema("b:City");
         }
 
         /// <inheritdoc/>
@@ -703,7 +703,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:Comments.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Comments")]
+    [SchemaAttr("b:Comments")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Comments : OpenXmlLeafTextElement
     {
@@ -731,7 +731,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "Comments");
+            builder.SetSchema("b:Comments");
         }
 
         /// <inheritdoc/>
@@ -744,7 +744,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:ConferenceName.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "ConferenceName")]
+    [SchemaAttr("b:ConferenceName")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ConferenceName : OpenXmlLeafTextElement
     {
@@ -772,7 +772,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "ConferenceName");
+            builder.SetSchema("b:ConferenceName");
         }
 
         /// <inheritdoc/>
@@ -785,7 +785,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:CountryRegion.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "CountryRegion")]
+    [SchemaAttr("b:CountryRegion")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CountryRegion : OpenXmlLeafTextElement
     {
@@ -813,7 +813,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "CountryRegion");
+            builder.SetSchema("b:CountryRegion");
         }
 
         /// <inheritdoc/>
@@ -826,7 +826,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:Court.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Court")]
+    [SchemaAttr("b:Court")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Court : OpenXmlLeafTextElement
     {
@@ -854,7 +854,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "Court");
+            builder.SetSchema("b:Court");
         }
 
         /// <inheritdoc/>
@@ -867,7 +867,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:Day.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Day")]
+    [SchemaAttr("b:Day")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Day : OpenXmlLeafTextElement
     {
@@ -895,7 +895,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "Day");
+            builder.SetSchema("b:Day");
         }
 
         /// <inheritdoc/>
@@ -908,7 +908,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:DayAccessed.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "DayAccessed")]
+    [SchemaAttr("b:DayAccessed")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DayAccessed : OpenXmlLeafTextElement
     {
@@ -936,7 +936,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "DayAccessed");
+            builder.SetSchema("b:DayAccessed");
         }
 
         /// <inheritdoc/>
@@ -949,7 +949,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:Department.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Department")]
+    [SchemaAttr("b:Department")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Department : OpenXmlLeafTextElement
     {
@@ -977,7 +977,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "Department");
+            builder.SetSchema("b:Department");
         }
 
         /// <inheritdoc/>
@@ -990,7 +990,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:Distributor.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Distributor")]
+    [SchemaAttr("b:Distributor")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Distributor : OpenXmlLeafTextElement
     {
@@ -1018,7 +1018,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "Distributor");
+            builder.SetSchema("b:Distributor");
         }
 
         /// <inheritdoc/>
@@ -1031,7 +1031,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:Edition.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Edition")]
+    [SchemaAttr("b:Edition")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Edition : OpenXmlLeafTextElement
     {
@@ -1059,7 +1059,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "Edition");
+            builder.SetSchema("b:Edition");
         }
 
         /// <inheritdoc/>
@@ -1072,7 +1072,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:Guid.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Guid")]
+    [SchemaAttr("b:Guid")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class GuidString : OpenXmlLeafTextElement
     {
@@ -1100,7 +1100,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "Guid");
+            builder.SetSchema("b:Guid");
         }
 
         /// <inheritdoc/>
@@ -1113,7 +1113,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:Institution.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Institution")]
+    [SchemaAttr("b:Institution")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Institution : OpenXmlLeafTextElement
     {
@@ -1141,7 +1141,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "Institution");
+            builder.SetSchema("b:Institution");
         }
 
         /// <inheritdoc/>
@@ -1154,7 +1154,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:InternetSiteTitle.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "InternetSiteTitle")]
+    [SchemaAttr("b:InternetSiteTitle")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class InternetSiteTitle : OpenXmlLeafTextElement
     {
@@ -1182,7 +1182,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "InternetSiteTitle");
+            builder.SetSchema("b:InternetSiteTitle");
         }
 
         /// <inheritdoc/>
@@ -1195,7 +1195,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:Issue.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Issue")]
+    [SchemaAttr("b:Issue")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Issue : OpenXmlLeafTextElement
     {
@@ -1223,7 +1223,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "Issue");
+            builder.SetSchema("b:Issue");
         }
 
         /// <inheritdoc/>
@@ -1236,7 +1236,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:JournalName.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "JournalName")]
+    [SchemaAttr("b:JournalName")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class JournalName : OpenXmlLeafTextElement
     {
@@ -1264,7 +1264,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "JournalName");
+            builder.SetSchema("b:JournalName");
         }
 
         /// <inheritdoc/>
@@ -1277,7 +1277,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:LCID.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "LCID")]
+    [SchemaAttr("b:LCID")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class LcId : OpenXmlLeafTextElement
     {
@@ -1305,7 +1305,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "LCID");
+            builder.SetSchema("b:LCID");
         }
 
         /// <inheritdoc/>
@@ -1318,7 +1318,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:Medium.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Medium")]
+    [SchemaAttr("b:Medium")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Medium : OpenXmlLeafTextElement
     {
@@ -1346,7 +1346,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "Medium");
+            builder.SetSchema("b:Medium");
         }
 
         /// <inheritdoc/>
@@ -1359,7 +1359,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:Month.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Month")]
+    [SchemaAttr("b:Month")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Month : OpenXmlLeafTextElement
     {
@@ -1387,7 +1387,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "Month");
+            builder.SetSchema("b:Month");
         }
 
         /// <inheritdoc/>
@@ -1400,7 +1400,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:MonthAccessed.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "MonthAccessed")]
+    [SchemaAttr("b:MonthAccessed")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class MonthAccessed : OpenXmlLeafTextElement
     {
@@ -1428,7 +1428,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "MonthAccessed");
+            builder.SetSchema("b:MonthAccessed");
         }
 
         /// <inheritdoc/>
@@ -1441,7 +1441,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:NumberVolumes.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "NumberVolumes")]
+    [SchemaAttr("b:NumberVolumes")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class NumberVolumes : OpenXmlLeafTextElement
     {
@@ -1469,7 +1469,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "NumberVolumes");
+            builder.SetSchema("b:NumberVolumes");
         }
 
         /// <inheritdoc/>
@@ -1482,7 +1482,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:Pages.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Pages")]
+    [SchemaAttr("b:Pages")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Pages : OpenXmlLeafTextElement
     {
@@ -1510,7 +1510,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "Pages");
+            builder.SetSchema("b:Pages");
         }
 
         /// <inheritdoc/>
@@ -1523,7 +1523,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:PatentNumber.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "PatentNumber")]
+    [SchemaAttr("b:PatentNumber")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PatentNumber : OpenXmlLeafTextElement
     {
@@ -1551,7 +1551,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "PatentNumber");
+            builder.SetSchema("b:PatentNumber");
         }
 
         /// <inheritdoc/>
@@ -1564,7 +1564,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:PeriodicalTitle.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "PeriodicalTitle")]
+    [SchemaAttr("b:PeriodicalTitle")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PeriodicalTitle : OpenXmlLeafTextElement
     {
@@ -1592,7 +1592,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "PeriodicalTitle");
+            builder.SetSchema("b:PeriodicalTitle");
         }
 
         /// <inheritdoc/>
@@ -1605,7 +1605,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:ProductionCompany.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "ProductionCompany")]
+    [SchemaAttr("b:ProductionCompany")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ProductionCompany : OpenXmlLeafTextElement
     {
@@ -1633,7 +1633,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "ProductionCompany");
+            builder.SetSchema("b:ProductionCompany");
         }
 
         /// <inheritdoc/>
@@ -1646,7 +1646,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:PublicationTitle.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "PublicationTitle")]
+    [SchemaAttr("b:PublicationTitle")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PublicationTitle : OpenXmlLeafTextElement
     {
@@ -1674,7 +1674,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "PublicationTitle");
+            builder.SetSchema("b:PublicationTitle");
         }
 
         /// <inheritdoc/>
@@ -1687,7 +1687,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:Publisher.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Publisher")]
+    [SchemaAttr("b:Publisher")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Publisher : OpenXmlLeafTextElement
     {
@@ -1715,7 +1715,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "Publisher");
+            builder.SetSchema("b:Publisher");
         }
 
         /// <inheritdoc/>
@@ -1728,7 +1728,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:RecordingNumber.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "RecordingNumber")]
+    [SchemaAttr("b:RecordingNumber")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RecordingNumber : OpenXmlLeafTextElement
     {
@@ -1756,7 +1756,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "RecordingNumber");
+            builder.SetSchema("b:RecordingNumber");
         }
 
         /// <inheritdoc/>
@@ -1769,7 +1769,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:RefOrder.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "RefOrder")]
+    [SchemaAttr("b:RefOrder")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ReferenceOrder : OpenXmlLeafTextElement
     {
@@ -1797,7 +1797,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "RefOrder");
+            builder.SetSchema("b:RefOrder");
         }
 
         /// <inheritdoc/>
@@ -1810,7 +1810,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:Reporter.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Reporter")]
+    [SchemaAttr("b:Reporter")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Reporter : OpenXmlLeafTextElement
     {
@@ -1838,7 +1838,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "Reporter");
+            builder.SetSchema("b:Reporter");
         }
 
         /// <inheritdoc/>
@@ -1851,7 +1851,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:ShortTitle.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "ShortTitle")]
+    [SchemaAttr("b:ShortTitle")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShortTitle : OpenXmlLeafTextElement
     {
@@ -1879,7 +1879,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "ShortTitle");
+            builder.SetSchema("b:ShortTitle");
         }
 
         /// <inheritdoc/>
@@ -1892,7 +1892,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:StandardNumber.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "StandardNumber")]
+    [SchemaAttr("b:StandardNumber")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class StandardNumber : OpenXmlLeafTextElement
     {
@@ -1920,7 +1920,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "StandardNumber");
+            builder.SetSchema("b:StandardNumber");
         }
 
         /// <inheritdoc/>
@@ -1933,7 +1933,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:StateProvince.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "StateProvince")]
+    [SchemaAttr("b:StateProvince")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class StateProvince : OpenXmlLeafTextElement
     {
@@ -1961,7 +1961,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "StateProvince");
+            builder.SetSchema("b:StateProvince");
         }
 
         /// <inheritdoc/>
@@ -1974,7 +1974,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:Station.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Station")]
+    [SchemaAttr("b:Station")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Station : OpenXmlLeafTextElement
     {
@@ -2002,7 +2002,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "Station");
+            builder.SetSchema("b:Station");
         }
 
         /// <inheritdoc/>
@@ -2015,7 +2015,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:Tag.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Tag")]
+    [SchemaAttr("b:Tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Tag : OpenXmlLeafTextElement
     {
@@ -2043,7 +2043,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "Tag");
+            builder.SetSchema("b:Tag");
         }
 
         /// <inheritdoc/>
@@ -2056,7 +2056,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:Theater.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Theater")]
+    [SchemaAttr("b:Theater")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Theater : OpenXmlLeafTextElement
     {
@@ -2084,7 +2084,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "Theater");
+            builder.SetSchema("b:Theater");
         }
 
         /// <inheritdoc/>
@@ -2097,7 +2097,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:ThesisType.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "ThesisType")]
+    [SchemaAttr("b:ThesisType")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ThesisType : OpenXmlLeafTextElement
     {
@@ -2125,7 +2125,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "ThesisType");
+            builder.SetSchema("b:ThesisType");
         }
 
         /// <inheritdoc/>
@@ -2138,7 +2138,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:Title.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Title")]
+    [SchemaAttr("b:Title")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Title : OpenXmlLeafTextElement
     {
@@ -2166,7 +2166,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "Title");
+            builder.SetSchema("b:Title");
         }
 
         /// <inheritdoc/>
@@ -2179,7 +2179,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:Type.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Type")]
+    [SchemaAttr("b:Type")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PatentType : OpenXmlLeafTextElement
     {
@@ -2207,7 +2207,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "Type");
+            builder.SetSchema("b:Type");
         }
 
         /// <inheritdoc/>
@@ -2220,7 +2220,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:URL.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "URL")]
+    [SchemaAttr("b:URL")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class UrlString : OpenXmlLeafTextElement
     {
@@ -2248,7 +2248,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "URL");
+            builder.SetSchema("b:URL");
         }
 
         /// <inheritdoc/>
@@ -2261,7 +2261,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:Version.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Version")]
+    [SchemaAttr("b:Version")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Version : OpenXmlLeafTextElement
     {
@@ -2289,7 +2289,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "Version");
+            builder.SetSchema("b:Version");
         }
 
         /// <inheritdoc/>
@@ -2302,7 +2302,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:Volume.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Volume")]
+    [SchemaAttr("b:Volume")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Volume : OpenXmlLeafTextElement
     {
@@ -2330,7 +2330,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "Volume");
+            builder.SetSchema("b:Volume");
         }
 
         /// <inheritdoc/>
@@ -2343,7 +2343,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:Year.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Year")]
+    [SchemaAttr("b:Year")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Year : OpenXmlLeafTextElement
     {
@@ -2371,7 +2371,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "Year");
+            builder.SetSchema("b:Year");
         }
 
         /// <inheritdoc/>
@@ -2384,7 +2384,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:YearAccessed.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "YearAccessed")]
+    [SchemaAttr("b:YearAccessed")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class YearAccessed : OpenXmlLeafTextElement
     {
@@ -2412,7 +2412,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema(9, "YearAccessed");
+            builder.SetSchema("b:YearAccessed");
         }
 
         /// <inheritdoc/>
@@ -2431,7 +2431,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "NameList")]
+    [SchemaAttr("b:NameList")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class NameList : OpenXmlCompositeElement
     {
@@ -2469,7 +2469,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(9, "NameList");
+            builder.SetSchema("b:NameList");
             builder.AddChild<DocumentFormat.OpenXml.Bibliography.Person>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -2493,7 +2493,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Artist")]
+    [SchemaAttr("b:Artist")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Artist : NameType
     {
@@ -2531,7 +2531,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(9, "Artist");
+            builder.SetSchema("b:Artist");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2554,7 +2554,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "BookAuthor")]
+    [SchemaAttr("b:BookAuthor")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class BookAuthor : NameType
     {
@@ -2592,7 +2592,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(9, "BookAuthor");
+            builder.SetSchema("b:BookAuthor");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2615,7 +2615,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Compiler")]
+    [SchemaAttr("b:Compiler")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Compiler : NameType
     {
@@ -2653,7 +2653,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(9, "Compiler");
+            builder.SetSchema("b:Compiler");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2676,7 +2676,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Composer")]
+    [SchemaAttr("b:Composer")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Composer : NameType
     {
@@ -2714,7 +2714,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(9, "Composer");
+            builder.SetSchema("b:Composer");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2737,7 +2737,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Conductor")]
+    [SchemaAttr("b:Conductor")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Conductor : NameType
     {
@@ -2775,7 +2775,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(9, "Conductor");
+            builder.SetSchema("b:Conductor");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2798,7 +2798,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Counsel")]
+    [SchemaAttr("b:Counsel")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Counsel : NameType
     {
@@ -2836,7 +2836,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(9, "Counsel");
+            builder.SetSchema("b:Counsel");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2859,7 +2859,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Director")]
+    [SchemaAttr("b:Director")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Director : NameType
     {
@@ -2897,7 +2897,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(9, "Director");
+            builder.SetSchema("b:Director");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2920,7 +2920,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Editor")]
+    [SchemaAttr("b:Editor")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Editor : NameType
     {
@@ -2958,7 +2958,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(9, "Editor");
+            builder.SetSchema("b:Editor");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2981,7 +2981,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Interviewee")]
+    [SchemaAttr("b:Interviewee")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Interviewee : NameType
     {
@@ -3019,7 +3019,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(9, "Interviewee");
+            builder.SetSchema("b:Interviewee");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -3042,7 +3042,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Interviewer")]
+    [SchemaAttr("b:Interviewer")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Interviewer : NameType
     {
@@ -3080,7 +3080,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(9, "Interviewer");
+            builder.SetSchema("b:Interviewer");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -3103,7 +3103,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Inventor")]
+    [SchemaAttr("b:Inventor")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Inventor : NameType
     {
@@ -3141,7 +3141,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(9, "Inventor");
+            builder.SetSchema("b:Inventor");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -3164,7 +3164,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "ProducerName")]
+    [SchemaAttr("b:ProducerName")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ProducerName : NameType
     {
@@ -3202,7 +3202,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(9, "ProducerName");
+            builder.SetSchema("b:ProducerName");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -3225,7 +3225,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Translator")]
+    [SchemaAttr("b:Translator")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Translator : NameType
     {
@@ -3263,7 +3263,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(9, "Translator");
+            builder.SetSchema("b:Translator");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -3286,7 +3286,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Writer")]
+    [SchemaAttr("b:Writer")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Writer : NameType
     {
@@ -3324,7 +3324,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(9, "Writer");
+            builder.SetSchema("b:Writer");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -3412,7 +3412,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Author")]
+    [SchemaAttr("b:Author")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Author : NameOrCorporateType
     {
@@ -3450,7 +3450,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(9, "Author");
+            builder.SetSchema("b:Author");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
@@ -3478,7 +3478,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Performer")]
+    [SchemaAttr("b:Performer")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Performer : NameOrCorporateType
     {
@@ -3516,7 +3516,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(9, "Performer");
+            builder.SetSchema("b:Performer");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
@@ -3637,7 +3637,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Author")]
+    [SchemaAttr("b:Author")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AuthorList : OpenXmlCompositeElement
     {
@@ -3675,7 +3675,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(9, "Author");
+            builder.SetSchema("b:Author");
             builder.AddChild<DocumentFormat.OpenXml.Bibliography.Author>();
             builder.AddChild<DocumentFormat.OpenXml.Bibliography.Performer>();
             builder.AddChild<DocumentFormat.OpenXml.Bibliography.Artist>();
@@ -3934,7 +3934,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// <para>When the object is serialized out as xml, it's qualified name is b:SourceType.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "SourceType")]
+    [SchemaAttr("b:SourceType")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SourceType : OpenXmlLeafTextElement
     {
@@ -3962,7 +3962,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Bibliography.DataSourceValues>>(EnumValidator.Instance);
-            builder.SetSchema(9, "SourceType");
+            builder.SetSchema("b:SourceType");
         }
 
         /// <inheritdoc/>
@@ -4032,7 +4032,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, "Source")]
+    [SchemaAttr("b:Source")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Source : OpenXmlCompositeElement
     {
@@ -4070,7 +4070,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(9, "Source");
+            builder.SetSchema("b:Source");
             builder.AddChild<DocumentFormat.OpenXml.Bibliography.AuthorList>();
             builder.AddChild<DocumentFormat.OpenXml.Bibliography.SourceType>();
             builder.AddChild<DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber>();
