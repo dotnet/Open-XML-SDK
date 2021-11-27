@@ -74,20 +74,20 @@ namespace DocumentFormat.OpenXml.Packaging
             _uri = uriTarget;
 
             // TODO: should we delay load?
-            var metroPart = openXmlPackage.Package.GetPart(uriTarget);
+            var part = openXmlPackage.Package.GetPart(uriTarget);
 
-            if (IsContentTypeFixed && metroPart.ContentType != ContentType)
+            _packagePart = part;
+
+            if (IsContentTypeFixed && !IsValidContentType(part))
             {
                 var errorMessage = SR.Format(
                     ExceptionMessages.InvalidPartContentType,
-                    metroPart.Uri.OriginalString,
-                    metroPart.ContentType,
+                    part.Uri.OriginalString,
+                    part.ContentType,
                     ContentType);
 
                 throw new OpenXmlPackageException(errorMessage);
             }
-
-            _packagePart = metroPart;
 
             // add the _uri to be reserved
             openXmlPackage.ReserveUri(ContentType, Uri);
@@ -495,6 +495,16 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets a value indicating whether the ContentType for the current part is fixed.
         /// </summary>
         internal bool IsContentTypeFixed => this is IFixedContentTypePart;
+
+        /// <summary>
+        /// Determines if the content type agrees with this part's constraints.
+        /// </summary>
+        /// <param name="part"></param>
+        /// <returns>True if the content type is valid for this part. False otherwise.</returns>
+        private protected virtual bool IsValidContentType(PackagePart part)
+        {
+            return part.ContentType == ContentType;
+        }
 
         // find all reachable parts from the package root, the dictionary also used for cycle reference defense
         internal sealed override void FindAllReachableParts(IDictionary<OpenXmlPart, bool> reachableParts)
