@@ -20,7 +20,11 @@ namespace DocumentFormat.OpenXml.Packaging
         public static ImagePart AddImagePart(this MainDocumentPart main, string extension) =>
             main.AddImagePart(GetImagePartType(extension));
 
-        static ImagePartType GetImagePartType(string extension)
+        /// <summary>
+        /// Given a file extension, retrieve the associated ImagePartType value.
+        /// </summary>
+        /// <param name="extension">A file extension supported by ImagePartType.</param>    
+        public static ImagePartType GetImagePartType(this string extension)
             => extension.ToLower() switch
             {
                 ".bmp" => ImagePartType.Bmp,
