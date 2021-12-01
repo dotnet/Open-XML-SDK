@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 ".svg" => ImagePartType.Svg,
                 ".tiff" => ImagePartType.Tiff,
                 ".wmf" => ImagePartType.Wmf,
-                _ => throw new NotSupportedException($"{extension} is not supported")
+                _ => throw new NotSupportedException($"{extension} is not supported"),
             };
     }
 }
