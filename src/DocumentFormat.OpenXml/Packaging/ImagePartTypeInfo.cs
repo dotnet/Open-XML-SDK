@@ -48,5 +48,21 @@ namespace DocumentFormat.OpenXml.Packaging
                 ImagePartType.Svg => ".svg",
                 _ => ".image",
             };
+
+        internal static ImagePartType GetImagePartType(string extension)
+            => extension.ToLower() switch
+            {
+                ".bmp" => ImagePartType.Bmp,
+                ".emf" => ImagePartType.Emf,
+                ".ico" => ImagePartType.Icon,
+                ".jpg" => ImagePartType.Jpeg,
+                ".jpeg" => ImagePartType.Jpeg,
+                ".pcx" => ImagePartType.Pcx,
+                ".png" => ImagePartType.Png,
+                ".svg" => ImagePartType.Svg,
+                ".tiff" => ImagePartType.Tiff,
+                ".wmf" => ImagePartType.Wmf,
+                _ => throw new NotSupportedException($"{extension} is not supported")
+            };
     }
 }
