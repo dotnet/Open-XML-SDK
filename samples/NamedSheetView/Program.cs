@@ -1,3 +1,4 @@
+using Common;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Office2013.ExcelAc;
 using DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews;
@@ -9,43 +10,18 @@ using System.Linq;
 
 namespace AddNamedSheetView
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             if (args.Length < 1)
             {
-                _showHelp();
+                Utilities.ShowHelp(new string[] { "NamedSheetView: ", "Usage: NamedSheetView <filename>", "Where: <filename> is the .xlsx file in which to add a named sheet view." });
             }
-            else if (_checkIfFilesExist(args))
+            else if (Utilities.CheckIfFilesExist(args))
             {
                 InsertNamedSheetView(args[0]);
             }
-
-        }
-
-        private static void _showHelp()
-        {
-            Console.WriteLine("NamedSheetView: ");
-            Console.WriteLine("Usage: NamedSheetView <filename>");
-            Console.WriteLine("Where: <filename> is the .xlsx file in which to add a named sheet view.");
-            Console.WriteLine();
-        }
-
-        private static bool _checkIfFilesExist(string[] files)
-        {
-            bool exist = true;
-
-            foreach (string file in files)
-            {
-                if (!File.Exists(file))
-                {
-                    Console.Error.WriteLine($"file not found: {file}");
-                    exist = false;
-                }
-            }
-
-            return exist;
         }
 
         public static void InsertNamedSheetView(string xlsxPath)
