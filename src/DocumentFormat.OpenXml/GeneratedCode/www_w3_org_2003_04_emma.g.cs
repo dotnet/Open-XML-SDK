@@ -944,7 +944,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Ink.ContextNode), 0, 1)
                 }
             };
-            builder.AddConstraint(new AttributeValuePatternConstraint(":id", @"[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValuePatternConstraint("emma:id", @"[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}") { Version = FileFormatVersions.Office2010 });
             builder.AddConstraint(new AttributeValueSetConstraint("emma:mode", true, new string[] { "ink" }) { Version = FileFormatVersions.Office2010 });
         }
 
@@ -1531,7 +1531,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
                     new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1)
                 }
             };
-            builder.AddConstraint(new AttributeValueSetConstraint(":disjunction-type", true, new string[] { "recognition" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint("emma:disjunction-type", true, new string[] { "recognition" }) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>

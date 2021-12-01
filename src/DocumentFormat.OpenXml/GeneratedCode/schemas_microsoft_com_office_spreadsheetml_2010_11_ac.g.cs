@@ -59,7 +59,7 @@ namespace DocumentFormat.OpenXml.Office2013.ExcelAc
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(":url", 1, 1000) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2013 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x15ac:url", 1, 1000) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2013 });
         }
 
         /// <inheritdoc/>
