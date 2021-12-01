@@ -1,4 +1,5 @@
-﻿using DocumentFormat.OpenXml;
+﻿using Common;
+using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Presentation;
 using System;
@@ -15,37 +16,18 @@ namespace AnimatedModel3DExample
         {
             if (args.Length < 3)
             {
-                _showHelp();
+                Common.Utilities.ShowHelp(new string[] {
+                    "AnimatedModel3DExample: " ,
+                    "Usage: AnimatedModel3DExample <OOXML> <png> <glb>" ,
+                    "Where <OOXML> is the file to add the animated model 3d to" ,
+                    "and <png> is the .png file with the image for the Animated Model 3D" ,
+                    "Where <glb> is the .glb file for the animated model 3d"
+                });
             }
-            else if (_checkIfFilesExist(args))
+            else if (Common.Utilities.CheckIfFilesExist(args))
             {
                 InsertAnimatedModel3D(args[0], args[1], args[2]);
             }
-        }
-
-        private static void _showHelp()
-        {
-            Console.WriteLine("AnimatedModel3DExample: ");
-            Console.WriteLine("Usage: AnimatedModel3DExample <OOXML> <png> <glb>");
-            Console.WriteLine("Where <OOXML> is the file to add the animated model 3d to");
-            Console.WriteLine("and <png> is the .png file with the image for the Animated Model 3D");
-            Console.WriteLine("Where <glb> is the .glb file for the animated model 3d");
-        }
-
-        private static bool _checkIfFilesExist(string[] files)
-        {
-            bool exist = true;
-
-            foreach (string file in files)
-            {
-                if (!File.Exists(file))
-                {
-                    Console.Error.WriteLine($"file not found: {file}");
-                    exist = false;
-                }
-            }
-
-            return exist;
         }
 
         public static void InsertAnimatedModel3D(string pptxPath, string pngPath, string glbPath)
