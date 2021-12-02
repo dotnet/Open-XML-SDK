@@ -21,6 +21,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="nsId">Specifies the namespace Id of the schema attribute.</param>
         /// <param name="tag">Specifies the Tag name of the schema attribute.</param>
         /// <remarks>This will be removed once the concept of id can be removed. Please use <see cref="SchemaAttrAttribute(string, string)"/></remarks>
+        [Obsolete("The namespace id is no longer tracked and will be removed in future release.")]
         public SchemaAttrAttribute(byte nsId, string tag)
         {
             if (string.IsNullOrEmpty(tag))
@@ -29,6 +30,21 @@ namespace DocumentFormat.OpenXml
             }
 
             _qname = new OpenXmlQualifiedName(new OpenXmlNamespace(nsId), tag);
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the SchemaAttrAttribute.
+        /// </summary>
+        /// <param name="qname">Qualified name of item.</param>
+        /// <remarks>This will be removed once the concept of id can be removed. Please use <see cref="SchemaAttrAttribute(string, string)"/></remarks>
+        public SchemaAttrAttribute(string qname)
+        {
+            if (string.IsNullOrEmpty(qname))
+            {
+                throw new ArgumentNullException(nameof(qname));
+            }
+
+            _qname = qname;
         }
 
         /// <summary>

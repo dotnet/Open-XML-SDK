@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(40, "LongProperties")]
+    [SchemaAttr("lp:LongProperties")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class LongProperties : OpenXmlCompositeElement
     {
@@ -64,7 +64,7 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(40, "LongProperties");
+            builder.SetSchema("lp:LongProperties");
             builder.AddChild<DocumentFormat.OpenXml.Office.LongProperties.LongProperty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -82,7 +82,7 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
     /// <para>When the object is serialized out as xml, it's qualified name is lp:LongProp.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(40, "LongProp")]
+    [SchemaAttr("lp:LongProp")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class LongProperty : OpenXmlLeafTextElement
     {
@@ -113,7 +113,7 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "name")]
+        [SchemaAttr("name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -125,9 +125,9 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(40, "LongProp");
+            builder.SetSchema("lp:LongProp");
             builder.AddElement<LongProperty>()
-.AddAttribute(0, "name", a => a.Name);
+.AddAttribute("name", a => a.Name);
         }
 
         /// <inheritdoc/>

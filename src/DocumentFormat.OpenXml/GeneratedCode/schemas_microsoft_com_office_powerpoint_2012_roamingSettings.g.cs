@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
     /// <para>When the object is serialized out as xml, it's qualified name is pRoam:key.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(76, "key")]
+    [SchemaAttr("pRoam:key")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Key : OpenXmlLeafTextElement
     {
@@ -47,7 +47,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(76, "key");
+            builder.SetSchema("pRoam:key");
             builder.Availability = FileFormatVersions.Office2013;
         }
 
@@ -61,7 +61,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
     /// <para>When the object is serialized out as xml, it's qualified name is pRoam:value.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(76, "value")]
+    [SchemaAttr("pRoam:value")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Value : OpenXmlLeafTextElement
     {
@@ -88,7 +88,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(76, "value");
+            builder.SetSchema("pRoam:value");
             builder.Availability = FileFormatVersions.Office2013;
         }
 
@@ -109,7 +109,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(76, "props")]
+    [SchemaAttr("pRoam:props")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RoamingProperty : OpenXmlCompositeElement
     {
@@ -147,7 +147,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(76, "props");
+            builder.SetSchema("pRoam:props");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Key>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Value>();

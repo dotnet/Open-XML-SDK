@@ -72,10 +72,10 @@ namespace DocumentFormat.OpenXml.Tests.Validation.Semantic
             internal override void ConfigureMetadata(ElementMetadata.Builder builder)
             {
                 builder.AddElement<TestElement>()
-                    .AddAttribute(0, "required", t => t.Required)
-                    .AddAttribute(0, "condition", t => t.Condition);
+                    .AddAttribute(":required", t => t.Required)
+                    .AddAttribute(":condition", t => t.Condition);
 
-                builder.AddConstraint(new AttributeRequiredConditionToValue(0, 1, ExpectedConditionValue));
+                builder.AddConstraint(new AttributeRequiredConditionToValue(":required", ":condition", ExpectedConditionValue));
             }
         }
     }

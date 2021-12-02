@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(60, "wgp")]
+    [SchemaAttr("wpg:wgp")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class WordprocessingGroup : WordprocessingGroupType
     {
@@ -76,7 +76,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(60, "wgp");
+            builder.SetSchema("wpg:wgp");
             builder.Availability = FileFormatVersions.Office2010;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -119,7 +119,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(60, "grpSp")]
+    [SchemaAttr("wpg:grpSp")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class GroupShape : WordprocessingGroupType
     {
@@ -157,7 +157,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(60, "grpSp");
+            builder.SetSchema("wpg:grpSp");
             builder.Availability = FileFormatVersions.Office2010;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -300,7 +300,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(60, "cNvPr")]
+    [SchemaAttr("wpg:cNvPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
@@ -342,7 +342,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Id
@@ -358,7 +358,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "name")]
+        [SchemaAttr("name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -374,7 +374,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "descr")]
+        [SchemaAttr("descr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Description
@@ -390,7 +390,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "hidden")]
+        [SchemaAttr("hidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Hidden
@@ -406,7 +406,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "title")]
+        [SchemaAttr("title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Title
@@ -418,23 +418,23 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(60, "cNvPr");
+            builder.SetSchema("wpg:cNvPr");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
             builder.AddElement<NonVisualDrawingProperties>()
-.AddAttribute(0, "id", a => a.Id, aBuilder =>
+.AddAttribute("id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "name", a => a.Name, aBuilder =>
+.AddAttribute("name", a => a.Name, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "descr", a => a.Description)
-.AddAttribute(0, "hidden", a => a.Hidden)
-.AddAttribute(0, "title", a => a.Title);
+.AddAttribute("descr", a => a.Description)
+.AddAttribute("hidden", a => a.Hidden)
+.AddAttribute("title", a => a.Title);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
@@ -499,7 +499,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(60, "cNvFrPr")]
+    [SchemaAttr("wpg:cNvFrPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     {
@@ -537,7 +537,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(60, "cNvFrPr");
+            builder.SetSchema("wpg:cNvFrPr");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
@@ -591,7 +591,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(60, "xfrm")]
+    [SchemaAttr("wpg:xfrm")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Transform2D : OpenXmlCompositeElement
     {
@@ -633,7 +633,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "rot")]
+        [SchemaAttr("rot")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public Int32Value? Rotation
@@ -649,7 +649,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "flipH")]
+        [SchemaAttr("flipH")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? HorizontalFlip
@@ -665,7 +665,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "flipV")]
+        [SchemaAttr("flipV")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? VerticalFlip
@@ -677,14 +677,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(60, "xfrm");
+            builder.SetSchema("wpg:xfrm");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
             builder.AddElement<Transform2D>()
-.AddAttribute(0, "rot", a => a.Rotation)
-.AddAttribute(0, "flipH", a => a.HorizontalFlip)
-.AddAttribute(0, "flipV", a => a.VerticalFlip);
+.AddAttribute("rot", a => a.Rotation)
+.AddAttribute("flipH", a => a.HorizontalFlip)
+.AddAttribute("flipV", a => a.VerticalFlip);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0, 1),
@@ -734,7 +734,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(60, "extLst")]
+    [SchemaAttr("wpg:extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
@@ -772,7 +772,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(60, "extLst");
+            builder.SetSchema("wpg:extLst");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -804,7 +804,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(60, "cNvGrpSpPr")]
+    [SchemaAttr("wpg:cNvGrpSpPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualGroupDrawingShapeProperties : OpenXmlCompositeElement
     {
@@ -842,7 +842,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(60, "cNvGrpSpPr");
+            builder.SetSchema("wpg:cNvGrpSpPr");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
@@ -905,7 +905,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(60, "grpSpPr")]
+    [SchemaAttr("wpg:grpSpPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class GroupShapeProperties : OpenXmlCompositeElement
     {
@@ -947,7 +947,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "bwMode")]
+        [SchemaAttr("bwMode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
@@ -959,7 +959,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(60, "grpSpPr");
+            builder.SetSchema("wpg:grpSpPr");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
@@ -973,7 +973,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddElement<GroupShapeProperties>()
-.AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+.AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
@@ -1038,7 +1038,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(60, "graphicFrame")]
+    [SchemaAttr("wpg:graphicFrame")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class GraphicFrame : OpenXmlCompositeElement
     {
@@ -1076,7 +1076,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(60, "graphicFrame");
+            builder.SetSchema("wpg:graphicFrame");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Graphic>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties>();

@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
     /// <para>When the object is serialized out as xml, it's qualified name is w16se:symEx.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(86, "symEx")]
+    [SchemaAttr("w16se:symEx")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SymEx : OpenXmlLeafElement
     {
@@ -42,7 +42,7 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(86, "font")]
+        [SchemaAttr("w16se:font")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Font
@@ -61,7 +61,7 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(86, "char")]
+        [SchemaAttr("w16se:char")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public HexBinaryValue? Char
@@ -73,14 +73,14 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(86, "symEx");
+            builder.SetSchema("w16se:symEx");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<SymEx>()
-.AddAttribute(86, "font", a => a.Font, aBuilder =>
+.AddAttribute("w16se:font", a => a.Font, aBuilder =>
 {
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2016));
 })
-.AddAttribute(86, "char", a => a.Char, aBuilder =>
+.AddAttribute("w16se:char", a => a.Char, aBuilder =>
 {
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2016));
 aBuilder.AddValidator(new StringValidator() { Length = (4L) });

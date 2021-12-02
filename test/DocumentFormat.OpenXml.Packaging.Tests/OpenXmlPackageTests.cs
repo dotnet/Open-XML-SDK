@@ -10,6 +10,8 @@ using System.Linq;
 using System.Xml.Linq;
 using Xunit;
 
+using static DocumentFormat.OpenXml.Tests.TestAssets;
+
 using Text = DocumentFormat.OpenXml.Wordprocessing.Text;
 
 namespace DocumentFormat.OpenXml.Packaging.Tests
@@ -260,6 +262,44 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             var mediaDataPart = new MediaDataPart(ppt.InternalOpenXmlPackage, MediaDataPartType.Mp3);
             MediaReferenceRelationship mrr = slidePart.AddMediaReferenceRelationship(mediaDataPart, "rId4");
             Assert.Equal("rId4", mrr.Id);
+        }
+
+        // Regression test for issue #1069
+        // Opening a PowerPoint presentation with a 3d model graphic will fail if the Model3dReferenceRelationshipPart doesn't
+        //     accept both model/gltf-binary *and* model/gltf.binary MIME types. PowerPoint writes the latter.
+        [Fact]
+        public void TestOpenModel3DWrittenByPowerPoint_DotMime()
+        {
+            using var testFile = GetStream(TestFiles._3DTestDot, false);
+
+            using var presDoc = PresentationDocument.Open(testFile, false);
+
+            Assert.NotNull(presDoc);
+
+            // Check to see that the Model3DReferenceRelationshippart has content type 'model/gltf-binary'
+            SlidePart slidePart = presDoc.PresentationPart.GetPartsOfType<SlidePart>().FirstOrDefault();
+            IEnumerable<Model3DReferenceRelationshipPart> model3DReferenceRelationshipParts = slidePart.Model3DReferenceRelationshipParts;
+            Model3DReferenceRelationshipPart model3DReferenceRelationshipPart = model3DReferenceRelationshipParts.FirstOrDefault();
+
+            Assert.Equal("model/gltf-binary", model3DReferenceRelationshipPart.ContentType);
+        }
+
+        // Also test the acceptance of model/gltf-binary that the SDK writes.
+        [Fact]
+        public void TestOpenModel3DWrittenByPowerPoint_DashMime()
+        {
+            using var testFile = GetStream(TestFiles._3DTestDash, false);
+
+            using var presDoc = PresentationDocument.Open(testFile, false);
+
+            Assert.NotNull(presDoc);
+
+            // Check to see that the Model3DReferenceRelationshippart has content type 'model/gltf-binary'
+            SlidePart slidePart = presDoc.PresentationPart.GetPartsOfType<SlidePart>().FirstOrDefault();
+            IEnumerable<Model3DReferenceRelationshipPart> model3DReferenceRelationshipParts = slidePart.Model3DReferenceRelationshipParts;
+            Model3DReferenceRelationshipPart model3DReferenceRelationshipPart = model3DReferenceRelationshipParts.FirstOrDefault();
+
+            Assert.Equal("model/gltf-binary", model3DReferenceRelationshipPart.ContentType);
         }
     }
 }

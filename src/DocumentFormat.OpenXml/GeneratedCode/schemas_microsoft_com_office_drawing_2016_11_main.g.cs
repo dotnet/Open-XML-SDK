@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing
     /// <para>When the object is serialized out as xml, it's qualified name is a1611:picAttrSrcUrl.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(107, "picAttrSrcUrl")]
+    [SchemaAttr("a1611:picAttrSrcUrl")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PictureAttributionSourceURL : OpenXmlLeafElement
     {
@@ -41,7 +41,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "id")]
+        [SchemaAttr("r:id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -53,10 +53,10 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(107, "picAttrSrcUrl");
+            builder.SetSchema("a1611:picAttrSrcUrl");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<PictureAttributionSourceURL>()
-.AddAttribute(19, "id", a => a.Id, aBuilder =>
+.AddAttribute("r:id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });

@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Framework
         internal OpenXmlNamespace(byte nsId)
         {
             _prefix = GetNamespacePrefix(nsId);
-            _uri = GetNamespaceUri(nsId);
+            _uri = _namespaceResolver[nsId].Namespace;
         }
 
         public OpenXmlNamespace(string? nsUri, string? prefix = null)
@@ -32,8 +32,6 @@ namespace DocumentFormat.OpenXml.Framework
         public bool IsKnown => TryGetNamespaceId(Uri, out _);
 
         public bool IsEmpty => string.IsNullOrEmpty(Uri);
-
-        internal byte NsId => TryGetNamespaceId(Uri, out var id) ? id : throw new InvalidOperationException();
 
         public FileFormatVersions Version
             => _namespaceResolver.TryGetByNamespace(Uri, out var info) ? info.Version : FileFormatVersions.None;
@@ -99,8 +97,6 @@ namespace DocumentFormat.OpenXml.Framework
                 return false;
             }
         }
-
-        private static string GetNamespaceUri(byte namespaceId) => _namespaceResolver[namespaceId].Namespace;
 
         /// <summary>
         /// Gets the namespace URI for the specified namespace prefix.

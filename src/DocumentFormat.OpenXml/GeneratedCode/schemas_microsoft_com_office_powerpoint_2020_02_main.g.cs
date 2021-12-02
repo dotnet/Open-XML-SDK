@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(124, "designTagLst")]
+    [SchemaAttr("p202:designTagLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DesignerTagList : OpenXmlCompositeElement
     {
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(124, "designTagLst");
+            builder.SetSchema("p202:designTagLst");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTag>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -92,7 +92,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(124, "designPr")]
+    [SchemaAttr("p202:designPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DesignerDrawingProps : OpenXmlCompositeElement
     {
@@ -134,7 +134,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "edtDesignElem")]
+        [SchemaAttr("edtDesignElem")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? EdtDesignElem
@@ -146,12 +146,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(124, "designPr");
+            builder.SetSchema("p202:designPr");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList>();
             builder.AddElement<DesignerDrawingProps>()
-.AddAttribute(0, "edtDesignElem", a => a.EdtDesignElem);
+.AddAttribute("edtDesignElem", a => a.EdtDesignElem);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList), 0, 1, version: FileFormatVersions.Office2021),
@@ -195,7 +195,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
     /// <para>When the object is serialized out as xml, it's qualified name is p202:designTag.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(124, "designTag")]
+    [SchemaAttr("p202:designTag")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DesignerTag : OpenXmlLeafElement
     {
@@ -213,7 +213,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "name")]
+        [SchemaAttr("name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -229,7 +229,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "val")]
+        [SchemaAttr("val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Val
@@ -241,14 +241,14 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(124, "designTag");
+            builder.SetSchema("p202:designTag");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<DesignerTag>()
-.AddAttribute(0, "name", a => a.Name, aBuilder =>
+.AddAttribute("name", a => a.Name, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "val", a => a.Val, aBuilder =>
+.AddAttribute("val", a => a.Val, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -270,7 +270,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(124, "extLst")]
+    [SchemaAttr("p202:extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ExtensionList : OpenXmlCompositeElement
     {
@@ -308,7 +308,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(124, "extLst");
+            builder.SetSchema("p202:extLst");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)

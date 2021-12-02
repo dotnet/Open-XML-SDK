@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Office2021.OfficeExtLst
     /// <para>When the object is serialized out as xml, it's qualified name is oel:ext.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(122, "ext")]
+    [SchemaAttr("oel:ext")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Extension : OpenXmlCompositeElement
     {
@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml.Office2021.OfficeExtLst
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "uri")]
+        [SchemaAttr("uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uri
@@ -74,10 +74,10 @@ namespace DocumentFormat.OpenXml.Office2021.OfficeExtLst
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(122, "ext");
+            builder.SetSchema("oel:ext");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<Extension>()
-.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+.AddAttribute("uri", a => a.Uri, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });

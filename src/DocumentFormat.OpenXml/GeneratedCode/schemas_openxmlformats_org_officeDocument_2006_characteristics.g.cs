@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(8, "additionalCharacteristics")]
+    [SchemaAttr("ac:additionalCharacteristics")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AdditionalCharacteristicsInfo : OpenXmlPartRootElement
     {
@@ -64,7 +64,7 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(8, "additionalCharacteristics");
+            builder.SetSchema("ac:additionalCharacteristics");
             builder.AddChild<DocumentFormat.OpenXml.AdditionalCharacteristics.Characteristic>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -82,7 +82,7 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
     /// <para>When the object is serialized out as xml, it's qualified name is ac:characteristic.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(8, "characteristic")]
+    [SchemaAttr("ac:characteristic")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Characteristic : OpenXmlLeafElement
     {
@@ -100,7 +100,7 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "name")]
+        [SchemaAttr("name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -116,7 +116,7 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "relation")]
+        [SchemaAttr("relation")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues>? Relation
@@ -132,7 +132,7 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "val")]
+        [SchemaAttr("val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Val
@@ -148,7 +148,7 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "vocabulary")]
+        [SchemaAttr("vocabulary")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Vocabulary
@@ -160,21 +160,21 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(8, "characteristic");
+            builder.SetSchema("ac:characteristic");
             builder.AddElement<Characteristic>()
-.AddAttribute(0, "name", a => a.Name, aBuilder =>
+.AddAttribute("name", a => a.Name, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "relation", a => a.Relation, aBuilder =>
+.AddAttribute("relation", a => a.Relation, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "val", a => a.Val, aBuilder =>
+.AddAttribute("val", a => a.Val, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "vocabulary", a => a.Vocabulary, aBuilder =>
+.AddAttribute("vocabulary", a => a.Vocabulary, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });

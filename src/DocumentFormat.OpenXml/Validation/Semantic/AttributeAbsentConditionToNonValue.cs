@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
+
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     /// <summary>
@@ -8,11 +10,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// </summary>
     internal class AttributeAbsentConditionToNonValue : SemanticConstraint
     {
-        private readonly byte _absentAttribute;
-        private readonly byte _conditionAttribute;
+        private readonly OpenXmlQualifiedName _absentAttribute;
+        private readonly OpenXmlQualifiedName _conditionAttribute;
         private readonly string[] _values;
 
-        public AttributeAbsentConditionToNonValue(byte absentAttribute, byte conditionAttribute, params string[] values)
+        public AttributeAbsentConditionToNonValue(OpenXmlQualifiedName absentAttribute, OpenXmlQualifiedName conditionAttribute, params string[] values)
             : base(SemanticValidationLevel.Element)
         {
             _absentAttribute = absentAttribute;
@@ -29,14 +31,20 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            var attribute = element.ParsedState.Attributes[_absentAttribute];
-
-            if (attribute.Value is null)
+            if (!TryFindAttribute(element, _absentAttribute, out var absentAttribute))
             {
                 return null;
             }
 
-            var conditionAttribute = element.ParsedState.Attributes[_conditionAttribute];
+            if (absentAttribute.Value is null)
+            {
+                return null;
+            }
+
+            if (!TryFindAttribute(element, _conditionAttribute, out var conditionAttribute))
+            {
+                return null;
+            }
 
             if (conditionAttribute.Value is null)
             {
@@ -69,8 +77,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Node = element,
                 Description = SR.Format(
                     ValidationResources.Sem_AttributeAbsentConditionToNonValue,
-                    GetAttributeQualifiedName(element, _absentAttribute),
-                    GetAttributeQualifiedName(element, _conditionAttribute),
+                    absentAttribute.Property.QName,
+                    conditionAttribute.Property.QName,
                     valueString),
             };
         }

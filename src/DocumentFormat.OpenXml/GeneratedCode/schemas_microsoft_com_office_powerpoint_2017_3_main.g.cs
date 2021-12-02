@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(89, "tracksInfo")]
+    [SchemaAttr("p173:tracksInfo")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TracksInfo : OpenXmlCompositeElement
     {
@@ -70,7 +70,7 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "displayLoc")]
+        [SchemaAttr("displayLoc")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2019.Presentation.DisplayLocation>? DisplayLoc
@@ -82,11 +82,11 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(89, "tracksInfo");
+            builder.SetSchema("p173:tracksInfo");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Presentation.TrackList>();
             builder.AddElement<TracksInfo>()
-.AddAttribute(0, "displayLoc", a => a.DisplayLoc, aBuilder =>
+.AddAttribute("displayLoc", a => a.DisplayLoc, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -119,7 +119,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is p173:track.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(89, "track")]
+    [SchemaAttr("p173:track")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Track : OpenXmlLeafElement
     {
@@ -137,7 +137,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "id")]
+        [SchemaAttr("id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -153,7 +153,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "label")]
+        [SchemaAttr("label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Label
@@ -169,7 +169,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "lang")]
+        [SchemaAttr("lang")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Lang
@@ -188,7 +188,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "embed")]
+        [SchemaAttr("r:embed")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Embed
@@ -207,7 +207,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "link")]
+        [SchemaAttr("r:link")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Link
@@ -219,21 +219,21 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(89, "track");
+            builder.SetSchema("p173:track");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<Track>()
-.AddAttribute(0, "id", a => a.Id, aBuilder =>
+.AddAttribute("id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "label", a => a.Label, aBuilder =>
+.AddAttribute("label", a => a.Label, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "lang", a => a.Lang)
-.AddAttribute(19, "embed", a => a.Embed)
-.AddAttribute(19, "link", a => a.Link);
+.AddAttribute("lang", a => a.Lang)
+.AddAttribute("r:embed", a => a.Embed)
+.AddAttribute("r:link", a => a.Link);
         }
 
         /// <inheritdoc/>
@@ -252,7 +252,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(89, "trackLst")]
+    [SchemaAttr("p173:trackLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TrackList : OpenXmlCompositeElement
     {
@@ -290,7 +290,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(89, "trackLst");
+            builder.SetSchema("p173:trackLst");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Presentation.Track>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)

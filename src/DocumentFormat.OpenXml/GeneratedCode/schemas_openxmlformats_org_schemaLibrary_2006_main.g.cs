@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(25, "schemaLibrary")]
+    [SchemaAttr("sl:schemaLibrary")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SchemaLibrary : OpenXmlCompositeElement
     {
@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(25, "schemaLibrary");
+            builder.SetSchema("sl:schemaLibrary");
             builder.AddChild<DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -83,7 +83,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
     /// <para>When the object is serialized out as xml, it's qualified name is sl:schema.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(25, "schema")]
+    [SchemaAttr("sl:schema")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Schema : OpenXmlLeafElement
     {
@@ -104,7 +104,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(25, "uri")]
+        [SchemaAttr("sl:uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Uri
@@ -123,7 +123,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(25, "manifestLocation")]
+        [SchemaAttr("sl:manifestLocation")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ManifestLocation
@@ -142,7 +142,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(25, "schemaLocation")]
+        [SchemaAttr("sl:schemaLocation")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? SchemaLocation
@@ -154,14 +154,14 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(25, "schema");
+            builder.SetSchema("sl:schema");
             builder.AddElement<Schema>()
-.AddAttribute(25, "uri", a => a.Uri)
-.AddAttribute(25, "manifestLocation", a => a.ManifestLocation)
-.AddAttribute(25, "schemaLocation", a => a.SchemaLocation);
-            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*sl:manifestLocation*/, 0, 2083) { Application = ApplicationType.Word });
-            builder.AddConstraint(new AttributeValueLengthConstraint(2 /*sl:schemaLocation*/, 0, 2083) { Application = ApplicationType.Word });
-            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*sl:uri*/, 0, 255) { Application = ApplicationType.Word });
+.AddAttribute("sl:uri", a => a.Uri)
+.AddAttribute("sl:manifestLocation", a => a.ManifestLocation)
+.AddAttribute("sl:schemaLocation", a => a.SchemaLocation);
+            builder.AddConstraint(new AttributeValueLengthConstraint("sl:manifestLocation", 0, 2083) { Application = ApplicationType.Word });
+            builder.AddConstraint(new AttributeValueLengthConstraint("sl:schemaLocation", 0, 2083) { Application = ApplicationType.Word });
+            builder.AddConstraint(new AttributeValueLengthConstraint("sl:uri", 0, 255) { Application = ApplicationType.Word });
         }
 
         /// <inheritdoc/>

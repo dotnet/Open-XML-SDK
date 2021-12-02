@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(62, "slicer")]
+    [SchemaAttr("sle:slicer")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Slicer : OpenXmlCompositeElement
     {
@@ -70,7 +70,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "name")]
+        [SchemaAttr("name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -82,11 +82,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(62, "slicer");
+            builder.SetSchema("sle:slicer");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Slicer.OfficeArtExtensionList>();
             builder.AddElement<Slicer>()
-.AddAttribute(0, "name", a => a.Name, aBuilder =>
+.AddAttribute("name", a => a.Name, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -125,7 +125,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(62, "extLst")]
+    [SchemaAttr("sle:extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
@@ -163,7 +163,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(62, "extLst");
+            builder.SetSchema("sle:extLst");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)

@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.DocumentClassification
     /// <para>When the object is serialized out as xml, it's qualified name is aclsh:classification.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(119, "classification")]
+    [SchemaAttr("aclsh:classification")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ClassificationOutcome : OpenXmlLeafElement
     {
@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.DocumentClassification
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "classificationOutcomeType")]
+        [SchemaAttr("classificationOutcomeType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office2021.Drawing.DocumentClassification.ClassificationOutcomeType>? ClassificationOutcomeType
@@ -51,10 +51,10 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.DocumentClassification
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(119, "classification");
+            builder.SetSchema("aclsh:classification");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<ClassificationOutcome>()
-.AddAttribute(0, "classificationOutcomeType", a => a.ClassificationOutcomeType, aBuilder =>
+.AddAttribute("classificationOutcomeType", a => a.ClassificationOutcomeType, aBuilder =>
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });

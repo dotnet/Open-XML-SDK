@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(35, "ocx")]
+    [SchemaAttr("ax:ocx")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ActiveXControlData : OpenXmlCompositeElement
     {
@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(35, "classid")]
+        [SchemaAttr("ax:classid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? ActiveXControlClassId
@@ -90,7 +90,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(35, "license")]
+        [SchemaAttr("ax:license")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? License
@@ -109,7 +109,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "id")]
+        [SchemaAttr("r:id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -128,7 +128,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(35, "persistence")]
+        [SchemaAttr("ax:persistence")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>? Persistence
@@ -140,16 +140,16 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(35, "ocx");
+            builder.SetSchema("ax:ocx");
             builder.AddChild<DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty>();
             builder.AddElement<ActiveXControlData>()
-.AddAttribute(35, "classid", a => a.ActiveXControlClassId, aBuilder =>
+.AddAttribute("ax:classid", a => a.ActiveXControlClassId, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(35, "license", a => a.License)
-.AddAttribute(19, "id", a => a.Id)
-.AddAttribute(35, "persistence", a => a.Persistence, aBuilder =>
+.AddAttribute("ax:license", a => a.License)
+.AddAttribute("r:id", a => a.Id)
+.AddAttribute("ax:persistence", a => a.Persistence, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -176,7 +176,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(35, "ocxPr")]
+    [SchemaAttr("ax:ocxPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ActiveXObjectProperty : OpenXmlCompositeElement
     {
@@ -221,7 +221,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(35, "name")]
+        [SchemaAttr("ax:name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -240,7 +240,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(35, "value")]
+        [SchemaAttr("ax:value")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Value
@@ -252,15 +252,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(35, "ocxPr");
+            builder.SetSchema("ax:ocxPr");
             builder.AddChild<DocumentFormat.OpenXml.Office.ActiveX.SharedComFont>();
             builder.AddChild<DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture>();
             builder.AddElement<ActiveXObjectProperty>()
-.AddAttribute(35, "name", a => a.Name, aBuilder =>
+.AddAttribute("ax:name", a => a.Name, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(35, "value", a => a.Value);
+.AddAttribute("ax:value", a => a.Value);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -313,7 +313,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(35, "font")]
+    [SchemaAttr("ax:font")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SharedComFont : OpenXmlCompositeElement
     {
@@ -358,7 +358,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(35, "persistence")]
+        [SchemaAttr("ax:persistence")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>? Persistence
@@ -377,7 +377,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "id")]
+        [SchemaAttr("r:id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -389,11 +389,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(35, "font");
+            builder.SetSchema("ax:font");
             builder.AddChild<DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty>();
             builder.AddElement<SharedComFont>()
-.AddAttribute(35, "persistence", a => a.Persistence)
-.AddAttribute(19, "id", a => a.Id);
+.AddAttribute("ax:persistence", a => a.Persistence)
+.AddAttribute("r:id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty), 0, 0)
@@ -410,7 +410,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is ax:picture.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(35, "picture")]
+    [SchemaAttr("ax:picture")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SharedComPicture : OpenXmlLeafElement
     {
@@ -431,7 +431,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(19, "id")]
+        [SchemaAttr("r:id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Id
@@ -443,9 +443,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(35, "picture");
+            builder.SetSchema("ax:picture");
             builder.AddElement<SharedComPicture>()
-.AddAttribute(19, "id", a => a.Id);
+.AddAttribute("r:id", a => a.Id);
         }
 
         /// <inheritdoc/>

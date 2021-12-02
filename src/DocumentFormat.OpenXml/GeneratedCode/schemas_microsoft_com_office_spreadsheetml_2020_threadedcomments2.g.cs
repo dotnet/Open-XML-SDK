@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
     /// <para>When the object is serialized out as xml, it's qualified name is xltc2:checksum.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(131, "checksum")]
+    [SchemaAttr("xltc2:checksum")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class XsdunsignedInt : OpenXmlLeafTextElement
     {
@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<UInt32Value>(NumberValidator.Instance);
-            builder.SetSchema(131, "checksum");
+            builder.SetSchema("xltc2:checksum");
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(131, "hyperlink")]
+    [SchemaAttr("xltc2:hyperlink")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentHyperlink : OpenXmlCompositeElement
     {
@@ -111,7 +111,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "startIndex")]
+        [SchemaAttr("startIndex")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? StartIndex
@@ -127,7 +127,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "length")]
+        [SchemaAttr("length")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public UInt32Value? Length
@@ -143,7 +143,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "url")]
+        [SchemaAttr("url")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Url
@@ -155,19 +155,19 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(131, "hyperlink");
+            builder.SetSchema("xltc2:hyperlink");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList>();
             builder.AddElement<CommentHyperlink>()
-.AddAttribute(0, "startIndex", a => a.StartIndex, aBuilder =>
+.AddAttribute("startIndex", a => a.StartIndex, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "length", a => a.Length, aBuilder =>
+.AddAttribute("length", a => a.Length, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "url", a => a.Url, aBuilder =>
+.AddAttribute("url", a => a.Url, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
@@ -206,7 +206,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(131, "extLst")]
+    [SchemaAttr("xltc2:extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ExtensionList : OpenXmlCompositeElement
     {
@@ -244,7 +244,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(131, "extLst");
+            builder.SetSchema("xltc2:extLst");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)

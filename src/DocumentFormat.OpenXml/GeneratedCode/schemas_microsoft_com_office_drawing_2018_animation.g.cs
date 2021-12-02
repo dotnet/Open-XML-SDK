@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(113, "animPr")]
+    [SchemaAttr("aanim:animPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AnimationProperties : OpenXmlCompositeElement
     {
@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "name")]
+        [SchemaAttr("name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Name
@@ -85,7 +85,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "length")]
+        [SchemaAttr("length")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Length
@@ -101,7 +101,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "count")]
+        [SchemaAttr("count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Count
@@ -117,7 +117,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "auto")]
+        [SchemaAttr("auto")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Auto
@@ -133,7 +133,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "offset")]
+        [SchemaAttr("offset")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? Offset
@@ -149,7 +149,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "st")]
+        [SchemaAttr("st")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? St
@@ -165,7 +165,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "end")]
+        [SchemaAttr("end")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public StringValue? End
@@ -177,16 +177,16 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(113, "animPr");
+            builder.SetSchema("aanim:animPr");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList>();
             builder.AddElement<AnimationProperties>()
-.AddAttribute(0, "name", a => a.Name)
-.AddAttribute(0, "length", a => a.Length, aBuilder =>
+.AddAttribute("name", a => a.Name)
+.AddAttribute("length", a => a.Length, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
-.AddAttribute(0, "count", a => a.Count, aBuilder =>
+.AddAttribute("count", a => a.Count, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
@@ -194,10 +194,10 @@ union.AddValidator<UInt32Value>(NumberValidator.Instance);
 union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Indefinite>>(EnumValidator.Instance);
 });
 })
-.AddAttribute(0, "auto", a => a.Auto)
-.AddAttribute(0, "offset", a => a.Offset)
-.AddAttribute(0, "st", a => a.St)
-.AddAttribute(0, "end", a => a.End);
+.AddAttribute("auto", a => a.Auto)
+.AddAttribute("offset", a => a.Offset)
+.AddAttribute("st", a => a.St)
+.AddAttribute("end", a => a.End);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2019)
@@ -233,7 +233,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Animation
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(113, "extLst")]
+    [SchemaAttr("aanim:extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
@@ -271,7 +271,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Animation
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(113, "extLst");
+            builder.SetSchema("aanim:extLst");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
