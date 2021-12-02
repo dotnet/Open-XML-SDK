@@ -16,6 +16,7 @@ using System.CodeDom.Compiler;
 using System.Text;
 using Svg;
 using System.Drawing.Imaging;
+using Common;
 
 namespace SVGExample
 {
@@ -25,37 +26,12 @@ namespace SVGExample
         {
             if (args.Length < 2)
             {
-                _showHelp();
+                Utilities.ShowHelp(new string[] { "SVGExample: ", "Usage: SVGExample <filename> <svg>", "Where: <filename> is the path to the file in which to add the svg.", "Where: <svg> is the path to the svg file to add." });
             }
-            else if (_checkIfFilesExist(args))
+            else if (Utilities.CheckIfFilesExist(args))
             {
                 AddSvg(args[0], args[1]);
             }
-        }
-
-        private static void _showHelp()
-        {
-            Console.WriteLine("SVGExample: ");
-            Console.WriteLine("Usage: SVGExample <filename> <svg>");
-            Console.WriteLine("Where: <filename> is the path to the file in which to add the svg.");
-            Console.WriteLine("Where: <svg> is the path to the svg file to add.");
-            Console.WriteLine();
-        }
-
-        private static bool _checkIfFilesExist(string[] files)
-        {
-            bool exist = true;
-
-            foreach (string file in files)
-            {
-                if (!File.Exists(file))
-                {
-                    Console.Error.WriteLine($"file not found: {file}");
-                    exist = false;
-                }
-            }
-
-            return exist;
         }
 
         public static void AddSvg(string docPath, string svgPath)

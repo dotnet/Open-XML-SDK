@@ -1,13 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
-    <SignAssembly>false</SignAssembly>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="DocumentFormat.OpenXml" Version="2.14.0-beta0001" />
-  </ItemGroup>
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFrameworks>$(SamplesFrameworks)</TargetFrameworks>
+	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\src\DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj" />
+		<ProjectReference Include="..\Utilities\Utilities.csproj" />
+	</ItemGroup>
 
 </Project>
