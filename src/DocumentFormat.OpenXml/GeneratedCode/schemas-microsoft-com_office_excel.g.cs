@@ -290,8 +290,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptLocation), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaTextBox), 1, 1)
             };
-            builder.AddConstraint(new AttributeValueSetConstraint(":ObjectType", false, new string[] { "Movie" }) { Application = ApplicationType.Excel });
-            builder.AddConstraint(new AttributeValueSetConstraint(":ObjectType", false, new string[] { "LineA", "RectA" }) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueSetConstraint("xvml:ObjectType", false, new string[] { "Movie" }) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueSetConstraint("x:ObjectType", false, new string[] { "LineA", "RectA" }) { Application = ApplicationType.Excel });
         }
 
         /// <inheritdoc/>

@@ -93,10 +93,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 {
                     if (element.QName.Equals(key.constraint._element))
                     {
-                        var attribute = element.ParsedState.Attributes[key.constraint._attribute];
-
                         // Attributes whose value is empty string or null don't need to be cached.
-                        if (attribute.Value is not null && !attribute.Value.InnerText.IsNullOrEmpty())
+                        if (TryFindAttribute(element, key.constraint._attribute, out var attribute) && attribute.Value is not null && !attribute.Value.InnerText.IsNullOrEmpty())
                         {
                             referencedAttributes.Add(attribute.Value.InnerText);
                         }
