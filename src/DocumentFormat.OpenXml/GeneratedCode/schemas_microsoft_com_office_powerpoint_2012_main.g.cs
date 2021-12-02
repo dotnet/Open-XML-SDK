@@ -160,8 +160,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(":providerId", 1, 100) { Application = ApplicationType.PowerPoint, Version = FileFormatVersions.Office2013 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(":userId", 1, 300) { Application = ApplicationType.PowerPoint, Version = FileFormatVersions.Office2013 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("p15:providerId", 1, 100) { Application = ApplicationType.PowerPoint, Version = FileFormatVersions.Office2013 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("p15:userId", 1, 300) { Application = ApplicationType.PowerPoint, Version = FileFormatVersions.Office2013 });
         }
 
         /// <inheritdoc/>

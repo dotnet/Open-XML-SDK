@@ -310,7 +310,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0, 1)
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":id", true, "a:graphicData"));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("pic:id", true, "a:graphicData"));
         }
 
         /// <summary>
