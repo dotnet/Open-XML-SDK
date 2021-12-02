@@ -535,7 +535,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody), 0, 1)
             };
-            builder.AddConstraint(new AttributeValueLengthConstraint(":macro", 0, 256));
+            builder.AddConstraint(new AttributeValueLengthConstraint("xdr:macro", 0, 256));
         }
 
         /// <summary>
@@ -803,7 +803,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Transform), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Graphic), 1, 1)
             };
-            builder.AddConstraint(new AttributeValueLengthConstraint(":macro", 0, 256));
+            builder.AddConstraint(new AttributeValueLengthConstraint("xdr:macro", 0, 256));
         }
 
         /// <summary>
@@ -946,7 +946,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle), 0, 1)
             };
-            builder.AddConstraint(new AttributeValueLengthConstraint(":macro", 0, 256));
+            builder.AddConstraint(new AttributeValueLengthConstraint("xdr:macro", 0, 256));
         }
 
         /// <summary>
@@ -3187,7 +3187,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0, 1)
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":id", true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("xdr:id", true, null));
         }
 
         /// <summary>

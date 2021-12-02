@@ -2384,7 +2384,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:idx");
-            builder.AddConstraint(new AttributeValueRangeConstraint(":val", true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint("c:val", true, double.NegativeInfinity, true, 2147483647, true));
         }
 
         /// <inheritdoc/>
@@ -2412,7 +2412,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:order");
-            builder.AddConstraint(new AttributeValueRangeConstraint(":val", true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint("c:val", true, double.NegativeInfinity, true, 2147483647, true));
         }
 
         /// <inheritdoc/>
@@ -2440,7 +2440,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:axId");
-            builder.AddConstraint(new AttributeValueRangeConstraint(":val", true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint("c:val", true, double.NegativeInfinity, true, 2147483647, true));
         }
 
         /// <inheritdoc/>
@@ -2468,7 +2468,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:crossAx");
-            builder.AddConstraint(new AttributeValueRangeConstraint(":val", true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint("c:val", true, double.NegativeInfinity, true, 2147483647, true));
         }
 
         /// <inheritdoc/>
@@ -2496,7 +2496,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ptCount");
-            builder.AddConstraint(new AttributeValueRangeConstraint(":val", true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint("c:val", true, double.NegativeInfinity, true, 2147483647, true));
         }
 
         /// <inheritdoc/>
@@ -2524,7 +2524,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:secondPiePt");
-            builder.AddConstraint(new AttributeValueRangeConstraint(":val", true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint("c:val", true, double.NegativeInfinity, true, 2147483647, true));
         }
 
         /// <inheritdoc/>
@@ -2552,7 +2552,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:explosion");
-            builder.AddConstraint(new AttributeValueRangeConstraint(":val", true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint("c:val", true, double.NegativeInfinity, true, 2147483647, true));
         }
 
         /// <inheritdoc/>
@@ -2580,7 +2580,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:fmtId");
-            builder.AddConstraint(new AttributeValueRangeConstraint(":val", true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint("c:val", true, double.NegativeInfinity, true, 2147483647, true));
         }
 
         /// <inheritdoc/>
@@ -4513,7 +4513,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:crossesAt");
-            builder.AddConstraint(new AttributeValueSetConstraint(":val", false, new string[] { "INF", "-INF", "NaN" }));
+            builder.AddConstraint(new AttributeValueSetConstraint("c:val", false, new string[] { "INF", "-INF", "NaN" }));
         }
 
         /// <inheritdoc/>
@@ -4649,8 +4649,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:forward");
-            builder.AddConstraint(new AttributeValueSetConstraint(":val", false, new string[] { "INF", "-INF", "NaN" }));
-            builder.AddConstraint(new AttributeValueRangeConstraint(":val", true, 0, true, double.PositiveInfinity, true));
+            builder.AddConstraint(new AttributeValueSetConstraint("c:val", false, new string[] { "INF", "-INF", "NaN" }));
+            builder.AddConstraint(new AttributeValueRangeConstraint("c:val", true, 0, true, double.PositiveInfinity, true));
         }
 
         /// <inheritdoc/>
@@ -4678,7 +4678,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:backward");
-            builder.AddConstraint(new AttributeValueRangeConstraint(":val", true, 0, true, double.PositiveInfinity, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint("c:val", true, 0, true, double.PositiveInfinity, true));
         }
 
         /// <inheritdoc/>
@@ -4760,7 +4760,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:splitPos");
-            builder.AddConstraint(new AttributeValueSetConstraint(":val", false, new string[] { "INF", "-INF", "NaN" }));
+            builder.AddConstraint(new AttributeValueSetConstraint("c:val", false, new string[] { "INF", "-INF", "NaN" }));
         }
 
         /// <inheritdoc/>
@@ -4788,7 +4788,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:custUnit");
-            builder.AddConstraint(new AttributeValueSetConstraint(":val", false, new string[] { "INF", "-INF", "NaN" }));
+            builder.AddConstraint(new AttributeValueSetConstraint("c:val", false, new string[] { "INF", "-INF", "NaN" }));
         }
 
         /// <inheritdoc/>
@@ -5825,8 +5825,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumericValue), 1, 1)
             };
-            builder.AddConstraint(new AttributeValueRangeConstraint(":idx", true, double.NegativeInfinity, true, 2147483647, true));
-            builder.AddConstraint(new AttributeValueRangeConstraint(":idx", true, 0, true, 2147483647, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint("c:idx", true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint("c:idx", true, 0, true, 2147483647, true));
         }
 
         /// <summary>
@@ -7802,7 +7802,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
   aBuilder.AddValidator(RequiredValidator.Instance);
   aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive = (6L) });
 });
-            builder.AddConstraint(new AttributeValueRangeConstraint(":val", true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint("c:val", true, double.NegativeInfinity, true, 2147483647, true));
         }
 
         /// <inheritdoc/>
@@ -10129,12 +10129,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.AddConstraint(new AttributeValueRangeConstraint(":b", true, 0, true, 49, false));
-            builder.AddConstraint(new AttributeValueRangeConstraint(":footer", true, 0, true, 49, false));
-            builder.AddConstraint(new AttributeValueRangeConstraint(":header", true, 0, true, 49, false));
-            builder.AddConstraint(new AttributeValueRangeConstraint(":l", true, 0, true, 49, false));
-            builder.AddConstraint(new AttributeValueRangeConstraint(":r", true, 0, true, 49, false));
-            builder.AddConstraint(new AttributeValueRangeConstraint(":t", true, 0, true, 49, false));
+            builder.AddConstraint(new AttributeValueRangeConstraint("c:b", true, 0, true, 49, false));
+            builder.AddConstraint(new AttributeValueRangeConstraint("c:footer", true, 0, true, 49, false));
+            builder.AddConstraint(new AttributeValueRangeConstraint("c:header", true, 0, true, 49, false));
+            builder.AddConstraint(new AttributeValueRangeConstraint("c:l", true, 0, true, 49, false));
+            builder.AddConstraint(new AttributeValueRangeConstraint("c:r", true, 0, true, 49, false));
+            builder.AddConstraint(new AttributeValueRangeConstraint("c:t", true, 0, true, 49, false));
         }
 
         /// <inheritdoc/>
@@ -10316,8 +10316,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute("horizontalDpi", a => a.HorizontalDpi)
 .AddAttribute("verticalDpi", a => a.VerticalDpi)
 .AddAttribute("copies", a => a.Copies);
-            builder.AddConstraint(new AttributeValueRangeConstraint(":copies", true, double.NegativeInfinity, true, 2147483647, true));
-            builder.AddConstraint(new AttributeValueRangeConstraint(":paperSize", true, double.NegativeInfinity, true, 2147483647, true) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueRangeConstraint("c:copies", true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint("c:paperSize", true, double.NegativeInfinity, true, 2147483647, true) { Application = ApplicationType.Excel });
         }
 
         /// <inheritdoc/>
@@ -13939,8 +13939,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumericValue), 1, 1)
             };
-            builder.AddConstraint(new AttributeValueRangeConstraint(":idx", true, double.NegativeInfinity, true, 2147483647, true));
-            builder.AddConstraint(new AttributeValueRangeConstraint(":idx", true, 0, true, 2147483647, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint("c:idx", true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint("c:idx", true, 0, true, 2147483647, true));
         }
 
         /// <summary>
