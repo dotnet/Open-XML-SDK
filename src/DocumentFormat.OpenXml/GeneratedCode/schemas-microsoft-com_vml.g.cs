@@ -309,7 +309,7 @@ namespace DocumentFormat.OpenXml.Vml
 .AddAttribute("o:connectlocs", a => a.ConnectionPoints)
 .AddAttribute("o:connectangles", a => a.ConnectAngles)
 .AddAttribute("o:extrusionok", a => a.AllowExtrusion);
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":id", true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("v:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -958,11 +958,11 @@ namespace DocumentFormat.OpenXml.Vml
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties), 0, 1)
             };
             builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"));
-            builder.AddConstraint(new AttributeValuePatternConstraint(":focus", @"-?(\d{1,2}|100)%"));
+            builder.AddConstraint(new AttributeValuePatternConstraint("v:focus", @"-?(\d{1,2}|100)%"));
             builder.AddConstraint(new UniqueAttributeValueConstraint(":id", false, null));
-            builder.AddConstraint(new AttributeValueRangeConstraint(":angle", true, -32767, true, 32767, true));
-            builder.AddConstraint(new AttributeValueRangeConstraint(":origin", true, -32767, true, 32767, true));
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:title", false, new string[] { "slashes", "colons" }));
+            builder.AddConstraint(new AttributeValueRangeConstraint("v:angle", true, -32767, true, 32767, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint("v:origin", true, -32767, true, 32767, true));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:title", false, new string[] { "slashes", "colons" }));
             builder.AddConstraint(new RelationshipExistConstraint("r:id"));
         }
 
@@ -1545,8 +1545,8 @@ namespace DocumentFormat.OpenXml.Vml
             };
             builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"));
             builder.AddConstraint(new UniqueAttributeValueConstraint(":id", false, null));
-            builder.AddConstraint(new AttributeValueRangeConstraint(":miterlimit", true, double.NegativeInfinity, true, 32767, true));
-            builder.AddConstraint(new AttributeValueRangeConstraint(":weight", true, 0, true, 20116800, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint("v:miterlimit", true, double.NegativeInfinity, true, 32767, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint("v:weight", true, 0, true, 20116800, true));
             builder.AddConstraint(new RelationshipExistConstraint("r:id"));
         }
 
@@ -1828,7 +1828,7 @@ namespace DocumentFormat.OpenXml.Vml
 .AddAttribute("offset2", a => a.Offset2)
 .AddAttribute("origin", a => a.Origin)
 .AddAttribute("matrix", a => a.Matrix);
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":id", true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("v:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -1964,7 +1964,7 @@ namespace DocumentFormat.OpenXml.Vml
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent), 0, 1),
                 new AnyParticle(XsdAny.Local, 1, 1)
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":id", true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("v:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -2129,7 +2129,7 @@ namespace DocumentFormat.OpenXml.Vml
 .AddAttribute("trim", a => a.Trim)
 .AddAttribute("xscale", a => a.XScale)
 .AddAttribute("string", a => a.String);
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":id", true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("v:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -2499,12 +2499,12 @@ namespace DocumentFormat.OpenXml.Vml
 .AddAttribute("r:id", a => a.RelationshipId)
 .AddAttribute("r:pict", a => a.Picture)
 .AddAttribute("r:href", a => a.RelHref);
-            builder.AddConstraint(new RelationshipTypeConstraint("r:href", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"));
+            builder.AddConstraint(new RelationshipTypeConstraint("v:href", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"));
             builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"));
-            builder.AddConstraint(new RelationshipTypeConstraint("r:pict", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"));
-            builder.AddConstraint(new RelationshipTypeConstraint("ovml:relid", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"));
+            builder.AddConstraint(new RelationshipTypeConstraint("v:pict", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"));
+            builder.AddConstraint(new RelationshipTypeConstraint("v:relid", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"));
             builder.AddConstraint(new UniqueAttributeValueConstraint(":id", false, null));
-            builder.AddConstraint(new AttributeValueRangeConstraint(":blacklevel", true, -0.5, true, 0.5, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint("v:blacklevel", true, -0.5, true, 0.5, true));
             builder.AddConstraint(new RelationshipExistConstraint("r:id"));
             builder.AddConstraint(new RelationshipExistConstraint("r:href"));
         }
@@ -3708,9 +3708,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Ink), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag), 1, 1)
             };
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:dgmlayout", true, new string[] { "0", "1", "2", "3" }));
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:dgmlayoutmru", true, new string[] { "0", "1", "2", "3" }));
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":id", true, null));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:dgmlayout", true, new string[] { "0", "1", "2", "3" }));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:dgmlayoutmru", true, new string[] { "0", "1", "2", "3" }));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("v:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -4875,9 +4875,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Complex), 0, 1)
             };
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:dgmlayout", true, new string[] { "0", "1", "2", "3" }));
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:dgmlayoutmru", true, new string[] { "0", "1", "2", "3" }));
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":id", true, null));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:dgmlayout", true, new string[] { "0", "1", "2", "3" }));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:dgmlayoutmru", true, new string[] { "0", "1", "2", "3" }));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("v:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -5633,10 +5633,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1)
             };
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:tableproperties", true, new string[] { "1", "2", "3" }));
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:dgmlayout", true, new string[] { "0", "1", "2", "3" }));
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:dgmlayoutmru", true, new string[] { "0", "1", "2", "3" }));
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":id", true, null));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:tableproperties", true, new string[] { "1", "2", "3" }));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:dgmlayout", true, new string[] { "0", "1", "2", "3" }));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:dgmlayoutmru", true, new string[] { "0", "1", "2", "3" }));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("v:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -5834,7 +5834,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 0, 1)
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":id", true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("v:id", true, null));
         }
 
         /// <summary>
@@ -6995,12 +6995,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
                     }
                 }
             };
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:dgmlayout", true, new string[] { "0", "1", "2", "3" }));
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:dgmlayoutmru", true, new string[] { "0", "1", "2", "3" }));
-            builder.AddConstraint(new AttributeValueRangeConstraint("ovml:hrpct", true, 0, true, 1000, true));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:dgmlayout", true, new string[] { "0", "1", "2", "3" }));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:dgmlayoutmru", true, new string[] { "0", "1", "2", "3" }));
+            builder.AddConstraint(new AttributeValueRangeConstraint("v:hrpct", true, 0, true, 1000, true));
             builder.AddConstraint(new AttributeValueRangeConstraint("ovml:dgmnodekind", true, 0, true, 6, true));
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:spt", true, new string[] { "19" }));
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":id", true, null));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:spt", true, new string[] { "19" }));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("v:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -8196,10 +8196,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
                     }
                 }
             };
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:dgmlayout", true, new string[] { "0", "1", "2", "3" }));
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:dgmlayoutmru", true, new string[] { "0", "1", "2", "3" }));
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:spt", true, new string[] { "0" }));
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":id", true, null));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:dgmlayout", true, new string[] { "0", "1", "2", "3" }));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:dgmlayoutmru", true, new string[] { "0", "1", "2", "3" }));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:spt", true, new string[] { "0" }));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("v:id", true, null));
         }
 
         /// <inheritdoc/>
@@ -9480,10 +9480,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
                     }
                 }
             };
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:dgmlayout", true, new string[] { "0", "1", "2", "3" }));
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:dgmlayoutmru", true, new string[] { "0", "1", "2", "3" }));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:dgmlayout", true, new string[] { "0", "1", "2", "3" }));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:dgmlayoutmru", true, new string[] { "0", "1", "2", "3" }));
             builder.AddConstraint(new UniqueAttributeValueConstraint(":id", true, null));
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:spt", true, new string[] { "75" }));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:spt", true, new string[] { "75" }));
         }
 
         /// <inheritdoc/>
@@ -10645,8 +10645,8 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
                     }
                 }
             };
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:dgmlayout", true, new string[] { "0", "1", "2", "3" }));
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:spt", true, new string[] { "20" }));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:dgmlayout", true, new string[] { "0", "1", "2", "3" }));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:spt", true, new string[] { "20" }));
         }
 
         /// <inheritdoc/>
@@ -11774,10 +11774,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
                     }
                 }
             };
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:dgmlayout", true, new string[] { "0", "1", "2", "3" }));
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:dgmlayoutmru", true, new string[] { "0", "1", "2", "3" }));
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":id", true, null));
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:spt", true, new string[] { "3" }));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:dgmlayout", true, new string[] { "0", "1", "2", "3" }));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:dgmlayoutmru", true, new string[] { "0", "1", "2", "3" }));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("v:id", true, null));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:spt", true, new string[] { "3" }));
         }
 
         /// <inheritdoc/>
@@ -12925,9 +12925,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Ink), 1, 1)
             };
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:dgmlayout", true, new string[] { "0", "1", "2", "3" }));
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:dgmlayoutmru", true, new string[] { "0", "1", "2", "3" }));
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:spt", true, new string[] { "0" }));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:dgmlayout", true, new string[] { "0", "1", "2", "3" }));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:dgmlayoutmru", true, new string[] { "0", "1", "2", "3" }));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:spt", true, new string[] { "0" }));
         }
 
         /// <inheritdoc/>
@@ -14055,10 +14055,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
                     }
                 }
             };
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:dgmlayout", true, new string[] { "0", "1", "2", "3" }));
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:dgmlayoutmru", true, new string[] { "0", "1", "2", "3" }));
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":id", true, null));
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:spt", true, new string[] { "1" }));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:dgmlayout", true, new string[] { "0", "1", "2", "3" }));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:dgmlayoutmru", true, new string[] { "0", "1", "2", "3" }));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("v:id", true, null));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:spt", true, new string[] { "1" }));
         }
 
         /// <inheritdoc/>
@@ -15186,10 +15186,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
                     }
                 }
             };
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:dgmlayout", true, new string[] { "0", "1", "2", "3" }));
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:dgmlayoutmru", true, new string[] { "0", "1", "2", "3" }));
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":id", true, null));
-            builder.AddConstraint(new AttributeValueSetConstraint("ovml:spt", true, new string[] { "2" }));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:dgmlayout", true, new string[] { "0", "1", "2", "3" }));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:dgmlayoutmru", true, new string[] { "0", "1", "2", "3" }));
+            builder.AddConstraint(new UniqueAttributeValueConstraint("v:id", true, null));
+            builder.AddConstraint(new AttributeValueSetConstraint("v:spt", true, new string[] { "2" }));
         }
 
         /// <inheritdoc/>

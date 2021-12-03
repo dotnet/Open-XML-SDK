@@ -2866,8 +2866,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddElement<MediaBookmark>()
 .AddAttribute("name", a => a.Name)
 .AddAttribute("time", a => a.Time);
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", true, "p14:bmkLst") { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":time", true, "p14:bmkLst") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint("p14:name", true, "p14:bmkLst") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint("p14:time", true, "p14:bmkLst") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>

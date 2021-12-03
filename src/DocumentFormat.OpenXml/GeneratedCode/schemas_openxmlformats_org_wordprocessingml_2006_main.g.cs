@@ -12882,8 +12882,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:bottom");
-            builder.AddConstraint(new AttributeCannotOmitConstraint("w:type") { Application = ApplicationType.Word });
-            builder.AddConstraint(new AttributeCannotOmitConstraint("w:w") { Application = ApplicationType.Word });
+            builder.AddConstraint(new AttributeCannotOmitConstraint("@w:type") { Application = ApplicationType.Word });
+            builder.AddConstraint(new AttributeCannotOmitConstraint("@w:w") { Application = ApplicationType.Word });
         }
 
         /// <inheritdoc/>
@@ -23159,7 +23159,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:subDoc");
-            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/subDocument"));
+            builder.AddConstraint(new RelationshipTypeConstraint("w:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/subDocument"));
         }
 
         /// <inheritdoc/>
@@ -23187,7 +23187,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:printerSettings");
-            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings"));
+            builder.AddConstraint(new RelationshipTypeConstraint("w:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings"));
         }
 
         /// <inheritdoc/>
@@ -23243,7 +23243,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:recipientData");
-            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/recipientData"));
+            builder.AddConstraint(new RelationshipTypeConstraint("w:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/recipientData"));
         }
 
         /// <inheritdoc/>
@@ -23271,7 +23271,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:dataSource");
-            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/mailMergeSource"));
+            builder.AddConstraint(new RelationshipTypeConstraint("w:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/mailMergeSource"));
         }
 
         /// <inheritdoc/>
@@ -23326,7 +23326,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:sourceFileName");
-            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/frame"));
+            builder.AddConstraint(new RelationshipTypeConstraint("w:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/frame"));
         }
 
         /// <inheritdoc/>
@@ -23974,8 +23974,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:bottom");
-            builder.AddConstraint(new AttributeCannotOmitConstraint("w:type") { Application = ApplicationType.Word });
-            builder.AddConstraint(new AttributeCannotOmitConstraint("w:w") { Application = ApplicationType.Word });
+            builder.AddConstraint(new AttributeCannotOmitConstraint("@w:type") { Application = ApplicationType.Word });
+            builder.AddConstraint(new AttributeCannotOmitConstraint("@w:w") { Application = ApplicationType.Word });
         }
 
         /// <inheritdoc/>
@@ -26425,7 +26425,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.AltChunkProperties), 0, 1)
             };
-            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk"));
+            builder.AddConstraint(new RelationshipTypeConstraint("w:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk"));
             builder.AddConstraint(new RelationshipExistConstraint("r:id"));
         }
 
@@ -40515,7 +40515,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ColumnIndex), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.UniqueTag), 1, 1)
             };
-            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/recipientData"));
+            builder.AddConstraint(new RelationshipTypeConstraint("w:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/recipientData"));
         }
 
         /// <summary>
@@ -54100,7 +54100,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
 aBuilder.AddValidator(new StringValidator() { MaxLength = (254L) });
 })
 .AddAttribute("r:id", a => a.Id);
-            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control"));
+            builder.AddConstraint(new RelationshipTypeConstraint("w:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control"));
             builder.AddConstraint(new UniqueAttributeValueConstraint("w:name", true, null));
         }
 
@@ -57968,7 +57968,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
             builder.AddElement<SaveThroughXslt>()
 .AddAttribute("r:id", a => a.Id)
 .AddAttribute("w:solutionID", a => a.SolutionId);
-            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/transform"));
+            builder.AddConstraint(new RelationshipTypeConstraint(":id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/transform"));
         }
 
         /// <inheritdoc/>
@@ -60696,7 +60696,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:embedRegular");
-            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font"));
+            builder.AddConstraint(new RelationshipTypeConstraint("w:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font"));
             builder.AddConstraint(new RelationshipExistConstraint("r:id"));
         }
 
@@ -60725,7 +60725,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:embedBold");
-            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font"));
+            builder.AddConstraint(new RelationshipTypeConstraint("w:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font"));
         }
 
         /// <inheritdoc/>
@@ -60753,7 +60753,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:embedItalic");
-            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font"));
+            builder.AddConstraint(new RelationshipTypeConstraint("w:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font"));
         }
 
         /// <inheritdoc/>
@@ -60781,7 +60781,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:embedBoldItalic");
-            builder.AddConstraint(new RelationshipTypeConstraint("r:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font"));
+            builder.AddConstraint(new RelationshipTypeConstraint("w:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font"));
         }
 
         /// <inheritdoc/>
