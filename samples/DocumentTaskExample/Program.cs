@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Office2021.DocumentTasks;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml.Features;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -67,6 +68,7 @@ namespace doctaskssample
                 newFn.Replace(".docx", "_new.docx");
 
                 WordprocessingDocument newDocumentPackage = (WordprocessingDocument)docPackage.SaveAs(newFn.ToString());
+                newDocumentPackage.AddParagraphIdFeature();
                 MainDocumentPart mdp = newDocumentPackage.MainDocumentPart;
 
                 string strCommentId = "3";
@@ -77,7 +79,6 @@ namespace doctaskssample
                 User tony = new("S::john.doe@contoso.com::3063813b-f01d-4030-9808-501a178e7963", "John Doe", "AD", "@John Doe", "john.doe@contoso.com");
                 User bruce = new("S::jane.doe@contoso.com::ec6240b1-52a3-46dd-9697-ef7bcc7a29e8", "Jane Doe", "AD", "@Jane Doe", "jane.doe@contoso.com");
 
-                RandomParagraphIdGenerator pIdGener = new RandomParagraphIdGenerator(newDocumentPackage);
                 AddNewParagraphRunWithComment(mdp, strCommentId, run, pIdGener);
 
                 AddMentionComment(mdp, strCommentId, bruce.Mention, comment, tony, bruce, pIdGener);
