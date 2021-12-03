@@ -1,4 +1,7 @@
-﻿using DocumentFormat.OpenXml;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Office2019.Drawing.SVG;
 using DocumentFormat.OpenXml.Packaging;
@@ -7,9 +10,6 @@ using Svg;
 using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
-// Copyright (c) Microsoft. All rights reserved.
-// Licensed under the MIT license. See LICENSE file in the project root for full license information.
-
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
