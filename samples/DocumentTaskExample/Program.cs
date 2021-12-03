@@ -79,12 +79,12 @@ namespace doctaskssample
                 User tony = new("S::john.doe@contoso.com::3063813b-f01d-4030-9808-501a178e7963", "John Doe", "AD", "@John Doe", "john.doe@contoso.com");
                 User bruce = new("S::jane.doe@contoso.com::ec6240b1-52a3-46dd-9697-ef7bcc7a29e8", "Jane Doe", "AD", "@Jane Doe", "jane.doe@contoso.com");
 
-                AddNewParagraphRunWithComment(mdp, strCommentId, run, pIdGener);
+                AddNewParagraphRunWithComment(mdp, strCommentId, run);
 
-                AddMentionComment(mdp, strCommentId, bruce.Mention, comment, tony, bruce, pIdGener);
+                AddMentionComment(mdp, strCommentId, bruce.Mention, comment, tony, bruce);
 
                 StringBuilder taskStr = new StringBuilder(bruce.Mention + " " + comment);
-                AddNewTask(mdp, taskStr.ToString(), bruce, tony, pIdGener);
+                AddNewTask(mdp, taskStr.ToString(), bruce, tony);
 
                 newDocumentPackage.Save();
                 newDocumentPackage.Close();
@@ -101,11 +101,13 @@ namespace doctaskssample
             return;
         }
 
-        private static void AddNewTask(MainDocumentPart mdp, string title, User assignee, User assigner, RandomParagraphIdGenerator pIdGener)
+        private static void AddNewTask(MainDocumentPart mdp, string title, User assignee, User assigner)
         {
             // TODO: userids, providers and names will have to be programmatically accessed via directory services.
             // These are just examples to show what is expected.
+            mdp.AddNewPart<DocumentTasksPart>();
             DocumentTasksPart taskPart = mdp.DocumentTasksPart;
+            taskPart.Tasks = new Tasks();
             Tasks taskRoot = taskPart.Tasks;
             string guidEventId = Guid.NewGuid().ToString();
             string guidTaskId = Guid.NewGuid().ToString();
@@ -141,7 +143,7 @@ namespace doctaskssample
                 { Id = guidTaskId });
         }
 
-        private static void AddNewParagraphRunWithComment(MainDocumentPart mdp, string strCommentId, string strParagraphText, RandomParagraphIdGenerator pIdGener)
+        private static void AddNewParagraphRunWithComment(MainDocumentPart mdp, string strCommentId, string strParagraphText)
         {
             mdp.Document.Body.AppendChild<Paragraph>(
                 new Paragraph(
@@ -154,11 +156,13 @@ namespace doctaskssample
                 new Run(new CommentReference() { Id = strCommentId }))
 
                 // These ids MUST be unique in the document.
-                { ParagraphId = pIdGener.CreateUniqueParagraphId(), TextId = "FFFFFF02" });
+                { TextId = "FFFFFF02" });
         }
 
-        private static void AddMentionComment(MainDocumentPart mdp, string strCommentId, string mention, string commentText, User mentioner, User mentionee, RandomParagraphIdGenerator pIdGener)
+        private static void AddMentionComment(MainDocumentPart mdp, string strCommentId, string mention, string commentText, User mentioner, User mentionee)
         {
+            mdp.AddNewPart<WordprocessingCommentsPart>();
+            mdp.WordprocessingCommentsPart.Comments = new Comments();
             Comments comments = mdp.WordprocessingCommentsPart.Comments;
 
             comments.AppendChild<Comment>(
@@ -196,7 +200,7 @@ namespace doctaskssample
                             new AnnotationReferenceMark()))
 
                     // These ids MUST be unique in the document.
-                    { ParagraphId = pIdGener.CreateUniqueParagraphId(), TextId = "FFFFFF04" })
+                    { TextId = "FFFFFF04" })
 
                 // This id MUST be unique in the comments part.
                 { Id = strCommentId, Author = mentioner.UserName, Date = DateTime.Now, Initials = mentioner.UserName.Substring(0, 1) + mentioner.UserName.Substring(mentioner.UserName.IndexOf(" ") + 1, 1) });
