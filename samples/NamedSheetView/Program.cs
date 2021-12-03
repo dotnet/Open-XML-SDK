@@ -1,4 +1,5 @@
-using Common;
+// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Office2013.ExcelAc;
 using DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews;
@@ -46,8 +47,7 @@ namespace AddNamedSheetView
                 namedSheetView.Name = "testview";
 
                 namedSheetViewsPart.NamedSheetViews = new NamedSheetViews(
-                    namedSheetView
-                );
+                    namedSheetView);
                 namedSheetViewsPart.NamedSheetViews.AddNamespaceDeclaration("x", "http://schemas.openxmlformats.org/spreadsheetml/2006/main");
 
                 spreadsheetDocument.Save();
