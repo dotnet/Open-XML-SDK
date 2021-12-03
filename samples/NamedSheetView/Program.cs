@@ -16,9 +16,14 @@ namespace AddNamedSheetView
         {
             if (args.Length < 1)
             {
-                Utilities.ShowHelp(new string[] { "NamedSheetView: ", "Usage: NamedSheetView <filename>", "Where: <filename> is the .xlsx file in which to add a named sheet view." });
+                Common.ExampleUtilities.ShowHelp(new string[]
+                {
+                    "NamedSheetView: ",
+                    "Usage: NamedSheetView <filename>",
+                    "Where: <filename> is the .xlsx file in which to add a named sheet view.",
+                });
             }
-            else if (Utilities.CheckIfFilesExist(args))
+            else if (Common.ExampleUtilities.CheckIfFilesExist(args))
             {
                 InsertNamedSheetView(args[0]);
             }

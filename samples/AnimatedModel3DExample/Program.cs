@@ -1,5 +1,4 @@
-﻿using Common;
-using DocumentFormat.OpenXml;
+﻿using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Presentation;
 using System;
@@ -12,19 +11,21 @@ namespace AnimatedModel3DExample
 {
     internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             if (args.Length < 3)
             {
-                Common.Utilities.ShowHelp(new string[] {
-                    "AnimatedModel3DExample: " ,
-                    "Usage: AnimatedModel3DExample <OOXML> <png> <glb>" ,
-                    "Where <OOXML> is the file to add the animated model 3d to" ,
-                    "and <png> is the .png file with the image for the Animated Model 3D" ,
-                    "Where <glb> is the .glb file for the animated model 3d"
-                });
+                Common.ExampleUtilities.ShowHelp(
+               new string[]
+               {
+                    "AnimatedModel3DExample: ",
+                    "Usage: AnimatedModel3DExample <OOXML> <png> <glb>",
+                    "Where <OOXML> is the file to add the animated model 3d to",
+                    "and <png> is the .png file with the image for the Animated Model 3D",
+                    "Where <glb> is the .glb file for the animated model 3d",
+               });
             }
-            else if (Common.Utilities.CheckIfFilesExist(args))
+            else if (Common.ExampleUtilities.CheckIfFilesExist(args))
             {
                 InsertAnimatedModel3D(args[0], args[1], args[2]);
             }

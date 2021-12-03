@@ -26,9 +26,14 @@ namespace SVGExample
         {
             if (args.Length < 2)
             {
-                Utilities.ShowHelp(new string[] { "SVGExample: ", "Usage: SVGExample <filename> <svg>", "Where: <filename> is the path to the file in which to add the svg.", "Where: <svg> is the path to the svg file to add." });
+                Common.ExampleUtilities.ShowHelp(new string[] {
+                    "SVGExample: ",
+                    "Usage: SVGExample <filename> <svg>",
+                    "Where: <filename> is the path to the file in which to add the svg.",
+                    "Where: <svg> is the path to the svg file to add.",
+                });
             }
-            else if (Utilities.CheckIfFilesExist(args))
+            else if (Common.ExampleUtilities.CheckIfFilesExist(args))
             {
                 AddSvg(args[0], args[1]);
             }

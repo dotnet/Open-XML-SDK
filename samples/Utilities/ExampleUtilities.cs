@@ -3,9 +3,10 @@ using System.IO;
 
 namespace Common
 {
-    public class Utilities
+    public class ExampleUtilities
     {
-        public static void ShowHelp(string[] helpMessages) { 
+        public static void ShowHelp(string[] helpMessages)
+        {
             foreach (string message in helpMessages)
             {
                 Console.WriteLine(message);
