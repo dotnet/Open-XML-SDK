@@ -63,8 +63,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddNamedSheetView", "sample
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SVGExample", "samples\SVGExample\SVGExample.csproj", "{4C769670-B76D-4CBB-9A07-B9A1FB84F841}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utilities", "samples\Utilities\Utilities.csproj", "{2C94AA25-F4C1-45C1-B630-140FBD362FC7}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,10 +133,6 @@ Global
 		{4C769670-B76D-4CBB-9A07-B9A1FB84F841}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C769670-B76D-4CBB-9A07-B9A1FB84F841}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C769670-B76D-4CBB-9A07-B9A1FB84F841}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2C94AA25-F4C1-45C1-B630-140FBD362FC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2C94AA25-F4C1-45C1-B630-140FBD362FC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2C94AA25-F4C1-45C1-B630-140FBD362FC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2C94AA25-F4C1-45C1-B630-140FBD362FC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -160,7 +154,6 @@ Global
 		{12BFA5FC-F09A-480D-BBAC-3992B23B277D} = {7DAF7304-40CC-4180-88A5-9A89DD13C565}
 		{6C79FE8F-C90D-4B14-8225-231BB9291738} = {7DAF7304-40CC-4180-88A5-9A89DD13C565}
 		{4C769670-B76D-4CBB-9A07-B9A1FB84F841} = {7DAF7304-40CC-4180-88A5-9A89DD13C565}
-		{2C94AA25-F4C1-45C1-B630-140FBD362FC7} = {7DAF7304-40CC-4180-88A5-9A89DD13C565}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6F476383-E917-43D1-A1E5-9A61A47DA3F5}

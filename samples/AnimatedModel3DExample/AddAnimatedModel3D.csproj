@@ -1,4 +1,3 @@
-
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
@@ -6,9 +5,6 @@
 		<TargetFrameworks>$(SamplesFrameworks)</TargetFrameworks>
 	</PropertyGroup>
 
-	<ItemGroup>
-	  <Compile Include="..\Utilities\ExampleUtilities.cs" Link="ExampleUtilities.cs" />
-	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\..\src\DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj" />
 	</ItemGroup>
