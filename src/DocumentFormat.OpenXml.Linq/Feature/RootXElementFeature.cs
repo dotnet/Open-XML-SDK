@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
         private readonly OpenXmlPart _part;
         private readonly IPartRootEventsFeature _events;
 
-        private XElement? _rootXElement;
+        private XDocument? _partXDocument;
 
         public RootXElementFeature(OpenXmlPart part)
         {
@@ -25,58 +25,107 @@ namespace DocumentFormat.OpenXml.Packaging
             _events.Change += OnPartRootChange;
         }
 
-        /// <summary>
-        /// Gets or sets the root LINQ to XML element.
-        /// </summary>
-        [DisallowNull]
-        public XElement? Root
+        /// <inheritdoc />
+        public XDocument Document
         {
             get
             {
-                if (_rootXElement is null)
+                if (_partXDocument is not null)
                 {
-                    if (_part.IsRootElementLoaded)
+                    if (_partXDocument.Root is null)
                     {
-                        _rootXElement = XElement.Parse(_part.RootElement.OuterXml);
+                        // Add null or the root XElement.
+                        _partXDocument.Add(LoadRootXElement());
                     }
-                    else
-                    {
-                        _rootXElement = LoadRootXElementFromStream();
-                    }
+
+                    return _partXDocument;
                 }
 
-                return _rootXElement;
+                _partXDocument = LoadRootXElement() switch
+                {
+                    // The part is empty.
+                    null => new XDocument(new XDeclaration("1.0", "UTF-8", "yes")),
+
+                    // The part has XML content that was loaded from the part stream.
+                    { Document: { } } root => root.Document!,
+
+                    // The part has XML content that was loaded from RootElement.OuterXml.
+                    var root => new XDocument(new XDeclaration("1.0", "UTF-8", "yes"), root),
+                };
+
+                return _partXDocument;
             }
 
             set
             {
-                _rootXElement = value ?? throw new ArgumentNullException(nameof(value));
+                if (value.Root is null)
+                {
+                    throw new ArgumentException("Root must not be null.");
+                }
+
+                _partXDocument = value;
 
                 Save();
             }
+        }
+
+        /// <inheritdoc />
+        [DisallowNull]
+        public XElement? Root
+        {
+            get => Document.Root;
+
+            set
+            {
+                if (value is null)
+                {
+                    throw new ArgumentNullException(nameof(value));
+                }
+
+                var document = Document;
+
+                if (document.Root is null)
+                {
+                    document.Add(value);
+                }
+                else
+                {
+                    document.Root.ReplaceWith(value);
+                }
+
+                Save();
+            }
+        }
+
+        private XElement? LoadRootXElement()
+        {
+            // The XElement.Parse() method will return a non-null XElement that is not associated
+            // to an XDocument, i.e., the Document property is null. LoadRootXElementFromStream()
+            // returns null or an XElement that is associated to an XDocument.
+            return _part.IsRootElementLoaded
+                ? XElement.Parse(_part.RootElement.OuterXml)
+                : LoadRootXElementFromStream();
         }
 
         private XElement? LoadRootXElementFromStream()
         {
             using Stream stream = _part.GetStream(FileMode.OpenOrCreate, FileAccess.Read);
 
-            if (stream.Length > 0)
+            if (stream.Length == 0)
             {
-                using XmlReader xmlReader = XmlReader.Create(stream);
-                XDocument rootXDocument = XDocument.Load(xmlReader);
-
-                // TODO: Consider replacing only attributes and child nodes.
-                // If the user holds on to a reference to _rootXElement, that
-                // reference will be invalidated.
-                return rootXDocument.Root;
+                return null;
             }
 
-            return null;
+            using XmlReader xmlReader = XmlReader.Create(stream);
+            XDocument partXDocument = XDocument.Load(xmlReader);
+
+            return partXDocument.Root;
         }
 
+        /// <inheritdoc />
         public void Save()
         {
-            if (_rootXElement is null)
+            if (_partXDocument is null)
             {
                 return;
             }
@@ -84,8 +133,7 @@ namespace DocumentFormat.OpenXml.Packaging
             using (var stream = _part.GetStream(FileMode.Create, FileAccess.Write))
             using (var xmlWriter = XmlWriter.Create(stream))
             {
-                XDocument document = CreateRootXDocument();
-                document.Save(xmlWriter);
+                _partXDocument.Save(xmlWriter);
             }
 
             if (_part.IsRootElementLoaded)
@@ -94,21 +142,15 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        private XDocument CreateRootXDocument()
-        {
-            return _rootXElement is not null
-                ? new XDocument(new XDeclaration("1.0", "UTF-8", "yes"), _rootXElement)
-                : new XDocument(new XDeclaration("1.0", "UTF-8", "yes"));
-        }
-
         private void OnPartRootChange(FeatureEventArgs<OpenXmlPart> obj)
         {
-            if (_part == obj.Argument)
+            if (_part == obj.Argument && _partXDocument?.Root is not null)
             {
-                _rootXElement = null;
+                _partXDocument.Root.Remove();
             }
         }
 
+        /// <inheritdoc />
         public void Dispose()
         {
             _events.Change -= OnPartRootChange;
