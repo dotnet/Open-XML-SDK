@@ -2591,6 +2591,7 @@ namespace DocumentFormat.OpenXml
 
             return root as OpenXmlPartRootElement;
         }
+
         private sealed partial class ElementFeatureCollection : IFeatureCollection
         {
             private readonly OpenXmlElement _owner;

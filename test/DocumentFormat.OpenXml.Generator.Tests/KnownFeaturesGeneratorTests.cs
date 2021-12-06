@@ -354,7 +354,6 @@ public partial class Factory
             }.RunAsync();
         }
 
-
         [Fact]
         public async Task SingleGenerator()
         {
