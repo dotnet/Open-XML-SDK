@@ -2591,11 +2591,9 @@ namespace DocumentFormat.OpenXml
 
             return root as OpenXmlPartRootElement;
         }
-
-        private sealed class ElementFeatureCollection : IFeatureCollection
+        private sealed partial class ElementFeatureCollection : IFeatureCollection
         {
             private readonly OpenXmlElement _owner;
-            private AnnotationsFeature? _annotations = null;
 
             public ElementFeatureCollection(OpenXmlElement owner)
             {
@@ -2609,16 +2607,14 @@ namespace DocumentFormat.OpenXml
             public IFeatureCollection? GetPartFeatures()
                 => _owner.GetPart()?.Features;
 
+            [KnownFeature(typeof(AnnotationsFeature))]
+            private partial TFeature? GetInternal<TFeature>();
+
             public TFeature? Get<TFeature>()
             {
-                if (typeof(TFeature) == typeof(AnnotationsFeature))
+                if (GetInternal<TFeature>() is TFeature result)
                 {
-                    if (_annotations is null)
-                    {
-                        _annotations = new();
-                    }
-
-                    return (TFeature)(object)_annotations;
+                    return result;
                 }
 
                 var defaultFeatures = GetPartFeatures();

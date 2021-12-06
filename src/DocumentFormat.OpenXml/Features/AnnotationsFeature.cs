@@ -13,6 +13,10 @@ namespace DocumentFormat.OpenXml.Features
         // Annotations will not be cloned when calling .Clone() and .CloneNode(bool)
         private object? _annotations;
 
+        public AnnotationsFeature()
+        {
+        }
+
         /// <summary>
         /// Adds an object to the annotation list of this collection.
         /// </summary>

@@ -77,6 +77,7 @@
   </PropertyGroup>
 
   <Import Condition="$(IncludeFrameworkShims)" Project="$(MSBuildThisFileDirectory)src\common\FrameworkShims.targets" />
+  <Import Condition="$(IncludeSourceGenerator)" Project="$(MSBuildThisFileDirectory)gen\DocumentFormat.OpenXml.Generator\SourceGenerator.targets"/>
 
   <PropertyGroup>
     <PackageOutputPath>$(MSBuildThisFileDirectory)bin\$(Configuration)\packages\</PackageOutputPath>
