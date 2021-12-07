@@ -1,4 +1,7 @@
 <Project>
+  <PropertyGroup>
+    <IncludeInitShim Condition=" '$(IncludeInitShim)' == '' ">false</IncludeInitShim>
+  </PropertyGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net35' ">
     <ShimFile Include="$(MSBuildThisFileDirectory)System\HashCode.cs" />
@@ -54,6 +57,10 @@
     <ShimFile Include="$(MSBuildThisFileDirectory)System\Span.cs" />
     <ShimFile Include="$(MSBuildThisFileDirectory)System\SpanExtensions.cs" />
     <ShimFile Include="$(MSBuildThisFileDirectory)System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition="$(IncludeInitShim)">
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\Runtime\CompilerServices\IsExternalInit.cs" />
   </ItemGroup>
 
   <ItemGroup>

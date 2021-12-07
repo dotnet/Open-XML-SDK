@@ -4,6 +4,7 @@
     <IsShipped>true</IsShipped>
     <NoWarn>$(NoWarn);3003</NoWarn>
     <IncludeFrameworkShims>true</IncludeFrameworkShims>
+    <IncludeSourceGenerator>true</IncludeSourceGenerator>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -63,7 +64,7 @@
       <ItemGroup>
         <EmbeddedResource Include="Properties\DocumentFormat.OpenXml.rd.xml" />
       </ItemGroup>
-    
+
     </When>
 
     <When Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
