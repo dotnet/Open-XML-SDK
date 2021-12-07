@@ -8,6 +8,7 @@ using DocumentFormat.OpenXml.Drawing.Spreadsheet;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Office2010.Excel;
+using DocumentFormat.OpenXml.Office2010.ExcelAc;
 using DocumentFormat.OpenXml.Office2013.Excel;
 using DocumentFormat.OpenXml.Office2013.ExcelAc;
 using DocumentFormat.OpenXml.Packaging;
@@ -30472,7 +30473,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Formula1" /> <c>&lt;x:formula1></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Formula2" /> <c>&lt;x:formula2></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.ExcelAc.List" /> <c>&lt;x12ac:list></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.ExcelAc.List" /> <c>&lt;x12ac:list></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -30725,7 +30726,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:dataValidation");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formula1>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formula2>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.ExcelAc.List>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.ExcelAc.List>();
             builder.AddElement<DataValidation>()
 .AddAttribute("type", a => a.Type)
 .AddAttribute("errorStyle", a => a.ErrorStyle)
@@ -30745,7 +30746,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.ExcelAc.List), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.ExcelAc.List), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula1), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula2), 0, 1)
             };
@@ -30755,15 +30756,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>List, this property is only available in Office 2013 and later..</para>
+        /// <para>List, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: x12ac:list.</para>
         /// </summary>
         /// <remark>
         /// xmlns:x12ac = http://schemas.microsoft.com/office/spreadsheetml/2011/1/ac
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.ExcelAc.List? List
+        public DocumentFormat.OpenXml.Office2010.ExcelAc.List? List
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.ExcelAc.List>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.ExcelAc.List>();
             set => SetElement(value);
         }
 

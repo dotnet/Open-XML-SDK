@@ -48766,7 +48766,7 @@
     "Value": {
      "ChildrenParticles": [
       {
-       "ElementType": "DocumentFormat.OpenXml.Office2013.ExcelAc.List",
+       "ElementType": "DocumentFormat.OpenXml.Office2010.ExcelAc.List",
        "MinOccurs": 0
       },
       {
@@ -60198,11 +60198,11 @@
   "Key": "DocumentFormat.OpenXml.Spreadsheet.DataValidation",
   "Value": [
    {
-    "Key": "Office2013, Office2016, Office2019, Office2021",
+    "Key": "Office2010, Office2013, Office2016, Office2019, Office2021",
     "Value": {
      "ChildrenParticles": [
       {
-       "ElementType": "DocumentFormat.OpenXml.Office2013.ExcelAc.List",
+       "ElementType": "DocumentFormat.OpenXml.Office2010.ExcelAc.List",
        "MinOccurs": 0
       },
       {
@@ -60218,7 +60218,7 @@
     }
    },
    {
-    "Key": "Office2007, Office2010",
+    "Key": "Office2007",
     "Value": {
      "ChildrenParticles": [
       {

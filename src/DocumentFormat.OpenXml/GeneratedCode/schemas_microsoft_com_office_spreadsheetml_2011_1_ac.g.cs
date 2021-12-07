@@ -13,11 +13,11 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2013.ExcelAc
+namespace DocumentFormat.OpenXml.Office2010.ExcelAc
 {
     /// <summary>
     /// <para>Defines the List Class.</para>
-    /// <para>This class is available in Office 2013 and above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x12ac:list.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml.Office2013.ExcelAc
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x12ac:list");
-            builder.Availability = FileFormatVersions.Office2013;
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
