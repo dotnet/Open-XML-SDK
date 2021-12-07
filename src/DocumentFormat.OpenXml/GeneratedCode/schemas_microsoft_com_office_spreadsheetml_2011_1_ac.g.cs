@@ -13,7 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2010.ExcelAc
+namespace DocumentFormat.OpenXml.Office2013.ExcelAc
 {
     /// <summary>
     /// <para>Defines the List Class.</para>
