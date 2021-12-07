@@ -12,6 +12,11 @@ namespace DocumentFormat.OpenXml.Packaging
     public interface IPartRootXElementFeature
     {
         /// <summary>
+        /// Gets or sets the associated <see cref="XDocument" />. Setting will save the underlying <see cref="OpenXmlPart"/>.
+        /// </summary>
+        XDocument Document { get; set; }
+
+        /// <summary>
         /// Gets or sets the associated <see cref="XElement"/>. Setting will save the underlying <see cref="OpenXmlPart"/>.
         /// </summary>
         [DisallowNull]
