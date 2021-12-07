@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Added virtual method for content type checking in `OpenXmlPart` and fix issue for `model/gltf.binary` (#1069)
 
+### Fixed
+- DocumentFormat.OpenXml.Office.Drawing.ShapeTree is now available only in Office 2010 and above, not 2007.
+
 ## [2.14.0] - 2021-10-28
 
 ### Added
