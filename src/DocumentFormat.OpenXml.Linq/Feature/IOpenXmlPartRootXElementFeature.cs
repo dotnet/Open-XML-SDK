@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Feature to allow access to <see cref="XElement"/> representation of a <see cref="OpenXmlPart"/>.
     /// </summary>
-    internal interface IPartRootXElementFeature
+    internal interface IOpenXmlPartRootXElementFeature
     {
         /// <summary>
         /// Gets or sets the associated <see cref="XDocument" />. Setting will save the underlying <see cref="OpenXmlPart"/>.
@@ -23,8 +23,17 @@ namespace DocumentFormat.OpenXml.Packaging
         XElement? Root { get; set; }
 
         /// <summary>
-        /// Save the current <see cref="Root"/> to the <see cref="OpenXmlPart"/>.
+        /// Gets a value indicating whether the <see cref="Root"/> is loaded from the part or it has been set.
         /// </summary>
-        void Save();
+        bool IsRootXElementLoaded { get; }
+
+        /// <summary>
+        /// Saves the currently loaded, non-null <see cref="Root"/>, if any, to the <see cref="OpenXmlPart"/>.
+        /// </summary>
+        /// <returns>
+        /// <see langword="true"/>, if the currently loaded, non-null <see cref="Root"/> was saved;
+        /// <see langword="false"/>, otherwise.
+        /// </returns>
+        bool Save();
     }
 }

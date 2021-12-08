@@ -14,7 +14,7 @@ using Xunit;
 
 namespace DocumentFormat.OpenXml.Linq.Tests
 {
-    public class OpenXmlPartTests
+    public class OpenXmlPartRootXElementExtensionsTests
     {
         private const string HelloWorld = "Hello World!";
 
@@ -51,6 +51,7 @@ namespace DocumentFormat.OpenXml.Linq.Tests
             // Assert.
             Assert.NotNull(partXDocument);
             Assert.Null(partXDocument.Root);
+            Assert.False(part.IsRootXElementLoaded());
         }
 
         [Fact]
@@ -70,6 +71,7 @@ namespace DocumentFormat.OpenXml.Linq.Tests
             Assert.NotNull(partXDocument);
             Assert.NotNull(partXDocument.Root);
             Assert.Equal(part.Document.OuterXml, partXDocument.Root!.ToString(SaveOptions.DisableFormatting));
+            Assert.True(part.IsRootXElementLoaded());
         }
 
         [Fact]
@@ -91,6 +93,7 @@ namespace DocumentFormat.OpenXml.Linq.Tests
             // Assert.
             Assert.Same(expectedPartXDocument, partXDocument);
             Assert.Same(expectedRootXElement, partXDocument.Root);
+            Assert.True(part.IsRootXElementLoaded());
         }
 
         [Fact]
@@ -109,6 +112,8 @@ namespace DocumentFormat.OpenXml.Linq.Tests
             Assert.Null(rootXElement);
             Assert.Null(part.RootElement);
             Assert.Null(part.Document);
+
+            Assert.False(part.IsRootXElementLoaded());
         }
 
         [Fact]
@@ -127,6 +132,7 @@ namespace DocumentFormat.OpenXml.Linq.Tests
             // Assert.
             Assert.NotNull(rootXElement);
             Assert.Equal(part.Document.OuterXml, rootXElement!.ToString(SaveOptions.DisableFormatting));
+            Assert.True(part.IsRootXElementLoaded());
         }
 
         [Fact]
@@ -141,6 +147,7 @@ namespace DocumentFormat.OpenXml.Linq.Tests
 
             // Act and Assert.
             Assert.Same(part.GetXDocument().Root, part.GetXElement());
+            Assert.True(part.IsRootXElementLoaded());
         }
 
         [Fact]
@@ -152,6 +159,8 @@ namespace DocumentFormat.OpenXml.Linq.Tests
 
             MainDocumentPart part = wordDocument.AddMainDocumentPart();
             part.SetXDocument(HelloWorldXDocument);
+
+            Assert.True(part.IsRootXElementLoaded());
 
             var expectedRootXElement = new XElement(W.document, XmlnsW, new XElement(W.body));
             part.SetXElement(expectedRootXElement);
@@ -170,6 +179,8 @@ namespace DocumentFormat.OpenXml.Linq.Tests
 
             MainDocumentPart part = wordDocument.AddMainDocumentPart();
             var partXDocument = part.GetXDocument();
+
+            Assert.False(part.IsRootXElementLoaded());
 
             var expectedRootXElement = HelloWorldXElement;
             partXDocument.Add(expectedRootXElement);
@@ -190,6 +201,8 @@ namespace DocumentFormat.OpenXml.Linq.Tests
 
             var partXDocument = HelloWorldXDocument;
             part.SetXDocument(partXDocument);
+
+            Assert.True(part.IsRootXElementLoaded());
 
             var expectedRootXElement = new XElement(W.document, XmlnsW, new XElement(W.body));
             partXDocument.Root!.ReplaceWith(expectedRootXElement);
@@ -212,6 +225,8 @@ namespace DocumentFormat.OpenXml.Linq.Tests
             part.SetXDocument(HelloWorldXDocument);
 
             // Assert.
+            Assert.True(part.IsRootXElementLoaded());
+
             // Note that the RootXElement has the expected markup.
             var partXDocument = part.GetXDocument();
             var rootXElement = partXDocument.Root;
@@ -259,6 +274,8 @@ namespace DocumentFormat.OpenXml.Linq.Tests
             part.SetXElement(HelloWorldXElement);
 
             // Assert.
+            Assert.True(part.IsRootXElementLoaded());
+
             // Note that the RootXElement has the expected markup.
             var rootXElement = part.GetXElement();
             Assert.NotNull(rootXElement);
@@ -289,6 +306,106 @@ namespace DocumentFormat.OpenXml.Linq.Tests
         }
 
         [Fact]
+        public void Save_PartXDocumentIsNull_NotSaved()
+        {
+            // Arrange.
+            using var stream = new MemoryStream();
+
+            using (var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
+            {
+                MainDocumentPart part = wordDocument.AddMainDocumentPart();
+                part.Document = HelloWordDocument;
+            }
+
+            using (var wordDocument = WordprocessingDocument.Open(stream, true))
+            {
+                MainDocumentPart part = wordDocument.MainDocumentPart!;
+
+                Assert.NotNull(part.GetXDocument());
+                Assert.NotNull(part.GetXElement());
+                Assert.True(part.IsRootXElementLoaded());
+            }
+
+            using (var wordDocument = WordprocessingDocument.Open(stream, true))
+            {
+                MainDocumentPart part = wordDocument.MainDocumentPart!;
+
+                Assert.False(part.IsRootXElementLoaded());
+
+                // Act and Assert.
+                Assert.False(part.SaveXDocument());
+                Assert.False(part.SaveXElement());
+            }
+        }
+
+        [Fact]
+        public void Save_PartXDocumentIsNotNullButRootIsNull_NotSaved()
+        {
+            // Arrange.
+            using var stream = new MemoryStream();
+            using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
+
+            MainDocumentPart part = wordDocument.AddMainDocumentPart();
+            var partXDocument = part.GetXDocument();
+
+            Assert.NotNull(partXDocument);
+            Assert.Null(partXDocument.Root);
+            Assert.False(part.IsRootXElementLoaded());
+
+            // Act and Assert.
+            Assert.False(part.SaveXDocument());
+            Assert.False(part.SaveXElement());
+        }
+
+        [Fact]
+        public void SaveXDocument_PartRootXElementIsNotNull_Saved()
+        {
+            // Arrange.
+            using var stream = new MemoryStream();
+
+            using (var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
+            {
+                MainDocumentPart part = wordDocument.AddMainDocumentPart();
+                part.Document = HelloWordDocument;
+            }
+
+            using (var wordDocument = WordprocessingDocument.Open(stream, true))
+            {
+                MainDocumentPart part = wordDocument.MainDocumentPart!;
+
+                Assert.NotNull(part.GetXElement());
+                Assert.True(part.IsRootXElementLoaded());
+
+                // Act and Assert.
+                Assert.True(part.SaveXDocument());
+            }
+        }
+
+        [Fact]
+        public void SaveXElement_PartRootXElementIsNotNull_Saved()
+        {
+            // Arrange.
+            using var stream = new MemoryStream();
+
+            using (var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
+            {
+                MainDocumentPart part = wordDocument.AddMainDocumentPart();
+                part.Document = HelloWordDocument;
+            }
+
+            using (var wordDocument = WordprocessingDocument.Open(stream, true))
+            {
+                MainDocumentPart part = wordDocument.MainDocumentPart!;
+
+                Assert.NotNull(part.GetXElement());
+                Assert.True(part.IsRootXElementLoaded());
+
+                // Act and Assert.
+                Assert.True(part.SaveXElement());
+            }
+        }
+
+        [Fact]
         public void SaveXElement_AfterSettingRootElementCallingGetXElementAndChangingXElement_RootElementSynchronized()
         {
             // Arrange.
@@ -303,8 +420,14 @@ namespace DocumentFormat.OpenXml.Linq.Tests
             Assert.Equal(HelloWorldXmlString, part.GetXElement()!.ToString(SaveOptions.DisableFormatting));
             Assert.Same(part.Document, part.RootElement);
 
+            // Get the root XElement.
+            var root = part.GetXElement();
+
+            Assert.NotNull(root);
+            Assert.True(part.IsRootXElementLoaded());
+
             // Add a second paragraph to the RootXElement.
-            XElement body = part.GetXElement()!.Elements(W.body).Single();
+            XElement body = root!.Elements(W.body).Single();
             body.Add(new XElement(W.p, new XElement(W.r, new XElement(W.t, "Lorem ipsum"))));
 
             // Note that the Document still has a single paragraph.
@@ -312,15 +435,84 @@ namespace DocumentFormat.OpenXml.Linq.Tests
             Assert.Single(part.RootElement!.Descendants<Paragraph>());
 
             // Act.
-            part.SaveXElement();
+            var saved = part.SaveXElement();
 
             // Assert.
             // Note that, after saving the RootXElement, the Document has now two paragraphs.
+            Assert.True(saved);
             Assert.Equal(2, part.Document.Descendants<Paragraph>().Count());
         }
 
         [Fact]
-        public void Multiple_NewAndChangedPart_Success()
+        public void IsRootXElementLoaded_AfterGettingXDocumentFromEmptyPart_FalseReturned()
+        {
+            // Arrange.
+            using var stream = new MemoryStream();
+            using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
+
+            MainDocumentPart part = wordDocument.AddMainDocumentPart();
+            Assert.Null(part.GetXDocument().Root);
+
+            // Act and Assert.
+            Assert.False(part.IsRootXElementLoaded());
+        }
+
+        [Fact]
+        public void IsRootXElementLoaded_BeforeAndAfterGettingXDocument_FalseAndTrueReturned()
+        {
+            // Arrange.
+            using var stream = new MemoryStream();
+
+            using (var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
+            {
+                MainDocumentPart part = wordDocument.AddMainDocumentPart();
+                part.Document = HelloWordDocument;
+            }
+
+            using (var wordDocument = WordprocessingDocument.Open(stream, true))
+            {
+                MainDocumentPart part = wordDocument.MainDocumentPart!;
+
+                // Act and Assert that it is not loaded before calling GetXElement().
+                Assert.False(part.IsRootXElementLoaded());
+
+                // Load the XDocument.
+                Assert.NotNull(part.GetXDocument().Root);
+
+                // Act and Assert that it is loaded after calling GetXElement().
+                Assert.True(part.IsRootXElementLoaded());
+            }
+        }
+
+        [Fact]
+        public void IsRootXElementLoaded_BeforeAndAfterGettingXElement_FalseAndTrueReturned()
+        {
+            // Arrange.
+            using var stream = new MemoryStream();
+
+            using (var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
+            {
+                MainDocumentPart part = wordDocument.AddMainDocumentPart();
+                part.Document = HelloWordDocument;
+            }
+
+            using (var wordDocument = WordprocessingDocument.Open(stream, true))
+            {
+                MainDocumentPart part = wordDocument.MainDocumentPart!;
+
+                // Act and Assert that it is not loaded before calling GetXElement().
+                Assert.False(part.IsRootXElementLoaded());
+
+                // Load the root XElement.
+                Assert.NotNull(part.GetXElement());
+
+                // Act and Assert that it is loaded after calling GetXElement().
+                Assert.True(part.IsRootXElementLoaded());
+            }
+        }
+
+        [Fact]
+        public void UseCase_NewAndChangedPart_Success()
         {
             // Arrange.
             using var stream = new MemoryStream();
@@ -340,6 +532,7 @@ namespace DocumentFormat.OpenXml.Linq.Tests
 
             Assert.Single(part.Document.Descendants<Paragraph>());
             Assert.Equal(2, part.GetXElement()!.Descendants(W.p).Count());
+            Assert.True(part.IsRootXElementLoaded());
 
             // Reload the Document (RootElement) and note that the RootXElement was reset.
             part.Document.Reload();
