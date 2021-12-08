@@ -18,7 +18,7 @@ namespace DocumentTaskSample
     {
         private static void Main(string[] args)
         {
-            if (args.Length < 0)
+            if (args.Length < 1)
             {
                 Common.ExampleUtilities.ShowHelp(
                 new string[]
@@ -40,8 +40,7 @@ namespace DocumentTaskSample
             Console.WriteLine("Processing presentation: {0}", filePath);
 
             using WordprocessingDocument docPackage = WordprocessingDocument.Open(filePath, true);
-            StringBuilder newFn = new StringBuilder(filePath);
-            newFn.Replace(".docx", "_new.docx");
+            string newFn = filePath.Replace(".docx", "_new.docx");
 
             using WordprocessingDocument newDocumentPackage = (WordprocessingDocument)docPackage.SaveAs(newFn.ToString());
             newDocumentPackage.AddParagraphIdFeature();
@@ -59,12 +58,8 @@ namespace DocumentTaskSample
 
             AddMentionComment(mdp, strCommentId, bruce.Mention, comment, tony, bruce);
 
-            StringBuilder taskStr = new StringBuilder(bruce.Mention + " " + comment);
-            AddNewTask(mdp, taskStr.ToString(), bruce, tony);
-
-            newDocumentPackage.Save();
-            newDocumentPackage.Close();
-            docPackage.Close();
+            string taskStr = string.Concat(bruce.Mention, " ", comment);
+            AddNewTask(mdp, taskStr, bruce, tony);
         }
 
         private static void AddNewTask(MainDocumentPart mdp, string title, User assignee, User assigner)
@@ -77,18 +72,19 @@ namespace DocumentTaskSample
             Tasks taskRoot = taskPart.Tasks;
             string guidEventId = Guid.NewGuid().ToString();
             string guidTaskId = Guid.NewGuid().ToString();
+            string commonAnchorId = "546836446";
 
             taskRoot.AppendChild<Task>(
                 new Task(
                     new TaskAnchor(
-                        new CommentAnchor() { Id = "546836446" }),
+                        new CommentAnchor() { Id = commonAnchorId }),
                     new TaskHistory(
                         new TaskHistoryEvent(
                             new AttributionTaskUser()
                             { UserId = assigner.UserId, UserProvider = assigner.DirectoryProvider, UserName = assigner.UserName },
                             new TaskAnchor(
                                 new CommentAnchor()
-                                { Id = "546836446" }),
+                                { Id = commonAnchorId }),
                             new TaskCreateEventInfo())
                         { Id = guidEventId, Time = DateTime.Now },
                         new TaskHistoryEvent(
@@ -96,14 +92,14 @@ namespace DocumentTaskSample
                             { UserId = assigner.UserId, UserProvider = assigner.DirectoryProvider, UserName = assigner.UserName },
                             new TaskAnchor(
                                 new CommentAnchor()
-                                { Id = "546836446" }),
+                                { Id = commonAnchorId }),
                             new AssignTaskUser()
                             { UserId = assignee.UserId, UserProvider = assignee.DirectoryProvider, UserName = assignee.UserName })
                         { Id = guidEventId, Time = DateTime.Now },
                         new TaskHistoryEvent(
                             new AttributionTaskUser() { UserId = assigner.UserId, UserProvider = assigner.DirectoryProvider, UserName = assigner.UserName },
                             new TaskAnchor(
-                                new CommentAnchor() { Id = "546836446" }),
+                                new CommentAnchor() { Id = commonAnchorId }),
                             new TaskTitleEventInfo() { Title = title })
                         { Id = guidEventId, Time = DateTime.Now }))
                 { Id = guidTaskId });
@@ -119,10 +115,7 @@ namespace DocumentTaskSample
                 new Run(
                     new Text(strParagraphText)),
                 new CommentRangeEnd() { Id = strCommentId },
-                new Run(new CommentReference() { Id = strCommentId }))
-
-                // These ids MUST be unique in the document.
-                { TextId = "FFFFFF02" });
+                new Run(new CommentReference() { Id = strCommentId })));
         }
 
         private static void AddMentionComment(MainDocumentPart mdp, string strCommentId, string mention, string commentText, User mentioner, User mentionee)

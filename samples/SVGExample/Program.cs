@@ -43,13 +43,18 @@ namespace SVGExample
 
         public static void AddSvg(string docPath, string svgPath)
         {
+            if (docPath == null)
+            {
+                throw new ArgumentNullException(nameof(docPath));
+            }
+
+            if (svgPath == null)
+            {
+                throw new ArgumentNullException(nameof(svgPath));
+            }
+
             using (PresentationDocument presentationDocument = PresentationDocument.Open(docPath, true))
             {
-                // Verify that the presentation document exists.
-                if (presentationDocument == null)
-                {
-                    throw new ArgumentNullException("presentationDocument");
-                }
 
                 // Get the relationship ID of the first slide.
                 PresentationPart presentationPart = presentationDocument.PresentationPart;
@@ -136,8 +141,6 @@ namespace SVGExample
                         IEnumerable<SVGBlip> sVGBlips = blipExtensionList.Descendants<SVGBlip>();
                         sVGBlips.First().Embed = svgId;
                         slidePart.Slide.CommonSlideData.ShapeTree.AppendChild(picture);
-
-                        slidePart.Slide.Save();
                     }
                 }
             }

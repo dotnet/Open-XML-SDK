@@ -306,8 +306,6 @@ namespace AnimatedModel3DExample
                                                     { Event = DocumentFormat.OpenXml.Presentation.TriggerEventValues.OnNext, Delay = "0" }))
                                             { Concurrent = true, NextAction = DocumentFormat.OpenXml.Presentation.NextActionValues.Seek }))
                                     { Id = 1, Duration = "indefinite", Restart = DocumentFormat.OpenXml.Presentation.TimeNodeRestartValues.Never, NodeType = DocumentFormat.OpenXml.Presentation.TimeNodeValues.TmingRoot }))));
-
-                    presentationDocument.Save();
                 }
             }
         }

@@ -34,7 +34,7 @@ namespace AddNamedSheetView
         {
             if (xlsxPath == null)
             {
-                throw new ArgumentNullException("xlsxPath");
+                throw new ArgumentNullException(nameof(xlsxPath));
             }
 
             using (SpreadsheetDocument spreadsheetDocument = SpreadsheetDocument.Open(xlsxPath, true))
@@ -49,8 +49,6 @@ namespace AddNamedSheetView
                 namedSheetViewsPart.NamedSheetViews = new NamedSheetViews(
                     namedSheetView);
                 namedSheetViewsPart.NamedSheetViews.AddNamespaceDeclaration("x", "http://schemas.openxmlformats.org/spreadsheetml/2006/main");
-
-                spreadsheetDocument.Save();
             }
         }
     }
