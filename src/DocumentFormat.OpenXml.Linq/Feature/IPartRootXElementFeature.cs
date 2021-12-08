@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Feature to allow access to <see cref="XElement"/> representation of a <see cref="OpenXmlPart"/>.
     /// </summary>
-    public interface IPartRootXElementFeature
+    internal interface IPartRootXElementFeature
     {
         /// <summary>
         /// Gets or sets the associated <see cref="XDocument" />. Setting will save the underlying <see cref="OpenXmlPart"/>.

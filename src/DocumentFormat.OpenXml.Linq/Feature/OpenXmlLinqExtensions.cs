@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="part">The part to provide an <see cref="XElement"/> instance.</param>
         /// <returns>A <see cref="IPartRootXElementFeature"/>.</returns>
-        public static IPartRootXElementFeature GetPartRootXElementFeature(this OpenXmlPart part)
+        internal static IPartRootXElementFeature GetPartRootXElementFeature(this OpenXmlPart part)
         {
             var feature = part.Features.Get<IPartRootXElementFeature>();
 
