@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
+using System;
 using System.IO;
 using System.Linq;
 using System.Xml.Linq;
@@ -17,12 +18,17 @@ namespace DocumentFormat.OpenXml.Linq.Tests
     {
         private const string HelloWorld = "Hello World!";
 
+        private static readonly XAttribute XmlnsW = new(XNamespace.Xmlns + "w", W.w);
+
         private static XElement HelloWorldXElement =>
-            new(W.document, new XAttribute(XNamespace.Xmlns + "w", W.w),
+            new(W.document, XmlnsW,
                 new XElement(W.body,
                     new XElement(W.p,
                         new XElement(W.r,
                             new XElement(W.t, "Hello World!")))));
+
+        private static XDocument HelloWorldXDocument =>
+            new(new XDeclaration("1.0", "UTF-8", "yes"), HelloWorldXElement);
 
         private static Document HelloWordDocument =>
             new(new Body(new Paragraph(new Run(new Text(HelloWorld)))));
@@ -31,7 +37,64 @@ namespace DocumentFormat.OpenXml.Linq.Tests
             HelloWorldXElement.ToString(SaveOptions.DisableFormatting);
 
         [Fact]
-        public void GetXElement_NewPart_NullAndSynchronized()
+        public void GetXDocument_NewPartWithoutRootElement_XDocumentIsNotNullAndRootIsNull()
+        {
+            // Arrange.
+            using var stream = new MemoryStream();
+            using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
+
+            MainDocumentPart part = wordDocument.AddMainDocumentPart();
+
+            // Act.
+            var partXDocument = part.GetXDocument();
+
+            // Assert.
+            Assert.NotNull(partXDocument);
+            Assert.Null(partXDocument.Root);
+        }
+
+        [Fact]
+        public void GetXDocument_PartWithUnsavedRootElement_XDocumentIsNotNullAndRootXmlStringsAreIdentical()
+        {
+            // Arrange.
+            using var stream = new MemoryStream();
+            using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
+
+            MainDocumentPart part = wordDocument.AddMainDocumentPart();
+            part.Document = HelloWordDocument;
+
+            // Act.
+            var partXDocument = part.GetXDocument();
+
+            // Assert.
+            Assert.NotNull(partXDocument);
+            Assert.NotNull(partXDocument.Root);
+            Assert.Equal(part.Document.OuterXml, partXDocument.Root!.ToString(SaveOptions.DisableFormatting));
+        }
+
+        [Fact]
+        public void GetXDocument_AfterCallingGetXDocumentAndSetXElement_XDocumentReferencesAreIdentical()
+        {
+            // Arrange.
+            using var stream = new MemoryStream();
+            using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
+
+            MainDocumentPart part = wordDocument.AddMainDocumentPart();
+            var expectedPartXDocument = part.GetXDocument();
+
+            var expectedRootXElement = HelloWorldXElement;
+            part.SetXElement(expectedRootXElement);
+
+            // Act.
+            var partXDocument = part.GetXDocument();
+
+            // Assert.
+            Assert.Same(expectedPartXDocument, partXDocument);
+            Assert.Same(expectedRootXElement, partXDocument.Root);
+        }
+
+        [Fact]
+        public void GetXElement_NewPartWithoutRootElement_XElementIsNull()
         {
             // Arrange.
             using var stream = new MemoryStream();
@@ -49,7 +112,7 @@ namespace DocumentFormat.OpenXml.Linq.Tests
         }
 
         [Fact]
-        public void GetXElement_PartWithRootElementSetButNotSaved_NotNullAndSynchronized()
+        public void GetXElement_PartWithUnsavedRootElement_XElementIsNotNullAndRootXmlStringsAreIdentical()
         {
             // Arrange.
             using var stream = new MemoryStream();
@@ -67,7 +130,124 @@ namespace DocumentFormat.OpenXml.Linq.Tests
         }
 
         [Fact]
-        public void SetXElement_NewPart_NotNullAndSynchronized()
+        public void GetXElement_AfterCallingSetXDocument_XDocumentRootReturned()
+        {
+            // Arrange.
+            using var stream = new MemoryStream();
+            using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
+
+            MainDocumentPart part = wordDocument.AddMainDocumentPart();
+            part.SetXDocument(HelloWorldXDocument);
+
+            // Act and Assert.
+            Assert.Same(part.GetXDocument().Root, part.GetXElement());
+        }
+
+        [Fact]
+        public void GetXElement_AfterCallingSetXDocumentAndSetXElement_XDocumentRootReturned()
+        {
+            // Arrange.
+            using var stream = new MemoryStream();
+            using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
+
+            MainDocumentPart part = wordDocument.AddMainDocumentPart();
+            part.SetXDocument(HelloWorldXDocument);
+
+            var expectedRootXElement = new XElement(W.document, XmlnsW, new XElement(W.body));
+            part.SetXElement(expectedRootXElement);
+
+            // Act and Assert.
+            Assert.Same(part.GetXDocument().Root, part.GetXElement());
+            Assert.Same(expectedRootXElement, part.GetXElement());
+        }
+
+        [Fact]
+        public void GetXElement_AfterAddingXElementToXDocument_XDocumentRootReturned()
+        {
+            // Arrange.
+            using var stream = new MemoryStream();
+            using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
+
+            MainDocumentPart part = wordDocument.AddMainDocumentPart();
+            var partXDocument = part.GetXDocument();
+
+            var expectedRootXElement = HelloWorldXElement;
+            partXDocument.Add(expectedRootXElement);
+
+            // Act and Assert.
+            Assert.Same(part.GetXDocument().Root, part.GetXElement());
+            Assert.Same(expectedRootXElement, part.GetXElement());
+        }
+
+        [Fact]
+        public void GetXElement_AfterReplacingXDocumentsRoot_XDocumentRootReturned()
+        {
+            // Arrange.
+            using var stream = new MemoryStream();
+            using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
+
+            MainDocumentPart part = wordDocument.AddMainDocumentPart();
+
+            var partXDocument = HelloWorldXDocument;
+            part.SetXDocument(partXDocument);
+
+            var expectedRootXElement = new XElement(W.document, XmlnsW, new XElement(W.body));
+            partXDocument.Root!.ReplaceWith(expectedRootXElement);
+
+            // Act and Assert.
+            Assert.Same(part.GetXDocument().Root, part.GetXElement());
+            Assert.Same(expectedRootXElement, part.GetXElement());
+        }
+
+        [Fact]
+        public void SetXDocument_NewPartWithoutRootElement_RootXmlStringsAreIdentical()
+        {
+            // Arrange.
+            using var stream = new MemoryStream();
+            using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
+
+            MainDocumentPart part = wordDocument.AddMainDocumentPart();
+
+            // Act.
+            part.SetXDocument(HelloWorldXDocument);
+
+            // Assert.
+            // Note that the RootXElement has the expected markup.
+            var partXDocument = part.GetXDocument();
+            var rootXElement = partXDocument.Root;
+
+            Assert.NotNull(rootXElement);
+            Assert.Equal(HelloWorldXmlString, rootXElement!.ToString(SaveOptions.DisableFormatting));
+
+            // Note that the RootElement has the expected markup.
+            var rootElement = part.RootElement;
+            Assert.NotNull(rootElement);
+            Assert.Equal(HelloWorldXmlString, rootElement!.OuterXml);
+
+            // Note that the Document has the expected markup.
+            Document document = part.Document;
+            Assert.NotNull(document);
+            Assert.Equal(HelloWorldXmlString, document.OuterXml);
+        }
+
+        [Fact]
+        public void SetXDocument_RootIsNull_ArgumentExceptionThrown()
+        {
+            // Arrange.
+            using var stream = new MemoryStream();
+            using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
+
+            MainDocumentPart part = wordDocument.AddMainDocumentPart();
+
+            var partXDocument = new XDocument(new XDeclaration("1.0", "UTF-8", "yes"));
+            Assert.Null(partXDocument.Root);
+
+            // Act.
+            Assert.Throws<ArgumentException>(() => part.SetXDocument(partXDocument));
+        }
+
+        [Fact]
+        public void SetXElement_NewPartWithoutRootElement_RootXmlStringsAreIdentical()
         {
             // Arrange.
             using var stream = new MemoryStream();
@@ -96,7 +276,20 @@ namespace DocumentFormat.OpenXml.Linq.Tests
         }
 
         [Fact]
-        public void SaveRootXElement_SetDocumentGetAndChangeRootXElement_RootElementSynchronized()
+        public void SetXElement_Null_ArgumentNullExceptionThrown()
+        {
+            // Arrange.
+            using var stream = new MemoryStream();
+            using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
+
+            MainDocumentPart part = wordDocument.AddMainDocumentPart();
+
+            // Act.
+            Assert.Throws<ArgumentNullException>(() => part.SetXElement(null!));
+        }
+
+        [Fact]
+        public void SaveXElement_AfterSettingRootElementCallingGetXElementAndChangingXElement_RootElementSynchronized()
         {
             // Arrange.
             // Set up a WordprocessingDocument with a MainDocumentPart and a Document with a single paragraph.

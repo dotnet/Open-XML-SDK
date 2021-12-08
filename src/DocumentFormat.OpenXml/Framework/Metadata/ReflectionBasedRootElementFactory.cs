@@ -12,6 +12,11 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
     {
         private readonly Lazy<ElementFactoryCollection> _factoryCollection;
 
+        public ReflectionBasedRootElementFactory()
+            : this(typeof(ReflectionBasedRootElementFactory).GetTypeInfo().Assembly, ClassActivator<OpenXmlElement>.CreateActivator)
+        {
+        }
+
         public ReflectionBasedRootElementFactory(Assembly assembly, Func<Type, Func<OpenXmlElement>> activatorFactory)
         {
             _factoryCollection = new Lazy<ElementFactoryCollection>(() => CreatePartLookup(assembly, activatorFactory), isThreadSafe: true);

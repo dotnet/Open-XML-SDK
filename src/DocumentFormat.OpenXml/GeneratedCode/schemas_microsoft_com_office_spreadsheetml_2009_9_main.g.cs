@@ -206,8 +206,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DataValidation), 1, 0, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueRangeConstraint(":xWindow", true, double.NegativeInfinity, true, 65535, true) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueRangeConstraint(":yWindow", true, double.NegativeInfinity, true, 65535, true) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint("x14:xWindow", true, double.NegativeInfinity, true, 65535, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint("x14:yWindow", true, double.NegativeInfinity, true, 65535, true) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -732,7 +732,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 .AddAttribute("defaultImageDpi", a => a.DefaultImageDpi)
 .AddAttribute("discardImageEditData", a => a.DiscardImageEditData)
 .AddAttribute("accuracyVersion", a => a.AccuracyVersion);
-            builder.AddConstraint(new AttributeValueSetConstraint(":defaultImageDpi", true, new string[] { "96", "150", "220" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint("x14:defaultImageDpi", true, new string[] { "96", "150", "220" }) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -882,8 +882,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.TupleSet), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueLengthConstraint(":displayFolder", 0, 65535) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(":mdxLong", 32766, 1073741822) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x14:displayFolder", 0, 65535) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x14:mdxLong", 32766, 1073741822) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -1029,9 +1029,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SetLevels), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueConditionToAnother(":flattenHierarchies", ":ignore", new string[] { "false" }, new string[] { "true" }) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueConditionToAnother(":measuresSet", ":ignore", new string[] { "false" }, new string[] { "true" }) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueConditionToAnother(":hierarchizeDistinct", ":ignore", new string[] { "false" }, new string[] { "true" }) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueConditionToAnother("x14:flattenHierarchies", "x14:ignore", new string[] { "false" }, new string[] { "true" }) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueConditionToAnother("x14:measuresSet", "x14:ignore", new string[] { "false" }, new string[] { "true" }) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueConditionToAnother("x14:hierarchizeDistinct", "x14:ignore", new string[] { "false" }, new string[] { "true" }) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -1125,8 +1125,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 .AddAttribute("pivotShowAs", a => a.PivotShowAs)
 .AddAttribute("sourceField", a => a.SourceField)
 .AddAttribute("uniqueName", a => a.UniqueName);
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":uniqueName", true, null) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(":uniqueName", 0, 65535) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint("x14:uniqueName", true, null) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x14:uniqueName", 0, 65535) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -1430,9 +1430,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotChanges), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormats), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueLengthConstraint(":altText", 0, 2000) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(":altTextSummary", 0, 2000) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(":weightExpression", 0, 65535) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x14:altText", 0, 2000) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x14:altTextSummary", 0, 2000) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x14:weightExpression", 0, 65535) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -1684,8 +1684,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.CalculatedMembers), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueLengthConstraint(":culture", 0, 84) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(":embeddedDataId", 0, 65535) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x14:culture", 0, 84) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x14:embeddedDataId", 0, 65535) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -1762,8 +1762,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             builder.AddElement<Table>()
 .AddAttribute("altText", a => a.AltText)
 .AddAttribute("altTextSummary", a => a.AltTextSummary);
-            builder.AddConstraint(new AttributeValueLengthConstraint(":altText", 0, 25000) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(":altTextSummary", 0, 50000) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x14:altText", 0, 25000) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x14:altTextSummary", 0, 50000) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -1848,7 +1848,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerStyle), 0, 0, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueLengthConstraint(":defaultSlicerStyle", 1, 255) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x14:defaultSlicerStyle", 1, 255) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -2559,9 +2559,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute("dxfId", a => a.FormatId)
 .AddAttribute("iconSet", a => a.IconSet)
 .AddAttribute("iconId", a => a.IconId);
-            builder.AddConstraint(new AttributeAbsentConditionToValue(":dxfId", ":sortBy", "icon", "value") { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeAbsentConditionToNonValue(":iconSet", ":sortBy", "icon") { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeAbsentConditionToNonValue(":iconId", ":sortBy", "icon") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeAbsentConditionToValue("x14:dxfId", "x14:sortBy", "icon", "value") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeAbsentConditionToNonValue("x14:iconSet", "x14:sortBy", "icon") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeAbsentConditionToNonValue("x14:iconId", "x14:sortBy", "icon") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -2695,7 +2695,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueLengthConstraint(":id", 0, 65535) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x14:id", 0, 65535) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -3349,11 +3349,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ListItems), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueRangeConstraint(":dropLines", true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueRangeConstraint(":inc", true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueRangeConstraint(":max", true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueRangeConstraint(":min", true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueRangeConstraint(":page", true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint("x14:dropLines", true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint("x14:inc", true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint("x14:max", true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint("x14:min", true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint("x14:page", true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -4092,15 +4092,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DifferentialType), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueRangeConstraint(":priority", true, 0, false, double.PositiveInfinity, true) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":priority", true, null) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeAbsentConditionToNonValue(":aboveAverage", ":type", "aboveAverage") { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeAbsentConditionToNonValue(":percent", ":type", "top10") { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeAbsentConditionToNonValue(":bottom", ":type", "top10") { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeAbsentConditionToNonValue(":text", ":type", "beginsWith", "containsText", "endsWith", "notContainsText") { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeAbsentConditionToNonValue(":timePeriod", ":type", "timePeriod") { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeAbsentConditionToNonValue(":stdDev", ":type", "aboveAverage") { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeAbsentConditionToNonValue(":equalAverage", ":type", "aboveAverage") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint("x14:priority", true, 0, false, double.PositiveInfinity, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint("x14:priority", true, null) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeAbsentConditionToNonValue("x14:aboveAverage", "x14:type", "aboveAverage") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeAbsentConditionToNonValue("x14:percent", "x14:type", "top10") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeAbsentConditionToNonValue("x14:bottom", "x14:type", "top10") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeAbsentConditionToNonValue("x14:text", "x14:type", "beginsWith", "containsText", "endsWith", "notContainsText") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeAbsentConditionToNonValue("x14:timePeriod", "x14:type", "timePeriod") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeAbsentConditionToNonValue("x14:stdDev", "x14:type", "aboveAverage") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeAbsentConditionToNonValue("x14:equalAverage", "x14:type", "aboveAverage") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -4444,9 +4444,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla2), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.ReferenceSequence), 1, 1)
             };
-            builder.AddConstraint(new AttributeValueLengthConstraint(":error", 0, 225) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(":promptTitle", 0, 32) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(":prompt", 0, 225) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x14:error", 0, 225) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x14:promptTitle", 0, 32) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x14:prompt", 0, 225) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -5054,8 +5054,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Formula), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Sparklines), 1, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueConditionToAnother(":manualMin", ":minAxisType", new string[] { "0" }, new string[] { "individual", "group" }) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueRangeConstraint(":lineWeight", true, 0, true, 1584, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueConditionToAnother("x14:manualMin", "x14:minAxisType", new string[] { "0" }, new string[] { "individual", "group" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint("x14:lineWeight", true, 0, true, 1584, true) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -5214,7 +5214,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema("x14:colorSeries");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddConstraint(new AttributeValueSetConstraint(":auto", true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint("x14:auto", true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -5243,7 +5243,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema("x14:colorNegative");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddConstraint(new AttributeValueSetConstraint(":auto", true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint("x14:auto", true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -5272,7 +5272,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema("x14:colorAxis");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddConstraint(new AttributeValueSetConstraint(":auto", true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint("x14:auto", true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -5301,7 +5301,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema("x14:colorMarkers");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddConstraint(new AttributeValueSetConstraint(":auto", true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint("x14:auto", true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -5330,7 +5330,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema("x14:colorFirst");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddConstraint(new AttributeValueSetConstraint(":auto", true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint("x14:auto", true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -5359,7 +5359,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema("x14:colorLast");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddConstraint(new AttributeValueSetConstraint(":auto", true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint("x14:auto", true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -5388,7 +5388,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema("x14:colorHigh");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddConstraint(new AttributeValueSetConstraint(":auto", true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint("x14:auto", true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -5901,10 +5901,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", false, null) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(":name", 1, 32767) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(":caption", 1, int.MaxValue) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueRangeConstraint(":columnCount", true, 1, true, 20000, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint("x14:name", false, null) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x14:name", 1, 32767) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x14:caption", 1, int.MaxValue) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint("x14:columnCount", true, 1, true, 20000, true) { Version = FileFormatVersions.Office2010 });
             builder.AddConstraint(new RelationshipExistConstraint("r:id") { Version = FileFormatVersions.Office2010 });
         }
 
@@ -6043,7 +6043,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescriptions), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", true, "x14:definedNames") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint("x14:name", true, "x14:definedNames") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -6200,7 +6200,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":index", true, "x14:argumentDescriptions") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint("x14:index", true, "x14:argumentDescriptions") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -6517,8 +6517,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddElement<TupleSetHeader>()
 .AddAttribute("uniqueName", a => a.UniqueName)
 .AddAttribute("hierarchyName", a => a.HierarchyName);
-            builder.AddConstraint(new AttributeValueLengthConstraint(":uniqueName", 0, 65535) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(":hierarchyName", 0, 65535) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x14:uniqueName", 0, 65535) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x14:hierarchyName", 0, 65535) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -6645,8 +6645,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddElement<TupleSetRowItem>()
 .AddAttribute("u", a => a.UniqueName)
 .AddAttribute("d", a => a.DisplayName);
-            builder.AddConstraint(new AttributeValueLengthConstraint(":u", 0, 65535) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(":d", 0, 65535) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x14:u", 0, 65535) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x14:d", 0, 65535) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -6696,7 +6696,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.AddConstraint(new AttributeValueRangeConstraint(":hierarchy", true, -2, true, double.PositiveInfinity, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint("x14:hierarchy", true, -2, true, double.PositiveInfinity, true) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -7076,8 +7076,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.NegativeBorderColor), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.BarAxisColor), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueLessEqualToAnother(":minLength", ":maxLength", true) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueRangeConstraint(":maxLength", true, double.NegativeInfinity, true, 100, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLessEqualToAnother("x14:minLength", "x14:maxLength", true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint("x14:maxLength", true, double.NegativeInfinity, true, 100, true) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -8569,7 +8569,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.TupleItems), 1, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueLengthConstraint(":weightExpression", 1, 65535) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x14:weightExpression", 1, 65535) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -8671,7 +8671,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(":valueType", 1, 32767) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x14:valueType", 1, 32767) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -9013,9 +9013,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotAreas), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueSetConstraint(":type", true, new string[] { "none" }) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueRangeConstraint(":priority", true, 1, true, double.PositiveInfinity, true) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new ReferenceExistConstraint(":priority", "..", "x14:cfRule", "x14:cfRule", ":priority") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint("x14:type", true, new string[] { "none" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint("x14:priority", true, 1, true, double.PositiveInfinity, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new ReferenceExistConstraint("x14:priority", "..", "x14:cfRule", "x14:cfRule", "x14:priority") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -9207,9 +9207,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElements), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueLengthConstraint(":name", 1, 255) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new ReferenceExistConstraint(":name", ".", "x:tableStyle", "x:tableStyle", ":name") { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", true, "x14:slicerStyles") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x14:name", 1, 255) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new ReferenceExistConstraint("x14:name", ".", "x:tableStyle", "x:tableStyle", "x:name") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint("x14:name", true, "x14:slicerStyles") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -9289,8 +9289,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute("dxfId", a => a.FormatId);
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":type", true, "x14:slicerStyleElements") { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new IndexReferenceConstraint(":dxfId", ".", null, "x:dxf", "x:dxf", 0) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint("x14:type", true, "x14:slicerStyleElements") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new IndexReferenceConstraint("x14:dxfId", ".", null, "x:dxf", "x:dxf", 0) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -9710,9 +9710,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.ReferenceSequence), 1, 1)
             };
-            builder.AddConstraint(new AttributeMutualExclusive(":password", ":algorithmName") { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueRangeConstraint(":spinCount", true, double.NegativeInfinity, true, 10000000, true) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(":name", 1, 255) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeMutualExclusive("x14:password", "x14:algorithmName") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint("x14:spinCount", true, double.NegativeInfinity, true, 10000000, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x14:name", 1, 255) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -10147,10 +10147,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":name", false, null) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(":name", 1, 32767) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueLengthConstraint(":caption", 1, int.MaxValue) { Version = FileFormatVersions.Office2010 });
-            builder.AddConstraint(new AttributeValueRangeConstraint(":columnCount", true, 1, true, 20000, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint("x14:name", false, null) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x14:name", 1, 32767) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x14:caption", 1, int.MaxValue) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint("x14:columnCount", true, 1, true, 20000, true) { Version = FileFormatVersions.Office2010 });
             builder.AddConstraint(new RelationshipExistConstraint("r:id") { Version = FileFormatVersions.Office2010 });
         }
 
@@ -10544,7 +10544,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.AddConstraint(new ReferenceExistConstraint(":tabId", "/WorkbookPart", "x:sheet", "x:sheet", ":sheetId") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new ReferenceExistConstraint("x14:tabId", "/WorkbookPart", "x:sheet", "x:sheet", "x:sheetId") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -10712,7 +10712,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItemParent), 0, 0, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":x", true, "x14:items") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint("x14:x", true, "x14:items") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -10797,7 +10797,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItem), 1, 0, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValuePatternConstraint(":startItem", @"(0|[1-9][0-9]*000)") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValuePatternConstraint("x14:startItem", @"(0|[1-9][0-9]*000)") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>
@@ -11016,7 +11016,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRanges), 0, 1, version: FileFormatVersions.Office2010)
             };
-            builder.AddConstraint(new AttributeValueLengthConstraint(":uniqueName", 1, 32767) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint("x14:uniqueName", 1, 32767) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -11440,7 +11440,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute("s", a => a.IsSelected)
 .AddAttribute("nd", a => a.NonDisplay);
-            builder.AddConstraint(new UniqueAttributeValueConstraint(":x", true, "x14:items") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint("x14:x", true, "x14:items") { Version = FileFormatVersions.Office2010 });
         }
 
         /// <inheritdoc/>

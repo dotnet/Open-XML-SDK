@@ -32350,7 +32350,7 @@
   "Key": "DocumentFormat.OpenXml.Office.Drawing.Drawing",
   "Value": [
    {
-    "Key": "Office2007, Office2010, Office2013, Office2016, Office2019, Office2021",
+    "Key": "Office2010, Office2013, Office2016, Office2019, Office2021",
     "Value": {
      "ChildrenParticles": [
       {
@@ -32366,7 +32366,7 @@
   "Key": "DocumentFormat.OpenXml.Office.Drawing.GroupShape",
   "Value": [
    {
-    "Key": "Office2007, Office2010, Office2013, Office2016, Office2019, Office2021",
+    "Key": "Office2010, Office2013, Office2016, Office2019, Office2021",
     "Value": {
      "ChildrenParticles": [
       {
@@ -32402,7 +32402,7 @@
   "Key": "DocumentFormat.OpenXml.Office.Drawing.GroupShapeNonVisualProperties",
   "Value": [
    {
-    "Key": "Office2007, Office2010, Office2013, Office2016, Office2019, Office2021",
+    "Key": "Office2010, Office2013, Office2016, Office2019, Office2021",
     "Value": {
      "ChildrenParticles": [
       {
@@ -32421,7 +32421,7 @@
   "Key": "DocumentFormat.OpenXml.Office.Drawing.GroupShapeProperties",
   "Value": [
    {
-    "Key": "Office2007, Office2010, Office2013, Office2016, Office2019, Office2021",
+    "Key": "Office2010, Office2013, Office2016, Office2019, Office2021",
     "Value": {
      "ChildrenParticles": [
       {
@@ -32492,7 +32492,7 @@
   "Key": "DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingProperties",
   "Value": [
    {
-    "Key": "Office2007, Office2010, Office2013, Office2016, Office2019, Office2021",
+    "Key": "Office2010, Office2013, Office2016, Office2019, Office2021",
     "Value": {
      "ChildrenParticles": [
       {
@@ -32517,7 +32517,7 @@
   "Key": "DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingShapeProperties",
   "Value": [
    {
-    "Key": "Office2007, Office2010, Office2013, Office2016, Office2019, Office2021",
+    "Key": "Office2010, Office2013, Office2016, Office2019, Office2021",
     "Value": {
      "ChildrenParticles": [
       {
@@ -32538,7 +32538,7 @@
   "Key": "DocumentFormat.OpenXml.Office.Drawing.NonVisualGroupDrawingShapeProperties",
   "Value": [
    {
-    "Key": "Office2007, Office2010, Office2013, Office2016, Office2019, Office2021",
+    "Key": "Office2010, Office2013, Office2016, Office2019, Office2021",
     "Value": {
      "ChildrenParticles": [
       {
@@ -32559,7 +32559,7 @@
   "Key": "DocumentFormat.OpenXml.Office.Drawing.OfficeArtExtensionList",
   "Value": [
    {
-    "Key": "Office2007, Office2010, Office2013, Office2016, Office2019, Office2021",
+    "Key": "Office2010, Office2013, Office2016, Office2019, Office2021",
     "Value": {
      "ChildrenParticles": [
       {
@@ -32587,7 +32587,7 @@
   "Key": "DocumentFormat.OpenXml.Office.Drawing.Shape",
   "Value": [
    {
-    "Key": "Office2007, Office2010, Office2013, Office2016, Office2019, Office2021",
+    "Key": "Office2010, Office2013, Office2016, Office2019, Office2021",
     "Value": {
      "ChildrenParticles": [
       {
@@ -32622,7 +32622,7 @@
   "Key": "DocumentFormat.OpenXml.Office.Drawing.ShapeNonVisualProperties",
   "Value": [
    {
-    "Key": "Office2007, Office2010, Office2013, Office2016, Office2019, Office2021",
+    "Key": "Office2010, Office2013, Office2016, Office2019, Office2021",
     "Value": {
      "ChildrenParticles": [
       {
@@ -32641,7 +32641,7 @@
   "Key": "DocumentFormat.OpenXml.Office.Drawing.ShapeProperties",
   "Value": [
    {
-    "Key": "Office2007, Office2010, Office2013, Office2016, Office2019, Office2021",
+    "Key": "Office2010, Office2013, Office2016, Office2019, Office2021",
     "Value": {
      "ChildrenParticles": [
       {
@@ -32737,7 +32737,7 @@
   "Key": "DocumentFormat.OpenXml.Office.Drawing.ShapeStyle",
   "Value": [
    {
-    "Key": "Office2007, Office2010, Office2013, Office2016, Office2019, Office2021",
+    "Key": "Office2010, Office2013, Office2016, Office2019, Office2021",
     "Value": {
      "ChildrenParticles": [
       {
@@ -32762,7 +32762,7 @@
   "Key": "DocumentFormat.OpenXml.Office.Drawing.ShapeTree",
   "Value": [
    {
-    "Key": "Office2007, Office2010, Office2013, Office2016, Office2019, Office2021",
+    "Key": "Office2010, Office2013, Office2016, Office2019, Office2021",
     "Value": {
      "ChildrenParticles": [
       {
@@ -32798,7 +32798,7 @@
   "Key": "DocumentFormat.OpenXml.Office.Drawing.TextBody",
   "Value": [
    {
-    "Key": "Office2007, Office2010, Office2013, Office2016, Office2019, Office2021",
+    "Key": "Office2010, Office2013, Office2016, Office2019, Office2021",
     "Value": {
      "ChildrenParticles": [
       {
@@ -32822,7 +32822,7 @@
   "Key": "DocumentFormat.OpenXml.Office.Drawing.Transform2D",
   "Value": [
    {
-    "Key": "Office2007, Office2010, Office2013, Office2016, Office2019, Office2021",
+    "Key": "Office2010, Office2013, Office2016, Office2019, Office2021",
     "Value": {
      "ChildrenParticles": [
       {
@@ -60198,7 +60198,7 @@
   "Key": "DocumentFormat.OpenXml.Spreadsheet.DataValidation",
   "Value": [
    {
-    "Key": "Office2013, Office2016, Office2019, Office2021",
+    "Key": "Office2010, Office2013, Office2016, Office2019, Office2021",
     "Value": {
      "ChildrenParticles": [
       {
@@ -60218,7 +60218,7 @@
     }
    },
    {
-    "Key": "Office2007, Office2010",
+    "Key": "Office2007",
     "Value": {
      "ChildrenParticles": [
       {

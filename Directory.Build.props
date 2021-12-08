@@ -22,6 +22,10 @@
   </PropertyGroup>
 
   <PropertyGroup>
+    <IncludeSourceGenerator>false</IncludeSourceGenerator>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <InformationalVersion>$(GitVersion_InformationalVersion)</InformationalVersion>
     <FileVersion>$(GitVersion_MajorMinorPatch)</FileVersion>
     <AssemblyVersion>$(GitVersion_AssemblySemVer)</AssemblyVersion>
