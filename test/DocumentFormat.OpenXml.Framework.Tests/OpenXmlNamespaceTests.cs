@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             Assert.Equal(141, resolver.GetNamespacesInScope(System.Xml.XmlNamespaceScope.All).Count);
         }
 
-        [InlineData("", "", FileFormatVersions.None, 0)]
+        [InlineData("", "", FileFormatVersions.Office2007, 0)]
         [InlineData("http://www.w3.org/XML/1998/namespace", "xml", FileFormatVersions.Office2007, 1)]
         [InlineData("http://schemas.openxmlformats.org/package/2006/metadata/core-properties", "cp", FileFormatVersions.Office2007, 2)]
         [InlineData("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "ap", FileFormatVersions.Office2007, 3)]

@@ -60198,7 +60198,7 @@
   "Key": "DocumentFormat.OpenXml.Spreadsheet.DataValidation",
   "Value": [
    {
-    "Key": "Office2010, Office2013, Office2016, Office2019, Office2021",
+    "Key": "Office2013, Office2016, Office2019, Office2021",
     "Value": {
      "ChildrenParticles": [
       {
@@ -60218,7 +60218,7 @@
     }
    },
    {
-    "Key": "Office2007",
+    "Key": "Office2007, Office2010",
     "Value": {
      "ChildrenParticles": [
       {

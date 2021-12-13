@@ -33,7 +33,8 @@ namespace DocumentFormat.OpenXml.Framework
 
         public FileFormatVersions Version => DefaultFeatures.Shared.GetRequired<IOpenXmlNamespaceResolver>().GetVersion(this);
 
-        public bool HasVersion(FileFormatVersions version) => (version & Version) == version;
+        public bool HasVersion(FileFormatVersions version)
+            => Version == version;
 
         /// <summary>
         /// Attempts to get the Transitional equivalent namespace.

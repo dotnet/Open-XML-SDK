@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
-using System;
 using System.Collections.Generic;
 using System.Xml;
 
@@ -38,9 +37,11 @@ namespace DocumentFormat.OpenXml.Features
         public bool TryGetExtendedNamespace(OpenXmlNamespace ns, out OpenXmlNamespace extNamespaceUri)
             => _extendedNamespaces.TryGetValue(ns.Uri, out extNamespaceUri);
 
+        /// <inheritdoc />
         public FileFormatVersions GetVersion(OpenXmlNamespace ns)
         {
-            if (_urlToPrefix.TryGetValue(ns.Uri, out var prefix) && _prefixToVersion.TryGetValue(prefix, out var version))
+            var normalized = NormalizeNamespace(ns.Uri);
+            if (_urlToPrefix.TryGetValue(normalized, out var prefix) && _prefixToVersion.TryGetValue(prefix, out var version))
             {
                 return version;
             }

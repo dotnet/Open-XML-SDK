@@ -5,7 +5,6 @@ namespace DocumentFormat.OpenXml.Generator.Models;
 
 public enum OfficeVersion
 {
-    None = int.MinValue,
     Office2007 = 0,
     Office2010 = 1,
     Office2013 = 2,
