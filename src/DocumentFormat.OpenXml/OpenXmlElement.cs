@@ -1641,7 +1641,7 @@ namespace DocumentFormat.OpenXml
                         throw new InvalidMCContentException(SR.Format(ExceptionMessages.UnknowMCContent, mcAttributes.MustUnderstand.Value));
                     }
 
-                    if (ns.IsInVersion(mcSettings.TargetFileFormatVersions))
+                    if (ns.HasVersion(mcSettings.TargetFileFormatVersions))
                     {
                         continue;
                     }
@@ -1673,7 +1673,7 @@ namespace DocumentFormat.OpenXml
                         throw new InvalidMCContentException(SR.Format(ExceptionMessages.UnknowMCContent, MCAttributes.MustUnderstand.Value));
                     }
 
-                    if (ns.IsInVersion(OpenXmlElementContext.MCSettings.TargetFileFormatVersions))
+                    if (ns.HasVersion(OpenXmlElementContext.MCSettings.TargetFileFormatVersions))
                     {
                         continue;
                     }

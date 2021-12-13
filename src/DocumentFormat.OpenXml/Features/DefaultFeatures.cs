@@ -17,6 +17,8 @@ namespace DocumentFormat.OpenXml.Features
 
         [KnownFeature(typeof(IRootElementFactory), typeof(ReflectionBasedRootElementFactory))]
         [KnownFeature(typeof(IPartMetadataFeature), typeof(CachedPartMetadataProvider))]
+        [KnownFeature(typeof(IOpenXmlNamespaceResolver), typeof(OpenXmlNamespaceResolver))]
+        [KnownFeature(typeof(IOpenXmlNamespaceIdResolver), typeof(OpenXmlNamespaceIdResolver))]
         public partial TFeature? Get<TFeature>();
 
         public void Set<TFeature>(TFeature? instance)

@@ -1,0 +1,661 @@
+[
+  {
+    "Prefix": "",
+    "Uri": "",
+    "Version": "None"
+  },
+  {
+    "Prefix": "a",
+    "Uri": "http://schemas.openxmlformats.org/drawingml/2006/main"
+  },
+  {
+    "Prefix": "a14",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2010/main",
+    "Version": "Office2010"
+  },
+  {
+    "Prefix": "a15",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2012/main",
+    "Version": "Office2013"
+  },
+  {
+    "Prefix": "a16",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2014/main",
+    "Version": "Office2016"
+  },
+  {
+    "Prefix": "a1611",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2016/11/main",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "a3danim",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2018/animation/model3d",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "aanim",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2018/animation",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "ac",
+    "Uri": "http://schemas.openxmlformats.org/officeDocument/2006/characteristics"
+  },
+  {
+    "Prefix": "aclsh",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2020/classificationShape",
+    "Version": "Office2021"
+  },
+  {
+    "Prefix": "adec",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2017/decorative",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "ahyp",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "aink",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2016/ink",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "alf",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2021/livefeed",
+    "Version": "Office2021"
+  },
+  {
+    "Prefix": "am3d",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2017/model3d",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "ap",
+    "Uri": "http://schemas.openxmlformats.org/officeDocument/2006/extended-properties"
+  },
+  {
+    "Prefix": "ask",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2018/sketchyshapes",
+    "Version": "Office2021"
+  },
+  {
+    "Prefix": "asvg",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2016/SVG/main",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "ax",
+    "Uri": "http://schemas.microsoft.com/office/2006/activeX"
+  },
+  {
+    "Prefix": "b",
+    "Uri": "http://schemas.openxmlformats.org/officeDocument/2006/bibliography"
+  },
+  {
+    "Prefix": "c",
+    "Uri": "http://schemas.openxmlformats.org/drawingml/2006/chart"
+  },
+  {
+    "Prefix": "c14",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2007/8/2/chart",
+    "Version": "Office2010"
+  },
+  {
+    "Prefix": "c15",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2012/chart",
+    "Version": "Office2013"
+  },
+  {
+    "Prefix": "c16",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2014/chart",
+    "Version": "Office2016"
+  },
+  {
+    "Prefix": "c16ac",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2014/chart/ac",
+    "Version": "Office2016"
+  },
+  {
+    "Prefix": "c16r3",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2017/03/chart",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "cdip",
+    "Uri": "http://schemas.microsoft.com/office/2006/customDocumentInformationPanel"
+  },
+  {
+    "Prefix": "cdr",
+    "Uri": "http://schemas.openxmlformats.org/drawingml/2006/chartDrawing"
+  },
+  {
+    "Prefix": "cdr14",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2010/chartDrawing",
+    "Version": "Office2010"
+  },
+  {
+    "Prefix": "clbl",
+    "Uri": "http://schemas.microsoft.com/office/2020/mipLabelMetadata",
+    "Version": "Office2021"
+  },
+  {
+    "Prefix": "com14",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2010/compatibility",
+    "Version": "Office2010"
+  },
+  {
+    "Prefix": "comp",
+    "Uri": "http://schemas.openxmlformats.org/drawingml/2006/compatibility"
+  },
+  {
+    "Prefix": "cp",
+    "Uri": "http://schemas.openxmlformats.org/package/2006/metadata/core-properties"
+  },
+  {
+    "Prefix": "cppr",
+    "Uri": "http://schemas.microsoft.com/office/2006/coverPageProps"
+  },
+  {
+    "Prefix": "cs",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2012/chartStyle",
+    "Version": "Office2013"
+  },
+  {
+    "Prefix": "ct",
+    "Uri": "http://schemas.microsoft.com/office/2006/metadata/contentType"
+  },
+  {
+    "Prefix": "cx",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2014/chartex",
+    "Version": "Office2016"
+  },
+  {
+    "Prefix": "dc",
+    "Uri": "http://purl.org/dc/elements/1.1/"
+  },
+  {
+    "Prefix": "dcterms",
+    "Uri": "http://purl.org/dc/terms/"
+  },
+  {
+    "Prefix": "dgm",
+    "Uri": "http://schemas.openxmlformats.org/drawingml/2006/diagram"
+  },
+  {
+    "Prefix": "dgm14",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2010/diagram",
+    "Version": "Office2010"
+  },
+  {
+    "Prefix": "dgm1611",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2016/11/diagram",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "dgm1612",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2016/12/diagram",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "ds",
+    "Uri": "http://schemas.openxmlformats.org/officeDocument/2006/customXml"
+  },
+  {
+    "Prefix": "dsp",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2008/diagram",
+    "Version": "Office2010"
+  },
+  {
+    "Prefix": "emma",
+    "Uri": "http://www.w3.org/2003/04/emma"
+  },
+  {
+    "Prefix": "inkml",
+    "Uri": "http://www.w3.org/2003/InkML"
+  },
+  {
+    "Prefix": "lc",
+    "Uri": "http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas"
+  },
+  {
+    "Prefix": "lp",
+    "Uri": "http://schemas.microsoft.com/office/2006/metadata/longProperties"
+  },
+  {
+    "Prefix": "m",
+    "Uri": "http://schemas.openxmlformats.org/officeDocument/2006/math"
+  },
+  {
+    "Prefix": "ma",
+    "Uri": "http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes"
+  },
+  {
+    "Prefix": "mc",
+    "Uri": "http://schemas.openxmlformats.org/markup-compatibility/2006"
+  },
+  {
+    "Prefix": "md",
+    "Uri": "http://schemas.microsoft.com/office/office/2011/9/metroDictionary",
+    "Version": "Office2013"
+  },
+  {
+    "Prefix": "msink",
+    "Uri": "http://schemas.microsoft.com/ink/2010/main"
+  },
+  {
+    "Prefix": "mso",
+    "Uri": "http://schemas.microsoft.com/office/2006/01/customui"
+  },
+  {
+    "Prefix": "mso14",
+    "Uri": "http://schemas.microsoft.com/office/2009/07/customui",
+    "Version": "Office2010"
+  },
+  {
+    "Prefix": "ntns",
+    "Uri": "http://schemas.microsoft.com/office/2006/metadata/customXsn"
+  },
+  {
+    "Prefix": "o",
+    "Uri": "urn:schemas-microsoft-com:office:office"
+  },
+  {
+    "Prefix": "oac",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2013/main/command",
+    "Version": "Office2016"
+  },
+  {
+    "Prefix": "oel",
+    "Uri": "http://schemas.microsoft.com/office/2019/extlst",
+    "Version": "Office2021"
+  },
+  {
+    "Prefix": "op",
+    "Uri": "http://schemas.openxmlformats.org/officeDocument/2006/custom-properties"
+  },
+  {
+    "Prefix": "p",
+    "Uri": "http://schemas.openxmlformats.org/presentationml/2006/main"
+  },
+  {
+    "Prefix": "p14",
+    "Uri": "http://schemas.microsoft.com/office/powerpoint/2010/main",
+    "Version": "Office2010"
+  },
+  {
+    "Prefix": "p15",
+    "Uri": "http://schemas.microsoft.com/office/powerpoint/2012/main",
+    "Version": "Office2013"
+  },
+  {
+    "Prefix": "p16",
+    "Uri": "http://schemas.microsoft.com/office/powerpoint/2015/main",
+    "Version": "Office2016"
+  },
+  {
+    "Prefix": "p1710",
+    "Uri": "http://schemas.microsoft.com/office/powerpoint/2017/10/main",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "p173",
+    "Uri": "http://schemas.microsoft.com/office/powerpoint/2017/3/main",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "p184",
+    "Uri": "http://schemas.microsoft.com/office/powerpoint/2018/4/main",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "p188",
+    "Uri": "http://schemas.microsoft.com/office/powerpoint/2018/8/main",
+    "Version": "Office2021"
+  },
+  {
+    "Prefix": "p202",
+    "Uri": "http://schemas.microsoft.com/office/powerpoint/2020/02/main",
+    "Version": "Office2021"
+  },
+  {
+    "Prefix": "packaging",
+    "Uri": "http://schemas.microsoft.com/office/internal/2007/ofapi/packaging"
+  },
+  {
+    "Prefix": "pav",
+    "Uri": "http://schemas.microsoft.com/office/2007/6/19/audiovideo",
+    "Version": "Office2010"
+  },
+  {
+    "Prefix": "pc",
+    "Uri": "http://schemas.microsoft.com/office/powerpoint/2013/main/command",
+    "Version": "Office2016"
+  },
+  {
+    "Prefix": "pic",
+    "Uri": "http://schemas.openxmlformats.org/drawingml/2006/picture"
+  },
+  {
+    "Prefix": "pic14",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2010/picture",
+    "Version": "Office2010"
+  },
+  {
+    "Prefix": "pj15",
+    "Uri": "http://schemas.microsoft.com/projectml/2012/main",
+    "Version": "Office2013"
+  },
+  {
+    "Prefix": "ppt1912SchemaUri",
+    "Uri": "http://schemas.microsoft.com/office/powerpoint/2019/12/main",
+    "Version": "Office2021"
+  },
+  {
+    "Prefix": "pRoam",
+    "Uri": "http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings",
+    "Version": "Office2013"
+  },
+  {
+    "Prefix": "pvml",
+    "Uri": "urn:schemas-microsoft-com:office:powerpoint"
+  },
+  {
+    "Prefix": "r",
+    "Uri": "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+  },
+  {
+    "Prefix": "sl",
+    "Uri": "http://schemas.openxmlformats.org/schemaLibrary/2006/main"
+  },
+  {
+    "Prefix": "sle",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2010/slicer",
+    "Version": "Office2010"
+  },
+  {
+    "Prefix": "t",
+    "Uri": "http://schemas.microsoft.com/office/tasks/2019/documenttasks",
+    "Version": "Office2021"
+  },
+  {
+    "Prefix": "thm15",
+    "Uri": "http://schemas.microsoft.com/office/thememl/2012/main",
+    "Version": "Office2013"
+  },
+  {
+    "Prefix": "tsle",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2012/timeslicer",
+    "Version": "Office2013"
+  },
+  {
+    "Prefix": "v",
+    "Uri": "urn:schemas-microsoft-com:vml"
+  },
+  {
+    "Prefix": "vt",
+    "Uri": "http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes"
+  },
+  {
+    "Prefix": "w",
+    "Uri": "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+  },
+  {
+    "Prefix": "w10",
+    "Uri": "urn:schemas-microsoft-com:office:word"
+  },
+  {
+    "Prefix": "w14",
+    "Uri": "http://schemas.microsoft.com/office/word/2010/wordml",
+    "Version": "Office2010"
+  },
+  {
+    "Prefix": "w15",
+    "Uri": "http://schemas.microsoft.com/office/word/2012/wordml",
+    "Version": "Office2013"
+  },
+  {
+    "Prefix": "w16cex",
+    "Uri": "http://schemas.microsoft.com/office/word/2018/wordml/cex",
+    "Version": "Office2021"
+  },
+  {
+    "Prefix": "w16cid",
+    "Uri": "http://schemas.microsoft.com/office/word/2016/wordml/cid",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "w16cur",
+    "Uri": "http://schemas.microsoft.com/office/word/2018/wordml",
+    "Version": "Office2021"
+  },
+  {
+    "Prefix": "w16sdtdh",
+    "Uri": "http://schemas.microsoft.com/office/word/2020/wordml/sdtdatahash",
+    "Version": "Office2021"
+  },
+  {
+    "Prefix": "w16se",
+    "Uri": "http://schemas.microsoft.com/office/word/2015/wordml/symex",
+    "Version": "Office2016"
+  },
+  {
+    "Prefix": "we",
+    "Uri": "http://schemas.microsoft.com/office/webextensions/webextension/2010/11",
+    "Version": "Office2013"
+  },
+  {
+    "Prefix": "wetp",
+    "Uri": "http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11",
+    "Version": "Office2013"
+  },
+  {
+    "Prefix": "wne",
+    "Uri": "http://schemas.microsoft.com/office/word/2006/wordml"
+  },
+  {
+    "Prefix": "wp",
+    "Uri": "http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
+  },
+  {
+    "Prefix": "wp14",
+    "Uri": "http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing",
+    "Version": "Office2010"
+  },
+  {
+    "Prefix": "wp15",
+    "Uri": "http://schemas.microsoft.com/office/word/2012/wordprocessingDrawing",
+    "Version": "Office2013"
+  },
+  {
+    "Prefix": "wpc",
+    "Uri": "http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas",
+    "Version": "Office2010"
+  },
+  {
+    "Prefix": "wpg",
+    "Uri": "http://schemas.microsoft.com/office/word/2010/wordprocessingGroup",
+    "Version": "Office2010"
+  },
+  {
+    "Prefix": "wps",
+    "Uri": "http://schemas.microsoft.com/office/word/2010/wordprocessingShape",
+    "Version": "Office2010"
+  },
+  {
+    "Prefix": "x",
+    "Uri": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+  },
+  {
+    "Prefix": "x12ac",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2011/1/ac",
+    "Version": "Office2013"
+  },
+  {
+    "Prefix": "x14",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2009/9/main",
+    "Version": "Office2010"
+  },
+  {
+    "Prefix": "x14ac",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac",
+    "Version": "Office2010"
+  },
+  {
+    "Prefix": "x15",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main",
+    "Version": "Office2013"
+  },
+  {
+    "Prefix": "x15ac",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2010/11/ac",
+    "Version": "Office2013"
+  },
+  {
+    "Prefix": "x16",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2014/11/main",
+    "Version": "Office2016"
+  },
+  {
+    "Prefix": "x16r2",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2015/02/main",
+    "Version": "Office2016"
+  },
+  {
+    "Prefix": "x16r3",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2018/08/main",
+    "Version": "Office2021"
+  },
+  {
+    "Prefix": "xcalcf",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2018/calcfeatures",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "xda",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2017/dynamicarray",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "xdr",
+    "Uri": "http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing"
+  },
+  {
+    "Prefix": "xdr14",
+    "Uri": "http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing",
+    "Version": "Office2010"
+  },
+  {
+    "Prefix": "xlPr",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2016/01/main",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "xlrd",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2017/richdata",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "xlrd2",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "xlrdwi",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage",
+    "Version": "Office2021"
+  },
+  {
+    "Prefix": "xlrvr",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2020/richvaluerefresh",
+    "Version": "Office2021"
+  },
+  {
+    "Prefix": "xltc",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "xltc2",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2020/threadedcomments2",
+    "Version": "Office2021"
+  },
+  {
+    "Prefix": "xml",
+    "Uri": "http://www.w3.org/XML/1998/namespace"
+  },
+  {
+    "Prefix": "xne",
+    "Uri": "http://schemas.microsoft.com/office/excel/2006/main"
+  },
+  {
+    "Prefix": "xnsv",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews",
+    "Version": "Office2021"
+  },
+  {
+    "Prefix": "xpdl",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2016/pivotdefaultlayout",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "xr",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2014/revision",
+    "Version": "Office2016"
+  },
+  {
+    "Prefix": "xr10",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2016/revision10",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "xr16",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2017/revision16",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "xr2",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2015/revision2",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "xr3",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2016/revision3",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "xr5",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2016/revision5",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "xr6",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2016/revision6",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "xr9",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2016/revision9",
+    "Version": "Office2019"
+  },
+  {
+    "Prefix": "xsd",
+    "Uri": "http://www.w3.org/2001/XMLSchema"
+  },
+  {
+    "Prefix": "xvml",
+    "Uri": "urn:schemas-microsoft-com:office:excel"
+  },
+  {
+    "Prefix": "xxlnp",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2019/extlinksprops",
+    "Version": "Office2021"
+  },
+  {
+    "Prefix": "xxpim",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2020/pivotNov2020",
+    "Version": "Office2021"
+  }
+]

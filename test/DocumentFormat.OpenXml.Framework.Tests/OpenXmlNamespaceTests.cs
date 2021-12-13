@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Framework.Tests
@@ -10,7 +11,8 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void NamespaceCount()
         {
-            Assert.Equal(137, OpenXmlNamespace.Count);
+            var resolver = new OpenXmlNamespaceResolver();
+            Assert.Equal(141, resolver.GetNamespacesInScope(System.Xml.XmlNamespaceScope.All).Count);
         }
 
         [InlineData("", "", FileFormatVersions.None, 0)]
@@ -69,7 +71,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [InlineData("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "x14", FileFormatVersions.Office2010, 53)]
         [InlineData("http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing", "xdr14", FileFormatVersions.Office2010, 54)]
         [InlineData("http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac", "x14ac", FileFormatVersions.Office2010, 55)]
-        [InlineData("http://schemas.microsoft.com/office/drawing/2008/diagram", "dsp", FileFormatVersions.Office2007, 56)]
+        [InlineData("http://schemas.microsoft.com/office/drawing/2008/diagram", "dsp", FileFormatVersions.Office2010, 56)]
         [InlineData("http://schemas.microsoft.com/office/2009/07/customui", "mso14", FileFormatVersions.Office2010, 57)]
         [InlineData("http://schemas.microsoft.com/office/drawing/2010/diagram", "dgm14", FileFormatVersions.Office2010, 58)]
         [InlineData("http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas", "wpc", FileFormatVersions.Office2010, 59)]
@@ -114,7 +116,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             foreach (var v in FileFormatVersionExtensions.AllVersions)
             {
                 Assert.Equal(v == version, nsFromNs.Version == v);
-                Assert.Equal(v == version, nsFromNs.IsInVersion(v));
+                Assert.Equal(v == version, nsFromNs.HasVersion(v));
             }
         }
     }
