@@ -11,4 +11,5 @@ public enum OfficeVersion
     Office2016 = 3,
     Office2019 = 4,
     Office2021 = 5,
+    Microsoft365 = 6,
 }

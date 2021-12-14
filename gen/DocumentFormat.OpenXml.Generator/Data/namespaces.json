@@ -72,6 +72,11 @@
     "Version": "Office2019"
   },
   {
+    "Prefix": "aoe",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2021/oembed",
+    "Version": "Microsoft365"
+  },
+  {
     "Prefix": "ap",
     "Uri": "http://schemas.openxmlformats.org/officeDocument/2006/extended-properties"
   },
@@ -79,6 +84,11 @@
     "Prefix": "ask",
     "Uri": "http://schemas.microsoft.com/office/drawing/2018/sketchyshapes",
     "Version": "Office2021"
+  },
+  {
+    "Prefix": "asl",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2021/scriptlink",
+    "Version": "Microsoft365"
   },
   {
     "Prefix": "asvg",
@@ -315,9 +325,19 @@
     "Version": "Office2021"
   },
   {
+    "Prefix": "p1912",
+    "Uri": "http://schemas.microsoft.com/office/powerpoint/2019/12/main",
+    "Version": "Office2021"
+  },
+  {
     "Prefix": "p202",
     "Uri": "http://schemas.microsoft.com/office/powerpoint/2020/02/main",
     "Version": "Office2021"
+  },
+  {
+    "Prefix": "p216",
+    "Uri": "http://schemas.microsoft.com/office/powerpoint/2021/06/main",
+    "Version": "Microsoft365"
   },
   {
     "Prefix": "packaging",
@@ -346,11 +366,6 @@
     "Prefix": "pj15",
     "Uri": "http://schemas.microsoft.com/projectml/2012/main",
     "Version": "Office2013"
-  },
-  {
-    "Prefix": "ppt1912SchemaUri",
-    "Uri": "http://schemas.microsoft.com/office/powerpoint/2019/12/main",
-    "Version": "Office2021"
   },
   {
     "Prefix": "pRoam",
@@ -453,6 +468,11 @@
   {
     "Prefix": "wne",
     "Uri": "http://schemas.microsoft.com/office/word/2006/wordml"
+  },
+  {
+    "Prefix": "woe",
+    "Uri": "http://schemas.microsoft.com/office/word/2020/oembed",
+    "Version": "Microsoft365"
   },
   {
     "Prefix": "wp",
