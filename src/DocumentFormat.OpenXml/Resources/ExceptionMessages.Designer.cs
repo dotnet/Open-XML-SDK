@@ -11,7 +11,8 @@
 namespace DocumentFormat.OpenXml {
     using System;
     using System.Reflection;
-    
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -537,6 +538,15 @@ namespace DocumentFormat.OpenXml {
         internal static string MultipleRelationshipsToSamePart {
             get {
                 return ResourceManager.GetString("MultipleRelationshipsToSamePart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Namespace ids are only available for namespaces for Office 2021 and before. Please use prefixes or URLs instead..
+        /// </summary>
+        internal static string NamespaceIdNotAvailable {
+            get {
+                return ResourceManager.GetString("NamespaceIdNotAvailable", resourceCulture);
             }
         }
         

@@ -10,14 +10,14 @@ using System.Xml.Linq;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
-    internal sealed class RootXElementFeature : IPartRootXElementFeature, IDisposable
+    internal sealed class OpenXmlPartRootXElementFeature : IOpenXmlPartRootXElementFeature, IDisposable
     {
         private readonly OpenXmlPart _part;
         private readonly IPartRootEventsFeature _events;
 
         private XDocument? _partXDocument;
 
-        public RootXElementFeature(OpenXmlPart part)
+        public OpenXmlPartRootXElementFeature(OpenXmlPart part)
         {
             _part = part;
             _events = _part.Features.GetRequired<IPartRootEventsFeature>();
@@ -82,20 +82,27 @@ namespace DocumentFormat.OpenXml.Packaging
                     throw new ArgumentNullException(nameof(value));
                 }
 
-                var document = Document;
-
-                if (document.Root is null)
+                if (_partXDocument is null)
                 {
-                    document.Add(value);
+                    _partXDocument = new XDocument(new XDeclaration("1.0", "UTF-8", "yes"), value);
+                }
+                else if (_partXDocument.Root is null)
+                {
+                    _partXDocument.Add(value);
                 }
                 else
                 {
-                    document.Root.ReplaceWith(value);
+                    _partXDocument.Root.ReplaceWith(value);
                 }
 
                 Save();
             }
         }
+
+        /// <inheritdoc />
+        [MemberNotNullWhen(true, nameof(_partXDocument))]
+        [MemberNotNullWhen(true, nameof(Root))]
+        public bool IsRootXElementLoaded => _partXDocument?.Root is not null;
 
         private XElement? LoadRootXElement()
         {
@@ -123,11 +130,11 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <inheritdoc />
-        public void Save()
+        public bool Save()
         {
-            if (_partXDocument is null)
+            if (!IsRootXElementLoaded)
             {
-                return;
+                return false;
             }
 
             using (var stream = _part.GetStream(FileMode.Create, FileAccess.Write))
@@ -140,6 +147,8 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 _part.RootElement.Reload();
             }
+
+            return true;
         }
 
         private void OnPartRootChange(FeatureEventArgs<OpenXmlPart> obj)

@@ -7,18 +7,19 @@ using System.Xml.Linq;
 namespace DocumentFormat.OpenXml.Packaging
 {
     /// <summary>
-    /// Extensions to access an <see cref="XElement"/> or <see cref="XDocument"/> instance for parts.
+    /// Extensions to access the <see cref="XElement"/> representation of an <see cref="OpenXmlPart"/>'s
+    /// root element, either directly or via the containing <see cref="XDocument"/>.
     /// </summary>
-    public static class OpenXmlLinqExtensions
+    public static class OpenXmlPartRootXElementExtensions
     {
         /// <summary>
-        /// Will create or get a cached instance of <see cref="IPartRootXElementFeature"/>.
+        /// Will create or get a cached instance of <see cref="IOpenXmlPartRootXElementFeature"/>.
         /// </summary>
         /// <param name="part">The part to provide an <see cref="XElement"/> instance.</param>
-        /// <returns>A <see cref="IPartRootXElementFeature"/>.</returns>
-        public static IPartRootXElementFeature GetPartRootXElementFeature(this OpenXmlPart part)
+        /// <returns>A <see cref="IOpenXmlPartRootXElementFeature"/>.</returns>
+        internal static IOpenXmlPartRootXElementFeature GetOpenXmlPartRootXElementFeature(this OpenXmlPart part)
         {
-            var feature = part.Features.Get<IPartRootXElementFeature>();
+            var feature = part.Features.Get<IOpenXmlPartRootXElementFeature>();
 
             if (feature is not null)
             {
@@ -28,11 +29,11 @@ namespace DocumentFormat.OpenXml.Packaging
             part.AddDisposableFeature();
             part.AddPartRootEventsFeature();
 
-            var xelement = new RootXElementFeature(part);
+            feature = new OpenXmlPartRootXElementFeature(part);
 
-            part.Features.SetDisposable<IPartRootXElementFeature>(xelement);
+            part.Features.SetDisposable(feature);
 
-            return xelement;
+            return feature;
         }
 
         /// <summary>
@@ -59,7 +60,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <seealso cref="SetXDocument"/>
         /// <seealso cref="SaveXDocument"/>
         public static XDocument GetXDocument(this OpenXmlPart part)
-            => part.GetPartRootXElementFeature().Document;
+            => part.GetOpenXmlPartRootXElementFeature().Document;
 
         /// <summary>
         /// Gets an <see cref="XElement"/> representation of the <paramref name="part"/>.
@@ -83,7 +84,19 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <seealso cref="SetXElement"/>
         /// <seealso cref="SaveXElement"/>
         public static XElement? GetXElement(this OpenXmlPart part)
-            => part.GetPartRootXElementFeature().Root;
+            => part.GetOpenXmlPartRootXElementFeature().Root;
+
+        /// <summary>
+        /// Gets a value indicating whether the root <see cref="XElement"/> is loaded from the part
+        /// or it has been set.
+        /// </summary>
+        /// <param name="part">The <see cref="OpenXmlPart"/>.</param>
+        /// <returns>
+        /// <see langword="true"/>, if the current root <see cref="XElement"/> is loaded from the part or it has been set;
+        /// <see langword="false"/>, otherwise.
+        /// </returns>
+        public static bool IsRootXElementLoaded(this OpenXmlPart part)
+            => part.GetOpenXmlPartRootXElementFeature().IsRootXElementLoaded;
 
         /// <summary>
         /// Sets the <see cref="OpenXmlPart"/>'s <see cref="XDocument"/> to the given XDocument,
@@ -95,7 +108,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <seealso cref="GetXDocument"/>
         /// <seealso cref="SaveXDocument"/>
         public static void SetXDocument(this OpenXmlPart part, XDocument document)
-            => part.GetPartRootXElementFeature().Document = document;
+            => part.GetOpenXmlPartRootXElementFeature().Document = document;
 
         /// <summary>
         /// Sets the <see cref="OpenXmlPart"/>'s root <see cref="XElement"/> to the given XElement,
@@ -111,10 +124,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <seealso cref="GetXElement"/>
         /// <seealso cref="SaveXElement"/>
         public static void SetXElement(this OpenXmlPart part, XElement element)
-            => part.GetPartRootXElementFeature().Root = element;
+            => part.GetOpenXmlPartRootXElementFeature().Root = element;
 
         /// <summary>
-        /// Saves the current <see cref="XDocument"/> to the part.
+        /// Saves the current <see cref="XDocument"/> to the part if it and its <see cref="XDocument.Root"/>
+        /// element is not <see langword="null"/>.
         /// </summary>
         /// <remarks>
         /// Calling this method has the same effect as calling <seealso cref="SaveXElement"/>.
@@ -122,11 +136,16 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <see cref="SetXDocument"/>.
         /// </remarks>
         /// <param name="part">The part to save to.</param>
-        public static void SaveXDocument(this OpenXmlPart part)
-            => part.GetPartRootXElementFeature().Save();
+        /// <returns>
+        /// <see langword="true"/>, if the current <see cref="XDocument"/> was saved to the part;
+        /// <see langword="false"/>, otherwise.
+        /// </returns>
+        public static bool SaveXDocument(this OpenXmlPart part)
+            => part.GetOpenXmlPartRootXElementFeature().Save();
 
         /// <summary>
-        /// Saves the current root <see cref="XElement"/> to the part.
+        /// Saves the current <see cref="XDocument"/> to the part if it and its <see cref="XDocument.Root"/>
+        /// element is not <see langword="null"/>.
         /// </summary>
         /// <remarks>
         /// Calling this method has the same effect as calling <see cref="SaveXDocument"/>.
@@ -134,7 +153,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <see cref="SetXElement"/>.
         /// </remarks>
         /// <param name="part">The part to save to.</param>
-        public static void SaveXElement(this OpenXmlPart part)
-            => part.GetPartRootXElementFeature().Save();
+        /// <returns>
+        /// <see langword="true"/>, if the current <see cref="XDocument"/> was saved to the part;
+        /// <see langword="false"/>, otherwise.
+        /// </returns>
+        public static bool SaveXElement(this OpenXmlPart part)
+            => part.GetOpenXmlPartRootXElementFeature().Save();
     }
 }
