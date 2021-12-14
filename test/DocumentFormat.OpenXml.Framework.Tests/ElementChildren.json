@@ -1462,8 +1462,16 @@
         "Namespace": "http://schemas.microsoft.com/office/drawing/2016/SVG/main"
       },
       {
+        "Name": "oembedShared",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2021/oembed"
+      },
+      {
         "Name": "webVideoPr",
         "Namespace": "http://schemas.microsoft.com/office/word/2012/wordprocessingDrawing"
+      },
+      {
+        "Name": "oembed",
+        "Namespace": "http://schemas.microsoft.com/office/word/2020/oembed"
       }
     ]
   },
@@ -9886,6 +9894,22 @@
         "Namespace": "http://schemas.microsoft.com/office/drawing/2018/sketchyshapes"
       },
       {
+        "Name": "classification",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2020/classificationShape"
+      },
+      {
+        "Name": "liveFeedProps",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2021/livefeed"
+      },
+      {
+        "Name": "oembedShared",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2021/oembed"
+      },
+      {
+        "Name": "scriptLink",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2021/scriptlink"
+      },
+      {
         "Name": "contentPart",
         "Namespace": "http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing"
       },
@@ -10192,6 +10216,10 @@
       {
         "Name": "webVideoPr",
         "Namespace": "http://schemas.microsoft.com/office/word/2012/wordprocessingDrawing"
+      },
+      {
+        "Name": "oembed",
+        "Namespace": "http://schemas.microsoft.com/office/word/2020/oembed"
       },
       {
         "Name": "chart",
@@ -12270,6 +12298,14 @@
       {
         "Name": "decorative",
         "Namespace": "http://schemas.microsoft.com/office/drawing/2017/decorative"
+      },
+      {
+        "Name": "classification",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2020/classificationShape"
+      },
+      {
+        "Name": "scriptLink",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2021/scriptlink"
       }
     ]
   },
@@ -12392,6 +12428,10 @@
       {
         "Name": "signatureLine",
         "Namespace": "http://schemas.microsoft.com/office/drawing/2012/main"
+      },
+      {
+        "Name": "liveFeedProps",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2021/livefeed"
       }
     ]
   },
@@ -20455,6 +20495,195 @@
   },
   {
     "Element": "DocumentFormat.OpenXml.Math.ZeroWidth",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2021/oembed"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OfficeArtExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.OfficeArtExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.ScriptLink",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2021/scriptlink"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AddEmpty",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AsgnTaskAssignUnassignUser",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.CommentAnchor",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.openxmlformats.org/presentationml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskAnchor",
+    "Children": [
+      {
+        "Name": "comment",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistory",
+    "Children": [
+      {
+        "Name": "event",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryDetails",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      },
+      {
+        "Name": "history",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryEvent",
+    "Children": [
+      {
+        "Name": "add",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      },
+      {
+        "Name": "anchr",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      },
+      {
+        "Name": "asgn",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      },
+      {
+        "Name": "atrbtn",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      },
+      {
+        "Name": "date",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      },
+      {
+        "Name": "pcntCmplt",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      },
+      {
+        "Name": "pri",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      },
+      {
+        "Name": "title",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      },
+      {
+        "Name": "unAsgn",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      },
+      {
+        "Name": "unasgnAll",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      },
+      {
+        "Name": "undo",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      },
+      {
+        "Name": "unknown",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskPriorityRecord",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskProgressEventInfo",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskScheduleEventInfo",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskTitleEventInfo",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskUndo",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskUnknownRecord",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.UnAsgnTaskAssignUnassignUser",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.UnasgnAllEmpty",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Microsoft365.Word.OEmbed.OEmbed",
     "Children": []
   },
   {
@@ -35979,6 +36208,89 @@
     "Children": []
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundBlurProperties",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2021/livefeed"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundCustomProperties",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2021/livefeed"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundNormalProperties",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2021/livefeed"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundRemovedProperties",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2021/livefeed"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties",
+    "Children": [
+      {
+        "Name": "Blur",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2021/livefeed"
+      },
+      {
+        "Name": "Custom",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2021/livefeed"
+      },
+      {
+        "Name": "Normal",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2021/livefeed"
+      },
+      {
+        "Name": "Removed",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2021/livefeed"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2021/livefeed"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedProperties",
+    "Children": [
+      {
+        "Name": "backgroundProps",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2021/livefeed"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2021/livefeed"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      }
+    ]
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchCurvedEmpty",
     "Children": []
   },
@@ -36583,11 +36895,11 @@
     "Children": [
       {
         "Name": "comment",
-        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2019/12/main"
+        "Namespace": ""
       },
       {
         "Name": "extLst",
-        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2019/12/main"
+        "Namespace": ""
       }
     ]
   },
@@ -36596,7 +36908,7 @@
     "Children": [
       {
         "Name": "event",
-        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2019/12/main"
+        "Namespace": ""
       }
     ]
   },
@@ -36605,11 +36917,11 @@
     "Children": [
       {
         "Name": "extLst",
-        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2019/12/main"
+        "Namespace": ""
       },
       {
         "Name": "history",
-        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2019/12/main"
+        "Namespace": ""
       }
     ]
   },
@@ -36618,55 +36930,55 @@
     "Children": [
       {
         "Name": "add",
-        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2019/12/main"
+        "Namespace": ""
       },
       {
         "Name": "anchr",
-        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2019/12/main"
+        "Namespace": ""
       },
       {
         "Name": "asgn",
-        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2019/12/main"
+        "Namespace": ""
       },
       {
         "Name": "atrbtn",
-        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2019/12/main"
+        "Namespace": ""
       },
       {
         "Name": "date",
-        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2019/12/main"
+        "Namespace": ""
       },
       {
         "Name": "extLst",
-        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2019/12/main"
+        "Namespace": ""
       },
       {
         "Name": "pcntCmplt",
-        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2019/12/main"
+        "Namespace": ""
       },
       {
         "Name": "pri",
-        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2019/12/main"
+        "Namespace": ""
       },
       {
         "Name": "title",
-        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2019/12/main"
+        "Namespace": ""
       },
       {
         "Name": "unAsgn",
-        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2019/12/main"
+        "Namespace": ""
       },
       {
         "Name": "unasgnAll",
-        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2019/12/main"
+        "Namespace": ""
       },
       {
         "Name": "undo",
-        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2019/12/main"
+        "Namespace": ""
       },
       {
         "Name": "unknown",
-        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2019/12/main"
+        "Namespace": ""
       }
     ]
   },

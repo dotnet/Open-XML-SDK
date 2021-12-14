@@ -10,7 +10,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void NamespaceCount()
         {
-            Assert.Equal(137, OpenXmlNamespace.Count);
+            Assert.Equal(142, OpenXmlNamespace.Count);
         }
 
         [InlineData("", "", FileFormatVersions.None, 0)]

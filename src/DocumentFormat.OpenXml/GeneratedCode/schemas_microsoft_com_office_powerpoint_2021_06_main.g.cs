@@ -15,22 +15,22 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
+namespace DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks
 {
     /// <summary>
     /// <para>Defines the TaskHistoryDetails Class.</para>
-    /// <para>This class is available in Office 2021 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is p1912:taskHistoryDetails.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is p216:taskHistoryDetails.</para>
     /// </summary>
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList" /> <c>&lt;p1912:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistory" /> <c>&lt;p1912:history></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList" /> <c>&lt;p216:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistory" /> <c>&lt;p216:history></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr("p1912:taskHistoryDetails")]
+    [SchemaAttr("p216:taskHistoryDetails")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskHistoryDetails : OpenXmlCompositeElement
     {
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office 2021 and later.</para>
+        /// <para>id, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -84,10 +84,10 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:taskHistoryDetails");
-            builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistory>();
+            builder.SetSchema("p216:taskHistoryDetails");
+            builder.Availability = FileFormatVersions.Microsoft365;
+            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistory>();
             builder.AddElement<TaskHistoryDetails>()
 .AddAttribute("id", a => a.Id, aBuilder =>
 {
@@ -96,34 +96,34 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistory), 1, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistory), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
         /// <summary>
         /// <para>TaskHistory.</para>
-        /// <para>Represents the following element tag in the schema: p1912:history.</para>
+        /// <para>Represents the following element tag in the schema: p216:history.</para>
         /// </summary>
         /// <remark>
-        /// xmlns:p1912 = http://schemas.microsoft.com/office/powerpoint/2019/12/main
+        /// xmlns:p216 = http://schemas.microsoft.com/office/powerpoint/2021/06/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistory? TaskHistory
+        public DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistory? TaskHistory
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistory>();
+            get => GetElement<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistory>();
             set => SetElement(value);
         }
 
         /// <summary>
         /// <para>ExtensionList.</para>
-        /// <para>Represents the following element tag in the schema: p1912:extLst.</para>
+        /// <para>Represents the following element tag in the schema: p216:extLst.</para>
         /// </summary>
         /// <remark>
-        /// xmlns:p1912 = http://schemas.microsoft.com/office/powerpoint/2019/12/main
+        /// xmlns:p216 = http://schemas.microsoft.com/office/powerpoint/2021/06/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -133,11 +133,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the CommentAnchor Class.</para>
-    /// <para>This class is available in Office 2021 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is p1912:comment.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is p216:comment.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr("p1912:comment")]
+    [SchemaAttr("p216:comment")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentAnchor : OpenXmlLeafElement
     {
@@ -149,7 +149,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office 2021 and later.</para>
+        /// <para>id, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -167,8 +167,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:comment");
-            builder.Availability = FileFormatVersions.Office2021;
+            builder.SetSchema("p216:comment");
+            builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddElement<CommentAnchor>()
 .AddAttribute("id", a => a.Id, aBuilder =>
 {
@@ -183,8 +183,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the ExtensionList Class.</para>
-    /// <para>This class is available in Office 2021 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is p1912:extLst.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is p216:extLst.</para>
     /// </summary>
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
@@ -193,7 +193,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr("p1912:extLst")]
+    [SchemaAttr("p216:extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ExtensionList : OpenXmlCompositeElement
     {
@@ -231,8 +231,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:extLst");
-            builder.Availability = FileFormatVersions.Office2021;
+            builder.SetSchema("p216:extLst");
+            builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -252,11 +252,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the AtrbtnTaskAssignUnassignUser Class.</para>
-    /// <para>This class is available in Office 2021 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is p1912:atrbtn.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is p216:atrbtn.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr("p1912:atrbtn")]
+    [SchemaAttr("p216:atrbtn")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AtrbtnTaskAssignUnassignUser : OpenXmlTaskAssignUnassignUserElement
     {
@@ -270,8 +270,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:atrbtn");
-            builder.Availability = FileFormatVersions.Office2021;
+            builder.SetSchema("p216:atrbtn");
+            builder.Availability = FileFormatVersions.Microsoft365;
         }
 
         /// <inheritdoc/>
@@ -280,11 +280,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the AsgnTaskAssignUnassignUser Class.</para>
-    /// <para>This class is available in Office 2021 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is p1912:asgn.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is p216:asgn.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr("p1912:asgn")]
+    [SchemaAttr("p216:asgn")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AsgnTaskAssignUnassignUser : OpenXmlTaskAssignUnassignUserElement
     {
@@ -298,8 +298,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:asgn");
-            builder.Availability = FileFormatVersions.Office2021;
+            builder.SetSchema("p216:asgn");
+            builder.Availability = FileFormatVersions.Microsoft365;
         }
 
         /// <inheritdoc/>
@@ -308,11 +308,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the UnAsgnTaskAssignUnassignUser Class.</para>
-    /// <para>This class is available in Office 2021 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is p1912:unAsgn.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is p216:unAsgn.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr("p1912:unAsgn")]
+    [SchemaAttr("p216:unAsgn")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class UnAsgnTaskAssignUnassignUser : OpenXmlTaskAssignUnassignUserElement
     {
@@ -326,8 +326,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:unAsgn");
-            builder.Availability = FileFormatVersions.Office2021;
+            builder.SetSchema("p216:unAsgn");
+            builder.Availability = FileFormatVersions.Microsoft365;
         }
 
         /// <inheritdoc/>
@@ -336,7 +336,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the OpenXmlTaskAssignUnassignUserElement Class.</para>
-    /// <para>This class is available in Office 2021 and above.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class OpenXmlTaskAssignUnassignUserElement : OpenXmlLeafElement
@@ -378,18 +378,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the TaskAnchor Class.</para>
-    /// <para>This class is available in Office 2021 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is p1912:anchr.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is p216:anchr.</para>
     /// </summary>
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList" /> <c>&lt;p1912:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.CommentAnchor" /> <c>&lt;p1912:comment></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList" /> <c>&lt;p216:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.CommentAnchor" /> <c>&lt;p216:comment></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr("p1912:anchr")]
+    [SchemaAttr("p216:anchr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskAnchor : OpenXmlCompositeElement
     {
@@ -427,40 +427,40 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:anchr");
-            builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.CommentAnchor>();
+            builder.SetSchema("p216:anchr");
+            builder.Availability = FileFormatVersions.Microsoft365;
+            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.CommentAnchor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.CommentAnchor), 1, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.CommentAnchor), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
         /// <summary>
         /// <para>CommentAnchor.</para>
-        /// <para>Represents the following element tag in the schema: p1912:comment.</para>
+        /// <para>Represents the following element tag in the schema: p216:comment.</para>
         /// </summary>
         /// <remark>
-        /// xmlns:p1912 = http://schemas.microsoft.com/office/powerpoint/2019/12/main
+        /// xmlns:p216 = http://schemas.microsoft.com/office/powerpoint/2021/06/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.CommentAnchor? CommentAnchor
+        public DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.CommentAnchor? CommentAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.CommentAnchor>();
+            get => GetElement<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.CommentAnchor>();
             set => SetElement(value);
         }
 
         /// <summary>
         /// <para>ExtensionList.</para>
-        /// <para>Represents the following element tag in the schema: p1912:extLst.</para>
+        /// <para>Represents the following element tag in the schema: p216:extLst.</para>
         /// </summary>
         /// <remark>
-        /// xmlns:p1912 = http://schemas.microsoft.com/office/powerpoint/2019/12/main
+        /// xmlns:p216 = http://schemas.microsoft.com/office/powerpoint/2021/06/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -470,11 +470,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the AddEmpty Class.</para>
-    /// <para>This class is available in Office 2021 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is p1912:add.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is p216:add.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr("p1912:add")]
+    [SchemaAttr("p216:add")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AddEmpty : EmptyType
     {
@@ -488,8 +488,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:add");
-            builder.Availability = FileFormatVersions.Office2021;
+            builder.SetSchema("p216:add");
+            builder.Availability = FileFormatVersions.Microsoft365;
         }
 
         /// <inheritdoc/>
@@ -498,11 +498,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the UnasgnAllEmpty Class.</para>
-    /// <para>This class is available in Office 2021 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is p1912:unasgnAll.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is p216:unasgnAll.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr("p1912:unasgnAll")]
+    [SchemaAttr("p216:unasgnAll")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class UnasgnAllEmpty : EmptyType
     {
@@ -516,8 +516,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:unasgnAll");
-            builder.Availability = FileFormatVersions.Office2021;
+            builder.SetSchema("p216:unasgnAll");
+            builder.Availability = FileFormatVersions.Microsoft365;
         }
 
         /// <inheritdoc/>
@@ -546,11 +546,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the TaskTitleEventInfo Class.</para>
-    /// <para>This class is available in Office 2021 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is p1912:title.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is p216:title.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr("p1912:title")]
+    [SchemaAttr("p216:title")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskTitleEventInfo : OpenXmlLeafElement
     {
@@ -562,7 +562,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         }
 
         /// <summary>
-        /// <para>val, this property is only available in Office 2021 and later.</para>
+        /// <para>val, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
 
@@ -580,8 +580,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:title");
-            builder.Availability = FileFormatVersions.Office2021;
+            builder.SetSchema("p216:title");
+            builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddElement<TaskTitleEventInfo>()
 .AddAttribute("val", a => a.Val, aBuilder =>
 {
@@ -595,11 +595,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TaskScheduleEventInfo Class.</para>
-    /// <para>This class is available in Office 2021 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is p1912:date.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is p216:date.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr("p1912:date")]
+    [SchemaAttr("p216:date")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskScheduleEventInfo : OpenXmlLeafElement
     {
@@ -611,7 +611,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>stDt, this property is only available in Office 2021 and later.</para>
+        /// <para>stDt, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: stDt</para>
         /// </summary>
 
@@ -627,7 +627,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>endDt, this property is only available in Office 2021 and later.</para>
+        /// <para>endDt, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: endDt</para>
         /// </summary>
 
@@ -645,8 +645,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:date");
-            builder.Availability = FileFormatVersions.Office2021;
+            builder.SetSchema("p216:date");
+            builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddElement<TaskScheduleEventInfo>()
 .AddAttribute("stDt", a => a.StDt)
 .AddAttribute("endDt", a => a.EndDt);
@@ -658,11 +658,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TaskProgressEventInfo Class.</para>
-    /// <para>This class is available in Office 2021 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is p1912:pcntCmplt.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is p216:pcntCmplt.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr("p1912:pcntCmplt")]
+    [SchemaAttr("p216:pcntCmplt")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskProgressEventInfo : OpenXmlLeafElement
     {
@@ -674,7 +674,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>val, this property is only available in Office 2021 and later.</para>
+        /// <para>val, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
 
@@ -692,8 +692,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:pcntCmplt");
-            builder.Availability = FileFormatVersions.Office2021;
+            builder.SetSchema("p216:pcntCmplt");
+            builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddElement<TaskProgressEventInfo>()
 .AddAttribute("val", a => a.Val, aBuilder =>
 {
@@ -708,11 +708,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
     /// <summary>
     /// <para>Defines the TaskPriorityRecord Class.</para>
-    /// <para>This class is available in Office 2021 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is p1912:pri.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is p216:pri.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr("p1912:pri")]
+    [SchemaAttr("p216:pri")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskPriorityRecord : OpenXmlLeafElement
     {
@@ -724,7 +724,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>val, this property is only available in Office 2021 and later.</para>
+        /// <para>val, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
 
@@ -742,8 +742,8 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:pri");
-            builder.Availability = FileFormatVersions.Office2021;
+            builder.SetSchema("p216:pri");
+            builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddElement<TaskPriorityRecord>()
 .AddAttribute("val", a => a.Val, aBuilder =>
 {
@@ -758,11 +758,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
     /// <summary>
     /// <para>Defines the TaskUndo Class.</para>
-    /// <para>This class is available in Office 2021 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is p1912:undo.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is p216:undo.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr("p1912:undo")]
+    [SchemaAttr("p216:undo")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskUndo : OpenXmlLeafElement
     {
@@ -774,7 +774,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office 2021 and later.</para>
+        /// <para>id, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -792,8 +792,8 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:undo");
-            builder.Availability = FileFormatVersions.Office2021;
+            builder.SetSchema("p216:undo");
+            builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddElement<TaskUndo>()
 .AddAttribute("id", a => a.Id, aBuilder =>
 {
@@ -808,11 +808,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the TaskUnknownRecord Class.</para>
-    /// <para>This class is available in Office 2021 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is p1912:unknown.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is p216:unknown.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr("p1912:unknown")]
+    [SchemaAttr("p216:unknown")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskUnknownRecord : OpenXmlLeafElement
     {
@@ -826,8 +826,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:unknown");
-            builder.Availability = FileFormatVersions.Office2021;
+            builder.SetSchema("p216:unknown");
+            builder.Availability = FileFormatVersions.Microsoft365;
         }
 
         /// <inheritdoc/>
@@ -836,29 +836,29 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the TaskHistoryEvent Class.</para>
-    /// <para>This class is available in Office 2021 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is p1912:event.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is p216:event.</para>
     /// </summary>
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AddEmpty" /> <c>&lt;p1912:add></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.UnasgnAllEmpty" /> <c>&lt;p1912:unasgnAll></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList" /> <c>&lt;p1912:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskAnchor" /> <c>&lt;p1912:anchr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser" /> <c>&lt;p1912:atrbtn></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AsgnTaskAssignUnassignUser" /> <c>&lt;p1912:asgn></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.UnAsgnTaskAssignUnassignUser" /> <c>&lt;p1912:unAsgn></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskPriorityRecord" /> <c>&lt;p1912:pri></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskProgressEventInfo" /> <c>&lt;p1912:pcntCmplt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskScheduleEventInfo" /> <c>&lt;p1912:date></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskTitleEventInfo" /> <c>&lt;p1912:title></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskUndo" /> <c>&lt;p1912:undo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskUnknownRecord" /> <c>&lt;p1912:unknown></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AddEmpty" /> <c>&lt;p216:add></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.UnasgnAllEmpty" /> <c>&lt;p216:unasgnAll></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList" /> <c>&lt;p216:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskAnchor" /> <c>&lt;p216:anchr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser" /> <c>&lt;p216:atrbtn></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AsgnTaskAssignUnassignUser" /> <c>&lt;p216:asgn></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.UnAsgnTaskAssignUnassignUser" /> <c>&lt;p216:unAsgn></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskPriorityRecord" /> <c>&lt;p216:pri></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskProgressEventInfo" /> <c>&lt;p216:pcntCmplt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskScheduleEventInfo" /> <c>&lt;p216:date></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskTitleEventInfo" /> <c>&lt;p216:title></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskUndo" /> <c>&lt;p216:undo></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskUnknownRecord" /> <c>&lt;p216:unknown></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr("p1912:event")]
+    [SchemaAttr("p216:event")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskHistoryEvent : OpenXmlCompositeElement
     {
@@ -894,7 +894,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         }
 
         /// <summary>
-        /// <para>time, this property is only available in Office 2021 and later.</para>
+        /// <para>time, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: time</para>
         /// </summary>
 
@@ -910,7 +910,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office 2021 and later.</para>
+        /// <para>id, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -928,21 +928,21 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:event");
-            builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AddEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.UnasgnAllEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskAnchor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AsgnTaskAssignUnassignUser>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.UnAsgnTaskAssignUnassignUser>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskPriorityRecord>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskProgressEventInfo>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskScheduleEventInfo>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskTitleEventInfo>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskUndo>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskUnknownRecord>();
+            builder.SetSchema("p216:event");
+            builder.Availability = FileFormatVersions.Microsoft365;
+            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AddEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.UnasgnAllEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskAnchor>();
+            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser>();
+            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AsgnTaskAssignUnassignUser>();
+            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.UnAsgnTaskAssignUnassignUser>();
+            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskPriorityRecord>();
+            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskProgressEventInfo>();
+            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskScheduleEventInfo>();
+            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskTitleEventInfo>();
+            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskUndo>();
+            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskUnknownRecord>();
             builder.AddElement<TaskHistoryEvent>()
 .AddAttribute("time", a => a.Time, aBuilder =>
 {
@@ -955,48 +955,48 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser), 1, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskAnchor), 0, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskAnchor), 0, 1, version: FileFormatVersions.Microsoft365),
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AsgnTaskAssignUnassignUser), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.UnAsgnTaskAssignUnassignUser), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AddEmpty), 0, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskTitleEventInfo), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskScheduleEventInfo), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskProgressEventInfo), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskPriorityRecord), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.UnasgnAllEmpty), 0, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskUndo), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskUnknownRecord), 1, 1, version: FileFormatVersions.Office2021)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AsgnTaskAssignUnassignUser), 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.UnAsgnTaskAssignUnassignUser), 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AddEmpty), 0, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskTitleEventInfo), 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskScheduleEventInfo), 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskProgressEventInfo), 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskPriorityRecord), 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.UnasgnAllEmpty), 0, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskUndo), 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskUnknownRecord), 1, 1, version: FileFormatVersions.Microsoft365)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
         /// <summary>
         /// <para>AtrbtnTaskAssignUnassignUser.</para>
-        /// <para>Represents the following element tag in the schema: p1912:atrbtn.</para>
+        /// <para>Represents the following element tag in the schema: p216:atrbtn.</para>
         /// </summary>
         /// <remark>
-        /// xmlns:p1912 = http://schemas.microsoft.com/office/powerpoint/2019/12/main
+        /// xmlns:p216 = http://schemas.microsoft.com/office/powerpoint/2021/06/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser? AtrbtnTaskAssignUnassignUser
+        public DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser? AtrbtnTaskAssignUnassignUser
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser>();
+            get => GetElement<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser>();
             set => SetElement(value);
         }
 
         /// <summary>
         /// <para>TaskAnchor.</para>
-        /// <para>Represents the following element tag in the schema: p1912:anchr.</para>
+        /// <para>Represents the following element tag in the schema: p216:anchr.</para>
         /// </summary>
         /// <remark>
-        /// xmlns:p1912 = http://schemas.microsoft.com/office/powerpoint/2019/12/main
+        /// xmlns:p216 = http://schemas.microsoft.com/office/powerpoint/2021/06/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskAnchor? TaskAnchor
+        public DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskAnchor? TaskAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskAnchor>();
+            get => GetElement<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskAnchor>();
             set => SetElement(value);
         }
 
@@ -1006,17 +1006,17 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the TaskHistory Class.</para>
-    /// <para>This class is available in Office 2021 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is p1912:history.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is p216:history.</para>
     /// </summary>
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistoryEvent" /> <c>&lt;p1912:event></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryEvent" /> <c>&lt;p216:event></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr("p1912:history")]
+    [SchemaAttr("p216:history")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskHistory : OpenXmlCompositeElement
     {
@@ -1054,12 +1054,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:history");
-            builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistoryEvent>();
+            builder.SetSchema("p216:history");
+            builder.Availability = FileFormatVersions.Microsoft365;
+            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryEvent>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistoryEvent), 0, 0, version: FileFormatVersions.Office2021)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryEvent), 0, 0, version: FileFormatVersions.Microsoft365)
             };
         }
 

@@ -296,7 +296,14 @@ namespace DocumentFormat.OpenXml.Framework
             { "http://schemas.microsoft.com/office/spreadsheetml/2019/extlinksprops", "xxlnp", FileFormatVersions.Office2021 },
             { "http://schemas.microsoft.com/office/spreadsheetml/2020/richvaluerefresh", "xlrvr", FileFormatVersions.Office2021 },
             { "http://schemas.microsoft.com/office/spreadsheetml/2020/pivotNov2020", "xxpim", FileFormatVersions.Office2021 },
-            { "http://schemas.microsoft.com/office/powerpoint/2019/12/main", "ppt1912SchemaUri", FileFormatVersions.Office2021 },
+            { "http://schemas.microsoft.com/office/powerpoint/2019/12/main", "ppt1912", FileFormatVersions.Office2021 },
+
+            // M365
+            { "http://schemas.microsoft.com/office/drawing/2021/oembed", "aoe", FileFormatVersions.Microsoft365 },
+            { "http://schemas.microsoft.com/office/drawing/2021/scriptlink", "asl", FileFormatVersions.Microsoft365 },
+            { "http://schemas.microsoft.com/office/powerpoint/2021/06/main", "p216", FileFormatVersions.Microsoft365 },
+            { "http://schemas.microsoft.com/office/word/2020/oembed", "woe", FileFormatVersions.Microsoft365 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2021/lineagehistory", "xlh", FileFormatVersions.Microsoft365 },
         };
 
         internal static int Count => _namespaceResolver.Count;
