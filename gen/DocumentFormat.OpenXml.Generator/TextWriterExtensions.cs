@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Generator.Models;
 using System;
 using System.CodeDom.Compiler;
 using System.IO;
@@ -42,11 +43,59 @@ internal static class TextWriterExtensions
         writer.Write(value.ToString());
     }
 
+    public static void WriteList<T1, T2>(this TextWriter writer, T1 item1, T2 item2)
+    {
+        writer.Write("{ ");
+        writer.WriteItem(item1);
+        writer.Write(", ");
+        writer.WriteItem(item2);
+        writer.Write(" ");
+        writer.Write("}");
+    }
+
+    public static void WriteList<T1, T2, T3>(this TextWriter writer, T1 item1, T2 item2, T3 item3)
+    {
+        writer.Write("{ ");
+        writer.WriteItem(item1);
+        writer.Write(", ");
+        writer.WriteItem(item2);
+        writer.Write(", ");
+        writer.WriteItem(item3);
+        writer.Write(" ");
+        writer.Write("}");
+    }
+
+    public static void WriteItem<T>(this TextWriter writer, T item)
+    {
+        if (item is null)
+        {
+            writer.WriteNull();
+        }
+        else if (typeof(T) == typeof(Verbatim))
+        {
+            writer.Write(((Verbatim)(object)item).Value);
+        }
+        else if (typeof(T) == typeof(OfficeVersion))
+        {
+            writer.WriteEnum("FileFormatVersions", (OfficeVersion)(object)item);
+        }
+        else if (typeof(T) == typeof(string))
+        {
+            writer.WriteString((string)(object)item);
+        }
+        else
+        {
+            writer.Write(item.ToString());
+        }
+    }
+
+    public static void WriteNull(this TextWriter writer) => writer.Write("null");
+
     public static void WriteString(this TextWriter writer, string input)
     {
         if (input is null)
         {
-            writer.Write("null");
+            writer.WriteNull();
         }
         else if (input.Length == 0)
         {

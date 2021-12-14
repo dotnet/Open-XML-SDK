@@ -30746,7 +30746,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.ExcelAc.List), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.ExcelAc.List), 0, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula1), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula2), 0, 1)
             };
@@ -30756,7 +30756,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>List, this property is only available in Office 2010 and later..</para>
+        /// <para>List, this property is only available in Office 2013 and later..</para>
         /// <para>Represents the following element tag in the schema: x12ac:list.</para>
         /// </summary>
         /// <remark>

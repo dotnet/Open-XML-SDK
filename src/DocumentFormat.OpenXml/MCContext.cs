@@ -212,7 +212,7 @@ namespace DocumentFormat.OpenXml
                 return AttributeAction.Normal;
             }
 
-            if (qname.Namespace.IsInVersion(format))
+            if (qname.Namespace.HasVersion(format))
             {
                 return AttributeAction.Normal;
             }
@@ -437,7 +437,7 @@ namespace DocumentFormat.OpenXml
                         }
                     }
 
-                    if (!ns.IsInVersion(format))
+                    if (!ns.HasVersion(format))
                     {
                         chooce = false;
                         break;
