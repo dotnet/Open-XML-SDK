@@ -13,6 +13,8 @@ namespace DocumentFormat.OpenXml.Generator;
 
 public record OpenXmlGeneratorContext
 {
+    private static readonly Lazy<OpenXmlGeneratorContext> _context = new(Load);
+
     private static readonly JsonSerializer _serializer = JsonSerializer.Create(new()
     {
         Converters = new[]
@@ -21,15 +23,14 @@ public record OpenXmlGeneratorContext
         },
     });
 
-    public static OpenXmlGeneratorContext Shared { get; } = Load();
+    public static OpenXmlGeneratorContext Shared => _context.Value;
 
     public IEnumerable<NamespaceInfo> Namespaces { get; init; } = Enumerable.Empty<NamespaceInfo>();
 
-    public static OpenXmlGeneratorContext Load()
-        => new()
-        {
-            Namespaces = Load<NamespaceInfo[]>("namespaces.json"),
-        };
+    public static OpenXmlGeneratorContext Load() => new()
+    {
+        Namespaces = Load<NamespaceInfo[]>("namespaces.json"),
+    };
 
     private static T Load<T>(string name)
     {
