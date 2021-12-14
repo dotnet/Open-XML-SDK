@@ -73,15 +73,14 @@ DocumentFormat.OpenXml.Linq.XDR14
 DocumentFormat.OpenXml.Linq.XML
 DocumentFormat.OpenXml.Linq.XNE
 DocumentFormat.OpenXml.Linq.XVML
-DocumentFormat.OpenXml.Packaging.IPartRootXElementFeature
-DocumentFormat.OpenXml.Packaging.IPartRootXElementFeature.Root.get -> System.Xml.Linq.XElement?
-DocumentFormat.OpenXml.Packaging.IPartRootXElementFeature.Root.set -> void
-DocumentFormat.OpenXml.Packaging.IPartRootXElementFeature.Save() -> void
-DocumentFormat.OpenXml.Packaging.OpenXmlLinqExtensions
-static DocumentFormat.OpenXml.Packaging.OpenXmlLinqExtensions.GetPartRootXElementFeature(this DocumentFormat.OpenXml.Packaging.OpenXmlPart! part) -> DocumentFormat.OpenXml.Packaging.IPartRootXElementFeature!
-static DocumentFormat.OpenXml.Packaging.OpenXmlLinqExtensions.GetXElement(this DocumentFormat.OpenXml.Packaging.OpenXmlPart! part) -> System.Xml.Linq.XElement?
-static DocumentFormat.OpenXml.Packaging.OpenXmlLinqExtensions.SaveXElement(this DocumentFormat.OpenXml.Packaging.OpenXmlPart! part) -> void
-static DocumentFormat.OpenXml.Packaging.OpenXmlLinqExtensions.SetXElement(this DocumentFormat.OpenXml.Packaging.OpenXmlPart! part, System.Xml.Linq.XElement! element) -> void
+DocumentFormat.OpenXml.Packaging.OpenXmlPartRootXElementExtensions
+static DocumentFormat.OpenXml.Packaging.OpenXmlPartRootXElementExtensions.GetXDocument(this DocumentFormat.OpenXml.Packaging.OpenXmlPart! part) -> System.Xml.Linq.XDocument!
+static DocumentFormat.OpenXml.Packaging.OpenXmlPartRootXElementExtensions.GetXElement(this DocumentFormat.OpenXml.Packaging.OpenXmlPart! part) -> System.Xml.Linq.XElement?
+static DocumentFormat.OpenXml.Packaging.OpenXmlPartRootXElementExtensions.IsRootXElementLoaded(this DocumentFormat.OpenXml.Packaging.OpenXmlPart! part) -> bool
+static DocumentFormat.OpenXml.Packaging.OpenXmlPartRootXElementExtensions.SaveXDocument(this DocumentFormat.OpenXml.Packaging.OpenXmlPart! part) -> bool
+static DocumentFormat.OpenXml.Packaging.OpenXmlPartRootXElementExtensions.SaveXElement(this DocumentFormat.OpenXml.Packaging.OpenXmlPart! part) -> bool
+static DocumentFormat.OpenXml.Packaging.OpenXmlPartRootXElementExtensions.SetXDocument(this DocumentFormat.OpenXml.Packaging.OpenXmlPart! part, System.Xml.Linq.XDocument! document) -> void
+static DocumentFormat.OpenXml.Packaging.OpenXmlPartRootXElementExtensions.SetXElement(this DocumentFormat.OpenXml.Packaging.OpenXmlPart! part, System.Xml.Linq.XElement! element) -> void
 static readonly DocumentFormat.OpenXml.Linq.MC.AlternateContent -> System.Xml.Linq.XName!
 static readonly DocumentFormat.OpenXml.Linq.MC.Choice -> System.Xml.Linq.XName!
 static readonly DocumentFormat.OpenXml.Linq.MC.Fallback -> System.Xml.Linq.XName!

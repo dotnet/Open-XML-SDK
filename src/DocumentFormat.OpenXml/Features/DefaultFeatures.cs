@@ -4,59 +4,22 @@
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using System;
-using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Features
 {
-    internal class DefaultFeatures : IFeatureCollection
+    internal partial class DefaultFeatures : IFeatureCollection
     {
-        private readonly object _sync = new();
-
-        private IRootElementFactory? _rootElementFactory;
-        private IPartMetadataFeature? _partMetadata;
-
         public static IFeatureCollection Shared { get; } = new DefaultFeatures();
 
         public bool IsReadOnly => true;
 
         public int Revision => 0;
 
-        public TFeature? Get<TFeature>()
-        {
-            if (typeof(TFeature) == typeof(IRootElementFactory))
-            {
-                if (_rootElementFactory is null)
-                {
-                    lock (_sync)
-                    {
-                        if (_rootElementFactory is null)
-                        {
-                            _rootElementFactory = new ReflectionBasedRootElementFactory(typeof(ReflectionBasedRootElementFactory).GetTypeInfo().Assembly, ClassActivator<OpenXmlElement>.CreateActivator);
-                        }
-                    }
-                }
-
-                return (TFeature)_rootElementFactory;
-            }
-
-            if (typeof(TFeature) == typeof(IPartMetadataFeature))
-            {
-                if (_partMetadata is null)
-                {
-                    lock (_sync)
-                    {
-                        if (_partMetadata is null)
-                        {
-                            _partMetadata = new CachedPartMetadataProvider();
-                        }
-                    }
-                }
-
-                return (TFeature)_partMetadata;
-            }
-
-            return default;
-        }
+        [KnownFeature(typeof(IRootElementFactory), typeof(ReflectionBasedRootElementFactory))]
+        [KnownFeature(typeof(IPartMetadataFeature), typeof(CachedPartMetadataProvider))]
+        [KnownFeature(typeof(IOpenXmlNamespaceResolver), typeof(OpenXmlNamespaceResolver))]
+        [KnownFeature(typeof(IOpenXmlNamespaceIdResolver), typeof(OpenXmlNamespaceIdResolver))]
+        public partial TFeature? Get<TFeature>();
 
         public void Set<TFeature>(TFeature? instance)
         {

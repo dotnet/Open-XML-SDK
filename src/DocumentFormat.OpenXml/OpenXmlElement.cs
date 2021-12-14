@@ -1641,7 +1641,7 @@ namespace DocumentFormat.OpenXml
                         throw new InvalidMCContentException(SR.Format(ExceptionMessages.UnknowMCContent, mcAttributes.MustUnderstand.Value));
                     }
 
-                    if (ns.IsInVersion(mcSettings.TargetFileFormatVersions))
+                    if (ns.HasVersion(mcSettings.TargetFileFormatVersions))
                     {
                         continue;
                     }
@@ -1673,7 +1673,7 @@ namespace DocumentFormat.OpenXml
                         throw new InvalidMCContentException(SR.Format(ExceptionMessages.UnknowMCContent, MCAttributes.MustUnderstand.Value));
                     }
 
-                    if (ns.IsInVersion(OpenXmlElementContext.MCSettings.TargetFileFormatVersions))
+                    if (ns.HasVersion(OpenXmlElementContext.MCSettings.TargetFileFormatVersions))
                     {
                         continue;
                     }
@@ -2592,10 +2592,9 @@ namespace DocumentFormat.OpenXml
             return root as OpenXmlPartRootElement;
         }
 
-        private sealed class ElementFeatureCollection : IFeatureCollection
+        private sealed partial class ElementFeatureCollection : IFeatureCollection
         {
             private readonly OpenXmlElement _owner;
-            private AnnotationsFeature? _annotations = null;
 
             public ElementFeatureCollection(OpenXmlElement owner)
             {
@@ -2609,16 +2608,14 @@ namespace DocumentFormat.OpenXml
             public IFeatureCollection? GetPartFeatures()
                 => _owner.GetPart()?.Features;
 
+            [KnownFeature(typeof(AnnotationsFeature))]
+            private partial TFeature? GetInternal<TFeature>();
+
             public TFeature? Get<TFeature>()
             {
-                if (typeof(TFeature) == typeof(AnnotationsFeature))
+                if (GetInternal<TFeature>() is TFeature result)
                 {
-                    if (_annotations is null)
-                    {
-                        _annotations = new();
-                    }
-
-                    return (TFeature)(object)_annotations;
+                    return result;
                 }
 
                 var defaultFeatures = GetPartFeatures();

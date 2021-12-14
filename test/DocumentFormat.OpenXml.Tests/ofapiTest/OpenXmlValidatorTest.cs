@@ -3230,7 +3230,7 @@ namespace DocumentFormat.OpenXml.Tests
                                                 new DocumentFormat.OpenXml.Office.Drawing.GroupShapeProperties());
 
             // ***** good case ******
-            var actual = O12Validator.Validate(element);
+            var actual = O14Validator.Validate(element);
             Assert.Empty(actual);
         }
 

@@ -411,4 +411,7 @@
   <data name="UnexpectedReentrancy" xml:space="preserve">
     <value>Encountered unexpected reentrancy while accessing part root. Please check if part root is loaded first by calling OpenXmlPart.IsRootElementLoaded</value>
   </data>
+  <data name="NamespaceIdNotAvailable" xml:space="preserve">
+    <value>Namespace ids are only available for namespaces for Office 2021 and before. Please use prefixes or URLs instead.</value>
+  </data>
 </root>

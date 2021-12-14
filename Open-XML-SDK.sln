@@ -57,11 +57,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormat.OpenXml.Fram
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormat.OpenXml.Linq.Tests", "test\DocumentFormat.OpenXml.Linq.Tests\DocumentFormat.OpenXml.Linq.Tests.csproj", "{3B82C340-3B10-42BF-9A2C-2E2327A9CFD4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddAnimatedModel3D", "samples\AnimatedModel3DExample\AddAnimatedModel3D.csproj", "{12BFA5FC-F09A-480D-BBAC-3992B23B277D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gen", "gen", "{3653266D-2C88-4487-8977-839CB3E78A0A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddNamedSheetView", "samples\NamedSheetView\AddNamedSheetView.csproj", "{6C79FE8F-C90D-4B14-8225-231BB9291738}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormat.OpenXml.Generator", "gen\DocumentFormat.OpenXml.Generator\DocumentFormat.OpenXml.Generator.csproj", "{E04F2FB4-DBC6-46DC-857C-F0E89B42F385}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SVGExample", "samples\SVGExample\SVGExample.csproj", "{4C769670-B76D-4CBB-9A07-B9A1FB84F841}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormat.OpenXml.Generator.Tests", "test\DocumentFormat.OpenXml.Generator.Tests\DocumentFormat.OpenXml.Generator.Tests.csproj", "{BAC36A8F-AA8E-4097-B2BA-2EFE559BEE62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -121,6 +121,7 @@ Global
 		{3B82C340-3B10-42BF-9A2C-2E2327A9CFD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B82C340-3B10-42BF-9A2C-2E2327A9CFD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B82C340-3B10-42BF-9A2C-2E2327A9CFD4}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 		{12BFA5FC-F09A-480D-BBAC-3992B23B277D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{12BFA5FC-F09A-480D-BBAC-3992B23B277D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12BFA5FC-F09A-480D-BBAC-3992B23B277D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -133,6 +134,16 @@ Global
 		{4C769670-B76D-4CBB-9A07-B9A1FB84F841}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C769670-B76D-4CBB-9A07-B9A1FB84F841}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C769670-B76D-4CBB-9A07-B9A1FB84F841}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{E04F2FB4-DBC6-46DC-857C-F0E89B42F385}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E04F2FB4-DBC6-46DC-857C-F0E89B42F385}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E04F2FB4-DBC6-46DC-857C-F0E89B42F385}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E04F2FB4-DBC6-46DC-857C-F0E89B42F385}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAC36A8F-AA8E-4097-B2BA-2EFE559BEE62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAC36A8F-AA8E-4097-B2BA-2EFE559BEE62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAC36A8F-AA8E-4097-B2BA-2EFE559BEE62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAC36A8F-AA8E-4097-B2BA-2EFE559BEE62}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> upstream/main
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -151,9 +162,14 @@ Global
 		{8D6D3961-9C39-405B-A953-4823D87227D9} = {A4DF60EB-3AA5-48F0-B4D2-3F94B8E62F03}
 		{E157C5F1-D70B-4939-A199-0B758FED8541} = {0782A132-968D-4BDD-911A-2C3074EAF886}
 		{3B82C340-3B10-42BF-9A2C-2E2327A9CFD4} = {0782A132-968D-4BDD-911A-2C3074EAF886}
+<<<<<<< HEAD
 		{12BFA5FC-F09A-480D-BBAC-3992B23B277D} = {7DAF7304-40CC-4180-88A5-9A89DD13C565}
 		{6C79FE8F-C90D-4B14-8225-231BB9291738} = {7DAF7304-40CC-4180-88A5-9A89DD13C565}
 		{4C769670-B76D-4CBB-9A07-B9A1FB84F841} = {7DAF7304-40CC-4180-88A5-9A89DD13C565}
+=======
+		{E04F2FB4-DBC6-46DC-857C-F0E89B42F385} = {3653266D-2C88-4487-8977-839CB3E78A0A}
+		{BAC36A8F-AA8E-4097-B2BA-2EFE559BEE62} = {0782A132-968D-4BDD-911A-2C3074EAF886}
+>>>>>>> upstream/main
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6F476383-E917-43D1-A1E5-9A61A47DA3F5}
