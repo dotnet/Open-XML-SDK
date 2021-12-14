@@ -403,7 +403,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="regrouptable" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.@new" />, <see cref="NoNamespace.old" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.new" />, <see cref="NoNamespace.old" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Entry.</description></item>
         /// </list>
         /// </remarks>
@@ -629,7 +629,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <item><description>corresponds to the following strongly-typed classes: Lock.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName @lock = o + "lock";
+        public static readonly XName lock = o + "lock";
 
         /// <summary>
         /// Represents the o:LockedField XML element.
@@ -685,7 +685,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="W.@object" />, <see cref="W.pict" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="W.object" />, <see cref="W.pict" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="FieldCodes" />, <see cref="LinkType" />, <see cref="LockedField" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.DrawAspect" />, <see cref="NoNamespace.ObjectID_" />, <see cref="NoNamespace.ProgID_" />, <see cref="R.id" />, <see cref="NoNamespace.ShapeID_" />, <see cref="NoNamespace.Type_" />, <see cref="NoNamespace.UpdateMode" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: OleObject.</description></item>
@@ -855,7 +855,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="W.hdrShapeDefaults" />, <see cref="W.shapeDefaults" />.</description></item>
-        /// <item><description>has the following child XML elements: <see cref="callout" />, <see cref="colormenu" />, <see cref="colormru" />, <see cref="extrusion" />, <see cref="@lock" />, <see cref="skew" />, <see cref="V.fill" />, <see cref="V.imagedata" />, <see cref="V.shadow" />, <see cref="V.stroke" />, <see cref="V.textbox" />.</description></item>
+        /// <item><description>has the following child XML elements: <see cref="callout" />, <see cref="colormenu" />, <see cref="colormru" />, <see cref="extrusion" />, <see cref="lock" />, <see cref="skew" />, <see cref="V.fill" />, <see cref="V.imagedata" />, <see cref="V.shadow" />, <see cref="V.stroke" />, <see cref="V.textbox" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.fill" />, <see cref="NoNamespace.fillcolor" />, <see cref="allowincell" />, <see cref="allowoverlap" />, <see cref="insetmode" />, <see cref="NoNamespace.spidmax" />, <see cref="NoNamespace.stroke" />, <see cref="NoNamespace.strokecolor" />, <see cref="NoNamespace.style" />, <see cref="V.ext" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ShapeDefaults.</description></item>
         /// </list>

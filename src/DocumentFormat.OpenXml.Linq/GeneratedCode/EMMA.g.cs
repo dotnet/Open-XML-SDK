@@ -223,7 +223,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="emma_" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.id" />, <see cref="NoNamespace.@ref" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.id" />, <see cref="NoNamespace.ref" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Grammar.</description></item>
         /// </list>
         /// </remarks>
@@ -262,7 +262,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="group" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.@ref" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.ref" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: GroupInfo.</description></item>
         /// </list>
         /// </remarks>
@@ -388,7 +388,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="emma_" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.id" />, <see cref="NoNamespace.@ref" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.id" />, <see cref="NoNamespace.ref" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Model.</description></item>
         /// </list>
         /// </remarks>

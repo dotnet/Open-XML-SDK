@@ -132,7 +132,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="intermittentChannels" />, <see cref="traceFormat" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="mapping" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.@default" />, <see cref="NoNamespace.max" />, <see cref="NoNamespace.min" />, <see cref="NoNamespace.name" />, <see cref="NoNamespace.orientation" />, <see cref="NoNamespace.respectTo" />, <see cref="NoNamespace.type" />, <see cref="NoNamespace.units" />, <see cref="XML.id" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.default" />, <see cref="NoNamespace.max" />, <see cref="NoNamespace.min" />, <see cref="NoNamespace.name" />, <see cref="NoNamespace.orientation" />, <see cref="NoNamespace.respectTo" />, <see cref="NoNamespace.type" />, <see cref="NoNamespace.units" />, <see cref="XML.id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Channel.</description></item>
         /// </list>
         /// </remarks>

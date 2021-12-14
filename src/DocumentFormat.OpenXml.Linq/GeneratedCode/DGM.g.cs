@@ -47,7 +47,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="@else" />, <see cref="forEach" />, <see cref="@if" />, <see cref="layoutNode" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="else" />, <see cref="forEach" />, <see cref="if" />, <see cref="layoutNode" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="extLst" />, <see cref="param" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.rev" />, <see cref="NoNamespace.type" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Algorithm.</description></item>
@@ -152,8 +152,8 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="@else" />, <see cref="forEach" />, <see cref="@if" />, <see cref="layoutNode" />.</description></item>
-        /// <item><description>has the following child XML elements: <see cref="@else" />, <see cref="@if" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="else" />, <see cref="forEach" />, <see cref="if" />, <see cref="layoutNode" />.</description></item>
+        /// <item><description>has the following child XML elements: <see cref="else" />, <see cref="if" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.name" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Choose.</description></item>
         /// </list>
@@ -236,7 +236,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="constrLst" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="extLst" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.fact" />, <see cref="NoNamespace.@for" />, <see cref="NoNamespace.forName" />, <see cref="NoNamespace.op" />, <see cref="NoNamespace.ptType" />, <see cref="NoNamespace.refFor" />, <see cref="NoNamespace.refForName" />, <see cref="NoNamespace.refPtType" />, <see cref="NoNamespace.refType" />, <see cref="NoNamespace.type" />, <see cref="NoNamespace.val" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.fact" />, <see cref="NoNamespace.for" />, <see cref="NoNamespace.forName" />, <see cref="NoNamespace.op" />, <see cref="NoNamespace.ptType" />, <see cref="NoNamespace.refFor" />, <see cref="NoNamespace.refForName" />, <see cref="NoNamespace.refPtType" />, <see cref="NoNamespace.refType" />, <see cref="NoNamespace.type" />, <see cref="NoNamespace.val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Constraint.</description></item>
         /// </list>
         /// </remarks>
@@ -248,7 +248,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="@else" />, <see cref="forEach" />, <see cref="@if" />, <see cref="layoutNode" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="else" />, <see cref="forEach" />, <see cref="if" />, <see cref="layoutNode" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="constr" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Constraints.</description></item>
         /// </list>
@@ -347,7 +347,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <item><description>corresponds to the following strongly-typed classes: DiagramChooseElse.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName @else = dgm + "else";
+        public static readonly XName else = dgm + "else";
 
         /// <summary>
         /// Represents the dgm:ext XML element.
@@ -369,7 +369,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="alg" />, <see cref="colorsDef" />, <see cref="colorsDefHdr" />, <see cref="constr" />, <see cref="cxn" />, <see cref="dataModel" />, <see cref="@else" />, <see cref="forEach" />, <see cref="@if" />, <see cref="layoutDef" />, <see cref="layoutDefHdr" />, <see cref="layoutNode" />, <see cref="presOf" />, <see cref="pt" />, <see cref="rule" />, <see cref="shape" />, <see cref="styleDef" />, <see cref="styleDefHdr" />, <see cref="styleLbl" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="alg" />, <see cref="colorsDef" />, <see cref="colorsDefHdr" />, <see cref="constr" />, <see cref="cxn" />, <see cref="dataModel" />, <see cref="else" />, <see cref="forEach" />, <see cref="if" />, <see cref="layoutDef" />, <see cref="layoutDefHdr" />, <see cref="layoutNode" />, <see cref="presOf" />, <see cref="pt" />, <see cref="rule" />, <see cref="shape" />, <see cref="styleDef" />, <see cref="styleDefHdr" />, <see cref="styleLbl" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="A.ext" />, <see cref="ext" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DataModelExtensionList, DiagramDefinitionExtensionList, ExtensionList, PtExtensionList.</description></item>
         /// </list>
@@ -396,9 +396,9 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="@else" />, <see cref="forEach" />, <see cref="@if" />, <see cref="layoutNode" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="else" />, <see cref="forEach" />, <see cref="if" />, <see cref="layoutNode" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="alg" />, <see cref="choose" />, <see cref="constrLst" />, <see cref="extLst" />, <see cref="forEach" />, <see cref="layoutNode" />, <see cref="presOf" />, <see cref="ruleLst" />, <see cref="shape" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.axis" />, <see cref="NoNamespace.cnt" />, <see cref="NoNamespace.hideLastTrans" />, <see cref="NoNamespace.name" />, <see cref="NoNamespace.ptType" />, <see cref="NoNamespace.@ref" />, <see cref="NoNamespace.st" />, <see cref="NoNamespace.step" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.axis" />, <see cref="NoNamespace.cnt" />, <see cref="NoNamespace.hideLastTrans" />, <see cref="NoNamespace.name" />, <see cref="NoNamespace.ptType" />, <see cref="NoNamespace.ref" />, <see cref="NoNamespace.st" />, <see cref="NoNamespace.step" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ForEach.</description></item>
         /// </list>
         /// </remarks>
@@ -429,7 +429,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <item><description>corresponds to the following strongly-typed classes: DiagramChooseIf.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName @if = dgm + "if";
+        public static readonly XName if = dgm + "if";
 
         /// <summary>
         /// Represents the dgm:layoutDef XML element.
@@ -478,7 +478,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="@else" />, <see cref="forEach" />, <see cref="@if" />, <see cref="layoutDef" />, <see cref="layoutNode" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="else" />, <see cref="forEach" />, <see cref="if" />, <see cref="layoutDef" />, <see cref="layoutNode" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="alg" />, <see cref="choose" />, <see cref="constrLst" />, <see cref="extLst" />, <see cref="forEach" />, <see cref="layoutNode" />, <see cref="presOf" />, <see cref="ruleLst" />, <see cref="shape" />, <see cref="varLst" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.chOrder" />, <see cref="NoNamespace.moveWith" />, <see cref="NoNamespace.name" />, <see cref="NoNamespace.styleLbl" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: LayoutNode.</description></item>
@@ -545,7 +545,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="@else" />, <see cref="forEach" />, <see cref="@if" />, <see cref="layoutNode" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="else" />, <see cref="forEach" />, <see cref="if" />, <see cref="layoutNode" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="extLst" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.axis" />, <see cref="NoNamespace.cnt" />, <see cref="NoNamespace.hideLastTrans" />, <see cref="NoNamespace.ptType" />, <see cref="NoNamespace.st" />, <see cref="NoNamespace.step" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: PresentationOf.</description></item>
@@ -628,7 +628,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="ruleLst" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="extLst" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.fact" />, <see cref="NoNamespace.@for" />, <see cref="NoNamespace.forName" />, <see cref="NoNamespace.max" />, <see cref="NoNamespace.ptType" />, <see cref="NoNamespace.type" />, <see cref="NoNamespace.val" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.fact" />, <see cref="NoNamespace.for" />, <see cref="NoNamespace.forName" />, <see cref="NoNamespace.max" />, <see cref="NoNamespace.ptType" />, <see cref="NoNamespace.type" />, <see cref="NoNamespace.val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Rule.</description></item>
         /// </list>
         /// </remarks>
@@ -640,7 +640,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="@else" />, <see cref="forEach" />, <see cref="@if" />, <see cref="layoutNode" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="else" />, <see cref="forEach" />, <see cref="if" />, <see cref="layoutNode" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="rule" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: RuleList.</description></item>
         /// </list>
@@ -680,7 +680,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="@else" />, <see cref="forEach" />, <see cref="@if" />, <see cref="layoutNode" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="else" />, <see cref="forEach" />, <see cref="if" />, <see cref="layoutNode" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="adjLst" />, <see cref="extLst" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.blipPhldr" />, <see cref="NoNamespace.hideGeom" />, <see cref="NoNamespace.lkTxEntry" />, <see cref="R.blip" />, <see cref="NoNamespace.rot" />, <see cref="NoNamespace.type" />, <see cref="NoNamespace.zOrderOff" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Shape.</description></item>

@@ -144,7 +144,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="conditionalFormatting" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="colorScale" />, <see cref="dataBar" />, <see cref="dxf" />, <see cref="extLst" />, <see cref="iconSet" />, <see cref="XNE.f" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.aboveAverage" />, <see cref="NoNamespace.activePresent" />, <see cref="NoNamespace.bottom" />, <see cref="NoNamespace.equalAverage" />, <see cref="NoNamespace.id" />, <see cref="NoNamespace.@operator" />, <see cref="NoNamespace.percent" />, <see cref="NoNamespace.priority" />, <see cref="NoNamespace.rank" />, <see cref="NoNamespace.stdDev" />, <see cref="NoNamespace.stopIfTrue" />, <see cref="NoNamespace.text" />, <see cref="NoNamespace.timePeriod" />, <see cref="NoNamespace.type" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.aboveAverage" />, <see cref="NoNamespace.activePresent" />, <see cref="NoNamespace.bottom" />, <see cref="NoNamespace.equalAverage" />, <see cref="NoNamespace.id" />, <see cref="NoNamespace.operator" />, <see cref="NoNamespace.percent" />, <see cref="NoNamespace.priority" />, <see cref="NoNamespace.rank" />, <see cref="NoNamespace.stdDev" />, <see cref="NoNamespace.stopIfTrue" />, <see cref="NoNamespace.text" />, <see cref="NoNamespace.timePeriod" />, <see cref="NoNamespace.type" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ConditionalFormattingRule.</description></item>
         /// </list>
         /// </remarks>
@@ -370,7 +370,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="customFilters" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.@operator" />, <see cref="NoNamespace.val" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.operator" />, <see cref="NoNamespace.val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CustomFilter.</description></item>
         /// </list>
         /// </remarks>
@@ -382,7 +382,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="X.filterColumn" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="X.filterColumn" />, <see cref="XNSV.filter" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="customFilter" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.and" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CustomFilters.</description></item>
@@ -451,7 +451,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="dataValidations" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="formula1" />, <see cref="formula2" />, <see cref="XNE.sqref" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.allowBlank" />, <see cref="NoNamespace.error" />, <see cref="NoNamespace.errorStyle" />, <see cref="NoNamespace.errorTitle" />, <see cref="NoNamespace.imeMode" />, <see cref="NoNamespace.@operator" />, <see cref="NoNamespace.prompt" />, <see cref="NoNamespace.promptTitle" />, <see cref="NoNamespace.showDropDown" />, <see cref="NoNamespace.showErrorMessage" />, <see cref="NoNamespace.showInputMessage" />, <see cref="NoNamespace.type" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.allowBlank" />, <see cref="NoNamespace.error" />, <see cref="NoNamespace.errorStyle" />, <see cref="NoNamespace.errorTitle" />, <see cref="NoNamespace.imeMode" />, <see cref="NoNamespace.operator" />, <see cref="NoNamespace.prompt" />, <see cref="NoNamespace.promptTitle" />, <see cref="NoNamespace.showDropDown" />, <see cref="NoNamespace.showErrorMessage" />, <see cref="NoNamespace.showInputMessage" />, <see cref="NoNamespace.type" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DataValidation.</description></item>
         /// </list>
         /// </remarks>
@@ -584,7 +584,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following child XML elements: <see cref="extLst" />, <see cref="itemLst" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.@checked" />, <see cref="NoNamespace.colored" />, <see cref="NoNamespace.dropLines" />, <see cref="NoNamespace.dropStyle" />, <see cref="NoNamespace.dx" />, <see cref="NoNamespace.editVal" />, <see cref="NoNamespace.firstButton" />, <see cref="NoNamespace.fmlaGroup" />, <see cref="NoNamespace.fmlaLink" />, <see cref="NoNamespace.fmlaRange" />, <see cref="NoNamespace.fmlaTxbx" />, <see cref="NoNamespace.horiz" />, <see cref="NoNamespace.inc" />, <see cref="NoNamespace.justLastX" />, <see cref="NoNamespace.lockText" />, <see cref="NoNamespace.max" />, <see cref="NoNamespace.min" />, <see cref="NoNamespace.multiLine" />, <see cref="NoNamespace.multiSel" />, <see cref="NoNamespace.noThreeD" />, <see cref="NoNamespace.noThreeD2" />, <see cref="NoNamespace.objectType" />, <see cref="NoNamespace.page" />, <see cref="NoNamespace.passwordEdit" />, <see cref="NoNamespace.sel" />, <see cref="NoNamespace.seltype" />, <see cref="NoNamespace.textHAlign" />, <see cref="NoNamespace.textVAlign" />, <see cref="NoNamespace.val" />, <see cref="NoNamespace.verticalBar" />, <see cref="NoNamespace.widthMin" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.checked" />, <see cref="NoNamespace.colored" />, <see cref="NoNamespace.dropLines" />, <see cref="NoNamespace.dropStyle" />, <see cref="NoNamespace.dx" />, <see cref="NoNamespace.editVal" />, <see cref="NoNamespace.firstButton" />, <see cref="NoNamespace.fmlaGroup" />, <see cref="NoNamespace.fmlaLink" />, <see cref="NoNamespace.fmlaRange" />, <see cref="NoNamespace.fmlaTxbx" />, <see cref="NoNamespace.horiz" />, <see cref="NoNamespace.inc" />, <see cref="NoNamespace.justLastX" />, <see cref="NoNamespace.lockText" />, <see cref="NoNamespace.max" />, <see cref="NoNamespace.min" />, <see cref="NoNamespace.multiLine" />, <see cref="NoNamespace.multiSel" />, <see cref="NoNamespace.noThreeD" />, <see cref="NoNamespace.noThreeD2" />, <see cref="NoNamespace.objectType" />, <see cref="NoNamespace.page" />, <see cref="NoNamespace.passwordEdit" />, <see cref="NoNamespace.sel" />, <see cref="NoNamespace.seltype" />, <see cref="NoNamespace.textHAlign" />, <see cref="NoNamespace.textVAlign" />, <see cref="NoNamespace.val" />, <see cref="NoNamespace.verticalBar" />, <see cref="NoNamespace.widthMin" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: FormControlProperties.</description></item>
         /// </list>
         /// </remarks>
@@ -662,7 +662,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="X.filterColumn" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="X.filterColumn" />, <see cref="XNSV.filter" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.iconId" />, <see cref="NoNamespace.iconSet" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: IconFilter.</description></item>
         /// </list>
@@ -1277,7 +1277,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="slicerStyleElements" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.dxfId" />, <see cref="NoNamespace.type" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.dxfId_" />, <see cref="NoNamespace.type" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SlicerStyleElement.</description></item>
         /// </list>
         /// </remarks>
@@ -1317,7 +1317,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="X.sortState" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.customList" />, <see cref="NoNamespace.descending" />, <see cref="NoNamespace.dxfId" />, <see cref="NoNamespace.iconId" />, <see cref="NoNamespace.iconSet" />, <see cref="NoNamespace.@ref" />, <see cref="NoNamespace.sortBy" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.customList" />, <see cref="NoNamespace.descending" />, <see cref="NoNamespace.dxfId_" />, <see cref="NoNamespace.iconId" />, <see cref="NoNamespace.iconSet" />, <see cref="NoNamespace.ref" />, <see cref="NoNamespace.sortBy" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SortCondition.</description></item>
         /// </list>
         /// </remarks>

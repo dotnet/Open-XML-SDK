@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="OP.property" />, <see cref="variant" />.</description></item>
-        /// <item><description>has the following child XML elements: <see cref="@bool" />, <see cref="bstr" />, <see cref="cy" />, <see cref="date" />, <see cref="@decimal" />, <see cref="error" />, <see cref="i1" />, <see cref="i2" />, <see cref="i4" />, <see cref="@int" />, <see cref="r4" />, <see cref="r8" />, <see cref="ui1" />, <see cref="ui2" />, <see cref="ui4" />, <see cref="@uint" />, <see cref="variant" />.</description></item>
+        /// <item><description>has the following child XML elements: <see cref="bool" />, <see cref="bstr" />, <see cref="cy" />, <see cref="date" />, <see cref="decimal" />, <see cref="error" />, <see cref="i1" />, <see cref="i2" />, <see cref="i4" />, <see cref="int" />, <see cref="r4" />, <see cref="r8" />, <see cref="ui1" />, <see cref="ui2" />, <see cref="ui4" />, <see cref="uint" />, <see cref="variant" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.baseType" />, <see cref="NoNamespace.lBound" />, <see cref="NoNamespace.uBound" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: VTArray.</description></item>
         /// </list>
@@ -51,7 +51,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <item><description>corresponds to the following strongly-typed classes: VTBool.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName @bool = vt + "bool";
+        public static readonly XName bool = vt + "bool";
 
         /// <summary>
         /// Represents the vt:bstr XML element.
@@ -124,7 +124,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <item><description>corresponds to the following strongly-typed classes: VTDecimal.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName @decimal = vt + "decimal";
+        public static readonly XName decimal = vt + "decimal";
 
         /// <summary>
         /// Represents the vt:empty XML element.
@@ -220,7 +220,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <item><description>corresponds to the following strongly-typed classes: VTInteger.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName @int = vt + "int";
+        public static readonly XName int = vt + "int";
 
         /// <summary>
         /// Represents the vt:lpstr XML element.
@@ -256,7 +256,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <item><description>corresponds to the following strongly-typed classes: VTNull.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName @null = vt + "null";
+        public static readonly XName null = vt + "null";
 
         /// <summary>
         /// Represents the vt:oblob XML element.
@@ -400,7 +400,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <item><description>corresponds to the following strongly-typed classes: VTUnsignedInteger.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName @uint = vt + "uint";
+        public static readonly XName uint = vt + "uint";
 
         /// <summary>
         /// Represents the vt:variant XML element.
@@ -409,7 +409,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="array" />, <see cref="variant" />, <see cref="vector" />.</description></item>
-        /// <item><description>has the following child XML elements: <see cref="array" />, <see cref="blob" />, <see cref="@bool" />, <see cref="bstr" />, <see cref="cf" />, <see cref="clsid" />, <see cref="cy" />, <see cref="date" />, <see cref="@decimal" />, <see cref="empty" />, <see cref="error" />, <see cref="filetime" />, <see cref="i1" />, <see cref="i2" />, <see cref="i4" />, <see cref="i8" />, <see cref="@int" />, <see cref="lpstr" />, <see cref="lpwstr" />, <see cref="@null" />, <see cref="oblob" />, <see cref="ostorage" />, <see cref="ostream" />, <see cref="r4" />, <see cref="r8" />, <see cref="storage" />, <see cref="stream" />, <see cref="ui1" />, <see cref="ui2" />, <see cref="ui4" />, <see cref="ui8" />, <see cref="@uint" />, <see cref="variant" />, <see cref="vector" />, <see cref="vstream" />.</description></item>
+        /// <item><description>has the following child XML elements: <see cref="array" />, <see cref="blob" />, <see cref="bool" />, <see cref="bstr" />, <see cref="cf" />, <see cref="clsid" />, <see cref="cy" />, <see cref="date" />, <see cref="decimal" />, <see cref="empty" />, <see cref="error" />, <see cref="filetime" />, <see cref="i1" />, <see cref="i2" />, <see cref="i4" />, <see cref="i8" />, <see cref="int" />, <see cref="lpstr" />, <see cref="lpwstr" />, <see cref="null" />, <see cref="oblob" />, <see cref="ostorage" />, <see cref="ostream" />, <see cref="r4" />, <see cref="r8" />, <see cref="storage" />, <see cref="stream" />, <see cref="ui1" />, <see cref="ui2" />, <see cref="ui4" />, <see cref="ui8" />, <see cref="uint" />, <see cref="variant" />, <see cref="vector" />, <see cref="vstream" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Variant.</description></item>
         /// </list>
         /// </remarks>
@@ -422,7 +422,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="AP.HeadingPairs" />, <see cref="AP.HLinks" />, <see cref="AP.TitlesOfParts" />, <see cref="OP.property" />, <see cref="variant" />.</description></item>
-        /// <item><description>has the following child XML elements: <see cref="@bool" />, <see cref="bstr" />, <see cref="cf" />, <see cref="clsid" />, <see cref="cy" />, <see cref="date" />, <see cref="error" />, <see cref="filetime" />, <see cref="i1" />, <see cref="i2" />, <see cref="i4" />, <see cref="i8" />, <see cref="lpstr" />, <see cref="lpwstr" />, <see cref="r4" />, <see cref="r8" />, <see cref="ui1" />, <see cref="ui2" />, <see cref="ui4" />, <see cref="ui8" />, <see cref="variant" />.</description></item>
+        /// <item><description>has the following child XML elements: <see cref="bool" />, <see cref="bstr" />, <see cref="cf" />, <see cref="clsid" />, <see cref="cy" />, <see cref="date" />, <see cref="error" />, <see cref="filetime" />, <see cref="i1" />, <see cref="i2" />, <see cref="i4" />, <see cref="i8" />, <see cref="lpstr" />, <see cref="lpwstr" />, <see cref="r4" />, <see cref="r8" />, <see cref="ui1" />, <see cref="ui2" />, <see cref="ui4" />, <see cref="ui8" />, <see cref="variant" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.baseType" />, <see cref="NoNamespace.size" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: VTVector.</description></item>
         /// </list>
