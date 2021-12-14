@@ -365,7 +365,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="O.lock" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="O.@lock" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: Lock.AdjustHandles.</description></item>
         /// </list>
         /// </remarks>
@@ -1121,7 +1121,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="DGM.if" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="DGM.@if" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: DiagramChooseIf.Argument.</description></item>
         /// </list>
         /// </remarks>
@@ -1181,7 +1181,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="O.lock" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="O.@lock" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: Lock.AspectRatio.</description></item>
         /// </list>
         /// </remarks>
@@ -1601,7 +1601,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="DGM.forEach" />, <see cref="DGM.if" />, <see cref="DGM.presOf" />, <see cref="X.pivotArea" />, <see cref="X.pivotField" />, <see cref="X.pivotSelection" />, <see cref="X14.pivotArea" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="DGM.forEach" />, <see cref="DGM.@if" />, <see cref="DGM.presOf" />, <see cref="X.pivotArea" />, <see cref="X.pivotField" />, <see cref="X.pivotSelection" />, <see cref="X14.pivotArea" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: DiagramChooseIf.Axis, ForEach.Axis, PivotArea.Axis, PivotField.Axis, PivotSelection.Axis, PresentationOf.Axis.</description></item>
         /// </list>
         /// </remarks>
@@ -1737,7 +1737,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <item><description>corresponds to the following strongly-typed properties: FieldGroup.Base.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName base = "base";
+        public static readonly XName @base = "base";
 
         /// <summary>
         /// Represents the baseColWidth XML attribute.
@@ -2709,7 +2709,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <item><description>corresponds to the following strongly-typed properties: CharacterBullet.Char.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName char = "char";
+        public static readonly XName @char = "char";
 
         /// <summary>
         /// Represents the characterSet XML attributes.
@@ -2805,7 +2805,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <item><description>corresponds to the following strongly-typed properties: FormControlProperties.Checked.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName checked = "checked";
+        public static readonly XName @checked = "checked";
 
         /// <summary>
         /// Represents the chf XML attribute.
@@ -2865,7 +2865,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <item><description>corresponds to the following strongly-typed properties: Curve.Class, Group.Class, ImageFile.Class, Line.Class, Oval.Class, PolyLine.Class, Rectangle.Class, RoundRectangle.Class, Shape.Class, Shapetype.Class.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName class = "class";
+        public static readonly XName @class = "class";
 
         /// <summary>
         /// Represents the clearAll XML attribute.
@@ -3041,7 +3041,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="DGM.forEach" />, <see cref="DGM.if" />, <see cref="DGM.presOf" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="DGM.forEach" />, <see cref="DGM.@if" />, <see cref="DGM.presOf" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: DiagramChooseIf.Count, ForEach.Count, PresentationOf.Count.</description></item>
         /// </list>
         /// </remarks>
@@ -3977,7 +3977,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="O.lock" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="O.@lock" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: Lock.Cropping.</description></item>
         /// </list>
         /// </remarks>
@@ -4857,7 +4857,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <item><description>corresponds to the following strongly-typed properties: TextProperties.Decimal.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName decimal = "decimal";
+        public static readonly XName @decimal = "decimal";
 
         /// <summary>
         /// Represents the decoupled XML attribute.
@@ -4893,7 +4893,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <item><description>corresponds to the following strongly-typed properties: Channel.Default.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName default = "default";
+        public static readonly XName @default = "default";
 
         /// <summary>
         /// Represents the defaultAttributeDrillState XML attribute.
@@ -5465,7 +5465,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="A.innerShdw" />, <see cref="A.lightRig" />, <see cref="A.outerShdw" />, <see cref="A.prstShdw" />, <see cref="A.reflection" />, <see cref="CX.f" />, <see cref="P.animClr" />, <see cref="P.blinds" />, <see cref="P.checker" />, <see cref="P.comb" />, <see cref="P.cover" />, <see cref="P.pull" />, <see cref="P.push" />, <see cref="P.randomBar" />, <see cref="P.split" />, <see cref="P.strips" />, <see cref="P.wipe" />, <see cref="P.zoom" />, <see cref="P14.conveyor" />, <see cref="P14.doors" />, <see cref="P14.ferris" />, <see cref="P14.flip" />, <see cref="P14.flythrough" />, <see cref="P14.gallery" />, <see cref="P14.glitter" />, <see cref="P14.pan" />, <see cref="P14.prism" />, <see cref="P14.reveal" />, <see cref="P14.ripple" />, <see cref="P14.shred" />, <see cref="P14.switch" />, <see cref="P14.vortex" />, <see cref="P14.warp" />, <see cref="P14.window" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="A.innerShdw" />, <see cref="A.lightRig" />, <see cref="A.outerShdw" />, <see cref="A.prstShdw" />, <see cref="A.reflection" />, <see cref="CX.f" />, <see cref="P.animClr" />, <see cref="P.blinds" />, <see cref="P.checker" />, <see cref="P.comb" />, <see cref="P.cover" />, <see cref="P.pull" />, <see cref="P.push" />, <see cref="P.randomBar" />, <see cref="P.split" />, <see cref="P.strips" />, <see cref="P.wipe" />, <see cref="P.zoom" />, <see cref="P14.conveyor" />, <see cref="P14.doors" />, <see cref="P14.ferris" />, <see cref="P14.flip" />, <see cref="P14.flythrough" />, <see cref="P14.gallery" />, <see cref="P14.glitter" />, <see cref="P14.pan" />, <see cref="P14.prism" />, <see cref="P14.reveal" />, <see cref="P14.ripple" />, <see cref="P14.shred" />, <see cref="P14.@switch" />, <see cref="P14.vortex" />, <see cref="P14.warp" />, <see cref="P14.window" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: AnimateColor.Direction, BlindsTransition.Direction, CheckerTransition.Direction, CombTransition.Direction, ConveyorTransition.Direction, CoverTransition.Direction, DoorsTransition.Direction, FerrisTransition.Direction, FlipTransition.Direction, FlythroughTransition.Direction, Formula.Dir, GalleryTransition.Direction, GlitterTransition.Direction, InnerShadow.Direction, LightRig.Direction, OuterShadow.Direction, PanTransition.Direction, PresetShadow.Direction, PrismTransition.Direction, PullTransition.Direction, PushTransition.Direction, RandomBarTransition.Direction, Reflection.Direction, RevealTransition.Direction, RippleTransition.Direction, ShredTransition.Direction, SplitTransition.Direction, StripsTransition.Direction, SwitchTransition.Direction, VortexTransition.Direction, WarpTransition.Direction, WindowTransition.Direction, WipeTransition.Direction, ZoomTransition.Direction.</description></item>
         /// </list>
         /// </remarks>
@@ -5805,7 +5805,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <item><description>corresponds to the following strongly-typed properties: Parameter.Double.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName double = "double";
+        public static readonly XName @double = "double";
 
         /// <summary>
         /// Represents the dpi XML attributes.
@@ -7761,7 +7761,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <item><description>corresponds to the following strongly-typed properties: Constraint.For, Rule.For.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName for = "for";
+        public static readonly XName @for = "for";
 
         /// <summary>
         /// Represents the forceAA XML attributes.
@@ -8081,7 +8081,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="DGM.if" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="DGM.@if" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: DiagramChooseIf.Function.</description></item>
         /// </list>
         /// </remarks>
@@ -8777,7 +8777,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="O.lock" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="O.@lock" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: Lock.Grouping.</description></item>
         /// </list>
         /// </remarks>
@@ -9185,7 +9185,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="DGM.forEach" />, <see cref="DGM.if" />, <see cref="DGM.presOf" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="DGM.forEach" />, <see cref="DGM.@if" />, <see cref="DGM.presOf" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: DiagramChooseIf.HideLastTrans, ForEach.HideLastTrans, PresentationOf.HideLastTrans.</description></item>
         /// </list>
         /// </remarks>
@@ -9921,7 +9921,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <item><description>corresponds to the following strongly-typed properties: ErrorItem.FormatIndex, MediaFade.InDuration, MissingItem.FormatIndex, NumberItem.FormatIndex, PivotValueCellExtra.FormatIndex, StringItem.FormatIndex.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName in = "in";
+        public static readonly XName @in = "in";
 
         /// <summary>
         /// Represents the inc XML attribute.
@@ -12941,7 +12941,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="A.clrScheme" />, <see cref="A.cNvPr" />, <see cref="A.cont" />, <see cref="A.custClr" />, <see cref="A.effectDag" />, <see cref="A.fmtScheme" />, <see cref="A.fontScheme" />, <see cref="A.gd" />, <see cref="A.snd" />, <see cref="A.theme" />, <see cref="A.wavAudioFile" />, <see cref="A14.cNvPr" />, <see cref="AC.characteristic" />, <see cref="CDR.cNvPr" />, <see cref="CDR14.cNvPr" />, <see cref="CLBL.label" />, <see cref="DGM.choose" />, <see cref="DGM.else" />, <see cref="DGM.forEach" />, <see cref="DGM.if" />, <see cref="DGM.layoutNode" />, <see cref="DGM.styleLbl" />, <see cref="DGM14.cNvPr" />, <see cref="DSP.cNvPr" />, <see cref="INKML.brushProperty" />, <see cref="INKML.channel" />, <see cref="INKML.channelProperty" />, <see cref="INKML.srcProperty" />, <see cref="OP.property" />, <see cref="P.cmAuthor" />, <see cref="P.cNvPr" />, <see cref="P.control" />, <see cref="P.cSld" />, <see cref="P.custShow" />, <see cref="P.oleObj" />, <see cref="P.snd" />, <see cref="P.sndTgt" />, <see cref="P.tag" />, <see cref="P14.bmk" />, <see cref="P14.cNvPr" />, <see cref="P14.section" />, <see cref="P15.guide" />, <see cref="P188.author" />, <see cref="PIC.cNvPr" />, <see cref="SLE.slicer" />, <see cref="THM15.themeFamily" />, <see cref="TSLE.timeslicer" />, <see cref="W14.cNvPr" />, <see cref="WE.property" />, <see cref="WP.docPr" />, <see cref="WPG.cNvPr" />, <see cref="WPS.cNvPr" />, <see cref="X.cacheField" />, <see cref="X.calculatedMember" />, <see cref="X.cellStyle" />, <see cref="X.connection" />, <see cref="X.control" />, <see cref="X.customPr" />, <see cref="X.customWorkbookView" />, <see cref="X.dataField" />, <see cref="X.dataRef" />, <see cref="X.ddeItem" />, <see cref="X.definedName" />, <see cref="X.deletedField" />, <see cref="X.dimension" />, <see cref="X.filter" />, <see cref="X.functionGroup" />, <see cref="X.futureMetadata" />, <see cref="X.group" />, <see cref="X.measureGroup" />, <see cref="X.member" />, <see cref="X.metadataType" />, <see cref="X.mp" />, <see cref="X.oleItem" />, <see cref="X.pageField" />, <see cref="X.pageItem" />, <see cref="X.parameter" />, <see cref="X.pivotField" />, <see cref="X.pivotTableDefinition" />, <see cref="X.pivotTableStyleInfo" />, <see cref="X.protectedRange" />, <see cref="X.queryTable" />, <see cref="X.queryTableField" />, <see cref="X.rangeSet" />, <see cref="X.rdn" />, <see cref="X.ris" />, <see cref="X.scenario" />, <see cref="X.sheet" />, <see cref="X.table" />, <see cref="X.tableColumn" />, <see cref="X.tableStyle" />, <see cref="X.tableStyleInfo" />, <see cref="X.userInfo" />, <see cref="X.worksheetSource" />, <see cref="X14.definedName" />, <see cref="X14.oleItem" />, <see cref="X14.pivotTable" />, <see cref="X14.protectedRange" />, <see cref="X14.slicer" />, <see cref="X14.slicerCacheDefinition" />, <see cref="X14.slicerStyle" />, <see cref="X14.sourceConnection" />, <see cref="X15.activeTabTopLevelEntity" />, <see cref="X15.cachedUniqueName" />, <see cref="X15.dbTable" />, <see cref="X15.modelTable" />, <see cref="X15.pivotTable" />, <see cref="X15.timeline" />, <see cref="X15.timelineCacheDefinition" />, <see cref="X15.timelineStyle" />, <see cref="XDR.cNvPr" />, <see cref="XDR14.cNvPr" />, <see cref="XLRD2.flag" />, <see cref="XLRD2.key" />, <see cref="XLRD2.type" />, <see cref="XNSV.namedSheetView" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="A.clrScheme" />, <see cref="A.cNvPr" />, <see cref="A.cont" />, <see cref="A.custClr" />, <see cref="A.effectDag" />, <see cref="A.fmtScheme" />, <see cref="A.fontScheme" />, <see cref="A.gd" />, <see cref="A.snd" />, <see cref="A.theme" />, <see cref="A.wavAudioFile" />, <see cref="A14.cNvPr" />, <see cref="AC.characteristic" />, <see cref="CDR.cNvPr" />, <see cref="CDR14.cNvPr" />, <see cref="CLBL.label" />, <see cref="DGM.choose" />, <see cref="DGM.@else" />, <see cref="DGM.forEach" />, <see cref="DGM.@if" />, <see cref="DGM.layoutNode" />, <see cref="DGM.styleLbl" />, <see cref="DGM14.cNvPr" />, <see cref="DSP.cNvPr" />, <see cref="INKML.brushProperty" />, <see cref="INKML.channel" />, <see cref="INKML.channelProperty" />, <see cref="INKML.srcProperty" />, <see cref="OP.property" />, <see cref="P.cmAuthor" />, <see cref="P.cNvPr" />, <see cref="P.control" />, <see cref="P.cSld" />, <see cref="P.custShow" />, <see cref="P.oleObj" />, <see cref="P.snd" />, <see cref="P.sndTgt" />, <see cref="P.tag" />, <see cref="P14.bmk" />, <see cref="P14.cNvPr" />, <see cref="P14.section" />, <see cref="P15.guide" />, <see cref="P188.author" />, <see cref="PIC.cNvPr" />, <see cref="SLE.slicer" />, <see cref="THM15.themeFamily" />, <see cref="TSLE.timeslicer" />, <see cref="W14.cNvPr" />, <see cref="WE.property" />, <see cref="WP.docPr" />, <see cref="WPG.cNvPr" />, <see cref="WPS.cNvPr" />, <see cref="X.cacheField" />, <see cref="X.calculatedMember" />, <see cref="X.cellStyle" />, <see cref="X.connection" />, <see cref="X.control" />, <see cref="X.customPr" />, <see cref="X.customWorkbookView" />, <see cref="X.dataField" />, <see cref="X.dataRef" />, <see cref="X.ddeItem" />, <see cref="X.definedName" />, <see cref="X.deletedField" />, <see cref="X.dimension" />, <see cref="X.filter" />, <see cref="X.functionGroup" />, <see cref="X.futureMetadata" />, <see cref="X.group" />, <see cref="X.measureGroup" />, <see cref="X.member" />, <see cref="X.metadataType" />, <see cref="X.mp" />, <see cref="X.oleItem" />, <see cref="X.pageField" />, <see cref="X.pageItem" />, <see cref="X.parameter" />, <see cref="X.pivotField" />, <see cref="X.pivotTableDefinition" />, <see cref="X.pivotTableStyleInfo" />, <see cref="X.protectedRange" />, <see cref="X.queryTable" />, <see cref="X.queryTableField" />, <see cref="X.rangeSet" />, <see cref="X.rdn" />, <see cref="X.ris" />, <see cref="X.scenario" />, <see cref="X.sheet" />, <see cref="X.table" />, <see cref="X.tableColumn" />, <see cref="X.tableStyle" />, <see cref="X.tableStyleInfo" />, <see cref="X.userInfo" />, <see cref="X.worksheetSource" />, <see cref="X14.definedName" />, <see cref="X14.oleItem" />, <see cref="X14.pivotTable" />, <see cref="X14.protectedRange" />, <see cref="X14.slicer" />, <see cref="X14.slicerCacheDefinition" />, <see cref="X14.slicerStyle" />, <see cref="X14.sourceConnection" />, <see cref="X15.activeTabTopLevelEntity" />, <see cref="X15.cachedUniqueName" />, <see cref="X15.dbTable" />, <see cref="X15.modelTable" />, <see cref="X15.pivotTable" />, <see cref="X15.timeline" />, <see cref="X15.timelineCacheDefinition" />, <see cref="X15.timelineStyle" />, <see cref="XDR.cNvPr" />, <see cref="XDR14.cNvPr" />, <see cref="XLRD2.flag" />, <see cref="XLRD2.key" />, <see cref="XLRD2.type" />, <see cref="XNSV.namedSheetView" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: Author.Name, BrushProperty.Name, CachedUniqueName.Name, CacheField.Name, CalculatedMember.Name, CellStyle.Name, Channel.Name, ChannelProperty.Name, Characteristic.Name, Choose.Name, ClassificationLabel.Name, ColorScheme.Name, ColorTransformStyleLabel.Name, CommentAuthor.Name, CommonSlideData.Name, Connection.Name, Control.Name, CustomColor.Name, CustomDocumentProperty.Name, CustomProperty.Name, CustomShow.Name, CustomWorkbookView.Name, DataField.Name, DataReference.Name, DbTable.Name, DdeItem.Name, DefinedName.Name, DeletedField.Name, DiagramChooseElse.Name, DiagramChooseIf.Name, Dimension.Name, DocProperties.Name, EffectContainer.Name, EffectDag.Name, ExtendedGuide.Name, ExternalDefinedName.Name, FieldListActiveTabTopLevelEntity.Name, FontScheme.Name, ForEach.Name, FormatScheme.Name, FunctionGroup.Name, FutureMetadata.Name, Group.Name, HyperlinkSound.Name, LayoutNode.Name, MeasureGroup.Name, MediaBookmark.Name, Member.Name, MemberProperty.Name, MetadataType.Name, ModelTable.Name, NamedSheetView.Name, NonVisualDrawingProperties.Name, OleItem.Name, OleObject.Name, PageField.Name, PageItem.Name, Parameter.Name, PivotField.Name, PivotFilter.Name, PivotTableDefinition.Name, PivotTableStyle.Name, ProtectedRange.Name, QueryTable.Name, QueryTableField.Name, RangeSet.Name, RevisionDefinedName.Name, RevisionInsertSheet.Name, RichValueType.Name, RichValueTypeReservedKey.Name, RichValueTypeReservedKeyFlag.Name, Scenario.Name, Section.Name, SectionOld.Name, ShapeGuide.Name, Sheet.Name, Slicer.Name, SlicerCacheDefinition.Name, SlicerCachePivotTable.Name, SlicerStyle.Name, Sound.Name, SoundTarget.Name, SourceConnection.Name, SourceProperty.Name, StyleLabel.Name, Table.Name, TableColumn.Name, TableStyle.Name, TableStyleInfo.Name, Tag.Name, Theme.Name, ThemeFamily.Name, Timeline.Name, TimelineCacheDefinition.Name, TimelineCachePivotTable.Name, TimelineStyle.Name, TimeSlicer.Name, UserInfo.Name, WaveAudioFile.Name, WebExtensionProperty.Name, WorksheetSource.Name.</description></item>
         /// </list>
         /// </remarks>
@@ -13041,7 +13041,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <item><description>corresponds to the following strongly-typed properties: Connection.New, Entry.New.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName new = "new";
+        public static readonly XName @new = "new";
 
         /// <summary>
         /// Represents the newLength XML attribute.
@@ -13973,7 +13973,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="DGM.constr" />, <see cref="DGM.if" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="DGM.constr" />, <see cref="DGM.@if" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: Constraint.Operator, DiagramChooseIf.Operator.</description></item>
         /// </list>
         /// </remarks>
@@ -14001,7 +14001,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <item><description>corresponds to the following strongly-typed properties: ConditionalFormattingRule.Operator, CustomFilter.Operator, DataValidation.Operator.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName operator = "operator";
+        public static readonly XName @operator = "operator";
 
         /// <summary>
         /// Represents the optimizeMemory XML attribute.
@@ -14085,7 +14085,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <item><description>corresponds to the following strongly-typed properties: MediaFade.OutDuration.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName out = "out";
+        public static readonly XName @out = "out";
 
         /// <summary>
         /// Represents the outliers XML attribute.
@@ -14205,7 +14205,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <item><description>corresponds to the following strongly-typed properties: CommonBehavior.Override.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName override = "override";
+        public static readonly XName @override = "override";
 
         /// <summary>
         /// Represents the ownerIdx XML attribute.
@@ -14849,7 +14849,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="O.lock" />, <see cref="V.fill" />, <see cref="V.h" />, <see cref="X.stop" />, <see cref="X.textField" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="O.@lock" />, <see cref="V.fill" />, <see cref="V.h" />, <see cref="X.stop" />, <see cref="X.textField" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: Fill.Position, GradientStop.Position, Lock.Position, ShapeHandle.Position, TextField.Position.</description></item>
         /// </list>
         /// </remarks>
@@ -15357,7 +15357,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <item><description>corresponds to the following strongly-typed properties: Headers.Protected.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName protected = "protected";
+        public static readonly XName @protected = "protected";
 
         /// <summary>
         /// Represents the provid XML attribute.
@@ -15461,7 +15461,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="DGM.constr" />, <see cref="DGM.forEach" />, <see cref="DGM.if" />, <see cref="DGM.presOf" />, <see cref="DGM.rule" />, <see cref="DGM1611.autoBuNodeInfo" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="DGM.constr" />, <see cref="DGM.forEach" />, <see cref="DGM.@if" />, <see cref="DGM.presOf" />, <see cref="DGM.rule" />, <see cref="DGM1611.autoBuNodeInfo" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: Constraint.PointType, DiagramChooseIf.PointType, ForEach.PointType, NumberDiagramInfo.PtType, PresentationOf.PointType, Rule.PointType.</description></item>
         /// </list>
         /// </remarks>
@@ -15825,7 +15825,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <item><description>corresponds to the following strongly-typed properties: AutoFilter.Reference, CellFormula.Reference, ColumnSortMap.Ref, Comment.Reference, DataReference.Reference, DestinationLink.Reference, Effect.Reference, ForEach.Reference, Grammar.Reference, GroupInfo.Reference, Hyperlink.Reference, Location.Reference, MergeCell.Reference, Model.Reference, NsvFilter.Ref, OleSize.Reference, RangeSet.Reference, RevisionAutoFormat.Reference, RevisionQueryTable.Reference, RevisionRowColumn.Reference, RichSortCondition.Reference, RowSortMap.Ref, SheetDimension.Reference, SortCondition.Reference, SortState.Reference, SourceLink.Reference, Table.Reference, ThreadedComment.Ref, WorksheetSource.Reference.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName ref = "ref";
+        public static readonly XName @ref = "ref";
 
         /// <summary>
         /// Represents the ref3D XML attribute.
@@ -16601,7 +16601,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="O.lock" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="O.@lock" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: Lock.Rotation.</description></item>
         /// </list>
         /// </remarks>
@@ -17201,7 +17201,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="O.lock" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="O.@lock" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: Lock.Selection.</description></item>
         /// </list>
         /// </remarks>
@@ -17609,7 +17609,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="O.lock" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="O.@lock" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: Lock.ShapeType.</description></item>
         /// </list>
         /// </remarks>
@@ -19505,7 +19505,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="A16.cxnDERefs" />, <see cref="DGM.forEach" />, <see cref="DGM.if" />, <see cref="DGM.presOf" />, <see cref="P.charRg" />, <see cref="P.pRg" />, <see cref="P.sldRg" />, <see cref="P14.trim" />, <see cref="X.e" />, <see cref="X.m" />, <see cref="X.n" />, <see cref="X.s" />, <see cref="X.t" />, <see cref="X15.x" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="A16.cxnDERefs" />, <see cref="DGM.forEach" />, <see cref="DGM.@if" />, <see cref="DGM.presOf" />, <see cref="P.charRg" />, <see cref="P.pRg" />, <see cref="P.sldRg" />, <see cref="P14.trim" />, <see cref="X.e" />, <see cref="X.m" />, <see cref="X.n" />, <see cref="X.s" />, <see cref="X.t" />, <see cref="X15.x" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: CharRange.Start, ConnectableReferences.St, DiagramChooseIf.Start, ErrorItem.Strikethrough, ForEach.Start, MdxTuple.Strikethrough, MediaTrim.Start, MissingItem.Strikethrough, NumberItem.Strikethrough, ParagraphIndexRange.Start, PivotValueCellExtra.Strikethrough, PresentationOf.Start, SlideRange.Start, StringItem.Strikethrough.</description></item>
         /// </list>
         /// </remarks>
@@ -19757,7 +19757,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="DGM.forEach" />, <see cref="DGM.if" />, <see cref="DGM.presOf" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="DGM.forEach" />, <see cref="DGM.@if" />, <see cref="DGM.presOf" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: DiagramChooseIf.Step, ForEach.Step, PresentationOf.Step.</description></item>
         /// </list>
         /// </remarks>
@@ -19845,7 +19845,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <item><description>corresponds to the following strongly-typed properties: Parameter.String, TextPath.String.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName string = "string";
+        public static readonly XName @string = "string";
 
         /// <summary>
         /// Represents the stringValue1 XML attribute.
@@ -20205,7 +20205,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <item><description>corresponds to the following strongly-typed properties: ShapeHandle.Switch.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName switch = "switch";
+        public static readonly XName @switch = "switch";
 
         /// <summary>
         /// Represents the sx XML attributes.
@@ -20477,7 +20477,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="O.lock" />, <see cref="X.cfRule" />, <see cref="X14.cfRule" />, <see cref="X15.dbCommand" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="O.@lock" />, <see cref="X.cfRule" />, <see cref="X14.cfRule" />, <see cref="X15.dbCommand" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: ConditionalFormattingRule.Text, DbCommand.Text, Lock.TextLock.</description></item>
         /// </list>
         /// </remarks>
@@ -21401,7 +21401,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="O.lock" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="O.@lock" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: Lock.Ungrouping.</description></item>
         /// </list>
         /// </remarks>
@@ -21845,7 +21845,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="A.alpha" />, <see cref="A.alphaMod" />, <see cref="A.alphaOff" />, <see cref="A.blue" />, <see cref="A.blueMod" />, <see cref="A.blueOff" />, <see cref="A.buSzPct" />, <see cref="A.buSzPts" />, <see cref="A.green" />, <see cref="A.greenMod" />, <see cref="A.greenOff" />, <see cref="A.hue" />, <see cref="A.hueMod" />, <see cref="A.hueOff" />, <see cref="A.lum" />, <see cref="A.lumMod" />, <see cref="A.lumOff" />, <see cref="A.prstClr" />, <see cref="A.prstDash" />, <see cref="A.red" />, <see cref="A.redMod" />, <see cref="A.redOff" />, <see cref="A.rtl" />, <see cref="A.sat" />, <see cref="A.satMod" />, <see cref="A.satOff" />, <see cref="A.schemeClr" />, <see cref="A.shade" />, <see cref="A.spcPct" />, <see cref="A.spcPts" />, <see cref="A.srgbClr" />, <see cref="A.sysClr" />, <see cref="A.tint" />, <see cref="A14.isCanvas" />, <see cref="A14.shadowObscured" />, <see cref="A14.useLocalDpi" />, <see cref="A16.colId" />, <see cref="A16.rowId" />, <see cref="AC.characteristic" />, <see cref="ADEC.decorative" />, <see cref="AHYP.hlinkClr" />, <see cref="C.applyToEnd" />, <see cref="C.applyToFront" />, <see cref="C.applyToSides" />, <see cref="C.auto" />, <see cref="C.autoTitleDeleted" />, <see cref="C.autoUpdate" />, <see cref="C.axId" />, <see cref="C.axPos" />, <see cref="C.backward" />, <see cref="C.barDir" />, <see cref="C.baseTimeUnit" />, <see cref="C.bubble3D" />, <see cref="C.bubbleScale" />, <see cref="C.builtInUnit" />, <see cref="C.chartObject" />, <see cref="C.crossAx" />, <see cref="C.crossBetween" />, <see cref="C.crosses" />, <see cref="C.crossesAt" />, <see cref="C.custUnit" />, <see cref="C.data" />, <see cref="C.date1904" />, <see cref="C.delete" />, <see cref="C.depthPercent" />, <see cref="C.dispBlanksAs" />, <see cref="C.dispEq" />, <see cref="C.dispRSqr" />, <see cref="C.dLblPos" />, <see cref="C.errBarType" />, <see cref="C.errDir" />, <see cref="C.errValType" />, <see cref="C.explosion" />, <see cref="C.firstSliceAng" />, <see cref="C.fmtId" />, <see cref="C.formatting" />, <see cref="C.forward" />, <see cref="C.gapDepth" />, <see cref="C.gapWidth" />, <see cref="C.grouping" />, <see cref="C.h" />, <see cref="C.hMode" />, <see cref="C.holeSize" />, <see cref="C.hPercent" />, <see cref="C.idx" />, <see cref="C.intercept" />, <see cref="C.invertIfNegative" />, <see cref="C.lang" />, <see cref="C.layoutTarget" />, <see cref="C.lblAlgn" />, <see cref="C.lblOffset" />, <see cref="C.legendPos" />, <see cref="C.logBase" />, <see cref="C.majorTickMark" />, <see cref="C.majorTimeUnit" />, <see cref="C.majorUnit" />, <see cref="C.marker" />, <see cref="C.max" />, <see cref="C.min" />, <see cref="C.minorTickMark" />, <see cref="C.minorTimeUnit" />, <see cref="C.minorUnit" />, <see cref="C.noEndCap" />, <see cref="C.noMultiLvlLbl" />, <see cref="C.ofPieType" />, <see cref="C.order" />, <see cref="C.orientation" />, <see cref="C.overlap" />, <see cref="C.overlay" />, <see cref="C.period" />, <see cref="C.perspective" />, <see cref="C.pictureFormat" />, <see cref="C.pictureStackUnit" />, <see cref="C.plotVisOnly" />, <see cref="C.ptCount" />, <see cref="C.radarStyle" />, <see cref="C.rAngAx" />, <see cref="C.rotX" />, <see cref="C.rotY" />, <see cref="C.roundedCorners" />, <see cref="C.scatterStyle" />, <see cref="C.secondPiePt" />, <see cref="C.secondPieSize" />, <see cref="C.selection" />, <see cref="C.shape" />, <see cref="C.showBubbleSize" />, <see cref="C.showCatName" />, <see cref="C.showDLblsOverMax" />, <see cref="C.showHorzBorder" />, <see cref="C.showKeys" />, <see cref="C.showLeaderLines" />, <see cref="C.showLegendKey" />, <see cref="C.showNegBubbles" />, <see cref="C.showOutline" />, <see cref="C.showPercent" />, <see cref="C.showSerName" />, <see cref="C.showVal" />, <see cref="C.showVertBorder" />, <see cref="C.size" />, <see cref="C.sizeRepresents" />, <see cref="C.smooth" />, <see cref="C.splitPos" />, <see cref="C.splitType" />, <see cref="C.style" />, <see cref="C.symbol" />, <see cref="C.thickness" />, <see cref="C.tickLblPos" />, <see cref="C.tickLblSkip" />, <see cref="C.tickMarkSkip" />, <see cref="C.trendlineType" />, <see cref="C.userInterface" />, <see cref="C.val" />, <see cref="C.varyColors" />, <see cref="C.w" />, <see cref="C.wireframe" />, <see cref="C.wMode" />, <see cref="C.x" />, <see cref="C.xMode" />, <see cref="C.y" />, <see cref="C.yMode" />, <see cref="C14.dropZoneCategories" />, <see cref="C14.dropZoneData" />, <see cref="C14.dropZoneFilter" />, <see cref="C14.dropZoneSeries" />, <see cref="C14.dropZonesVisible" />, <see cref="C14.inSketchMode" />, <see cref="C14.showSketchBtn" />, <see cref="C14.style" />, <see cref="C15.autoCat" />, <see cref="C15.bubble3D" />, <see cref="C15.explosion" />, <see cref="C15.invertIfNegative" />, <see cref="C15.showDataLabelsRange" />, <see cref="C15.showLeaderLines" />, <see cref="C15.xForSave" />, <see cref="CS.styleClr" />, <see cref="CX.dataId" />, <see cref="CX.idx" />, <see cref="CX.parentLabelLayout" />, <see cref="DGM.adj" />, <see cref="DGM.animLvl" />, <see cref="DGM.animOne" />, <see cref="DGM.bulletEnabled" />, <see cref="DGM.chMax" />, <see cref="DGM.chPref" />, <see cref="DGM.constr" />, <see cref="DGM.desc" />, <see cref="DGM.dir" />, <see cref="DGM.hierBranch" />, <see cref="DGM.if" />, <see cref="DGM.orgChart" />, <see cref="DGM.param" />, <see cref="DGM.resizeHandles" />, <see cref="DGM.rule" />, <see cref="DGM.title" />, <see cref="DGM14.recolorImg" />, <see cref="P.boolVal" />, <see cref="P.fltVal" />, <see cref="P.intVal" />, <see cref="P.rtn" />, <see cref="P.strVal" />, <see cref="P.tag" />, <see cref="P.tmAbs" />, <see cref="P.tmPct" />, <see cref="P.tn" />, <see cref="P14.creationId" />, <see cref="P14.defaultImageDpi" />, <see cref="P14.discardImageEditData" />, <see cref="P14.modId" />, <see cref="P14.showMediaCtrls" />, <see cref="P15.chartTrackingRefBased" />, <see cref="X.b" />, <see cref="X.cfvo" />, <see cref="X.charset" />, <see cref="X.condense" />, <see cref="X.customFilter" />, <see cref="X.dynamicFilter" />, <see cref="X.extend" />, <see cref="X.family" />, <see cref="X.filter" />, <see cref="X.i" />, <see cref="X.inputCells" />, <see cref="X.name" />, <see cref="X.outline" />, <see cref="X.rFont" />, <see cref="X.scheme" />, <see cref="X.shadow" />, <see cref="X.sheetId" />, <see cref="X.sheetName" />, <see cref="X.strike" />, <see cref="X.sz" />, <see cref="X.top10" />, <see cref="X.u" />, <see cref="X.vertAlign" />, <see cref="X14.customFilter" />, <see cref="X14.filter" />, <see cref="X14.formControlPr" />, <see cref="X14.item" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="A.alpha" />, <see cref="A.alphaMod" />, <see cref="A.alphaOff" />, <see cref="A.blue" />, <see cref="A.blueMod" />, <see cref="A.blueOff" />, <see cref="A.buSzPct" />, <see cref="A.buSzPts" />, <see cref="A.green" />, <see cref="A.greenMod" />, <see cref="A.greenOff" />, <see cref="A.hue" />, <see cref="A.hueMod" />, <see cref="A.hueOff" />, <see cref="A.lum" />, <see cref="A.lumMod" />, <see cref="A.lumOff" />, <see cref="A.prstClr" />, <see cref="A.prstDash" />, <see cref="A.red" />, <see cref="A.redMod" />, <see cref="A.redOff" />, <see cref="A.rtl" />, <see cref="A.sat" />, <see cref="A.satMod" />, <see cref="A.satOff" />, <see cref="A.schemeClr" />, <see cref="A.shade" />, <see cref="A.spcPct" />, <see cref="A.spcPts" />, <see cref="A.srgbClr" />, <see cref="A.sysClr" />, <see cref="A.tint" />, <see cref="A14.isCanvas" />, <see cref="A14.shadowObscured" />, <see cref="A14.useLocalDpi" />, <see cref="A16.colId" />, <see cref="A16.rowId" />, <see cref="AC.characteristic" />, <see cref="ADEC.decorative" />, <see cref="AHYP.hlinkClr" />, <see cref="C.applyToEnd" />, <see cref="C.applyToFront" />, <see cref="C.applyToSides" />, <see cref="C.auto" />, <see cref="C.autoTitleDeleted" />, <see cref="C.autoUpdate" />, <see cref="C.axId" />, <see cref="C.axPos" />, <see cref="C.backward" />, <see cref="C.barDir" />, <see cref="C.baseTimeUnit" />, <see cref="C.bubble3D" />, <see cref="C.bubbleScale" />, <see cref="C.builtInUnit" />, <see cref="C.chartObject" />, <see cref="C.crossAx" />, <see cref="C.crossBetween" />, <see cref="C.crosses" />, <see cref="C.crossesAt" />, <see cref="C.custUnit" />, <see cref="C.data" />, <see cref="C.date1904" />, <see cref="C.delete" />, <see cref="C.depthPercent" />, <see cref="C.dispBlanksAs" />, <see cref="C.dispEq" />, <see cref="C.dispRSqr" />, <see cref="C.dLblPos" />, <see cref="C.errBarType" />, <see cref="C.errDir" />, <see cref="C.errValType" />, <see cref="C.explosion" />, <see cref="C.firstSliceAng" />, <see cref="C.fmtId" />, <see cref="C.formatting" />, <see cref="C.forward" />, <see cref="C.gapDepth" />, <see cref="C.gapWidth" />, <see cref="C.grouping" />, <see cref="C.h" />, <see cref="C.hMode" />, <see cref="C.holeSize" />, <see cref="C.hPercent" />, <see cref="C.idx" />, <see cref="C.intercept" />, <see cref="C.invertIfNegative" />, <see cref="C.lang" />, <see cref="C.layoutTarget" />, <see cref="C.lblAlgn" />, <see cref="C.lblOffset" />, <see cref="C.legendPos" />, <see cref="C.logBase" />, <see cref="C.majorTickMark" />, <see cref="C.majorTimeUnit" />, <see cref="C.majorUnit" />, <see cref="C.marker" />, <see cref="C.max" />, <see cref="C.min" />, <see cref="C.minorTickMark" />, <see cref="C.minorTimeUnit" />, <see cref="C.minorUnit" />, <see cref="C.noEndCap" />, <see cref="C.noMultiLvlLbl" />, <see cref="C.ofPieType" />, <see cref="C.order" />, <see cref="C.orientation" />, <see cref="C.overlap" />, <see cref="C.overlay" />, <see cref="C.period" />, <see cref="C.perspective" />, <see cref="C.pictureFormat" />, <see cref="C.pictureStackUnit" />, <see cref="C.plotVisOnly" />, <see cref="C.ptCount" />, <see cref="C.radarStyle" />, <see cref="C.rAngAx" />, <see cref="C.rotX" />, <see cref="C.rotY" />, <see cref="C.roundedCorners" />, <see cref="C.scatterStyle" />, <see cref="C.secondPiePt" />, <see cref="C.secondPieSize" />, <see cref="C.selection" />, <see cref="C.shape" />, <see cref="C.showBubbleSize" />, <see cref="C.showCatName" />, <see cref="C.showDLblsOverMax" />, <see cref="C.showHorzBorder" />, <see cref="C.showKeys" />, <see cref="C.showLeaderLines" />, <see cref="C.showLegendKey" />, <see cref="C.showNegBubbles" />, <see cref="C.showOutline" />, <see cref="C.showPercent" />, <see cref="C.showSerName" />, <see cref="C.showVal" />, <see cref="C.showVertBorder" />, <see cref="C.size" />, <see cref="C.sizeRepresents" />, <see cref="C.smooth" />, <see cref="C.splitPos" />, <see cref="C.splitType" />, <see cref="C.style" />, <see cref="C.symbol" />, <see cref="C.thickness" />, <see cref="C.tickLblPos" />, <see cref="C.tickLblSkip" />, <see cref="C.tickMarkSkip" />, <see cref="C.trendlineType" />, <see cref="C.userInterface" />, <see cref="C.val" />, <see cref="C.varyColors" />, <see cref="C.w" />, <see cref="C.wireframe" />, <see cref="C.wMode" />, <see cref="C.x" />, <see cref="C.xMode" />, <see cref="C.y" />, <see cref="C.yMode" />, <see cref="C14.dropZoneCategories" />, <see cref="C14.dropZoneData" />, <see cref="C14.dropZoneFilter" />, <see cref="C14.dropZoneSeries" />, <see cref="C14.dropZonesVisible" />, <see cref="C14.inSketchMode" />, <see cref="C14.showSketchBtn" />, <see cref="C14.style" />, <see cref="C15.autoCat" />, <see cref="C15.bubble3D" />, <see cref="C15.explosion" />, <see cref="C15.invertIfNegative" />, <see cref="C15.showDataLabelsRange" />, <see cref="C15.showLeaderLines" />, <see cref="C15.xForSave" />, <see cref="CS.styleClr" />, <see cref="CX.dataId" />, <see cref="CX.idx" />, <see cref="CX.parentLabelLayout" />, <see cref="DGM.adj" />, <see cref="DGM.animLvl" />, <see cref="DGM.animOne" />, <see cref="DGM.bulletEnabled" />, <see cref="DGM.chMax" />, <see cref="DGM.chPref" />, <see cref="DGM.constr" />, <see cref="DGM.desc" />, <see cref="DGM.dir" />, <see cref="DGM.hierBranch" />, <see cref="DGM.@if" />, <see cref="DGM.orgChart" />, <see cref="DGM.param" />, <see cref="DGM.resizeHandles" />, <see cref="DGM.rule" />, <see cref="DGM.title" />, <see cref="DGM14.recolorImg" />, <see cref="P.boolVal" />, <see cref="P.fltVal" />, <see cref="P.intVal" />, <see cref="P.rtn" />, <see cref="P.strVal" />, <see cref="P.tag" />, <see cref="P.tmAbs" />, <see cref="P.tmPct" />, <see cref="P.tn" />, <see cref="P14.creationId" />, <see cref="P14.defaultImageDpi" />, <see cref="P14.discardImageEditData" />, <see cref="P14.modId" />, <see cref="P14.showMediaCtrls" />, <see cref="P15.chartTrackingRefBased" />, <see cref="X.b" />, <see cref="X.cfvo" />, <see cref="X.charset" />, <see cref="X.condense" />, <see cref="X.customFilter" />, <see cref="X.dynamicFilter" />, <see cref="X.extend" />, <see cref="X.family" />, <see cref="X.filter" />, <see cref="X.i" />, <see cref="X.inputCells" />, <see cref="X.name" />, <see cref="X.outline" />, <see cref="X.rFont" />, <see cref="X.scheme" />, <see cref="X.shadow" />, <see cref="X.sheetId" />, <see cref="X.sheetName" />, <see cref="X.strike" />, <see cref="X.sz" />, <see cref="X.top10" />, <see cref="X.u" />, <see cref="X.vertAlign" />, <see cref="X14.customFilter" />, <see cref="X14.filter" />, <see cref="X14.formControlPr" />, <see cref="X14.item" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: Adjust.Val, Alpha.Val, AlphaModulation.Val, AlphaOffset.Val, AnimateOneByOne.Val, AnimationLevel.Val, ApplyToEnd.Val, ApplyToFront.Val, ApplyToSides.Val, AutoGeneneratedCategories.Val, AutoLabeled.Val, AutoTitleDeleted.Val, AutoUpdate.Val, AxisId.Val, AxisPosition.Val, Backward.Val, BarDirection.Val, BarGrouping.Val, BaseTimeUnit.Val, Blue.Val, BlueModulation.Val, BlueOffset.Val, Bold.Val, BooleanVariantValue.Val, Bubble3D.Val, BubbleScale.Val, BuiltInUnit.Val, BulletEnabled.Val, BulletSizePercentage.Val, BulletSizePoints.Val, Characteristic.Val, ChartObject.Val, ChartTrackingReferenceBased.Val, ColIdIdentifier.Val, ColorDefinitionTitle.Val, ColorTransformDescription.Val, Condense.Val, ConditionalFormatValueObject.Val, Constraint.Val, CreationId.Val, CrossBetween.Val, Crosses.Val, CrossesAt.Val, CrossingAxis.Val, CustomDisplayUnit.Val, CustomFilter.Val, Data.Val, DataId.Val, DataLabelPosition.Val, Date1904.Val, Decorative.Val, DefaultImageDpi.Val, Delete.Val, DepthPercent.Val, Description.Val, DiagramChooseIf.Val, Direction.Val, DiscardImageEditData.Val, DisplayBlanksAs.Val, DisplayEquation.Val, DisplayRSquaredValue.Val, DropZoneCategories.Val, DropZoneData.Val, DropZoneFilter.Val, DropZoneSeries.Val, DropZonesVisible.Val, DynamicFilter.Val, EditingLanguage.Val, ErrorBarType.Val, ErrorBarValue.Val, ErrorBarValueType.Val, ErrorDirection.Val, ExceptionForSave.Val, Explosion.Val, Extend.Val, Filter.Val, FirstSliceAngle.Val, FloatVariantValue.Val, FontCharSet.Val, FontFamily.Val, FontFamilyNumbering.Val, FontName.Val, FontScheme.Val, FontSize.Val, FormatId.Val, Formatting.Val, FormControlProperties.Val, Forward.Val, GapDepth.Val, GapWidth.Val, Green.Val, GreenModulation.Val, GreenOffset.Val, Grouping.Val, Height.Val, HeightMode.Val, HeightPercent.Val, HierarchyBranch.Val, HoleSize.Val, Hue.Val, HueModulation.Val, HueOffset.Val, HyperlinkColor.Val, Index.Val, InputCells.Val, InSketchMode.Val, IntegerVariantValue.Val, Intercept.Val, InvertIfNegative.Val, InvertIfNegativeBoolean.Val, IsCanvas.Val, Italic.Val, LabelAlignment.Val, LabelOffset.Val, LayoutTarget.Val, Left.Val, LeftMode.Val, LegendPosition.Val, ListItem.Val, LogBase.Val, Luminance.Val, LuminanceModulation.Val, LuminanceOffset.Val, MajorTickMark.Val, MajorTimeUnit.Val, MajorUnit.Val, MaxAxisValue.Val, MaxNumberOfChildren.Val, MinAxisValue.Val, MinorTickMark.Val, MinorTimeUnit.Val, MinorUnit.Val, ModificationId.Val, NoEndCap.Val, NoMultiLevelLabels.Val, OfPieType.Val, Order.Val, OrganizationChart.Val, Orientation.Val, Outline.Val, Overlap.Val, Overlay.Val, Parameter.Val, ParentLabelLayout.ParentLabelLayoutVal, Period.Val, Perspective.Val, PictureFormat.Val, PictureStackUnit.Val, PlotVisibleOnly.Val, PointCount.Val, PolynomialOrder.Val, PreferredNumberOfChildren.Val, PresetColor.Val, PresetDash.Val, RadarStyle.Val, RecolorImages.Val, Red.Val, RedModulation.Val, RedOffset.Val, ResizeHandles.Val, RgbColorModelHex.Val, RightAngleAxes.Val, RightToLeft.Val, RotateX.Val, RotateY.Val, RoundedCorners.Val, RowIdIdentifier.Val, Rule.Val, RunFont.Val, RunPropertyCharSet.Val, RuntimeNodeTrigger.Val, Saturation.Val, SaturationModulation.Val, SaturationOffset.Val, ScatterStyle.Val, SchemeColor.Val, SecondPiePoint.Val, SecondPieSize.Val, Selection.Val, Shade.Val, Shadow.Val, ShadowObscured.Val, Shape.Val, SheetId.Val, SheetName.Val, ShowBubbleSize.Val, ShowCategoryName.Val, ShowDataLabelsOverMaximum.Val, ShowDataLabelsRange.Val, ShowHorizontalBorder.Val, ShowKeys.Val, ShowLeaderLines.Val, ShowLegendKey.Val, ShowMarker.Val, ShowMediaControls.Val, ShowNegativeBubbles.Val, ShowOutlineBorder.Val, ShowPercent.Val, ShowSeriesName.Val, ShowSketchButton.Val, ShowValue.Val, ShowVerticalBorder.Val, Size.Val, SizeRepresents.Val, Smooth.Val, SpacingPercent.Val, SpacingPoints.Val, SplitPosition.Val, SplitType.Val, Strike.Val, StringVariantValue.Val, Style.Val, StyleColor.Val, StyleDefinitionTitle.Val, StyleLabelDescription.Val, Symbol.Val, SystemColor.Val, Tag.Val, Thickness.Val, TickLabelPosition.Val, TickLabelSkip.Val, TickMarkSkip.Val, TimeAbsolute.Val, TimeNode.Val, TimePercentage.Val, Tint.Val, Title.Val, Top.Val, Top10.Val, TopMode.Val, TrendlineType.Val, Underline.Val, UnsignedIntegerType.Val, UseLocalDpi.Val, UserInterface.Val, VaryColors.Val, VerticalTextAlignment.Val, Width.Val, WidthMode.Val, Wireframe.Val.</description></item>
         /// </list>
         /// </remarks>
@@ -22037,7 +22037,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="O.lock" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="O.@lock" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: Lock.Verticies.</description></item>
         /// </list>
         /// </remarks>

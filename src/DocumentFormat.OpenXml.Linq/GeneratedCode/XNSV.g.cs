@@ -103,7 +103,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="namedSheetView" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="columnFilter" />, <see cref="extLst" />, <see cref="sortRules" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.filterId" />, <see cref="NoNamespace.ref" />, <see cref="NoNamespace.tableId" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.filterId" />, <see cref="NoNamespace.@ref" />, <see cref="NoNamespace.tableId" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: NsvFilter.</description></item>
         /// </list>
         /// </remarks>
@@ -116,7 +116,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="sortRule" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.customList" />, <see cref="NoNamespace.descending" />, <see cref="NoNamespace.dxfId_" />, <see cref="NoNamespace.iconId" />, <see cref="NoNamespace.iconSet" />, <see cref="NoNamespace.ref" />, <see cref="NoNamespace.richSortKey" />, <see cref="NoNamespace.sortBy" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.customList" />, <see cref="NoNamespace.descending" />, <see cref="NoNamespace.dxfId_" />, <see cref="NoNamespace.iconId" />, <see cref="NoNamespace.iconSet" />, <see cref="NoNamespace.@ref" />, <see cref="NoNamespace.richSortKey" />, <see cref="NoNamespace.sortBy" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: RichSortCondition.</description></item>
         /// </list>
         /// </remarks>
@@ -129,7 +129,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="sortRule" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.customList" />, <see cref="NoNamespace.descending" />, <see cref="NoNamespace.dxfId_" />, <see cref="NoNamespace.iconId" />, <see cref="NoNamespace.iconSet" />, <see cref="NoNamespace.ref" />, <see cref="NoNamespace.sortBy" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.customList" />, <see cref="NoNamespace.descending" />, <see cref="NoNamespace.dxfId_" />, <see cref="NoNamespace.iconId" />, <see cref="NoNamespace.iconSet" />, <see cref="NoNamespace.@ref" />, <see cref="NoNamespace.sortBy" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SortCondition.</description></item>
         /// </list>
         /// </remarks>

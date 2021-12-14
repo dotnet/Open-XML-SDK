@@ -594,7 +594,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="connection" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="X.textFields" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.characterSet" />, <see cref="NoNamespace.codePage" />, <see cref="NoNamespace.comma" />, <see cref="NoNamespace.consecutive" />, <see cref="NoNamespace.decimal" />, <see cref="NoNamespace.delimited" />, <see cref="NoNamespace.delimiter" />, <see cref="NoNamespace.fileType" />, <see cref="NoNamespace.firstRow" />, <see cref="NoNamespace.prompt" />, <see cref="NoNamespace.qualifier" />, <see cref="NoNamespace.semicolon" />, <see cref="NoNamespace.sourceFile" />, <see cref="NoNamespace.space" />, <see cref="NoNamespace.tab" />, <see cref="NoNamespace.thousands" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.characterSet" />, <see cref="NoNamespace.codePage" />, <see cref="NoNamespace.comma" />, <see cref="NoNamespace.consecutive" />, <see cref="NoNamespace.@decimal" />, <see cref="NoNamespace.delimited" />, <see cref="NoNamespace.delimiter" />, <see cref="NoNamespace.fileType" />, <see cref="NoNamespace.firstRow" />, <see cref="NoNamespace.prompt" />, <see cref="NoNamespace.qualifier" />, <see cref="NoNamespace.semicolon" />, <see cref="NoNamespace.sourceFile" />, <see cref="NoNamespace.space" />, <see cref="NoNamespace.tab" />, <see cref="NoNamespace.thousands" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TextProperties.</description></item>
         /// </list>
         /// </remarks>
@@ -830,7 +830,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="c" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.b" />, <see cref="NoNamespace.bc" />, <see cref="NoNamespace.fc" />, <see cref="NoNamespace.i" />, <see cref="NoNamespace.in" />, <see cref="NoNamespace.st" />, <see cref="NoNamespace.un" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.b" />, <see cref="NoNamespace.bc" />, <see cref="NoNamespace.fc" />, <see cref="NoNamespace.i" />, <see cref="NoNamespace.@in" />, <see cref="NoNamespace.st" />, <see cref="NoNamespace.un" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: PivotValueCellExtra.</description></item>
         /// </list>
         /// </remarks>

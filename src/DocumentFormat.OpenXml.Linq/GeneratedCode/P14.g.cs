@@ -217,7 +217,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="media" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.in" />, <see cref="NoNamespace.out" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.@in" />, <see cref="NoNamespace.@out" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: MediaFade.</description></item>
         /// </list>
         /// </remarks>
@@ -650,7 +650,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <item><description>corresponds to the following strongly-typed classes: SwitchTransition.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName switch = p14 + "switch";
+        public static readonly XName @switch = p14 + "switch";
 
         /// <summary>
         /// Represents the p14:tracePt XML element.

@@ -100,7 +100,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="ThreadedComments" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="extLst" />, <see cref="mentions" />, <see cref="text" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.done" />, <see cref="NoNamespace.dT_" />, <see cref="NoNamespace.id" />, <see cref="NoNamespace.parentId" />, <see cref="NoNamespace.personId" />, <see cref="NoNamespace.ref" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.done" />, <see cref="NoNamespace.dT_" />, <see cref="NoNamespace.id" />, <see cref="NoNamespace.parentId" />, <see cref="NoNamespace.personId" />, <see cref="NoNamespace.@ref" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ThreadedComment.</description></item>
         /// </list>
         /// </remarks>

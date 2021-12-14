@@ -46,7 +46,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="W.object" />, <see cref="W.pict" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="W.@object" />, <see cref="W.pict" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: EmbeddedObject.AnchorId, Picture.AnchorId.</description></item>
         /// </list>
         /// </remarks>
@@ -170,7 +170,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="W.sdtPr" />.</description></item>
-        /// <item><description>has the following child XML elements: <see cref="checked" />, <see cref="checkedState" />, <see cref="uncheckedState" />.</description></item>
+        /// <item><description>has the following child XML elements: <see cref="@checked" />, <see cref="checkedState" />, <see cref="uncheckedState" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SdtContentCheckBox.</description></item>
         /// </list>
         /// </remarks>
@@ -187,7 +187,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <item><description>corresponds to the following strongly-typed classes: Checked.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName checked = w14 + "checked";
+        public static readonly XName @checked = w14 + "checked";
 
         /// <summary>
         /// Represents the w14:checkedState XML element.
@@ -1348,7 +1348,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="alpha" />, <see cref="checked" />, <see cref="checkedState" />, <see cref="cntxtAlts" />, <see cref="conflictMode" />, <see cref="defaultImageDpi" />, <see cref="discardImageEditingData" />, <see cref="docId" />, <see cref="hueMod" />, <see cref="ligatures" />, <see cref="lum" />, <see cref="lumMod" />, <see cref="lumOff" />, <see cref="numForm" />, <see cref="numSpacing" />, <see cref="prstDash" />, <see cref="sat" />, <see cref="satMod" />, <see cref="satOff" />, <see cref="schemeClr" />, <see cref="shade" />, <see cref="srgbClr" />, <see cref="styleSet" />, <see cref="tint" />, <see cref="uncheckedState" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="alpha" />, <see cref="@checked" />, <see cref="checkedState" />, <see cref="cntxtAlts" />, <see cref="conflictMode" />, <see cref="defaultImageDpi" />, <see cref="discardImageEditingData" />, <see cref="docId" />, <see cref="hueMod" />, <see cref="ligatures" />, <see cref="lum" />, <see cref="lumMod" />, <see cref="lumOff" />, <see cref="numForm" />, <see cref="numSpacing" />, <see cref="prstDash" />, <see cref="sat" />, <see cref="satMod" />, <see cref="satOff" />, <see cref="schemeClr" />, <see cref="shade" />, <see cref="srgbClr" />, <see cref="styleSet" />, <see cref="tint" />, <see cref="uncheckedState" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: Alpha.Val, Checked.Val, CheckedState.Val, ConflictMode.Val, ContextualAlternatives.Val, DefaultImageDpi.Val, DiscardImageEditingData.Val, DocumentId.Val, HueModulation.Val, Ligatures.Val, Luminance.Val, LuminanceModulation.Val, LuminanceOffset.Val, NumberingFormat.Val, NumberSpacing.Val, PresetLineDashProperties.Val, RgbColorModelHex.Val, Saturation.Val, SaturationModulation.Val, SaturationOffset.Val, SchemeColor.Val, Shade.Val, StyleSet.Val, Tint.Val, UncheckedState.Val.</description></item>
         /// </list>
         /// </remarks>

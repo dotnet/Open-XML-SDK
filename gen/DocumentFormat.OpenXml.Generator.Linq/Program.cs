@@ -6,6 +6,7 @@ using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -47,6 +48,9 @@ namespace DocumentFormat.OpenXml.Generator.Linq
                 .OrderBy(g => g.Key)
                 .ToList();
 
+            // Assign and register unique and valid field names.
+            using var provider = CodeDomProvider.CreateProvider("C#");
+
             foreach (IGrouping<string, FieldInfo> fieldInfoGrouping in fieldInfoGroupings)
             {
                 string prefix = fieldInfoGrouping.Key;
@@ -65,6 +69,12 @@ namespace DocumentFormat.OpenXml.Generator.Linq
                     while (!fieldNames.Add(fieldName))
                     {
                         fieldName += "_";
+                    }
+
+                    // Finally, ensure the field name is a valid identifier.
+                    if (!provider.IsValidIdentifier(fieldName))
+                    {
+                        fieldName = '@' + fieldName;
                     }
 
                     info.FieldName = fieldName;

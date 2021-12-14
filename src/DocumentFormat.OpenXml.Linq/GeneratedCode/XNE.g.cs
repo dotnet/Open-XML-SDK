@@ -36,7 +36,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="worksheetSortMap" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="col" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.count" />, <see cref="NoNamespace.ref" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.count" />, <see cref="NoNamespace.@ref" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ColumnSortMap.</description></item>
         /// </list>
         /// </remarks>
@@ -87,7 +87,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="worksheetSortMap" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="row" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.count" />, <see cref="NoNamespace.ref" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.count" />, <see cref="NoNamespace.@ref" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: RowSortMap.</description></item>
         /// </list>
         /// </remarks>
