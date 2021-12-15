@@ -1,5 +1,5 @@
 ﻿#nullable enable
-DocumentFormat.OpenXml.FileFormatVersions.Microsoft365 = 64 -> DocumentFormat.OpenXml.FileFormatVersions
+DocumentFormat.OpenXml.FileFormatVersions.Microsoft365 = 1073741824 -> DocumentFormat.OpenXml.FileFormatVersions
 DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared
 DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared.OEmbedShared() -> void
 DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared.OEmbedShared(params DocumentFormat.OpenXml.OpenXmlElement![]! childElements) -> void

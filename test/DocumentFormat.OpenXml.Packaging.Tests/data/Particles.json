@@ -1410,7 +1410,7 @@
   "Key": "DocumentFormat.OpenXml.Drawing.BlipExtension",
   "Value": [
    {
-    "Key": "Office2021, Microsoft365",
+    "Key": "Office2019, Office2021",
     "Value": {
      "ChildrenParticles": [
       {
@@ -1427,12 +1427,6 @@
       },
       {
        "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.PictureAttributionSourceURL"
-      },
-      {
-       "ElementType": "DocumentFormat.OpenXml.Microsoft365.Word.OEmbed.OEmbed"
-      },
-      {
-       "ElementType": "DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared"
       },
       {
        "MinOccurs": 0,
@@ -1500,7 +1494,7 @@
     }
    },
    {
-    "Key": "Office2019",
+    "Key": "Microsoft365",
     "Value": {
      "ChildrenParticles": [
       {
@@ -1517,6 +1511,12 @@
       },
       {
        "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.PictureAttributionSourceURL"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Microsoft365.Word.OEmbed.OEmbed"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared"
       },
       {
        "MinOccurs": 0,
@@ -15266,39 +15266,6 @@
   "Key": "DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtension",
   "Value": [
    {
-    "Key": "Office2021, Microsoft365",
-    "Value": {
-     "ChildrenParticles": [
-      {
-       "ElementType": "DocumentFormat.OpenXml.Office2010.Drawing.CompatExtension"
-      },
-      {
-       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.BackgroundProperties"
-      },
-      {
-       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.CreationId"
-      },
-      {
-       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.PredecessorDrawingElementReference"
-      },
-      {
-       "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.Decorative"
-      },
-      {
-       "ElementType": "DocumentFormat.OpenXml.Office2021.Drawing.DocumentClassification.ClassificationOutcome"
-      },
-      {
-       "ElementType": "DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.ScriptLink"
-      },
-      {
-       "MinOccurs": 0,
-       "ParticleType": "Any"
-      }
-     ],
-     "ParticleType": "Choice"
-    }
-   },
-   {
     "Key": "Office2007",
     "Value": {
      "ChildrenParticles": [
@@ -15385,6 +15352,69 @@
       },
       {
        "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.Decorative"
+      },
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   },
+   {
+    "Key": "Office2021",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2010.Drawing.CompatExtension"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.BackgroundProperties"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.CreationId"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.PredecessorDrawingElementReference"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.Decorative"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2021.Drawing.DocumentClassification.ClassificationOutcome"
+      },
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   },
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2010.Drawing.CompatExtension"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.BackgroundProperties"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.CreationId"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.PredecessorDrawingElementReference"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.Decorative"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2021.Drawing.DocumentClassification.ClassificationOutcome"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.ScriptLink"
       },
       {
        "MinOccurs": 0,
@@ -15588,31 +15618,7 @@
   "Key": "DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtension",
   "Value": [
    {
-    "Key": "Office2021, Microsoft365",
-    "Value": {
-     "ChildrenParticles": [
-      {
-       "ElementType": "DocumentFormat.OpenXml.Office2010.Drawing.CameraTool"
-      },
-      {
-       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.SignatureLine"
-      },
-      {
-       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.ObjectProperties"
-      },
-      {
-       "ElementType": "DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedProperties"
-      },
-      {
-       "MinOccurs": 0,
-       "ParticleType": "Any"
-      }
-     ],
-     "ParticleType": "Choice"
-    }
-   },
-   {
-    "Key": "Office2013, Office2016, Office2019",
+    "Key": "Office2013, Office2016, Office2019, Office2021",
     "Value": {
      "ChildrenParticles": [
       {
@@ -15650,6 +15656,30 @@
      "ChildrenParticles": [
       {
        "ElementType": "DocumentFormat.OpenXml.Office2010.Drawing.CameraTool"
+      },
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   },
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2010.Drawing.CameraTool"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.SignatureLine"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.ObjectProperties"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedProperties"
       },
       {
        "MinOccurs": 0,
@@ -31255,7 +31285,7 @@
   "Key": "DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared",
   "Value": [
    {
-    "Key": "Office2021, Microsoft365",
+    "Key": "Microsoft365",
     "Value": {
      "ChildrenParticles": [
       {
@@ -31272,7 +31302,7 @@
   "Key": "DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OfficeArtExtensionList",
   "Value": [
    {
-    "Key": "Office2021, Microsoft365",
+    "Key": "Microsoft365",
     "Value": {
      "ChildrenParticles": [
       {
@@ -31300,7 +31330,7 @@
   "Key": "DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.OfficeArtExtensionList",
   "Value": [
    {
-    "Key": "Office2021, Microsoft365",
+    "Key": "Microsoft365",
     "Value": {
      "ChildrenParticles": [
       {
@@ -31328,7 +31358,7 @@
   "Key": "DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.ScriptLink",
   "Value": [
    {
-    "Key": "Office2021, Microsoft365",
+    "Key": "Microsoft365",
     "Value": {
      "ChildrenParticles": [
       {
@@ -31345,7 +31375,7 @@
   "Key": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList",
   "Value": [
    {
-    "Key": "Office2021, Microsoft365",
+    "Key": "Microsoft365",
     "Value": {
      "ChildrenParticles": [
       {
@@ -31374,7 +31404,7 @@
   "Key": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskAnchor",
   "Value": [
    {
-    "Key": "Office2021, Microsoft365",
+    "Key": "Microsoft365",
     "Value": {
      "ChildrenParticles": [
       {
@@ -31394,7 +31424,7 @@
   "Key": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistory",
   "Value": [
    {
-    "Key": "Office2021, Microsoft365",
+    "Key": "Microsoft365",
     "Value": {
      "ChildrenParticles": [
       {
@@ -31412,7 +31442,7 @@
   "Key": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryDetails",
   "Value": [
    {
-    "Key": "Office2021, Microsoft365",
+    "Key": "Microsoft365",
     "Value": {
      "ChildrenParticles": [
       {
@@ -31432,7 +31462,7 @@
   "Key": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryEvent",
   "Value": [
    {
-    "Key": "Office2021, Microsoft365",
+    "Key": "Microsoft365",
     "Value": {
      "ChildrenParticles": [
       {

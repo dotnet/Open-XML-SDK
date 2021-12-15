@@ -165,7 +165,7 @@ namespace DocumentFormat.OpenXml
 
                 if ((FileFormatVersions.Microsoft365 & v) == FileFormatVersions.Microsoft365)
                 {
-                    return 6;
+                    return 7;
                 }
 
                 throw new ArgumentOutOfRangeException(name);

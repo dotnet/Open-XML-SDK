@@ -6,10 +6,10 @@ namespace DocumentFormat.OpenXml.Generator.Models;
 public enum OfficeVersion
 {
     Office2007 = 0,
-    Office2010 = 1,
-    Office2013 = 2,
-    Office2016 = 3,
-    Office2019 = 4,
-    Office2021 = 5,
-    Microsoft365 = 6,
+    Office2010,
+    Office2013,
+    Office2016,
+    Office2019,
+    Office2021,
+    Microsoft365,
 }

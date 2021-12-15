@@ -49,6 +49,6 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Represents Microsoft Microsoft 365.
         /// </summary>
-        Microsoft365 = 0x40,
+        Microsoft365 = 0x40000000,
     }
 }
