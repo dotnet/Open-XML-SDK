@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Generator;
 
 public static class KnownFeaturesGeneratorExtensions
 {
-    public static string Build(this IMethodSymbol method, IEnumerable<(INamedTypeSymbol Contract, INamedTypeSymbol Service)> features)
+    public static string Build(this IMethodSymbol method, IEnumerable<(INamedTypeSymbol Contract, INamedTypeSymbol Service)> features, bool isThreadSafe)
     {
         var sb = new StringWriter();
         var indented = new IndentedTextWriter(sb);
@@ -23,7 +23,7 @@ public static class KnownFeaturesGeneratorExtensions
 
         indented.WriteLine();
 
-        WriteContainingClass(indented, GetNestedClasses(method.ContainingType), method, features);
+        WriteContainingClass(indented, GetNestedClasses(method.ContainingType), method, features, isThreadSafe);
 
         return sb.ToString();
     }
@@ -41,11 +41,11 @@ public static class KnownFeaturesGeneratorExtensions
         return stack;
     }
 
-    private static void WriteContainingClass(IndentedTextWriter indented, Stack<INamedTypeSymbol> types, IMethodSymbol method, IEnumerable<(INamedTypeSymbol Contract, INamedTypeSymbol Service)> features)
+    private static void WriteContainingClass(IndentedTextWriter indented, Stack<INamedTypeSymbol> types, IMethodSymbol method, IEnumerable<(INamedTypeSymbol Contract, INamedTypeSymbol Service)> features, bool isThreadSafe)
     {
         if (types.Count == 0)
         {
-            WriteInjectedCode(indented, method, features);
+            WriteInjectedCode(indented, method, features, isThreadSafe);
         }
         else
         {
@@ -56,19 +56,22 @@ public static class KnownFeaturesGeneratorExtensions
 
             using (indented.AddBlock())
             {
-                WriteContainingClass(indented, types, method, features);
+                WriteContainingClass(indented, types, method, features, isThreadSafe);
             }
         }
     }
 
-    private static void WriteInjectedCode(IndentedTextWriter indented, IMethodSymbol method, IEnumerable<(INamedTypeSymbol Contract, INamedTypeSymbol Service)> features)
+    private static void WriteInjectedCode(IndentedTextWriter indented, IMethodSymbol method, IEnumerable<(INamedTypeSymbol Contract, INamedTypeSymbol Service)> features, bool isThreadSafe)
     {
-        indented.Write("private readonly object ");
-        indented.Write("_Lock");
-        indented.Write(method.Name);
-        indented.WriteLine(" = new();");
+        if (isThreadSafe)
+        {
+            indented.Write("private readonly object ");
+            indented.Write("_Lock");
+            indented.Write(method.Name);
+            indented.WriteLine(" = new();");
 
-        indented.WriteLineNoTabs();
+            indented.WriteLineNoTabs();
+        }
 
         foreach (var feature in features)
         {
@@ -88,53 +91,33 @@ public static class KnownFeaturesGeneratorExtensions
 
         using (indented.AddBlock())
         {
-            foreach (var feature in features)
+            foreach (var (contract, service) in features)
             {
                 indented.Write("if (typeof(T) == typeof(");
-                indented.WriteSymbol(feature.Contract);
+                indented.WriteSymbol(contract);
                 indented.WriteLine("))");
 
                 using (indented.AddBlock())
                 {
-                    indented.Write("if (");
-                    indented.Write("_");
-                    indented.Write(feature.Service.Name);
-                    indented.WriteLine(" is null)");
-
-                    using (indented.AddBlock())
+                    if (isThreadSafe)
                     {
-                        indented.Write("lock(_Lock");
-                        indented.Write(method.Name);
-                        indented.WriteLine(")");
-
-                        using (indented.AddBlock())
-                        {
-                            indented.Write("if (");
-                            indented.Write("_");
-                            indented.Write(feature.Service.Name);
-                            indented.WriteLine(" is null)");
-
-                            using (indented.AddBlock())
-                            {
-                                indented.Write("_");
-                                indented.Write(feature.Service.Name);
-                                indented.Write(" = new ");
-                                indented.WriteSymbol(feature.Service);
-                                indented.WriteLine("();");
-                            }
-                        }
+                        WriteFeatureCreationThreadSafe(indented, method, service);
+                    }
+                    else
+                    {
+                        WriteFeatureCreation(indented, service);
                     }
 
                     indented.WriteLineNoTabs();
                     indented.Write("return (T)");
 
-                    if (SymbolEqualityComparer.Default.Equals(feature.Service, feature.Contract))
+                    if (SymbolEqualityComparer.Default.Equals(service, contract))
                     {
                         indented.Write("(object)");
                     }
 
                     indented.Write("_");
-                    indented.Write(feature.Service.Name);
+                    indented.Write(service.Name);
                     indented.WriteLine(";");
                 }
 
@@ -142,6 +125,43 @@ public static class KnownFeaturesGeneratorExtensions
             }
 
             indented.WriteLine("return default;");
+        }
+    }
+
+    private static void WriteFeatureCreationThreadSafe(IndentedTextWriter indented, IMethodSymbol method, INamedTypeSymbol service)
+    {
+        indented.Write("if (");
+        indented.Write("_");
+        indented.Write(service.Name);
+        indented.WriteLine(" is null)");
+
+        using (indented.AddBlock())
+        {
+            indented.Write("lock(_Lock");
+            indented.Write(method.Name);
+            indented.WriteLine(")");
+
+            using (indented.AddBlock())
+            {
+                WriteFeatureCreation(indented, service);
+            }
+        }
+    }
+
+    private static void WriteFeatureCreation(IndentedTextWriter indented, INamedTypeSymbol service)
+    {
+        indented.Write("if (");
+        indented.Write("_");
+        indented.Write(service.Name);
+        indented.WriteLine(" is null)");
+
+        using (indented.AddBlock())
+        {
+            indented.Write("_");
+            indented.Write(service.Name);
+            indented.Write(" = new ");
+            indented.WriteSymbol(service);
+            indented.WriteLine("();");
         }
     }
 
