@@ -60,7 +60,11 @@ namespace DocumentFormat.OpenXml.Features
         /// <inheritdoc/>
         public TFeature? Get<TFeature>()
         {
-            if (_features is not null && _features.TryGetValue(typeof(TFeature), out var feature) && feature is TFeature t)
+            if (GetFeature<TFeature>() is TFeature existing)
+            {
+                return existing;
+            }
+            else if (_features is not null && _features.TryGetValue(typeof(TFeature), out var feature) && feature is TFeature t)
             {
                 return t;
             }
@@ -71,6 +75,13 @@ namespace DocumentFormat.OpenXml.Features
 
             return default;
         }
+
+        /// <summary>
+        /// Gets a feature from derived classes.
+        /// </summary>
+        /// <typeparam name="TFeature">Feature type.</typeparam>
+        /// <returns>Feature if found.</returns>
+        protected virtual TFeature? GetFeature<TFeature>() => default;
 
         /// <inheritdoc/>
         public void Set<TFeature>(TFeature? instance)

@@ -13,8 +13,8 @@ namespace DocumentFormat.OpenXml.Framework
 
         internal OpenXmlNamespace(byte nsId)
         {
-            _prefix = DefaultFeatures.Shared.GetRequired<IOpenXmlNamespaceIdResolver>().GetPrefix(nsId);
-            _uri = DefaultFeatures.Shared.GetRequired<IOpenXmlNamespaceResolver>().LookupNamespace(_prefix);
+            _prefix = FeatureCollection.Default.GetRequired<IOpenXmlNamespaceIdResolver>().GetPrefix(nsId);
+            _uri = FeatureCollection.Default.GetRequired<IOpenXmlNamespaceResolver>().LookupNamespace(_prefix);
         }
 
         public OpenXmlNamespace(string? nsUri, string? prefix = null)
@@ -31,31 +31,30 @@ namespace DocumentFormat.OpenXml.Framework
 
         public bool IsEmpty => string.IsNullOrEmpty(Uri);
 
-        public FileFormatVersions Version => DefaultFeatures.Shared.GetRequired<IOpenXmlNamespaceResolver>().GetVersion(this);
+        public FileFormatVersions Version => FeatureCollection.Default.GetRequired<IOpenXmlNamespaceResolver>().GetVersion(this);
 
-        public bool HasVersion(FileFormatVersions version)
-            => Version == version;
+        public bool HasVersion(FileFormatVersions version) => Version == version;
 
         /// <summary>
         /// Attempts to get the Transitional equivalent namespace.
         /// </summary>
         /// <param name="transitionalNamespace">An equivalent namespace in Transitional.</param>
         /// <returns>Returns true when a Transitional equivalent namespace is found, returns false when it is not found.</returns>
-        public bool TryGetTransitionalNamespace(out OpenXmlNamespace transitionalNamespace) => DefaultFeatures.Shared.GetRequired<IOpenXmlNamespaceResolver>().TryGetTransitionalNamespace(this, out transitionalNamespace);
+        public bool TryGetTransitionalNamespace(out OpenXmlNamespace transitionalNamespace) => FeatureCollection.Default.GetRequired<IOpenXmlNamespaceResolver>().TryGetTransitionalNamespace(this, out transitionalNamespace);
 
         /// <summary>
         /// Attempts to get the Transitional equivalent relationship.
         /// </summary>
         /// <param name="transitionalRelationship">An equivalent relationship in Transitional.</param>
         /// <returns>Returns true when a Transitional equivalent relationship is found, returns false when it is not.</returns>
-        public bool TryGetTransitionalRelationship(out OpenXmlNamespace transitionalRelationship) => DefaultFeatures.Shared.GetRequired<IOpenXmlNamespaceResolver>().TryGetTransitionalRelationship(this, out transitionalRelationship);
+        public bool TryGetTransitionalRelationship(out OpenXmlNamespace transitionalRelationship) => FeatureCollection.Default.GetRequired<IOpenXmlNamespaceResolver>().TryGetTransitionalRelationship(this, out transitionalRelationship);
 
         /// <summary>
         /// Try to get the expected namespace if the passed namespace is an obsolete.
         /// </summary>
         /// <param name="extNamespaceUri">The expected namespace when the passed namespace is an obsolete.</param>
         /// <returns>True when the passed namespace is an obsolete and the expected namespace found</returns>
-        public bool TryGetExtendedNamespace(out OpenXmlNamespace extNamespaceUri) => DefaultFeatures.Shared.GetRequired<IOpenXmlNamespaceResolver>().TryGetExtendedNamespace(this, out extNamespaceUri);
+        public bool TryGetExtendedNamespace(out OpenXmlNamespace extNamespaceUri) => FeatureCollection.Default.GetRequired<IOpenXmlNamespaceResolver>().TryGetExtendedNamespace(this, out extNamespaceUri);
 
         public override bool Equals(object? obj) => obj is OpenXmlNamespace ns && Equals(ns);
 
@@ -76,20 +75,20 @@ namespace DocumentFormat.OpenXml.Framework
         public int CompareTo(OpenXmlNamespace other)
             => string.CompareOrdinal(Uri, other.Uri);
 
-        public static implicit operator OpenXmlNamespace(string ns) => new OpenXmlNamespace(ns);
+        public static implicit operator OpenXmlNamespace(string ns) => new(ns);
 
         /// <summary>
         /// Gets the namespace URI for the specified namespace prefix.
         /// </summary>
         /// <param name="prefix">The namespace prefix.</param>
         /// <returns></returns>
-        public static string? GetNamespaceUri(string prefix) => DefaultFeatures.Shared.GetRequired<IOpenXmlNamespaceResolver>().LookupNamespace(prefix);
+        public static string? GetNamespaceUri(string prefix) => FeatureCollection.Default.GetRequired<IOpenXmlNamespaceResolver>().LookupNamespace(prefix);
 
         /// <summary>
         /// Gets the default namespace prefix for the specified namespace URI.
         /// </summary>
         /// <param name="namespaceUri">The namespace URI.</param>
         /// <returns>The default namespace prefix.</returns>
-        public static string? GetNamespacePrefix(string namespaceUri) => DefaultFeatures.Shared.GetRequired<IOpenXmlNamespaceResolver>().LookupPrefix(namespaceUri);
+        public static string? GetNamespacePrefix(string namespaceUri) => FeatureCollection.Default.GetRequired<IOpenXmlNamespaceResolver>().LookupPrefix(namespaceUri);
     }
 }
