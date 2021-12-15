@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using Microsoft.CodeAnalysis.Testing;
-using System;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -61,6 +60,8 @@ internal sealed class ThreadSafeAttribute : global::System.Attribute
         {
             var test = @"using DocumentFormat.OpenXml;
 
+using System.Threading;
+
 namespace Test;
 
 public interface ITest
@@ -89,12 +90,12 @@ public partial class Factory
 
 #nullable enable
 
+using System.Threading;
+
 namespace Test;
 
 public partial class Factory
 {
-    private readonly object _LockGet = new();
-
     private global::Test.ITest? _TestImpl;
 
     private partial T? Get<T>()
@@ -103,13 +104,7 @@ public partial class Factory
         {
             if (_TestImpl is null)
             {
-                lock(_LockGet)
-                {
-                    if (_TestImpl is null)
-                    {
-                        _TestImpl = new global::Test.TestImpl();
-                    }
-                }
+                Interlocked.CompareExchange(ref _TestImpl, new global::Test.TestImpl(), null);
             }
 
             return (T)_TestImpl;
@@ -167,12 +162,12 @@ public partial class Factory
 
 #nullable enable
 
+using System.Threading;
+
 namespace Test;
 
 public partial class Factory
 {
-    private readonly object _LockGet = new();
-
     private global::Test.ITest? _TestImpl;
 
     private partial T? Get<T>()
@@ -181,13 +176,7 @@ public partial class Factory
         {
             if (_TestImpl is null)
             {
-                lock(_LockGet)
-                {
-                    if (_TestImpl is null)
-                    {
-                        _TestImpl = new global::Test.TestImpl();
-                    }
-                }
+                Interlocked.CompareExchange(ref _TestImpl, new global::Test.TestImpl(), null);
             }
 
             return (T)_TestImpl;
@@ -300,12 +289,12 @@ public partial class Factory
 
 #nullable enable
 
+using System.Threading;
+
 namespace Test;
 
 public partial class Factory
 {
-    private readonly object _LockGet = new();
-
     private global::Test.TestImpl? _TestImpl;
 
     private partial T? Get<T>()
@@ -314,13 +303,7 @@ public partial class Factory
         {
             if (_TestImpl is null)
             {
-                lock(_LockGet)
-                {
-                    if (_TestImpl is null)
-                    {
-                        _TestImpl = new global::Test.TestImpl();
-                    }
-                }
+                Interlocked.CompareExchange(ref _TestImpl, new global::Test.TestImpl(), null);
             }
 
             return (T)(object)_TestImpl;
@@ -376,14 +359,14 @@ public partial class Factory
 
 #nullable enable
 
+using System.Threading;
+
 namespace Test;
 
 public partial class Factory
 {
     private partial class Other
     {
-        private readonly object _LockGet = new();
-
         private global::Test.ITest? _TestImpl;
 
         private partial T? Get<T>()
@@ -392,13 +375,7 @@ public partial class Factory
             {
                 if (_TestImpl is null)
                 {
-                    lock(_LockGet)
-                    {
-                        if (_TestImpl is null)
-                        {
-                            _TestImpl = new global::Test.TestImpl();
-                        }
-                    }
+                    Interlocked.CompareExchange(ref _TestImpl, new global::Test.TestImpl(), null);
                 }
 
                 return (T)_TestImpl;
@@ -429,6 +406,8 @@ public partial class Factory
         {
             var test = @"using DocumentFormat.OpenXml;
 
+using System.Threading;
+
 namespace Test;
 
 public interface ITest
@@ -452,12 +431,12 @@ public partial class Factory
 
 #nullable enable
 
+using System.Threading;
+
 namespace Test;
 
 public partial class Factory
 {
-    private readonly object _LockGet = new();
-
     private global::Test.ITest? _TestImpl;
 
     private partial T? Get<T>()
@@ -466,13 +445,7 @@ public partial class Factory
         {
             if (_TestImpl is null)
             {
-                lock(_LockGet)
-                {
-                    if (_TestImpl is null)
-                    {
-                        _TestImpl = new global::Test.TestImpl();
-                    }
-                }
+                Interlocked.CompareExchange(ref _TestImpl, new global::Test.TestImpl(), null);
             }
 
             return (T)_TestImpl;
@@ -534,12 +507,12 @@ public partial class Factory
 
 #nullable enable
 
+using System.Threading;
+
 namespace Test;
 
 public partial class Factory
 {
-    private readonly object _LockGet = new();
-
     private global::Test.ITest1? _TestImpl1;
     private global::Test.ITest2? _TestImpl2;
 
@@ -549,13 +522,7 @@ public partial class Factory
         {
             if (_TestImpl1 is null)
             {
-                lock(_LockGet)
-                {
-                    if (_TestImpl1 is null)
-                    {
-                        _TestImpl1 = new global::Test.TestImpl1();
-                    }
-                }
+                Interlocked.CompareExchange(ref _TestImpl1, new global::Test.TestImpl1(), null);
             }
 
             return (T)_TestImpl1;
@@ -565,13 +532,7 @@ public partial class Factory
         {
             if (_TestImpl2 is null)
             {
-                lock(_LockGet)
-                {
-                    if (_TestImpl2 is null)
-                    {
-                        _TestImpl2 = new global::Test.TestImpl2();
-                    }
-                }
+                Interlocked.CompareExchange(ref _TestImpl2, new global::Test.TestImpl2(), null);
             }
 
             return (T)_TestImpl2;
