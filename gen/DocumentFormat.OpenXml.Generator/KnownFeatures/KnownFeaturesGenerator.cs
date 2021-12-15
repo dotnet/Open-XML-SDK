@@ -24,6 +24,7 @@ public class KnownFeaturesGenerator : ISourceGenerator
         }
 
         var knownFeatureSymbol = context.Compilation.GetTypeByMetadataName("DocumentFormat.OpenXml.KnownFeatureAttribute");
+        var threadSafe = context.Compilation.GetTypeByMetadataName("DocumentFormat.OpenXml.ThreadSafeAttribute");
 
         if (knownFeatureSymbol is null)
         {
@@ -38,10 +39,15 @@ public class KnownFeaturesGenerator : ISourceGenerator
             if (model.GetDeclaredSymbol(node) is IMethodSymbol method)
             {
                 var features = new HashSet<(INamedTypeSymbol Contract, INamedTypeSymbol Service)>();
+                var isThreadSafe = false;
 
                 foreach (var attribute in method.GetAttributes())
                 {
-                    if (SymbolEqualityComparer.Default.Equals(attribute.AttributeClass, knownFeatureSymbol))
+                    if (SymbolEqualityComparer.Default.Equals(attribute.AttributeClass, threadSafe))
+                    {
+                        isThreadSafe = true;
+                    }
+                    else if (SymbolEqualityComparer.Default.Equals(attribute.AttributeClass, knownFeatureSymbol))
                     {
                         if (attribute.ConstructorArguments[0].Value is INamedTypeSymbol contract)
                         {
@@ -70,7 +76,7 @@ public class KnownFeaturesGenerator : ISourceGenerator
                     }
                 }
 
-                var source = method.Build(features);
+                var source = method.Build(features, isThreadSafe);
 
                 context.AddSource($"{method.ContainingType.Name}_{method.Name}", source);
             }
@@ -94,6 +100,12 @@ internal sealed class KnownFeatureAttribute : global::System.Attribute
     public KnownFeatureAttribute(global::System.Type contract, global::System.Type? service = null)
     {
     }
+}
+
+[global::System.Diagnostics.Conditional(""GENERATOR"")]
+[global::System.AttributeUsage(global::System.AttributeTargets.Method)]
+internal sealed class ThreadSafeAttribute : global::System.Attribute
+{
 }";
 
             sb.WriteFileHeader();
