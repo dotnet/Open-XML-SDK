@@ -12,9 +12,6 @@ using static DocumentFormat.OpenXml.Tests.TestAssets;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    /// <summary>
-    /// Summary description for CustomXmlElementTest
-    /// </summary>
     public class CustomXmlElementTest
     {
         private string uri = "urn:customXmlSample";

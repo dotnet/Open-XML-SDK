@@ -785,14 +785,18 @@ namespace DocumentFormat.OpenXml.Packaging
 
         #endregion
 
-        private protected override IFeatureCollection CreateFeatures()
+        /// <inheritdoc/>
+        public override IFeatureCollection Features
         {
-            if (_openXmlPackage is not null)
+            get
             {
-                return new FeatureCollection(_openXmlPackage.Features);
-            }
+                if (_features is null)
+                {
+                    _features = new FeatureCollection(new PartContainerFeatureCollection(_openXmlPackage?.Features));
+                }
 
-            return base.CreateFeatures();
+                return _features;
+            }
         }
 
         #region MC Staffs
