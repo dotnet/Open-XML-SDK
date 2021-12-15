@@ -4,9 +4,14 @@ DocumentFormat.OpenXml.Linq.A15
 DocumentFormat.OpenXml.Linq.A16
 DocumentFormat.OpenXml.Linq.A1611
 DocumentFormat.OpenXml.Linq.AC
+DocumentFormat.OpenXml.Linq.ACLSH
 DocumentFormat.OpenXml.Linq.ADEC
 DocumentFormat.OpenXml.Linq.AHYP
+DocumentFormat.OpenXml.Linq.ALF
+DocumentFormat.OpenXml.Linq.AOE
 DocumentFormat.OpenXml.Linq.AP
+DocumentFormat.OpenXml.Linq.ASK
+DocumentFormat.OpenXml.Linq.ASL
 DocumentFormat.OpenXml.Linq.ASVG
 DocumentFormat.OpenXml.Linq.B
 DocumentFormat.OpenXml.Linq.C
@@ -15,6 +20,7 @@ DocumentFormat.OpenXml.Linq.C15
 DocumentFormat.OpenXml.Linq.C16R3
 DocumentFormat.OpenXml.Linq.CDR
 DocumentFormat.OpenXml.Linq.CDR14
+DocumentFormat.OpenXml.Linq.CLBL
 DocumentFormat.OpenXml.Linq.COMP
 DocumentFormat.OpenXml.Linq.CS
 DocumentFormat.OpenXml.Linq.CX
@@ -34,16 +40,21 @@ DocumentFormat.OpenXml.Linq.MSO
 DocumentFormat.OpenXml.Linq.MSO14
 DocumentFormat.OpenXml.Linq.NoNamespace
 DocumentFormat.OpenXml.Linq.O
+DocumentFormat.OpenXml.Linq.OAC
+DocumentFormat.OpenXml.Linq.OEL
 DocumentFormat.OpenXml.Linq.OP
 DocumentFormat.OpenXml.Linq.P
 DocumentFormat.OpenXml.Linq.P14
 DocumentFormat.OpenXml.Linq.P15
+DocumentFormat.OpenXml.Linq.P188
+DocumentFormat.OpenXml.Linq.PC
 DocumentFormat.OpenXml.Linq.PIC
 DocumentFormat.OpenXml.Linq.PIC14
 DocumentFormat.OpenXml.Linq.PVML
 DocumentFormat.OpenXml.Linq.R
 DocumentFormat.OpenXml.Linq.SL
 DocumentFormat.OpenXml.Linq.SLE
+DocumentFormat.OpenXml.Linq.T
 DocumentFormat.OpenXml.Linq.THM15
 DocumentFormat.OpenXml.Linq.TSLE
 DocumentFormat.OpenXml.Linq.V
@@ -52,10 +63,13 @@ DocumentFormat.OpenXml.Linq.W
 DocumentFormat.OpenXml.Linq.W10
 DocumentFormat.OpenXml.Linq.W14
 DocumentFormat.OpenXml.Linq.W15
+DocumentFormat.OpenXml.Linq.W16CEX
 DocumentFormat.OpenXml.Linq.W16CID
+DocumentFormat.OpenXml.Linq.W16CUR
 DocumentFormat.OpenXml.Linq.WE
 DocumentFormat.OpenXml.Linq.WETP
 DocumentFormat.OpenXml.Linq.WNE
+DocumentFormat.OpenXml.Linq.WOE
 DocumentFormat.OpenXml.Linq.WP
 DocumentFormat.OpenXml.Linq.WP14
 DocumentFormat.OpenXml.Linq.WP15
@@ -70,8 +84,13 @@ DocumentFormat.OpenXml.Linq.X15
 DocumentFormat.OpenXml.Linq.X15AC
 DocumentFormat.OpenXml.Linq.XDR
 DocumentFormat.OpenXml.Linq.XDR14
+DocumentFormat.OpenXml.Linq.XLRD
+DocumentFormat.OpenXml.Linq.XLRD2
+DocumentFormat.OpenXml.Linq.XLRDWI
+DocumentFormat.OpenXml.Linq.XLTC
 DocumentFormat.OpenXml.Linq.XML
 DocumentFormat.OpenXml.Linq.XNE
+DocumentFormat.OpenXml.Linq.XNSV
 DocumentFormat.OpenXml.Linq.XVML
 DocumentFormat.OpenXml.Packaging.OpenXmlPartRootXElementExtensions
 static DocumentFormat.OpenXml.Packaging.OpenXmlPartRootXElementExtensions.GetXDocument(this DocumentFormat.OpenXml.Packaging.OpenXmlPart! part) -> System.Xml.Linq.XDocument!
@@ -474,10 +493,23 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.AC.ac -> System.Xml.Linq.XNamespace
 ~static readonly DocumentFormat.OpenXml.Linq.AC.additionalCharacteristics -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.AC.characteristic -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.ACLSH.aclsh -> System.Xml.Linq.XNamespace
+~static readonly DocumentFormat.OpenXml.Linq.ACLSH.classification -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.ADEC.adec -> System.Xml.Linq.XNamespace
 ~static readonly DocumentFormat.OpenXml.Linq.ADEC.decorative -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.AHYP.ahyp -> System.Xml.Linq.XNamespace
 ~static readonly DocumentFormat.OpenXml.Linq.AHYP.hlinkClr -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.ALF.alf -> System.Xml.Linq.XNamespace
+~static readonly DocumentFormat.OpenXml.Linq.ALF.backgroundProps -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.ALF.Blur -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.ALF.Custom -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.ALF.extLst -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.ALF.liveFeedProps -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.ALF.Normal -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.ALF.Removed -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.AOE.aoe -> System.Xml.Linq.XNamespace
+~static readonly DocumentFormat.OpenXml.Linq.AOE.extLst -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.AOE.oembedShared -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.AP.ap -> System.Xml.Linq.XNamespace
 ~static readonly DocumentFormat.OpenXml.Linq.AP.Application -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.AP.AppVersion -> System.Xml.Linq.XName
@@ -507,6 +539,18 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.AP.TitlesOfParts -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.AP.TotalTime -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.AP.Words -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.ASK.ask -> System.Xml.Linq.XNamespace
+~static readonly DocumentFormat.OpenXml.Linq.ASK.extLst -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.ASK.lineSketchCurved -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.ASK.lineSketchFreehand -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.ASK.lineSketchNone -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.ASK.lineSketchScribble -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.ASK.lineSketchStyleProps -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.ASK.seed -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.ASK.type -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.ASL.asl -> System.Xml.Linq.XNamespace
+~static readonly DocumentFormat.OpenXml.Linq.ASL.extLst -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.ASL.scriptLink -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.ASVG.asvg -> System.Xml.Linq.XNamespace
 ~static readonly DocumentFormat.OpenXml.Linq.ASVG.svgBlip -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.B.AbbreviatedCaseNumber -> System.Xml.Linq.XName
@@ -903,6 +947,11 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.CDR14.nvContentPartPr -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.CDR14.nvPr -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.CDR14.xfrm -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.CLBL.clbl -> System.Xml.Linq.XNamespace
+~static readonly DocumentFormat.OpenXml.Linq.CLBL.ext -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.CLBL.extLst -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.CLBL.label -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.CLBL.labelList -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.COMP.comp -> System.Xml.Linq.XNamespace
 ~static readonly DocumentFormat.OpenXml.Linq.COMP.legacyDrawing -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.CS.axisTitle -> System.Xml.Linq.XName
@@ -1423,6 +1472,7 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.accumulate -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.accuracyVersion -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.action -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.actionId -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.activeCell -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.activeCellId -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.activeCol -> System.Xml.Linq.XName
@@ -1507,6 +1557,7 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.aspect -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.aspectratio -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.assign -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.assignedTo -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.asteriskTotals -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.attribute -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.author -> System.Xml.Linq.XName
@@ -1645,6 +1696,7 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.chOrder -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.chromakey -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.class -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.classificationOutcomeType -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.clearAll -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.clearComments -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.clearContents -> System.Xml.Linq.XName
@@ -1692,6 +1744,7 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.compactData -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.compatLnSpc -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.compatMode -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.complete -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.composite -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.concurrent -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.concurrentCalc -> System.Xml.Linq.XName
@@ -1713,6 +1766,7 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.containsSemiMixedTypes -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.containsString -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.content -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.contentBits -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.contentType -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.contextRef -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.continuation -> System.Xml.Linq.XName
@@ -1730,6 +1784,7 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.cp -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.crackSpacing -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.crashSave -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.created -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.createdVersion -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.credentials -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.cropbottom -> System.Xml.Linq.XName
@@ -1885,6 +1940,7 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.dn -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.dockstate -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.documentID -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.done -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.double -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.dpi -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.dr -> System.Xml.Linq.XName
@@ -1903,12 +1959,15 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.dt -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.dt2D -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.dtr -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.dT_ -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.dueDate -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.dur -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.duration -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.dvAspect -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.dx -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.dxf -> System.Xml.Linq.XName
-~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.dxfId -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.dxfid -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.dxfId_ -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.dy -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.dynamicSet -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.dz -> System.Xml.Linq.XName
@@ -2337,6 +2396,7 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.lightlevel2 -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.lightposition -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.lightposition2 -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.likes -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.lim -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.limo -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.linestyle -> System.Xml.Linq.XName
@@ -2422,9 +2482,12 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.measureGroup -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.measures -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.measuresSet -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.mediaType -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.memberName -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.memberPropertyField -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.memberValueDatatype -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.mentionId -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.mentionpersonId -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.merge -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.mergeCell -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.mergeInterval -> System.Xml.Linq.XName
@@ -2532,6 +2595,7 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.obscured -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.odcFile -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.odxf -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.oEmbedUrl -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.offset -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.offset2 -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.old -> System.Xml.Linq.XName
@@ -2593,6 +2657,7 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.par -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.parameterType -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.parent -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.parentId -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.parentSet -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.parsePre -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.parTransId -> System.Xml.Linq.XName
@@ -2613,11 +2678,14 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.patternType -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.pencilSize -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.percent -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.percentComplete -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.personalView -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.personId -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.ph -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.phldr -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.phldrT -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.phonetic -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.picLocksAutoForOEmbed -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.pid -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.pitchFamily -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.pivot -> System.Xml.Linq.XName
@@ -2738,6 +2806,7 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.relId -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.relNeededHidden -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.relyOnVml -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.removed -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.removeDataOnSave -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.removePersonalInfoOnSave -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.render -> System.Xml.Linq.XName
@@ -2765,6 +2834,7 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.rhe -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.rhf -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.rho -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.richSortKey -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.rId -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.rig -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.right -> System.Xml.Linq.XName
@@ -2848,6 +2918,7 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.serverSldModifiedTime -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.serverZoom -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.set -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.setDate -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.setDefinition -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.shadeToTitle -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.shadow -> System.Xml.Linq.XName
@@ -2961,6 +3032,7 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.simplePos -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.singleRangeFilterState -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.singleSignOnId -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.siteId -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.size -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.sizeString -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.sizeWithCells -> System.Xml.Linq.XName
@@ -3014,6 +3086,7 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.src -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.srcId -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.srcOrd -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.srcUrl -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.st -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.stA -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.stAng -> System.Xml.Linq.XName
@@ -3025,6 +3098,7 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.startAt -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.startDate -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.startFromScratch -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.startIndex -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.startItem -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.startLabels -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.startNum -> System.Xml.Linq.XName
@@ -3091,6 +3165,7 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.tabRatio -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.tabSelected -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.tag -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.tags -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.target -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.targetScreenSize -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.text -> System.Xml.Linq.XName
@@ -3202,6 +3277,7 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.userDrawn -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.userId -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.userName -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.userProvider -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.useTimings -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.useWholeDay -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.NoNamespace.v -> System.Xml.Linq.XName
@@ -3377,6 +3453,15 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.O.userdrawn -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.O.userhidden -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.O.v -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.OAC.deMkLst -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.OAC.gridColMkLst -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.OAC.oac -> System.Xml.Linq.XNamespace
+~static readonly DocumentFormat.OpenXml.Linq.OAC.tcMkLst -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.OAC.trMkLst -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.OAC.txBodyMkLst -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.OAC.txMkLst -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.OEL.ext -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.OEL.oel -> System.Xml.Linq.XNamespace
 ~static readonly DocumentFormat.OpenXml.Linq.OP.op -> System.Xml.Linq.XNamespace
 ~static readonly DocumentFormat.OpenXml.Linq.OP.Properties -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.OP.property -> System.Xml.Linq.XName
@@ -3663,6 +3748,21 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.P15.prstTrans -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.P15.sldGuideLst -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.P15.threadingInfo -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.P188.author -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.P188.authorLst -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.P188.cm -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.P188.cmLst -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.P188.extLst -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.P188.p188 -> System.Xml.Linq.XNamespace
+~static readonly DocumentFormat.OpenXml.Linq.P188.pos -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.P188.reply -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.P188.replyLst -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.P188.txBody -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.P188.unknownAnchor -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.PC.pc -> System.Xml.Linq.XNamespace
+~static readonly DocumentFormat.OpenXml.Linq.PC.sldLayoutMkLst -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.PC.sldMasterMkLst -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.PC.sldMkLst -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.PIC.blipFill -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.PIC.cNvPicPr -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.PIC.cNvPr -> System.Xml.Linq.XName
@@ -3696,6 +3796,26 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.SLE.extLst -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.SLE.sle -> System.Xml.Linq.XNamespace
 ~static readonly DocumentFormat.OpenXml.Linq.SLE.slicer -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.T.Anchor -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.T.Assign -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.T.Attribution -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.T.Comment -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.T.Create -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.T.Delete -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.T.Event -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.T.extLst -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.T.History -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.T.Priority -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.T.Progress -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.T.Schedule -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.T.SetTitle -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.T.t -> System.Xml.Linq.XNamespace
+~static readonly DocumentFormat.OpenXml.Linq.T.Task -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.T.Tasks -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.T.Unassign -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.T.UnassignAll -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.T.Undelete -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.T.Undo -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.THM15.extLst -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.THM15.id -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.THM15.themeFamily -> System.Xml.Linq.XName
@@ -4741,11 +4861,21 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.W15.w15 -> System.Xml.Linq.XNamespace
 ~static readonly DocumentFormat.OpenXml.Linq.W15.webExtensionCreated -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.W15.webExtensionLinked -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.W16CEX.commentExtensible -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.W16CEX.commentsExtensible -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.W16CEX.dateUtc -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.W16CEX.durableId -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.W16CEX.extLst -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.W16CEX.intelligentPlaceholder -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.W16CEX.w16cex -> System.Xml.Linq.XNamespace
 ~static readonly DocumentFormat.OpenXml.Linq.W16CID.commentId -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.W16CID.commentsIds -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.W16CID.durableId -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.W16CID.paraId -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.W16CID.w16cid -> System.Xml.Linq.XNamespace
+~static readonly DocumentFormat.OpenXml.Linq.W16CUR.ext -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.W16CUR.uri -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.W16CUR.w16cur -> System.Xml.Linq.XNamespace
 ~static readonly DocumentFormat.OpenXml.Linq.WE.alternateReferences -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.WE.binding -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.WE.bindings -> System.Xml.Linq.XName
@@ -4816,6 +4946,8 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.WNE.wch -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.WNE.wll -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.WNE.wne -> System.Xml.Linq.XNamespace
+~static readonly DocumentFormat.OpenXml.Linq.WOE.oembed -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.WOE.woe -> System.Xml.Linq.XNamespace
 ~static readonly DocumentFormat.OpenXml.Linq.WP.align -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.WP.anchor -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.WP.cNvGraphicFramePr -> System.Xml.Linq.XName
@@ -5485,6 +5617,57 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.XDR14.nvPr -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.XDR14.xdr14 -> System.Xml.Linq.XNamespace
 ~static readonly DocumentFormat.OpenXml.Linq.XDR14.xfrm -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD.extLst -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD.fb -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD.k -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD.rv -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD.rvData -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD.rvStructures -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD.s -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD.v -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD.xlrd -> System.Xml.Linq.XNamespace
+~static readonly DocumentFormat.OpenXml.Linq.XLRD2.a -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD2.arrayData -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD2.dxfs -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD2.extLst -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD2.flag -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD2.global -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD2.k -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD2.key -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD2.keyFlags -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD2.richProperties -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD2.richStyles -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD2.richStyleSheet -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD2.rPr -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD2.rpv -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD2.rSty -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD2.rvTypesInfo -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD2.s -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD2.spb -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD2.spbArrays -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD2.spbData -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD2.spbStructures -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD2.supportingPropertyBags -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD2.type -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD2.types -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD2.v -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRD2.xlrd2 -> System.Xml.Linq.XNamespace
+~static readonly DocumentFormat.OpenXml.Linq.XLRDWI.address -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRDWI.blip -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRDWI.extLst -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRDWI.moreImagesAddress -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRDWI.webImageSrd -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRDWI.webImagesSrd -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLRDWI.xlrdwi -> System.Xml.Linq.XNamespace
+~static readonly DocumentFormat.OpenXml.Linq.XLTC.extLst -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLTC.mention -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLTC.mentions -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLTC.person -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLTC.personList -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLTC.text -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLTC.threadedComment -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLTC.ThreadedComments -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XLTC.xltc -> System.Xml.Linq.XNamespace
 ~static readonly DocumentFormat.OpenXml.Linq.XML.id -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.XML.space -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.XML.xml -> System.Xml.Linq.XNamespace
@@ -5497,6 +5680,18 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.XNE.sqref -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.XNE.worksheetSortMap -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.XNE.xne -> System.Xml.Linq.XNamespace
+~static readonly DocumentFormat.OpenXml.Linq.XNSV.columnFilter -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XNSV.dxf -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XNSV.extLst -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XNSV.filter -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XNSV.namedSheetView -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XNSV.namedSheetViews -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XNSV.nsvFilter -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XNSV.richSortCondition -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XNSV.sortCondition -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XNSV.sortRule -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XNSV.sortRules -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.XNSV.xnsv -> System.Xml.Linq.XNamespace
 ~static readonly DocumentFormat.OpenXml.Linq.XVML.Accel -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.XVML.Accel2 -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.XVML.Anchor -> System.Xml.Linq.XName
