@@ -13,7 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office.Drawing._2021.ScriptLink
+namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink
 {
     /// <summary>
     /// <para>Defines the ScriptLink Class.</para>
@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing._2021.ScriptLink
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing._2021.ScriptLink.OfficeArtExtensionList" /> <c>&lt;asl:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink.OfficeArtExtensionList" /> <c>&lt;asl:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -83,12 +83,12 @@ namespace DocumentFormat.OpenXml.Office.Drawing._2021.ScriptLink
             base.ConfigureMetadata(builder);
             builder.SetSchema("asl:scriptLink");
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing._2021.ScriptLink.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink.OfficeArtExtensionList>();
             builder.AddElement<ScriptLink>()
 .AddAttribute("val", a => a.Val);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing._2021.ScriptLink.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -99,9 +99,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing._2021.ScriptLink
         /// <remark>
         /// xmlns:asl = http://schemas.microsoft.com/office/drawing/2021/scriptlink
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Drawing._2021.ScriptLink.OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing._2021.ScriptLink.OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
