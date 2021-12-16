@@ -11,6 +11,7 @@ DocumentFormat.OpenXml.Linq.ALF
 DocumentFormat.OpenXml.Linq.AOE
 DocumentFormat.OpenXml.Linq.AP
 DocumentFormat.OpenXml.Linq.ASK
+DocumentFormat.OpenXml.Linq.ASL
 DocumentFormat.OpenXml.Linq.ASVG
 DocumentFormat.OpenXml.Linq.B
 DocumentFormat.OpenXml.Linq.C
@@ -547,6 +548,9 @@ static readonly DocumentFormat.OpenXml.Linq.MC.PreserveAttributes -> System.Xml.
 ~static readonly DocumentFormat.OpenXml.Linq.ASK.lineSketchStyleProps -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.ASK.seed -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.ASK.type -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.ASL.asl -> System.Xml.Linq.XNamespace
+~static readonly DocumentFormat.OpenXml.Linq.ASL.extLst -> System.Xml.Linq.XName
+~static readonly DocumentFormat.OpenXml.Linq.ASL.scriptLink -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.ASVG.asvg -> System.Xml.Linq.XNamespace
 ~static readonly DocumentFormat.OpenXml.Linq.ASVG.svgBlip -> System.Xml.Linq.XName
 ~static readonly DocumentFormat.OpenXml.Linq.B.AbbreviatedCaseNumber -> System.Xml.Linq.XName

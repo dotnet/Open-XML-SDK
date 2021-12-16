@@ -174,5 +174,34 @@ DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList.Office
 DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList.OfficeArtExtensionList(System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlElement!>! childElements) -> void
 DocumentFormat.OpenXml.Packaging.ImagePartExtensions
 DocumentFormat.OpenXml.SchemaAttrAttribute.SchemaAttrAttribute(string! qname) -> void
+override DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OfficeArtExtensionList.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.OfficeArtExtensionList.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.ScriptLink.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AddEmpty.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AsgnTaskAssignUnassignUser.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.CommentAnchor.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskAnchor.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistory.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryDetails.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryEvent.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskPriorityRecord.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskProgressEventInfo.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskScheduleEventInfo.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskTitleEventInfo.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskUndo.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskUnknownRecord.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.UnasgnAllEmpty.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.UnAsgnTaskAssignUnassignUser.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.Word.OEmbed.OEmbed.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundBlurProperties.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundCustomProperties.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundNormalProperties.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundRemovedProperties.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedProperties.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
 override DocumentFormat.OpenXml.Packaging.OpenXmlPart.Features.get -> DocumentFormat.OpenXml.Features.IFeatureCollection!
 static DocumentFormat.OpenXml.Packaging.ImagePartExtensions.AddImagePart(this DocumentFormat.OpenXml.Packaging.MainDocumentPart! main, string! extension) -> DocumentFormat.OpenXml.Packaging.ImagePart!
