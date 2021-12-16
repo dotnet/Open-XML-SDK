@@ -16,6 +16,7 @@ namespace DocumentFormat.OpenXml
             FileFormatVersions.Office2016,
             FileFormatVersions.Office2019,
             FileFormatVersions.Office2021,
+            FileFormatVersions.Microsoft365,
         };
 
         /// <summary>
@@ -30,7 +31,8 @@ namespace DocumentFormat.OpenXml
                 || version == FileFormatVersions.Office2013
                 || version == FileFormatVersions.Office2016
                 || version == FileFormatVersions.Office2019
-                || version == FileFormatVersions.Office2021;
+                || version == FileFormatVersions.Office2021
+                || version == FileFormatVersions.Microsoft365;
         }
 
         /// <summary>
@@ -46,7 +48,8 @@ namespace DocumentFormat.OpenXml
                 | FileFormatVersions.Office2013
                 | FileFormatVersions.Office2016
                 | FileFormatVersions.Office2019
-                | FileFormatVersions.Office2021;
+                | FileFormatVersions.Office2021
+                | FileFormatVersions.Microsoft365;
 
             return version == AllVersions;
         }
@@ -64,22 +67,29 @@ namespace DocumentFormat.OpenXml
                                                 | FileFormatVersions.Office2013
                                                 | FileFormatVersions.Office2016
                                                 | FileFormatVersions.Office2019
-                                                | FileFormatVersions.Office2021,
+                                                | FileFormatVersions.Office2021
+                                                | FileFormatVersions.Microsoft365,
                 FileFormatVersions.Office2010 => FileFormatVersions.Office2010
                                                 | FileFormatVersions.Office2013
                                                 | FileFormatVersions.Office2016
                                                 | FileFormatVersions.Office2019
-                                                | FileFormatVersions.Office2021,
+                                                | FileFormatVersions.Office2021
+                                                | FileFormatVersions.Microsoft365,
                 FileFormatVersions.Office2013 => FileFormatVersions.Office2013
                                                 | FileFormatVersions.Office2016
                                                 | FileFormatVersions.Office2019
-                                                | FileFormatVersions.Office2021,
+                                                | FileFormatVersions.Office2021
+                                                | FileFormatVersions.Microsoft365,
                 FileFormatVersions.Office2016 => FileFormatVersions.Office2016
                                                 | FileFormatVersions.Office2019
-                                                | FileFormatVersions.Office2021,
+                                                | FileFormatVersions.Office2021
+                                                | FileFormatVersions.Microsoft365,
                 FileFormatVersions.Office2019 => FileFormatVersions.Office2019
-                                                | FileFormatVersions.Office2021,
-                FileFormatVersions.Office2021 => FileFormatVersions.Office2021,
+                                                | FileFormatVersions.Office2021
+                                                | FileFormatVersions.Microsoft365,
+                FileFormatVersions.Office2021 => FileFormatVersions.Office2021
+                                                | FileFormatVersions.Microsoft365,
+                FileFormatVersions.Microsoft365 => FileFormatVersions.Microsoft365,
                 _ => throw new ArgumentOutOfRangeException(nameof(version)),
             };
 
@@ -151,6 +161,11 @@ namespace DocumentFormat.OpenXml
                 if ((FileFormatVersions.Office2021 & v) == FileFormatVersions.Office2021)
                 {
                     return 6;
+                }
+
+                if ((FileFormatVersions.Microsoft365 & v) == FileFormatVersions.Microsoft365)
+                {
+                    return 7;
                 }
 
                 throw new ArgumentOutOfRangeException(name);

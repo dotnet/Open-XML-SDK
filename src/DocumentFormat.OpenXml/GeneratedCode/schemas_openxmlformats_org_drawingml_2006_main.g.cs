@@ -6,6 +6,9 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
+using DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed;
+using DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink;
+using DocumentFormat.OpenXml.Microsoft365.Word.OEmbed;
 using DocumentFormat.OpenXml.Office.Drawing;
 using DocumentFormat.OpenXml.Office2010.Drawing;
 using DocumentFormat.OpenXml.Office2010.Drawing.Diagram;
@@ -16,6 +19,8 @@ using DocumentFormat.OpenXml.Office2016.Drawing;
 using DocumentFormat.OpenXml.Office2019.Drawing;
 using DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor;
 using DocumentFormat.OpenXml.Office2019.Drawing.SVG;
+using DocumentFormat.OpenXml.Office2021.Drawing.DocumentClassification;
+using DocumentFormat.OpenXml.Office2021.Drawing.Livefeed;
 using DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
@@ -16957,9 +16962,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ColIdIdentifier" /> <c>&lt;a16:colId></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.PredecessorDrawingElementReference" /> <c>&lt;a16:predDERef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.PictureAttributionSourceURL" /> <c>&lt;a1611:picAttrSrcUrl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.DocumentClassification.ClassificationOutcome" /> <c>&lt;aclsh:classification></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Decorative" /> <c>&lt;adec:decorative></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColor" /> <c>&lt;ahyp:hlinkClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedProperties" /> <c>&lt;alf:liveFeedProps></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared" /> <c>&lt;aoe:oembedShared></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchStyleProperties" /> <c>&lt;ask:lineSketchStyleProps></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.ScriptLink" /> <c>&lt;asl:scriptLink></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.SVG.SVGBlip" /> <c>&lt;asvg:svgBlip></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.ExceptionForSave" /> <c>&lt;c15:xForSave></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange" /> <c>&lt;c15:showDataLabelsRange></c></description></item>
@@ -17162,6 +17171,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSection" /> <c>&lt;w15:repeatingSection></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.WebExtension" /> <c>&lt;we:webextension></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionReference" /> <c>&lt;we:webextensionref></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.Word.OEmbed.OEmbed" /> <c>&lt;woe:oembed></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.Anchor" /> <c>&lt;wp:anchor></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline" /> <c>&lt;wp:inline></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeWidth" /> <c>&lt;wp14:sizeRelH></c></description></item>
@@ -17273,9 +17283,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ColIdIdentifier>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.PredecessorDrawingElementReference>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.PictureAttributionSourceURL>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.DocumentClassification.ClassificationOutcome>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Decorative>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchStyleProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.ScriptLink>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.SVG.SVGBlip>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ExceptionForSave>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange>();
@@ -17478,6 +17492,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSection>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtension>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.Word.OEmbed.OEmbed>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.Anchor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeWidth>();
@@ -32707,422 +32722,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     }
 
     /// <summary>
-    /// <para>Defines the PictureLocks Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is a:picLocks.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
-    /// </list>
-    /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr("a:picLocks")]
-#pragma warning restore CS0618 // Type or member is obsolete
-    public partial class PictureLocks : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the PictureLocks class.
-        /// </summary>
-        public PictureLocks() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the PictureLocks class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public PictureLocks(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the PictureLocks class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public PictureLocks(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the PictureLocks class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public PictureLocks(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>Disallow Shape Grouping</para>
-        /// <para>Represents the following attribute in the schema: noGrp</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr("noGrp")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public BooleanValue? NoGrouping
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Disallow Shape Selection</para>
-        /// <para>Represents the following attribute in the schema: noSelect</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr("noSelect")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public BooleanValue? NoSelection
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Disallow Shape Rotation</para>
-        /// <para>Represents the following attribute in the schema: noRot</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr("noRot")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public BooleanValue? NoRotation
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Disallow Aspect Ratio Change</para>
-        /// <para>Represents the following attribute in the schema: noChangeAspect</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr("noChangeAspect")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public BooleanValue? NoChangeAspect
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Disallow Shape Movement</para>
-        /// <para>Represents the following attribute in the schema: noMove</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr("noMove")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public BooleanValue? NoMove
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Disallow Shape Resize</para>
-        /// <para>Represents the following attribute in the schema: noResize</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr("noResize")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public BooleanValue? NoResize
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Disallow Shape Point Editing</para>
-        /// <para>Represents the following attribute in the schema: noEditPoints</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr("noEditPoints")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public BooleanValue? NoEditPoints
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Disallow Showing Adjust Handles</para>
-        /// <para>Represents the following attribute in the schema: noAdjustHandles</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr("noAdjustHandles")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public BooleanValue? NoAdjustHandles
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Disallow Arrowhead Changes</para>
-        /// <para>Represents the following attribute in the schema: noChangeArrowheads</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr("noChangeArrowheads")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public BooleanValue? NoChangeArrowheads
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Disallow Shape Type Change</para>
-        /// <para>Represents the following attribute in the schema: noChangeShapeType</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr("noChangeShapeType")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public BooleanValue? NoChangeShapeType
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Disallow Crop Changes</para>
-        /// <para>Represents the following attribute in the schema: noCrop</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr("noCrop")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public BooleanValue? NoCrop
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("a:picLocks");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            builder.AddElement<PictureLocks>()
-.AddAttribute("noGrp", a => a.NoGrouping)
-.AddAttribute("noSelect", a => a.NoSelection)
-.AddAttribute("noRot", a => a.NoRotation)
-.AddAttribute("noChangeAspect", a => a.NoChangeAspect)
-.AddAttribute("noMove", a => a.NoMove)
-.AddAttribute("noResize", a => a.NoResize)
-.AddAttribute("noEditPoints", a => a.NoEditPoints)
-.AddAttribute("noAdjustHandles", a => a.NoAdjustHandles)
-.AddAttribute("noChangeArrowheads", a => a.NoChangeArrowheads)
-.AddAttribute("noChangeShapeType", a => a.NoChangeShapeType)
-.AddAttribute("noCrop", a => a.NoCrop);
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
-            };
-        }
-
-        /// <summary>
-        /// <para>ExtensionList.</para>
-        /// <para>Represents the following element tag in the schema: a:extLst.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            set => SetElement(value);
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<PictureLocks>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the NonVisualPicturePropertiesExtensionList Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is a:extLst.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtension" /> <c>&lt;a:ext></c></description></item>
-    /// </list>
-    /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr("a:extLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
-    public partial class NonVisualPicturePropertiesExtensionList : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the NonVisualPicturePropertiesExtensionList class.
-        /// </summary>
-        public NonVisualPicturePropertiesExtensionList() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the NonVisualPicturePropertiesExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public NonVisualPicturePropertiesExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the NonVisualPicturePropertiesExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public NonVisualPicturePropertiesExtensionList(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the NonVisualPicturePropertiesExtensionList class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public NonVisualPicturePropertiesExtensionList(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("a:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtension>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtension), 0, 0)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualPicturePropertiesExtensionList>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the NonVisualPicturePropertiesExtension Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is a:ext.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.CameraTool" /> <c>&lt;a14:cameraTool></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ObjectProperties" /> <c>&lt;a15:objectPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.SignatureLine" /> <c>&lt;a15:signatureLine></c></description></item>
-    /// </list>
-    /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr("a:ext")]
-#pragma warning restore CS0618 // Type or member is obsolete
-    public partial class NonVisualPicturePropertiesExtension : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the NonVisualPicturePropertiesExtension class.
-        /// </summary>
-        public NonVisualPicturePropertiesExtension() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the NonVisualPicturePropertiesExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public NonVisualPicturePropertiesExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the NonVisualPicturePropertiesExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public NonVisualPicturePropertiesExtension(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the NonVisualPicturePropertiesExtension class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public NonVisualPicturePropertiesExtension(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>URI</para>
-        /// <para>Represents the following attribute in the schema: uri</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr("uri")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public StringValue? Uri
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("a:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.CameraTool>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ObjectProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.SignatureLine>();
-            builder.AddElement<NonVisualPicturePropertiesExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.CameraTool), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.SignatureLine), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ObjectProperties), 1, 1, version: FileFormatVersions.Office2013),
-                new AnyParticle(0, 1)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualPicturePropertiesExtension>(deep);
-    }
-
-    /// <summary>
     /// <para>Defines the GroupShapeLocks Class.</para>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a:grpSpLocks.</para>
@@ -34591,262 +34190,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     }
 
     /// <summary>
-    /// <para>Defines the NonVisualDrawingPropertiesExtension Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is a:ext.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.CompatExtension" /> <c>&lt;a14:compatExt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.BackgroundProperties" /> <c>&lt;a15:backgroundPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.CreationId" /> <c>&lt;a16:creationId></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.PredecessorDrawingElementReference" /> <c>&lt;a16:predDERef></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Decorative" /> <c>&lt;adec:decorative></c></description></item>
-    /// </list>
-    /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr("a:ext")]
-#pragma warning restore CS0618 // Type or member is obsolete
-    public partial class NonVisualDrawingPropertiesExtension : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the NonVisualDrawingPropertiesExtension class.
-        /// </summary>
-        public NonVisualDrawingPropertiesExtension() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the NonVisualDrawingPropertiesExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public NonVisualDrawingPropertiesExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the NonVisualDrawingPropertiesExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public NonVisualDrawingPropertiesExtension(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the NonVisualDrawingPropertiesExtension class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public NonVisualDrawingPropertiesExtension(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>URI</para>
-        /// <para>Represents the following attribute in the schema: uri</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr("uri")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public StringValue? Uri
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("a:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.CompatExtension>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.BackgroundProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.CreationId>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.PredecessorDrawingElementReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Decorative>();
-            builder.AddElement<NonVisualDrawingPropertiesExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.CompatExtension), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.BackgroundProperties), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.CreationId), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.PredecessorDrawingElementReference), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Decorative), 1, 1, version: FileFormatVersions.Office2019),
-                new AnyParticle(0, 1)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualDrawingPropertiesExtension>(deep);
-    }
-
-    /// <summary>
-    /// <para>Future extensions..</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is a:extLst.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipExtension" /> <c>&lt;a:ext></c></description></item>
-    /// </list>
-    /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr("a:extLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
-    public partial class BlipExtensionList : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the BlipExtensionList class.
-        /// </summary>
-        public BlipExtensionList() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BlipExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public BlipExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BlipExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public BlipExtensionList(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BlipExtensionList class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public BlipExtensionList(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("a:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipExtension>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipExtension), 0, 0)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<BlipExtensionList>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the BlipExtension Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is a:ext.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ImageProperties" /> <c>&lt;a14:imgProps></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.UseLocalDpi" /> <c>&lt;a14:useLocalDpi></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.PictureAttributionSourceURL" /> <c>&lt;a1611:picAttrSrcUrl></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.SVG.SVGBlip" /> <c>&lt;asvg:svgBlip></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.Drawing.WebVideoProperty" /> <c>&lt;wp15:webVideoPr></c></description></item>
-    /// </list>
-    /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr("a:ext")]
-#pragma warning restore CS0618 // Type or member is obsolete
-    public partial class BlipExtension : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the BlipExtension class.
-        /// </summary>
-        public BlipExtension() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BlipExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public BlipExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BlipExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public BlipExtension(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BlipExtension class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public BlipExtension(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>URI</para>
-        /// <para>Represents the following attribute in the schema: uri</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr("uri")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public StringValue? Uri
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("a:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ImageProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.UseLocalDpi>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.PictureAttributionSourceURL>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.SVG.SVGBlip>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.Drawing.WebVideoProperty>();
-            builder.AddElement<BlipExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ImageProperties), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.UseLocalDpi), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.Drawing.WebVideoProperty), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.SVG.SVGBlip), 1, 1, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.PictureAttributionSourceURL), 1, 1, version: FileFormatVersions.Office2016),
-                new AnyParticle(0, 1)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<BlipExtension>(deep);
-    }
-
-    /// <summary>
     /// <para>Defines the LinePropertiesExtension Class.</para>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a:ext.</para>
@@ -35126,6 +34469,693 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LinePropertiesExtensionList>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the NonVisualDrawingPropertiesExtension Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is a:ext.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.CompatExtension" /> <c>&lt;a14:compatExt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.BackgroundProperties" /> <c>&lt;a15:backgroundPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.CreationId" /> <c>&lt;a16:creationId></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.PredecessorDrawingElementReference" /> <c>&lt;a16:predDERef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.DocumentClassification.ClassificationOutcome" /> <c>&lt;aclsh:classification></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Decorative" /> <c>&lt;adec:decorative></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.ScriptLink" /> <c>&lt;asl:scriptLink></c></description></item>
+    /// </list>
+    /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr("a:ext")]
+#pragma warning restore CS0618 // Type or member is obsolete
+    public partial class NonVisualDrawingPropertiesExtension : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the NonVisualDrawingPropertiesExtension class.
+        /// </summary>
+        public NonVisualDrawingPropertiesExtension() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the NonVisualDrawingPropertiesExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public NonVisualDrawingPropertiesExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the NonVisualDrawingPropertiesExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public NonVisualDrawingPropertiesExtension(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the NonVisualDrawingPropertiesExtension class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public NonVisualDrawingPropertiesExtension(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>URI</para>
+        /// <para>Represents the following attribute in the schema: uri</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr("uri")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("a:ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.CompatExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.BackgroundProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.CreationId>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.PredecessorDrawingElementReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.DocumentClassification.ClassificationOutcome>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Decorative>();
+            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.ScriptLink>();
+            builder.AddElement<NonVisualDrawingPropertiesExtension>()
+.AddAttribute("uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+});
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.CompatExtension), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.BackgroundProperties), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.CreationId), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.PredecessorDrawingElementReference), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Decorative), 1, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.DocumentClassification.ClassificationOutcome), 1, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.ScriptLink), 1, 1, version: FileFormatVersions.Microsoft365),
+                new AnyParticle(0, 1)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualDrawingPropertiesExtension>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the PictureLocks Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is a:picLocks.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    /// </list>
+    /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr("a:picLocks")]
+#pragma warning restore CS0618 // Type or member is obsolete
+    public partial class PictureLocks : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the PictureLocks class.
+        /// </summary>
+        public PictureLocks() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PictureLocks class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PictureLocks(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PictureLocks class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PictureLocks(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PictureLocks class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public PictureLocks(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Disallow Shape Grouping</para>
+        /// <para>Represents the following attribute in the schema: noGrp</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr("noGrp")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? NoGrouping
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Disallow Shape Selection</para>
+        /// <para>Represents the following attribute in the schema: noSelect</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr("noSelect")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? NoSelection
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Disallow Shape Rotation</para>
+        /// <para>Represents the following attribute in the schema: noRot</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr("noRot")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? NoRotation
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Disallow Aspect Ratio Change</para>
+        /// <para>Represents the following attribute in the schema: noChangeAspect</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr("noChangeAspect")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? NoChangeAspect
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Disallow Shape Movement</para>
+        /// <para>Represents the following attribute in the schema: noMove</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr("noMove")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? NoMove
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Disallow Shape Resize</para>
+        /// <para>Represents the following attribute in the schema: noResize</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr("noResize")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? NoResize
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Disallow Shape Point Editing</para>
+        /// <para>Represents the following attribute in the schema: noEditPoints</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr("noEditPoints")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? NoEditPoints
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Disallow Showing Adjust Handles</para>
+        /// <para>Represents the following attribute in the schema: noAdjustHandles</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr("noAdjustHandles")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? NoAdjustHandles
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Disallow Arrowhead Changes</para>
+        /// <para>Represents the following attribute in the schema: noChangeArrowheads</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr("noChangeArrowheads")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? NoChangeArrowheads
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Disallow Shape Type Change</para>
+        /// <para>Represents the following attribute in the schema: noChangeShapeType</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr("noChangeShapeType")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? NoChangeShapeType
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Disallow Crop Changes</para>
+        /// <para>Represents the following attribute in the schema: noCrop</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr("noCrop")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? NoCrop
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("a:picLocks");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddElement<PictureLocks>()
+.AddAttribute("noGrp", a => a.NoGrouping)
+.AddAttribute("noSelect", a => a.NoSelection)
+.AddAttribute("noRot", a => a.NoRotation)
+.AddAttribute("noChangeAspect", a => a.NoChangeAspect)
+.AddAttribute("noMove", a => a.NoMove)
+.AddAttribute("noResize", a => a.NoResize)
+.AddAttribute("noEditPoints", a => a.NoEditPoints)
+.AddAttribute("noAdjustHandles", a => a.NoAdjustHandles)
+.AddAttribute("noChangeArrowheads", a => a.NoChangeArrowheads)
+.AddAttribute("noChangeShapeType", a => a.NoChangeShapeType)
+.AddAttribute("noCrop", a => a.NoCrop);
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+            };
+        }
+
+        /// <summary>
+        /// <para>ExtensionList.</para>
+        /// <para>Represents the following element tag in the schema: a:extLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            set => SetElement(value);
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<PictureLocks>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the NonVisualPicturePropertiesExtensionList Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is a:extLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtension" /> <c>&lt;a:ext></c></description></item>
+    /// </list>
+    /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr("a:extLst")]
+#pragma warning restore CS0618 // Type or member is obsolete
+    public partial class NonVisualPicturePropertiesExtensionList : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the NonVisualPicturePropertiesExtensionList class.
+        /// </summary>
+        public NonVisualPicturePropertiesExtensionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the NonVisualPicturePropertiesExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public NonVisualPicturePropertiesExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the NonVisualPicturePropertiesExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public NonVisualPicturePropertiesExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the NonVisualPicturePropertiesExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public NonVisualPicturePropertiesExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("a:extLst");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtension>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtension), 0, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualPicturePropertiesExtensionList>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the NonVisualPicturePropertiesExtension Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is a:ext.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.CameraTool" /> <c>&lt;a14:cameraTool></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ObjectProperties" /> <c>&lt;a15:objectPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.SignatureLine" /> <c>&lt;a15:signatureLine></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedProperties" /> <c>&lt;alf:liveFeedProps></c></description></item>
+    /// </list>
+    /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr("a:ext")]
+#pragma warning restore CS0618 // Type or member is obsolete
+    public partial class NonVisualPicturePropertiesExtension : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the NonVisualPicturePropertiesExtension class.
+        /// </summary>
+        public NonVisualPicturePropertiesExtension() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the NonVisualPicturePropertiesExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public NonVisualPicturePropertiesExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the NonVisualPicturePropertiesExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public NonVisualPicturePropertiesExtension(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the NonVisualPicturePropertiesExtension class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public NonVisualPicturePropertiesExtension(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>URI</para>
+        /// <para>Represents the following attribute in the schema: uri</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr("uri")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("a:ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.CameraTool>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ObjectProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.SignatureLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedProperties>();
+            builder.AddElement<NonVisualPicturePropertiesExtension>()
+.AddAttribute("uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+});
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.CameraTool), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.SignatureLine), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ObjectProperties), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedProperties), 1, 1, version: FileFormatVersions.Microsoft365),
+                new AnyParticle(0, 1)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualPicturePropertiesExtension>(deep);
+    }
+
+    /// <summary>
+    /// <para>Future extensions..</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is a:extLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipExtension" /> <c>&lt;a:ext></c></description></item>
+    /// </list>
+    /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr("a:extLst")]
+#pragma warning restore CS0618 // Type or member is obsolete
+    public partial class BlipExtensionList : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the BlipExtensionList class.
+        /// </summary>
+        public BlipExtensionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BlipExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public BlipExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BlipExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public BlipExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BlipExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public BlipExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("a:extLst");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipExtension>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipExtension), 0, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<BlipExtensionList>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the BlipExtension Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is a:ext.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ImageProperties" /> <c>&lt;a14:imgProps></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.UseLocalDpi" /> <c>&lt;a14:useLocalDpi></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.PictureAttributionSourceURL" /> <c>&lt;a1611:picAttrSrcUrl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared" /> <c>&lt;aoe:oembedShared></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.SVG.SVGBlip" /> <c>&lt;asvg:svgBlip></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.Word.OEmbed.OEmbed" /> <c>&lt;woe:oembed></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.Drawing.WebVideoProperty" /> <c>&lt;wp15:webVideoPr></c></description></item>
+    /// </list>
+    /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr("a:ext")]
+#pragma warning restore CS0618 // Type or member is obsolete
+    public partial class BlipExtension : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the BlipExtension class.
+        /// </summary>
+        public BlipExtension() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BlipExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public BlipExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BlipExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public BlipExtension(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BlipExtension class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public BlipExtension(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>URI</para>
+        /// <para>Represents the following attribute in the schema: uri</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr("uri")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("a:ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ImageProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.UseLocalDpi>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.PictureAttributionSourceURL>();
+            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.SVG.SVGBlip>();
+            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.Word.OEmbed.OEmbed>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.Drawing.WebVideoProperty>();
+            builder.AddElement<BlipExtension>()
+.AddAttribute("uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+});
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ImageProperties), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.UseLocalDpi), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.Drawing.WebVideoProperty), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.SVG.SVGBlip), 1, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.PictureAttributionSourceURL), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.Word.OEmbed.OEmbed), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared), 1, 1, version: FileFormatVersions.Microsoft365),
+                new AnyParticle(0, 1)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<BlipExtension>(deep);
     }
 
     /// <summary>

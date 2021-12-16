@@ -1,5 +1,207 @@
 ﻿#nullable enable
+DocumentFormat.OpenXml.FileFormatVersions.Microsoft365 = 1073741824 -> DocumentFormat.OpenXml.FileFormatVersions
+DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared
+DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared.OEmbedShared() -> void
+DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared.OEmbedShared(params DocumentFormat.OpenXml.OpenXmlElement![]! childElements) -> void
+DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared.OEmbedShared(string! outerXml) -> void
+DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared.OEmbedShared(System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlElement!>! childElements) -> void
+DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared.OfficeArtExtensionList.get -> DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OfficeArtExtensionList?
+DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared.OfficeArtExtensionList.set -> void
+DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared.SrcUrl.get -> DocumentFormat.OpenXml.StringValue?
+DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared.SrcUrl.set -> void
+DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared.Type.get -> DocumentFormat.OpenXml.StringValue?
+DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared.Type.set -> void
+DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OfficeArtExtensionList
+DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OfficeArtExtensionList.OfficeArtExtensionList() -> void
+DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OfficeArtExtensionList.OfficeArtExtensionList(params DocumentFormat.OpenXml.OpenXmlElement![]! childElements) -> void
+DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OfficeArtExtensionList.OfficeArtExtensionList(string! outerXml) -> void
+DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OfficeArtExtensionList.OfficeArtExtensionList(System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlElement!>! childElements) -> void
+DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.OfficeArtExtensionList
+DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.OfficeArtExtensionList.OfficeArtExtensionList() -> void
+DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.OfficeArtExtensionList.OfficeArtExtensionList(params DocumentFormat.OpenXml.OpenXmlElement![]! childElements) -> void
+DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.OfficeArtExtensionList.OfficeArtExtensionList(string! outerXml) -> void
+DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.OfficeArtExtensionList.OfficeArtExtensionList(System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlElement!>! childElements) -> void
+DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.ScriptLink
+DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.ScriptLink.OfficeArtExtensionList.get -> DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.OfficeArtExtensionList?
+DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.ScriptLink.OfficeArtExtensionList.set -> void
+DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.ScriptLink.ScriptLink() -> void
+DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.ScriptLink.ScriptLink(params DocumentFormat.OpenXml.OpenXmlElement![]! childElements) -> void
+DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.ScriptLink.ScriptLink(string! outerXml) -> void
+DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.ScriptLink.ScriptLink(System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlElement!>! childElements) -> void
+DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.ScriptLink.Val.get -> DocumentFormat.OpenXml.StringValue?
+DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.ScriptLink.Val.set -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AddEmpty
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AddEmpty.AddEmpty() -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AsgnTaskAssignUnassignUser
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AsgnTaskAssignUnassignUser.AsgnTaskAssignUnassignUser() -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser.AtrbtnTaskAssignUnassignUser() -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.CommentAnchor
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.CommentAnchor.CommentAnchor() -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.CommentAnchor.Id.get -> DocumentFormat.OpenXml.StringValue?
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.CommentAnchor.Id.set -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.EmptyType
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.EmptyType.EmptyType() -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList.ExtensionList() -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList.ExtensionList(params DocumentFormat.OpenXml.OpenXmlElement![]! childElements) -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList.ExtensionList(string! outerXml) -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList.ExtensionList(System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlElement!>! childElements) -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.OpenXmlTaskAssignUnassignUserElement
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.OpenXmlTaskAssignUnassignUserElement.AuthorId.get -> DocumentFormat.OpenXml.StringValue?
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.OpenXmlTaskAssignUnassignUserElement.AuthorId.set -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.OpenXmlTaskAssignUnassignUserElement.OpenXmlTaskAssignUnassignUserElement() -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskAnchor
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskAnchor.CommentAnchor.get -> DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.CommentAnchor?
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskAnchor.CommentAnchor.set -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskAnchor.ExtensionList.get -> DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList?
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskAnchor.ExtensionList.set -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskAnchor.TaskAnchor() -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskAnchor.TaskAnchor(params DocumentFormat.OpenXml.OpenXmlElement![]! childElements) -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskAnchor.TaskAnchor(string! outerXml) -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskAnchor.TaskAnchor(System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlElement!>! childElements) -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistory
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistory.TaskHistory() -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistory.TaskHistory(params DocumentFormat.OpenXml.OpenXmlElement![]! childElements) -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistory.TaskHistory(string! outerXml) -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistory.TaskHistory(System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlElement!>! childElements) -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryDetails
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryDetails.ExtensionList.get -> DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList?
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryDetails.ExtensionList.set -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryDetails.Id.get -> DocumentFormat.OpenXml.StringValue?
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryDetails.Id.set -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryDetails.TaskHistory.get -> DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistory?
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryDetails.TaskHistory.set -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryDetails.TaskHistoryDetails() -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryDetails.TaskHistoryDetails(params DocumentFormat.OpenXml.OpenXmlElement![]! childElements) -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryDetails.TaskHistoryDetails(string! outerXml) -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryDetails.TaskHistoryDetails(System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlElement!>! childElements) -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryEvent
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryEvent.AtrbtnTaskAssignUnassignUser.get -> DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser?
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryEvent.AtrbtnTaskAssignUnassignUser.set -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryEvent.Id.get -> DocumentFormat.OpenXml.StringValue?
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryEvent.Id.set -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryEvent.TaskAnchor.get -> DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskAnchor?
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryEvent.TaskAnchor.set -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryEvent.TaskHistoryEvent() -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryEvent.TaskHistoryEvent(params DocumentFormat.OpenXml.OpenXmlElement![]! childElements) -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryEvent.TaskHistoryEvent(string! outerXml) -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryEvent.TaskHistoryEvent(System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlElement!>! childElements) -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryEvent.Time.get -> DocumentFormat.OpenXml.DateTimeValue?
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryEvent.Time.set -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskPriorityRecord
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskPriorityRecord.TaskPriorityRecord() -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskPriorityRecord.Val.get -> DocumentFormat.OpenXml.Int32Value?
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskPriorityRecord.Val.set -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskProgressEventInfo
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskProgressEventInfo.TaskProgressEventInfo() -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskProgressEventInfo.Val.get -> DocumentFormat.OpenXml.Int32Value?
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskProgressEventInfo.Val.set -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskScheduleEventInfo
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskScheduleEventInfo.EndDt.get -> DocumentFormat.OpenXml.DateTimeValue?
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskScheduleEventInfo.EndDt.set -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskScheduleEventInfo.StDt.get -> DocumentFormat.OpenXml.DateTimeValue?
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskScheduleEventInfo.StDt.set -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskScheduleEventInfo.TaskScheduleEventInfo() -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskTitleEventInfo
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskTitleEventInfo.TaskTitleEventInfo() -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskTitleEventInfo.Val.get -> DocumentFormat.OpenXml.StringValue?
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskTitleEventInfo.Val.set -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskUndo
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskUndo.Id.get -> DocumentFormat.OpenXml.StringValue?
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskUndo.Id.set -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskUndo.TaskUndo() -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskUnknownRecord
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskUnknownRecord.TaskUnknownRecord() -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.UnasgnAllEmpty
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.UnasgnAllEmpty.UnasgnAllEmpty() -> void
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.UnAsgnTaskAssignUnassignUser
+DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.UnAsgnTaskAssignUnassignUser.UnAsgnTaskAssignUnassignUser() -> void
+DocumentFormat.OpenXml.Microsoft365.Word.OEmbed.OEmbed
+DocumentFormat.OpenXml.Microsoft365.Word.OEmbed.OEmbed.MediaType.get -> DocumentFormat.OpenXml.StringValue?
+DocumentFormat.OpenXml.Microsoft365.Word.OEmbed.OEmbed.MediaType.set -> void
+DocumentFormat.OpenXml.Microsoft365.Word.OEmbed.OEmbed.OEmbed() -> void
+DocumentFormat.OpenXml.Microsoft365.Word.OEmbed.OEmbed.OEmbedUrl.get -> DocumentFormat.OpenXml.StringValue?
+DocumentFormat.OpenXml.Microsoft365.Word.OEmbed.OEmbed.OEmbedUrl.set -> void
+DocumentFormat.OpenXml.Microsoft365.Word.OEmbed.OEmbed.PicLocksAutoForOEmbed.get -> DocumentFormat.OpenXml.BooleanValue?
+DocumentFormat.OpenXml.Microsoft365.Word.OEmbed.OEmbed.PicLocksAutoForOEmbed.set -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundBlurProperties
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundBlurProperties.BackgroundBlurProperties() -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundBlurProperties.BackgroundBlurProperties(params DocumentFormat.OpenXml.OpenXmlElement![]! childElements) -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundBlurProperties.BackgroundBlurProperties(string! outerXml) -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundBlurProperties.BackgroundBlurProperties(System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlElement!>! childElements) -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundBlurProperties.OfficeArtExtensionList.get -> DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList?
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundBlurProperties.OfficeArtExtensionList.set -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundCustomProperties
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundCustomProperties.BackgroundCustomProperties() -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundCustomProperties.BackgroundCustomProperties(params DocumentFormat.OpenXml.OpenXmlElement![]! childElements) -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundCustomProperties.BackgroundCustomProperties(string! outerXml) -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundCustomProperties.BackgroundCustomProperties(System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlElement!>! childElements) -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundCustomProperties.OfficeArtExtensionList.get -> DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList?
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundCustomProperties.OfficeArtExtensionList.set -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundNormalProperties
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundNormalProperties.BackgroundNormalProperties() -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundNormalProperties.BackgroundNormalProperties(params DocumentFormat.OpenXml.OpenXmlElement![]! childElements) -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundNormalProperties.BackgroundNormalProperties(string! outerXml) -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundNormalProperties.BackgroundNormalProperties(System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlElement!>! childElements) -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundNormalProperties.OfficeArtExtensionList.get -> DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList?
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundNormalProperties.OfficeArtExtensionList.set -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundRemovedProperties
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundRemovedProperties.BackgroundRemovedProperties() -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundRemovedProperties.BackgroundRemovedProperties(params DocumentFormat.OpenXml.OpenXmlElement![]! childElements) -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundRemovedProperties.BackgroundRemovedProperties(string! outerXml) -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundRemovedProperties.BackgroundRemovedProperties(System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlElement!>! childElements) -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundRemovedProperties.OfficeArtExtensionList.get -> DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList?
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundRemovedProperties.OfficeArtExtensionList.set -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties.LiveFeedBackgroundProperties() -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties.LiveFeedBackgroundProperties(params DocumentFormat.OpenXml.OpenXmlElement![]! childElements) -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties.LiveFeedBackgroundProperties(string! outerXml) -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties.LiveFeedBackgroundProperties(System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlElement!>! childElements) -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedProperties
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedProperties.LiveFeedBackgroundProperties.get -> DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties?
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedProperties.LiveFeedBackgroundProperties.set -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedProperties.LiveFeedProperties() -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedProperties.LiveFeedProperties(params DocumentFormat.OpenXml.OpenXmlElement![]! childElements) -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedProperties.LiveFeedProperties(string! outerXml) -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedProperties.LiveFeedProperties(System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlElement!>! childElements) -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedProperties.OfficeArtExtensionList.get -> DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList?
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedProperties.OfficeArtExtensionList.set -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList.OfficeArtExtensionList() -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList.OfficeArtExtensionList(params DocumentFormat.OpenXml.OpenXmlElement![]! childElements) -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList.OfficeArtExtensionList(string! outerXml) -> void
+DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList.OfficeArtExtensionList(System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlElement!>! childElements) -> void
 DocumentFormat.OpenXml.Packaging.ImagePartExtensions
 DocumentFormat.OpenXml.SchemaAttrAttribute.SchemaAttrAttribute(string! qname) -> void
+override DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OfficeArtExtensionList.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.OfficeArtExtensionList.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.ScriptLink.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AddEmpty.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AsgnTaskAssignUnassignUser.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.CommentAnchor.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskAnchor.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistory.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryDetails.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryEvent.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskPriorityRecord.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskProgressEventInfo.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskScheduleEventInfo.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskTitleEventInfo.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskUndo.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskUnknownRecord.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.UnasgnAllEmpty.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.UnAsgnTaskAssignUnassignUser.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Microsoft365.Word.OEmbed.OEmbed.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundBlurProperties.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundCustomProperties.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundNormalProperties.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundRemovedProperties.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedProperties.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
+override DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
 override DocumentFormat.OpenXml.Packaging.OpenXmlPart.Features.get -> DocumentFormat.OpenXml.Features.IFeatureCollection!
 static DocumentFormat.OpenXml.Packaging.ImagePartExtensions.AddImagePart(this DocumentFormat.OpenXml.Packaging.MainDocumentPart! main, string! extension) -> DocumentFormat.OpenXml.Packaging.ImagePart!

@@ -45,7 +45,8 @@ namespace DocumentFormat.OpenXml.Tests
         [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2010 | FileFormatVersions.Office2013, false)]
         [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2010 | FileFormatVersions.Office2013 | FileFormatVersions.Office2016, false)]
         [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2010 | FileFormatVersions.Office2013 | FileFormatVersions.Office2016 | FileFormatVersions.Office2019, false)]
-        [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2010 | FileFormatVersions.Office2013 | FileFormatVersions.Office2016 | FileFormatVersions.Office2019 | FileFormatVersions.Office2021, true)]
+        [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2010 | FileFormatVersions.Office2013 | FileFormatVersions.Office2016 | FileFormatVersions.Office2019 | FileFormatVersions.Office2021, false)]
+        [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2010 | FileFormatVersions.Office2013 | FileFormatVersions.Office2016 | FileFormatVersions.Office2019 | FileFormatVersions.Office2021 | FileFormatVersions.Microsoft365, true)]
         [Theory]
         public void CheckAll(FileFormatVersions version, bool expected)
         {
