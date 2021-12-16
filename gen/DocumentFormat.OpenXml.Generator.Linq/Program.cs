@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -10,7 +11,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace DocumentFormat.OpenXml.CodeGeneration.Linq
+namespace DocumentFormat.OpenXml.Generator.Linq
 {
     /// <summary>
     /// Code generator for the namespace-related Linq-to-Xml classes.
@@ -25,10 +26,15 @@ namespace DocumentFormat.OpenXml.CodeGeneration.Linq
         /// folder into which the generated code is written.
         /// </summary>
         /// <param name="args">The command line arguments.</param>
-        public static void Main(string[] args)
+        public static int Main(string[] args)
         {
-            const string defaultDirectoryName = "..\\..\\..\\..\\src\\DocumentFormat.OpenXml.Linq\\GeneratedCode";
-            string directoryName = args.Length > 0 ? args[0] : defaultDirectoryName;
+            if (args.Length != 1)
+            {
+                Console.WriteLine("Please supply a directory");
+                return 1;
+            }
+
+            string directoryName = args[0];
             directoryName = Path.GetFullPath(directoryName);
 
             Console.WriteLine($@"Generating code in '{directoryName}' ...");
@@ -48,18 +54,19 @@ namespace DocumentFormat.OpenXml.CodeGeneration.Linq
             foreach (IGrouping<string, FieldInfo> fieldInfoGrouping in fieldInfoGroupings)
             {
                 string prefix = fieldInfoGrouping.Key;
-                var fieldNames = new HashSet<string>();
+                var fieldNames = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
 
                 foreach (FieldInfo info in fieldInfoGrouping.OrderBy(fi => fi.LocalName))
                 {
                     // Some names contain dashes, which we need to replace.
-                    string fieldName = info.LocalName.Replace('-', '_');
+                    string fieldName = info.LocalName
+                        .Replace('-', '_');
 
                     // Ensure the field name is not equal to the prefix, which we use for the XNamespace field.
                     fieldName = fieldName != prefix ? fieldName : fieldName + "_";
 
                     // Ensure CLS-compliance by making field names unique.
-                    while (!fieldNames.Add(fieldName.ToLowerInvariant()))
+                    while (!fieldNames.Add(fieldName))
                     {
                         fieldName += "_";
                     }
@@ -96,6 +103,8 @@ namespace DocumentFormat.OpenXml.CodeGeneration.Linq
                 GenerateClass(output, prefix, namespaceName, classFieldInfos, fieldInfos);
                 GenerateClassFilePostamble(output);
             }
+
+            return 0;
         }
 
         private static string GetClassName(string prefix)

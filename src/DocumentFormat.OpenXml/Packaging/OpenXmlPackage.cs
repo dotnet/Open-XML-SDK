@@ -930,9 +930,6 @@ namespace DocumentFormat.OpenXml.Packaging
             return Package.CreatePart(partUri, contentType, CompressionOption);
         }
 
-        private protected override IFeatureCollection CreateFeatures()
-            => new FeatureCollection(FeatureCollection.Default);
-
         #endregion
 
         #region methods on DataPart

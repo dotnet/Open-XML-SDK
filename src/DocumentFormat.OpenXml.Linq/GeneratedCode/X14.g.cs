@@ -382,7 +382,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="X.filterColumn" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="X.filterColumn" />, <see cref="XNSV.filter" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="customFilter" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.and" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CustomFilters.</description></item>
@@ -662,7 +662,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="X.filterColumn" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="X.filterColumn" />, <see cref="XNSV.filter" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.iconId" />, <see cref="NoNamespace.iconSet" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: IconFilter.</description></item>
         /// </list>
@@ -1277,7 +1277,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="slicerStyleElements" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.dxfId" />, <see cref="NoNamespace.type" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.dxfId_" />, <see cref="NoNamespace.type" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SlicerStyleElement.</description></item>
         /// </list>
         /// </remarks>
@@ -1317,7 +1317,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="X.sortState" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.customList" />, <see cref="NoNamespace.descending" />, <see cref="NoNamespace.dxfId" />, <see cref="NoNamespace.iconId" />, <see cref="NoNamespace.iconSet" />, <see cref="NoNamespace.@ref" />, <see cref="NoNamespace.sortBy" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.customList" />, <see cref="NoNamespace.descending" />, <see cref="NoNamespace.dxfId_" />, <see cref="NoNamespace.iconId" />, <see cref="NoNamespace.iconSet" />, <see cref="NoNamespace.@ref" />, <see cref="NoNamespace.sortBy" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SortCondition.</description></item>
         /// </list>
         /// </remarks>

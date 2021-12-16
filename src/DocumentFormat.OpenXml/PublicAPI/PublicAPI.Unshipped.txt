@@ -1,4 +1,5 @@
 ﻿#nullable enable
 DocumentFormat.OpenXml.Packaging.ImagePartExtensions
 DocumentFormat.OpenXml.SchemaAttrAttribute.SchemaAttrAttribute(string! qname) -> void
+override DocumentFormat.OpenXml.Packaging.OpenXmlPart.Features.get -> DocumentFormat.OpenXml.Features.IFeatureCollection!
 static DocumentFormat.OpenXml.Packaging.ImagePartExtensions.AddImagePart(this DocumentFormat.OpenXml.Packaging.MainDocumentPart! main, string! extension) -> DocumentFormat.OpenXml.Packaging.ImagePart!
