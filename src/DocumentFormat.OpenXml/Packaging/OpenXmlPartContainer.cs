@@ -18,12 +18,14 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the base class for OpenXmlPackage and OpenXmlPart.
     /// </summary>
-    public abstract class OpenXmlPartContainer
+    public abstract partial class OpenXmlPartContainer
     {
         private readonly PartDictionary _childrenPartsDictionary;
         private readonly LinkedList<ReferenceRelationship> _referenceRelationships = new LinkedList<ReferenceRelationship>();
 
-        private IFeatureCollection? _features;
+#pragma warning disable SA1401 // Fields should be private
+        private protected IFeatureCollection? _features;
+#pragma warning restore SA1401 // Fields should be private
 
         /// <summary>
         /// Initializes OpenXmlPartContainer.
@@ -1931,9 +1933,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 targetPart.OpenXmlPackage == InternalOpenXmlPackage;
         }
 
-        private protected virtual IFeatureCollection CreateFeatures()
-            => new FeatureCollection(FeatureCollection.Default);
-
         /// <summary>
         /// Gets the features associated with this part.
         /// </summary>
@@ -1943,11 +1942,47 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (_features is null)
                 {
-                    _features = CreateFeatures();
-                    _features.Set(new AnnotationsFeature());
+                    _features = new FeatureCollection(new PartContainerFeatureCollection());
                 }
 
                 return _features;
+            }
+        }
+
+        private protected sealed partial class PartContainerFeatureCollection : IFeatureCollection
+        {
+            private readonly IFeatureCollection? _other;
+
+            public bool IsReadOnly => true;
+
+            public int Revision => 0;
+
+            public PartContainerFeatureCollection(IFeatureCollection? other = null)
+            {
+                _other = other;
+            }
+
+            [KnownFeature(typeof(AnnotationsFeature))]
+            private partial T? GetInternal<T>();
+
+            public TFeature? Get<TFeature>()
+            {
+                if (GetInternal<TFeature>() is TFeature feature)
+                {
+                    return feature;
+                }
+
+                if (_other is not null && _other.Get<TFeature>() is TFeature other)
+                {
+                    return other;
+                }
+
+                return FeatureCollection.Default.Get<TFeature>();
+            }
+
+            public void Set<TFeature>(TFeature? instance)
+            {
+                throw new NotImplementedException();
             }
         }
     }
