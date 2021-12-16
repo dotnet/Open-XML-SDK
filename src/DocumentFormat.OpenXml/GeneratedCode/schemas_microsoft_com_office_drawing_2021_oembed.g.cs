@@ -13,7 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed
+namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed
 {
     /// <summary>
     /// <para>Defines the OEmbedShared Class.</para>
@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OfficeArtExtensionList" /> <c>&lt;aoe:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed.OfficeArtExtensionList" /> <c>&lt;aoe:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -99,7 +99,7 @@ namespace DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed
             base.ConfigureMetadata(builder);
             builder.SetSchema("aoe:oembedShared");
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed.OfficeArtExtensionList>();
             builder.AddElement<OEmbedShared>()
 .AddAttribute("srcUrl", a => a.SrcUrl, aBuilder =>
 {
@@ -111,7 +111,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -122,9 +122,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:aoe = http://schemas.microsoft.com/office/drawing/2021/oembed
         /// </remark>
-        public DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
