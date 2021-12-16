@@ -4,13 +4,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [2.14.x] - 2021-11-23
+## [2.15.0] - 2021-12-16
 
 ### Added
-- Added virtual method for content type checking in `OpenXmlPart` and fix issue for `model/gltf.binary` (#1069)
+- Added samples for strongly typed classes and Linq-to-XML in the `./samples` directory (#1101, #1087)
+- Shipping additional libraries for some additional functionality in `DocumentFormat.OpenXml.Features` and `DocumentFormat.OpenXml.Linq`. See documentation in repo for additional details.
+- Added extension method to support getting image part type (#1082)
+- Added generated classes and `FileFormatVersions.Microsoft365` for new subscription model types and constraints (#1097).
 
 ### Fixed
+- Fixed issue for changed mime type `model/gltf.binary` (#1069)
 - DocumentFormat.OpenXml.Office.Drawing.ShapeTree is now available only in Office 2010 and above, not 2007.
+- Correctly serialize `new CellValue(bool)` values (#1070)
+- Updated known namespaces to be generated via an in-repo source generator (#1092)
+- Some documentation issues around `FileFormatVersions` enum
+
+Thanks to the following for their contributions:
+
+@ThomasBarnekow
+@stevenhansen
+@JaimeStill
+@jnyrup
 
 ## [2.14.0] - 2021-10-28
 

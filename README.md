@@ -1,29 +1,10 @@
+<!-- omit in toc -->
 Open XML SDK
 ============
 
-[![NuGet](https://img.shields.io/nuget/v/DocumentFormat.OpenXml.svg)](https://www.nuget.org/packages/DocumentFormat.OpenXml)
 [![Downloads](https://img.shields.io/nuget/dt/DocumentFormat.OpenXml.svg)](https://www.nuget.org/packages/DocumentFormat.OpenXml)
 [![Build Status](https://office.visualstudio.com/OC/_apis/build/status/OpenXmlSdk/OfficeDev.Open-XML-SDK?branchName=main)](https://office.visualstudio.com/OC/_build/latest?definitionId=7420&branchName=main)
 [![Backend Status](https://ointprotocol.visualstudio.com/OInteropTools/_apis/build/status/OpenXML-Schemas?branchName=main)](https://ointprotocol.visualstudio.com/OInteropTools/_build/latest?definitionId=21&branchName=main)
-
-&nbsp;
->## Open XML SDK 2.5 Productivity Tool
->Now available for download at [Open XML SDK 2.5 Productivity Tool](https://github.com/OfficeDev/Open-XML-SDK/releases/tag/v2.5).
-
-&nbsp;
-
-> # Office 2021 Support Available!
-> [Version 2.14.0](https://www.nuget.org/packages/DocumentFormat.OpenXml/2.14.0) now provides support for Office 2021 types, including for:
-> - Label Information part support
-> - PowerPoint Comments support
-> - Excel Named Sheet Views support
-> - Excel Rich Data enhancements
-> - Word Comments Extensibilty part types
-> - Document Tasks support in Word
-> - Drawing Sketchy Shapes support   
->
-
-&nbsp;
 
 The Open XML SDK provides tools for working with Office Word, Excel, and PowerPoint documents. It supports scenarios such as:
 
@@ -33,22 +14,31 @@ The Open XML SDK provides tools for working with Office Word, Excel, and PowerPo
 - Splitting up (shredding) a file into multiple files, and combining multiple files into a single file.
 - Updating cached data and embedded spreadsheets for charts in Word/PowerPoint.
 
-Table of Contents
------------------
+<!-- omit in toc -->
+# Table of Contents
 
-- [Releases](#releases)
+- [Packages](#packages)
+  - [Daily Builds](#daily-builds)
+  - [Framework Support](#framework-support)
 - [If You Have Problems](#if-you-have-problems)
 - [Known Issues](#known-issues)
 - [Documentation](#documentation)
 - [Related tools](#related-tools)
 - [Code of Conduct](#code-of-conduct)
 
-Releases
---------------------------------
+# Packages
 
-The official release NuGet packages for Open XML SDK are [available on Nuget.org](https://www.nuget.org/packages/DocumentFormat.OpenXml).
+The official release NuGet packages for Open XML SDK are on NuGet.org:
 
-The NuGet package for the latest builds of the Open XML SDK is available as a custom feed on MyGet. You can trust this package source, since the custom feed is locked and only this project feeds into the source. Stable releases here will be mirrored onto NuGet and will be identical. You must set up a [NuGet.config](https://docs.microsoft.com/en-us/nuget/reference/nuget-config-file) file that looks similar to this:
+| Package | Download |
+|---------|----------|
+| DocumentFormat.OpenXml | [![NuGet](https://img.shields.io/nuget/v/DocumentFormat.OpenXml.svg)](https://www.nuget.org/packages/DocumentFormat.OpenXml) |
+| DocumentFormat.OpenXml.Linq | [![NuGet](https://img.shields.io/nuget/v/DocumentFormat.OpenXml.Linq.svg)](https://www.nuget.org/packages/DocumentFormat.OpenXml.Linq) |
+| DocumentFormat.OpenXml.Features | [![NuGet](https://img.shields.io/nuget/v/DocumentFormat.OpenXml.Features.svg)](https://www.nuget.org/packages/DocumentFormat.OpenXml.Features) |
+
+## Daily Builds
+
+The NuGet package for the latest builds of the Open XML SDK is available as a custom feed on an Azure blob. Stable releases here will be mirrored onto NuGet and will be identical. You must set up a [NuGet.config](https://docs.microsoft.com/en-us/nuget/reference/nuget-config-file) file that looks similar to this:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -60,6 +50,8 @@ The NuGet package for the latest builds of the Open XML SDK is available as a cu
 ```
 
 For latests changes, please see the [changelog](CHANGELOG.md)
+
+## Framework Support
 
 The package currently supports the following frameworks:
 
@@ -76,8 +68,7 @@ The package currently supports the following frameworks:
 
 For details on platform support, please see the docs at https://docs.microsoft.com/en-us/dotnet/standard/net-standard.
 
-If You Have Problems
---------------------
+# If You Have Problems
 
 If you want to report a problem (bug, behavior, build, distribution, feature request, etc...) with the SDK built by this repository, please feel free to post a new issue and someone will try to help.
 
@@ -86,22 +77,19 @@ If you have "how-to" questions please post to one of the following resources:
 - [Microsoft Q&A Forums](https://docs.microsoft.com/en-us/answers/topics/office-addins-dev.html) (tag: **office-addins-dev**)
 - [Stack Overflow](http://stackoverflow.com) (tags: **openxml** or **openxml-sdk**)
 
-Known Issues
-------------
+# Known Issues
 
 - On .NET Core and .NET 5, zip packages do not have a way to stream data. Thus, the working set can explode in certain situations. This is a [known issue](https://github.com/dotnet/runtime/issues/1544).
 - On .NET Core, targeting .NET Framework 4.5+, and .NET 5, `System.Uri` will not parse invalid links. This causes an exception. A workaround in v2.12.0+ of OpenXml SDK is to use `OpenSettings.RelationshipErrorRewriter` to rewrite them to something that can be parsed. A discussion is available [here](https://github.com/dotnet/runtime/issues/26084) to enable something more robust in `System.IO.Packaging`.
 - On .NET Framework, an `IsolatedStorageException` may be thrown under certain circumstances. This generally occurs when manipulating a large document in an environment with an AppDomain that does not have enough evidence. A sample with a workaround is available [here](/samples/IsolatedStorageExceptionWorkaround).
 
-Documentation
--------------
+# Documentation
 
 The functionality of the specific classes in this version of the Open XML SDK is similar to version 2.5, therefore the [Open XML SDK 2.5 for Office](http://msdn.microsoft.com/en-us/library/office/bb448854.aspx) documentation available on MSDN is still accurate.
 
 In addition to open sourcing of the SDK, Microsoft has opened up the conceptual documentation for public review / contributions.  A copy of the documentation is  available for you to edit and review [in GitHub](https://github.com/OfficeDev/office-content).
 
-Related tools
--------------
+# Related tools
 
 - **[Open XML SDK 2.5 Productivity Tool](https://github.com/OfficeDev/Open-XML-SDK/releases/tag/v2.5)**: The Productivity Tool provides viewing and code generation compatible with the Open XML SDK 2.5.
 - **[Open XML Powertools](https://github.com/EricWhiteDev/Open-Xml-PowerTools)**: This provides example code and guidance for implementing a wide range of Open XML scenarios.
@@ -113,7 +101,6 @@ Related tools
 - **[ShapeCrawler](https://github.com/ShapeCrawler/ShapeCrawler)**: This library provides a simplified object model on top of the OpenXml SDK to manipulate PowerPoint documents.
 - **[OOXML Validator](https://github.com/mikeebowen/ooxml-validator-vscode)**: VS Code extension to validate Office Open XML files.  Search "OOXML" in the VS Code extensions tab or download it from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=mikeebowen.ooxml-validator-vscode)
 
-Code of Conduct
----------------
+# Code of Conduct
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information, see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
