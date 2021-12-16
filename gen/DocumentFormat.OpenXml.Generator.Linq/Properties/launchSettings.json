@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DocumentFormat.OpenXml.Generator.Linq": {
+      "commandName": "Project",
+      "commandLineArgs": "D:\\source\\forks\\Open-XML-SDK\\src\\DocumentFormat.OpenXml.Linq\\GeneratedCode"
+    }
+  }
+}

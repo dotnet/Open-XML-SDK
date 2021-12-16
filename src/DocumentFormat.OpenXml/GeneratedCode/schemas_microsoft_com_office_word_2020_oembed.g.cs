@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Microsoft365.Word.OEmbed
+namespace DocumentFormat.OpenXml.Office.Word._2020.OEmbed
 {
     /// <summary>
     /// <para>Defines the OEmbed Class.</para>
