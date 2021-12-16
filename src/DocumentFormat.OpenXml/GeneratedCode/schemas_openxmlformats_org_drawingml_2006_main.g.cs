@@ -6,9 +6,6 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
-using DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed;
-using DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink;
-using DocumentFormat.OpenXml.Microsoft365.Word.OEmbed;
 using DocumentFormat.OpenXml.Office.Drawing;
 using DocumentFormat.OpenXml.Office.Drawing._2021.OEmbed;
 using DocumentFormat.OpenXml.Office.Drawing._2021.ScriptLink;
@@ -35159,114 +35156,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BlipExtension>(deep);
-||||||| 98c0a761
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<LinePropertiesExtensionList>(deep);
-=======
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<BlipExtensionList>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the BlipExtension Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is a:ext.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ImageProperties" /> <c>&lt;a14:imgProps></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.UseLocalDpi" /> <c>&lt;a14:useLocalDpi></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.PictureAttributionSourceURL" /> <c>&lt;a1611:picAttrSrcUrl></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared" /> <c>&lt;aoe:oembedShared></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.SVG.SVGBlip" /> <c>&lt;asvg:svgBlip></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.Word.OEmbed.OEmbed" /> <c>&lt;woe:oembed></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.Drawing.WebVideoProperty" /> <c>&lt;wp15:webVideoPr></c></description></item>
-    /// </list>
-    /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr("a:ext")]
-#pragma warning restore CS0618 // Type or member is obsolete
-    public partial class BlipExtension : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the BlipExtension class.
-        /// </summary>
-        public BlipExtension() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BlipExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public BlipExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BlipExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public BlipExtension(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BlipExtension class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public BlipExtension(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>URI</para>
-        /// <para>Represents the following attribute in the schema: uri</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr("uri")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public StringValue? Uri
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("a:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ImageProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.UseLocalDpi>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.PictureAttributionSourceURL>();
-            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.SVG.SVGBlip>();
-            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.Word.OEmbed.OEmbed>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.Drawing.WebVideoProperty>();
-            builder.AddElement<BlipExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ImageProperties), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.UseLocalDpi), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.Drawing.WebVideoProperty), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.SVG.SVGBlip), 1, 1, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.PictureAttributionSourceURL), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.Word.OEmbed.OEmbed), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared), 1, 1, version: FileFormatVersions.Microsoft365),
-                new AnyParticle(0, 1)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<BlipExtension>(deep);
->>>>>>> main
     }
 
     /// <summary>
