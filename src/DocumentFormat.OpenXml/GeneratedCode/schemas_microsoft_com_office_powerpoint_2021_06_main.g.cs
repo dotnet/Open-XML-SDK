@@ -15,7 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks
+namespace DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main
 {
     /// <summary>
     /// <para>Defines the TaskHistoryDetails Class.</para>
@@ -25,8 +25,8 @@ namespace DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList" /> <c>&lt;p216:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistory" /> <c>&lt;p216:history></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.ExtensionList" /> <c>&lt;p216:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskHistory" /> <c>&lt;p216:history></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -86,8 +86,8 @@ namespace DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks
             base.ConfigureMetadata(builder);
             builder.SetSchema("p216:taskHistoryDetails");
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistory>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskHistory>();
             builder.AddElement<TaskHistoryDetails>()
 .AddAttribute("id", a => a.Id, aBuilder =>
 {
@@ -96,8 +96,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistory), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskHistory), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -108,9 +108,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:p216 = http://schemas.microsoft.com/office/powerpoint/2021/06/main
         /// </remark>
-        public DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistory? TaskHistory
+        public DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskHistory? TaskHistory
         {
-            get => GetElement<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistory>();
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskHistory>();
             set => SetElement(value);
         }
 
@@ -121,9 +121,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:p216 = http://schemas.microsoft.com/office/powerpoint/2021/06/main
         /// </remark>
-        public DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -384,8 +384,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList" /> <c>&lt;p216:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.CommentAnchor" /> <c>&lt;p216:comment></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.ExtensionList" /> <c>&lt;p216:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.CommentAnchor" /> <c>&lt;p216:comment></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -429,12 +429,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema("p216:anchr");
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.CommentAnchor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.CommentAnchor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.CommentAnchor), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.CommentAnchor), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -445,9 +445,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:p216 = http://schemas.microsoft.com/office/powerpoint/2021/06/main
         /// </remark>
-        public DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.CommentAnchor? CommentAnchor
+        public DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.CommentAnchor? CommentAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.CommentAnchor>();
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.CommentAnchor>();
             set => SetElement(value);
         }
 
@@ -458,9 +458,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:p216 = http://schemas.microsoft.com/office/powerpoint/2021/06/main
         /// </remark>
-        public DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -842,19 +842,19 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AddEmpty" /> <c>&lt;p216:add></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.UnasgnAllEmpty" /> <c>&lt;p216:unasgnAll></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList" /> <c>&lt;p216:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskAnchor" /> <c>&lt;p216:anchr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser" /> <c>&lt;p216:atrbtn></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AsgnTaskAssignUnassignUser" /> <c>&lt;p216:asgn></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.UnAsgnTaskAssignUnassignUser" /> <c>&lt;p216:unAsgn></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskPriorityRecord" /> <c>&lt;p216:pri></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskProgressEventInfo" /> <c>&lt;p216:pcntCmplt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskScheduleEventInfo" /> <c>&lt;p216:date></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskTitleEventInfo" /> <c>&lt;p216:title></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskUndo" /> <c>&lt;p216:undo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskUnknownRecord" /> <c>&lt;p216:unknown></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.AddEmpty" /> <c>&lt;p216:add></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.UnasgnAllEmpty" /> <c>&lt;p216:unasgnAll></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.ExtensionList" /> <c>&lt;p216:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskAnchor" /> <c>&lt;p216:anchr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.AtrbtnTaskAssignUnassignUser" /> <c>&lt;p216:atrbtn></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.AsgnTaskAssignUnassignUser" /> <c>&lt;p216:asgn></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.UnAsgnTaskAssignUnassignUser" /> <c>&lt;p216:unAsgn></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskPriorityRecord" /> <c>&lt;p216:pri></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskProgressEventInfo" /> <c>&lt;p216:pcntCmplt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskScheduleEventInfo" /> <c>&lt;p216:date></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskTitleEventInfo" /> <c>&lt;p216:title></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskUndo" /> <c>&lt;p216:undo></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskUnknownRecord" /> <c>&lt;p216:unknown></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -930,19 +930,19 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema("p216:event");
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AddEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.UnasgnAllEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskAnchor>();
-            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser>();
-            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AsgnTaskAssignUnassignUser>();
-            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.UnAsgnTaskAssignUnassignUser>();
-            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskPriorityRecord>();
-            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskProgressEventInfo>();
-            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskScheduleEventInfo>();
-            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskTitleEventInfo>();
-            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskUndo>();
-            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskUnknownRecord>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.AddEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.UnasgnAllEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskAnchor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.AtrbtnTaskAssignUnassignUser>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.AsgnTaskAssignUnassignUser>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.UnAsgnTaskAssignUnassignUser>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskPriorityRecord>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskProgressEventInfo>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskScheduleEventInfo>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskTitleEventInfo>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskUndo>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskUnknownRecord>();
             builder.AddElement<TaskHistoryEvent>()
 .AddAttribute("time", a => a.Time, aBuilder =>
 {
@@ -955,22 +955,22 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskAnchor), 0, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.AtrbtnTaskAssignUnassignUser), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskAnchor), 0, 1, version: FileFormatVersions.Microsoft365),
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AsgnTaskAssignUnassignUser), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.UnAsgnTaskAssignUnassignUser), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AddEmpty), 0, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskTitleEventInfo), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskScheduleEventInfo), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskProgressEventInfo), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskPriorityRecord), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.UnasgnAllEmpty), 0, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskUndo), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskUnknownRecord), 1, 1, version: FileFormatVersions.Microsoft365)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.AsgnTaskAssignUnassignUser), 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.UnAsgnTaskAssignUnassignUser), 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.AddEmpty), 0, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskTitleEventInfo), 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskScheduleEventInfo), 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskProgressEventInfo), 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskPriorityRecord), 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.UnasgnAllEmpty), 0, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskUndo), 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskUnknownRecord), 1, 1, version: FileFormatVersions.Microsoft365)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -981,9 +981,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:p216 = http://schemas.microsoft.com/office/powerpoint/2021/06/main
         /// </remark>
-        public DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser? AtrbtnTaskAssignUnassignUser
+        public DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.AtrbtnTaskAssignUnassignUser? AtrbtnTaskAssignUnassignUser
         {
-            get => GetElement<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser>();
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.AtrbtnTaskAssignUnassignUser>();
             set => SetElement(value);
         }
 
@@ -994,9 +994,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:p216 = http://schemas.microsoft.com/office/powerpoint/2021/06/main
         /// </remark>
-        public DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskAnchor? TaskAnchor
+        public DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskAnchor? TaskAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskAnchor>();
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskAnchor>();
             set => SetElement(value);
         }
 
@@ -1012,7 +1012,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryEvent" /> <c>&lt;p216:event></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskHistoryEvent" /> <c>&lt;p216:event></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1056,10 +1056,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema("p216:history");
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryEvent>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskHistoryEvent>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryEvent), 0, 0, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskHistoryEvent), 0, 0, version: FileFormatVersions.Microsoft365)
             };
         }
 

@@ -1513,10 +1513,10 @@
        "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.PictureAttributionSourceURL"
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Microsoft365.Word.OEmbed.OEmbed"
+       "ElementType": "DocumentFormat.OpenXml.Office.Word._2020.OEmbed.OEmbed"
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared"
+       "ElementType": "DocumentFormat.OpenXml.Office.Drawing._2021.OEmbed.OEmbedShared"
       },
       {
        "MinOccurs": 0,
@@ -15414,7 +15414,7 @@
        "ElementType": "DocumentFormat.OpenXml.Office2021.Drawing.DocumentClassification.ClassificationOutcome"
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.ScriptLink"
+       "ElementType": "DocumentFormat.OpenXml.Office.Drawing._2021.ScriptLink.ScriptLink"
       },
       {
        "MinOccurs": 0,
@@ -31282,245 +31282,6 @@
   ]
  },
  {
-  "Key": "DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OEmbedShared",
-  "Value": [
-   {
-    "Key": "Microsoft365",
-    "Value": {
-     "ChildrenParticles": [
-      {
-       "ElementType": "DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OfficeArtExtensionList",
-       "MinOccurs": 0
-      }
-     ],
-     "ParticleType": "Sequence"
-    }
-   }
-  ]
- },
- {
-  "Key": "DocumentFormat.OpenXml.Microsoft365.Drawing.OEmbed.OfficeArtExtensionList",
-  "Value": [
-   {
-    "Key": "Microsoft365",
-    "Value": {
-     "ChildrenParticles": [
-      {
-       "ChildrenParticles": [
-        {
-         "ChildrenParticles": [
-          {
-           "ElementType": "DocumentFormat.OpenXml.Drawing.Extension",
-           "MaxOccurs": 0,
-           "MinOccurs": 0
-          }
-         ],
-         "ParticleType": "Sequence"
-        }
-       ],
-       "ParticleType": "Group"
-      }
-     ],
-     "ParticleType": "Sequence"
-    }
-   }
-  ]
- },
- {
-  "Key": "DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.OfficeArtExtensionList",
-  "Value": [
-   {
-    "Key": "Microsoft365",
-    "Value": {
-     "ChildrenParticles": [
-      {
-       "ChildrenParticles": [
-        {
-         "ChildrenParticles": [
-          {
-           "ElementType": "DocumentFormat.OpenXml.Drawing.Extension",
-           "MaxOccurs": 0,
-           "MinOccurs": 0
-          }
-         ],
-         "ParticleType": "Sequence"
-        }
-       ],
-       "ParticleType": "Group"
-      }
-     ],
-     "ParticleType": "Sequence"
-    }
-   }
-  ]
- },
- {
-  "Key": "DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.ScriptLink",
-  "Value": [
-   {
-    "Key": "Microsoft365",
-    "Value": {
-     "ChildrenParticles": [
-      {
-       "ElementType": "DocumentFormat.OpenXml.Microsoft365.Drawing.ScriptLink.OfficeArtExtensionList",
-       "MinOccurs": 0
-      }
-     ],
-     "ParticleType": "Sequence"
-    }
-   }
-  ]
- },
- {
-  "Key": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList",
-  "Value": [
-   {
-    "Key": "Microsoft365",
-    "Value": {
-     "ChildrenParticles": [
-      {
-       "ChildrenParticles": [
-        {
-         "ChildrenParticles": [
-          {
-           "ElementType": "DocumentFormat.OpenXml.Presentation.Extension",
-           "MaxOccurs": 0,
-           "MinOccurs": 0
-          }
-         ],
-         "ParticleType": "Sequence"
-        }
-       ],
-       "MinOccurs": 0,
-       "ParticleType": "Group"
-      }
-     ],
-     "ParticleType": "Sequence"
-    }
-   }
-  ]
- },
- {
-  "Key": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskAnchor",
-  "Value": [
-   {
-    "Key": "Microsoft365",
-    "Value": {
-     "ChildrenParticles": [
-      {
-       "ElementType": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.CommentAnchor"
-      },
-      {
-       "ElementType": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList",
-       "MinOccurs": 0
-      }
-     ],
-     "ParticleType": "Sequence"
-    }
-   }
-  ]
- },
- {
-  "Key": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistory",
-  "Value": [
-   {
-    "Key": "Microsoft365",
-    "Value": {
-     "ChildrenParticles": [
-      {
-       "ElementType": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryEvent",
-       "MaxOccurs": 0,
-       "MinOccurs": 0
-      }
-     ],
-     "ParticleType": "Sequence"
-    }
-   }
-  ]
- },
- {
-  "Key": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryDetails",
-  "Value": [
-   {
-    "Key": "Microsoft365",
-    "Value": {
-     "ChildrenParticles": [
-      {
-       "ElementType": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistory"
-      },
-      {
-       "ElementType": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList",
-       "MinOccurs": 0
-      }
-     ],
-     "ParticleType": "Sequence"
-    }
-   }
-  ]
- },
- {
-  "Key": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskHistoryEvent",
-  "Value": [
-   {
-    "Key": "Microsoft365",
-    "Value": {
-     "ChildrenParticles": [
-      {
-       "ElementType": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser"
-      },
-      {
-       "ElementType": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskAnchor",
-       "MinOccurs": 0
-      },
-      {
-       "ChildrenParticles": [
-        {
-         "ElementType": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AsgnTaskAssignUnassignUser"
-        },
-        {
-         "ElementType": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.UnAsgnTaskAssignUnassignUser"
-        },
-        {
-         "ElementType": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.AddEmpty",
-         "MinOccurs": 0
-        },
-        {
-         "ElementType": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskTitleEventInfo"
-        },
-        {
-         "ElementType": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskScheduleEventInfo"
-        },
-        {
-         "ElementType": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskProgressEventInfo"
-        },
-        {
-         "ElementType": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskPriorityRecord"
-        },
-        {
-         "ElementType": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.UnasgnAllEmpty",
-         "MinOccurs": 0
-        },
-        {
-         "ElementType": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskUndo"
-        },
-        {
-         "ElementType": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.TaskUnknownRecord"
-        }
-       ],
-       "MinOccurs": 0,
-       "ParticleType": "Choice"
-      },
-      {
-       "ElementType": "DocumentFormat.OpenXml.Microsoft365.PowerPoint.Tasks.ExtensionList",
-       "MinOccurs": 0
-      }
-     ],
-     "ParticleType": "Sequence"
-    }
-   }
-  ]
- },
- {
   "Key": "DocumentFormat.OpenXml.Office.ActiveX.ActiveXControlData",
   "Value": [
    {
@@ -33199,6 +32960,96 @@
   ]
  },
  {
+  "Key": "DocumentFormat.OpenXml.Office.Drawing._2021.OEmbed.OEmbedShared",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Drawing._2021.OEmbed.OfficeArtExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.Drawing._2021.OEmbed.OfficeArtExtensionList",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ChildrenParticles": [
+        {
+         "ChildrenParticles": [
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.Extension",
+           "MaxOccurs": 0,
+           "MinOccurs": 0
+          }
+         ],
+         "ParticleType": "Sequence"
+        }
+       ],
+       "ParticleType": "Group"
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.Drawing._2021.ScriptLink.OfficeArtExtensionList",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ChildrenParticles": [
+        {
+         "ChildrenParticles": [
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.Extension",
+           "MaxOccurs": 0,
+           "MinOccurs": 0
+          }
+         ],
+         "ParticleType": "Sequence"
+        }
+       ],
+       "ParticleType": "Group"
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.Drawing._2021.ScriptLink.ScriptLink",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Drawing._2021.ScriptLink.OfficeArtExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
   "Key": "DocumentFormat.OpenXml.Office.Excel.ColumnSortMap",
   "Value": [
    {
@@ -33498,6 +33349,155 @@
       {
        "ElementType": "DocumentFormat.OpenXml.Office.LongProperties.LongProperty",
        "MaxOccurs": 0,
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.ExtensionList",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ChildrenParticles": [
+        {
+         "ChildrenParticles": [
+          {
+           "ElementType": "DocumentFormat.OpenXml.Presentation.Extension",
+           "MaxOccurs": 0,
+           "MinOccurs": 0
+          }
+         ],
+         "ParticleType": "Sequence"
+        }
+       ],
+       "MinOccurs": 0,
+       "ParticleType": "Group"
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskAnchor",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.CommentAnchor"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskHistory",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskHistoryEvent",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskHistoryDetails",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskHistory"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskHistoryEvent",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.AtrbtnTaskAssignUnassignUser"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskAnchor",
+       "MinOccurs": 0
+      },
+      {
+       "ChildrenParticles": [
+        {
+         "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.AsgnTaskAssignUnassignUser"
+        },
+        {
+         "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.UnAsgnTaskAssignUnassignUser"
+        },
+        {
+         "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.AddEmpty",
+         "MinOccurs": 0
+        },
+        {
+         "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskTitleEventInfo"
+        },
+        {
+         "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskScheduleEventInfo"
+        },
+        {
+         "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskProgressEventInfo"
+        },
+        {
+         "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskPriorityRecord"
+        },
+        {
+         "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.UnasgnAllEmpty",
+         "MinOccurs": 0
+        },
+        {
+         "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskUndo"
+        },
+        {
+         "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.TaskUnknownRecord"
+        }
+       ],
+       "MinOccurs": 0,
+       "ParticleType": "Choice"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint._2021._06.Main.ExtensionList",
        "MinOccurs": 0
       }
      ],
