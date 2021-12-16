@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <NoWarn>$(NoWarn);CA1303</NoWarn>
+  </PropertyGroup>
+
+  <Choose>
+    <When Condition=" '$(TargetFramework)' == 'net46' ">
+      <ItemGroup>
+        <Compile Remove="Program.Empty.cs" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Compile Remove="Program.cs" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+
+</Project>

@@ -1,0 +1,7 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\src\DocumentFormat.OpenXml.Features\DocumentFormat.OpenXml.Features.csproj" />
+	</ItemGroup>
+
+</Project>
