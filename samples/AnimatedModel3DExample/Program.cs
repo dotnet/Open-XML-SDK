@@ -49,7 +49,6 @@ namespace AnimatedModel3DExample
             }
 
             // mc:AternateContent & p:timing
-            // TODO: report typo on oi-29500 p1559 extList should be extLsts
             // Open the presentation document
             using PresentationDocument presentationDocument = PresentationDocument.Open(pptxPath, true);
 
