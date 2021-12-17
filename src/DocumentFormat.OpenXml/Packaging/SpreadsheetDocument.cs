@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Packaging;
 using System.Reflection;
+using System.Xml;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
@@ -119,7 +120,15 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "path" is null reference.</exception>
         public static SpreadsheetDocument Create(string path, SpreadsheetDocumentType type)
         {
-            return Create(path, type, true);
+            SpreadsheetDocument smlDoc = Create(path, type, true);
+            CoreFilePropertiesPart cfpp = smlDoc.AddCoreFilePropertiesPart();
+            using (XmlTextWriter writer = new XmlTextWriter(cfpp.GetStream(FileMode.Create), System.Text.Encoding.UTF8))
+            {
+                writer.WriteRaw("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<cp:coreProperties xmlns:cp=\"https://schemas.openxmlformats.org/package/2006/metadata/core-properties\"></cp:coreProperties>");
+                writer.Flush();
+            }
+
+            return smlDoc;
         }
 
         /// <summary>
