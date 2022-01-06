@@ -190,7 +190,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        internal ElementMetadata Metadata => ElementMetadata.Create(this);
+        internal ElementMetadata Metadata => Features.GetRequired<ElementMetadata>();
 
         /// <summary>
         /// Gets an array of fixed attributes which will be parsed out if they are not yet parsed. If parsing is not requried, please
@@ -2609,6 +2609,7 @@ namespace DocumentFormat.OpenXml
                 => _owner.GetPart()?.Features;
 
             [KnownFeature(typeof(AnnotationsFeature))]
+            [KnownFeature(typeof(ElementMetadata), Factory = nameof(CreateMetadata))]
             private partial TFeature? GetInternal<TFeature>();
 
             public TFeature? Get<TFeature>()
@@ -2618,15 +2619,17 @@ namespace DocumentFormat.OpenXml
                     return result;
                 }
 
-                var defaultFeatures = GetPartFeatures();
+                var partFeatures = GetPartFeatures();
 
-                if (defaultFeatures is null)
+                if (partFeatures is not null && partFeatures.Get<TFeature>() is TFeature fromPart)
                 {
-                    return default;
+                    return fromPart;
                 }
 
-                return defaultFeatures.Get<TFeature>();
+                return DefaultFeatures.Shared.Get<TFeature>();
             }
+
+            private ElementMetadata CreateMetadata() => this.GetRequired<ElementMetadataProviderFeature>().GetMetadata(_owner);
 
             public void Set<TFeature>(TFeature? instance)
             {
