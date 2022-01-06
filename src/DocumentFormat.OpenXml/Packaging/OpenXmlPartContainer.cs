@@ -1963,22 +1963,9 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             [KnownFeature(typeof(AnnotationsFeature))]
-            private partial T? GetInternal<T>();
-
-            public TFeature? Get<TFeature>()
-            {
-                if (GetInternal<TFeature>() is TFeature feature)
-                {
-                    return feature;
-                }
-
-                if (_other is not null && _other.Get<TFeature>() is TFeature other)
-                {
-                    return other;
-                }
-
-                return FeatureCollection.Default.Get<TFeature>();
-            }
+            [DelegatedFeature(nameof(_other))]
+            [DelegatedFeature(nameof(FeatureCollection.Default), typeof(FeatureCollection))]
+            public partial TFeature? Get<TFeature>();
 
             public void Set<TFeature>(TFeature? instance)
             {

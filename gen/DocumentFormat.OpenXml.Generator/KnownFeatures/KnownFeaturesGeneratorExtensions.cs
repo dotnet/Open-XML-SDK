@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Generator;
 
 public static class KnownFeaturesGeneratorExtensions
 {
-    public static string Build(this IMethodSymbol method, IEnumerable<(INamedTypeSymbol Contract, ISymbol Service)> features, bool isThreadSafe)
+    public static string Build(this IMethodSymbol method, IEnumerable<ISymbol> delegatedMethods, IEnumerable<(INamedTypeSymbol Contract, ISymbol Service)> features, bool isThreadSafe)
     {
         var sb = new StringWriter();
         var indented = new IndentedTextWriter(sb);
@@ -30,7 +30,7 @@ public static class KnownFeaturesGeneratorExtensions
 
         indented.WriteLine();
 
-        WriteContainingClass(indented, GetNestedClasses(method.ContainingType), method, features, isThreadSafe);
+        WriteContainingClass(indented, GetNestedClasses(method.ContainingType), method, delegatedMethods, features, isThreadSafe);
 
         return sb.ToString();
     }
@@ -48,11 +48,11 @@ public static class KnownFeaturesGeneratorExtensions
         return stack;
     }
 
-    private static void WriteContainingClass(IndentedTextWriter indented, Stack<INamedTypeSymbol> types, IMethodSymbol method, IEnumerable<(INamedTypeSymbol Contract, ISymbol Service)> features, bool isThreadSafe)
+    private static void WriteContainingClass(IndentedTextWriter indented, Stack<INamedTypeSymbol> types, IMethodSymbol method, IEnumerable<ISymbol> delegatedMethods, IEnumerable<(INamedTypeSymbol Contract, ISymbol Service)> features, bool isThreadSafe)
     {
         if (types.Count == 0)
         {
-            WriteInjectedCode(indented, method, features, isThreadSafe);
+            WriteInjectedCode(indented, method, delegatedMethods, features, isThreadSafe);
         }
         else
         {
@@ -63,12 +63,12 @@ public static class KnownFeaturesGeneratorExtensions
 
             using (indented.AddBlock())
             {
-                WriteContainingClass(indented, types, method, features, isThreadSafe);
+                WriteContainingClass(indented, types, method, delegatedMethods, features, isThreadSafe);
             }
         }
     }
 
-    private static void WriteInjectedCode(IndentedTextWriter indented, IMethodSymbol method, IEnumerable<(INamedTypeSymbol Contract, ISymbol Service)> features, bool isThreadSafe)
+    private static void WriteInjectedCode(IndentedTextWriter indented, IMethodSymbol method, IEnumerable<ISymbol> delegatedMethods, IEnumerable<(INamedTypeSymbol Contract, ISymbol Service)> features, bool isThreadSafe)
     {
         foreach (var (contract, service) in features)
         {
@@ -112,6 +112,44 @@ public static class KnownFeaturesGeneratorExtensions
                 }
 
                 indented.WriteLineNoTabs();
+            }
+
+            var count = 1;
+            foreach (var delegated in delegatedMethods)
+            {
+                indented.Write("if (");
+
+                if (!SymbolEqualityComparer.Default.Equals(delegated.ContainingType, method.ContainingType))
+                {
+                    indented.WriteSymbol(delegated.ContainingType);
+                    indented.Write(".");
+                }
+
+                indented.Write(delegated.Name);
+
+                if (delegated.Kind == SymbolKind.Method)
+                {
+                    indented.Write("()");
+                }
+
+                indented.Write(" is global::DocumentFormat.OpenXml.Features.IFeatureCollection other");
+                indented.Write(count);
+                indented.Write(" && other");
+                indented.Write(count);
+                indented.Write(".Get<T>() is T result");
+                indented.Write(count);
+                indented.WriteLine(")");
+
+                using (indented.AddBlock())
+                {
+                    indented.Write("return result");
+                    indented.Write(count);
+                    indented.WriteLine(";");
+                }
+
+                indented.WriteLineNoTabs();
+
+                count++;
             }
 
             indented.WriteLine("return default;");

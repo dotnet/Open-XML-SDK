@@ -2605,29 +2605,13 @@ namespace DocumentFormat.OpenXml
 
             public int Revision => GetPartFeatures()?.Revision ?? 0;
 
-            public IFeatureCollection? GetPartFeatures()
-                => _owner.GetPart()?.Features;
-
             [KnownFeature(typeof(AnnotationsFeature))]
             [KnownFeature(typeof(ElementMetadata), Factory = nameof(CreateMetadata))]
-            private partial TFeature? GetInternal<TFeature>();
+            [DelegatedFeature(nameof(GetPartFeatures))]
+            [DelegatedFeature(nameof(FeatureCollection.Default), typeof(FeatureCollection))]
+            public partial TFeature? Get<TFeature>();
 
-            public TFeature? Get<TFeature>()
-            {
-                if (GetInternal<TFeature>() is TFeature result)
-                {
-                    return result;
-                }
-
-                var partFeatures = GetPartFeatures();
-
-                if (partFeatures is not null && partFeatures.Get<TFeature>() is TFeature fromPart)
-                {
-                    return fromPart;
-                }
-
-                return DefaultFeatures.Shared.Get<TFeature>();
-            }
+            public IFeatureCollection? GetPartFeatures() => _owner.GetPart()?.Features;
 
             private ElementMetadata CreateMetadata() => this.GetRequired<ElementMetadataProviderFeature>().GetMetadata(_owner);
 
