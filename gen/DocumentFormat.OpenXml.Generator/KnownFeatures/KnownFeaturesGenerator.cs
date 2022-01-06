@@ -4,9 +4,11 @@
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace DocumentFormat.OpenXml.Generator;
 
@@ -15,6 +17,7 @@ public class KnownFeaturesGenerator : ISourceGenerator
 {
     private static readonly DiagnosticDescriptor DuplicateAttribute = new("OOX1000", "Duplicate known features", "Service {0} is already registered for {1}", "KnownFeatures", DiagnosticSeverity.Error, isEnabledByDefault: true);
     private static readonly DiagnosticDescriptor SingleContractForFeature = new("OOX1001", "Duplicate contracts registered", "Can only register a single contract for {0}", "KnownFeatures", DiagnosticSeverity.Error, isEnabledByDefault: true);
+    private static readonly DiagnosticDescriptor InvalidFactoryMethod = new("OOX1002", "Invalid factory method", "Method {0} must have no parameters and return {1} type", "KnownFeatures", DiagnosticSeverity.Error, isEnabledByDefault: true);
 
     public void Execute(GeneratorExecutionContext context)
     {
@@ -38,7 +41,7 @@ public class KnownFeaturesGenerator : ISourceGenerator
 
             if (model.GetDeclaredSymbol(node) is IMethodSymbol method)
             {
-                var features = new HashSet<(INamedTypeSymbol Contract, INamedTypeSymbol Service)>();
+                var features = new HashSet<(INamedTypeSymbol Contract, ISymbol Service)>();
                 var isThreadSafe = false;
 
                 foreach (var attribute in method.GetAttributes())
@@ -51,7 +54,23 @@ public class KnownFeaturesGenerator : ISourceGenerator
                     {
                         if (attribute.ConstructorArguments[0].Value is INamedTypeSymbol contract)
                         {
-                            var service = attribute.ConstructorArguments[1].Value as INamedTypeSymbol ?? contract;
+                            var service = attribute.ConstructorArguments[1].Value as ISymbol ?? contract;
+
+                            if (attribute.NamedArguments.FirstOrDefault(n => string.Equals("Factory", n.Key, StringComparison.Ordinal)).Value.Value is string methodName)
+                            {
+                                var members = method.ContainingType.GetMembers(methodName);
+
+                                if (members.Length == 1 && members[0] is IMethodSymbol factory && factory.Parameters.Length == 0 && SymbolEqualityComparer.Default.Equals(contract, factory.ReturnType))
+                                {
+                                    service = factory;
+                                }
+                                else
+                                {
+                                    var location = attribute.ApplicationSyntaxReference?.GetSyntax(context.CancellationToken)?.GetLocation();
+                                    context.ReportDiagnostic(Diagnostic.Create(InvalidFactoryMethod, location, methodName, contract.ToDisplayString()));
+                                    continue;
+                                }
+                            }
 
                             if (!contracts.Add(contract))
                             {
@@ -93,16 +112,18 @@ public class KnownFeaturesGenerator : ISourceGenerator
 
             const string Source = @"namespace DocumentFormat.OpenXml;
 
-[global::System.Diagnostics.Conditional(""GENERATOR"")]
+[global::System.Diagnostics.Conditional(""OPENXMLGENERATOR"")]
 [global::System.AttributeUsage(global::System.AttributeTargets.Method, AllowMultiple = true)]
 internal sealed class KnownFeatureAttribute : global::System.Attribute
 {
     public KnownFeatureAttribute(global::System.Type contract, global::System.Type? service = null)
     {
     }
+
+    public string? Factory { get; set; }
 }
 
-[global::System.Diagnostics.Conditional(""GENERATOR"")]
+[global::System.Diagnostics.Conditional(""OPENXMLGENERATOR"")]
 [global::System.AttributeUsage(global::System.AttributeTargets.Method)]
 internal sealed class ThreadSafeAttribute : global::System.Attribute
 {

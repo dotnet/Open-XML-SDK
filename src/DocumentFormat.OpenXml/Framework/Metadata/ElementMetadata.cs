@@ -4,7 +4,6 @@
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -14,12 +13,6 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
     internal class ElementMetadata
     {
         public static readonly ElementMetadata None = new(typeof(OpenXmlElement));
-
-        private static readonly ConcurrentDictionary<Type, ElementMetadata> _lookup = new ConcurrentDictionary<Type, ElementMetadata>(new[]
-        {
-            new KeyValuePair<Type, ElementMetadata>(typeof(OpenXmlUnknownElement), new ElementMetadata(typeof(OpenXmlUnknownElement))),
-            new KeyValuePair<Type, ElementMetadata>(typeof(OpenXmlMiscNode), new ElementMetadata(typeof(OpenXmlMiscNode))),
-        });
 
         private readonly Lazy<ElementFactoryCollection>? _children;
 
@@ -43,7 +36,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             _children = lookup;
         }
 
-        private ElementMetadata(Type type)
+        internal ElementMetadata(Type type)
         {
             Type = type;
         }
@@ -63,36 +56,6 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
         public CompiledParticle? Particle { get; }
 
         public OpenXmlQualifiedName QName { get; }
-
-        public static ElementMetadata Create(OpenXmlElement element)
-        {
-            var type = element.GetType();
-
-            // Use TryGetValue first for the common case of already existing types to limit number of allocations
-            if (_lookup.TryGetValue(type, out var result))
-            {
-                return result;
-            }
-
-            var metadata = CreateInternal(element);
-
-            _lookup.TryAdd(type, metadata);
-
-            return metadata;
-        }
-
-        public static ElementMetadata Create<TElement>()
-            where TElement : OpenXmlElement, new()
-            => _lookup.GetOrAdd(typeof(TElement), t => CreateInternal(new TElement()));
-
-        private static ElementMetadata CreateInternal(OpenXmlElement element)
-        {
-            var builder = new Builder(element.GetType());
-
-            element.ConfigureMetadata(builder);
-
-            return builder.Build();
-        }
 
         public class Builder : ValidatorBuilder
         {

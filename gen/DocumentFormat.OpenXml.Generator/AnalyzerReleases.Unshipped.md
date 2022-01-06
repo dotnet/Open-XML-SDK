@@ -7,3 +7,4 @@ Rule ID | Category | Severity | Notes
 --------|----------|----------|-------
 OOX1000 | KnownFeatures | Error | KnownFeaturesGenerator
 OOX1001 | KnownFeatures | Error | KnownFeaturesGenerator
+OOX1002 | KnownFeatures | Error | KnownFeaturesGenerator

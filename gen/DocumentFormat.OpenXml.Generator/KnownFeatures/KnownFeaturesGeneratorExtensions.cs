@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Generator;
 
 public static class KnownFeaturesGeneratorExtensions
 {
-    public static string Build(this IMethodSymbol method, IEnumerable<(INamedTypeSymbol Contract, INamedTypeSymbol Service)> features, bool isThreadSafe)
+    public static string Build(this IMethodSymbol method, IEnumerable<(INamedTypeSymbol Contract, ISymbol Service)> features, bool isThreadSafe)
     {
         var sb = new StringWriter();
         var indented = new IndentedTextWriter(sb);
@@ -48,7 +48,7 @@ public static class KnownFeaturesGeneratorExtensions
         return stack;
     }
 
-    private static void WriteContainingClass(IndentedTextWriter indented, Stack<INamedTypeSymbol> types, IMethodSymbol method, IEnumerable<(INamedTypeSymbol Contract, INamedTypeSymbol Service)> features, bool isThreadSafe)
+    private static void WriteContainingClass(IndentedTextWriter indented, Stack<INamedTypeSymbol> types, IMethodSymbol method, IEnumerable<(INamedTypeSymbol Contract, ISymbol Service)> features, bool isThreadSafe)
     {
         if (types.Count == 0)
         {
@@ -68,7 +68,7 @@ public static class KnownFeaturesGeneratorExtensions
         }
     }
 
-    private static void WriteInjectedCode(IndentedTextWriter indented, IMethodSymbol method, IEnumerable<(INamedTypeSymbol Contract, INamedTypeSymbol Service)> features, bool isThreadSafe)
+    private static void WriteInjectedCode(IndentedTextWriter indented, IMethodSymbol method, IEnumerable<(INamedTypeSymbol Contract, ISymbol Service)> features, bool isThreadSafe)
     {
         foreach (var (contract, service) in features)
         {
@@ -101,7 +101,7 @@ public static class KnownFeaturesGeneratorExtensions
                     indented.WriteLineNoTabs();
                     indented.Write("return (T)");
 
-                    if (SymbolEqualityComparer.Default.Equals(service, contract))
+                    if (contract.TypeKind != TypeKind.Interface)
                     {
                         indented.Write("(object)");
                     }
@@ -118,7 +118,7 @@ public static class KnownFeaturesGeneratorExtensions
         }
     }
 
-    private static void WriteFeatureCreation(IndentedTextWriter indented, INamedTypeSymbol service, bool isThreadSafe)
+    private static void WriteFeatureCreation(IndentedTextWriter indented, ISymbol service, bool isThreadSafe)
     {
         indented.Write("if (");
         indented.Write("_");
@@ -131,18 +131,33 @@ public static class KnownFeaturesGeneratorExtensions
             {
                 indented.Write("Interlocked.CompareExchange(ref _");
                 indented.Write(service.Name);
-                indented.Write(", new ");
-                indented.WriteSymbol(service);
-                indented.WriteLine("(), null);");
+                indented.Write(", ");
+                indented.CreateInstance(service);
+                indented.WriteLine(", null);");
             }
             else
             {
                 indented.Write("_");
                 indented.Write(service.Name);
-                indented.Write(" = new ");
-                indented.WriteSymbol(service);
-                indented.WriteLine("();");
+                indented.Write(" = ");
+                indented.CreateInstance(service);
+                indented.WriteLine(";");
             }
+        }
+    }
+
+    private static void CreateInstance(this TextWriter writer, ISymbol symbol)
+    {
+        if (symbol is IMethodSymbol method)
+        {
+            writer.Write(method.Name);
+            writer.Write("()");
+        }
+        else if (symbol is INamedTypeSymbol type)
+        {
+            writer.Write("new ");
+            writer.WriteSymbol(type);
+            writer.Write("()");
         }
     }
 

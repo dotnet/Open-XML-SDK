@@ -325,7 +325,7 @@ namespace DocumentFormat.OpenXml.Generator.Linq
             IDictionary<OpenXmlQualifiedName, FieldInfo> fieldInfos)
         {
             OpenXmlElement element = elementChild.Create();
-            var elementMetadata = ElementMetadata.Create(element);
+            var elementMetadata = element.Metadata;
             elementMetadataCollection.Add(elementMetadata);
 
             if (!fieldInfos.TryGetValue(elementMetadata.QName, out FieldInfo? fieldInfo))
