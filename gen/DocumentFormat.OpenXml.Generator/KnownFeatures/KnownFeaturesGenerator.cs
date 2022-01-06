@@ -18,6 +18,7 @@ public class KnownFeaturesGenerator : ISourceGenerator
     private static readonly DiagnosticDescriptor DuplicateAttribute = new("OOX1000", "Duplicate known features", "Service {0} is already registered for {1}", "KnownFeatures", DiagnosticSeverity.Error, isEnabledByDefault: true);
     private static readonly DiagnosticDescriptor SingleContractForFeature = new("OOX1001", "Duplicate contracts registered", "Can only register a single contract for {0}", "KnownFeatures", DiagnosticSeverity.Error, isEnabledByDefault: true);
     private static readonly DiagnosticDescriptor InvalidFactoryMethod = new("OOX1002", "Invalid factory method", "Method {0} must have no parameters and return {1} type", "KnownFeatures", DiagnosticSeverity.Error, isEnabledByDefault: true);
+    private static readonly DiagnosticDescriptor InvalidDelegatedFeatures = new("OOX1003", "Invalid delegated features", "Member {0} must have no parameters if a method and return IFeatureCollection", "KnownFeatures", DiagnosticSeverity.Error, isEnabledByDefault: true);
 
     public void Execute(GeneratorExecutionContext context)
     {
@@ -28,6 +29,8 @@ public class KnownFeaturesGenerator : ISourceGenerator
 
         var knownFeatureSymbol = context.Compilation.GetTypeByMetadataName("DocumentFormat.OpenXml.KnownFeatureAttribute");
         var threadSafe = context.Compilation.GetTypeByMetadataName("DocumentFormat.OpenXml.ThreadSafeAttribute");
+        var delegated = context.Compilation.GetTypeByMetadataName("DocumentFormat.OpenXml.DelegatedFeatureAttribute");
+        var iFeatures = context.Compilation.GetTypeByMetadataName("DocumentFormat.OpenXml.Features.IFeatureCollection");
 
         if (knownFeatureSymbol is null)
         {
@@ -42,6 +45,7 @@ public class KnownFeaturesGenerator : ISourceGenerator
             if (model.GetDeclaredSymbol(node) is IMethodSymbol method)
             {
                 var features = new HashSet<(INamedTypeSymbol Contract, ISymbol Service)>();
+                var delegatedFeatures = new List<ISymbol>();
                 var isThreadSafe = false;
 
                 foreach (var attribute in method.GetAttributes())
@@ -49,6 +53,44 @@ public class KnownFeaturesGenerator : ISourceGenerator
                     if (SymbolEqualityComparer.Default.Equals(attribute.AttributeClass, threadSafe))
                     {
                         isThreadSafe = true;
+                    }
+                    else if (SymbolEqualityComparer.Default.Equals(attribute.AttributeClass, delegated))
+                    {
+                        if (attribute.ConstructorArguments[0].Value is string methodName)
+                        {
+                            var container = attribute.ConstructorArguments[1].Value as INamedTypeSymbol ?? method.ContainingType;
+                            var members = container.GetMembers(methodName);
+
+                            if (members.Length == 1 && members[0] is ISymbol delegatedSymbol && IsValidMember(delegatedSymbol))
+                            {
+                                delegatedFeatures.Add(delegatedSymbol);
+                            }
+                            else
+                            {
+                                var location = attribute.ApplicationSyntaxReference?.GetSyntax(context.CancellationToken)?.GetLocation();
+                                context.ReportDiagnostic(Diagnostic.Create(InvalidDelegatedFeatures, location, methodName));
+                            }
+
+                            bool IsValidMember(ISymbol symbol)
+                            {
+                                if (symbol is IMethodSymbol delegatedMethod && delegatedMethod.Parameters.Length == 0 && SymbolEqualityComparer.Default.Equals(iFeatures, delegatedMethod.ReturnType))
+                                {
+                                    return true;
+                                }
+
+                                if (symbol is IFieldSymbol field && SymbolEqualityComparer.Default.Equals(iFeatures, field.Type))
+                                {
+                                    return true;
+                                }
+
+                                if (symbol is IPropertySymbol property && SymbolEqualityComparer.Default.Equals(iFeatures, property.Type))
+                                {
+                                    return true;
+                                }
+
+                                return false;
+                            }
+                        }
                     }
                     else if (SymbolEqualityComparer.Default.Equals(attribute.AttributeClass, knownFeatureSymbol))
                     {
@@ -95,7 +137,7 @@ public class KnownFeaturesGenerator : ISourceGenerator
                     }
                 }
 
-                var source = method.Build(features, isThreadSafe);
+                var source = method.Build(delegatedFeatures, features, isThreadSafe);
 
                 context.AddSource($"{method.ContainingType.Name}_{method.Name}", source);
             }
@@ -121,6 +163,15 @@ internal sealed class KnownFeatureAttribute : global::System.Attribute
     }
 
     public string? Factory { get; set; }
+}
+
+[global::System.Diagnostics.Conditional(""OPENXMLGENERATOR"")]
+[global::System.AttributeUsage(global::System.AttributeTargets.Method, AllowMultiple = true)]
+internal sealed class DelegatedFeatureAttribute : global::System.Attribute
+{
+    public DelegatedFeatureAttribute(string name, global::System.Type? container = null)
+    {
+    }
 }
 
 [global::System.Diagnostics.Conditional(""OPENXMLGENERATOR"")]
