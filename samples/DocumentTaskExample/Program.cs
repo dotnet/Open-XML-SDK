@@ -64,11 +64,8 @@ namespace DocumentTaskSample
 
         private static void AddNewTask(MainDocumentPart mdp, string title, User assignee, User assigner)
         {
-#pragma warning disable TODO // TODO
-                            // TODO: user ids, providers and names will have to be programmatically accessed via directory services.
-                            // These are just examples to show what is expected.
             mdp.AddNewPart<DocumentTasksPart>();
-#pragma warning restore TODO // TODO
+
             DocumentTasksPart taskPart = mdp.DocumentTasksPart;
             taskPart.Tasks = new Tasks();
             Tasks taskRoot = taskPart.Tasks;
