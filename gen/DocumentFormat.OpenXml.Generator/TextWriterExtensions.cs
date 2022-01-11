@@ -2,9 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Generator.Models;
-using System;
 using System.CodeDom.Compiler;
-using System.IO;
 
 namespace DocumentFormat.OpenXml.Generator;
 
@@ -26,13 +24,47 @@ internal static class TextWriterExtensions
 
     public static void WriteLineNoTabs(this IndentedTextWriter writer) => writer.WriteLineNoTabs(string.Empty);
 
-    public static Indentation AddIndent(this IndentedTextWriter writer)
-        => new(writer, null);
+    public static void WriteLine(this IndentedTextWriter writer, bool shouldWrite)
+    {
+        if (shouldWrite)
+        {
+            writer.WriteLine();
+        }
+    }
 
-    public static Indentation AddBlock(this IndentedTextWriter writer, bool includeSemiColon = false)
+    public static void WriteDoubleLines(this IndentedTextWriter writer)
+    {
+        writer.WriteLineNoTabs();
+        writer.WriteLine();
+    }
+
+    public static Indentation AddIndent(this IndentedTextWriter writer)
+        => new(writer);
+
+    public record BlockOptions
+    {
+        public bool IncludeSemiColon { get; init; }
+
+        public string? FinalText { get; init; }
+
+        public bool AddNewLineBeforeClosing { get; internal set; }
+
+        public bool IncludeTrailingNewline { get; init; } = true;
+    }
+
+    public static Indentation AddBlock(this IndentedTextWriter writer, BlockOptions? options = null)
     {
         writer.WriteLine("{");
-        return new(writer, includeSemiColon ? "};" : "}");
+        var finalText = options?.FinalText is null ? "}" : options.FinalText + "}";
+
+        return new(writer, options is null ? new() { FinalText = finalText } : options with { FinalText = finalText });
+    }
+
+    public static Indentation AddPropertyAccessor(this IndentedTextWriter writer, string accessor, BlockOptions? options = null)
+    {
+        writer.WriteLine(accessor);
+
+        return writer.AddBlock(options);
     }
 
     public static void WriteEnum<T>(this TextWriter writer, string typeName, T value)
@@ -71,6 +103,12 @@ internal static class TextWriterExtensions
         {
             writer.WriteNull();
         }
+        else if (typeof(T) == typeof(TypeOf))
+        {
+            writer.Write("typeof(");
+            writer.Write(((TypeOf)(object)item).Type);
+            writer.Write(")");
+        }
         else if (typeof(T) == typeof(Verbatim))
         {
             writer.Write(((Verbatim)(object)item).Value);
@@ -82,6 +120,11 @@ internal static class TextWriterExtensions
         else if (typeof(T) == typeof(string))
         {
             writer.WriteString((string)(object)item);
+        }
+        else if (typeof(T) == typeof(bool))
+        {
+            var result = (bool)(object)item;
+            writer.Write(result ? "true" : "false");
         }
         else
         {
@@ -111,23 +154,40 @@ internal static class TextWriterExtensions
 
     public readonly struct Indentation : IDisposable
     {
-        private readonly IndentedTextWriter _writer;
-        private readonly string? _text;
+        private static readonly BlockOptions _defaultOptions = new();
 
-        public Indentation(IndentedTextWriter writer, string? text)
+        private readonly IndentedTextWriter _writer;
+        private readonly BlockOptions _options;
+
+        public Indentation(IndentedTextWriter writer, BlockOptions? options = null)
         {
             _writer = writer;
             _writer.Indent++;
-            _text = text;
+            _options = options ?? _defaultOptions;
         }
 
         public void Dispose()
         {
             _writer.Indent--;
 
-            if (_text is not null)
+            if (_options.AddNewLineBeforeClosing)
             {
-                _writer.WriteLine(_text);
+                _writer.WriteLine();
+            }
+
+            if (_options.FinalText is not null)
+            {
+                _writer.Write(_options.FinalText);
+
+                if (_options.IncludeSemiColon)
+                {
+                    _writer.Write(";");
+                }
+            }
+
+            if (_options.IncludeTrailingNewline)
+            {
+                _writer.WriteLine();
             }
         }
     }

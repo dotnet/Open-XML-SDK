@@ -196,7 +196,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="mediaDataPart">The part type of the AudioReferenceRelationship</param>
         /// <return>The newly added part</return>
         public AudioReferenceRelationship AddAudioReferenceRelationship(MediaDataPart mediaDataPart)
-        {return AddDataPartReferenceRelationship<AudioReferenceRelationship>(mediaDataPart);
+        {
+            return AddDataPartReferenceRelationship<AudioReferenceRelationship>(mediaDataPart);
         }
 
         /// <summary>
@@ -206,7 +207,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="id">The relationship id</param>
         /// <return>The newly added part</return>
         public AudioReferenceRelationship AddAudioReferenceRelationship(MediaDataPart mediaDataPart, string id)
-        {return AddDataPartReferenceRelationship<AudioReferenceRelationship>(mediaDataPart, id);
+        {
+            return AddDataPartReferenceRelationship<AudioReferenceRelationship>(mediaDataPart, id);
         }
 
         /// <summary>
@@ -395,7 +397,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="mediaDataPart">The part type of the VideoReferenceRelationship</param>
         /// <return>The newly added part</return>
         public VideoReferenceRelationship AddVideoReferenceRelationship(MediaDataPart mediaDataPart)
-        {return AddDataPartReferenceRelationship<VideoReferenceRelationship>(mediaDataPart);
+        {
+            return AddDataPartReferenceRelationship<VideoReferenceRelationship>(mediaDataPart);
         }
 
         /// <summary>
@@ -405,7 +408,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="id">The relationship id</param>
         /// <return>The newly added part</return>
         public VideoReferenceRelationship AddVideoReferenceRelationship(MediaDataPart mediaDataPart, string id)
-        {return AddDataPartReferenceRelationship<VideoReferenceRelationship>(mediaDataPart, id);
+        {
+            return AddDataPartReferenceRelationship<VideoReferenceRelationship>(mediaDataPart, id);
         }
 
         /// <inheritdoc/>

@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net6.0</TargetFrameworks>
     <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
     <IncludeFrameworkShims>true</IncludeFrameworkShims>
     <IncludeInitShim>true</IncludeInitShim>
     <IsRoslynComponent>true</IsRoslynComponent>

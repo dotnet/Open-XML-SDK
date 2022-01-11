@@ -59,11 +59,6 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Gets the CT_RdRichValueStructureParts of the WorkbookPart
-        /// </summary>
-        public IEnumerable<RdRichValueStructurePart> CT_RdRichValueStructureParts => GetPartsOfType<RdRichValueStructurePart>();
-
-        /// <summary>
         /// Gets the CalculationChainPart of the WorkbookPart
         /// </summary>
         public CalculationChainPart? CalculationChainPart => GetSubPartOfType<CalculationChainPart>();
@@ -82,6 +77,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the ConnectionsPart of the WorkbookPart
         /// </summary>
         public ConnectionsPart? ConnectionsPart => GetSubPartOfType<ConnectionsPart>();
+
+        /// <summary>
+        /// Gets the CT_RdRichValueStructureParts of the WorkbookPart
+        /// </summary>
+        public IEnumerable<RdRichValueStructurePart> CT_RdRichValueStructureParts => GetPartsOfType<RdRichValueStructurePart>();
 
         /// <summary>
         /// Gets the CustomDataPropertiesParts of the WorkbookPart
