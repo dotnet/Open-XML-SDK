@@ -27,7 +27,7 @@ internal static class NamespaceGeneratorExtensions
         {
             writer.WriteLine("private readonly Dictionary<string, string> _urlToPrefix = new()");
 
-            using (writer.AddBlock(includeSemiColon: true))
+            using (writer.AddBlock(new() { IncludeSemiColon = true }))
             {
                 foreach (var ns in namespaces)
                 {
@@ -39,7 +39,7 @@ internal static class NamespaceGeneratorExtensions
             writer.WriteLineNoTabs();
             writer.WriteLine("private readonly Dictionary<string, string> _prefixToUrl = new()");
 
-            using (writer.AddBlock(includeSemiColon: true))
+            using (writer.AddBlock(new() { IncludeSemiColon = true }))
             {
                 foreach (var ns in namespaces)
                 {
@@ -51,7 +51,7 @@ internal static class NamespaceGeneratorExtensions
             writer.WriteLineNoTabs();
             writer.WriteLine("private readonly Dictionary<string, FileFormatVersions> _prefixToVersion = new()");
 
-            using (writer.AddBlock(includeSemiColon: true))
+            using (writer.AddBlock(new() { IncludeSemiColon = true }))
             {
                 foreach (var ns in namespaces)
                 {

@@ -42,9 +42,19 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
+        /// Gets the authorsPart of the PresentationPart
+        /// </summary>
+        public PowerPointAuthorsPart? authorsPart => GetSubPartOfType<PowerPointAuthorsPart>();
+
+        /// <summary>
         /// Gets the CommentAuthorsPart of the PresentationPart
         /// </summary>
         public CommentAuthorsPart? CommentAuthorsPart => GetSubPartOfType<CommentAuthorsPart>();
+
+        /// <summary>
+        /// Gets the commentParts of the PresentationPart
+        /// </summary>
+        public IEnumerable<PowerPointCommentPart> commentParts => GetPartsOfType<PowerPointCommentPart>();
 
         /// <summary>
         /// Gets the CustomXmlParts of the PresentationPart
@@ -160,16 +170,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the ViewPropertiesPart of the PresentationPart
         /// </summary>
         public ViewPropertiesPart? ViewPropertiesPart => GetSubPartOfType<ViewPropertiesPart>();
-
-        /// <summary>
-        /// Gets the authorsPart of the PresentationPart
-        /// </summary>
-        public PowerPointAuthorsPart? authorsPart => GetSubPartOfType<PowerPointAuthorsPart>();
-
-        /// <summary>
-        /// Gets the commentParts of the PresentationPart
-        /// </summary>
-        public IEnumerable<PowerPointCommentPart> commentParts => GetPartsOfType<PowerPointCommentPart>();
 
         /// <summary>
         /// Adds a CustomXmlPart to the PresentationPart
