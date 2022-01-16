@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -27,9 +29,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.WebImageSupportingRichData" /> <c>&lt;xlrdwi:webImageSrd></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xlrdwi:webImagesSrd")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebImagesSupportingRichData : OpenXmlPartRootElement
     {
         /// <summary>
@@ -125,9 +125,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.BlipWebImageSupportingRichDataRelationship" /> <c>&lt;xlrdwi:blip></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xlrdwi:webImageSrd")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebImageSupportingRichData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -231,9 +229,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xlrdwi:extLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -294,9 +290,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrdwi:address.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xlrdwi:address")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AddressWebImageSupportingRichDataRelationship : OpenXmlWebImageSupportingRichDataRelationshipElement
     {
         /// <summary>
@@ -322,9 +316,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrdwi:moreImagesAddress.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xlrdwi:moreImagesAddress")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MoreImagesAddressWebImageSupportingRichDataRelationship : OpenXmlWebImageSupportingRichDataRelationshipElement
     {
         /// <summary>
@@ -350,9 +342,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrdwi:blip.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xlrdwi:blip")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BlipWebImageSupportingRichDataRelationship : OpenXmlWebImageSupportingRichDataRelationshipElement
     {
         /// <summary>
@@ -394,12 +384,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("r:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();

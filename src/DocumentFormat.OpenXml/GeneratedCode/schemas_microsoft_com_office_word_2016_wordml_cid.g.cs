@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -26,9 +28,7 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Word.Cid.CommentId" /> <c>&lt;w16cid:commentId></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w16cid:commentsIds")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentsIds : OpenXmlPartRootElement
     {
         /// <summary>
@@ -114,9 +114,7 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w16cid:commentId.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w16cid:commentId")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentId : OpenXmlLeafElement
     {
         /// <summary>
@@ -133,12 +131,7 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
         /// <remark>
         /// xmlns:w16cid=http://schemas.microsoft.com/office/word/2016/wordml/cid
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w16cid:paraId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? ParaId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -152,12 +145,7 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
         /// <remark>
         /// xmlns:w16cid=http://schemas.microsoft.com/office/word/2016/wordml/cid
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w16cid:durableId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? DurableId
         {
             get => GetAttribute<HexBinaryValue>();

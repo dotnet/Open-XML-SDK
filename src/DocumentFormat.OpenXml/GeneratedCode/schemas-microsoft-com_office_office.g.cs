@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -37,9 +39,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.TextBox" /> <c>&lt;v:textbox></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:shapedefaults")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShapeDefaults : OpenXmlCompositeElement
     {
         /// <summary>
@@ -80,12 +80,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("v:ext")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -96,12 +91,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Shape ID Optional Storage</para>
         /// <para>Represents the following attribute in the schema: spidmax</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("spidmax")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public IntegerValue? MaxShapeId
         {
             get => GetAttribute<IntegerValue>();
@@ -112,12 +102,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>style</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("style")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Style
         {
             get => GetAttribute<StringValue>();
@@ -128,12 +113,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Shape Fill Toggle</para>
         /// <para>Represents the following attribute in the schema: fill</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("fill")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? BeFilled
         {
             get => GetAttribute<TrueFalseValue>();
@@ -144,12 +124,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Default Fill Color</para>
         /// <para>Represents the following attribute in the schema: fillcolor</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("fillcolor")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? FillColor
         {
             get => GetAttribute<StringValue>();
@@ -160,12 +135,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Shape Stroke Toggle</para>
         /// <para>Represents the following attribute in the schema: stroke</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("stroke")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? IsStroke
         {
             get => GetAttribute<TrueFalseValue>();
@@ -176,12 +146,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Shape Stroke Color</para>
         /// <para>Represents the following attribute in the schema: strokecolor</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("strokecolor")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? StrokeColor
         {
             get => GetAttribute<StringValue>();
@@ -195,12 +160,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("o:allowincell")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? AllowInCell
         {
             get => GetAttribute<TrueFalseValue>();
@@ -214,12 +174,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("o:allowoverlap")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? AllowOverlap
         {
             get => GetAttribute<TrueFalseValue>();
@@ -233,12 +188,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("o:insetmode")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>? InsetMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>();
@@ -447,9 +397,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Rules" /> <c>&lt;o:rules></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:shapelayout")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShapeLayout : OpenXmlCompositeElement
     {
         /// <summary>
@@ -490,12 +438,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("v:ext")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -567,9 +510,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:signatureline.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:signatureline")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SignatureLine : OpenXmlLeafElement
     {
         /// <summary>
@@ -586,12 +527,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("v:ext")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -602,12 +538,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Signature Line Flag</para>
         /// <para>Represents the following attribute in the schema: issignatureline</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("issignatureline")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? IsSignatureLine
         {
             get => GetAttribute<TrueFalseValue>();
@@ -618,12 +549,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Unique ID</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -634,12 +560,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Signature Provider ID</para>
         /// <para>Represents the following attribute in the schema: provid</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("provid")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ProviderId
         {
             get => GetAttribute<StringValue>();
@@ -650,12 +571,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Use Signing Instructions Flag</para>
         /// <para>Represents the following attribute in the schema: signinginstructionsset</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("signinginstructionsset")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? SigningInstructionsSet
         {
             get => GetAttribute<TrueFalseValue>();
@@ -666,12 +582,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>User-specified Comments Flag</para>
         /// <para>Represents the following attribute in the schema: allowcomments</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("allowcomments")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? AllowComments
         {
             get => GetAttribute<TrueFalseValue>();
@@ -682,12 +593,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Show Signed Date Flag</para>
         /// <para>Represents the following attribute in the schema: showsigndate</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("showsigndate")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? ShowSignDate
         {
             get => GetAttribute<TrueFalseValue>();
@@ -701,12 +607,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("o:suggestedsigner")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? SuggestedSigner
         {
             get => GetAttribute<StringValue>();
@@ -720,12 +621,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("o:suggestedsigner2")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? SuggestedSigner2
         {
             get => GetAttribute<StringValue>();
@@ -739,12 +635,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("o:suggestedsigneremail")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? SuggestedSignerEmail
         {
             get => GetAttribute<StringValue>();
@@ -755,12 +646,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Instructions for Signing</para>
         /// <para>Represents the following attribute in the schema: signinginstructions</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("signinginstructions")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? SigningInstructions
         {
             get => GetAttribute<StringValue>();
@@ -771,12 +657,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Additional Signature Information</para>
         /// <para>Represents the following attribute in the schema: addlxml</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("addlxml")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? AdditionalXml
         {
             get => GetAttribute<StringValue>();
@@ -787,12 +668,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Signature Provider Download URL</para>
         /// <para>Represents the following attribute in the schema: sigprovurl</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("sigprovurl")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? SignatureProviderUrl
         {
             get => GetAttribute<StringValue>();
@@ -835,9 +711,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:ink.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:ink")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Ink : OpenXmlLeafElement
     {
         /// <summary>
@@ -851,12 +725,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Ink Data</para>
         /// <para>Represents the following attribute in the schema: i</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("i")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Base64BinaryValue? InkData
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -867,12 +736,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Annotation Flag</para>
         /// <para>Represents the following attribute in the schema: annotation</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("annotation")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? AnnotationFlag
         {
             get => GetAttribute<TrueFalseValue>();
@@ -903,9 +767,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.RelationTable" /> <c>&lt;o:relationtable></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:diagram")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Diagram : OpenXmlCompositeElement
     {
         /// <summary>
@@ -946,12 +808,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("v:ext")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -962,12 +819,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Diagram Style Options</para>
         /// <para>Represents the following attribute in the schema: dgmstyle</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("dgmstyle")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public IntegerValue? Style
         {
             get => GetAttribute<IntegerValue>();
@@ -978,12 +830,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Diagram Automatic Format</para>
         /// <para>Represents the following attribute in the schema: autoformat</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("autoformat")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? AutoFormat
         {
             get => GetAttribute<TrueFalseValue>();
@@ -994,12 +841,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Diagram Reverse Direction</para>
         /// <para>Represents the following attribute in the schema: reverse</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("reverse")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? Reverse
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1010,12 +852,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Diagram Automatic Layout</para>
         /// <para>Represents the following attribute in the schema: autolayout</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("autolayout")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? AutoLayout
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1026,12 +863,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Diagram Layout X Scale</para>
         /// <para>Represents the following attribute in the schema: dgmscalex</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("dgmscalex")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public IntegerValue? ScaleX
         {
             get => GetAttribute<IntegerValue>();
@@ -1042,12 +874,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Diagram Layout Y Scale</para>
         /// <para>Represents the following attribute in the schema: dgmscaley</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("dgmscaley")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public IntegerValue? ScaleY
         {
             get => GetAttribute<IntegerValue>();
@@ -1058,12 +885,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Diagram Font Size</para>
         /// <para>Represents the following attribute in the schema: dgmfontsize</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("dgmfontsize")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public IntegerValue? FontSize
         {
             get => GetAttribute<IntegerValue>();
@@ -1074,12 +896,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Diagram Layout Extents</para>
         /// <para>Represents the following attribute in the schema: constrainbounds</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("constrainbounds")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ConstrainBounds
         {
             get => GetAttribute<StringValue>();
@@ -1090,12 +907,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Diagram Base Font Size</para>
         /// <para>Represents the following attribute in the schema: dgmbasetextscale</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("dgmbasetextscale")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public IntegerValue? BaseTextScale
         {
             get => GetAttribute<IntegerValue>();
@@ -1146,9 +958,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:skew.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:skew")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Skew : OpenXmlLeafElement
     {
         /// <summary>
@@ -1165,12 +975,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("v:ext")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -1181,12 +986,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Skew ID</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -1197,12 +997,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Skew Toggle</para>
         /// <para>Represents the following attribute in the schema: on</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("on")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? On
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1213,12 +1008,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Skew Offset</para>
         /// <para>Represents the following attribute in the schema: offset</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("offset")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Offset
         {
             get => GetAttribute<StringValue>();
@@ -1229,12 +1019,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Skew Origin</para>
         /// <para>Represents the following attribute in the schema: origin</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("origin")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Origin
         {
             get => GetAttribute<StringValue>();
@@ -1245,12 +1030,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Skew Perspective Matrix</para>
         /// <para>Represents the following attribute in the schema: matrix</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("matrix")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Matrix
         {
             get => GetAttribute<StringValue>();
@@ -1279,9 +1059,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:extrusion.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:extrusion")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Extrusion : OpenXmlLeafElement
     {
         /// <summary>
@@ -1298,12 +1076,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("v:ext")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -1314,12 +1087,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Extrusion Toggle</para>
         /// <para>Represents the following attribute in the schema: on</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("on")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? On
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1330,12 +1098,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Extrusion Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("type")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.ExtrusionValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ExtrusionValues>>();
@@ -1346,12 +1109,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Extrusion Render Mode</para>
         /// <para>Represents the following attribute in the schema: render</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("render")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.ExtrusionRenderValues>? Render
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ExtrusionRenderValues>>();
@@ -1362,12 +1120,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Extrusion Viewpoint Origin</para>
         /// <para>Represents the following attribute in the schema: viewpointorigin</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("viewpointorigin")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ViewpointOrigin
         {
             get => GetAttribute<StringValue>();
@@ -1378,12 +1131,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Extrusion Viewpoint</para>
         /// <para>Represents the following attribute in the schema: viewpoint</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("viewpoint")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Viewpoint
         {
             get => GetAttribute<StringValue>();
@@ -1394,12 +1142,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Extrusion Skew Angle</para>
         /// <para>Represents the following attribute in the schema: skewangle</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("skewangle")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public SingleValue? SkewAngle
         {
             get => GetAttribute<SingleValue>();
@@ -1410,12 +1153,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Extrusion Skew</para>
         /// <para>Represents the following attribute in the schema: skewamt</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("skewamt")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? SkewAmount
         {
             get => GetAttribute<StringValue>();
@@ -1426,12 +1164,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Forward Extrusion</para>
         /// <para>Represents the following attribute in the schema: foredepth</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("foredepth")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ForceDepth
         {
             get => GetAttribute<StringValue>();
@@ -1442,12 +1175,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Backward Extrusion Depth</para>
         /// <para>Represents the following attribute in the schema: backdepth</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("backdepth")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? BackDepth
         {
             get => GetAttribute<StringValue>();
@@ -1458,12 +1186,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Rotation Axis</para>
         /// <para>Represents the following attribute in the schema: orientation</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("orientation")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Orientation
         {
             get => GetAttribute<StringValue>();
@@ -1474,12 +1197,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Rotation Around Axis</para>
         /// <para>Represents the following attribute in the schema: orientationangle</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("orientationangle")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public SingleValue? OrientationAngle
         {
             get => GetAttribute<SingleValue>();
@@ -1490,12 +1208,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Rotation Toggle</para>
         /// <para>Represents the following attribute in the schema: lockrotationcenter</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("lockrotationcenter")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? LockRotationCenter
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1506,12 +1219,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Center of Rotation Toggle</para>
         /// <para>Represents the following attribute in the schema: autorotationcenter</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("autorotationcenter")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? AutoRotationCenter
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1522,12 +1230,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Rotation Center</para>
         /// <para>Represents the following attribute in the schema: rotationcenter</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("rotationcenter")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? RotationCenter
         {
             get => GetAttribute<StringValue>();
@@ -1538,12 +1241,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>X-Y Rotation Angle</para>
         /// <para>Represents the following attribute in the schema: rotationangle</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("rotationangle")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? RotationAngle
         {
             get => GetAttribute<StringValue>();
@@ -1554,12 +1252,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Extrusion Color</para>
         /// <para>Represents the following attribute in the schema: color</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("color")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Color
         {
             get => GetAttribute<StringValue>();
@@ -1570,12 +1263,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Shininess</para>
         /// <para>Represents the following attribute in the schema: shininess</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("shininess")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public SingleValue? Shininess
         {
             get => GetAttribute<SingleValue>();
@@ -1586,12 +1274,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Specularity</para>
         /// <para>Represents the following attribute in the schema: specularity</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("specularity")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Specularity
         {
             get => GetAttribute<StringValue>();
@@ -1602,12 +1285,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Diffuse Reflection</para>
         /// <para>Represents the following attribute in the schema: diffusity</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("diffusity")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Diffusity
         {
             get => GetAttribute<StringValue>();
@@ -1618,12 +1296,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Metallic Surface Toggle</para>
         /// <para>Represents the following attribute in the schema: metal</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("metal")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? Metal
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1634,12 +1307,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Simulated Bevel</para>
         /// <para>Represents the following attribute in the schema: edge</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("edge")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Edge
         {
             get => GetAttribute<StringValue>();
@@ -1650,12 +1318,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Faceting Quality</para>
         /// <para>Represents the following attribute in the schema: facet</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("facet")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Facet
         {
             get => GetAttribute<StringValue>();
@@ -1666,12 +1329,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Shape Face Lighting Toggle</para>
         /// <para>Represents the following attribute in the schema: lightface</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("lightface")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? LightFace
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1682,12 +1340,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Brightness</para>
         /// <para>Represents the following attribute in the schema: brightness</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("brightness")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Brightness
         {
             get => GetAttribute<StringValue>();
@@ -1698,12 +1351,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Primary Light Position</para>
         /// <para>Represents the following attribute in the schema: lightposition</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("lightposition")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? LightPosition
         {
             get => GetAttribute<StringValue>();
@@ -1714,12 +1362,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Primary Light Intensity</para>
         /// <para>Represents the following attribute in the schema: lightlevel</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("lightlevel")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? LightLevel
         {
             get => GetAttribute<StringValue>();
@@ -1730,12 +1373,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Primary Light Harshness Toggle</para>
         /// <para>Represents the following attribute in the schema: lightharsh</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("lightharsh")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? LightHarsh
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1746,12 +1384,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Secondary Light Position</para>
         /// <para>Represents the following attribute in the schema: lightposition2</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("lightposition2")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? LightPosition2
         {
             get => GetAttribute<StringValue>();
@@ -1762,12 +1395,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Secondary Light Intensity</para>
         /// <para>Represents the following attribute in the schema: lightlevel2</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("lightlevel2")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? LightLevel2
         {
             get => GetAttribute<StringValue>();
@@ -1778,12 +1406,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Secondary Light Harshness Toggle</para>
         /// <para>Represents the following attribute in the schema: lightharsh2</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("lightharsh2")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? LightHarsh2
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1841,9 +1464,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:callout.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:callout")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Callout : OpenXmlLeafElement
     {
         /// <summary>
@@ -1860,12 +1481,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("v:ext")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -1876,12 +1492,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Callout toggle</para>
         /// <para>Represents the following attribute in the schema: on</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("on")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? On
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1892,12 +1503,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Callout type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("type")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Type
         {
             get => GetAttribute<StringValue>();
@@ -1908,12 +1514,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Callout gap</para>
         /// <para>Represents the following attribute in the schema: gap</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("gap")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Gap
         {
             get => GetAttribute<StringValue>();
@@ -1924,12 +1525,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Callout angle</para>
         /// <para>Represents the following attribute in the schema: angle</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("angle")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.AngleValues>? Angle
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.AngleValues>>();
@@ -1940,12 +1536,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Callout automatic drop toggle</para>
         /// <para>Represents the following attribute in the schema: dropauto</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("dropauto")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? DropAuto
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1956,12 +1547,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Callout drop position</para>
         /// <para>Represents the following attribute in the schema: drop</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("drop")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Drop
         {
             get => GetAttribute<StringValue>();
@@ -1972,12 +1558,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Callout drop distance</para>
         /// <para>Represents the following attribute in the schema: distance</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("distance")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Distance
         {
             get => GetAttribute<StringValue>();
@@ -1988,12 +1569,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Callout length toggle</para>
         /// <para>Represents the following attribute in the schema: lengthspecified</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("lengthspecified")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? LengthSpecified
         {
             get => GetAttribute<TrueFalseValue>();
@@ -2004,12 +1580,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Callout length</para>
         /// <para>Represents the following attribute in the schema: length</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("length")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Length
         {
             get => GetAttribute<StringValue>();
@@ -2020,12 +1591,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Callout accent bar toggle</para>
         /// <para>Represents the following attribute in the schema: accentbar</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("accentbar")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? AccentBar
         {
             get => GetAttribute<TrueFalseValue>();
@@ -2036,12 +1602,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Callout text border toggle</para>
         /// <para>Represents the following attribute in the schema: textborder</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("textborder")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? TextBorder
         {
             get => GetAttribute<TrueFalseValue>();
@@ -2052,12 +1613,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Callout flip x</para>
         /// <para>Represents the following attribute in the schema: minusx</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("minusx")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? MinusX
         {
             get => GetAttribute<TrueFalseValue>();
@@ -2068,12 +1624,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Callout flip y</para>
         /// <para>Represents the following attribute in the schema: minusy</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("minusy")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? MinusY
         {
             get => GetAttribute<TrueFalseValue>();
@@ -2111,9 +1662,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:lock.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:lock")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Lock : OpenXmlLeafElement
     {
         /// <summary>
@@ -2130,12 +1679,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("v:ext")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -2146,12 +1690,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Position Lock</para>
         /// <para>Represents the following attribute in the schema: position</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("position")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? Position
         {
             get => GetAttribute<TrueFalseValue>();
@@ -2162,12 +1701,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Selection Lock</para>
         /// <para>Represents the following attribute in the schema: selection</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("selection")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? Selection
         {
             get => GetAttribute<TrueFalseValue>();
@@ -2178,12 +1712,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Grouping Lock</para>
         /// <para>Represents the following attribute in the schema: grouping</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("grouping")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? Grouping
         {
             get => GetAttribute<TrueFalseValue>();
@@ -2194,12 +1723,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Ungrouping Lock</para>
         /// <para>Represents the following attribute in the schema: ungrouping</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("ungrouping")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? Ungrouping
         {
             get => GetAttribute<TrueFalseValue>();
@@ -2210,12 +1734,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Rotation Lock</para>
         /// <para>Represents the following attribute in the schema: rotation</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("rotation")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? Rotation
         {
             get => GetAttribute<TrueFalseValue>();
@@ -2226,12 +1745,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Cropping Lock</para>
         /// <para>Represents the following attribute in the schema: cropping</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("cropping")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? Cropping
         {
             get => GetAttribute<TrueFalseValue>();
@@ -2242,12 +1756,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Vertices Lock</para>
         /// <para>Represents the following attribute in the schema: verticies</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("verticies")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? Verticies
         {
             get => GetAttribute<TrueFalseValue>();
@@ -2258,12 +1767,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Handles Lock</para>
         /// <para>Represents the following attribute in the schema: adjusthandles</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("adjusthandles")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? AdjustHandles
         {
             get => GetAttribute<TrueFalseValue>();
@@ -2274,12 +1778,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Text Lock</para>
         /// <para>Represents the following attribute in the schema: text</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("text")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? TextLock
         {
             get => GetAttribute<TrueFalseValue>();
@@ -2290,12 +1789,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Aspect Ratio Lock</para>
         /// <para>Represents the following attribute in the schema: aspectratio</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("aspectratio")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? AspectRatio
         {
             get => GetAttribute<TrueFalseValue>();
@@ -2306,12 +1800,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>AutoShape Type Lock</para>
         /// <para>Represents the following attribute in the schema: shapetype</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("shapetype")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? ShapeType
         {
             get => GetAttribute<TrueFalseValue>();
@@ -2354,9 +1843,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.FieldCodes" /> <c>&lt;o:FieldCodes></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:OLEObject")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OleObject : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2394,12 +1881,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>OLE Object Type</para>
         /// <para>Represents the following attribute in the schema: Type</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("Type")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.OleValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.OleValues>>();
@@ -2410,12 +1892,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>OLE Object Application</para>
         /// <para>Represents the following attribute in the schema: ProgID</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("ProgID")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ProgId
         {
             get => GetAttribute<StringValue>();
@@ -2426,12 +1903,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>OLE Object Shape</para>
         /// <para>Represents the following attribute in the schema: ShapeID</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("ShapeID")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ShapeId
         {
             get => GetAttribute<StringValue>();
@@ -2442,12 +1914,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>OLE Object Representation</para>
         /// <para>Represents the following attribute in the schema: DrawAspect</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("DrawAspect")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.OleDrawAspectValues>? DrawAspect
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.OleDrawAspectValues>>();
@@ -2458,12 +1925,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>OLE Object Unique ID</para>
         /// <para>Represents the following attribute in the schema: ObjectID</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("ObjectID")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ObjectId
         {
             get => GetAttribute<StringValue>();
@@ -2477,12 +1939,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("r:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2493,12 +1950,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>OLE Update Mode</para>
         /// <para>Represents the following attribute in the schema: UpdateMode</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("UpdateMode")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.OleUpdateModeValues>? UpdateMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.OleUpdateModeValues>>();
@@ -2578,9 +2030,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:complex.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:complex")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Complex : OpenXmlLeafElement
     {
         /// <summary>
@@ -2597,12 +2047,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("v:ext")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -2626,9 +2071,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:left.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:left")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LeftStroke : StrokeChildType
     {
         /// <summary>
@@ -2653,9 +2096,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:top.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:top")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TopStroke : StrokeChildType
     {
         /// <summary>
@@ -2680,9 +2121,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:right.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:right")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RightStroke : StrokeChildType
     {
         /// <summary>
@@ -2707,9 +2146,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:bottom.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:bottom")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BottomStroke : StrokeChildType
     {
         /// <summary>
@@ -2736,9 +2173,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:column.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:column")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColumnStroke : StrokeChildType
     {
         /// <summary>
@@ -2780,12 +2215,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("v:ext")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -2796,12 +2226,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Stroke Toggle</para>
         /// <para>Represents the following attribute in the schema: on</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("on")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? On
         {
             get => GetAttribute<TrueFalseValue>();
@@ -2812,12 +2237,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Stroke Weight</para>
         /// <para>Represents the following attribute in the schema: weight</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("weight")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Weight
         {
             get => GetAttribute<StringValue>();
@@ -2828,12 +2248,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Stroke Color</para>
         /// <para>Represents the following attribute in the schema: color</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("color")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Color
         {
             get => GetAttribute<StringValue>();
@@ -2844,12 +2259,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Stroke Alternate Pattern Color</para>
         /// <para>Represents the following attribute in the schema: color2</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("color2")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Color2
         {
             get => GetAttribute<StringValue>();
@@ -2860,12 +2270,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Stroke Opacity</para>
         /// <para>Represents the following attribute in the schema: opacity</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("opacity")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Opacity
         {
             get => GetAttribute<StringValue>();
@@ -2876,12 +2281,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Stroke Line Style</para>
         /// <para>Represents the following attribute in the schema: linestyle</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("linestyle")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.StrokeLineStyleValues>? LineStyle
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeLineStyleValues>>();
@@ -2892,12 +2292,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Miter Joint Limit</para>
         /// <para>Represents the following attribute in the schema: miterlimit</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("miterlimit")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DecimalValue? MiterLimit
         {
             get => GetAttribute<DecimalValue>();
@@ -2908,12 +2303,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Line End Join Style)</para>
         /// <para>Represents the following attribute in the schema: joinstyle</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("joinstyle")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.StrokeJoinStyleValues>? JoinStyle
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeJoinStyleValues>>();
@@ -2924,12 +2314,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Line End Cap</para>
         /// <para>Represents the following attribute in the schema: endcap</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("endcap")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.StrokeEndCapValues>? EndCap
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeEndCapValues>>();
@@ -2940,12 +2325,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Stroke Dash Pattern</para>
         /// <para>Represents the following attribute in the schema: dashstyle</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("dashstyle")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? DashStyle
         {
             get => GetAttribute<StringValue>();
@@ -2956,12 +2336,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Inset Border From Path</para>
         /// <para>Represents the following attribute in the schema: insetpen</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("insetpen")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? InsetPen
         {
             get => GetAttribute<TrueFalseValue>();
@@ -2972,12 +2347,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Stroke Image Style</para>
         /// <para>Represents the following attribute in the schema: filltype</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("filltype")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.FillTypeValues>? FillType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.FillTypeValues>>();
@@ -2988,12 +2358,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Stroke Image Location</para>
         /// <para>Represents the following attribute in the schema: src</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("src")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Source
         {
             get => GetAttribute<StringValue>();
@@ -3004,12 +2369,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Stroke Image Aspect Ratio</para>
         /// <para>Represents the following attribute in the schema: imageaspect</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("imageaspect")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues>? ImageAspect
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues>>();
@@ -3020,12 +2380,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Stroke Image Size</para>
         /// <para>Represents the following attribute in the schema: imagesize</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("imagesize")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ImageSize
         {
             get => GetAttribute<StringValue>();
@@ -3036,12 +2391,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Stoke Image Alignment</para>
         /// <para>Represents the following attribute in the schema: imagealignshape</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("imagealignshape")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? ImageAlignShape
         {
             get => GetAttribute<TrueFalseValue>();
@@ -3052,12 +2402,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Line Start Arrowhead</para>
         /// <para>Represents the following attribute in the schema: startarrow</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("startarrow")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues>? StartArrow
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues>>();
@@ -3068,12 +2413,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Line Start Arrowhead Width</para>
         /// <para>Represents the following attribute in the schema: startarrowwidth</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("startarrowwidth")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues>? StartArrowWidth
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues>>();
@@ -3084,12 +2424,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Line Start Arrowhead Length</para>
         /// <para>Represents the following attribute in the schema: startarrowlength</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("startarrowlength")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues>? StartArrowLength
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues>>();
@@ -3100,12 +2435,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Line End Arrowhead</para>
         /// <para>Represents the following attribute in the schema: endarrow</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("endarrow")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues>? EndArrow
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues>>();
@@ -3116,12 +2446,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Line End Arrowhead Width</para>
         /// <para>Represents the following attribute in the schema: endarrowwidth</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("endarrowwidth")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues>? EndArrowWidth
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues>>();
@@ -3132,12 +2457,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Line End Arrowhead Length</para>
         /// <para>Represents the following attribute in the schema: endarrowlength</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("endarrowlength")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues>? EndArrowLength
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues>>();
@@ -3151,12 +2471,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("o:href")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Href
         {
             get => GetAttribute<StringValue>();
@@ -3170,12 +2485,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("o:althref")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? AlternateImageReference
         {
             get => GetAttribute<StringValue>();
@@ -3189,12 +2499,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("o:title")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Title
         {
             get => GetAttribute<StringValue>();
@@ -3208,12 +2513,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("o:forcedash")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? ForceDash
         {
             get => GetAttribute<TrueFalseValue>();
@@ -3259,9 +2559,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:clippath.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:clippath")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ClipPath : OpenXmlLeafElement
     {
         /// <summary>
@@ -3278,12 +2576,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("o:v")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Value
         {
             get => GetAttribute<StringValue>();
@@ -3310,9 +2603,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:fill.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:fill")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FillExtendedProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -3329,12 +2620,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("v:ext")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -3345,12 +2631,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Fill Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("type")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.FillValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.FillValues>>();
@@ -3375,9 +2656,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:idmap.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:idmap")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShapeIdMap : OpenXmlLeafElement
     {
         /// <summary>
@@ -3394,12 +2673,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("v:ext")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -3410,12 +2684,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Shape IDs</para>
         /// <para>Represents the following attribute in the schema: data</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("data")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Data
         {
             get => GetAttribute<StringValue>();
@@ -3446,9 +2715,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Entry" /> <c>&lt;o:entry></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:regrouptable")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RegroupTable : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3489,12 +2756,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("v:ext")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -3529,9 +2791,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Rule" /> <c>&lt;o:r></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:rules")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Rules : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3572,12 +2832,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("v:ext")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -3606,9 +2861,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:entry.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:entry")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Entry : OpenXmlLeafElement
     {
         /// <summary>
@@ -3622,12 +2875,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>New Group ID</para>
         /// <para>Represents the following attribute in the schema: new</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("new")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? New
         {
             get => GetAttribute<Int32Value>();
@@ -3638,12 +2886,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Old Group ID</para>
         /// <para>Represents the following attribute in the schema: old</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("old")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? Old
         {
             get => GetAttribute<Int32Value>();
@@ -3674,9 +2917,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Proxy" /> <c>&lt;o:proxy></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:r")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Rule : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3714,12 +2955,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Rule ID</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -3730,12 +2966,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Rule Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("type")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.RuleValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.RuleValues>>();
@@ -3746,12 +2977,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Alignment Rule Type</para>
         /// <para>Represents the following attribute in the schema: how</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("how")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.AlignmentValues>? How
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.AlignmentValues>>();
@@ -3762,12 +2988,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Rule Shape Reference</para>
         /// <para>Represents the following attribute in the schema: idref</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("idref")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ShapeReference
         {
             get => GetAttribute<StringValue>();
@@ -3811,9 +3032,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Relation" /> <c>&lt;o:rel></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:relationtable")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RelationTable : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3854,12 +3073,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("v:ext")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -3888,9 +3102,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:rel.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:rel")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Relation : OpenXmlLeafElement
     {
         /// <summary>
@@ -3907,12 +3119,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("v:ext")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -3923,12 +3130,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Diagram Relationship Source Shape</para>
         /// <para>Represents the following attribute in the schema: idsrc</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("idsrc")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? SourceId
         {
             get => GetAttribute<StringValue>();
@@ -3939,12 +3141,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Diagram Relationship Destination Shape</para>
         /// <para>Represents the following attribute in the schema: iddest</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("iddest")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? DestinationId
         {
             get => GetAttribute<StringValue>();
@@ -3955,12 +3152,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Diagram Relationship Center Shape</para>
         /// <para>Represents the following attribute in the schema: idcntr</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("idcntr")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? CenterShapeId
         {
             get => GetAttribute<StringValue>();
@@ -3996,9 +3188,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:LinkType.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:LinkType")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LinkType : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -4037,9 +3227,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:LockedField.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:LockedField")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LockedField : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -4078,9 +3266,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:FieldCodes.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:FieldCodes")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FieldCodes : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -4118,9 +3304,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:proxy.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:proxy")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Proxy : OpenXmlLeafElement
     {
         /// <summary>
@@ -4134,12 +3318,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Start Point Connection Flag</para>
         /// <para>Represents the following attribute in the schema: start</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("start")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseBlankValue? Start
         {
             get => GetAttribute<TrueFalseBlankValue>();
@@ -4150,12 +3329,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>End Point Connection Flag</para>
         /// <para>Represents the following attribute in the schema: end</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("end")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseBlankValue? End
         {
             get => GetAttribute<TrueFalseBlankValue>();
@@ -4166,12 +3340,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Proxy Shape Reference</para>
         /// <para>Represents the following attribute in the schema: idref</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("idref")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ShapeReference
         {
             get => GetAttribute<StringValue>();
@@ -4182,12 +3351,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Connection Location</para>
         /// <para>Represents the following attribute in the schema: connectloc</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("connectloc")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? ConnectionLocation
         {
             get => GetAttribute<Int32Value>();
@@ -4221,9 +3385,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:colormru.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:colormru")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColorMostRecentlyUsed : OpenXmlLeafElement
     {
         /// <summary>
@@ -4240,12 +3402,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("v:ext")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -4256,12 +3413,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Recent colors</para>
         /// <para>Represents the following attribute in the schema: colors</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("colors")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Colors
         {
             get => GetAttribute<StringValue>();
@@ -4286,9 +3438,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:colormenu.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("o:colormenu")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColorMenu : OpenXmlLeafElement
     {
         /// <summary>
@@ -4305,12 +3455,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("v:ext")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -4321,12 +3466,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Default stroke color</para>
         /// <para>Represents the following attribute in the schema: strokecolor</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("strokecolor")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? StrokeColor
         {
             get => GetAttribute<StringValue>();
@@ -4337,12 +3477,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Default fill color</para>
         /// <para>Represents the following attribute in the schema: fillcolor</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("fillcolor")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? FillColor
         {
             get => GetAttribute<StringValue>();
@@ -4353,12 +3488,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Default shadow color</para>
         /// <para>Represents the following attribute in the schema: shadowcolor</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("shadowcolor")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ShadowColor
         {
             get => GetAttribute<StringValue>();
@@ -4369,12 +3499,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Default extrusion color</para>
         /// <para>Represents the following attribute in the schema: extrusioncolor</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("extrusioncolor")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ExtrusionColor
         {
             get => GetAttribute<StringValue>();

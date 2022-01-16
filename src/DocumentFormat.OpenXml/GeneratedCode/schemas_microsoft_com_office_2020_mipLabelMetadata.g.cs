@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -26,9 +28,7 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationLabel" /> <c>&lt;clbl:label></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("clbl:labelList")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ClassificationLabelList : OpenXmlPartRootElement
     {
         /// <summary>
@@ -116,9 +116,7 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is clbl:ext.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("clbl:ext")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ClassificationExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -156,12 +154,7 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
         /// <para>uri, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("uri")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -194,9 +187,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is clbl:label.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("clbl:label")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ClassificationLabel : OpenXmlLeafElement
     {
         /// <summary>
@@ -210,12 +201,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>id, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -226,12 +212,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>enabled, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("enabled")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -242,12 +223,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>setDate, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: setDate</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("setDate")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? SetDate
         {
             get => GetAttribute<StringValue>();
@@ -258,12 +234,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>method, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: method</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("method")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Method
         {
             get => GetAttribute<StringValue>();
@@ -274,12 +245,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>name, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("name")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -290,12 +256,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>siteId, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: siteId</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("siteId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? SiteId
         {
             get => GetAttribute<StringValue>();
@@ -306,12 +267,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>actionId, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: actionId</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("actionId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ActionId
         {
             get => GetAttribute<StringValue>();
@@ -322,12 +278,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>contentBits, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: contentBits</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("contentBits")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? ContentBits
         {
             get => GetAttribute<UInt32Value>();
@@ -338,12 +289,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>removed, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: removed</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("removed")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public BooleanValue? Removed
         {
             get => GetAttribute<BooleanValue>();
@@ -398,9 +344,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationExtension" /> <c>&lt;clbl:ext></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("clbl:extLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ClassificationExtensionList : OpenXmlCompositeElement
     {
         /// <summary>

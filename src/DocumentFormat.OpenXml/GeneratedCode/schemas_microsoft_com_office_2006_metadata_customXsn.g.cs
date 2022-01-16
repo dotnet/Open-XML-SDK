@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -28,9 +30,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomXsn.Scope" /> <c>&lt;ntns:xsnScope></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ntns:customXsn")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomXsn : OpenXmlCompositeElement
     {
         /// <summary>
@@ -142,9 +142,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:xsnLocation.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ntns:xsnLocation")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class XsnLocation : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -182,9 +180,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:cached.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ntns:cached")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CachedView : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -222,9 +218,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:openByDefault.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ntns:openByDefault")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OpenByDefault : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -262,9 +256,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:xsnScope.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ntns:xsnScope")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Scope : OpenXmlLeafTextElement
     {
         /// <summary>

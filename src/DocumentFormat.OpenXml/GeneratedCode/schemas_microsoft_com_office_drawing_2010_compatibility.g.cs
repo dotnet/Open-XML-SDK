@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -20,9 +22,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.LegacyCompatibility
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is com14:compatSp.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("com14:compatSp")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CompatibilityShape : OpenXmlLeafElement
     {
         /// <summary>
@@ -36,12 +36,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.LegacyCompatibility
         /// <para>spid, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("spid")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ShapeId
         {
             get => GetAttribute<StringValue>();

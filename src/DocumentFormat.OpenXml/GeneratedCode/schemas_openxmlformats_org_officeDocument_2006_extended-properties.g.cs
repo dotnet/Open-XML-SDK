@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -52,9 +54,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.ApplicationVersion" /> <c>&lt;ap:AppVersion></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ap:Properties")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Properties : OpenXmlPartRootElement
     {
         /// <summary>
@@ -542,9 +542,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Template.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ap:Template")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Template : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -582,9 +580,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Manager.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ap:Manager")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Manager : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -622,9 +618,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Company.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ap:Company")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Company : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -662,9 +656,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:PresentationFormat.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ap:PresentationFormat")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PresentationFormat : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -702,9 +694,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:HyperlinkBase.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ap:HyperlinkBase")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HyperlinkBase : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -742,9 +732,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Application.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ap:Application")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Application : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -782,9 +770,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:AppVersion.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ap:AppVersion")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ApplicationVersion : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -822,9 +808,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Pages.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ap:Pages")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Pages : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -863,9 +847,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Words.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ap:Words")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Words : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -904,9 +886,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Characters.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ap:Characters")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Characters : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -945,9 +925,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Lines.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ap:Lines")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Lines : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -986,9 +964,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Paragraphs.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ap:Paragraphs")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Paragraphs : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1027,9 +1003,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Slides.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ap:Slides")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Slides : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1068,9 +1042,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Notes.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ap:Notes")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Notes : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1109,9 +1081,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:TotalTime.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ap:TotalTime")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TotalTime : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1150,9 +1120,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:HiddenSlides.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ap:HiddenSlides")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HiddenSlides : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1191,9 +1159,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:MMClips.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ap:MMClips")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MultimediaClips : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1232,9 +1198,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:CharactersWithSpaces.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ap:CharactersWithSpaces")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CharactersWithSpaces : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1273,9 +1237,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:DocSecurity.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ap:DocSecurity")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DocumentSecurity : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1314,9 +1276,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:ScaleCrop.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ap:ScaleCrop")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ScaleCrop : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1355,9 +1315,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:LinksUpToDate.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ap:LinksUpToDate")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LinksUpToDate : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1396,9 +1354,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:SharedDoc.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ap:SharedDoc")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SharedDocument : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1437,9 +1393,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:HyperlinksChanged.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ap:HyperlinksChanged")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HyperlinksChanged : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1484,9 +1438,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTVector" /> <c>&lt;vt:vector></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ap:HeadingPairs")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HeadingPairs : VectorVariantType
     {
         /// <summary>
@@ -1545,9 +1497,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTVector" /> <c>&lt;vt:vector></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ap:HLinks")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HyperlinkList : VectorVariantType
     {
         /// <summary>
@@ -1670,9 +1620,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTVector" /> <c>&lt;vt:vector></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ap:TitlesOfParts")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TitlesOfParts : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1745,9 +1693,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTBlob" /> <c>&lt;vt:blob></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ap:DigSig")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DigitalSignature : OpenXmlCompositeElement
     {
         /// <summary>

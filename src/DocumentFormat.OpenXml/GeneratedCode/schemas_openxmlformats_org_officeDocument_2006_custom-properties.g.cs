@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -27,9 +29,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.CustomProperties.CustomDocumentProperty" /> <c>&lt;op:property></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("op:Properties")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Properties : OpenXmlPartRootElement
     {
         /// <summary>
@@ -153,9 +153,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort" /> <c>&lt;vt:ui2></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("op:property")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomDocumentProperty : OpenXmlCompositeElement
     {
         /// <summary>
@@ -193,12 +191,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Format ID</para>
         /// <para>Represents the following attribute in the schema: fmtid</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("fmtid")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? FormatId
         {
             get => GetAttribute<StringValue>();
@@ -209,12 +202,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Property ID</para>
         /// <para>Represents the following attribute in the schema: pid</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("pid")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? PropertyId
         {
             get => GetAttribute<Int32Value>();
@@ -225,12 +213,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Custom File Property Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("name")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -241,12 +224,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Bookmark Link Target</para>
         /// <para>Represents the following attribute in the schema: linkTarget</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("linkTarget")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? LinkTarget
         {
             get => GetAttribute<StringValue>();

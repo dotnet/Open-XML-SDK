@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -52,9 +54,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortState" /> <c>&lt;x:sortState></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xne:macrosheet")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Macrosheet : OpenXmlPartRootElement
     {
         /// <summary>
@@ -250,9 +250,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.RowSortMap" /> <c>&lt;xne:rowSortMap></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xne:worksheetSortMap")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WorksheetSortMap : OpenXmlPartRootElement
     {
         /// <summary>
@@ -365,9 +363,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xne:sqref.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xne:sqref")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ReferenceSequence : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -407,9 +403,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xne:f.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xne:f")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Formula : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -454,9 +448,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.RowSortMapItem" /> <c>&lt;xne:row></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xne:rowSortMap")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RowSortMap : OpenXmlCompositeElement
     {
         /// <summary>
@@ -494,12 +486,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("ref")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Ref
         {
             get => GetAttribute<StringValue>();
@@ -510,12 +497,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <para>Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("count")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -557,9 +539,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ColumnSortMapItem" /> <c>&lt;xne:col></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xne:colSortMap")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColumnSortMap : OpenXmlCompositeElement
     {
         /// <summary>
@@ -597,12 +577,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("ref")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Ref
         {
             get => GetAttribute<StringValue>();
@@ -613,12 +588,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
         /// <para>Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("count")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -654,9 +624,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xne:row.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xne:row")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RowSortMapItem : SortMapItemType
     {
         /// <summary>
@@ -681,9 +649,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xne:col.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xne:col")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColumnSortMapItem : SortMapItemType
     {
         /// <summary>
@@ -721,12 +687,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
         /// <para>New Value</para>
         /// <para>Represents the following attribute in the schema: newVal</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("newVal")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? NewVal
         {
             get => GetAttribute<UInt32Value>();
@@ -737,12 +698,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
         /// <para>Old Value</para>
         /// <para>Represents the following attribute in the schema: oldVal</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("oldVal")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? OldVal
         {
             get => GetAttribute<UInt32Value>();

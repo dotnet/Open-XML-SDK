@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -20,9 +22,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.SVG
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is asvg:svgBlip.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("asvg:svgBlip")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SVGBlip : OpenXmlLeafElement
     {
         /// <summary>
@@ -39,12 +39,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.SVG
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("r:embed")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Embed
         {
             get => GetAttribute<StringValue>();
@@ -58,12 +53,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.SVG
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("r:link")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Link
         {
             get => GetAttribute<StringValue>();

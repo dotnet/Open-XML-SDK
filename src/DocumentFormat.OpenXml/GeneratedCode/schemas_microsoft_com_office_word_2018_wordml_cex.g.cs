@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -28,9 +30,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList" /> <c>&lt;w16cex:extLst></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w16cex:commentsExtensible")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentsExtensible : OpenXmlPartRootElement
     {
         /// <summary>
@@ -124,9 +124,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList" /> <c>&lt;w16cex:extLst></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w16cex:commentExtensible")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentExtensible : OpenXmlCompositeElement
     {
         /// <summary>
@@ -167,12 +165,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
         /// <remark>
         /// xmlns:w16cex=http://schemas.microsoft.com/office/word/2018/wordml/cex
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w16cex:durableId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? DurableId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -186,12 +179,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
         /// <remark>
         /// xmlns:w16cex=http://schemas.microsoft.com/office/word/2018/wordml/cex
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w16cex:dateUtc")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DateTimeValue? DateUtc
         {
             get => GetAttribute<DateTimeValue>();
@@ -205,12 +193,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
         /// <remark>
         /// xmlns:w16cex=http://schemas.microsoft.com/office/word/2018/wordml/cex
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w16cex:intelligentPlaceholder")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? IntelligentPlaceholder
         {
             get => GetAttribute<OnOffValue>();
@@ -272,9 +255,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2021))
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Word.ExtensionList.Extension" /> <c>&lt;w16cur:ext></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w16cex:extLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>

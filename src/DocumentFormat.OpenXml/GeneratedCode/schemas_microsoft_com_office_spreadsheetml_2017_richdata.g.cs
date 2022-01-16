@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -20,9 +22,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:rvb.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xlrd:rvb")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RichValueBlock : OpenXmlLeafElement
     {
         /// <summary>
@@ -36,12 +36,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
         /// <para>i, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: i</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("i")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? I
         {
             get => GetAttribute<UInt32Value>();
@@ -76,9 +71,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValue" /> <c>&lt;xlrd:rv></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xlrd:rvData")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RichValueData : OpenXmlPartRootElement
     {
         /// <summary>
@@ -116,12 +109,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>count, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("count")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -194,9 +182,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueStructure" /> <c>&lt;xlrd:s></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xlrd:rvStructures")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RichValueStructures : OpenXmlPartRootElement
     {
         /// <summary>
@@ -234,12 +220,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>count, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("count")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -312,9 +293,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData.Value" /> <c>&lt;xlrd:v></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xlrd:rv")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RichValue : OpenXmlCompositeElement
     {
         /// <summary>
@@ -352,12 +331,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>s, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: s</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("s")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? S
         {
             get => GetAttribute<UInt32Value>();
@@ -411,9 +385,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xlrd:extLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -474,9 +446,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:fb.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xlrd:fb")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RichValueFallback : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -503,12 +473,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>t, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("t")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueFallbackType>? T
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueFallbackType>>();
@@ -533,9 +498,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:v.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xlrd:v")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Value : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -580,9 +543,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData.Key" /> <c>&lt;xlrd:k></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xlrd:s")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RichValueStructure : OpenXmlCompositeElement
     {
         /// <summary>
@@ -620,12 +581,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>t, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("t")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? T
         {
             get => GetAttribute<StringValue>();
@@ -658,9 +614,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:k.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xlrd:k")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Key : OpenXmlLeafElement
     {
         /// <summary>
@@ -674,12 +628,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>n, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: n</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("n")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? N
         {
             get => GetAttribute<StringValue>();
@@ -690,12 +639,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>t, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("t")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueValueType>? T
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueValueType>>();

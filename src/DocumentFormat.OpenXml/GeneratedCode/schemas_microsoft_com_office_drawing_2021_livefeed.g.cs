@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -26,9 +28,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("alf:Normal")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BackgroundNormalProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -102,9 +102,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("alf:Removed")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BackgroundRemovedProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -178,9 +176,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("alf:Blur")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BackgroundBlurProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -254,9 +250,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("alf:Custom")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BackgroundCustomProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -331,9 +325,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties" /> <c>&lt;alf:backgroundProps></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("alf:liveFeedProps")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LiveFeedProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -422,9 +414,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("alf:extLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -495,9 +485,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundRemovedProperties" /> <c>&lt;alf:Removed></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("alf:backgroundProps")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LiveFeedBackgroundProperties : OpenXmlCompositeElement
     {
         /// <summary>

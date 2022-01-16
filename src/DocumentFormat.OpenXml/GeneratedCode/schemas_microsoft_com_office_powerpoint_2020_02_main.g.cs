@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -27,9 +29,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTag" /> <c>&lt;p202:designTag></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("p202:designTagLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DesignerTagList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -91,9 +91,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList" /> <c>&lt;p202:designTagLst></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("p202:designPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DesignerDrawingProps : OpenXmlCompositeElement
     {
         /// <summary>
@@ -131,12 +129,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
         /// <para>edtDesignElem, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: edtDesignElem</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("edtDesignElem")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public BooleanValue? EdtDesignElem
         {
             get => GetAttribute<BooleanValue>();
@@ -194,9 +187,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p202:designTag.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("p202:designTag")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DesignerTag : OpenXmlLeafElement
     {
         /// <summary>
@@ -210,12 +201,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
         /// <para>name, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("name")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -226,12 +212,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
         /// <para>val, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -269,9 +250,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("p202:extLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>

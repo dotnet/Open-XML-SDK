@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -19,9 +21,7 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2020.OEmbed
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is woe:oembed.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("woe:oembed")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OEmbed : OpenXmlLeafElement
     {
         /// <summary>
@@ -35,12 +35,7 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2020.OEmbed
         /// <para>oEmbedUrl, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: oEmbedUrl</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("oEmbedUrl")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? OEmbedUrl
         {
             get => GetAttribute<StringValue>();
@@ -51,12 +46,7 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2020.OEmbed
         /// <para>mediaType, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: mediaType</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("mediaType")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? MediaType
         {
             get => GetAttribute<StringValue>();
@@ -67,12 +57,7 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2020.OEmbed
         /// <para>picLocksAutoForOEmbed, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: picLocksAutoForOEmbed</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("picLocksAutoForOEmbed")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public BooleanValue? PicLocksAutoForOEmbed
         {
             get => GetAttribute<BooleanValue>();

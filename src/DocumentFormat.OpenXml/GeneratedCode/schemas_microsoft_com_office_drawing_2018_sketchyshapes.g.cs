@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -20,9 +22,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ask:lineSketchNone.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ask:lineSketchNone")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LineSketchNoneEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -48,9 +48,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ask:lineSketchCurved.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ask:lineSketchCurved")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LineSketchCurvedEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -76,9 +74,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ask:lineSketchFreehand.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ask:lineSketchFreehand")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LineSketchFreehandEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -104,9 +100,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ask:lineSketchScribble.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ask:lineSketchScribble")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LineSketchScribbleEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -162,9 +156,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchSeed" /> <c>&lt;ask:seed></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ask:lineSketchStyleProps")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LineSketchStyleProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -202,12 +194,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         /// <para>sd, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: sd</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("sd")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Sd
         {
             get => GetAttribute<UInt32Value>();
@@ -260,9 +247,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchScribbleEmpty" /> <c>&lt;ask:lineSketchScribble></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ask:type")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LineSketchTypeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -381,9 +366,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ask:seed.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ask:seed")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LineSketchSeed : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -429,9 +412,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ask:extLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>

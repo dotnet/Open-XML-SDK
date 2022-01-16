@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -26,9 +28,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList" /> <c>&lt;xda:extLst></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xda:dynamicArrayProperties")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DynamicArrayProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -66,12 +66,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
         /// <para>fDynamic, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: fDynamic</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("fDynamic")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public BooleanValue? FDynamic
         {
             get => GetAttribute<BooleanValue>();
@@ -82,12 +77,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
         /// <para>fCollapsed, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: fCollapsed</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("fCollapsed")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public BooleanValue? FCollapsed
         {
             get => GetAttribute<BooleanValue>();
@@ -137,9 +127,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xda:extLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>

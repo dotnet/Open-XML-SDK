@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -92,9 +94,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.UIObject" /> <c>&lt;xvml:UIObj></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:ClientData")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ClientData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -132,12 +132,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         /// <para>Object type</para>
         /// <para>Represents the following attribute in the schema: ObjectType</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("ObjectType")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues>? ObjectType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues>>();
@@ -303,9 +298,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:MoveWithCells.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:MoveWithCells")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MoveWithCells : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -344,9 +337,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:SizeWithCells.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:SizeWithCells")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ResizeWithCells : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -385,9 +376,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Locked.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:Locked")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Locked : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -426,9 +415,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:DefaultSize.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:DefaultSize")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DefaultSize : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -467,9 +454,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:PrintObject.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:PrintObject")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PrintObject : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -508,9 +493,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Disabled.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:Disabled")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Disabled : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -549,9 +532,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:AutoFill.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:AutoFill")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AutoFill : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -590,9 +571,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:AutoLine.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:AutoLine")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AutoLine : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -631,9 +610,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:AutoPict.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:AutoPict")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AutoSizePicture : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -672,9 +649,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:LockText.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:LockText")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LockText : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -713,9 +688,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:JustLastX.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:JustLastX")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class JustifyLastLine : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -754,9 +727,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:SecretEdit.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:SecretEdit")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SecretEdit : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -795,9 +766,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Default.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:Default")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DefaultButton : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -836,9 +805,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Help.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:Help")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HelpButton : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -877,9 +844,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Cancel.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:Cancel")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CancelButton : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -918,9 +883,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Dismiss.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:Dismiss")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DismissButton : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -959,9 +922,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Visible.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:Visible")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Visible : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1000,9 +961,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:RowHidden.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:RowHidden")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RowHidden : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1041,9 +1000,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ColHidden.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:ColHidden")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColumnHidden : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1082,9 +1039,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:MultiLine.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:MultiLine")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MultiLine : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1123,9 +1078,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:VScroll.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:VScroll")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VerticalScrollBar : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1164,9 +1117,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ValidIds.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:ValidIds")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ValidIds : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1205,9 +1156,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:NoThreeD2.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:NoThreeD2")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Disable3DForListBoxAndDropDown : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1246,9 +1195,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Colored.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:Colored")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Colored : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1287,9 +1234,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:NoThreeD.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:NoThreeD")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Disable3D : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1328,9 +1273,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:FirstButton.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:FirstButton")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FirstButton : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1369,9 +1312,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Horiz.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:Horiz")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HorizontalScrollBar : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1410,9 +1351,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:MapOCX.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:MapOCX")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MapOcxControl : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1451,9 +1390,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Camera.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:Camera")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CameraObject : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1492,9 +1429,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:RecalcAlways.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:RecalcAlways")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RecalculateAlways : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1533,9 +1468,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:AutoScale.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:AutoScale")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AutoScaleFont : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1574,9 +1507,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:DDE.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:DDE")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DdeObject : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1615,9 +1546,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:UIObj.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:UIObj")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class UIObject : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1656,9 +1585,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Anchor.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:Anchor")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Anchor : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1696,9 +1623,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:TextHAlign.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:TextHAlign")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HorizontalTextAlignment : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1736,9 +1661,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:TextVAlign.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:TextVAlign")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VerticalTextAlignment : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1776,9 +1699,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:FmlaRange.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:FmlaRange")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FormulaRange : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1816,9 +1737,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:SelType.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:SelType")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SelectionType : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1856,9 +1775,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:MultiSel.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:MultiSel")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MultiSelections : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1896,9 +1813,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:LCT.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:LCT")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ListBoxCallbackType : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1936,9 +1851,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ListItem.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:ListItem")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ListItem : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1976,9 +1889,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:DropStyle.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:DropStyle")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DropStyle : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2016,9 +1927,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:FmlaLink.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:FmlaLink")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FormulaLink : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2056,9 +1965,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:FmlaPict.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:FmlaPict")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FormulaPicture : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2096,9 +2003,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:FmlaGroup.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:FmlaGroup")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FormulaGroup : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2136,9 +2041,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ScriptText.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:ScriptText")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ScriptText : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2176,9 +2079,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ScriptExtended.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:ScriptExtended")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ScriptExtended : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2216,9 +2117,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:FmlaTxbx.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:FmlaTxbx")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FormulaTextBox : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2256,9 +2155,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:FmlaMacro.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:FmlaMacro")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FormulaMacro : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2297,9 +2194,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Accel.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:Accel")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AcceleratorPrimary : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2338,9 +2233,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Accel2.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:Accel2")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AcceleratorSecondary : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2379,9 +2272,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Row.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:Row")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentRowTarget : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2420,9 +2311,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Column.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:Column")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentColumnTarget : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2461,9 +2350,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:VTEdit.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:VTEdit")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class InputValidationType : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2502,9 +2389,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:WidthMin.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:WidthMin")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MinDropDownWidth : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2543,9 +2428,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Sel.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:Sel")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SelectionEntry : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2584,9 +2467,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:DropLines.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:DropLines")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DropLines : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2625,9 +2506,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Checked.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:Checked")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Checked : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2666,9 +2545,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Val.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:Val")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ScrollBarPosition : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2707,9 +2584,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Min.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:Min")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ScrollBarMin : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2748,9 +2623,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Max.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:Max")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ScrollBarMax : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2789,9 +2662,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Inc.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:Inc")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ScrollBarIncrement : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2830,9 +2701,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Page.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:Page")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ScrollBarPageIncrement : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2871,9 +2740,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Dx.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:Dx")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ScrollBarWidth : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2912,9 +2779,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:CF.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:CF")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ClipboardFormat : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2953,9 +2818,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ScriptLanguage.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:ScriptLanguage")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ScriptLanguage : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2994,9 +2857,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ScriptLocation.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xvml:ScriptLocation")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ScriptLocation : OpenXmlLeafTextElement
     {
         /// <summary>

@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -19,9 +21,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:cmAuthorMkLst.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("pc:cmAuthorMkLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentAuthorMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -75,9 +75,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:cmMkLst.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("pc:cmMkLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -131,9 +129,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:tagMkLst.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("pc:tagMkLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StringTagMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -187,9 +183,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:custShowMkLst.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("pc:custShowMkLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomShowMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -243,9 +237,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:docMkLst.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("pc:docMkLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DocumentMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -299,9 +291,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:sectionMkLst.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("pc:sectionMkLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SectionMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -355,9 +345,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:sldBaseMkLst.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("pc:sldBaseMkLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SlideBaseMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -411,9 +399,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:sldLayoutMkLst.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("pc:sldLayoutMkLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SlideLayoutMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -467,9 +453,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:sldMasterMkLst.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("pc:sldMasterMkLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MainMasterMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -523,9 +507,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:sldMkLst.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("pc:sldMkLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SlideMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -579,9 +561,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:sldPosMkLst.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("pc:sldPosMkLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SlidePosMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -635,9 +615,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:notesMkLst.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("pc:notesMkLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NotesMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -691,9 +669,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:notesTxtMkLst.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("pc:notesTxtMkLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NotesTextMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -747,9 +723,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:notesMasterMkLst.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("pc:notesMasterMkLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NotesMasterMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -803,9 +777,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:handoutMkLst.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("pc:handoutMkLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HandoutMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -859,9 +831,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:animEffectMkLst.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("pc:animEffectMkLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AnimEffectMkLstAnimationEffectMonikerList : OpenXmlAnimationEffectMonikerListElement
     {
         /// <summary>
@@ -915,9 +885,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:animEffectParentMkLst.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("pc:animEffectParentMkLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AnimEffectParentMkLstAnimationEffectMonikerList : OpenXmlAnimationEffectMonikerListElement
     {
         /// <summary>
@@ -1015,9 +983,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:tkAppMkLst.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("pc:tkAppMkLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OsfTaskPaneAppMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1071,9 +1037,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:tocMkLst.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("pc:tocMkLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SummaryZoomMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1127,9 +1091,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:sectionLnkObjMkLst.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("pc:sectionLnkObjMkLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SectionLinkObjMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1183,9 +1145,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:designTagMkLst.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("pc:designTagMkLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DesignerTagMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1239,9 +1199,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:cXmlMkLst.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("pc:cXmlMkLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomXmlPartMonikerList : OpenXmlCompositeElement
     {
         /// <summary>

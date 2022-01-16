@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Drawing.Diagrams;
@@ -27,9 +29,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfo" /> <c>&lt;dgm1611:autoBuNodeInfo></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("dgm1611:autoBuNodeInfoLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NumberDiagramInfoList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -93,9 +93,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoBullet" /> <c>&lt;a:buNone></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("dgm1611:buPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DiagramAutoBullet : OpenXmlCompositeElement
     {
         /// <summary>
@@ -133,12 +131,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         /// <para>prefix, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: prefix</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("prefix")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? AutoBulletPrefix
         {
             get => GetAttribute<StringValue>();
@@ -149,12 +142,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         /// <para>leadZeros, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: leadZeros</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("leadZeros")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public BooleanValue? LeadZeros
         {
             get => GetAttribute<BooleanValue>();
@@ -252,9 +240,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet" /> <c>&lt;dgm1611:buPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("dgm1611:autoBuNodeInfo")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NumberDiagramInfo : OpenXmlCompositeElement
     {
         /// <summary>
@@ -292,12 +278,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         /// <para>lvl, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: lvl</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("lvl")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Lvl
         {
             get => GetAttribute<UInt32Value>();
@@ -308,12 +289,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         /// <para>ptType, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: ptType</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("ptType")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.STorageType>? PtType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.STorageType>>();

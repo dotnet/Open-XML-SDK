@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -28,9 +30,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties" /> <c>&lt;a3danim:animPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("a3danim:embedAnim")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EmbeddedAnimation : OpenXmlCompositeElement
     {
         /// <summary>
@@ -68,12 +68,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
         /// <para>animId, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: animId</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("animId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? AnimId
         {
             get => GetAttribute<UInt32Value>();
@@ -134,9 +129,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a3danim:posterFrame.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("a3danim:posterFrame")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PosterFrame : OpenXmlLeafElement
     {
         /// <summary>
@@ -150,12 +143,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>animId, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: animId</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("animId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? AnimId
         {
             get => GetAttribute<UInt32Value>();
@@ -166,12 +154,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>frame, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: frame</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("frame")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? Frame
         {
             get => GetAttribute<Int32Value>();
@@ -209,9 +192,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList" /> <c>&lt;aanim:extLst></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("a3danim:animPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AnimationProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -249,12 +230,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>name, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("name")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -265,12 +241,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>length, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: length</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("length")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Length
         {
             get => GetAttribute<StringValue>();
@@ -281,12 +252,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>count, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("count")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Count
         {
             get => GetAttribute<StringValue>();
@@ -297,12 +263,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>auto, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: auto</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("auto")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public BooleanValue? Auto
         {
             get => GetAttribute<BooleanValue>();
@@ -313,12 +274,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>offset, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: offset</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("offset")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Offset
         {
             get => GetAttribute<StringValue>();
@@ -329,12 +285,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>st, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: st</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("st")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? St
         {
             get => GetAttribute<StringValue>();
@@ -345,12 +296,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>end, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: end</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("end")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? End
         {
             get => GetAttribute<StringValue>();
@@ -415,9 +361,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Animation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("a3danim:extLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>

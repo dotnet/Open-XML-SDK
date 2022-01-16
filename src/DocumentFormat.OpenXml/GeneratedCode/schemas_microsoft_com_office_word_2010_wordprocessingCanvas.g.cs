@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Drawing.Pictures;
@@ -37,9 +39,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape" /> <c>&lt;wps:wsp></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("wpc:wpc")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WordprocessingCanvas : OpenXmlCompositeElement
     {
         /// <summary>
@@ -150,9 +150,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("wpc:bg")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BackgroundFormatting : OpenXmlCompositeElement
     {
         /// <summary>
@@ -241,9 +239,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Outline" /> <c>&lt;a:ln></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("wpc:whole")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WholeFormatting : OpenXmlCompositeElement
     {
         /// <summary>
@@ -331,9 +327,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D" /> <c>&lt;wpg:xfrm></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("wpc:graphicFrame")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GraphicFrameType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -467,9 +461,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("wpc:extLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>

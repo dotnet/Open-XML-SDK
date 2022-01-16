@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -19,9 +21,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a1611:picAttrSrcUrl.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("a1611:picAttrSrcUrl")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PictureAttributionSourceURL : OpenXmlLeafElement
     {
         /// <summary>
@@ -38,12 +38,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("r:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();

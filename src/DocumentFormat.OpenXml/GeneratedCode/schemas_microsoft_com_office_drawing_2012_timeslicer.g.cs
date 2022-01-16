@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -26,9 +28,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.OfficeArtExtensionList" /> <c>&lt;tsle:extLst></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("tsle:timeslicer")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TimeSlicer : OpenXmlCompositeElement
     {
         /// <summary>
@@ -66,12 +66,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
         /// <para>name, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("name")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -123,9 +118,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("tsle:extLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>

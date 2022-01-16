@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -27,9 +29,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Person" /> <c>&lt;xltc:person></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xltc:personList")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PersonList : OpenXmlPartRootElement
     {
         /// <summary>
@@ -124,9 +124,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedComment" /> <c>&lt;xltc:threadedComment></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xltc:ThreadedComments")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ThreadedComments : OpenXmlPartRootElement
     {
         /// <summary>
@@ -220,9 +218,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList" /> <c>&lt;xltc:extLst></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xltc:person")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Person : OpenXmlCompositeElement
     {
         /// <summary>
@@ -260,12 +256,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// <para>displayName, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: displayName</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("displayName")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? DisplayName
         {
             get => GetAttribute<StringValue>();
@@ -276,12 +267,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// <para>id, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -292,12 +278,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// <para>userId, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: userId</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("userId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? UserId
         {
             get => GetAttribute<StringValue>();
@@ -308,12 +289,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// <para>providerId, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: providerId</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("providerId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ProviderId
         {
             get => GetAttribute<StringValue>();
@@ -372,9 +348,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xltc:extLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -443,9 +417,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions" /> <c>&lt;xltc:mentions></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xltc:threadedComment")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ThreadedComment : OpenXmlCompositeElement
     {
         /// <summary>
@@ -483,12 +455,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>ref, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("ref")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Ref
         {
             get => GetAttribute<StringValue>();
@@ -499,12 +466,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>dT, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: dT</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("dT")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DateTimeValue? DT
         {
             get => GetAttribute<DateTimeValue>();
@@ -515,12 +477,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>personId, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: personId</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("personId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? PersonId
         {
             get => GetAttribute<StringValue>();
@@ -531,12 +488,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>id, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -547,12 +499,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>parentId, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: parentId</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("parentId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ParentId
         {
             get => GetAttribute<StringValue>();
@@ -563,12 +510,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>done, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: done</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("done")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public BooleanValue? Done
         {
             get => GetAttribute<BooleanValue>();
@@ -657,9 +599,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xltc:text.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xltc:text")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ThreadedCommentText : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -704,9 +644,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Mention" /> <c>&lt;xltc:mention></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xltc:mentions")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ThreadedCommentMentions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -761,9 +699,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xltc:mention.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xltc:mention")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Mention : OpenXmlLeafElement
     {
         /// <summary>
@@ -777,12 +713,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>mentionpersonId, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: mentionpersonId</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("mentionpersonId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? MentionpersonId
         {
             get => GetAttribute<StringValue>();
@@ -793,12 +724,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>mentionId, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: mentionId</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("mentionId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? MentionId
         {
             get => GetAttribute<StringValue>();
@@ -809,12 +735,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>startIndex, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: startIndex</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("startIndex")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? StartIndex
         {
             get => GetAttribute<UInt32Value>();
@@ -825,12 +746,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>length, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: length</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("length")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Length
         {
             get => GetAttribute<UInt32Value>();

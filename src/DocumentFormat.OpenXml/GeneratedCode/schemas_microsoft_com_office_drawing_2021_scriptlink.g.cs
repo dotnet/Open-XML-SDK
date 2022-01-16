@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -26,9 +28,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink.OfficeArtExtensionList" /> <c>&lt;asl:extLst></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("asl:scriptLink")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ScriptLink : OpenXmlCompositeElement
     {
         /// <summary>
@@ -66,12 +66,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink
         /// <para>val, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -120,9 +115,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("asl:extLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>

@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -19,9 +21,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w10:bordertop.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w10:bordertop")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TopBorder : BorderType
     {
         /// <summary>
@@ -46,9 +46,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w10:borderleft.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w10:borderleft")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LeftBorder : BorderType
     {
         /// <summary>
@@ -73,9 +71,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w10:borderright.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w10:borderright")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RightBorder : BorderType
     {
         /// <summary>
@@ -100,9 +96,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w10:borderbottom.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w10:borderbottom")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BottomBorder : BorderType
     {
         /// <summary>
@@ -140,12 +134,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         /// <para>Border Style</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("type")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.BorderValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.BorderValues>>();
@@ -156,12 +145,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         /// <para>Border Width</para>
         /// <para>Represents the following attribute in the schema: width</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("width")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public IntegerValue? Width
         {
             get => GetAttribute<IntegerValue>();
@@ -172,12 +156,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         /// <para>Border shadow</para>
         /// <para>Represents the following attribute in the schema: shadow</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("shadow")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public TrueFalseValue? Shadow
         {
             get => GetAttribute<TrueFalseValue>();
@@ -202,9 +181,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w10:wrap.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w10:wrap")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TextWrap : OpenXmlLeafElement
     {
         /// <summary>
@@ -218,12 +195,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         /// <para>Wrapping type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("type")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapValues>>();
@@ -234,12 +206,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         /// <para>Wrapping side</para>
         /// <para>Represents the following attribute in the schema: side</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("side")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapSideValues>? Side
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapSideValues>>();
@@ -250,12 +217,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         /// <para>Horizontal Positioning Base</para>
         /// <para>Represents the following attribute in the schema: anchorx</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("anchorx")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.HorizontalAnchorValues>? AnchorX
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.HorizontalAnchorValues>>();
@@ -266,12 +228,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         /// <para>Vertical Positioning Base</para>
         /// <para>Represents the following attribute in the schema: anchory</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("anchory")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.VerticalAnchorValues>? AnchorY
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.VerticalAnchorValues>>();
@@ -298,9 +255,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w10:anchorlock.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w10:anchorlock")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AnchorLock : OpenXmlLeafElement
     {
         /// <summary>
