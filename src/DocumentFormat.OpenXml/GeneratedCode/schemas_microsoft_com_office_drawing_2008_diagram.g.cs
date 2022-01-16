@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Drawing.Diagrams;
@@ -27,9 +29,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.ShapeTree" /> <c>&lt;dsp:spTree></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("dsp:drawing")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Drawing : OpenXmlPartRootElement
     {
         /// <summary>
@@ -128,9 +128,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dsp:dataModelExt.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("dsp:dataModelExt")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataModelExtensionBlock : OpenXmlLeafElement
     {
         /// <summary>
@@ -144,12 +142,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>relId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: relId</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("relId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? RelId
         {
             get => GetAttribute<StringValue>();
@@ -160,12 +153,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>minVer, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: minVer</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("minVer")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? MinVer
         {
             get => GetAttribute<StringValue>();
@@ -202,9 +190,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("dsp:cNvPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -242,12 +228,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>Application defined unique identifier.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
@@ -258,12 +239,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>Name compatible with Object Model (non-unique).</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("name")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -274,12 +250,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>Description of the drawing element.</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("descr")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -290,12 +261,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>Flag determining to show or hide this element.</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("hidden")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
@@ -306,12 +272,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>Title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("title")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Title
         {
             get => GetAttribute<StringValue>();
@@ -401,9 +362,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeLocks" /> <c>&lt;a:spLocks></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("dsp:cNvSpPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -441,12 +400,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Text Box</para>
         /// <para>Represents the following attribute in the schema: txBox</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("txBox")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public BooleanValue? TextBox
         {
             get => GetAttribute<BooleanValue>();
@@ -511,9 +465,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingShapeProperties" /> <c>&lt;dsp:cNvSpPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("dsp:nvSpPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShapeNonVisualProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -616,9 +568,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("dsp:spPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -656,12 +606,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("bwMode")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -762,9 +707,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectReference" /> <c>&lt;a:effectRef></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("dsp:style")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShapeStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -885,9 +828,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("dsp:txBody")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TextBody : OpenXmlCompositeElement
     {
         /// <summary>
@@ -979,9 +920,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("dsp:txXfrm")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Transform2D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1019,12 +958,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("rot")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? Rotation
         {
             get => GetAttribute<Int32Value>();
@@ -1035,12 +969,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Horizontal Flip</para>
         /// <para>Represents the following attribute in the schema: flipH</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("flipH")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public BooleanValue? HorizontalFlip
         {
             get => GetAttribute<BooleanValue>();
@@ -1051,12 +980,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Vertical Flip</para>
         /// <para>Represents the following attribute in the schema: flipV</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("flipV")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public BooleanValue? VerticalFlip
         {
             get => GetAttribute<BooleanValue>();
@@ -1122,9 +1046,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("dsp:extLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1192,9 +1114,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("dsp:cNvGrpSpPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualGroupDrawingShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1284,9 +1204,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.NonVisualGroupDrawingShapeProperties" /> <c>&lt;dsp:cNvGrpSpPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("dsp:nvGrpSpPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GroupShapeNonVisualProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1385,9 +1303,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("dsp:grpSpPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1425,12 +1341,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("bwMode")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -1519,9 +1430,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.ShapeNonVisualProperties" /> <c>&lt;dsp:nvSpPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("dsp:sp")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Shape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1559,12 +1468,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>modelId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: modelId</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("modelId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ModelId
         {
             get => GetAttribute<StringValue>();
@@ -1700,9 +1604,7 @@ union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Shape" /> <c>&lt;dsp:sp></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("dsp:grpSp")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GroupShape : GroupShapeType
     {
         /// <summary>
@@ -1773,9 +1675,7 @@ union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Shape" /> <c>&lt;dsp:sp></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("dsp:spTree")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShapeTree : GroupShapeType
     {
         /// <summary>

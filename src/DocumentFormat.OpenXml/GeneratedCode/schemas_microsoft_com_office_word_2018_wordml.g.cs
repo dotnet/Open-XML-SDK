@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -20,9 +22,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.ExtensionList
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w16cur:ext.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w16cur:ext")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Extension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -63,12 +63,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.ExtensionList
         /// <remark>
         /// xmlns:w16cur=http://schemas.microsoft.com/office/word/2018/wordml
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w16cur:uri")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();

@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -20,9 +22,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp14:pctPosHOffset.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("wp14:pctPosHOffset")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PercentagePositionHeightOffset : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -62,9 +62,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp14:pctPosVOffset.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("wp14:pctPosVOffset")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PercentagePositionVerticalOffset : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -110,9 +108,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth" /> <c>&lt;wp14:pctWidth></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("wp14:sizeRelH")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RelativeWidth : OpenXmlCompositeElement
     {
         /// <summary>
@@ -150,12 +146,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         /// <para>relativeFrom, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: relativeFrom</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("relativeFrom")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues>? ObjectId
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues>>();
@@ -208,9 +199,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight" /> <c>&lt;wp14:pctHeight></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("wp14:sizeRelV")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RelativeHeight : OpenXmlCompositeElement
     {
         /// <summary>
@@ -248,12 +237,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>relativeFrom, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: relativeFrom</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("relativeFrom")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues>? RelativeFrom
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues>>();
@@ -300,9 +284,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp14:pctWidth.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("wp14:pctWidth")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PercentageWidth : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -342,9 +324,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp14:pctHeight.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("wp14:pctHeight")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PercentageHeight : OpenXmlLeafTextElement
     {
         /// <summary>

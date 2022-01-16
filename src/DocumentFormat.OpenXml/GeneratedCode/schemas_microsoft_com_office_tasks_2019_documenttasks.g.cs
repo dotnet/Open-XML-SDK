@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -27,9 +29,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.Task" /> <c>&lt;t:Task></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("t:Tasks")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Tasks : OpenXmlPartRootElement
     {
         /// <summary>
@@ -125,9 +125,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistory" /> <c>&lt;t:History></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("t:Task")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Task : OpenXmlCompositeElement
     {
         /// <summary>
@@ -165,12 +163,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// <para>id, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -253,9 +246,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.OfficeExtLst.Extension" /> <c>&lt;oel:ext></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("t:extLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -317,9 +308,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.CommentAnchor" /> <c>&lt;t:Comment></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("t:Anchor")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskAnchor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -408,9 +397,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistoryEvent" /> <c>&lt;t:Event></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("t:History")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskHistory : OpenXmlCompositeElement
     {
         /// <summary>
@@ -484,9 +471,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.UnassignTaskUser" /> <c>&lt;t:Unassign></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("t:Event")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskHistoryEvent : OpenXmlCompositeElement
     {
         /// <summary>
@@ -524,12 +509,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>time, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: time</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("time")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DateTimeValue? Time
         {
             get => GetAttribute<DateTimeValue>();
@@ -540,12 +520,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>id, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -638,9 +613,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Attribution.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("t:Attribution")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AttributionTaskUser : OpenXmlTaskUserElement
     {
         /// <summary>
@@ -666,9 +639,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Assign.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("t:Assign")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AssignTaskUser : OpenXmlTaskUserElement
     {
         /// <summary>
@@ -694,9 +665,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Unassign.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("t:Unassign")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class UnassignTaskUser : OpenXmlTaskUserElement
     {
         /// <summary>
@@ -735,12 +704,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>userId, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: userId</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("userId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? UserId
         {
             get => GetAttribute<StringValue>();
@@ -751,12 +715,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>userName, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: userName</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("userName")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? UserName
         {
             get => GetAttribute<StringValue>();
@@ -767,12 +726,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>userProvider, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: userProvider</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("userProvider")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? UserProvider
         {
             get => GetAttribute<StringValue>();
@@ -803,9 +757,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Create.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("t:Create")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskCreateEventInfo : OpenXmlLeafElement
     {
         /// <summary>
@@ -831,9 +783,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:SetTitle.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("t:SetTitle")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskTitleEventInfo : OpenXmlLeafElement
     {
         /// <summary>
@@ -847,12 +797,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>title, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("title")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Title
         {
             get => GetAttribute<StringValue>();
@@ -880,9 +825,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Schedule.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("t:Schedule")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskScheduleEventInfo : OpenXmlLeafElement
     {
         /// <summary>
@@ -896,12 +839,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>startDate, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: startDate</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("startDate")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DateTimeValue? StartDate
         {
             get => GetAttribute<DateTimeValue>();
@@ -912,12 +850,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>dueDate, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: dueDate</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("dueDate")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DateTimeValue? DueDate
         {
             get => GetAttribute<DateTimeValue>();
@@ -943,9 +876,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Progress.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("t:Progress")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskProgressEventInfo : OpenXmlLeafElement
     {
         /// <summary>
@@ -959,12 +890,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>percentComplete, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: percentComplete</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("percentComplete")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? PercentComplete
         {
             get => GetAttribute<Int32Value>();
@@ -993,9 +919,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Priority.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("t:Priority")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskPriorityEventInfo : OpenXmlLeafElement
     {
         /// <summary>
@@ -1009,12 +933,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>value, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("value")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? Value
         {
             get => GetAttribute<Int32Value>();
@@ -1043,9 +962,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Delete.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("t:Delete")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskDeleteEventInfo : OpenXmlLeafElement
     {
         /// <summary>
@@ -1071,9 +988,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Undelete.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("t:Undelete")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskUndeleteEventInfo : OpenXmlLeafElement
     {
         /// <summary>
@@ -1099,9 +1014,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:UnassignAll.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("t:UnassignAll")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskUnassignAll : OpenXmlLeafElement
     {
         /// <summary>
@@ -1127,9 +1040,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Undo.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("t:Undo")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskUndo : OpenXmlLeafElement
     {
         /// <summary>
@@ -1143,12 +1054,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>id, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -1177,9 +1083,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Comment.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("t:Comment")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentAnchor : OpenXmlLeafElement
     {
         /// <summary>
@@ -1193,12 +1097,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>id, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();

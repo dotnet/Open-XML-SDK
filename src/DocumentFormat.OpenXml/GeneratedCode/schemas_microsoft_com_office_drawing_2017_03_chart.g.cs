@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing.Charts;
 using DocumentFormat.OpenXml.Framework;
@@ -26,9 +28,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse" /> <c>&lt;c16r3:dispNaAsBlank></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("c16r3:dataDisplayOptions16")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataDisplayOptions16 : OpenXmlCompositeElement
     {
         /// <summary>
@@ -96,9 +96,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16r3:dispNaAsBlank.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("c16r3:dispNaAsBlank")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BooleanFalse : OpenXmlLeafElement
     {
         /// <summary>
@@ -115,12 +113,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
         /// <remark>
         /// xmlns:c16r3=http://schemas.microsoft.com/office/drawing/2017/03/chart
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("c16r3:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public BooleanValue? Val
         {
             get => GetAttribute<BooleanValue>();

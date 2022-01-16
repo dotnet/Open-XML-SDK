@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -32,9 +34,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionReferenceList" /> <c>&lt;we:alternateReferences></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("we:webextension")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebExtension : OpenXmlPartRootElement
     {
         /// <summary>
@@ -72,12 +72,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -88,12 +83,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>frozen, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: frozen</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("frozen")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public BooleanValue? Frozen
         {
             get => GetAttribute<BooleanValue>();
@@ -247,9 +237,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is we:webextensionref.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("we:webextensionref")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebExtensionReference : OpenXmlLeafElement
     {
         /// <summary>
@@ -266,12 +254,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("r:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -299,9 +282,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is we:property.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("we:property")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebExtensionProperty : OpenXmlLeafElement
     {
         /// <summary>
@@ -315,12 +296,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>name, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("name")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -331,12 +307,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>value, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("value")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Value
         {
             get => GetAttribute<StringValue>();
@@ -374,9 +345,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("we:extLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -443,9 +412,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList" /> <c>&lt;we:extLst></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("we:binding")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebExtensionBinding : OpenXmlCompositeElement
     {
         /// <summary>
@@ -483,12 +450,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -499,12 +461,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>type, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("type")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Type
         {
             get => GetAttribute<StringValue>();
@@ -515,12 +472,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>appref, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: appref</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("appref")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? AppReference
         {
             get => GetAttribute<StringValue>();
@@ -580,9 +532,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList" /> <c>&lt;we:extLst></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("we:reference")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebExtensionStoreReference : OpenXmlCompositeElement
     {
         /// <summary>
@@ -620,12 +570,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -636,12 +581,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>version, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: version</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("version")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Version
         {
             get => GetAttribute<StringValue>();
@@ -652,12 +592,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>store, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: store</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("store")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Store
         {
             get => GetAttribute<StringValue>();
@@ -668,12 +603,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>storeType, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: storeType</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("storeType")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? StoreType
         {
             get => GetAttribute<StringValue>();
@@ -732,9 +662,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference" /> <c>&lt;we:reference></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("we:alternateReferences")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebExtensionReferenceList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -795,9 +723,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionProperty" /> <c>&lt;we:property></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("we:properties")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebExtensionPropertyBag : OpenXmlCompositeElement
     {
         /// <summary>
@@ -858,9 +784,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionBinding" /> <c>&lt;we:binding></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("we:bindings")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebExtensionBindingList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -938,9 +862,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TintEffect" /> <c>&lt;a:tint></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("we:snapshot")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Snapshot : OpenXmlCompositeElement
     {
         /// <summary>
@@ -981,12 +903,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("r:embed")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Embed
         {
             get => GetAttribute<StringValue>();
@@ -1000,12 +917,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("r:link")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Link
         {
             get => GetAttribute<StringValue>();
@@ -1016,12 +928,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Compression state for blips.</para>
         /// <para>Represents the following attribute in the schema: cstate</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("cstate")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues>? CompressionState
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues>>();

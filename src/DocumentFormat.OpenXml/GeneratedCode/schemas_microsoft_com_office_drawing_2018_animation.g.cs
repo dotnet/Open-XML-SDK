@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -26,9 +28,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList" /> <c>&lt;aanim:extLst></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("aanim:animPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AnimationProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -66,12 +66,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
         /// <para>name, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("name")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -82,12 +77,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
         /// <para>length, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: length</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("length")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Length
         {
             get => GetAttribute<StringValue>();
@@ -98,12 +88,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
         /// <para>count, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("count")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Count
         {
             get => GetAttribute<StringValue>();
@@ -114,12 +99,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
         /// <para>auto, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: auto</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("auto")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public BooleanValue? Auto
         {
             get => GetAttribute<BooleanValue>();
@@ -130,12 +110,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
         /// <para>offset, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: offset</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("offset")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Offset
         {
             get => GetAttribute<StringValue>();
@@ -146,12 +121,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
         /// <para>st, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: st</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("st")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? St
         {
             get => GetAttribute<StringValue>();
@@ -162,12 +132,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
         /// <para>end, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: end</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("end")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? End
         {
             get => GetAttribute<StringValue>();
@@ -232,9 +197,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Animation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("aanim:extLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>

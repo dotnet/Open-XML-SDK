@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -28,9 +30,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionTaskpane" /> <c>&lt;wetp:taskpane></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("wetp:taskpanes")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Taskpanes : OpenXmlPartRootElement
     {
         /// <summary>
@@ -116,9 +116,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wetp:webextensionref.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("wetp:webextensionref")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebExtensionPartReference : OpenXmlLeafElement
     {
         /// <summary>
@@ -135,12 +133,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("r:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -175,9 +168,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("wetp:extLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -245,9 +236,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionPartReference" /> <c>&lt;wetp:webextensionref></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("wetp:taskpane")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     {
         /// <summary>
@@ -285,12 +274,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>dockstate, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: dockstate</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("dockstate")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? DockState
         {
             get => GetAttribute<StringValue>();
@@ -301,12 +285,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>visibility, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: visibility</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("visibility")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public BooleanValue? Visibility
         {
             get => GetAttribute<BooleanValue>();
@@ -317,12 +296,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>width, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: width</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("width")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DoubleValue? Width
         {
             get => GetAttribute<DoubleValue>();
@@ -333,12 +307,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>row, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: row</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("row")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Row
         {
             get => GetAttribute<UInt32Value>();
@@ -349,12 +318,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>locked, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: locked</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("locked")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public BooleanValue? Locked
         {
             get => GetAttribute<BooleanValue>();

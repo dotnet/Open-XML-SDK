@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -32,9 +34,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("p188:txBody")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TextBodyType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -125,9 +125,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("p188:extLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -188,9 +186,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p188:unknownAnchor.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("p188:unknownAnchor")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentUnknownAnchor : OpenXmlLeafElement
     {
         /// <summary>
@@ -222,9 +218,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Author" /> <c>&lt;p188:author></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("p188:authorLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AuthorList : OpenXmlPartRootElement
     {
         /// <summary>
@@ -316,9 +310,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Comment" /> <c>&lt;p188:cm></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("p188:cmLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentList : OpenXmlPartRootElement
     {
         /// <summary>
@@ -404,9 +396,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p188:commentRel.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("p188:commentRel")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentRelationship : OpenXmlLeafElement
     {
         /// <summary>
@@ -423,12 +413,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("r:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -462,9 +447,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.ExtensionList" /> <c>&lt;p188:extLst></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("p188:author")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Author : OpenXmlCompositeElement
     {
         /// <summary>
@@ -502,12 +485,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>id, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -518,12 +496,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>name, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("name")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -534,12 +507,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>initials, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: initials</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("initials")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Initials
         {
             get => GetAttribute<StringValue>();
@@ -550,12 +518,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>userId, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: userId</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("userId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? UserId
         {
             get => GetAttribute<StringValue>();
@@ -566,12 +529,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>providerId, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: providerId</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("providerId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ProviderId
         {
             get => GetAttribute<StringValue>();
@@ -638,9 +596,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.ExtensionList" /> <c>&lt;p188:extLst></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("p188:reply")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentReply : OpenXmlCompositeElement
     {
         /// <summary>
@@ -678,12 +634,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>id, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -694,12 +645,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>authorId, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: authorId</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("authorId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? AuthorId
         {
             get => GetAttribute<StringValue>();
@@ -710,12 +656,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>status, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: status</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("status")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentStatus>? Status
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentStatus>>();
@@ -726,12 +667,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>created, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: created</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("created")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DateTimeValue? Created
         {
             get => GetAttribute<DateTimeValue>();
@@ -742,12 +678,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>tags, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: tags</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("tags")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public ListValue<StringValue>? Tags
         {
             get => GetAttribute<ListValue<StringValue>>();
@@ -758,12 +689,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>likes, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: likes</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("likes")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public ListValue<StringValue>? Likes
         {
             get => GetAttribute<ListValue<StringValue>>();
@@ -846,9 +772,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p188:pos.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("p188:pos")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Point2DType : OpenXmlLeafElement
     {
         /// <summary>
@@ -862,12 +786,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>X-Axis Coordinate</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("x")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int64Value? X
         {
             get => GetAttribute<Int64Value>();
@@ -878,12 +797,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Y-Axis Coordinate</para>
         /// <para>Represents the following attribute in the schema: y</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("y")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int64Value? Y
         {
             get => GetAttribute<Int64Value>();
@@ -923,9 +837,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentReply" /> <c>&lt;p188:reply></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("p188:replyLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentReplyList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -999,9 +911,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList" /> <c>&lt;pc:sldMkLst></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("p188:cm")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Comment : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1039,12 +949,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <para>id, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -1055,12 +960,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <para>authorId, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: authorId</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("authorId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? AuthorId
         {
             get => GetAttribute<StringValue>();
@@ -1071,12 +971,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <para>status, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: status</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("status")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentStatus>? Status
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentStatus>>();
@@ -1087,12 +982,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <para>created, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: created</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("created")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DateTimeValue? Created
         {
             get => GetAttribute<DateTimeValue>();
@@ -1103,12 +993,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <para>tags, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: tags</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("tags")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public ListValue<StringValue>? Tags
         {
             get => GetAttribute<ListValue<StringValue>>();
@@ -1119,12 +1004,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <para>likes, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: likes</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("likes")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public ListValue<StringValue>? Likes
         {
             get => GetAttribute<ListValue<StringValue>>();
@@ -1135,12 +1015,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <para>startDate, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: startDate</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("startDate")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DateTimeValue? StartDate
         {
             get => GetAttribute<DateTimeValue>();
@@ -1151,12 +1026,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <para>dueDate, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: dueDate</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("dueDate")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DateTimeValue? DueDate
         {
             get => GetAttribute<DateTimeValue>();
@@ -1167,12 +1037,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <para>assignedTo, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: assignedTo</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("assignedTo")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public ListValue<StringValue>? AssignedTo
         {
             get => GetAttribute<ListValue<StringValue>>();
@@ -1183,12 +1048,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <para>complete, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: complete</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("complete")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? Complete
         {
             get => GetAttribute<Int32Value>();
@@ -1199,12 +1059,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <para>priority, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: priority</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("priority")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Priority
         {
             get => GetAttribute<UInt32Value>();
@@ -1215,12 +1070,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <para>title, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("title")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Title
         {
             get => GetAttribute<StringValue>();

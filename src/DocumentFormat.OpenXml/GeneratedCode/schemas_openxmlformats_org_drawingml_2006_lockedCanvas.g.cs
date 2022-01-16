@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -35,9 +37,7 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart" /> <c>&lt;a14:contentPart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("lc:lockedCanvas")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LockedCanvas : OpenXmlCompositeElement
     {
         /// <summary>

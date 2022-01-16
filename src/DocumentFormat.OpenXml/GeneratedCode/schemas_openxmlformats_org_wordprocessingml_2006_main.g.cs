@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.CustomXmlSchemaReferences;
 using DocumentFormat.OpenXml.Drawing.Wordprocessing;
@@ -27,9 +29,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:cellIns.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:cellIns")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CellInsertion : TrackChangeType
     {
         /// <summary>
@@ -55,9 +55,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:cellDel.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:cellDel")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CellDeletion : TrackChangeType
     {
         /// <summary>
@@ -83,9 +81,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:customXmlInsRangeStart.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:customXmlInsRangeStart")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomXmlInsRangeStart : TrackChangeType
     {
         /// <summary>
@@ -111,9 +107,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:customXmlDelRangeStart.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:customXmlDelRangeStart")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomXmlDelRangeStart : TrackChangeType
     {
         /// <summary>
@@ -139,9 +133,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:customXmlMoveFromRangeStart.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:customXmlMoveFromRangeStart")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomXmlMoveFromRangeStart : TrackChangeType
     {
         /// <summary>
@@ -167,9 +159,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:customXmlMoveToRangeStart.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:customXmlMoveToRangeStart")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomXmlMoveToRangeStart : TrackChangeType
     {
         /// <summary>
@@ -195,9 +185,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:ins.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:ins")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Inserted : TrackChangeType
     {
         /// <summary>
@@ -223,9 +211,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:del.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:del")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Deleted : TrackChangeType
     {
         /// <summary>
@@ -251,9 +237,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:moveFrom.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:moveFrom")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MoveFrom : TrackChangeType
     {
         /// <summary>
@@ -279,9 +263,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:moveTo.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:moveTo")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MoveTo : TrackChangeType
     {
         /// <summary>
@@ -323,12 +305,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:author")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -342,12 +319,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:date")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -361,12 +333,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -400,9 +367,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:cellMerge.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:cellMerge")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CellMerge : OpenXmlLeafElement
     {
         /// <summary>
@@ -419,12 +384,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:vMerge")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues>? VerticalMerge
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues>>();
@@ -438,12 +398,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:vMergeOrig")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues>? VerticalMergeOriginal
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues>>();
@@ -457,12 +412,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:author")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -476,12 +426,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:date")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -495,12 +440,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -541,9 +481,7 @@ aBuilder.AddUnion(union =>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bookmarkStart.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:bookmarkStart")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BookmarkStart : OpenXmlLeafElement
     {
         /// <summary>
@@ -560,12 +498,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:name")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -579,12 +512,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:colFirst")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? ColumnFirst
         {
             get => GetAttribute<Int32Value>();
@@ -598,12 +526,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:colLast")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? ColumnLast
         {
             get => GetAttribute<Int32Value>();
@@ -617,12 +540,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:displacedByCustomXml")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>? DisplacedByCustomXml
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>();
@@ -636,12 +554,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -682,9 +595,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bookmarkEnd.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:bookmarkEnd")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BookmarkEnd : MarkupRangeType
     {
         /// <summary>
@@ -710,9 +621,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:commentRangeStart.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:commentRangeStart")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentRangeStart : MarkupRangeType
     {
         /// <summary>
@@ -739,9 +648,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:commentRangeEnd.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:commentRangeEnd")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentRangeEnd : MarkupRangeType
     {
         /// <summary>
@@ -768,9 +675,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:moveFromRangeEnd.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:moveFromRangeEnd")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MoveFromRangeEnd : MarkupRangeType
     {
         /// <summary>
@@ -796,9 +701,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:moveToRangeEnd.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:moveToRangeEnd")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MoveToRangeEnd : MarkupRangeType
     {
         /// <summary>
@@ -840,12 +743,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:displacedByCustomXml")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>? DisplacedByCustomXml
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>();
@@ -859,12 +757,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -893,9 +786,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:moveFromRangeStart.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:moveFromRangeStart")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MoveFromRangeStart : MoveBookmarkType
     {
         /// <summary>
@@ -921,9 +812,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:moveToRangeStart.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:moveToRangeStart")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MoveToRangeStart : MoveBookmarkType
     {
         /// <summary>
@@ -965,12 +854,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:author")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -984,12 +868,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:date")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -1003,12 +882,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:name")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -1022,12 +896,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:colFirst")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? ColumnFirst
         {
             get => GetAttribute<Int32Value>();
@@ -1041,12 +910,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:colLast")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? ColumnLast
         {
             get => GetAttribute<Int32Value>();
@@ -1060,12 +924,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:displacedByCustomXml")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>? DisplacedByCustomXml
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>();
@@ -1079,12 +938,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -1128,9 +982,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:customXmlInsRangeEnd.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:customXmlInsRangeEnd")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomXmlInsRangeEnd : MarkupType
     {
         /// <summary>
@@ -1156,9 +1008,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:customXmlDelRangeEnd.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:customXmlDelRangeEnd")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomXmlDelRangeEnd : MarkupType
     {
         /// <summary>
@@ -1184,9 +1034,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:customXmlMoveFromRangeEnd.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:customXmlMoveFromRangeEnd")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomXmlMoveFromRangeEnd : MarkupType
     {
         /// <summary>
@@ -1212,9 +1060,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:customXmlMoveToRangeEnd.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:customXmlMoveToRangeEnd")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomXmlMoveToRangeEnd : MarkupType
     {
         /// <summary>
@@ -1239,9 +1085,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:commentReference.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:commentReference")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentReference : MarkupType
     {
         /// <summary>
@@ -1284,12 +1128,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -1317,9 +1156,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pStyle.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:pStyle")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ParagraphStyleId : StringType
     {
         /// <summary>
@@ -1345,9 +1182,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:dateFormat.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:dateFormat")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DateFormat : StringType
     {
         /// <summary>
@@ -1372,9 +1207,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:docPartGallery.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:docPartGallery")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DocPartGallery : StringType
     {
         /// <summary>
@@ -1399,9 +1232,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:docPartCategory.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:docPartCategory")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DocPartCategory : StringType
     {
         /// <summary>
@@ -1426,9 +1257,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:docPart.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:docPart")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DocPartReference : StringType
     {
         /// <summary>
@@ -1453,9 +1282,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:placeholder.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:placeholder")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomXmlPlaceholder : StringType
     {
         /// <summary>
@@ -1480,9 +1307,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblCaption.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tblCaption")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableCaption : StringType
     {
         /// <summary>
@@ -1508,9 +1333,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblDescription.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tblDescription")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableDescription : StringType
     {
         /// <summary>
@@ -1536,9 +1359,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:name.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:name")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Name : StringType
     {
         /// <summary>
@@ -1564,9 +1385,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:mappedName.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:mappedName")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MappedName : StringType
     {
         /// <summary>
@@ -1591,9 +1410,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:udl.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:udl")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class UdlConnectionString : StringType
     {
         /// <summary>
@@ -1618,9 +1435,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:table.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:table")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataSourceTableName : StringType
     {
         /// <summary>
@@ -1645,9 +1460,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:connectString.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:connectString")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ConnectString : StringType
     {
         /// <summary>
@@ -1672,9 +1485,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:query.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:query")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Query : StringType
     {
         /// <summary>
@@ -1699,9 +1510,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:addressFieldName.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:addressFieldName")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AddressFieldName : StringType
     {
         /// <summary>
@@ -1726,9 +1535,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:mailSubject.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:mailSubject")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MailSubject : StringType
     {
         /// <summary>
@@ -1753,9 +1560,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sz.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:sz")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FrameSize : StringType
     {
         /// <summary>
@@ -1780,9 +1585,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:style.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:style")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StyleId : StringType
     {
         /// <summary>
@@ -1808,9 +1611,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:description.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:description")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Description : StringType
     {
         /// <summary>
@@ -1835,9 +1636,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:alias.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:alias")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtAlias : StringType
     {
         /// <summary>
@@ -1862,9 +1661,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tag.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tag")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Tag : StringType
     {
         /// <summary>
@@ -1889,9 +1686,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:attachedSchema.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:attachedSchema")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AttachedSchema : StringType
     {
         /// <summary>
@@ -1916,9 +1711,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:decimalSymbol.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:decimalSymbol")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DecimalSymbol : StringType
     {
         /// <summary>
@@ -1944,9 +1737,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:listSeparator.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:listSeparator")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ListSeparator : StringType
     {
         /// <summary>
@@ -1972,9 +1763,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:encoding.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:encoding")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebPageEncoding : StringType
     {
         /// <summary>
@@ -1999,9 +1788,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:altName.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:altName")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AltName : StringType
     {
         /// <summary>
@@ -2042,12 +1829,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -2070,9 +1852,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:keepNext.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:keepNext")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class KeepNext : OnOffType
     {
         /// <summary>
@@ -2097,9 +1877,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:keepLines.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:keepLines")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class KeepLines : OnOffType
     {
         /// <summary>
@@ -2124,9 +1902,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pageBreakBefore.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:pageBreakBefore")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PageBreakBefore : OnOffType
     {
         /// <summary>
@@ -2151,9 +1927,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:widowControl.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:widowControl")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WidowControl : OnOffType
     {
         /// <summary>
@@ -2178,9 +1952,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:suppressLineNumbers.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:suppressLineNumbers")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SuppressLineNumbers : OnOffType
     {
         /// <summary>
@@ -2205,9 +1977,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:suppressAutoHyphens.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:suppressAutoHyphens")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SuppressAutoHyphens : OnOffType
     {
         /// <summary>
@@ -2232,9 +2002,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:kinsoku.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:kinsoku")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Kinsoku : OnOffType
     {
         /// <summary>
@@ -2259,9 +2027,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:wordWrap.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:wordWrap")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WordWrap : OnOffType
     {
         /// <summary>
@@ -2286,9 +2052,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:overflowPunct.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:overflowPunct")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OverflowPunctuation : OnOffType
     {
         /// <summary>
@@ -2313,9 +2077,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:topLinePunct.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:topLinePunct")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TopLinePunctuation : OnOffType
     {
         /// <summary>
@@ -2340,9 +2102,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:autoSpaceDE.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:autoSpaceDE")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AutoSpaceDE : OnOffType
     {
         /// <summary>
@@ -2367,9 +2127,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:autoSpaceDN.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:autoSpaceDN")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AutoSpaceDN : OnOffType
     {
         /// <summary>
@@ -2394,9 +2152,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bidi.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:bidi")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BiDi : OnOffType
     {
         /// <summary>
@@ -2421,9 +2177,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:adjustRightInd.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:adjustRightInd")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AdjustRightIndent : OnOffType
     {
         /// <summary>
@@ -2448,9 +2202,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:snapToGrid.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:snapToGrid")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SnapToGrid : OnOffType
     {
         /// <summary>
@@ -2475,9 +2227,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:contextualSpacing.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:contextualSpacing")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ContextualSpacing : OnOffType
     {
         /// <summary>
@@ -2502,9 +2252,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:mirrorIndents.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:mirrorIndents")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MirrorIndents : OnOffType
     {
         /// <summary>
@@ -2529,9 +2277,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:suppressOverlap.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:suppressOverlap")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SuppressOverlap : OnOffType
     {
         /// <summary>
@@ -2556,9 +2302,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:b.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:b")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Bold : OnOffType
     {
         /// <summary>
@@ -2583,9 +2327,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bCs.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:bCs")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BoldComplexScript : OnOffType
     {
         /// <summary>
@@ -2610,9 +2352,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:i.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:i")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Italic : OnOffType
     {
         /// <summary>
@@ -2637,9 +2377,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:iCs.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:iCs")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ItalicComplexScript : OnOffType
     {
         /// <summary>
@@ -2664,9 +2402,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:caps.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:caps")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Caps : OnOffType
     {
         /// <summary>
@@ -2691,9 +2427,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:smallCaps.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:smallCaps")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SmallCaps : OnOffType
     {
         /// <summary>
@@ -2718,9 +2452,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:strike.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:strike")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Strike : OnOffType
     {
         /// <summary>
@@ -2745,9 +2477,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:dstrike.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:dstrike")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoubleStrike : OnOffType
     {
         /// <summary>
@@ -2772,9 +2502,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:outline.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:outline")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Outline : OnOffType
     {
         /// <summary>
@@ -2799,9 +2527,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:shadow.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:shadow")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Shadow : OnOffType
     {
         /// <summary>
@@ -2826,9 +2552,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:emboss.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:emboss")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Emboss : OnOffType
     {
         /// <summary>
@@ -2853,9 +2577,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:imprint.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:imprint")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Imprint : OnOffType
     {
         /// <summary>
@@ -2880,9 +2602,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noProof.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:noProof")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NoProof : OnOffType
     {
         /// <summary>
@@ -2907,9 +2627,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:vanish.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:vanish")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Vanish : OnOffType
     {
         /// <summary>
@@ -2934,9 +2652,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:webHidden.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:webHidden")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebHidden : OnOffType
     {
         /// <summary>
@@ -2961,9 +2677,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rtl.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:rtl")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RightToLeftText : OnOffType
     {
         /// <summary>
@@ -2988,9 +2702,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:cs.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:cs")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ComplexScript : OnOffType
     {
         /// <summary>
@@ -3015,9 +2727,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:specVanish.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:specVanish")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SpecVanish : OnOffType
     {
         /// <summary>
@@ -3042,9 +2752,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:oMath.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:oMath")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeMath : OnOffType
     {
         /// <summary>
@@ -3069,9 +2777,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:hidden.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:hidden")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Hidden : OnOffType
     {
         /// <summary>
@@ -3096,9 +2802,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:formProt.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:formProt")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FormProtection : OnOffType
     {
         /// <summary>
@@ -3123,9 +2827,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noEndnote.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:noEndnote")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NoEndnote : OnOffType
     {
         /// <summary>
@@ -3150,9 +2852,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:titlePg.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:titlePg")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TitlePage : OnOffType
     {
         /// <summary>
@@ -3177,9 +2877,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rtlGutter.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:rtlGutter")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GutterOnRight : OnOffType
     {
         /// <summary>
@@ -3204,9 +2902,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:enabled.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:enabled")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Enabled : OnOffType
     {
         /// <summary>
@@ -3231,9 +2927,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:calcOnExit.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:calcOnExit")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CalculateOnExit : OnOffType
     {
         /// <summary>
@@ -3258,9 +2952,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sizeAuto.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:sizeAuto")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AutomaticallySizeFormField : OnOffType
     {
         /// <summary>
@@ -3285,9 +2977,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:default.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:default")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DefaultCheckBoxFormFieldState : OnOffType
     {
         /// <summary>
@@ -3312,9 +3002,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:checked.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:checked")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Checked : OnOffType
     {
         /// <summary>
@@ -3339,9 +3027,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:matchSrc.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:matchSrc")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MatchSource : OnOffType
     {
         /// <summary>
@@ -3366,9 +3052,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:dirty.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:dirty")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Dirty : OnOffType
     {
         /// <summary>
@@ -3393,9 +3077,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:docPartUnique.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:docPartUnique")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DocPartUnique : OnOffType
     {
         /// <summary>
@@ -3420,9 +3102,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:active.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:active")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Active : OnOffType
     {
         /// <summary>
@@ -3447,9 +3127,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:dynamicAddress.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:dynamicAddress")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DynamicAddress : OnOffType
     {
         /// <summary>
@@ -3474,9 +3152,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:fHdr.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:fHdr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FirstRowHeader : OnOffType
     {
         /// <summary>
@@ -3501,9 +3177,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:linkToQuery.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:linkToQuery")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LinkToQuery : OnOffType
     {
         /// <summary>
@@ -3528,9 +3202,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotSuppressBlankLines.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotSuppressBlankLines")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotSuppressBlankLines : OnOffType
     {
         /// <summary>
@@ -3555,9 +3227,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:mailAsAttachment.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:mailAsAttachment")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MailAsAttachment : OnOffType
     {
         /// <summary>
@@ -3582,9 +3252,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:viewMergedData.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:viewMergedData")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ViewMergedData : OnOffType
     {
         /// <summary>
@@ -3609,9 +3277,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:isLgl.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:isLgl")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class IsLegalNumberingStyle : OnOffType
     {
         /// <summary>
@@ -3636,9 +3302,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:blockQuote.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:blockQuote")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BlockQuote : OnOffType
     {
         /// <summary>
@@ -3663,9 +3327,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bodyDiv.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:bodyDiv")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BodyDiv : OnOffType
     {
         /// <summary>
@@ -3690,9 +3352,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:useSingleBorderforContiguousCells.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:useSingleBorderforContiguousCells")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class UseSingleBorderForContiguousCells : OnOffType
     {
         /// <summary>
@@ -3717,9 +3377,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:wpJustification.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:wpJustification")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WordPerfectJustification : OnOffType
     {
         /// <summary>
@@ -3744,9 +3402,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noTabHangInd.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:noTabHangInd")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NoTabHangIndent : OnOffType
     {
         /// <summary>
@@ -3771,9 +3427,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noLeading.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:noLeading")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NoLeading : OnOffType
     {
         /// <summary>
@@ -3798,9 +3452,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:spaceForUL.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:spaceForUL")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SpaceForUnderline : OnOffType
     {
         /// <summary>
@@ -3825,9 +3477,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noColumnBalance.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:noColumnBalance")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NoColumnBalance : OnOffType
     {
         /// <summary>
@@ -3852,9 +3502,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:balanceSingleByteDoubleByteWidth.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:balanceSingleByteDoubleByteWidth")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BalanceSingleByteDoubleByteWidth : OnOffType
     {
         /// <summary>
@@ -3879,9 +3527,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noExtraLineSpacing.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:noExtraLineSpacing")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NoExtraLineSpacing : OnOffType
     {
         /// <summary>
@@ -3906,9 +3552,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotLeaveBackslashAlone.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotLeaveBackslashAlone")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotLeaveBackslashAlone : OnOffType
     {
         /// <summary>
@@ -3933,9 +3577,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:ulTrailSpace.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:ulTrailSpace")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class UnderlineTrailingSpaces : OnOffType
     {
         /// <summary>
@@ -3960,9 +3602,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotExpandShiftReturn.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotExpandShiftReturn")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotExpandShiftReturn : OnOffType
     {
         /// <summary>
@@ -3987,9 +3627,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:spacingInWholePoints.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:spacingInWholePoints")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SpacingInWholePoints : OnOffType
     {
         /// <summary>
@@ -4014,9 +3652,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lineWrapLikeWord6.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:lineWrapLikeWord6")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LineWrapLikeWord6 : OnOffType
     {
         /// <summary>
@@ -4041,9 +3677,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:printBodyTextBeforeHeader.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:printBodyTextBeforeHeader")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PrintBodyTextBeforeHeader : OnOffType
     {
         /// <summary>
@@ -4068,9 +3702,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:printColBlack.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:printColBlack")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PrintColorBlackWhite : OnOffType
     {
         /// <summary>
@@ -4095,9 +3727,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:wpSpaceWidth.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:wpSpaceWidth")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WordPerfectSpaceWidth : OnOffType
     {
         /// <summary>
@@ -4122,9 +3752,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:showBreaksInFrames.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:showBreaksInFrames")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShowBreaksInFrames : OnOffType
     {
         /// <summary>
@@ -4149,9 +3777,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:subFontBySize.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:subFontBySize")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SubFontBySize : OnOffType
     {
         /// <summary>
@@ -4176,9 +3802,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:suppressBottomSpacing.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:suppressBottomSpacing")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SuppressBottomSpacing : OnOffType
     {
         /// <summary>
@@ -4203,9 +3827,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:suppressTopSpacing.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:suppressTopSpacing")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SuppressTopSpacing : OnOffType
     {
         /// <summary>
@@ -4230,9 +3852,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:suppressSpacingAtTopOfPage.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:suppressSpacingAtTopOfPage")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SuppressSpacingAtTopOfPage : OnOffType
     {
         /// <summary>
@@ -4257,9 +3877,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:suppressTopSpacingWP.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:suppressTopSpacingWP")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SuppressTopSpacingWordPerfect : OnOffType
     {
         /// <summary>
@@ -4284,9 +3902,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:suppressSpBfAfterPgBrk.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:suppressSpBfAfterPgBrk")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SuppressSpacingBeforeAfterPageBreak : OnOffType
     {
         /// <summary>
@@ -4311,9 +3927,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:swapBordersFacingPages.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:swapBordersFacingPages")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SwapBordersFacingPages : OnOffType
     {
         /// <summary>
@@ -4338,9 +3952,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:convMailMergeEsc.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:convMailMergeEsc")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ConvertMailMergeEscape : OnOffType
     {
         /// <summary>
@@ -4365,9 +3977,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:truncateFontHeightsLikeWP6.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:truncateFontHeightsLikeWP6")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TruncateFontHeightsLikeWordPerfect : OnOffType
     {
         /// <summary>
@@ -4392,9 +4002,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:mwSmallCaps.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:mwSmallCaps")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MacWordSmallCaps : OnOffType
     {
         /// <summary>
@@ -4419,9 +4027,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:usePrinterMetrics.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:usePrinterMetrics")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class UsePrinterMetrics : OnOffType
     {
         /// <summary>
@@ -4446,9 +4052,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotSuppressParagraphBorders.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotSuppressParagraphBorders")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotSuppressParagraphBorders : OnOffType
     {
         /// <summary>
@@ -4473,9 +4077,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:wrapTrailSpaces.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:wrapTrailSpaces")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WrapTrailSpaces : OnOffType
     {
         /// <summary>
@@ -4500,9 +4102,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:footnoteLayoutLikeWW8.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:footnoteLayoutLikeWW8")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FootnoteLayoutLikeWord8 : OnOffType
     {
         /// <summary>
@@ -4527,9 +4127,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:shapeLayoutLikeWW8.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:shapeLayoutLikeWW8")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShapeLayoutLikeWord8 : OnOffType
     {
         /// <summary>
@@ -4554,9 +4152,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:alignTablesRowByRow.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:alignTablesRowByRow")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AlignTablesRowByRow : OnOffType
     {
         /// <summary>
@@ -4581,9 +4177,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:forgetLastTabAlignment.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:forgetLastTabAlignment")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ForgetLastTabAlignment : OnOffType
     {
         /// <summary>
@@ -4608,9 +4202,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:adjustLineHeightInTable.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:adjustLineHeightInTable")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AdjustLineHeightInTable : OnOffType
     {
         /// <summary>
@@ -4635,9 +4227,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:autoSpaceLikeWord95.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:autoSpaceLikeWord95")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AutoSpaceLikeWord95 : OnOffType
     {
         /// <summary>
@@ -4662,9 +4252,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noSpaceRaiseLower.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:noSpaceRaiseLower")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NoSpaceRaiseLower : OnOffType
     {
         /// <summary>
@@ -4689,9 +4277,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotUseHTMLParagraphAutoSpacing.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotUseHTMLParagraphAutoSpacing")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotUseHTMLParagraphAutoSpacing : OnOffType
     {
         /// <summary>
@@ -4716,9 +4302,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:layoutRawTableWidth.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:layoutRawTableWidth")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LayoutRawTableWidth : OnOffType
     {
         /// <summary>
@@ -4743,9 +4327,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:layoutTableRowsApart.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:layoutTableRowsApart")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LayoutTableRowsApart : OnOffType
     {
         /// <summary>
@@ -4770,9 +4352,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:useWord97LineBreakRules.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:useWord97LineBreakRules")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class UseWord97LineBreakRules : OnOffType
     {
         /// <summary>
@@ -4797,9 +4377,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotBreakWrappedTables.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotBreakWrappedTables")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotBreakWrappedTables : OnOffType
     {
         /// <summary>
@@ -4824,9 +4402,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotSnapToGridInCell.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotSnapToGridInCell")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotSnapToGridInCell : OnOffType
     {
         /// <summary>
@@ -4851,9 +4427,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:selectFldWithFirstOrLastChar.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:selectFldWithFirstOrLastChar")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SelectFieldWithFirstOrLastChar : OnOffType
     {
         /// <summary>
@@ -4878,9 +4452,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:applyBreakingRules.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:applyBreakingRules")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ApplyBreakingRules : OnOffType
     {
         /// <summary>
@@ -4905,9 +4477,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotWrapTextWithPunct.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotWrapTextWithPunct")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotWrapTextWithPunctuation : OnOffType
     {
         /// <summary>
@@ -4932,9 +4502,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotUseEastAsianBreakRules.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotUseEastAsianBreakRules")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotUseEastAsianBreakRules : OnOffType
     {
         /// <summary>
@@ -4959,9 +4527,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:useWord2002TableStyleRules.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:useWord2002TableStyleRules")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class UseWord2002TableStyleRules : OnOffType
     {
         /// <summary>
@@ -4986,9 +4552,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:growAutofit.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:growAutofit")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GrowAutofit : OnOffType
     {
         /// <summary>
@@ -5013,9 +4577,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:useFELayout.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:useFELayout")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class UseFarEastLayout : OnOffType
     {
         /// <summary>
@@ -5040,9 +4602,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:useNormalStyleForList.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:useNormalStyleForList")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class UseNormalStyleForList : OnOffType
     {
         /// <summary>
@@ -5067,9 +4627,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotUseIndentAsNumberingTabStop.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotUseIndentAsNumberingTabStop")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotUseIndentAsNumberingTabStop : OnOffType
     {
         /// <summary>
@@ -5094,9 +4652,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:useAltKinsokuLineBreakRules.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:useAltKinsokuLineBreakRules")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class UseAltKinsokuLineBreakRules : OnOffType
     {
         /// <summary>
@@ -5121,9 +4677,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:allowSpaceOfSameStyleInTable.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:allowSpaceOfSameStyleInTable")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AllowSpaceOfSameStyleInTable : OnOffType
     {
         /// <summary>
@@ -5148,9 +4702,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotSuppressIndentation.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotSuppressIndentation")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotSuppressIndentation : OnOffType
     {
         /// <summary>
@@ -5175,9 +4727,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotAutofitConstrainedTables.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotAutofitConstrainedTables")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotAutofitConstrainedTables : OnOffType
     {
         /// <summary>
@@ -5202,9 +4752,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:autofitToFirstFixedWidthCell.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:autofitToFirstFixedWidthCell")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AutofitToFirstFixedWidthCell : OnOffType
     {
         /// <summary>
@@ -5229,9 +4777,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:underlineTabInNumList.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:underlineTabInNumList")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class UnderlineTabInNumberingList : OnOffType
     {
         /// <summary>
@@ -5256,9 +4802,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:displayHangulFixedWidth.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:displayHangulFixedWidth")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DisplayHangulFixedWidth : OnOffType
     {
         /// <summary>
@@ -5283,9 +4827,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:splitPgBreakAndParaMark.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:splitPgBreakAndParaMark")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SplitPageBreakAndParagraphMark : OnOffType
     {
         /// <summary>
@@ -5310,9 +4852,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotVertAlignCellWithSp.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotVertAlignCellWithSp")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotVerticallyAlignCellWithShape : OnOffType
     {
         /// <summary>
@@ -5337,9 +4877,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotBreakConstrainedForcedTable.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotBreakConstrainedForcedTable")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotBreakConstrainedForcedTable : OnOffType
     {
         /// <summary>
@@ -5364,9 +4902,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotVertAlignInTxbx.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotVertAlignInTxbx")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotVerticallyAlignInTextBox : OnOffType
     {
         /// <summary>
@@ -5391,9 +4927,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:useAnsiKerningPairs.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:useAnsiKerningPairs")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class UseAnsiKerningPairs : OnOffType
     {
         /// <summary>
@@ -5418,9 +4952,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:cachedColBalance.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:cachedColBalance")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CachedColumnBalance : OnOffType
     {
         /// <summary>
@@ -5445,9 +4977,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:showingPlcHdr.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:showingPlcHdr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShowingPlaceholder : OnOffType
     {
         /// <summary>
@@ -5472,9 +5002,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:temporary.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:temporary")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TemporarySdt : OnOffType
     {
         /// <summary>
@@ -5499,9 +5027,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:removePersonalInformation.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:removePersonalInformation")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RemovePersonalInformation : OnOffType
     {
         /// <summary>
@@ -5526,9 +5052,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:removeDateAndTime.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:removeDateAndTime")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RemoveDateAndTime : OnOffType
     {
         /// <summary>
@@ -5553,9 +5077,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotDisplayPageBoundaries.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotDisplayPageBoundaries")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotDisplayPageBoundaries : OnOffType
     {
         /// <summary>
@@ -5580,9 +5102,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:displayBackgroundShape.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:displayBackgroundShape")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DisplayBackgroundShape : OnOffType
     {
         /// <summary>
@@ -5607,9 +5127,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:printPostScriptOverText.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:printPostScriptOverText")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PrintPostScriptOverText : OnOffType
     {
         /// <summary>
@@ -5634,9 +5152,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:printFractionalCharacterWidth.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:printFractionalCharacterWidth")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PrintFractionalCharacterWidth : OnOffType
     {
         /// <summary>
@@ -5661,9 +5177,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:printFormsData.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:printFormsData")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PrintFormsData : OnOffType
     {
         /// <summary>
@@ -5688,9 +5202,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:embedTrueTypeFonts.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:embedTrueTypeFonts")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EmbedTrueTypeFonts : OnOffType
     {
         /// <summary>
@@ -5715,9 +5227,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:embedSystemFonts.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:embedSystemFonts")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EmbedSystemFonts : OnOffType
     {
         /// <summary>
@@ -5742,9 +5252,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:saveSubsetFonts.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:saveSubsetFonts")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SaveSubsetFonts : OnOffType
     {
         /// <summary>
@@ -5769,9 +5277,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:saveFormsData.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:saveFormsData")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SaveFormsData : OnOffType
     {
         /// <summary>
@@ -5796,9 +5302,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:mirrorMargins.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:mirrorMargins")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MirrorMargins : OnOffType
     {
         /// <summary>
@@ -5823,9 +5327,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:alignBordersAndEdges.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:alignBordersAndEdges")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AlignBorderAndEdges : OnOffType
     {
         /// <summary>
@@ -5850,9 +5352,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bordersDoNotSurroundHeader.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:bordersDoNotSurroundHeader")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BordersDoNotSurroundHeader : OnOffType
     {
         /// <summary>
@@ -5877,9 +5377,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bordersDoNotSurroundFooter.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:bordersDoNotSurroundFooter")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BordersDoNotSurroundFooter : OnOffType
     {
         /// <summary>
@@ -5904,9 +5402,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:gutterAtTop.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:gutterAtTop")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GutterAtTop : OnOffType
     {
         /// <summary>
@@ -5931,9 +5427,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:hideSpellingErrors.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:hideSpellingErrors")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HideSpellingErrors : OnOffType
     {
         /// <summary>
@@ -5958,9 +5452,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:hideGrammaticalErrors.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:hideGrammaticalErrors")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HideGrammaticalErrors : OnOffType
     {
         /// <summary>
@@ -5985,9 +5477,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:formsDesign.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:formsDesign")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FormsDesign : OnOffType
     {
         /// <summary>
@@ -6012,9 +5502,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:linkStyles.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:linkStyles")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LinkStyles : OnOffType
     {
         /// <summary>
@@ -6039,9 +5527,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:trackRevisions.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:trackRevisions")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TrackRevisions : OnOffType
     {
         /// <summary>
@@ -6066,9 +5552,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotTrackMoves.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotTrackMoves")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotTrackMoves : OnOffType
     {
         /// <summary>
@@ -6093,9 +5577,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotTrackFormatting.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotTrackFormatting")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotTrackFormatting : OnOffType
     {
         /// <summary>
@@ -6120,9 +5602,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:autoFormatOverride.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:autoFormatOverride")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AutoFormatOverride : OnOffType
     {
         /// <summary>
@@ -6147,9 +5627,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:styleLockTheme.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:styleLockTheme")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StyleLockThemesPart : OnOffType
     {
         /// <summary>
@@ -6174,9 +5652,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:styleLockQFSet.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:styleLockQFSet")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StyleLockStylesPart : OnOffType
     {
         /// <summary>
@@ -6201,9 +5677,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:autoHyphenation.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:autoHyphenation")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AutoHyphenation : OnOffType
     {
         /// <summary>
@@ -6228,9 +5702,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotHyphenateCaps.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotHyphenateCaps")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotHyphenateCaps : OnOffType
     {
         /// <summary>
@@ -6255,9 +5727,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:showEnvelope.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:showEnvelope")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShowEnvelope : OnOffType
     {
         /// <summary>
@@ -6282,9 +5752,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:evenAndOddHeaders.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:evenAndOddHeaders")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EvenAndOddHeaders : OnOffType
     {
         /// <summary>
@@ -6309,9 +5777,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bookFoldRevPrinting.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:bookFoldRevPrinting")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BookFoldReversePrinting : OnOffType
     {
         /// <summary>
@@ -6336,9 +5802,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bookFoldPrinting.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:bookFoldPrinting")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BookFoldPrinting : OnOffType
     {
         /// <summary>
@@ -6363,9 +5827,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotUseMarginsForDrawingGridOrigin.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotUseMarginsForDrawingGridOrigin")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotUseMarginsForDrawingGridOrigin : OnOffType
     {
         /// <summary>
@@ -6390,9 +5852,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotShadeFormData.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotShadeFormData")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotShadeFormData : OnOffType
     {
         /// <summary>
@@ -6417,9 +5877,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noPunctuationKerning.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:noPunctuationKerning")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NoPunctuationKerning : OnOffType
     {
         /// <summary>
@@ -6444,9 +5902,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:printTwoOnOne.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:printTwoOnOne")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PrintTwoOnOne : OnOffType
     {
         /// <summary>
@@ -6471,9 +5927,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:strictFirstAndLastChars.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:strictFirstAndLastChars")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StrictFirstAndLastChars : OnOffType
     {
         /// <summary>
@@ -6498,9 +5952,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:savePreviewPicture.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:savePreviewPicture")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SavePreviewPicture : OnOffType
     {
         /// <summary>
@@ -6525,9 +5977,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotValidateAgainstSchema.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotValidateAgainstSchema")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotValidateAgainstSchema : OnOffType
     {
         /// <summary>
@@ -6552,9 +6002,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:saveInvalidXml.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:saveInvalidXml")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SaveInvalidXml : OnOffType
     {
         /// <summary>
@@ -6579,9 +6027,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:ignoreMixedContent.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:ignoreMixedContent")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class IgnoreMixedContent : OnOffType
     {
         /// <summary>
@@ -6606,9 +6052,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:alwaysShowPlaceholderText.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:alwaysShowPlaceholderText")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AlwaysShowPlaceholderText : OnOffType
     {
         /// <summary>
@@ -6633,9 +6077,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotDemarcateInvalidXml.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotDemarcateInvalidXml")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotDemarcateInvalidXml : OnOffType
     {
         /// <summary>
@@ -6660,9 +6102,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:saveXmlDataOnly.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:saveXmlDataOnly")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SaveXmlDataOnly : OnOffType
     {
         /// <summary>
@@ -6687,9 +6127,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:useXSLTWhenSaving.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:useXSLTWhenSaving")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class UseXsltWhenSaving : OnOffType
     {
         /// <summary>
@@ -6714,9 +6152,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:showXMLTags.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:showXMLTags")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShowXmlTags : OnOffType
     {
         /// <summary>
@@ -6741,9 +6177,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:alwaysMergeEmptyNamespace.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:alwaysMergeEmptyNamespace")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AlwaysMergeEmptyNamespace : OnOffType
     {
         /// <summary>
@@ -6768,9 +6202,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:updateFields.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:updateFields")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class UpdateFieldsOnOpen : OnOffType
     {
         /// <summary>
@@ -6795,9 +6227,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:uiCompat97To2003.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:uiCompat97To2003")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class UICompatibleWith97To2003 : OnOffType
     {
         /// <summary>
@@ -6822,9 +6252,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotIncludeSubdocsInStats.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotIncludeSubdocsInStats")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotIncludeSubdocsInStats : OnOffType
     {
         /// <summary>
@@ -6849,9 +6277,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotAutoCompressPictures.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotAutoCompressPictures")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotAutoCompressPictures : OnOffType
     {
         /// <summary>
@@ -6876,9 +6302,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:optimizeForBrowser.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:optimizeForBrowser")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OptimizeForBrowser : OnOffType
     {
         /// <summary>
@@ -6903,9 +6327,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:relyOnVML.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:relyOnVML")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RelyOnVML : OnOffType
     {
         /// <summary>
@@ -6930,9 +6352,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:allowPNG.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:allowPNG")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AllowPNG : OnOffType
     {
         /// <summary>
@@ -6957,9 +6377,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotRelyOnCSS.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotRelyOnCSS")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotRelyOnCSS : OnOffType
     {
         /// <summary>
@@ -6984,9 +6402,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotSaveAsSingleFile.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotSaveAsSingleFile")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotSaveAsSingleFile : OnOffType
     {
         /// <summary>
@@ -7011,9 +6427,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotOrganizeInFolder.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotOrganizeInFolder")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotOrganizeInFolder : OnOffType
     {
         /// <summary>
@@ -7038,9 +6452,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotUseLongFileNames.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:doNotUseLongFileNames")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotUseLongFileNames : OnOffType
     {
         /// <summary>
@@ -7065,9 +6477,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:notTrueType.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:notTrueType")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NotTrueType : OnOffType
     {
         /// <summary>
@@ -7108,12 +6518,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? Val
         {
             get => GetAttribute<OnOffValue>();
@@ -7133,9 +6538,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:framePr.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:framePr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FrameProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -7152,12 +6555,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:dropCap")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DropCapLocationValues>? DropCap
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DropCapLocationValues>>();
@@ -7171,12 +6569,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:lines")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? Lines
         {
             get => GetAttribute<Int32Value>();
@@ -7190,12 +6583,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:w")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Width
         {
             get => GetAttribute<StringValue>();
@@ -7209,12 +6597,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:h")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Height
         {
             get => GetAttribute<UInt32Value>();
@@ -7228,12 +6611,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:vSpace")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? VerticalSpace
         {
             get => GetAttribute<StringValue>();
@@ -7247,12 +6625,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:hSpace")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? HorizontalSpace
         {
             get => GetAttribute<StringValue>();
@@ -7266,12 +6639,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:wrap")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextWrappingValues>? Wrap
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextWrappingValues>>();
@@ -7285,12 +6653,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:hAnchor")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues>? HorizontalPosition
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues>>();
@@ -7304,12 +6667,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:vAnchor")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues>? VerticalPosition
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues>>();
@@ -7323,12 +6681,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:x")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? X
         {
             get => GetAttribute<StringValue>();
@@ -7342,12 +6695,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:xAlign")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues>? XAlign
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues>>();
@@ -7361,12 +6709,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:y")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Y
         {
             get => GetAttribute<StringValue>();
@@ -7380,12 +6723,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:yAlign")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues>? YAlign
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues>>();
@@ -7399,12 +6737,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:hRule")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues>? HeightType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues>>();
@@ -7418,12 +6751,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:anchorLock")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? AnchorLock
         {
             get => GetAttribute<OnOffValue>();
@@ -7516,9 +6844,7 @@ aBuilder.AddUnion(union =>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingChange" /> <c>&lt;w:numberingChange></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:numPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NumberingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7641,9 +6967,7 @@ aBuilder.AddUnion(union =>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BarBorder" /> <c>&lt;w:bar></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:pBdr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ParagraphBorders : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7785,9 +7109,7 @@ aBuilder.AddUnion(union =>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:shd.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:shd")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Shading : OpenXmlLeafElement
     {
         /// <summary>
@@ -7804,12 +7126,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ShadingPatternValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ShadingPatternValues>>();
@@ -7823,12 +7140,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:color")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Color
         {
             get => GetAttribute<StringValue>();
@@ -7842,12 +7154,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:themeColor")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>? ThemeColor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
@@ -7861,12 +7168,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:themeTint")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ThemeTint
         {
             get => GetAttribute<StringValue>();
@@ -7880,12 +7182,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:themeShade")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ThemeShade
         {
             get => GetAttribute<StringValue>();
@@ -7899,12 +7196,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:fill")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Fill
         {
             get => GetAttribute<StringValue>();
@@ -7918,12 +7210,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:themeFill")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>? ThemeFill
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
@@ -7937,12 +7224,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:themeFillTint")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ThemeFillTint
         {
             get => GetAttribute<StringValue>();
@@ -7956,12 +7238,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:themeFillShade")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ThemeFillShade
         {
             get => GetAttribute<StringValue>();
@@ -8028,9 +7305,7 @@ aBuilder.AddUnion(union =>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TabStop" /> <c>&lt;w:tab></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tabs")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Tabs : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8084,9 +7359,7 @@ aBuilder.AddUnion(union =>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:spacing.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:spacing")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SpacingBetweenLines : OpenXmlLeafElement
     {
         /// <summary>
@@ -8103,12 +7376,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:before")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Before
         {
             get => GetAttribute<StringValue>();
@@ -8122,12 +7390,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:beforeLines")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? BeforeLines
         {
             get => GetAttribute<Int32Value>();
@@ -8141,12 +7404,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:beforeAutospacing")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? BeforeAutoSpacing
         {
             get => GetAttribute<OnOffValue>();
@@ -8160,12 +7418,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:after")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? After
         {
             get => GetAttribute<StringValue>();
@@ -8179,12 +7432,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:afterLines")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? AfterLines
         {
             get => GetAttribute<Int32Value>();
@@ -8198,12 +7446,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:afterAutospacing")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? AfterAutoSpacing
         {
             get => GetAttribute<OnOffValue>();
@@ -8217,12 +7460,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:line")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Line
         {
             get => GetAttribute<StringValue>();
@@ -8236,12 +7474,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:lineRule")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineSpacingRuleValues>? LineRule
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineSpacingRuleValues>>();
@@ -8296,9 +7529,7 @@ aBuilder.AddUnion(union =>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:ind.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:ind")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Indentation : OpenXmlLeafElement
     {
         /// <summary>
@@ -8315,12 +7546,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:left")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Left
         {
             get => GetAttribute<StringValue>();
@@ -8334,12 +7560,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:start")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Start
         {
             get => GetAttribute<StringValue>();
@@ -8353,12 +7574,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:leftChars")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? LeftChars
         {
             get => GetAttribute<Int32Value>();
@@ -8372,12 +7588,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:startChars")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? StartCharacters
         {
             get => GetAttribute<Int32Value>();
@@ -8391,12 +7602,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:right")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Right
         {
             get => GetAttribute<StringValue>();
@@ -8410,12 +7616,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:end")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? End
         {
             get => GetAttribute<StringValue>();
@@ -8429,12 +7630,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:rightChars")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? RightChars
         {
             get => GetAttribute<Int32Value>();
@@ -8448,12 +7644,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:endChars")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? EndCharacters
         {
             get => GetAttribute<Int32Value>();
@@ -8467,12 +7658,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:hanging")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Hanging
         {
             get => GetAttribute<StringValue>();
@@ -8486,12 +7672,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:hangingChars")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? HangingChars
         {
             get => GetAttribute<Int32Value>();
@@ -8505,12 +7686,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:firstLine")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? FirstLine
         {
             get => GetAttribute<StringValue>();
@@ -8524,12 +7700,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:firstLineChars")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? FirstLineChars
         {
             get => GetAttribute<Int32Value>();
@@ -8620,9 +7791,7 @@ aBuilder.AddUnion(union =>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:jc.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:jc")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Justification : OpenXmlLeafElement
     {
         /// <summary>
@@ -8639,12 +7808,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.JustificationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.JustificationValues>>();
@@ -8671,9 +7835,7 @@ aBuilder.AddUnion(union =>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:textDirection.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:textDirection")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TextDirection : OpenXmlLeafElement
     {
         /// <summary>
@@ -8690,12 +7852,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextDirectionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextDirectionValues>>();
@@ -8722,9 +7879,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:textAlignment.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:textAlignment")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TextAlignment : OpenXmlLeafElement
     {
         /// <summary>
@@ -8741,12 +7896,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentValues>>();
@@ -8773,9 +7923,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:textboxTightWrap.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:textboxTightWrap")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TextBoxTightWrap : OpenXmlLeafElement
     {
         /// <summary>
@@ -8792,12 +7940,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrapValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrapValues>>();
@@ -8824,9 +7967,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:outlineLvl.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:outlineLvl")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OutlineLevel : DecimalNumberType
     {
         /// <summary>
@@ -8852,9 +7993,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:gridSpan.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:gridSpan")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GridSpan : DecimalNumberType
     {
         /// <summary>
@@ -8879,9 +8018,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:gridBefore.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:gridBefore")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GridBefore : DecimalNumberType
     {
         /// <summary>
@@ -8906,9 +8043,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:gridAfter.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:gridAfter")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GridAfter : DecimalNumberType
     {
         /// <summary>
@@ -8933,9 +8068,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:result.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:result")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DropDownListSelection : DecimalNumberType
     {
         /// <summary>
@@ -8960,9 +8093,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:activeRecord.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:activeRecord")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ActiveRecord : DecimalNumberType
     {
         /// <summary>
@@ -8987,9 +8118,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:checkErrors.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:checkErrors")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CheckErrors : DecimalNumberType
     {
         /// <summary>
@@ -9014,9 +8143,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lvlRestart.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:lvlRestart")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LevelRestart : DecimalNumberType
     {
         /// <summary>
@@ -9041,9 +8168,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lvlPicBulletId.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:lvlPicBulletId")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LevelPictureBulletId : DecimalNumberType
     {
         /// <summary>
@@ -9068,9 +8193,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:startOverride.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:startOverride")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StartOverrideNumberingValue : DecimalNumberType
     {
         /// <summary>
@@ -9095,9 +8218,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:numIdMacAtCleanup.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:numIdMacAtCleanup")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NumberingIdMacAtCleanup : DecimalNumberType
     {
         /// <summary>
@@ -9122,9 +8243,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:id.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtId : DecimalNumberType
     {
         /// <summary>
@@ -9149,9 +8268,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pixelsPerInch.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:pixelsPerInch")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PixelsPerInch : DecimalNumberType
     {
         /// <summary>
@@ -9192,12 +8309,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -9226,9 +8338,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesExtended" /> <c>&lt;w:pPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:pPrChange")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ParagraphPropertiesChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9269,12 +8379,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:author")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -9288,12 +8393,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:date")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -9307,12 +8407,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -9372,9 +8467,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:headerReference.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:headerReference")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HeaderReference : HeaderFooterReferenceType
     {
         /// <summary>
@@ -9401,9 +8494,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:footerReference.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:footerReference")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FooterReference : HeaderFooterReferenceType
     {
         /// <summary>
@@ -9446,12 +8537,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:type")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeaderFooterValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeaderFooterValues>>();
@@ -9465,12 +8551,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("r:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -9497,9 +8578,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:br.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:br")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Break : OpenXmlLeafElement
     {
         /// <summary>
@@ -9516,12 +8595,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:type")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakValues>>();
@@ -9535,12 +8609,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:clear")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakTextRestartLocationValues>? Clear
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakTextRestartLocationValues>>();
@@ -9565,9 +8634,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:t.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:t")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Text : TextType
     {
         /// <summary>
@@ -9605,9 +8672,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:delText.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:delText")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DeletedText : TextType
     {
         /// <summary>
@@ -9645,9 +8710,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:instrText.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:instrText")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FieldCode : TextType
     {
         /// <summary>
@@ -9685,9 +8748,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:delInstrText.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:delInstrText")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DeletedFieldCode : TextType
     {
         /// <summary>
@@ -9754,12 +8815,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("xml:space")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>? Space
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>();
@@ -9779,9 +8835,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noBreakHyphen.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:noBreakHyphen")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NoBreakHyphen : EmptyType
     {
         /// <summary>
@@ -9806,9 +8860,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:softHyphen.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:softHyphen")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SoftHyphen : EmptyType
     {
         /// <summary>
@@ -9833,9 +8885,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:dayShort.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:dayShort")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DayShort : EmptyType
     {
         /// <summary>
@@ -9860,9 +8910,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:monthShort.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:monthShort")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MonthShort : EmptyType
     {
         /// <summary>
@@ -9887,9 +8935,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:yearShort.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:yearShort")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class YearShort : EmptyType
     {
         /// <summary>
@@ -9914,9 +8960,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:dayLong.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:dayLong")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DayLong : EmptyType
     {
         /// <summary>
@@ -9941,9 +8985,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:monthLong.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:monthLong")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MonthLong : EmptyType
     {
         /// <summary>
@@ -9968,9 +9010,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:yearLong.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:yearLong")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class YearLong : EmptyType
     {
         /// <summary>
@@ -9995,9 +9035,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:annotationRef.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:annotationRef")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AnnotationReferenceMark : EmptyType
     {
         /// <summary>
@@ -10022,9 +9060,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:footnoteRef.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:footnoteRef")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FootnoteReferenceMark : EmptyType
     {
         /// <summary>
@@ -10049,9 +9085,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:endnoteRef.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:endnoteRef")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EndnoteReferenceMark : EmptyType
     {
         /// <summary>
@@ -10076,9 +9110,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:separator.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:separator")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SeparatorMark : EmptyType
     {
         /// <summary>
@@ -10103,9 +9135,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:continuationSeparator.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:continuationSeparator")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ContinuationSeparatorMark : EmptyType
     {
         /// <summary>
@@ -10130,9 +9160,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pgNum.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:pgNum")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PageNumber : EmptyType
     {
         /// <summary>
@@ -10157,9 +9185,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:cr.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:cr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CarriageReturn : EmptyType
     {
         /// <summary>
@@ -10184,9 +9210,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tab.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tab")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TabChar : EmptyType
     {
         /// <summary>
@@ -10211,9 +9235,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lastRenderedPageBreak.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:lastRenderedPageBreak")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LastRenderedPageBreak : EmptyType
     {
         /// <summary>
@@ -10238,9 +9260,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:equation.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:equation")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtContentEquation : EmptyType
     {
         /// <summary>
@@ -10265,9 +9285,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:picture.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:picture")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtContentPicture : EmptyType
     {
         /// <summary>
@@ -10292,9 +9310,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:richText.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:richText")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtContentRichText : EmptyType
     {
         /// <summary>
@@ -10319,9 +9335,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:citation.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:citation")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtContentCitation : EmptyType
     {
         /// <summary>
@@ -10346,9 +9360,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:group.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:group")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtContentGroup : EmptyType
     {
         /// <summary>
@@ -10373,9 +9385,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bibliography.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:bibliography")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtContentBibliography : EmptyType
     {
         /// <summary>
@@ -10400,9 +9410,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:forceUpgrade.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:forceUpgrade")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ForceUpgrade : EmptyType
     {
         /// <summary>
@@ -10447,9 +9455,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sym.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:sym")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SymbolChar : OpenXmlLeafElement
     {
         /// <summary>
@@ -10466,12 +9472,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:font")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Font
         {
             get => GetAttribute<StringValue>();
@@ -10485,12 +9486,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:char")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? Char
         {
             get => GetAttribute<HexBinaryValue>();
@@ -10542,9 +9538,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ObjectLink" /> <c>&lt;w:objectLink></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:object")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EmbeddedObject : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10585,12 +9579,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:dxaOrig")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? DxaOriginal
         {
             get => GetAttribute<StringValue>();
@@ -10604,12 +9593,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:dyaOrig")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? DyaOriginal
         {
             get => GetAttribute<StringValue>();
@@ -10623,12 +9607,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w14:anchorId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? AnchorId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -10727,9 +9706,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MovieReference" /> <c>&lt;w:movie></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:pict")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Picture : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10770,12 +9747,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w14:anchorId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? AnchorId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -10854,9 +9826,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingChange" /> <c>&lt;w:numberingChange></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:fldChar")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FieldChar : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10897,12 +9867,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:fldCharType")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FieldCharValues>? FieldCharType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FieldCharValues>>();
@@ -10916,12 +9881,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:fldLock")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? FieldLock
         {
             get => GetAttribute<OnOffValue>();
@@ -10935,12 +9895,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:dirty")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? Dirty
         {
             get => GetAttribute<OnOffValue>();
@@ -11025,9 +9980,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RubyProperties" /> <c>&lt;w:rubyPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:ruby")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Ruby : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11124,9 +10077,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:footnoteReference.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:footnoteReference")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FootnoteReference : FootnoteEndnoteReferenceType
     {
         /// <summary>
@@ -11152,9 +10103,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:endnoteReference.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:endnoteReference")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EndnoteReference : FootnoteEndnoteReferenceType
     {
         /// <summary>
@@ -11195,12 +10144,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:customMarkFollows")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? CustomMarkFollows
         {
             get => GetAttribute<OnOffValue>();
@@ -11214,12 +10158,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public IntegerValue? Id
         {
             get => GetAttribute<IntegerValue>();
@@ -11251,9 +10190,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline" /> <c>&lt;wp:inline></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:drawing")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Drawing : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11335,9 +10272,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:ptab.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:ptab")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PositionalTab : OpenXmlLeafElement
     {
         /// <summary>
@@ -11354,12 +10289,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:alignment")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabAlignmentValues>? Alignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabAlignmentValues>>();
@@ -11373,12 +10303,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:relativeTo")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabPositioningBaseValues>? RelativeTo
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabPositioningBaseValues>>();
@@ -11392,12 +10317,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:leader")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabLeaderCharValues>? Leader
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabLeaderCharValues>>();
@@ -11432,9 +10352,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rStyle.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:rStyle")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RunStyle : String253Type
     {
         /// <summary>
@@ -11459,9 +10377,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblStyle.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tblStyle")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableStyle : String253Type
     {
         /// <summary>
@@ -11486,9 +10402,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pStyle.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:pStyle")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ParagraphStyleIdInLevel : String253Type
     {
         /// <summary>
@@ -11514,9 +10428,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:name.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:name")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AbstractNumDefinitionName : String253Type
     {
         /// <summary>
@@ -11542,9 +10454,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:styleLink.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:styleLink")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StyleLink : String253Type
     {
         /// <summary>
@@ -11569,9 +10479,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:numStyleLink.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:numStyleLink")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NumberingStyleLink : String253Type
     {
         /// <summary>
@@ -11596,9 +10504,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:aliases.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:aliases")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Aliases : String253Type
     {
         /// <summary>
@@ -11623,9 +10529,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:basedOn.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:basedOn")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BasedOn : String253Type
     {
         /// <summary>
@@ -11650,9 +10554,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:next.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:next")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NextParagraphStyle : String253Type
     {
         /// <summary>
@@ -11677,9 +10579,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:link.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:link")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LinkedStyle : String253Type
     {
         /// <summary>
@@ -11704,9 +10604,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:clickAndTypeStyle.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:clickAndTypeStyle")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ClickAndTypeStyle : String253Type
     {
         /// <summary>
@@ -11731,9 +10629,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:defaultTableStyle.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:defaultTableStyle")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DefaultTableStyle : String253Type
     {
         /// <summary>
@@ -11774,12 +10670,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -11803,9 +10694,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rFonts.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:rFonts")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RunFonts : OpenXmlLeafElement
     {
         /// <summary>
@@ -11822,12 +10711,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:hint")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontTypeHintValues>? Hint
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontTypeHintValues>>();
@@ -11841,12 +10725,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:ascii")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Ascii
         {
             get => GetAttribute<StringValue>();
@@ -11860,12 +10739,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:hAnsi")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? HighAnsi
         {
             get => GetAttribute<StringValue>();
@@ -11879,12 +10753,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:eastAsia")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? EastAsia
         {
             get => GetAttribute<StringValue>();
@@ -11898,12 +10767,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:cs")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ComplexScript
         {
             get => GetAttribute<StringValue>();
@@ -11917,12 +10781,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:asciiTheme")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>? AsciiTheme
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>>();
@@ -11936,12 +10795,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:hAnsiTheme")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>? HighAnsiTheme
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>>();
@@ -11955,12 +10809,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:eastAsiaTheme")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>? EastAsiaTheme
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>>();
@@ -11974,12 +10823,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:cstheme")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>? ComplexScriptTheme
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>>();
@@ -12023,9 +10867,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:color.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:color")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Color : OpenXmlLeafElement
     {
         /// <summary>
@@ -12042,12 +10884,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -12061,12 +10898,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:themeColor")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>? ThemeColor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
@@ -12080,12 +10912,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:themeTint")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ThemeTint
         {
             get => GetAttribute<StringValue>();
@@ -12099,12 +10926,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:themeShade")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ThemeShade
         {
             get => GetAttribute<StringValue>();
@@ -12145,9 +10967,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:spacing.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:spacing")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Spacing : OpenXmlLeafElement
     {
         /// <summary>
@@ -12164,12 +10984,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -12197,9 +11012,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-31680L), MaxInclu
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:w.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:w")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CharacterScale : OpenXmlLeafElement
     {
         /// <summary>
@@ -12216,12 +11029,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-31680L), MaxInclu
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public IntegerValue? Val
         {
             get => GetAttribute<IntegerValue>();
@@ -12248,9 +11056,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-31680L), MaxInclu
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:kern.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:kern")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Kern : OpenXmlLeafElement
     {
         /// <summary>
@@ -12267,12 +11073,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-31680L), MaxInclu
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
@@ -12300,9 +11101,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-31680L), MaxInclu
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:position.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:position")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Position : OpenXmlLeafElement
     {
         /// <summary>
@@ -12319,12 +11118,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-31680L), MaxInclu
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -12357,9 +11151,7 @@ aBuilder.AddUnion(union =>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sz.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:sz")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FontSize : HpsMeasureType
     {
         /// <summary>
@@ -12384,9 +11176,7 @@ aBuilder.AddUnion(union =>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:szCs.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:szCs")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FontSizeComplexScript : HpsMeasureType
     {
         /// <summary>
@@ -12411,9 +11201,7 @@ aBuilder.AddUnion(union =>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:size.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:size")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FormFieldSize : HpsMeasureType
     {
         /// <summary>
@@ -12438,9 +11226,7 @@ aBuilder.AddUnion(union =>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:hps.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:hps")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PhoneticGuideTextFontSize : HpsMeasureType
     {
         /// <summary>
@@ -12465,9 +11251,7 @@ aBuilder.AddUnion(union =>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:hpsBaseText.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:hpsBaseText")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PhoneticGuideBaseTextSize : HpsMeasureType
     {
         /// <summary>
@@ -12508,12 +11292,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -12542,9 +11321,7 @@ aBuilder.AddUnion(union =>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:highlight.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:highlight")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Highlight : OpenXmlLeafElement
     {
         /// <summary>
@@ -12561,12 +11338,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HighlightColorValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HighlightColorValues>>();
@@ -12593,9 +11365,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:u.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:u")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Underline : OpenXmlLeafElement
     {
         /// <summary>
@@ -12612,12 +11382,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.UnderlineValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.UnderlineValues>>();
@@ -12631,12 +11396,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:color")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Color
         {
             get => GetAttribute<StringValue>();
@@ -12650,12 +11410,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:themeColor")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>? ThemeColor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
@@ -12669,12 +11424,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:themeTint")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ThemeTint
         {
             get => GetAttribute<StringValue>();
@@ -12688,12 +11438,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:themeShade")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ThemeShade
         {
             get => GetAttribute<StringValue>();
@@ -12734,9 +11479,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:effect.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:effect")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TextEffect : OpenXmlLeafElement
     {
         /// <summary>
@@ -12753,12 +11496,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextEffectValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextEffectValues>>();
@@ -12785,9 +11523,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bdr.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:bdr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Border : BorderType
     {
         /// <summary>
@@ -12812,9 +11548,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:top.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:top")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TopBorder : BorderType
     {
         /// <summary>
@@ -12839,9 +11573,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:left.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:left")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LeftBorder : BorderType
     {
         /// <summary>
@@ -12866,9 +11598,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bottom.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:bottom")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BottomBorder : BorderType
     {
         /// <summary>
@@ -12895,9 +11625,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:right.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:right")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RightBorder : BorderType
     {
         /// <summary>
@@ -12922,9 +11650,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:between.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:between")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BetweenBorder : BorderType
     {
         /// <summary>
@@ -12949,9 +11675,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bar.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:bar")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BarBorder : BorderType
     {
         /// <summary>
@@ -12976,9 +11700,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:start.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:start")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StartBorder : BorderType
     {
         /// <summary>
@@ -13004,9 +11726,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:end.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:end")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EndBorder : BorderType
     {
         /// <summary>
@@ -13032,9 +11752,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:insideH.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:insideH")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class InsideHorizontalBorder : BorderType
     {
         /// <summary>
@@ -13059,9 +11777,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:insideV.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:insideV")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class InsideVerticalBorder : BorderType
     {
         /// <summary>
@@ -13086,9 +11802,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tl2br.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tl2br")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TopLeftToBottomRightCellBorder : BorderType
     {
         /// <summary>
@@ -13113,9 +11827,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tr2bl.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tr2bl")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TopRightToBottomLeftCellBorder : BorderType
     {
         /// <summary>
@@ -13156,12 +11868,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.BorderValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.BorderValues>>();
@@ -13175,12 +11882,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:color")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Color
         {
             get => GetAttribute<StringValue>();
@@ -13194,12 +11896,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:themeColor")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>? ThemeColor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
@@ -13213,12 +11910,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:themeTint")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ThemeTint
         {
             get => GetAttribute<StringValue>();
@@ -13232,12 +11924,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:themeShade")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ThemeShade
         {
             get => GetAttribute<StringValue>();
@@ -13251,12 +11938,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:sz")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Size
         {
             get => GetAttribute<UInt32Value>();
@@ -13270,12 +11952,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:space")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Space
         {
             get => GetAttribute<UInt32Value>();
@@ -13289,12 +11966,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:shadow")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? Shadow
         {
             get => GetAttribute<OnOffValue>();
@@ -13308,12 +11980,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:frame")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? Frame
         {
             get => GetAttribute<OnOffValue>();
@@ -13360,9 +12027,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:fitText.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:fitText")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FitText : OpenXmlLeafElement
     {
         /// <summary>
@@ -13379,12 +12044,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
@@ -13398,12 +12058,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? Id
         {
             get => GetAttribute<Int32Value>();
@@ -13432,9 +12087,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:vertAlign.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:vertAlign")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VerticalTextAlignment : OpenXmlLeafElement
     {
         /// <summary>
@@ -13451,12 +12104,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalPositionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalPositionValues>>();
@@ -13483,9 +12131,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:em.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:em")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Emphasis : OpenXmlLeafElement
     {
         /// <summary>
@@ -13502,12 +12148,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.EmphasisMarkValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.EmphasisMarkValues>>();
@@ -13534,9 +12175,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lang.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:lang")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Languages : LanguageType
     {
         /// <summary>
@@ -13561,9 +12200,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:themeFontLang.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:themeFontLang")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ThemeFontLanguages : LanguageType
     {
         /// <summary>
@@ -13604,12 +12241,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -13623,12 +12255,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:eastAsia")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? EastAsia
         {
             get => GetAttribute<StringValue>();
@@ -13642,12 +12269,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:bidi")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Bidi
         {
             get => GetAttribute<StringValue>();
@@ -13678,9 +12300,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:eastAsianLayout.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:eastAsianLayout")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EastAsianLayout : OpenXmlLeafElement
     {
         /// <summary>
@@ -13697,12 +12317,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? Id
         {
             get => GetAttribute<Int32Value>();
@@ -13716,12 +12331,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:combine")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? Combine
         {
             get => GetAttribute<OnOffValue>();
@@ -13735,12 +12345,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:combineBrackets")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CombineBracketValues>? CombineBrackets
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CombineBracketValues>>();
@@ -13754,12 +12359,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:vert")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? Vertical
         {
             get => GetAttribute<OnOffValue>();
@@ -13773,12 +12373,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:vertCompress")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? VerticalCompress
         {
             get => GetAttribute<OnOffValue>();
@@ -13812,9 +12407,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousRunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:rPrChange")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RunPropertiesChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13855,12 +12448,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:author")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -13874,12 +12462,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:date")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -13893,12 +12476,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -14014,9 +12592,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect" /> <c>&lt;w14:textOutline></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:rPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RunProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14906,9 +13482,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:ins")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class InsertedMathControl : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14949,12 +13523,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:author")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -14968,12 +13537,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:date")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -14987,12 +13551,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -15059,9 +13618,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:del")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DeletedMathControl : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15102,12 +13659,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:author")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -15121,12 +13673,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:date")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -15140,12 +13687,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -15206,9 +13748,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:moveFrom")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MoveFromMathControl : MathControlMoveType
     {
         /// <summary>
@@ -15293,9 +13833,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:moveTo")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MoveToMathControl : MathControlMoveType
     {
         /// <summary>
@@ -15420,12 +13958,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:author")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -15439,12 +13972,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:date")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -15458,12 +13986,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -15563,9 +14086,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:customXml")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomXmlRuby : CustomXmlElement
     {
         /// <summary>
@@ -15862,9 +14383,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:fldSimple")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SimpleFieldRuby : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15905,12 +14424,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:instr")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Instruction
         {
             get => GetAttribute<StringValue>();
@@ -15924,12 +14438,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:fldLock")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? FieldLock
         {
             get => GetAttribute<OnOffValue>();
@@ -15943,12 +14452,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:dirty")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? Dirty
         {
             get => GetAttribute<OnOffValue>();
@@ -16237,9 +14741,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:hyperlink")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HyperlinkRuby : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16280,12 +14782,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:tgtFrame")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? TargetFrame
         {
             get => GetAttribute<StringValue>();
@@ -16299,12 +14796,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:tooltip")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Tooltip
         {
             get => GetAttribute<StringValue>();
@@ -16318,12 +14810,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:docLocation")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? DocLocation
         {
             get => GetAttribute<StringValue>();
@@ -16337,12 +14824,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:history")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? History
         {
             get => GetAttribute<OnOffValue>();
@@ -16356,12 +14838,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:anchor")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Anchor
         {
             get => GetAttribute<StringValue>();
@@ -16375,12 +14852,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("r:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -16640,9 +15112,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedFieldCode" /> <c>&lt;w:delInstrText></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:r")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Run : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16683,12 +15153,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:rsidRPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? RsidRunProperties
         {
             get => GetAttribute<HexBinaryValue>();
@@ -16702,12 +15167,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:rsidDel")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? RsidRunDeletion
         {
             get => GetAttribute<HexBinaryValue>();
@@ -16721,12 +15181,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:rsidR")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? RsidRunAddition
         {
             get => GetAttribute<HexBinaryValue>();
@@ -16883,9 +15338,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:sdt")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtRunRuby : SdtElement
     {
         /// <summary>
@@ -17014,9 +15467,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:proofErr.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:proofErr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ProofError : OpenXmlLeafElement
     {
         /// <summary>
@@ -17033,12 +15484,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:type")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingErrorValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingErrorValues>>();
@@ -17065,9 +15511,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:permStart.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:permStart")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PermStart : OpenXmlLeafElement
     {
         /// <summary>
@@ -17084,12 +15528,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:edGrp")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.RangePermissionEditingGroupValues>? EditorGroup
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.RangePermissionEditingGroupValues>>();
@@ -17103,12 +15542,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:ed")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Ed
         {
             get => GetAttribute<StringValue>();
@@ -17122,12 +15556,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:colFirst")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? ColumnFirst
         {
             get => GetAttribute<Int32Value>();
@@ -17141,12 +15570,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:colLast")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? ColumnLast
         {
             get => GetAttribute<Int32Value>();
@@ -17160,12 +15584,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? Id
         {
             get => GetAttribute<Int32Value>();
@@ -17179,12 +15598,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:displacedByCustomXml")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>? DisplacedByCustomXml
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>();
@@ -17223,9 +15637,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:permEnd.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:permEnd")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PermEnd : OpenXmlLeafElement
     {
         /// <summary>
@@ -17242,12 +15654,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? Id
         {
             get => GetAttribute<Int32Value>();
@@ -17261,12 +15668,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:displacedByCustomXml")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>? DisplacedByCustomXml
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>();
@@ -17356,9 +15758,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:ins")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class InsertedRun : RunTrackChangeType
     {
         /// <summary>
@@ -17609,9 +16009,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:del")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DeletedRun : RunTrackChangeType
     {
         /// <summary>
@@ -17862,9 +16260,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:moveFrom")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MoveFromRun : RunTrackChangeType
     {
         /// <summary>
@@ -18115,9 +16511,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:moveTo")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MoveToRun : RunTrackChangeType
     {
         /// <summary>
@@ -18408,12 +16802,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:author")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -18427,12 +16816,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:date")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -18446,12 +16830,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -18541,9 +16920,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:contentPart.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:contentPart")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ContentPart : OpenXmlLeafElement
     {
         /// <summary>
@@ -18560,12 +16937,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("r:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -18621,9 +16993,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:sdt")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtRun : SdtElement
     {
         /// <summary>
@@ -18792,9 +17162,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:customXml")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomXmlBlock : CustomXmlElement
     {
         /// <summary>
@@ -18992,9 +17360,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:sdt")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtBlock : SdtElement
     {
         /// <summary>
@@ -19189,9 +17555,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:p")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Paragraph : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19232,12 +17596,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:rsidRPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? RsidParagraphMarkRevision
         {
             get => GetAttribute<HexBinaryValue>();
@@ -19251,12 +17610,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:rsidR")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? RsidParagraphAddition
         {
             get => GetAttribute<HexBinaryValue>();
@@ -19270,12 +17624,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:rsidDel")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? RsidParagraphDeletion
         {
             get => GetAttribute<HexBinaryValue>();
@@ -19289,12 +17638,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:rsidP")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? RsidParagraphProperties
         {
             get => GetAttribute<HexBinaryValue>();
@@ -19308,12 +17652,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:rsidRDefault")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? RsidRunAdditionDefault
         {
             get => GetAttribute<HexBinaryValue>();
@@ -19327,12 +17666,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w14:paraId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? ParagraphId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -19346,12 +17680,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w14:textId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? TextId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -19365,12 +17694,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w14:noSpellErr")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? NoSpellError
         {
             get => GetAttribute<OnOffValue>();
@@ -19697,9 +18021,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tbl")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Table : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19941,9 +18263,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableRowProperties" /> <c>&lt;w:trPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableRow : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19984,12 +18304,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:rsidRPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? RsidTableRowMarkRevision
         {
             get => GetAttribute<HexBinaryValue>();
@@ -20003,12 +18318,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:rsidR")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? RsidTableRowAddition
         {
             get => GetAttribute<HexBinaryValue>();
@@ -20022,12 +18332,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:rsidDel")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? RsidTableRowDeletion
         {
             get => GetAttribute<HexBinaryValue>();
@@ -20041,12 +18346,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:rsidTr")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? RsidTableRowProperties
         {
             get => GetAttribute<HexBinaryValue>();
@@ -20060,12 +18360,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w14:paraId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? ParagraphId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -20079,12 +18374,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w14:textId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? TextId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -20315,9 +18605,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:customXml")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomXmlRow : CustomXmlElement
     {
         /// <summary>
@@ -20507,9 +18795,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:sdt")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtRow : SdtElement
     {
         /// <summary>
@@ -20679,9 +18965,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tc")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableCell : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20923,9 +19207,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:customXml")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomXmlCell : CustomXmlElement
     {
         /// <summary>
@@ -21115,9 +19397,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:sdt")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtCell : SdtElement
     {
         /// <summary>
@@ -21312,9 +19592,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:customXml")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomXmlRun : CustomXmlElement
     {
         /// <summary>
@@ -21644,9 +19922,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:fldSimple")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SimpleField : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21687,12 +19963,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:instr")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Instruction
         {
             get => GetAttribute<StringValue>();
@@ -21706,12 +19977,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:fldLock")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? FieldLock
         {
             get => GetAttribute<OnOffValue>();
@@ -21725,12 +19991,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:dirty")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? Dirty
         {
             get => GetAttribute<OnOffValue>();
@@ -22052,9 +20313,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:hyperlink")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Hyperlink : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22095,12 +20354,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:tgtFrame")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? TargetFrame
         {
             get => GetAttribute<StringValue>();
@@ -22114,12 +20368,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:tooltip")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Tooltip
         {
             get => GetAttribute<StringValue>();
@@ -22133,12 +20382,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:docLocation")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? DocLocation
         {
             get => GetAttribute<StringValue>();
@@ -22152,12 +20396,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:history")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? History
         {
             get => GetAttribute<OnOffValue>();
@@ -22171,12 +20410,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:anchor")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Anchor
         {
             get => GetAttribute<StringValue>();
@@ -22190,12 +20424,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("r:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -22512,9 +20741,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:bdo")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BidirectionalOverride : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22555,12 +20782,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues>>();
@@ -22860,9 +21082,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:dir")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BidirectionalEmbedding : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22903,12 +21123,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues>>();
@@ -23143,9 +21358,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:subDoc.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:subDoc")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SubDocumentReference : RelationshipType
     {
         /// <summary>
@@ -23171,9 +21384,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:printerSettings.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:printerSettings")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PrinterSettingsReference : RelationshipType
     {
         /// <summary>
@@ -23199,9 +21410,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:src.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:src")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SourceReference : RelationshipType
     {
         /// <summary>
@@ -23227,9 +21436,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:recipientData.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:recipientData")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RecipientDataReference : RelationshipType
     {
         /// <summary>
@@ -23255,9 +21462,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:dataSource.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:dataSource")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataSourceReference : RelationshipType
     {
         /// <summary>
@@ -23283,9 +21488,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:headerSource.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:headerSource")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HeaderSource : RelationshipType
     {
         /// <summary>
@@ -23310,9 +21513,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sourceFileName.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:sourceFileName")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SourceFileReference : RelationshipType
     {
         /// <summary>
@@ -23338,9 +21539,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:movie.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:movie")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MovieReference : RelationshipType
     {
         /// <summary>
@@ -23365,9 +21564,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:attachedTemplate.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:attachedTemplate")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AttachedTemplate : RelationshipType
     {
         /// <summary>
@@ -23410,12 +21607,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("r:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -23438,9 +21630,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:cnfStyle.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:cnfStyle")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ConditionalFormatStyle : OpenXmlLeafElement
     {
         /// <summary>
@@ -23457,12 +21647,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -23476,12 +21661,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:firstRow")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? FirstRow
         {
             get => GetAttribute<OnOffValue>();
@@ -23495,12 +21675,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:lastRow")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? LastRow
         {
             get => GetAttribute<OnOffValue>();
@@ -23514,12 +21689,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:firstColumn")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? FirstColumn
         {
             get => GetAttribute<OnOffValue>();
@@ -23533,12 +21703,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:lastColumn")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? LastColumn
         {
             get => GetAttribute<OnOffValue>();
@@ -23552,12 +21717,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:oddVBand")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? OddVerticalBand
         {
             get => GetAttribute<OnOffValue>();
@@ -23571,12 +21731,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:evenVBand")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? EvenVerticalBand
         {
             get => GetAttribute<OnOffValue>();
@@ -23590,12 +21745,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:oddHBand")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? OddHorizontalBand
         {
             get => GetAttribute<OnOffValue>();
@@ -23609,12 +21759,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:evenHBand")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? EvenHorizontalBand
         {
             get => GetAttribute<OnOffValue>();
@@ -23628,12 +21773,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:firstRowFirstColumn")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? FirstRowFirstColumn
         {
             get => GetAttribute<OnOffValue>();
@@ -23647,12 +21787,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:firstRowLastColumn")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? FirstRowLastColumn
         {
             get => GetAttribute<OnOffValue>();
@@ -23666,12 +21801,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:lastRowFirstColumn")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? LastRowFirstColumn
         {
             get => GetAttribute<OnOffValue>();
@@ -23685,12 +21815,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:lastRowLastColumn")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? LastRowLastColumn
         {
             get => GetAttribute<OnOffValue>();
@@ -23768,9 +21893,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tcW.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tcW")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableCellWidth : TableWidthType
     {
         /// <summary>
@@ -23795,9 +21918,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:wBefore.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:wBefore")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WidthBeforeTableRow : TableWidthType
     {
         /// <summary>
@@ -23822,9 +21943,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:wAfter.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:wAfter")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WidthAfterTableRow : TableWidthType
     {
         /// <summary>
@@ -23849,9 +21968,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblCellSpacing.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tblCellSpacing")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableCellSpacing : TableWidthType
     {
         /// <summary>
@@ -23876,9 +21993,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblW.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tblW")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableWidth : TableWidthType
     {
         /// <summary>
@@ -23903,9 +22018,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:top.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:top")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TopMargin : TableWidthType
     {
         /// <summary>
@@ -23930,9 +22043,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:start.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:start")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StartMargin : TableWidthType
     {
         /// <summary>
@@ -23958,9 +22069,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bottom.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:bottom")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BottomMargin : TableWidthType
     {
         /// <summary>
@@ -23987,9 +22096,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:end.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:end")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EndMargin : TableWidthType
     {
         /// <summary>
@@ -24015,9 +22122,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:left.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:left")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LeftMargin : TableWidthType
     {
         /// <summary>
@@ -24042,9 +22147,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:right.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:right")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RightMargin : TableWidthType
     {
         /// <summary>
@@ -24085,12 +22188,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:w")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Width
         {
             get => GetAttribute<StringValue>();
@@ -24104,12 +22202,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:type")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues>>();
@@ -24143,9 +22236,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:hMerge.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:hMerge")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HorizontalMerge : OpenXmlLeafElement
     {
         /// <summary>
@@ -24162,12 +22253,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues>>();
@@ -24191,9 +22277,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:vMerge.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:vMerge")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VerticalMerge : OpenXmlLeafElement
     {
         /// <summary>
@@ -24210,12 +22294,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues>>();
@@ -24254,9 +22333,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TopRightToBottomLeftCellBorder" /> <c>&lt;w:tr2bl></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tcBorders")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableCellBorders : OpenXmlCompositeElement
     {
         /// <summary>
@@ -24458,9 +22535,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noWrap.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:noWrap")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NoWrap : OnOffOnlyType
     {
         /// <summary>
@@ -24485,9 +22560,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tcFitText.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tcFitText")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableCellFitText : OnOffOnlyType
     {
         /// <summary>
@@ -24512,9 +22585,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:hideMark.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:hideMark")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HideMark : OnOffOnlyType
     {
         /// <summary>
@@ -24539,9 +22610,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:cantSplit.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:cantSplit")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CantSplit : OnOffOnlyType
     {
         /// <summary>
@@ -24566,9 +22635,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblHeader.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tblHeader")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableHeader : OnOffOnlyType
     {
         /// <summary>
@@ -24593,9 +22660,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bidiVisual.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:bidiVisual")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BiDiVisual : OnOffOnlyType
     {
         /// <summary>
@@ -24620,9 +22685,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noResizeAllowed.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:noResizeAllowed")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NoResizeAllowed : OnOffOnlyType
     {
         /// <summary>
@@ -24647,9 +22710,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:linkedToFile.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:linkedToFile")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LinkedToFile : OnOffOnlyType
     {
         /// <summary>
@@ -24674,9 +22735,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noBorder.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:noBorder")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NoBorder : OnOffOnlyType
     {
         /// <summary>
@@ -24701,9 +22760,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:flatBorders.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:flatBorders")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FlatBorders : OnOffOnlyType
     {
         /// <summary>
@@ -24728,9 +22785,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:autoRedefine.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:autoRedefine")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AutoRedefine : OnOffOnlyType
     {
         /// <summary>
@@ -24755,9 +22810,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:hidden.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:hidden")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StyleHidden : OnOffOnlyType
     {
         /// <summary>
@@ -24782,9 +22835,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:semiHidden.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:semiHidden")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SemiHidden : OnOffOnlyType
     {
         /// <summary>
@@ -24809,9 +22860,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:unhideWhenUsed.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:unhideWhenUsed")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class UnhideWhenUsed : OnOffOnlyType
     {
         /// <summary>
@@ -24836,9 +22885,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:qFormat.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:qFormat")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PrimaryStyle : OnOffOnlyType
     {
         /// <summary>
@@ -24863,9 +22910,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:locked.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:locked")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Locked : OnOffOnlyType
     {
         /// <summary>
@@ -24890,9 +22935,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:personal.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:personal")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Personal : OnOffOnlyType
     {
         /// <summary>
@@ -24917,9 +22960,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:personalCompose.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:personalCompose")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PersonalCompose : OnOffOnlyType
     {
         /// <summary>
@@ -24944,9 +22985,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:personalReply.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:personalReply")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PersonalReply : OnOffOnlyType
     {
         /// <summary>
@@ -24987,12 +23026,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.OnOffOnlyValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.OnOffOnlyValues>>();
@@ -25023,9 +23057,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.EndMargin" /> <c>&lt;w:end></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tcMar")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableCellMargin : OpenXmlCompositeElement
     {
         /// <summary>
@@ -25167,9 +23199,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:vAlign.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:vAlign")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableCellVerticalAlignment : OpenXmlLeafElement
     {
         /// <summary>
@@ -25186,12 +23216,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableVerticalAlignmentValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableVerticalAlignmentValues>>();
@@ -25218,9 +23243,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:divId.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:divId")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DivId : OpenXmlLeafElement
     {
         /// <summary>
@@ -25237,12 +23260,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -25275,9 +23293,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:trHeight.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:trHeight")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableRowHeight : OpenXmlLeafElement
     {
         /// <summary>
@@ -25294,12 +23310,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
@@ -25313,12 +23324,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:hRule")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues>? HeightType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues>>();
@@ -25346,9 +23352,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:jc.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:jc")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableJustification : OpenXmlLeafElement
     {
         /// <summary>
@@ -25365,12 +23369,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableRowAlignmentValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableRowAlignmentValues>>();
@@ -25397,9 +23396,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblpPr.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tblpPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TablePositionProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -25416,12 +23413,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:leftFromText")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int16Value? LeftFromText
         {
             get => GetAttribute<Int16Value>();
@@ -25435,12 +23427,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:rightFromText")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int16Value? RightFromText
         {
             get => GetAttribute<Int16Value>();
@@ -25454,12 +23441,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:topFromText")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int16Value? TopFromText
         {
             get => GetAttribute<Int16Value>();
@@ -25473,12 +23455,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:bottomFromText")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int16Value? BottomFromText
         {
             get => GetAttribute<Int16Value>();
@@ -25492,12 +23469,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:vertAnchor")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues>? VerticalAnchor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues>>();
@@ -25511,12 +23483,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:horzAnchor")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues>? HorizontalAnchor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues>>();
@@ -25530,12 +23497,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:tblpXSpec")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues>? TablePositionXAlignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues>>();
@@ -25549,12 +23511,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:tblpX")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? TablePositionX
         {
             get => GetAttribute<Int32Value>();
@@ -25568,12 +23525,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:tblpYSpec")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues>? TablePositionYAlignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues>>();
@@ -25587,12 +23539,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:tblpY")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? TablePositionY
         {
             get => GetAttribute<Int32Value>();
@@ -25643,9 +23590,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblOverlap.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tblOverlap")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableOverlap : OpenXmlLeafElement
     {
         /// <summary>
@@ -25662,12 +23607,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableOverlapValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableOverlapValues>>();
@@ -25694,9 +23634,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblStyleRowBandSize.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tblStyleRowBandSize")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableStyleRowBandSize : UnsignedDecimalNumberMax3Type
     {
         /// <summary>
@@ -25721,9 +23659,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblStyleColBandSize.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tblStyleColBandSize")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableStyleColumnBandSize : UnsignedDecimalNumberMax3Type
     {
         /// <summary>
@@ -25764,12 +23700,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -25793,9 +23724,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblInd.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tblInd")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableIndentation : OpenXmlLeafElement
     {
         /// <summary>
@@ -25812,12 +23741,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:w")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? Width
         {
             get => GetAttribute<Int32Value>();
@@ -25831,12 +23755,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:type")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues>>();
@@ -25874,9 +23793,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.InsideVerticalBorder" /> <c>&lt;w:insideV></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tblBorders")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableBorders : OpenXmlCompositeElement
     {
         /// <summary>
@@ -26048,9 +23965,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblLayout.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tblLayout")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableLayout : OpenXmlLeafElement
     {
         /// <summary>
@@ -26067,12 +23982,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:type")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableLayoutValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableLayoutValues>>();
@@ -26107,9 +24017,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellRightMargin" /> <c>&lt;w:right></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tblCellMar")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableCellMarginDefault : OpenXmlCompositeElement
     {
         /// <summary>
@@ -26251,9 +24159,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:numStart.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:numStart")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NumberingStart : OpenXmlLeafElement
     {
         /// <summary>
@@ -26270,12 +24176,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt16Value? Val
         {
             get => GetAttribute<UInt16Value>();
@@ -26302,9 +24203,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:numRestart.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:numRestart")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NumberingRestart : OpenXmlLeafElement
     {
         /// <summary>
@@ -26321,12 +24220,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.RestartNumberValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.RestartNumberValues>>();
@@ -26359,9 +24253,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AltChunkProperties" /> <c>&lt;w:altChunkPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:altChunk")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AltChunk : OpenXmlCompositeElement
     {
         /// <summary>
@@ -26402,12 +24294,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("r:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -26451,9 +24338,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblLook.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tblLook")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableLook : OpenXmlLeafElement
     {
         /// <summary>
@@ -26470,12 +24355,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? Val
         {
             get => GetAttribute<HexBinaryValue>();
@@ -26489,12 +24369,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:firstRow")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? FirstRow
         {
             get => GetAttribute<OnOffValue>();
@@ -26508,12 +24383,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:lastRow")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? LastRow
         {
             get => GetAttribute<OnOffValue>();
@@ -26527,12 +24397,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:firstColumn")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? FirstColumn
         {
             get => GetAttribute<OnOffValue>();
@@ -26546,12 +24411,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:lastColumn")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? LastColumn
         {
             get => GetAttribute<OnOffValue>();
@@ -26565,12 +24425,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:noHBand")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? NoHorizontalBand
         {
             get => GetAttribute<OnOffValue>();
@@ -26584,12 +24439,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:noVBand")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? NoVerticalBand
         {
             get => GetAttribute<OnOffValue>();
@@ -26649,9 +24499,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingRestart" /> <c>&lt;w:numRestart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:footnotePr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FootnoteProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -26778,9 +24626,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingRestart" /> <c>&lt;w:numRestart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:endnotePr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EndnoteProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -26898,9 +24744,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:type.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:type")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SectionType : OpenXmlLeafElement
     {
         /// <summary>
@@ -26917,12 +24761,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.SectionMarkValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.SectionMarkValues>>();
@@ -26949,9 +24788,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pgSz.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:pgSz")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PageSize : OpenXmlLeafElement
     {
         /// <summary>
@@ -26968,12 +24805,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:w")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Width
         {
             get => GetAttribute<UInt32Value>();
@@ -26987,12 +24819,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:h")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Height
         {
             get => GetAttribute<UInt32Value>();
@@ -27006,12 +24833,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:orient")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageOrientationValues>? Orient
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageOrientationValues>>();
@@ -27025,12 +24847,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:code")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt16Value? Code
         {
             get => GetAttribute<UInt16Value>();
@@ -27063,9 +24880,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pgMar.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:pgMar")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PageMargin : OpenXmlLeafElement
     {
         /// <summary>
@@ -27082,12 +24897,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:top")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? Top
         {
             get => GetAttribute<Int32Value>();
@@ -27101,12 +24911,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:right")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Right
         {
             get => GetAttribute<UInt32Value>();
@@ -27120,12 +24925,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:bottom")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? Bottom
         {
             get => GetAttribute<Int32Value>();
@@ -27139,12 +24939,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:left")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Left
         {
             get => GetAttribute<UInt32Value>();
@@ -27158,12 +24953,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:header")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Header
         {
             get => GetAttribute<UInt32Value>();
@@ -27177,12 +24967,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:footer")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Footer
         {
             get => GetAttribute<UInt32Value>();
@@ -27196,12 +24981,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:gutter")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Gutter
         {
             get => GetAttribute<UInt32Value>();
@@ -27252,9 +25032,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:paperSrc.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:paperSrc")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PaperSource : OpenXmlLeafElement
     {
         /// <summary>
@@ -27271,12 +25049,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:first")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt16Value? First
         {
             get => GetAttribute<UInt16Value>();
@@ -27290,12 +25063,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:other")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt16Value? Other
         {
             get => GetAttribute<UInt16Value>();
@@ -27329,9 +25097,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RightBorder" /> <c>&lt;w:right></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:pgBorders")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PageBorders : OpenXmlCompositeElement
     {
         /// <summary>
@@ -27372,12 +25138,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:zOrder")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderZOrderValues>? ZOrder
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderZOrderValues>>();
@@ -27391,12 +25152,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:display")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderDisplayValues>? Display
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderDisplayValues>>();
@@ -27410,12 +25166,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:offsetFrom")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderOffsetValues>? OffsetFrom
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderOffsetValues>>();
@@ -27504,9 +25255,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lnNumType.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:lnNumType")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LineNumberType : OpenXmlLeafElement
     {
         /// <summary>
@@ -27523,12 +25272,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:countBy")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int16Value? CountBy
         {
             get => GetAttribute<Int16Value>();
@@ -27542,12 +25286,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:start")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int16Value? Start
         {
             get => GetAttribute<Int16Value>();
@@ -27561,12 +25300,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:distance")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Distance
         {
             get => GetAttribute<StringValue>();
@@ -27580,12 +25314,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:restart")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineNumberRestartValues>? Restart
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineNumberRestartValues>>();
@@ -27626,9 +25355,7 @@ aBuilder.AddUnion(union =>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pgNumType.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:pgNumType")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PageNumberType : OpenXmlLeafElement
     {
         /// <summary>
@@ -27645,12 +25372,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:fmt")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>? Format
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>>();
@@ -27664,12 +25386,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:start")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? Start
         {
             get => GetAttribute<Int32Value>();
@@ -27683,12 +25400,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:chapStyle")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public ByteValue? ChapterStyle
         {
             get => GetAttribute<ByteValue>();
@@ -27702,12 +25414,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:chapSep")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues>? ChapterSeparator
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues>>();
@@ -27743,9 +25450,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Column" /> <c>&lt;w:col></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:cols")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Columns : OpenXmlCompositeElement
     {
         /// <summary>
@@ -27786,12 +25491,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:equalWidth")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? EqualWidth
         {
             get => GetAttribute<OnOffValue>();
@@ -27805,12 +25505,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:space")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Space
         {
             get => GetAttribute<StringValue>();
@@ -27824,12 +25519,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:num")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int16Value? ColumnCount
         {
             get => GetAttribute<Int16Value>();
@@ -27843,12 +25533,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:sep")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? Separator
         {
             get => GetAttribute<OnOffValue>();
@@ -27891,9 +25576,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:vAlign.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:vAlign")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VerticalTextAlignmentOnPage : OpenXmlLeafElement
     {
         /// <summary>
@@ -27910,12 +25593,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalJustificationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalJustificationValues>>();
@@ -27942,9 +25620,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:docGrid.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:docGrid")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DocGrid : OpenXmlLeafElement
     {
         /// <summary>
@@ -27961,12 +25637,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:type")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocGridValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocGridValues>>();
@@ -27980,12 +25651,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:linePitch")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? LinePitch
         {
             get => GetAttribute<Int32Value>();
@@ -27999,12 +25665,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:charSpace")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? CharacterSpace
         {
             get => GetAttribute<Int32Value>();
@@ -28036,9 +25697,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RecipientData" /> <c>&lt;w:recipientData></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:recipients")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Recipients : OpenXmlPartRootElement
     {
         /// <summary>
@@ -28132,9 +25791,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:txbxContent")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TextBoxContent : OpenXmlCompositeElement
     {
         /// <summary>
@@ -28325,9 +25982,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Comment" /> <c>&lt;w:comment></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:comments")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Comments : OpenXmlPartRootElement
     {
         /// <summary>
@@ -28418,9 +26073,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Footnote" /> <c>&lt;w:footnote></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:footnotes")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Footnotes : OpenXmlPartRootElement
     {
         /// <summary>
@@ -28511,9 +26164,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Endnote" /> <c>&lt;w:endnote></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:endnotes")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Endnotes : OpenXmlPartRootElement
     {
         /// <summary>
@@ -28638,9 +26289,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:hdr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Header : OpenXmlPartRootElement
     {
         /// <summary>
@@ -28896,9 +26545,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:ftr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Footer : OpenXmlPartRootElement
     {
         /// <summary>
@@ -29341,9 +26988,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.PersistentDocumentId" /> <c>&lt;w15:docId></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:settings")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Settings : OpenXmlPartRootElement
     {
         /// <summary>
@@ -29922,9 +27567,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TargetScreenSize" /> <c>&lt;w:targetScreenSz></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:webSettings")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebSettings : OpenXmlPartRootElement
     {
         /// <summary>
@@ -30193,9 +27836,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Font" /> <c>&lt;w:font></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:fonts")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Fonts : OpenXmlPartRootElement
     {
         /// <summary>
@@ -30289,9 +27930,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingPictureBullet" /> <c>&lt;w:numPicBullet></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:numbering")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Numbering : OpenXmlPartRootElement
     {
         /// <summary>
@@ -30390,9 +28029,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Style" /> <c>&lt;w:style></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:styles")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Styles : OpenXmlPartRootElement
     {
         /// <summary>
@@ -30483,9 +28120,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Body" /> <c>&lt;w:body></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:document")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Document : OpenXmlPartRootElement
     {
         /// <summary>
@@ -30526,12 +28161,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:conformance")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentConformance>? Conformance
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentConformance>>();
@@ -30632,9 +28262,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocParts" /> <c>&lt;w:docParts></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:glossaryDocument")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GlossaryDocument : OpenXmlPartRootElement
     {
         /// <summary>
@@ -30767,9 +28395,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableIndentation" /> <c>&lt;w:tblInd></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tblPrEx")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PreviousTablePropertyExceptions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -30977,9 +28603,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalMerge" /> <c>&lt;w:vMerge></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tcPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PreviousTableCellProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31297,9 +28921,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing" /> <c>&lt;w:tblCellSpacing></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:trPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PreviousTableRowProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31407,9 +29029,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableIndentation" /> <c>&lt;w:tblInd></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tblPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PreviousTableProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31747,9 +29367,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentOnPage" /> <c>&lt;w:vAlign></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:sectPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PreviousSectionProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31790,12 +29408,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:rsidRPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? RsidRPr
         {
             get => GetAttribute<HexBinaryValue>();
@@ -31809,12 +29422,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:rsidDel")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? RsidDel
         {
             get => GetAttribute<HexBinaryValue>();
@@ -31828,12 +29436,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:rsidR")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? RsidR
         {
             get => GetAttribute<HexBinaryValue>();
@@ -31847,12 +29450,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:rsidSect")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? RsidSect
         {
             get => GetAttribute<HexBinaryValue>();
@@ -32238,9 +29836,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextDirection" /> <c>&lt;w:textDirection></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:pPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     {
         /// <summary>
@@ -32860,9 +30456,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect" /> <c>&lt;w14:textOutline></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:rPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PreviousRunProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -33130,9 +30724,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect" /> <c>&lt;w14:textOutline></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:rPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PreviousParagraphMarkRunProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -33422,9 +31014,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:ilvl.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:ilvl")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NumberingLevelReference : OpenXmlLeafElement
     {
         /// <summary>
@@ -33441,12 +31031,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -33474,9 +31059,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:numId.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:numId")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NumberingId : NonNegativeDecimalNumberType
     {
         /// <summary>
@@ -33501,9 +31084,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:start.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:start")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StartNumberingValue : NonNegativeDecimalNumberType
     {
         /// <summary>
@@ -33528,9 +31109,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:abstractNumId.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:abstractNumId")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AbstractNumId : NonNegativeDecimalNumberType
     {
         /// <summary>
@@ -33571,12 +31150,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -33600,9 +31174,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:numberingChange.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:numberingChange")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NumberingChange : OpenXmlLeafElement
     {
         /// <summary>
@@ -33619,12 +31191,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:original")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Original
         {
             get => GetAttribute<StringValue>();
@@ -33638,12 +31205,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:author")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -33657,12 +31219,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:date")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -33676,12 +31233,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -33722,9 +31274,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tab.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tab")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TabStop : OpenXmlLeafElement
     {
         /// <summary>
@@ -33741,12 +31291,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopValues>>();
@@ -33760,12 +31305,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:leader")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopLeaderCharValues>? Leader
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopLeaderCharValues>>();
@@ -33779,12 +31319,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:pos")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? Position
         {
             get => GetAttribute<Int32Value>();
@@ -33880,9 +31415,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect" /> <c>&lt;w14:textOutline></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:rPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ParagraphMarkRunProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -34202,9 +31735,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentOnPage" /> <c>&lt;w:vAlign></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:sectPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SectionProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -34245,12 +31776,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:rsidRPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? RsidRPr
         {
             get => GetAttribute<HexBinaryValue>();
@@ -34264,12 +31790,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:rsidDel")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? RsidDel
         {
             get => GetAttribute<HexBinaryValue>();
@@ -34283,12 +31804,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:rsidR")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? RsidR
         {
             get => GetAttribute<HexBinaryValue>();
@@ -34302,12 +31818,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:rsidSect")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? RsidSect
         {
             get => GetAttribute<HexBinaryValue>();
@@ -34407,9 +31918,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:fldData.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:fldData")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FieldData : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -34462,9 +31971,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CalculateOnExit" /> <c>&lt;w:calcOnExit></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:ffData")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FormFieldData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -34539,9 +32046,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:name.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:name")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FormFieldName : OpenXmlLeafElement
     {
         /// <summary>
@@ -34558,12 +32063,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -34591,9 +32091,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:entryMacro.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:entryMacro")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EntryMacro : MacroNameType
     {
         /// <summary>
@@ -34618,9 +32116,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:exitMacro.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:exitMacro")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ExitMacro : MacroNameType
     {
         /// <summary>
@@ -34661,12 +32157,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -34690,9 +32181,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:helpText.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:helpText")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HelpText : OpenXmlLeafElement
     {
         /// <summary>
@@ -34709,12 +32198,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:type")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues>>();
@@ -34728,12 +32212,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -34761,9 +32240,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:statusText.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:statusText")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StatusText : OpenXmlLeafElement
     {
         /// <summary>
@@ -34780,12 +32257,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:type")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues>>();
@@ -34799,12 +32271,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -34842,9 +32309,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (140L), InitialVersion
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Checked" /> <c>&lt;w:checked></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:checkBox")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CheckBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -34915,9 +32380,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (140L), InitialVersion
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DefaultDropDownListItemIndex" /> <c>&lt;w:default></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:ddList")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DropDownListFormField : OpenXmlCompositeElement
     {
         /// <summary>
@@ -35010,9 +32473,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (140L), InitialVersion
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Format" /> <c>&lt;w:format></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:textInput")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TextInput : OpenXmlCompositeElement
     {
         /// <summary>
@@ -35124,9 +32585,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (140L), InitialVersion
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:default.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:default")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DefaultDropDownListItemIndex : OpenXmlLeafElement
     {
         /// <summary>
@@ -35143,12 +32602,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (140L), InitialVersion
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -35176,9 +32630,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:listEntry.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:listEntry")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ListEntryFormField : String255Type
     {
         /// <summary>
@@ -35203,9 +32655,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:default.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:default")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DefaultTextBoxFormFieldString : String255Type
     {
         /// <summary>
@@ -35230,9 +32680,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:name.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:name")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FrameName : String255Type
     {
         /// <summary>
@@ -35274,12 +32722,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -35303,9 +32746,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:type.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:type")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TextBoxFormFieldType : OpenXmlLeafElement
     {
         /// <summary>
@@ -35322,12 +32763,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxFormFieldValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxFormFieldValues>>();
@@ -35354,9 +32790,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:maxLength.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:maxLength")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MaxLength : OpenXmlLeafElement
     {
         /// <summary>
@@ -35373,12 +32807,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int16Value? Val
         {
             get => GetAttribute<Int16Value>();
@@ -35406,9 +32835,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:format.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:format")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Format : OpenXmlLeafElement
     {
         /// <summary>
@@ -35425,12 +32852,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -35458,9 +32880,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:col.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:col")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Column : OpenXmlLeafElement
     {
         /// <summary>
@@ -35477,12 +32897,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:w")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Width
         {
             get => GetAttribute<StringValue>();
@@ -35496,12 +32911,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:space")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Space
         {
             get => GetAttribute<StringValue>();
@@ -35548,9 +32958,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousSectionProperties" /> <c>&lt;w:sectPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:sectPrChange")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SectionPropertiesChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -35591,12 +32999,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:author")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -35610,12 +33013,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:date")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -35629,12 +33027,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -35700,9 +33093,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousParagraphMarkRunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:rPrChange")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ParagraphMarkRunPropertiesChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -35743,12 +33134,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:author")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -35762,12 +33148,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:date")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -35781,12 +33162,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -35852,9 +33228,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MatchSource" /> <c>&lt;w:matchSrc></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:altChunkPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AltChunkProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -35921,9 +33295,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rubyAlign.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:rubyAlign")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RubyAlign : OpenXmlLeafElement
     {
         /// <summary>
@@ -35940,12 +33312,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.RubyAlignValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.RubyAlignValues>>();
@@ -35972,9 +33339,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:hpsRaise.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:hpsRaise")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PhoneticGuideRaise : OpenXmlLeafElement
     {
         /// <summary>
@@ -35991,12 +33356,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int16Value? Val
         {
             get => GetAttribute<Int16Value>();
@@ -36023,9 +33383,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lid.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:lid")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LanguageId : OpenXmlLeafElement
     {
         /// <summary>
@@ -36042,12 +33400,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -36086,9 +33439,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RubyAlign" /> <c>&lt;w:rubyAlign></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:rubyPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RubyProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -36292,9 +33643,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:rt")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RubyContent : RubyContentType
     {
         /// <summary>
@@ -36528,9 +33877,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:rubyBase")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RubyBase : RubyContentType
     {
         /// <summary>
@@ -36865,9 +34212,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:storeMappedDataAs.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:storeMappedDataAs")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtDateMappingType : OpenXmlLeafElement
     {
         /// <summary>
@@ -36884,12 +34229,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DateFormatValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DateFormatValues>>();
@@ -36913,9 +34253,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:calendar.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:calendar")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Calendar : OpenXmlLeafElement
     {
         /// <summary>
@@ -36932,12 +34270,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CalendarValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CalendarValues>>();
@@ -36961,9 +34294,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:listItem.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:listItem")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ListItem : OpenXmlLeafElement
     {
         /// <summary>
@@ -36980,12 +34311,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:displayText")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? DisplayText
         {
             get => GetAttribute<StringValue>();
@@ -36999,12 +34325,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:value")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Value
         {
             get => GetAttribute<StringValue>();
@@ -37064,9 +34385,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSection" /> <c>&lt;w15:repeatingSection></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:sdtPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -37190,9 +34509,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:sdtEndPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtEndCharProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -37285,9 +34602,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:sdtContent")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtContentBlock : OpenXmlCompositeElement
     {
         /// <summary>
@@ -37517,9 +34832,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:sdtContent")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtContentRun : OpenXmlCompositeElement
     {
         /// <summary>
@@ -37850,9 +35163,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:sdtContent")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtContentRunRuby : OpenXmlCompositeElement
     {
         /// <summary>
@@ -38119,9 +35430,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:sdtContent")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtContentCell : OpenXmlCompositeElement
     {
         /// <summary>
@@ -38316,9 +35625,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:sdtContent")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtContentRow : OpenXmlCompositeElement
     {
         /// <summary>
@@ -38482,9 +35789,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlAttribute" /> <c>&lt;w:attr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:customXmlPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomXmlProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -38553,9 +35858,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:attr.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:attr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomXmlAttribute : OpenXmlLeafElement
     {
         /// <summary>
@@ -38572,12 +35875,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:uri")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -38591,12 +35889,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:name")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -38610,12 +35903,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -38648,9 +35936,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:gridCol.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:gridCol")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GridColumn : OpenXmlLeafElement
     {
         /// <summary>
@@ -38667,12 +35953,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:w")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Width
         {
             get => GetAttribute<StringValue>();
@@ -38710,9 +35991,7 @@ aBuilder.AddUnion(union =>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousTableGrid" /> <c>&lt;w:tblGrid></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tblGridChange")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableGridChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -38753,12 +36032,7 @@ aBuilder.AddUnion(union =>
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -38819,9 +36093,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousTableCellProperties" /> <c>&lt;w:tcPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tcPrChange")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableCellPropertiesChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -38862,12 +36134,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:author")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -38881,12 +36148,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:date")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -38900,12 +36162,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -38987,9 +36244,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalMerge" /> <c>&lt;w:vMerge></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tcPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableCellProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -39304,9 +36559,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousTableProperties" /> <c>&lt;w:tblPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tblPrChange")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TablePropertiesChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -39347,12 +36600,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:author")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -39366,12 +36614,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:date")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -39385,12 +36628,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -39456,9 +36694,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousTablePropertyExceptions" /> <c>&lt;w:tblPrEx></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tblPrExChange")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TablePropertyExceptionsChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -39499,12 +36735,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:author")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -39518,12 +36749,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:date")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -39537,12 +36763,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -39623,9 +36844,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableIndentation" /> <c>&lt;w:tblInd></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tblPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -39966,9 +37185,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.GridColumn" /> <c>&lt;w:gridCol></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tblGrid")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableGrid : OpenXmlCompositeElement
     {
         /// <summary>
@@ -40030,9 +37247,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pos.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:pos")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FootnotePosition : OpenXmlLeafElement
     {
         /// <summary>
@@ -40049,12 +37264,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnotePositionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnotePositionValues>>();
@@ -40081,9 +37291,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:numFmt.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:numFmt")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NumberingFormat : OpenXmlLeafElement
     {
         /// <summary>
@@ -40100,12 +37308,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>>();
@@ -40119,12 +37322,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:format")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Format
         {
             get => GetAttribute<StringValue>();
@@ -40155,9 +37353,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pos.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:pos")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EndnotePosition : OpenXmlLeafElement
     {
         /// <summary>
@@ -40174,12 +37370,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.EndnotePositionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.EndnotePositionValues>>();
@@ -40206,9 +37397,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:footnote.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:footnote")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FootnoteSpecialReference : FootnoteEndnoteSeparatorReferenceType
     {
         /// <summary>
@@ -40235,9 +37424,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:endnote.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:endnote")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EndnoteSpecialReference : FootnoteEndnoteSeparatorReferenceType
     {
         /// <summary>
@@ -40280,12 +37467,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public IntegerValue? Id
         {
             get => GetAttribute<IntegerValue>();
@@ -40309,9 +37491,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:column.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:column")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColumnIndex : UnsignedDecimalNumberType
     {
         /// <summary>
@@ -40336,9 +37516,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:colDelim.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:colDelim")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColumnDelimiter : UnsignedDecimalNumberType
     {
         /// <summary>
@@ -40379,12 +37557,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
@@ -40407,9 +37580,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:uniqueTag.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:uniqueTag")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class UniqueTag : OpenXmlLeafElement
     {
         /// <summary>
@@ -40426,12 +37597,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Base64BinaryValue? Val
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -40466,9 +37632,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ColumnIndex" /> <c>&lt;w:column></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:recipientData")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RecipientData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -40566,9 +37730,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:type.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:type")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MailMergeFieldType : OpenXmlLeafElement
     {
         /// <summary>
@@ -40585,12 +37747,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeOdsoFieldValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeOdsoFieldValues>>();
@@ -40617,9 +37774,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:type.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:type")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MailMergeSource : OpenXmlLeafElement
     {
         /// <summary>
@@ -40636,12 +37791,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeSourceValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeSourceValues>>();
@@ -40679,9 +37829,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ColumnIndex" /> <c>&lt;w:column></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:fieldMapData")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FieldMapData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -40823,9 +37971,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:mainDocumentType.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:mainDocumentType")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MainDocumentType : OpenXmlLeafElement
     {
         /// <summary>
@@ -40842,12 +37988,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDocumentValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDocumentValues>>();
@@ -40874,9 +38015,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:dataType.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:dataType")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataType : OpenXmlLeafElement
     {
         /// <summary>
@@ -40893,12 +38032,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDataValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDataValues>>();
@@ -40925,9 +38059,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:destination.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:destination")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Destination : OpenXmlLeafElement
     {
         /// <summary>
@@ -40944,12 +38076,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDestinationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDestinationValues>>();
@@ -40989,9 +38116,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ColumnDelimiter" /> <c>&lt;w:colDelim></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:odso")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataSourceObject : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41137,9 +38262,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:docVar.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:docVar")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DocumentVariable : OpenXmlLeafElement
     {
         /// <summary>
@@ -41156,12 +38279,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:name")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -41175,12 +38293,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -41213,9 +38326,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rsidRoot.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:rsidRoot")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RsidRoot : LongHexNumberType
     {
         /// <summary>
@@ -41240,9 +38351,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rsid.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:rsid")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Rsid : LongHexNumberType
     {
         /// <summary>
@@ -41267,9 +38376,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:nsid.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:nsid")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Nsid : LongHexNumberType
     {
         /// <summary>
@@ -41294,9 +38401,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tmpl.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tmpl")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TemplateCode : LongHexNumberType
     {
         /// <summary>
@@ -41337,12 +38442,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? Val
         {
             get => GetAttribute<HexBinaryValue>();
@@ -41405,9 +38505,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment" /> <c>&lt;w:vertAlign></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:rPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42028,9 +39126,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextDirection" /> <c>&lt;w:textDirection></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:pPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42544,9 +39640,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunPropertiesBaseStyle" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:rPrDefault")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RunPropertiesDefault : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42619,9 +39713,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesBaseStyle" /> <c>&lt;w:pPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:pPrDefault")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ParagraphPropertiesDefault : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42688,9 +39780,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:marW.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:marW")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MarginWidth : PixelsMeasureType
     {
         /// <summary>
@@ -42715,9 +39805,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:marH.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:marH")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MarginHeight : PixelsMeasureType
     {
         /// <summary>
@@ -42758,12 +39846,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
@@ -42786,9 +39869,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:scrollbar.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:scrollbar")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ScrollbarVisibility : OpenXmlLeafElement
     {
         /// <summary>
@@ -42805,12 +39886,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameScrollbarVisibilityValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameScrollbarVisibilityValues>>();
@@ -42837,9 +39913,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:w.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:w")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Width : TwipsMeasureType
     {
         /// <summary>
@@ -42864,9 +39938,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:hyphenationZone.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:hyphenationZone")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HyphenationZone : TwipsMeasureType
     {
         /// <summary>
@@ -42891,9 +39963,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:drawingGridHorizontalSpacing.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:drawingGridHorizontalSpacing")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DrawingGridHorizontalSpacing : TwipsMeasureType
     {
         /// <summary>
@@ -42918,9 +39988,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:drawingGridVerticalSpacing.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:drawingGridVerticalSpacing")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DrawingGridVerticalSpacing : TwipsMeasureType
     {
         /// <summary>
@@ -42945,9 +40013,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:drawingGridHorizontalOrigin.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:drawingGridHorizontalOrigin")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DrawingGridHorizontalOrigin : TwipsMeasureType
     {
         /// <summary>
@@ -42972,9 +40038,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:drawingGridVerticalOrigin.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:drawingGridVerticalOrigin")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DrawingGridVerticalOrigin : TwipsMeasureType
     {
         /// <summary>
@@ -43015,12 +40079,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -43058,9 +40117,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Width" /> <c>&lt;w:w></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:framesetSplitbar")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FramesetSplitbar : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43172,9 +40229,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:frameLayout.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:frameLayout")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FrameLayout : OpenXmlLeafElement
     {
         /// <summary>
@@ -43191,12 +40246,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameLayoutValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameLayoutValues>>();
@@ -43233,9 +40283,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.FrameSize" /> <c>&lt;w:sz></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:frameset")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Frameset : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43355,9 +40403,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.FrameName" /> <c>&lt;w:name></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:frame")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Frame : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43529,9 +40575,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:suff.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:suff")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LevelSuffix : OpenXmlLeafElement
     {
         /// <summary>
@@ -43548,12 +40592,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelSuffixValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelSuffixValues>>();
@@ -43580,9 +40619,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lvlText.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:lvlText")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LevelText : OpenXmlLeafElement
     {
         /// <summary>
@@ -43599,12 +40636,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -43618,12 +40650,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:null")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? Null
         {
             get => GetAttribute<OnOffValue>();
@@ -43648,9 +40675,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:legacy.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:legacy")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LegacyNumbering : OpenXmlLeafElement
     {
         /// <summary>
@@ -43667,12 +40692,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:legacy")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? Legacy
         {
             get => GetAttribute<OnOffValue>();
@@ -43686,12 +40706,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:legacySpace")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? LegacySpace
         {
             get => GetAttribute<StringValue>();
@@ -43705,12 +40720,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:legacyIndent")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? LegacyIndent
         {
             get => GetAttribute<StringValue>();
@@ -43752,9 +40762,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lvlJc.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:lvlJc")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LevelJustification : OpenXmlLeafElement
     {
         /// <summary>
@@ -43771,12 +40779,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelJustificationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelJustificationValues>>();
@@ -43839,9 +40842,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextDirection" /> <c>&lt;w:textDirection></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:pPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44411,9 +41412,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment" /> <c>&lt;w:vertAlign></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:rPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45029,9 +42028,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:multiLevelType.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:multiLevelType")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MultiLevelType : OpenXmlLeafElement
     {
         /// <summary>
@@ -45048,12 +42045,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MultiLevelValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MultiLevelValues>>();
@@ -45097,9 +42089,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleIdInLevel" /> <c>&lt;w:pStyle></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:lvl")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Level : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45140,12 +42130,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:ilvl")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? LevelIndex
         {
             get => GetAttribute<Int32Value>();
@@ -45159,12 +42144,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:tplc")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? TemplateCode
         {
             get => GetAttribute<HexBinaryValue>();
@@ -45178,12 +42158,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:tentative")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? Tentative
         {
             get => GetAttribute<OnOffValue>();
@@ -45405,9 +42380,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Level" /> <c>&lt;w:lvl></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:lvlOverride")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LevelOverride : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45448,12 +42421,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:ilvl")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? LevelIndex
         {
             get => GetAttribute<Int32Value>();
@@ -45520,9 +42488,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PictureBulletBase" /> <c>&lt;w:pict></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:numPicBullet")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NumberingPictureBullet : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45563,12 +42529,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:numPicBulletId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? NumberingPictureBulletId
         {
             get => GetAttribute<Int32Value>();
@@ -45644,9 +42605,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingStyleLink" /> <c>&lt;w:numStyleLink></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:abstractNum")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AbstractNum : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45687,12 +42646,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:abstractNumId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? AbstractNumberId
         {
             get => GetAttribute<Int32Value>();
@@ -45823,9 +42777,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.LevelOverride" /> <c>&lt;w:lvlOverride></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:num")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NumberingInstance : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45866,12 +42818,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:numId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? NumberID
         {
             get => GetAttribute<Int32Value>();
@@ -45955,9 +42902,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextDirection" /> <c>&lt;w:textDirection></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:pPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StyleParagraphProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46503,9 +43448,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableIndentation" /> <c>&lt;w:tblInd></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tblPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableStyleConditionalFormattingTableProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46669,9 +43612,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing" /> <c>&lt;w:tblCellSpacing></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:trPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableStyleConditionalFormattingTableRowProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46749,9 +43690,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment" /> <c>&lt;w:vAlign></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tcPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableStyleConditionalFormattingTableCellProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46896,9 +43835,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:name.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:name")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StyleName : OpenXmlLeafElement
     {
         /// <summary>
@@ -46915,12 +43852,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -46949,9 +43881,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:uiPriority.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:uiPriority")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class UIPriority : OpenXmlLeafElement
     {
         /// <summary>
@@ -46968,12 +43898,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -47041,9 +43966,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment" /> <c>&lt;w:vertAlign></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:rPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StyleRunProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -47669,9 +44592,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableStyleColumnBandSize" /> <c>&lt;w:tblStyleColBandSize></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tblPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StyleTableProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -47870,9 +44791,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment" /> <c>&lt;w:vAlign></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tcPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StyleTableCellProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -48006,9 +44925,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableRowProperties" /> <c>&lt;w:trPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tblStylePr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableStyleProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -48049,12 +44966,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:type")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableStyleOverrideValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableStyleOverrideValues>>();
@@ -48159,9 +45071,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lsdException.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:lsdException")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LatentStyleExceptionInfo : OpenXmlLeafElement
     {
         /// <summary>
@@ -48178,12 +45088,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:name")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -48197,12 +45102,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:locked")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? Locked
         {
             get => GetAttribute<OnOffValue>();
@@ -48216,12 +45116,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:uiPriority")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? UiPriority
         {
             get => GetAttribute<Int32Value>();
@@ -48235,12 +45130,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:semiHidden")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? SemiHidden
         {
             get => GetAttribute<OnOffValue>();
@@ -48254,12 +45144,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:unhideWhenUsed")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? UnhideWhenUsed
         {
             get => GetAttribute<OnOffValue>();
@@ -48273,12 +45158,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:qFormat")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? PrimaryStyle
         {
             get => GetAttribute<OnOffValue>();
@@ -48320,9 +45200,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunPropertiesDefault" /> <c>&lt;w:rPrDefault></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:docDefaults")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DocDefaults : OpenXmlCompositeElement
     {
         /// <summary>
@@ -48410,9 +45288,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.LatentStyleExceptionInfo" /> <c>&lt;w:lsdException></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:latentStyles")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LatentStyles : OpenXmlCompositeElement
     {
         /// <summary>
@@ -48453,12 +45329,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:defLockedState")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? DefaultLockedState
         {
             get => GetAttribute<OnOffValue>();
@@ -48472,12 +45343,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:defUIPriority")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? DefaultUiPriority
         {
             get => GetAttribute<Int32Value>();
@@ -48491,12 +45357,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:defSemiHidden")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? DefaultSemiHidden
         {
             get => GetAttribute<OnOffValue>();
@@ -48510,12 +45371,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:defUnhideWhenUsed")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? DefaultUnhideWhenUsed
         {
             get => GetAttribute<OnOffValue>();
@@ -48529,12 +45385,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:defQFormat")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? DefaultPrimaryStyle
         {
             get => GetAttribute<OnOffValue>();
@@ -48548,12 +45399,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:count")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? Count
         {
             get => GetAttribute<Int32Value>();
@@ -48617,9 +45463,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.UIPriority" /> <c>&lt;w:uiPriority></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:style")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Style : OpenXmlCompositeElement
     {
         /// <summary>
@@ -48660,12 +45504,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:type")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.StyleValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.StyleValues>>();
@@ -48679,12 +45518,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:styleId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? StyleId
         {
             get => GetAttribute<StringValue>();
@@ -48698,12 +45532,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:default")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? Default
         {
             get => GetAttribute<OnOffValue>();
@@ -48717,12 +45546,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:customStyle")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? CustomStyle
         {
             get => GetAttribute<OnOffValue>();
@@ -49089,9 +45913,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AltName" /> <c>&lt;w:altName></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:font")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Font : OpenXmlCompositeElement
     {
         /// <summary>
@@ -49132,12 +45954,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:name")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -49332,9 +46149,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:marLeft.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:marLeft")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LeftMarginDiv : SignedTwipsMeasureType
     {
         /// <summary>
@@ -49359,9 +46174,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:marRight.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:marRight")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RightMarginDiv : SignedTwipsMeasureType
     {
         /// <summary>
@@ -49386,9 +46199,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:marTop.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:marTop")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TopMarginDiv : SignedTwipsMeasureType
     {
         /// <summary>
@@ -49413,9 +46224,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:marBottom.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:marBottom")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BottomMarginDiv : SignedTwipsMeasureType
     {
         /// <summary>
@@ -49456,12 +46265,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -49499,9 +46303,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RightBorder" /> <c>&lt;w:right></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:divBdr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DivBorder : OpenXmlCompositeElement
     {
         /// <summary>
@@ -49619,9 +46421,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Div" /> <c>&lt;w:div></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:divsChild")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DivsChild : DivsType
     {
         /// <summary>
@@ -49680,9 +46480,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Div" /> <c>&lt;w:div></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:divs")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Divs : DivsType
     {
         /// <summary>
@@ -49799,9 +46597,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BottomMarginDiv" /> <c>&lt;w:marBottom></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:div")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Div : OpenXmlCompositeElement
     {
         /// <summary>
@@ -49842,12 +46638,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -50007,9 +46798,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-1L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Table" /> <c>&lt;w:tbl></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:comment")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Comment : OpenXmlCompositeElement
     {
         /// <summary>
@@ -50050,12 +46839,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-1L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:initials")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Initials
         {
             get => GetAttribute<StringValue>();
@@ -50069,12 +46853,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-1L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:author")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -50088,12 +46867,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-1L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:date")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -50107,12 +46881,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-1L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -50273,9 +47042,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:footnote")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Footnote : FootnoteEndnoteType
     {
         /// <summary>
@@ -50470,9 +47237,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:endnote")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Endnote : FootnoteEndnoteType
     {
         /// <summary>
@@ -50707,12 +47472,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:type")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnoteEndnoteValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnoteEndnoteValues>>();
@@ -50726,12 +47486,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public IntegerValue? Id
         {
             get => GetAttribute<IntegerValue>();
@@ -50791,9 +47546,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-2147483648L), Max
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:behavior.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:behavior")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Behavior : OpenXmlLeafElement
     {
         /// <summary>
@@ -50810,12 +47563,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-2147483648L), Max
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartBehaviorValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartBehaviorValues>>();
@@ -50842,9 +47590,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:type.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:type")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DocPartType : OpenXmlLeafElement
     {
         /// <summary>
@@ -50861,12 +47607,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartValues>>();
@@ -50893,9 +47634,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:gallery.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:gallery")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Gallery : OpenXmlLeafElement
     {
         /// <summary>
@@ -50912,12 +47651,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartGalleryValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartGalleryValues>>();
@@ -50944,9 +47678,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:autoCaption.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:autoCaption")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AutoCaption : OpenXmlLeafElement
     {
         /// <summary>
@@ -50963,12 +47695,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:name")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -50982,12 +47709,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:caption")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Caption
         {
             get => GetAttribute<StringValue>();
@@ -51021,9 +47743,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:caption.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:caption")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Caption : OpenXmlLeafElement
     {
         /// <summary>
@@ -51040,12 +47760,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:name")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -51059,12 +47774,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:pos")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CaptionPositionValues>? Position
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CaptionPositionValues>>();
@@ -51078,12 +47788,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:chapNum")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? ChapterNumber
         {
             get => GetAttribute<OnOffValue>();
@@ -51097,12 +47802,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:heading")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? Heading
         {
             get => GetAttribute<Int32Value>();
@@ -51116,12 +47816,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:noLabel")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? NoLabel
         {
             get => GetAttribute<OnOffValue>();
@@ -51135,12 +47830,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:numFmt")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>? NumberFormat
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>>();
@@ -51154,12 +47844,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:sep")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues>? Separator
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues>>();
@@ -51199,9 +47884,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AutoCaption" /> <c>&lt;w:autoCaption></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:autoCaptions")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AutoCaptions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -51261,9 +47944,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Background" /> <c>&lt;v:background></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:background")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DocumentBackground : OpenXmlCompositeElement
     {
         /// <summary>
@@ -51304,12 +47985,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:color")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Color
         {
             get => GetAttribute<StringValue>();
@@ -51323,12 +47999,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:themeColor")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>? ThemeColor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
@@ -51342,12 +48013,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:themeTint")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ThemeTint
         {
             get => GetAttribute<StringValue>();
@@ -51361,12 +48027,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:themeShade")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ThemeShade
         {
             get => GetAttribute<StringValue>();
@@ -51430,9 +48091,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPart" /> <c>&lt;w:docPart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:docParts")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DocParts : OpenXmlCompositeElement
     {
         /// <summary>
@@ -51487,9 +48146,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:name.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:name")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DocPartName : OpenXmlLeafElement
     {
         /// <summary>
@@ -51506,12 +48163,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -51525,12 +48177,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:decorated")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? Decorated
         {
             get => GetAttribute<OnOffValue>();
@@ -51566,9 +48213,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Name" /> <c>&lt;w:name></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:category")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Category : OpenXmlCompositeElement
     {
         /// <summary>
@@ -51656,9 +48301,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPartType" /> <c>&lt;w:type></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:types")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DocPartTypes : OpenXmlCompositeElement
     {
         /// <summary>
@@ -51699,12 +48342,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:all")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? All
         {
             get => GetAttribute<OnOffValue>();
@@ -51739,9 +48377,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Behavior" /> <c>&lt;w:behavior></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:behaviors")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Behaviors : OpenXmlCompositeElement
     {
         /// <summary>
@@ -51795,9 +48431,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:guid.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:guid")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DocPartId : OpenXmlLeafElement
     {
         /// <summary>
@@ -51814,12 +48448,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -51859,9 +48488,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Description" /> <c>&lt;w:description></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:docPartPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DocPartProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -52059,9 +48686,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:docPartBody")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DocPartBody : BodyType
     {
         /// <summary>
@@ -52256,9 +48881,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:body")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Body : BodyType
     {
         /// <summary>
@@ -52540,9 +49163,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPartProperties" /> <c>&lt;w:docPartPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:docPart")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DocPart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -52624,9 +49245,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:compatSetting.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:compatSetting")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CompatibilitySetting : OpenXmlLeafElement
     {
         /// <summary>
@@ -52643,12 +49262,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:name")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CompatSettingNameValues>? Name
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CompatSettingNameValues>>();
@@ -52662,12 +49276,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:uri")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -52681,12 +49290,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -52722,9 +49326,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:left.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:left")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableCellLeftMargin : TableWidthDxaNilType
     {
         /// <summary>
@@ -52749,9 +49351,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:right.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:right")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableCellRightMargin : TableWidthDxaNilType
     {
         /// <summary>
@@ -52792,12 +49392,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:w")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int16Value? Width
         {
             get => GetAttribute<Int16Value>();
@@ -52811,12 +49406,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:type")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthValues>>();
@@ -52859,9 +49449,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableIndentation" /> <c>&lt;w:tblInd></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tblPrEx")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TablePropertyExceptions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -53091,9 +49679,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableRowPropertiesChange" /> <c>&lt;w:trPrChange></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:trPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableRowProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -53209,9 +49795,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousTableRowProperties" /> <c>&lt;w:trPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:trPrChange")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableRowPropertiesChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -53252,12 +49836,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:author")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -53271,12 +49850,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:date")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -53290,12 +49864,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -53396,9 +49965,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextDirection" /> <c>&lt;w:textDirection></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:pPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ParagraphProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -54020,9 +50587,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:control.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:control")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Control : OpenXmlLeafElement
     {
         /// <summary>
@@ -54039,12 +50604,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:name")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -54058,12 +50618,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:shapeid")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ShapeId
         {
             get => GetAttribute<StringValue>();
@@ -54077,12 +50632,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("r:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -54119,9 +50669,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (254L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.GridColumn" /> <c>&lt;w:gridCol></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:tblGrid")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PreviousTableGrid : OpenXmlCompositeElement
     {
         /// <summary>
@@ -54175,9 +50723,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (254L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:objectEmbed.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:objectEmbed")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ObjectEmbed : OpenXmlLeafElement
     {
         /// <summary>
@@ -54194,12 +50740,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (254L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:drawAspect")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect>? drawAspect
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect>>();
@@ -54213,12 +50754,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (254L) });
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("r:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -54232,12 +50768,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (254L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:progId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ProgId
         {
             get => GetAttribute<StringValue>();
@@ -54251,12 +50782,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (254L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:shapeId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ShapeId
         {
             get => GetAttribute<StringValue>();
@@ -54270,12 +50796,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (254L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:fieldCodes")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? FieldCodes
         {
             get => GetAttribute<StringValue>();
@@ -54306,9 +50827,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:objectLink.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:objectLink")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ObjectLink : OpenXmlLeafElement
     {
         /// <summary>
@@ -54325,12 +50844,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:updateMode")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectUpdateMode>? UpdateMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectUpdateMode>>();
@@ -54344,12 +50858,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:lockedField")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? LockedField
         {
             get => GetAttribute<OnOffValue>();
@@ -54363,12 +50872,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:drawAspect")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect>? drawAspect
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect>>();
@@ -54382,12 +50886,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("r:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -54401,12 +50900,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:progId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ProgId
         {
             get => GetAttribute<StringValue>();
@@ -54420,12 +50914,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:shapeId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ShapeId
         {
             get => GetAttribute<StringValue>();
@@ -54439,12 +50928,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:fieldCodes")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? FieldCodes
         {
             get => GetAttribute<StringValue>();
@@ -54480,9 +50964,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lock.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:lock")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Lock : OpenXmlLeafElement
     {
         /// <summary>
@@ -54499,12 +50981,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LockingValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LockingValues>>();
@@ -54534,9 +51011,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPartReference" /> <c>&lt;w:docPart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:placeholder")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtPlaceholder : OpenXmlCompositeElement
     {
         /// <summary>
@@ -54603,9 +51078,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:dataBinding.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:dataBinding")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataBinding : OpenXmlLeafElement
     {
         /// <summary>
@@ -54622,12 +51095,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:prefixMappings")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? PrefixMappings
         {
             get => GetAttribute<StringValue>();
@@ -54641,12 +51109,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:xpath")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? XPath
         {
             get => GetAttribute<StringValue>();
@@ -54660,12 +51123,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:storeItemID")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? StoreItemId
         {
             get => GetAttribute<StringValue>();
@@ -54703,9 +51161,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ListItem" /> <c>&lt;w:listItem></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:comboBox")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtContentComboBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -54746,12 +51202,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:lastValue")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? LastValue
         {
             get => GetAttribute<StringValue>();
@@ -54789,9 +51240,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DateFormat" /> <c>&lt;w:dateFormat></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:date")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtContentDate : OpenXmlCompositeElement
     {
         /// <summary>
@@ -54832,12 +51281,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:fullDate")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public DateTimeValue? FullDate
         {
             get => GetAttribute<DateTimeValue>();
@@ -54932,9 +51376,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPartCategory" /> <c>&lt;w:docPartCategory></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:docPartObj")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtContentDocPartObject : SdtDocPartType
     {
         /// <summary>
@@ -54997,9 +51439,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPartCategory" /> <c>&lt;w:docPartCategory></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:docPartList")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtContentDocPartList : SdtDocPartType
     {
         /// <summary>
@@ -55154,9 +51594,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ListItem" /> <c>&lt;w:listItem></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:dropDownList")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtContentDropDownList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -55197,12 +51635,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:lastValue")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? LastValue
         {
             get => GetAttribute<StringValue>();
@@ -55231,9 +51664,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:text.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:text")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtContentText : OpenXmlLeafElement
     {
         /// <summary>
@@ -55250,12 +51681,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:multiLine")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? MultiLine
         {
             get => GetAttribute<OnOffValue>();
@@ -55279,9 +51705,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:writeProtection.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:writeProtection")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WriteProtection : OpenXmlLeafElement
     {
         /// <summary>
@@ -55298,12 +51722,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:recommended")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? Recommended
         {
             get => GetAttribute<OnOffValue>();
@@ -55317,12 +51736,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:cryptProviderType")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues>? CryptographicProviderType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues>>();
@@ -55336,12 +51750,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:cryptAlgorithmClass")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues>? CryptographicAlgorithmClass
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues>>();
@@ -55355,12 +51764,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:cryptAlgorithmType")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues>? CryptographicAlgorithmType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues>>();
@@ -55374,12 +51778,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:cryptAlgorithmSid")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? CryptographicAlgorithmSid
         {
             get => GetAttribute<Int32Value>();
@@ -55393,12 +51792,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:cryptSpinCount")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? CryptographicSpinCount
         {
             get => GetAttribute<UInt32Value>();
@@ -55412,12 +51806,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:cryptProvider")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? CryptographicProvider
         {
             get => GetAttribute<StringValue>();
@@ -55431,12 +51820,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:algIdExt")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? AlgorithmIdExtensibility
         {
             get => GetAttribute<HexBinaryValue>();
@@ -55450,12 +51834,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:algIdExtSource")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? AlgorithmIdExtensibilitySource
         {
             get => GetAttribute<StringValue>();
@@ -55469,12 +51848,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:cryptProviderTypeExt")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? CryptographicProviderTypeExtensibility
         {
             get => GetAttribute<HexBinaryValue>();
@@ -55488,12 +51862,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:cryptProviderTypeExtSource")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? CryptographicProviderTypeExtSource
         {
             get => GetAttribute<StringValue>();
@@ -55507,12 +51876,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:hash")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Base64BinaryValue? Hash
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -55526,12 +51890,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:salt")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Base64BinaryValue? Salt
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -55545,12 +51904,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:algorithmName")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? AlgorithmName
         {
             get => GetAttribute<StringValue>();
@@ -55564,12 +51918,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:hashValue")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Base64BinaryValue? HashValue
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -55583,12 +51932,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:saltValue")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Base64BinaryValue? SaltValue
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -55602,12 +51946,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:spinCount")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? SpinCount
         {
             get => GetAttribute<Int32Value>();
@@ -55668,9 +52007,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:view.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:view")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class View : OpenXmlLeafElement
     {
         /// <summary>
@@ -55687,12 +52024,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ViewValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ViewValues>>();
@@ -55719,9 +52051,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:zoom.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:zoom")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Zoom : OpenXmlLeafElement
     {
         /// <summary>
@@ -55738,12 +52068,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PresetZoomValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PresetZoomValues>>();
@@ -55757,12 +52082,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:percent")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Percent
         {
             get => GetAttribute<StringValue>();
@@ -55800,9 +52120,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:activeWritingStyle.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:activeWritingStyle")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ActiveWritingStyle : OpenXmlLeafElement
     {
         /// <summary>
@@ -55819,12 +52137,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:lang")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Language
         {
             get => GetAttribute<StringValue>();
@@ -55838,12 +52151,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:vendorID")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt16Value? VendorID
         {
             get => GetAttribute<UInt16Value>();
@@ -55857,12 +52165,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:dllVersion")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? DllVersion
         {
             get => GetAttribute<Int32Value>();
@@ -55876,12 +52179,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:nlCheck")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? NaturalLanguageGrammarCheck
         {
             get => GetAttribute<OnOffValue>();
@@ -55895,12 +52193,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:checkStyle")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? CheckStyle
         {
             get => GetAttribute<OnOffValue>();
@@ -55914,12 +52207,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:appName")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ApplicationName
         {
             get => GetAttribute<StringValue>();
@@ -55965,9 +52253,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:proofState.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:proofState")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ProofState : OpenXmlLeafElement
     {
         /// <summary>
@@ -55984,12 +52270,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:spelling")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues>? Spelling
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues>>();
@@ -56003,12 +52284,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:grammar")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues>? Grammar
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues>>();
@@ -56033,9 +52309,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:stylePaneFormatFilter.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:stylePaneFormatFilter")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StylePaneFormatFilter : OpenXmlLeafElement
     {
         /// <summary>
@@ -56052,12 +52326,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? Val
         {
             get => GetAttribute<HexBinaryValue>();
@@ -56071,12 +52340,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:allStyles")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? AllStyles
         {
             get => GetAttribute<OnOffValue>();
@@ -56090,12 +52354,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:customStyles")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? CustomStyles
         {
             get => GetAttribute<OnOffValue>();
@@ -56109,12 +52368,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:latentStyles")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? LatentStyles
         {
             get => GetAttribute<OnOffValue>();
@@ -56128,12 +52382,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:stylesInUse")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? StylesInUse
         {
             get => GetAttribute<OnOffValue>();
@@ -56147,12 +52396,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:headingStyles")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? HeadingStyles
         {
             get => GetAttribute<OnOffValue>();
@@ -56166,12 +52410,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:numberingStyles")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? NumberingStyles
         {
             get => GetAttribute<OnOffValue>();
@@ -56185,12 +52424,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:tableStyles")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? TableStyles
         {
             get => GetAttribute<OnOffValue>();
@@ -56204,12 +52438,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:directFormattingOnRuns")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? DirectFormattingOnRuns
         {
             get => GetAttribute<OnOffValue>();
@@ -56223,12 +52452,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:directFormattingOnParagraphs")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? DirectFormattingOnParagraphs
         {
             get => GetAttribute<OnOffValue>();
@@ -56242,12 +52466,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:directFormattingOnNumbering")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? DirectFormattingOnNumbering
         {
             get => GetAttribute<OnOffValue>();
@@ -56261,12 +52480,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:directFormattingOnTables")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? DirectFormattingOnTables
         {
             get => GetAttribute<OnOffValue>();
@@ -56280,12 +52494,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:clearFormatting")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? ClearFormatting
         {
             get => GetAttribute<OnOffValue>();
@@ -56299,12 +52508,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:top3HeadingStyles")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? Top3HeadingStyles
         {
             get => GetAttribute<OnOffValue>();
@@ -56318,12 +52522,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:visibleStyles")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? VisibleStyles
         {
             get => GetAttribute<OnOffValue>();
@@ -56337,12 +52536,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:alternateStyleNames")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? AlternateStyleNames
         {
             get => GetAttribute<OnOffValue>();
@@ -56430,9 +52624,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:stylePaneSortMethod.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:stylePaneSortMethod")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StylePaneSortMethods : OpenXmlLeafElement
     {
         /// <summary>
@@ -56449,12 +52641,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -56483,9 +52670,7 @@ aBuilder.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.StylePaneS
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:documentType.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:documentType")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DocumentType : OpenXmlLeafElement
     {
         /// <summary>
@@ -56502,12 +52687,7 @@ aBuilder.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.StylePaneS
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentTypeValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentTypeValues>>();
@@ -56555,9 +52735,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MailSubject" /> <c>&lt;w:mailSubject></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:mailMerge")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MailMerge : OpenXmlCompositeElement
     {
         /// <summary>
@@ -56849,9 +53027,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:revisionView.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:revisionView")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevisionView : OpenXmlLeafElement
     {
         /// <summary>
@@ -56868,12 +53044,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:markup")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? Markup
         {
             get => GetAttribute<OnOffValue>();
@@ -56887,12 +53058,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:comments")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? Comments
         {
             get => GetAttribute<OnOffValue>();
@@ -56906,12 +53072,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:insDel")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? DisplayRevision
         {
             get => GetAttribute<OnOffValue>();
@@ -56925,12 +53086,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:formatting")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? Formatting
         {
             get => GetAttribute<OnOffValue>();
@@ -56944,12 +53100,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:inkAnnotations")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? InkAnnotations
         {
             get => GetAttribute<OnOffValue>();
@@ -56977,9 +53128,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:documentProtection.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:documentProtection")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DocumentProtection : OpenXmlLeafElement
     {
         /// <summary>
@@ -56996,12 +53145,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:edit")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentProtectionValues>? Edit
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentProtectionValues>>();
@@ -57015,12 +53159,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:formatting")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? Formatting
         {
             get => GetAttribute<OnOffValue>();
@@ -57034,12 +53173,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:enforcement")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? Enforcement
         {
             get => GetAttribute<OnOffValue>();
@@ -57053,12 +53187,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:cryptProviderType")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues>? CryptographicProviderType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues>>();
@@ -57072,12 +53201,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:cryptAlgorithmClass")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues>? CryptographicAlgorithmClass
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues>>();
@@ -57091,12 +53215,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:cryptAlgorithmType")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues>? CryptographicAlgorithmType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues>>();
@@ -57110,12 +53229,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:cryptAlgorithmSid")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? CryptographicAlgorithmSid
         {
             get => GetAttribute<Int32Value>();
@@ -57129,12 +53243,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:cryptSpinCount")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? CryptographicSpinCount
         {
             get => GetAttribute<UInt32Value>();
@@ -57148,12 +53257,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:cryptProvider")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? CryptographicProvider
         {
             get => GetAttribute<StringValue>();
@@ -57167,12 +53271,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:algIdExt")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? AlgorithmIdExtensibility
         {
             get => GetAttribute<HexBinaryValue>();
@@ -57186,12 +53285,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:algIdExtSource")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? AlgorithmIdExtensibilitySource
         {
             get => GetAttribute<StringValue>();
@@ -57205,12 +53299,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:cryptProviderTypeExt")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? CryptographicProviderTypeExtensibility
         {
             get => GetAttribute<HexBinaryValue>();
@@ -57224,12 +53313,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:cryptProviderTypeExtSource")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? CryptographicProviderTypeExtSource
         {
             get => GetAttribute<StringValue>();
@@ -57243,12 +53327,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:hash")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Base64BinaryValue? Hash
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -57262,12 +53341,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:salt")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Base64BinaryValue? Salt
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -57281,12 +53355,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:algorithmName")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? AlgorithmName
         {
             get => GetAttribute<StringValue>();
@@ -57300,12 +53369,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:hashValue")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Base64BinaryValue? HashValue
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -57319,12 +53383,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:saltValue")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Base64BinaryValue? SaltValue
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -57338,12 +53397,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:spinCount")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? SpinCount
         {
             get => GetAttribute<Int32Value>();
@@ -57407,9 +53461,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:defaultTabStop.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:defaultTabStop")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DefaultTabStop : NonNegativeShortType
     {
         /// <summary>
@@ -57434,9 +53486,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bookFoldPrintingSheets.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:bookFoldPrintingSheets")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BookFoldPrintingSheets : NonNegativeShortType
     {
         /// <summary>
@@ -57477,12 +53527,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int16Value? Val
         {
             get => GetAttribute<Int16Value>();
@@ -57506,9 +53551,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:consecutiveHyphenLimit.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:consecutiveHyphenLimit")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ConsecutiveHyphenLimit : OpenXmlLeafElement
     {
         /// <summary>
@@ -57525,12 +53568,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt16Value? Val
         {
             get => GetAttribute<UInt16Value>();
@@ -57557,9 +53595,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:summaryLength.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:summaryLength")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SummaryLength : OpenXmlLeafElement
     {
         /// <summary>
@@ -57576,12 +53612,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -57609,9 +53640,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:displayHorizontalDrawingGridEvery.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:displayHorizontalDrawingGridEvery")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DisplayHorizontalDrawingGrid : UnsignedInt7Type
     {
         /// <summary>
@@ -57636,9 +53665,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:displayVerticalDrawingGridEvery.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:displayVerticalDrawingGridEvery")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DisplayVerticalDrawingGrid : UnsignedInt7Type
     {
         /// <summary>
@@ -57679,12 +53706,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -57708,9 +53730,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:characterSpacingControl.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:characterSpacingControl")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CharacterSpacingControl : OpenXmlLeafElement
     {
         /// <summary>
@@ -57727,12 +53747,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CharacterSpacingValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CharacterSpacingValues>>();
@@ -57759,9 +53774,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noLineBreaksAfter.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:noLineBreaksAfter")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NoLineBreaksAfterKinsoku : OpenXmlLeafElement
     {
         /// <summary>
@@ -57778,12 +53791,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:lang")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Language
         {
             get => GetAttribute<StringValue>();
@@ -57797,12 +53805,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -57835,9 +53838,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (50L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noLineBreaksBefore.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:noLineBreaksBefore")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NoLineBreaksBeforeKinsoku : OpenXmlLeafElement
     {
         /// <summary>
@@ -57854,12 +53855,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (50L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:lang")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Language
         {
             get => GetAttribute<StringValue>();
@@ -57873,12 +53869,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (50L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -57911,9 +53902,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:saveThroughXslt.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:saveThroughXslt")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SaveThroughXslt : OpenXmlLeafElement
     {
         /// <summary>
@@ -57930,12 +53919,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("r:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -57949,12 +53933,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:solutionID")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? SolutionId
         {
             get => GetAttribute<StringValue>();
@@ -57987,9 +53966,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ShapeLayout" /> <c>&lt;o:shapelayout></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:hdrShapeDefaults")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HeaderShapeDefaults : ShapeDefaultsType
     {
         /// <summary>
@@ -58050,9 +54027,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ShapeLayout" /> <c>&lt;o:shapelayout></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:shapeDefaults")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShapeDefaults : ShapeDefaultsType
     {
         /// <summary>
@@ -58169,9 +54144,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingRestart" /> <c>&lt;w:numRestart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:footnotePr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FootnoteDocumentWideProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -58307,9 +54280,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingRestart" /> <c>&lt;w:numRestart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:endnotePr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EndnoteDocumentWideProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -58506,9 +54477,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CachedColumnBalance" /> <c>&lt;w:cachedColBalance></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:compat")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Compatibility : OpenXmlCompositeElement
     {
         /// <summary>
@@ -59543,9 +55512,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocumentVariable" /> <c>&lt;w:docVar></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:docVars")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DocumentVariables : OpenXmlCompositeElement
     {
         /// <summary>
@@ -59606,9 +55573,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Rsid" /> <c>&lt;w:rsid></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:rsids")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Rsids : OpenXmlCompositeElement
     {
         /// <summary>
@@ -59677,9 +55642,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:clrSchemeMapping.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:clrSchemeMapping")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColorSchemeMapping : OpenXmlLeafElement
     {
         /// <summary>
@@ -59696,12 +55659,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:bg1")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Background1
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -59715,12 +55673,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:t1")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Text1
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -59734,12 +55687,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:bg2")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Background2
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -59753,12 +55701,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:t2")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Text2
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -59772,12 +55715,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:accent1")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Accent1
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -59791,12 +55729,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:accent2")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Accent2
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -59810,12 +55743,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:accent3")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Accent3
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -59829,12 +55757,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:accent4")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Accent4
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -59848,12 +55771,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:accent5")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Accent5
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -59867,12 +55785,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:accent6")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Accent6
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -59886,12 +55799,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:hyperlink")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Hyperlink
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -59905,12 +55813,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:followedHyperlink")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? FollowedHyperlink
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -59952,9 +55855,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Caption" /> <c>&lt;w:caption></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:captions")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Captions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -60010,9 +55911,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:readModeInkLockDown.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:readModeInkLockDown")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ReadModeInkLockDown : OpenXmlLeafElement
     {
         /// <summary>
@@ -60029,12 +55928,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:actualPg")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? UseActualPages
         {
             get => GetAttribute<OnOffValue>();
@@ -60048,12 +55942,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:w")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Width
         {
             get => GetAttribute<UInt32Value>();
@@ -60067,12 +55956,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:h")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Height
         {
             get => GetAttribute<UInt32Value>();
@@ -60086,12 +55970,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:fontSz")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? FontSize
         {
             get => GetAttribute<StringValue>();
@@ -60138,9 +56017,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { InitialVersion = (FileFor
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:targetScreenSz.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:targetScreenSz")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TargetScreenSize : OpenXmlLeafElement
     {
         /// <summary>
@@ -60157,12 +56034,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { InitialVersion = (FileFor
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TargetScreenSizeValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TargetScreenSizeValues>>();
@@ -60203,9 +56075,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Shapetype" /> <c>&lt;v:shapetype></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:pict")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PictureBulletBase : OpenXmlCompositeElement
     {
         /// <summary>
@@ -60281,9 +56151,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:panose1.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:panose1")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Panose1Number : OpenXmlLeafElement
     {
         /// <summary>
@@ -60300,12 +56168,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? Val
         {
             get => GetAttribute<HexBinaryValue>();
@@ -60333,9 +56196,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (10L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:charset.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:charset")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FontCharSet : OpenXmlLeafElement
     {
         /// <summary>
@@ -60352,12 +56213,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (10L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -60371,12 +56227,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (10L) });
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:characterSet")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.StrictCharacterSet>? StrictCharacterSet
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.StrictCharacterSet>>();
@@ -60404,9 +56255,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:family.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:family")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FontFamily : OpenXmlLeafElement
     {
         /// <summary>
@@ -60423,12 +56272,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontFamilyValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontFamilyValues>>();
@@ -60455,9 +56299,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pitch.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:pitch")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Pitch : OpenXmlLeafElement
     {
         /// <summary>
@@ -60474,12 +56316,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontPitchValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontPitchValues>>();
@@ -60506,9 +56343,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sig.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:sig")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FontSignature : OpenXmlLeafElement
     {
         /// <summary>
@@ -60525,12 +56360,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:usb0")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? UnicodeSignature0
         {
             get => GetAttribute<HexBinaryValue>();
@@ -60544,12 +56374,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:usb1")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? UnicodeSignature1
         {
             get => GetAttribute<HexBinaryValue>();
@@ -60563,12 +56388,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:usb2")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? UnicodeSignature2
         {
             get => GetAttribute<HexBinaryValue>();
@@ -60582,12 +56402,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:usb3")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? UnicodeSignature3
         {
             get => GetAttribute<HexBinaryValue>();
@@ -60601,12 +56416,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:csb0")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? CodePageSignature0
         {
             get => GetAttribute<HexBinaryValue>();
@@ -60620,12 +56430,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:csb1")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public HexBinaryValue? CodePageSignature1
         {
             get => GetAttribute<HexBinaryValue>();
@@ -60680,9 +56485,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:embedRegular.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:embedRegular")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EmbedRegularFont : FontRelationshipType
     {
         /// <summary>
@@ -60709,9 +56512,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:embedBold.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:embedBold")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EmbedBoldFont : FontRelationshipType
     {
         /// <summary>
@@ -60737,9 +56538,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:embedItalic.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:embedItalic")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EmbedItalicFont : FontRelationshipType
     {
         /// <summary>
@@ -60765,9 +56564,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:embedBoldItalic.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("w:embedBoldItalic")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EmbedBoldItalicFont : FontRelationshipType
     {
         /// <summary>
@@ -60809,12 +56606,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:fontKey")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? FontKey
         {
             get => GetAttribute<StringValue>();
@@ -60828,12 +56620,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w:subsetted")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public OnOffValue? Subsetted
         {
             get => GetAttribute<OnOffValue>();
@@ -60847,12 +56634,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("r:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();

@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Drawing.ChartDrawing;
@@ -32,9 +34,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZonesVisible" /> <c>&lt;c14:dropZonesVisible></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("c14:pivotOptions")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PivotOptions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -169,9 +169,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShowSketchButton" /> <c>&lt;c14:showSketchBtn></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("c14:sketchOptions")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SketchOptions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -260,9 +258,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShapeProperties" /> <c>&lt;c14:spPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("c14:invertSolidFillFmt")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class InvertSolidFillFormat : OpenXmlCompositeElement
     {
         /// <summary>
@@ -330,9 +326,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:style.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("c14:style")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Style : OpenXmlLeafElement
     {
         /// <summary>
@@ -346,12 +340,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public ByteValue? Val
         {
             get => GetAttribute<ByteValue>();
@@ -400,9 +389,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (101L), MaxInclusiv
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("c14:spPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -440,12 +427,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (101L), MaxInclusiv
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("bwMode")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -537,9 +519,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZoneFilter.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("c14:dropZoneFilter")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DropZoneFilter : BooleanFalseType
     {
         /// <summary>
@@ -565,9 +545,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZoneCategories.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("c14:dropZoneCategories")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DropZoneCategories : BooleanFalseType
     {
         /// <summary>
@@ -593,9 +571,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZoneData.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("c14:dropZoneData")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DropZoneData : BooleanFalseType
     {
         /// <summary>
@@ -621,9 +597,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZoneSeries.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("c14:dropZoneSeries")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DropZoneSeries : BooleanFalseType
     {
         /// <summary>
@@ -649,9 +623,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZonesVisible.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("c14:dropZonesVisible")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DropZonesVisible : BooleanFalseType
     {
         /// <summary>
@@ -677,9 +649,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:inSketchMode.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("c14:inSketchMode")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class InSketchMode : BooleanFalseType
     {
         /// <summary>
@@ -718,12 +688,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public BooleanValue? Val
         {
             get => GetAttribute<BooleanValue>();
@@ -743,9 +708,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:showSketchBtn.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("c14:showSketchBtn")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShowSketchButton : OpenXmlLeafElement
     {
         /// <summary>
@@ -759,12 +722,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public BooleanValue? Val
         {
             get => GetAttribute<BooleanValue>();

@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -25,9 +27,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty" /> <c>&lt;ax:ocxPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ax:ocx")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ActiveXControlData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -68,12 +68,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("ax:classid")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ActiveXControlClassId
         {
             get => GetAttribute<StringValue>();
@@ -87,12 +82,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("ax:license")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? License
         {
             get => GetAttribute<StringValue>();
@@ -106,12 +96,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("r:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -125,12 +110,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("ax:persistence")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>? Persistence
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>>();
@@ -175,9 +155,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture" /> <c>&lt;ax:picture></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ax:ocxPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ActiveXObjectProperty : OpenXmlCompositeElement
     {
         /// <summary>
@@ -218,12 +196,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("ax:name")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -237,12 +210,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("ax:value")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Value
         {
             get => GetAttribute<StringValue>();
@@ -312,9 +280,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty" /> <c>&lt;ax:ocxPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ax:font")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SharedComFont : OpenXmlCompositeElement
     {
         /// <summary>
@@ -355,12 +321,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("ax:persistence")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>? Persistence
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>>();
@@ -374,12 +335,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("r:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -409,9 +365,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ax:picture.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ax:picture")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SharedComPicture : OpenXmlLeafElement
     {
         /// <summary>
@@ -428,12 +382,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("r:id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();

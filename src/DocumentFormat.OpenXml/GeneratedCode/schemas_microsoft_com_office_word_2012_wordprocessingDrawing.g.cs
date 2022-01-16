@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -20,9 +22,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp15:webVideoPr.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("wp15:webVideoPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebVideoProperty : OpenXmlLeafElement
     {
         /// <summary>
@@ -36,12 +36,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
         /// <para>embeddedHtml, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: embeddedHtml</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("embeddedHtml")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? EmbeddedHtml
         {
             get => GetAttribute<StringValue>();
@@ -52,12 +47,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
         /// <para>h, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: h</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("h")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Height
         {
             get => GetAttribute<UInt32Value>();
@@ -68,12 +58,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
         /// <para>w, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: w</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("w")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Width
         {
             get => GetAttribute<UInt32Value>();

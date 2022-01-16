@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -20,9 +22,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.DocumentClassification
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is aclsh:classification.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("aclsh:classification")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ClassificationOutcome : OpenXmlLeafElement
     {
         /// <summary>
@@ -36,12 +36,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.DocumentClassification
         /// <para>classificationOutcomeType, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: classificationOutcomeType</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("classificationOutcomeType")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Office2021.Drawing.DocumentClassification.ClassificationOutcomeType>? ClassificationOutcomeType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2021.Drawing.DocumentClassification.ClassificationOutcomeType>>();

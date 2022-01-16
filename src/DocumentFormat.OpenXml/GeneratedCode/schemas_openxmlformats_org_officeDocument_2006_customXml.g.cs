@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -25,9 +27,7 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences" /> <c>&lt;ds:schemaRefs></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ds:datastoreItem")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataStoreItem : OpenXmlPartRootElement
     {
         /// <summary>
@@ -68,12 +68,7 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         /// <remark>
         /// xmlns:ds=http://schemas.openxmlformats.org/officeDocument/2006/customXml
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("ds:itemID")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? ItemId
         {
             get => GetAttribute<StringValue>();
@@ -150,9 +145,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ds:schemaRef.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ds:schemaRef")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SchemaReference : OpenXmlLeafElement
     {
         /// <summary>
@@ -169,12 +162,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:ds=http://schemas.openxmlformats.org/officeDocument/2006/customXml
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("ds:uri")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -207,9 +195,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReference" /> <c>&lt;ds:schemaRef></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("ds:schemaRefs")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SchemaReferences : OpenXmlCompositeElement
     {
         /// <summary>

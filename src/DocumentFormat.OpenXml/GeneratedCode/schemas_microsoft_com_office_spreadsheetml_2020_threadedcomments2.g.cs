@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -20,9 +22,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xltc2:checksum.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xltc2:checksum")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class XsdunsignedInt : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -68,9 +68,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList" /> <c>&lt;xltc2:extLst></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xltc2:hyperlink")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentHyperlink : OpenXmlCompositeElement
     {
         /// <summary>
@@ -108,12 +106,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
         /// <para>startIndex, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: startIndex</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("startIndex")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? StartIndex
         {
             get => GetAttribute<UInt32Value>();
@@ -124,12 +117,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
         /// <para>length, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: length</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("length")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Length
         {
             get => GetAttribute<UInt32Value>();
@@ -140,12 +128,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
         /// <para>url, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: url</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("url")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Url
         {
             get => GetAttribute<StringValue>();
@@ -205,9 +188,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xltc2:extLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>

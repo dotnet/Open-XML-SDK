@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -21,9 +23,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p16:designElem.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("p16:designElem")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DesignElement : OpenXmlLeafElement
     {
         /// <summary>
@@ -37,12 +37,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation
         /// <para>val, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public BooleanValue? Val
         {
             get => GetAttribute<BooleanValue>();

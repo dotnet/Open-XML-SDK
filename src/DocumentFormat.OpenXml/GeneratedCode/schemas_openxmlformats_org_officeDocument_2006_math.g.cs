@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -20,9 +22,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:scr.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:scr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Script : OpenXmlLeafElement
     {
         /// <summary>
@@ -39,12 +39,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("m:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Math.ScriptValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.ScriptValues>>();
@@ -71,9 +66,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sty.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:sty")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Style : OpenXmlLeafElement
     {
         /// <summary>
@@ -90,12 +83,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("m:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Math.StyleValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.StyleValues>>();
@@ -162,9 +150,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedFieldCode" /> <c>&lt;w:delInstrText></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:r")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Run : OpenXmlCompositeElement
     {
         /// <summary>
@@ -334,9 +320,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:acc")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Accent : OpenXmlCompositeElement
     {
         /// <summary>
@@ -425,9 +409,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:bar")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Bar : OpenXmlCompositeElement
     {
         /// <summary>
@@ -516,9 +498,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:box")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Box : OpenXmlCompositeElement
     {
         /// <summary>
@@ -607,9 +587,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:borderBox")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BorderBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -698,9 +676,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:d")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Delimiter : OpenXmlCompositeElement
     {
         /// <summary>
@@ -776,9 +752,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:eqArr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EquationArray : OpenXmlCompositeElement
     {
         /// <summary>
@@ -855,9 +829,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Denominator" /> <c>&lt;m:den></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:f")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Fraction : OpenXmlCompositeElement
     {
         /// <summary>
@@ -962,9 +934,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:func")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MathFunction : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1068,9 +1038,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:groupChr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GroupChar : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1160,9 +1128,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Limit" /> <c>&lt;m:lim></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:limLow")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LimitLower : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1267,9 +1233,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Limit" /> <c>&lt;m:lim></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:limUpp")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LimitUpper : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1373,9 +1337,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.MatrixRow" /> <c>&lt;m:mr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:m")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Matrix : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1453,9 +1415,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:nary")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Nary : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1574,9 +1534,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.PhantomProperties" /> <c>&lt;m:phantPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:phant")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Phantom : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1666,9 +1624,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.RadicalProperties" /> <c>&lt;m:radPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:rad")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Radical : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1774,9 +1730,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.PreSubSuperProperties" /> <c>&lt;m:sPrePr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:sPre")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PreSubSuper : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1896,9 +1850,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.SubscriptProperties" /> <c>&lt;m:sSubPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:sSub")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Subscript : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2004,9 +1956,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.SubSuperscriptProperties" /> <c>&lt;m:sSubSupPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:sSubSup")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SubSuperscript : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2126,9 +2076,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.SuperscriptProperties" /> <c>&lt;m:sSupPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:sSup")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Superscript : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2264,9 +2212,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:oMathPara")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Paragraph : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2517,9 +2463,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:oMath")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeMath : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2820,9 +2764,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.WrapIndent" /> <c>&lt;m:wrapIndent></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:mathPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MathProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3065,9 +3007,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:lit.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:lit")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Literal : OnOffType
     {
         /// <summary>
@@ -3092,9 +3032,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:nor.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:nor")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NormalText : OnOffType
     {
         /// <summary>
@@ -3119,9 +3057,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:aln.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:aln")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Alignment : OnOffType
     {
         /// <summary>
@@ -3146,9 +3082,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:opEmu.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:opEmu")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OperatorEmulator : OnOffType
     {
         /// <summary>
@@ -3173,9 +3107,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:noBreak.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:noBreak")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NoBreak : OnOffType
     {
         /// <summary>
@@ -3200,9 +3132,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:diff.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:diff")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Differential : OnOffType
     {
         /// <summary>
@@ -3227,9 +3157,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:hideTop.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:hideTop")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HideTop : OnOffType
     {
         /// <summary>
@@ -3254,9 +3182,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:hideBot.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:hideBot")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HideBottom : OnOffType
     {
         /// <summary>
@@ -3281,9 +3207,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:hideLeft.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:hideLeft")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HideLeft : OnOffType
     {
         /// <summary>
@@ -3308,9 +3232,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:hideRight.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:hideRight")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HideRight : OnOffType
     {
         /// <summary>
@@ -3335,9 +3257,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:strikeH.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:strikeH")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StrikeHorizontal : OnOffType
     {
         /// <summary>
@@ -3362,9 +3282,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:strikeV.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:strikeV")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StrikeVertical : OnOffType
     {
         /// <summary>
@@ -3389,9 +3307,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:strikeBLTR.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:strikeBLTR")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StrikeBottomLeftToTopRight : OnOffType
     {
         /// <summary>
@@ -3416,9 +3332,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:strikeTLBR.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:strikeTLBR")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StrikeTopLeftToBottomRight : OnOffType
     {
         /// <summary>
@@ -3443,9 +3357,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:grow.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:grow")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GrowOperators : OnOffType
     {
         /// <summary>
@@ -3470,9 +3382,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:maxDist.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:maxDist")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MaxDistribution : OnOffType
     {
         /// <summary>
@@ -3497,9 +3407,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:objDist.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:objDist")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ObjectDistribution : OnOffType
     {
         /// <summary>
@@ -3524,9 +3432,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:plcHide.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:plcHide")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HidePlaceholder : OnOffType
     {
         /// <summary>
@@ -3551,9 +3457,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:subHide.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:subHide")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HideSubArgument : OnOffType
     {
         /// <summary>
@@ -3578,9 +3482,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:supHide.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:supHide")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HideSuperArgument : OnOffType
     {
         /// <summary>
@@ -3605,9 +3507,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:show.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:show")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShowPhantom : OnOffType
     {
         /// <summary>
@@ -3632,9 +3532,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:zeroWid.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:zeroWid")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ZeroWidth : OnOffType
     {
         /// <summary>
@@ -3659,9 +3557,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:zeroAsc.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:zeroAsc")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ZeroAscent : OnOffType
     {
         /// <summary>
@@ -3686,9 +3582,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:zeroDesc.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:zeroDesc")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ZeroDescent : OnOffType
     {
         /// <summary>
@@ -3713,9 +3607,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:transp.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:transp")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Transparent : OnOffType
     {
         /// <summary>
@@ -3740,9 +3632,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:degHide.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:degHide")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HideDegree : OnOffType
     {
         /// <summary>
@@ -3767,9 +3657,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:alnScr.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:alnScr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AlignScripts : OnOffType
     {
         /// <summary>
@@ -3794,9 +3682,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:smallFrac.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:smallFrac")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SmallFraction : OnOffType
     {
         /// <summary>
@@ -3821,9 +3707,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:dispDef.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:dispDef")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DisplayDefaults : OnOffType
     {
         /// <summary>
@@ -3848,9 +3732,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:wrapRight.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:wrapRight")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WrapRight : OnOffType
     {
         /// <summary>
@@ -3891,12 +3773,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("m:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Math.BooleanValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.BooleanValues>>();
@@ -3916,9 +3793,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:brk.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:brk")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Break : OpenXmlLeafElement
     {
         /// <summary>
@@ -3935,12 +3810,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("m:alnAt")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public IntegerValue? AlignAt
         {
             get => GetAttribute<IntegerValue>();
@@ -3954,12 +3824,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("m:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public IntegerValue? Val
         {
             get => GetAttribute<IntegerValue>();
@@ -4001,9 +3866,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Style" /> <c>&lt;m:sty></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:rPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RunProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4092,9 +3955,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:t.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:t")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Text : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -4124,12 +3985,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("xml:space")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>? Space
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>();
@@ -4153,9 +4009,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:chr.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:chr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AccentChar : CharType
     {
         /// <summary>
@@ -4180,9 +4034,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:begChr.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:begChr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BeginChar : CharType
     {
         /// <summary>
@@ -4207,9 +4059,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sepChr.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:sepChr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SeparatorChar : CharType
     {
         /// <summary>
@@ -4234,9 +4084,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:endChr.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:endChr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EndChar : CharType
     {
         /// <summary>
@@ -4277,12 +4125,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("m:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -4316,9 +4159,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:ctrlPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ControlProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4411,9 +4252,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:accPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AccentProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4558,9 +4397,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:e")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Base : OfficeMathArgumentType
     {
         /// <summary>
@@ -4849,9 +4686,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:num")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Numerator : OfficeMathArgumentType
     {
         /// <summary>
@@ -5140,9 +4975,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:den")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Denominator : OfficeMathArgumentType
     {
         /// <summary>
@@ -5431,9 +5264,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:fName")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FunctionName : OfficeMathArgumentType
     {
         /// <summary>
@@ -5722,9 +5553,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:lim")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Limit : OfficeMathArgumentType
     {
         /// <summary>
@@ -6013,9 +5842,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:sub")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SubArgument : OfficeMathArgumentType
     {
         /// <summary>
@@ -6304,9 +6131,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:sup")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SuperArgument : OfficeMathArgumentType
     {
         /// <summary>
@@ -6595,9 +6420,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:deg")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Degree : OfficeMathArgumentType
     {
         /// <summary>
@@ -7001,9 +6824,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:pos.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:pos")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Position : TopBottomType
     {
         /// <summary>
@@ -7028,9 +6849,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:vertJc.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:vertJc")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VerticalJustification : TopBottomType
     {
         /// <summary>
@@ -7071,12 +6890,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("m:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues>>();
@@ -7106,9 +6920,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Position" /> <c>&lt;m:pos></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:barPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BarProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7201,9 +7013,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Alignment" /> <c>&lt;m:aln></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:boxPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BoxProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7359,9 +7169,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.StrikeTopLeftToBottomRight" /> <c>&lt;m:strikeTLBR></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:borderBoxPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BorderBoxProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7548,9 +7356,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:shp.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:shp")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Shape : OpenXmlLeafElement
     {
         /// <summary>
@@ -7567,12 +7373,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("m:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues>>();
@@ -7610,9 +7411,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Shape" /> <c>&lt;m:shp></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:dPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DelimiterProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7754,9 +7553,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:baseJc.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:baseJc")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BaseJustification : OpenXmlLeafElement
     {
         /// <summary>
@@ -7773,12 +7570,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("m:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues>>();
@@ -7805,9 +7597,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:rSpRule.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:rSpRule")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RowSpacingRule : SpacingRuleType
     {
         /// <summary>
@@ -7832,9 +7622,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:cGpRule.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:cGpRule")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColumnGapRule : SpacingRuleType
     {
         /// <summary>
@@ -7875,12 +7663,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("m:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public IntegerValue? Val
         {
             get => GetAttribute<IntegerValue>();
@@ -7904,9 +7687,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:rSp.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:rSp")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RowSpacing : UnsignedShortType
     {
         /// <summary>
@@ -7931,9 +7712,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:cGp.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:cGp")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColumnGap : UnsignedShortType
     {
         /// <summary>
@@ -7974,12 +7753,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("m:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt16Value? Val
         {
             get => GetAttribute<UInt16Value>();
@@ -8013,9 +7787,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.BaseJustification" /> <c>&lt;m:baseJc></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:eqArrPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EquationArrayProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8157,9 +7929,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:type.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:type")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FractionType : OpenXmlLeafElement
     {
         /// <summary>
@@ -8176,12 +7946,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("m:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues>>();
@@ -8215,9 +7980,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.FractionType" /> <c>&lt;m:type></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:fPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FractionProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8305,9 +8068,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:funcPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FunctionProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8383,9 +8144,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.VerticalJustification" /> <c>&lt;m:vertJc></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:groupChrPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GroupCharProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8503,9 +8262,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:limLowPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LimitLowerProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8578,9 +8335,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:limUppPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LimitUpperProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8647,9 +8402,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:count.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:count")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MatrixColumnCount : OpenXmlLeafElement
     {
         /// <summary>
@@ -8666,12 +8419,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("m:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public IntegerValue? Val
         {
             get => GetAttribute<IntegerValue>();
@@ -8699,9 +8447,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mcJc.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:mcJc")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MatrixColumnJustification : OpenXmlLeafElement
     {
         /// <summary>
@@ -8718,12 +8464,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("m:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues>>();
@@ -8757,9 +8498,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.MatrixColumnJustification" /> <c>&lt;m:mcJc></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:mcPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MatrixColumnProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8847,9 +8586,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.MatrixColumnProperties" /> <c>&lt;m:mcPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:mc")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MatrixColumn : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8916,9 +8653,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:cSp.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:cSp")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColumnSpacing : TwipsMeasureType
     {
         /// <summary>
@@ -8943,9 +8678,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:lMargin.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:lMargin")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LeftMargin : TwipsMeasureType
     {
         /// <summary>
@@ -8970,9 +8703,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:rMargin.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:rMargin")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RightMargin : TwipsMeasureType
     {
         /// <summary>
@@ -8997,9 +8728,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:preSp.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:preSp")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PreSpacing : TwipsMeasureType
     {
         /// <summary>
@@ -9024,9 +8753,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:postSp.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:postSp")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PostSpacing : TwipsMeasureType
     {
         /// <summary>
@@ -9051,9 +8778,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:interSp.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:interSp")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class InterSpacing : TwipsMeasureType
     {
         /// <summary>
@@ -9078,9 +8803,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:intraSp.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:intraSp")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class IntraSpacing : TwipsMeasureType
     {
         /// <summary>
@@ -9105,9 +8828,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:wrapIndent.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:wrapIndent")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WrapIndent : TwipsMeasureType
     {
         /// <summary>
@@ -9148,12 +8869,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("m:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
@@ -9183,9 +8899,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.MatrixColumn" /> <c>&lt;m:mc></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:mcs")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MatrixColumns : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9253,9 +8967,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.BaseJustification" /> <c>&lt;m:baseJc></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:mPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MatrixProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9448,9 +9160,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:mr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MatrixRow : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9504,9 +9214,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:limLoc.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:limLoc")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LimitLocation : LimitLocationType
     {
         /// <summary>
@@ -9531,9 +9239,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:intLim.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:intLim")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class IntegralLimitLocation : LimitLocationType
     {
         /// <summary>
@@ -9558,9 +9264,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:naryLim.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:naryLim")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NaryLimitLocation : LimitLocationType
     {
         /// <summary>
@@ -9601,12 +9305,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("m:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues>>();
@@ -9640,9 +9339,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.HideSuperArgument" /> <c>&lt;m:supHide></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:naryPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NaryProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9795,9 +9492,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Transparent" /> <c>&lt;m:transp></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:phantPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PhantomProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9946,9 +9641,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.HideDegree" /> <c>&lt;m:degHide></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:radPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RadicalProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10036,9 +9729,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:sPrePr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PreSubSuperProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10111,9 +9802,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:sSubPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SubscriptProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10187,9 +9876,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.AlignScripts" /> <c>&lt;m:alnScr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:sSubSupPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SubSuperscriptProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10277,9 +9964,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:sSupPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SuperscriptProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10346,9 +10031,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:argSz.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:argSz")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ArgumentSize : OpenXmlLeafElement
     {
         /// <summary>
@@ -10365,12 +10048,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("m:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public IntegerValue? Val
         {
             get => GetAttribute<IntegerValue>();
@@ -10404,9 +10082,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ArgumentSize" /> <c>&lt;m:argSz></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:argPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ArgumentProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10473,9 +10149,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:jc.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:jc")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Justification : OfficeMathJustificationType
     {
         /// <summary>
@@ -10500,9 +10174,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:defJc.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:defJc")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DefaultJustification : OfficeMathJustificationType
     {
         /// <summary>
@@ -10543,12 +10215,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("m:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Math.JustificationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.JustificationValues>>();
@@ -10571,9 +10238,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mathFont.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:mathFont")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MathFont : OpenXmlLeafElement
     {
         /// <summary>
@@ -10590,12 +10255,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("m:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -10623,9 +10283,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:brkBin.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:brkBin")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BreakBinary : OpenXmlLeafElement
     {
         /// <summary>
@@ -10642,12 +10300,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("m:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues>>();
@@ -10671,9 +10324,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:brkBinSub.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:brkBinSub")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BreakBinarySubtraction : OpenXmlLeafElement
     {
         /// <summary>
@@ -10690,12 +10341,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("m:val")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues>>();
@@ -10729,9 +10375,7 @@ aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVer
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Justification" /> <c>&lt;m:jc></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("m:oMathParaPr")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ParagraphProperties : OpenXmlCompositeElement
     {
         /// <summary>

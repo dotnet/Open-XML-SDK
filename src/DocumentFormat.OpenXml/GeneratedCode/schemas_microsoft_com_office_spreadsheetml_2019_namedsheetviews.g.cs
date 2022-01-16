@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -29,9 +31,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NamedSheetView" /> <c>&lt;xnsv:namedSheetView></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xnsv:namedSheetViews")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NamedSheetViews : OpenXmlPartRootElement
     {
         /// <summary>
@@ -126,9 +126,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NsvFilter" /> <c>&lt;xnsv:nsvFilter></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xnsv:namedSheetView")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NamedSheetView : OpenXmlCompositeElement
     {
         /// <summary>
@@ -166,12 +164,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>name, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("name")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -182,12 +175,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>id, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -233,9 +221,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xnsv:extLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -304,9 +290,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRules" /> <c>&lt;xnsv:sortRules></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xnsv:nsvFilter")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NsvFilter : OpenXmlCompositeElement
     {
         /// <summary>
@@ -344,12 +328,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>filterId, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: filterId</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("filterId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? FilterId
         {
             get => GetAttribute<StringValue>();
@@ -360,12 +339,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>ref, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("ref")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Ref
         {
             get => GetAttribute<StringValue>();
@@ -376,12 +350,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>tableId, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: tableId</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("tableId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? TableId
         {
             get => GetAttribute<UInt32Value>();
@@ -429,9 +398,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.FilterColumn" /> <c>&lt;xnsv:filter></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xnsv:columnFilter")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColumnFilter : OpenXmlCompositeElement
     {
         /// <summary>
@@ -469,12 +436,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>colId, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: colId</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("colId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? ColId
         {
             get => GetAttribute<UInt32Value>();
@@ -485,12 +447,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>id, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -551,9 +508,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRule" /> <c>&lt;xnsv:sortRule></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xnsv:sortRules")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SortRules : OpenXmlCompositeElement
     {
         /// <summary>
@@ -591,12 +546,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>sortMethod, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: sortMethod</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("sortMethod")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortMethodValues>? SortMethod
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortMethodValues>>();
@@ -607,12 +557,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>caseSensitive, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: caseSensitive</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("caseSensitive")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public BooleanValue? CaseSensitive
         {
             get => GetAttribute<BooleanValue>();
@@ -657,9 +602,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xnsv:dxf")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DifferentialFormatType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -831,9 +774,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.IconFilter" /> <c>&lt;x14:iconFilter></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xnsv:filter")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FilterColumn : OpenXmlCompositeElement
     {
         /// <summary>
@@ -871,12 +812,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Filter Column Data</para>
         /// <para>Represents the following attribute in the schema: colId</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("colId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? ColumnId
         {
             get => GetAttribute<UInt32Value>();
@@ -887,12 +823,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Hidden AutoFilter Button</para>
         /// <para>Represents the following attribute in the schema: hiddenButton</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("hiddenButton")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public BooleanValue? HiddenButton
         {
             get => GetAttribute<BooleanValue>();
@@ -903,12 +834,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>Show Filter Button</para>
         /// <para>Represents the following attribute in the schema: showButton</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("showButton")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public BooleanValue? ShowButton
         {
             get => GetAttribute<BooleanValue>();
@@ -1084,9 +1010,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.RichSortCondition" /> <c>&lt;xnsv:richSortCondition></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xnsv:sortRule")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SortRule : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1124,12 +1048,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>colId, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: colId</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("colId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? ColId
         {
             get => GetAttribute<UInt32Value>();
@@ -1140,12 +1059,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>id, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -1202,9 +1116,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xnsv:sortCondition.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xnsv:sortCondition")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SortCondition : OpenXmlLeafElement
     {
         /// <summary>
@@ -1218,12 +1130,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>descending, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: descending</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("descending")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public BooleanValue? Descending
         {
             get => GetAttribute<BooleanValue>();
@@ -1234,12 +1141,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>sortBy, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: sortBy</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("sortBy")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>? SortBy
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>>();
@@ -1250,12 +1152,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>ref, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("ref")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Reference
         {
             get => GetAttribute<StringValue>();
@@ -1266,12 +1163,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>customList, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: customList</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("customList")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? CustomList
         {
             get => GetAttribute<StringValue>();
@@ -1282,12 +1174,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>dxfId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dxfId</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("dxfId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? FormatId
         {
             get => GetAttribute<UInt32Value>();
@@ -1298,12 +1185,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>iconSet, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: iconSet</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("iconSet")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>? IconSet
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>>();
@@ -1314,12 +1196,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>iconId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: iconId</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("iconId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? IconId
         {
             get => GetAttribute<UInt32Value>();
@@ -1353,9 +1230,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xnsv:richSortCondition.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xnsv:richSortCondition")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RichSortCondition : OpenXmlLeafElement
     {
         /// <summary>
@@ -1369,12 +1244,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>richSortKey, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: richSortKey</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("richSortKey")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? RichSortKey
         {
             get => GetAttribute<StringValue>();
@@ -1385,12 +1255,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>descending, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: descending</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("descending")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public BooleanValue? Descending
         {
             get => GetAttribute<BooleanValue>();
@@ -1401,12 +1266,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>sortBy, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: sortBy</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("sortBy")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>? SortBy
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>>();
@@ -1417,12 +1277,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>ref, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("ref")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Reference
         {
             get => GetAttribute<StringValue>();
@@ -1433,12 +1288,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>customList, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: customList</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("customList")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? CustomList
         {
             get => GetAttribute<StringValue>();
@@ -1449,12 +1299,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>dxfId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dxfId</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("dxfId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? FormatId
         {
             get => GetAttribute<UInt32Value>();
@@ -1465,12 +1310,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>iconSet, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: iconSet</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("iconSet")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>? IconSet
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>>();
@@ -1481,12 +1321,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>iconId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: iconId</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("iconId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? IconId
         {
             get => GetAttribute<UInt32Value>();

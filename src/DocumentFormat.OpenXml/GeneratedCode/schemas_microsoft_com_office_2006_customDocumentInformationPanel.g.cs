@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -27,9 +29,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen" /> <c>&lt;cdip:showOnOpen></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("cdip:customPropertyEditors")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomPropertyEditors : OpenXmlCompositeElement
     {
         /// <summary>
@@ -113,9 +113,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:XMLNamespace.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("cdip:XMLNamespace")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PropertyEditorNamespace : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -154,9 +152,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:defaultPropertyEditorNamespace.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("cdip:defaultPropertyEditorNamespace")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DefaultPropertyEditorNamespace : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -195,9 +191,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:XSNLocation.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("cdip:XSNLocation")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class XsnFileLocation : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -235,9 +229,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:showOnOpen.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("cdip:showOnOpen")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShowOnOpen : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -283,9 +275,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.XsnFileLocation" /> <c>&lt;cdip:XSNLocation></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("cdip:customPropertyEditor")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomPropertyEditor : OpenXmlCompositeElement
     {
         /// <summary>

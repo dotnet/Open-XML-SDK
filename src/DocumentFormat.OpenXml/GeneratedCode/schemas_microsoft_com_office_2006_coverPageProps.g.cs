@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -30,9 +32,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CoverPageProps.CompanyEmailAddress" /> <c>&lt;cppr:CompanyEmail></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("cppr:CoverPageProperties")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CoverPageProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -174,9 +174,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:PublishDate.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("cppr:PublishDate")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PublishDate : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -214,9 +212,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:Abstract.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("cppr:Abstract")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DocumentAbstract : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -254,9 +250,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:CompanyAddress.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("cppr:CompanyAddress")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CompanyAddress : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -294,9 +288,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:CompanyPhone.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("cppr:CompanyPhone")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CompanyPhoneNumber : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -334,9 +326,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:CompanyFax.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("cppr:CompanyFax")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CompanyFaxNumber : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -374,9 +364,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:CompanyEmail.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("cppr:CompanyEmail")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CompanyEmailAddress : OpenXmlLeafTextElement
     {
         /// <summary>

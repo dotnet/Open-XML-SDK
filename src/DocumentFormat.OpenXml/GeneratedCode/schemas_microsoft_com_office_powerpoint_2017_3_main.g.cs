@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -27,9 +29,7 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Presentation.TrackList" /> <c>&lt;p173:trackLst></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("p173:tracksInfo")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TracksInfo : OpenXmlCompositeElement
     {
         /// <summary>
@@ -67,12 +67,7 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
         /// <para>displayLoc, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: displayLoc</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("displayLoc")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public EnumValue<DocumentFormat.OpenXml.Office2019.Presentation.DisplayLocation>? DisplayLoc
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Presentation.DisplayLocation>>();
@@ -118,9 +113,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p173:track.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("p173:track")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Track : OpenXmlLeafElement
     {
         /// <summary>
@@ -134,12 +127,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>id, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -150,12 +138,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>label, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("label")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -166,12 +149,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>lang, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: lang</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("lang")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Lang
         {
             get => GetAttribute<StringValue>();
@@ -185,12 +163,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("r:embed")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Embed
         {
             get => GetAttribute<StringValue>();
@@ -204,12 +177,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("r:link")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Link
         {
             get => GetAttribute<StringValue>();
@@ -251,9 +219,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Presentation.Track" /> <c>&lt;p173:track></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("p173:trackLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TrackList : OpenXmlCompositeElement
     {
         /// <summary>

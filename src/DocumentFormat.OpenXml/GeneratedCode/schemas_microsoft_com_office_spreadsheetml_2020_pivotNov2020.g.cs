@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -20,9 +22,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.Pivot
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xxpim:implicitMeasureSupport.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xxpim:implicitMeasureSupport")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Xsdboolean : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -62,9 +62,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.Pivot
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xxpim:ignorableAfterVersion.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xxpim:ignorableAfterVersion")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Ignorable : OpenXmlLeafElement
     {
         /// <summary>
@@ -78,12 +76,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.Pivot
         /// <para>version, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: version</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("version")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public ByteValue? Version
         {
             get => GetAttribute<ByteValue>();
@@ -111,9 +104,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xxpim:dataFieldFutureData.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("xxpim:dataFieldFutureData")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataFieldFutureData : OpenXmlLeafElement
     {
         /// <summary>
@@ -127,12 +118,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>version, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: version</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("version")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public ByteValue? Version
         {
             get => GetAttribute<ByteValue>();
@@ -143,12 +129,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>sourceField, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: sourceField</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("sourceField")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public UInt32Value? SourceField
         {
             get => GetAttribute<UInt32Value>();

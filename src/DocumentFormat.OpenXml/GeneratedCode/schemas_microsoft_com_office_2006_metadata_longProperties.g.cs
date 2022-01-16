@@ -3,6 +3,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -25,9 +27,7 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.LongProperties.LongProperty" /> <c>&lt;lp:LongProp></c></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("lp:LongProperties")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LongProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -81,9 +81,7 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is lp:LongProp.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr("lp:LongProp")]
-#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LongProperty : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -110,12 +108,7 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
         [SchemaAttr("name")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
