@@ -17,4 +17,8 @@
     <Analyzer Include="$(PkgNewtonsoft_Json)\lib\netstandard2.0\*.dll" Visible="false" />
   </ItemGroup>
 
+  <ItemGroup>
+    <CompilerVisibleProperty Include="DocumentFormat_OpenXml_GeneratorNamespaceLookup" />
+  </ItemGroup>
+
 </Project>

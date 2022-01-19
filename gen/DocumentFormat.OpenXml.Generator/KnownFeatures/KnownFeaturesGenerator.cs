@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Generator.Editor;
+using DocumentFormat.OpenXml.Generator.KnownFeatures;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -10,7 +12,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace DocumentFormat.OpenXml.Generator;
+namespace DocumentFormat.OpenXml.Generator.KnownFeatures;
 
 [Generator]
 public class KnownFeaturesGenerator : ISourceGenerator
