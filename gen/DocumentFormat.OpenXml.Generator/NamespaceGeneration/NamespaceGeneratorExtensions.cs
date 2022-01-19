@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Generator.Editor;
 using DocumentFormat.OpenXml.Generator.Models;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;

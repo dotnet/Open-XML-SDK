@@ -1,14 +1,14 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-namespace DocumentFormat.OpenXml.Generator;
+namespace DocumentFormat.OpenXml.Generator.Models;
 
-internal readonly struct Verbatim
+internal readonly struct TypeOf
 {
-    public Verbatim(string value)
+    public TypeOf(string type)
     {
-        Value = value;
+        Type = type;
     }
 
-    public string Value { get; }
+    public string Type { get; }
 }

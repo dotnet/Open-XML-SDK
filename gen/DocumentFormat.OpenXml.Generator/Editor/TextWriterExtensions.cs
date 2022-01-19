@@ -4,7 +4,7 @@
 using DocumentFormat.OpenXml.Generator.Models;
 using System.CodeDom.Compiler;
 
-namespace DocumentFormat.OpenXml.Generator;
+namespace DocumentFormat.OpenXml.Generator.Editor;
 
 internal static class TextWriterExtensions
 {
@@ -24,22 +24,14 @@ internal static class TextWriterExtensions
 
     public static void WriteLineNoTabs(this IndentedTextWriter writer) => writer.WriteLineNoTabs(string.Empty);
 
-    public static void WriteLine(this IndentedTextWriter writer, bool shouldWrite)
-    {
-        if (shouldWrite)
-        {
-            writer.WriteLine();
-        }
-    }
-
     public static void WriteDoubleLines(this IndentedTextWriter writer)
     {
         writer.WriteLineNoTabs();
         writer.WriteLine();
     }
 
-    public static Indentation AddIndent(this IndentedTextWriter writer)
-        => new(writer);
+    public static Indentation AddIndent(this IndentedTextWriter writer, BlockOptions? options = null)
+        => new(writer, options);
 
     public record BlockOptions
     {
@@ -97,7 +89,7 @@ internal static class TextWriterExtensions
         writer.Write("}");
     }
 
-    public static void WriteItem<T>(this TextWriter writer, T item)
+    public static void WriteItem<T>(this TextWriter writer, T item, bool isConstant = false)
     {
         if (item is null)
         {
@@ -119,7 +111,7 @@ internal static class TextWriterExtensions
         }
         else if (typeof(T) == typeof(string))
         {
-            writer.WriteString((string)(object)item);
+            writer.WriteString((string)(object)item, isConstant);
         }
         else if (typeof(T) == typeof(bool))
         {
@@ -134,13 +126,13 @@ internal static class TextWriterExtensions
 
     public static void WriteNull(this TextWriter writer) => writer.Write("null");
 
-    public static void WriteString(this TextWriter writer, string input)
+    public static void WriteString(this TextWriter writer, string input, bool isConstant = false)
     {
         if (input is null)
         {
             writer.WriteNull();
         }
-        else if (input.Length == 0)
+        else if (input.Length == 0 && !isConstant)
         {
             writer.Write("string.Empty");
         }
@@ -152,7 +144,10 @@ internal static class TextWriterExtensions
         }
     }
 
-    public readonly struct Indentation : IDisposable
+    public static Delimiter TrackDelimiter(this IndentedTextWriter writer, string separator = ",", int newLineCount = 0)
+        => new(writer, separator, newLineCount);
+
+    internal readonly struct Indentation : IDisposable
     {
         private static readonly BlockOptions _defaultOptions = new();
 
@@ -189,6 +184,46 @@ internal static class TextWriterExtensions
             {
                 _writer.WriteLine();
             }
+        }
+    }
+
+    internal struct Delimiter
+    {
+        private readonly IndentedTextWriter _writer;
+        private readonly int _newLineCount;
+        private readonly string _separator;
+
+        public Delimiter(IndentedTextWriter writer, string separator, int newLineCount = 0)
+        {
+            _writer = writer;
+            _newLineCount = newLineCount;
+            _separator = separator;
+            Count = 0;
+        }
+
+        public int Count { get; private set; }
+
+        public void AddDelimiter()
+        {
+            if (Count > 0)
+            {
+                _writer.Write(_separator);
+                if (_newLineCount > 0)
+                {
+                    for (int i = 0; i < _newLineCount - 1; i++)
+                    {
+                        _writer.WriteLineNoTabs();
+                    }
+
+                    _writer.WriteLine();
+                }
+                else
+                {
+                    _writer.Write(" ");
+                }
+            }
+
+            Count++;
         }
     }
 }

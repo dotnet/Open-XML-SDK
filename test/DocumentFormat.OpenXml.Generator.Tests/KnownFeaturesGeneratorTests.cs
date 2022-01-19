@@ -1,12 +1,13 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Generator.KnownFeatures;
 using Microsoft.CodeAnalysis.Testing;
 using System.Threading.Tasks;
 using Xunit;
 
 using VerifyCS = DocumentFormat.OpenXml.Generator.Tests.OpenXmlSourceGeneratorVerifier<
-    DocumentFormat.OpenXml.Generator.KnownFeaturesGenerator>;
+    DocumentFormat.OpenXml.Generator.KnownFeatures.KnownFeaturesGenerator>;
 
 namespace DocumentFormat.OpenXml.Generator.Tests
 {
