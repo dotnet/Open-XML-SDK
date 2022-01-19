@@ -265,17 +265,17 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             builder.SetSchema("xlrd2:richSortCondition");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<RichSortCondition>()
-.AddAttribute("richSortKey", a => a.RichSortKey)
-.AddAttribute("descending", a => a.Descending)
-.AddAttribute("sortBy", a => a.SortBy)
-.AddAttribute("ref", a => a.Reference, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("customList", a => a.CustomList)
-.AddAttribute("dxfId", a => a.FormatId)
-.AddAttribute("iconSet", a => a.IconSet)
-.AddAttribute("iconId", a => a.IconId);
+                .AddAttribute("richSortKey", a => a.RichSortKey)
+                .AddAttribute("descending", a => a.Descending)
+                .AddAttribute("sortBy", a => a.SortBy)
+                .AddAttribute("ref", a => a.Reference, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("customList", a => a.CustomList)
+                .AddAttribute("dxfId", a => a.FormatId)
+                .AddAttribute("iconSet", a => a.IconSet)
+                .AddAttribute("iconId", a => a.IconId);
         }
 
         /// <inheritdoc/>
@@ -468,10 +468,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagStructure>();
             builder.AddElement<SupportingPropertyBagStructures>()
-.AddAttribute("count", a => a.Count, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("count", a => a.Count, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagStructure), 0, 0, version: FileFormatVersions.Office2019),
@@ -579,10 +579,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.Array>();
             builder.AddElement<ArrayData>()
-.AddAttribute("count", a => a.Count, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("count", a => a.Count, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.Array), 0, 0, version: FileFormatVersions.Office2019),
@@ -1058,14 +1058,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("xlrd2:top10");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<RichTop10>()
-.AddAttribute("key", a => a.Key)
-.AddAttribute("top", a => a.Top)
-.AddAttribute("percent", a => a.Percent)
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("filterVal", a => a.FilterValue);
+                .AddAttribute("key", a => a.Key)
+                .AddAttribute("top", a => a.Top)
+                .AddAttribute("percent", a => a.Percent)
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("filterVal", a => a.FilterValue);
         }
 
         /// <inheritdoc/>
@@ -1137,7 +1137,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.CustomRichFilter>();
             builder.AddElement<CustomRichFilters>()
-.AddAttribute("and", a => a.And);
+                .AddAttribute("and", a => a.And);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 2)
@@ -1239,21 +1239,21 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("xlrd2:dynamicFilter");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<DynamicRichFilter>()
-.AddAttribute("key", a => a.Key)
-.AddAttribute("type", a => a.Type, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("val", a => a.Val)
-.AddAttribute("maxVal", a => a.MaxVal)
-.AddAttribute("valIso", a => a.ValIso, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("maxValIso", a => a.MaxValIso, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-});
+                .AddAttribute("key", a => a.Key)
+                .AddAttribute("type", a => a.Type, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("val", a => a.Val)
+                .AddAttribute("maxVal", a => a.MaxVal)
+                .AddAttribute("valIso", a => a.ValIso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("maxValIso", a => a.MaxValIso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                });
         }
 
         /// <inheritdoc/>
@@ -1392,10 +1392,10 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.SetSchema("xlrd2:filter");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<RichFilter>()
-.AddAttribute("key", a => a.Key)
-.AddAttribute("val", a => a.Val)
-.AddAttribute("blank", a => a.Blank)
-.AddAttribute("nodata", a => a.Nodata);
+                .AddAttribute("key", a => a.Key)
+                .AddAttribute("val", a => a.Val)
+                .AddAttribute("blank", a => a.Blank)
+                .AddAttribute("nodata", a => a.Nodata);
         }
 
         /// <inheritdoc/>
@@ -1511,20 +1511,20 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.SetSchema("xlrd2:dateGroupItem");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<RichDateGroupItem>()
-.AddAttribute("key", a => a.Key)
-.AddAttribute("year", a => a.Year, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("month", a => a.Month)
-.AddAttribute("day", a => a.Day)
-.AddAttribute("hour", a => a.Hour)
-.AddAttribute("minute", a => a.Minute)
-.AddAttribute("second", a => a.Second)
-.AddAttribute("dateTimeGrouping", a => a.DateTimeGrouping, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("key", a => a.Key)
+                .AddAttribute("year", a => a.Year, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("month", a => a.Month)
+                .AddAttribute("day", a => a.Day)
+                .AddAttribute("hour", a => a.Hour)
+                .AddAttribute("minute", a => a.Minute)
+                .AddAttribute("second", a => a.Second)
+                .AddAttribute("dateTimeGrouping", a => a.DateTimeGrouping, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -1585,9 +1585,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("xlrd2:customFilter");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<CustomRichFilter>()
-.AddAttribute("key", a => a.Key)
-.AddAttribute("operator", a => a.Operator)
-.AddAttribute("val", a => a.Val);
+                .AddAttribute("key", a => a.Key)
+                .AddAttribute("operator", a => a.Operator)
+                .AddAttribute("val", a => a.Val);
         }
 
         /// <inheritdoc/>
@@ -1659,10 +1659,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArray>();
             builder.AddElement<SupportingPropertyBagArrayData>()
-.AddAttribute("count", a => a.Count, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("count", a => a.Count, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArray), 0, 0, version: FileFormatVersions.Office2019),
@@ -1739,10 +1739,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBag>();
             builder.AddElement<SupportingPropertyBagData>()
-.AddAttribute("count", a => a.Count, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("count", a => a.Count, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBag), 0, 0, version: FileFormatVersions.Office2019),
@@ -1817,10 +1817,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagValue>();
             builder.AddElement<SupportingPropertyBag>()
-.AddAttribute("s", a => a.S, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("s", a => a.S, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagValue), 1, 0, version: FileFormatVersions.Office2019)
@@ -1974,11 +1974,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("xlrd2:k");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<SupportingPropertyBagKey>()
-.AddAttribute("n", a => a.N, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("t", a => a.T);
+                .AddAttribute("n", a => a.N, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("t", a => a.T);
         }
 
         /// <inheritdoc/>
@@ -2048,10 +2048,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayValue>();
             builder.AddElement<SupportingPropertyBagArray>()
-.AddAttribute("count", a => a.Count, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("count", a => a.Count, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayValue), 1, 0, version: FileFormatVersions.Office2019)
@@ -2107,7 +2107,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("xlrd2:v");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<SupportingPropertyBagArrayValue>()
-.AddAttribute("t", a => a.T);
+                .AddAttribute("t", a => a.T);
         }
 
         /// <inheritdoc/>
@@ -2188,11 +2188,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ArrayValue>();
             builder.AddElement<Array>()
-.AddAttribute("r", a => a.R, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("c", a => a.C);
+                .AddAttribute("r", a => a.R, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("c", a => a.C);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ArrayValue), 1, 0, version: FileFormatVersions.Office2019)
@@ -2248,7 +2248,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("xlrd2:v");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<ArrayValue>()
-.AddAttribute("t", a => a.T);
+                .AddAttribute("t", a => a.T);
         }
 
         /// <inheritdoc/>
@@ -2318,7 +2318,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat>();
             builder.AddElement<Dxfs>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), 0, 0)
@@ -2494,14 +2494,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("xlrd2:rPr");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<RichFormatProperty>()
-.AddAttribute("n", a => a.N, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("t", a => a.T, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("n", a => a.N, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("t", a => a.T, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -2571,7 +2571,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStylePropertyValue>();
             builder.AddElement<RichStyle>()
-.AddAttribute("dxfid", a => a.Dxfid);
+                .AddAttribute("dxfid", a => a.Dxfid);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStylePropertyValue), 0, 0, version: FileFormatVersions.Office2019)
@@ -2627,10 +2627,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("xlrd2:rpv");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<RichStylePropertyValue>()
-.AddAttribute("i", a => a.I, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("i", a => a.I, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -2853,10 +2853,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags>();
             builder.AddElement<RichValueType>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags), 0, 1, version: FileFormatVersions.Office2019),
@@ -3018,10 +3018,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeReservedKeyFlag>();
             builder.AddElement<RichValueTypeReservedKey>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeReservedKeyFlag), 1, 0, version: FileFormatVersions.Office2019)
@@ -3075,14 +3075,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("xlrd2:flag");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<RichValueTypeReservedKeyFlag>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("value", a => a.Value, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("value", a => a.Value, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>

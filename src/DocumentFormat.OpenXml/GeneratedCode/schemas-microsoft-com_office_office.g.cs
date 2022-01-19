@@ -211,16 +211,16 @@ namespace DocumentFormat.OpenXml.Vml.Office
             builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
             builder.AddElement<ShapeDefaults>()
-.AddAttribute("v:ext", a => a.Extension)
-.AddAttribute("spidmax", a => a.MaxShapeId)
-.AddAttribute("style", a => a.Style)
-.AddAttribute("fill", a => a.BeFilled)
-.AddAttribute("fillcolor", a => a.FillColor)
-.AddAttribute("stroke", a => a.IsStroke)
-.AddAttribute("strokecolor", a => a.StrokeColor)
-.AddAttribute("o:allowincell", a => a.AllowInCell)
-.AddAttribute("o:allowoverlap", a => a.AllowOverlap)
-.AddAttribute("o:insetmode", a => a.InsetMode);
+                .AddAttribute("v:ext", a => a.Extension)
+                .AddAttribute("spidmax", a => a.MaxShapeId)
+                .AddAttribute("style", a => a.Style)
+                .AddAttribute("fill", a => a.BeFilled)
+                .AddAttribute("fillcolor", a => a.FillColor)
+                .AddAttribute("stroke", a => a.IsStroke)
+                .AddAttribute("strokecolor", a => a.StrokeColor)
+                .AddAttribute("o:allowincell", a => a.AllowInCell)
+                .AddAttribute("o:allowoverlap", a => a.AllowOverlap)
+                .AddAttribute("o:insetmode", a => a.InsetMode);
             builder.Particle = new CompositeParticle.Builder(ParticleType.All, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 0, 1),
@@ -453,7 +453,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.RegroupTable>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Rules>();
             builder.AddElement<ShapeLayout>()
-.AddAttribute("v:ext", a => a.Extension);
+                .AddAttribute("v:ext", a => a.Extension);
             builder.Particle = new CompositeParticle.Builder(ParticleType.All, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ShapeIdMap), 0, 1),
@@ -680,25 +680,25 @@ namespace DocumentFormat.OpenXml.Vml.Office
             base.ConfigureMetadata(builder);
             builder.SetSchema("o:signatureline");
             builder.AddElement<SignatureLine>()
-.AddAttribute("v:ext", a => a.Extension)
-.AddAttribute("issignatureline", a => a.IsSignatureLine)
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("provid", a => a.ProviderId, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("signinginstructionsset", a => a.SigningInstructionsSet)
-.AddAttribute("allowcomments", a => a.AllowComments)
-.AddAttribute("showsigndate", a => a.ShowSignDate)
-.AddAttribute("o:suggestedsigner", a => a.SuggestedSigner)
-.AddAttribute("o:suggestedsigner2", a => a.SuggestedSigner2)
-.AddAttribute("o:suggestedsigneremail", a => a.SuggestedSignerEmail)
-.AddAttribute("signinginstructions", a => a.SigningInstructions)
-.AddAttribute("addlxml", a => a.AdditionalXml)
-.AddAttribute("sigprovurl", a => a.SignatureProviderUrl);
+                .AddAttribute("v:ext", a => a.Extension)
+                .AddAttribute("issignatureline", a => a.IsSignatureLine)
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("provid", a => a.ProviderId, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("signinginstructionsset", a => a.SigningInstructionsSet)
+                .AddAttribute("allowcomments", a => a.AllowComments)
+                .AddAttribute("showsigndate", a => a.ShowSignDate)
+                .AddAttribute("o:suggestedsigner", a => a.SuggestedSigner)
+                .AddAttribute("o:suggestedsigner2", a => a.SuggestedSigner2)
+                .AddAttribute("o:suggestedsigneremail", a => a.SuggestedSignerEmail)
+                .AddAttribute("signinginstructions", a => a.SigningInstructions)
+                .AddAttribute("addlxml", a => a.AdditionalXml)
+                .AddAttribute("sigprovurl", a => a.SignatureProviderUrl);
             builder.AddConstraint(new UniqueAttributeValueConstraint("ovml:id", true, null));
         }
 
@@ -748,8 +748,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema("o:ink");
             builder.AddElement<Ink>()
-.AddAttribute("i", a => a.InkData)
-.AddAttribute("annotation", a => a.AnnotationFlag);
+                .AddAttribute("i", a => a.InkData)
+                .AddAttribute("annotation", a => a.AnnotationFlag);
         }
 
         /// <inheritdoc/>
@@ -920,16 +920,16 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.SetSchema("o:diagram");
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.RelationTable>();
             builder.AddElement<Diagram>()
-.AddAttribute("v:ext", a => a.Extension)
-.AddAttribute("dgmstyle", a => a.Style)
-.AddAttribute("autoformat", a => a.AutoFormat)
-.AddAttribute("reverse", a => a.Reverse)
-.AddAttribute("autolayout", a => a.AutoLayout)
-.AddAttribute("dgmscalex", a => a.ScaleX)
-.AddAttribute("dgmscaley", a => a.ScaleY)
-.AddAttribute("dgmfontsize", a => a.FontSize)
-.AddAttribute("constrainbounds", a => a.ConstrainBounds)
-.AddAttribute("dgmbasetextscale", a => a.BaseTextScale);
+                .AddAttribute("v:ext", a => a.Extension)
+                .AddAttribute("dgmstyle", a => a.Style)
+                .AddAttribute("autoformat", a => a.AutoFormat)
+                .AddAttribute("reverse", a => a.Reverse)
+                .AddAttribute("autolayout", a => a.AutoLayout)
+                .AddAttribute("dgmscalex", a => a.ScaleX)
+                .AddAttribute("dgmscaley", a => a.ScaleY)
+                .AddAttribute("dgmfontsize", a => a.FontSize)
+                .AddAttribute("constrainbounds", a => a.ConstrainBounds)
+                .AddAttribute("dgmbasetextscale", a => a.BaseTextScale);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.RelationTable), 0, 1)
@@ -1042,12 +1042,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema("o:skew");
             builder.AddElement<Skew>()
-.AddAttribute("v:ext", a => a.Extension)
-.AddAttribute("id", a => a.Id)
-.AddAttribute("on", a => a.On)
-.AddAttribute("offset", a => a.Offset)
-.AddAttribute("origin", a => a.Origin)
-.AddAttribute("matrix", a => a.Matrix);
+                .AddAttribute("v:ext", a => a.Extension)
+                .AddAttribute("id", a => a.Id)
+                .AddAttribute("on", a => a.On)
+                .AddAttribute("offset", a => a.Offset)
+                .AddAttribute("origin", a => a.Origin)
+                .AddAttribute("matrix", a => a.Matrix);
         }
 
         /// <inheritdoc/>
@@ -1418,37 +1418,37 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema("o:extrusion");
             builder.AddElement<Extrusion>()
-.AddAttribute("v:ext", a => a.Extension)
-.AddAttribute("on", a => a.On)
-.AddAttribute("type", a => a.Type)
-.AddAttribute("render", a => a.Render)
-.AddAttribute("viewpointorigin", a => a.ViewpointOrigin)
-.AddAttribute("viewpoint", a => a.Viewpoint)
-.AddAttribute("skewangle", a => a.SkewAngle)
-.AddAttribute("skewamt", a => a.SkewAmount)
-.AddAttribute("foredepth", a => a.ForceDepth)
-.AddAttribute("backdepth", a => a.BackDepth)
-.AddAttribute("orientation", a => a.Orientation)
-.AddAttribute("orientationangle", a => a.OrientationAngle)
-.AddAttribute("lockrotationcenter", a => a.LockRotationCenter)
-.AddAttribute("autorotationcenter", a => a.AutoRotationCenter)
-.AddAttribute("rotationcenter", a => a.RotationCenter)
-.AddAttribute("rotationangle", a => a.RotationAngle)
-.AddAttribute("color", a => a.Color)
-.AddAttribute("shininess", a => a.Shininess)
-.AddAttribute("specularity", a => a.Specularity)
-.AddAttribute("diffusity", a => a.Diffusity)
-.AddAttribute("metal", a => a.Metal)
-.AddAttribute("edge", a => a.Edge)
-.AddAttribute("facet", a => a.Facet)
-.AddAttribute("lightface", a => a.LightFace)
-.AddAttribute("brightness", a => a.Brightness)
-.AddAttribute("lightposition", a => a.LightPosition)
-.AddAttribute("lightlevel", a => a.LightLevel)
-.AddAttribute("lightharsh", a => a.LightHarsh)
-.AddAttribute("lightposition2", a => a.LightPosition2)
-.AddAttribute("lightlevel2", a => a.LightLevel2)
-.AddAttribute("lightharsh2", a => a.LightHarsh2);
+                .AddAttribute("v:ext", a => a.Extension)
+                .AddAttribute("on", a => a.On)
+                .AddAttribute("type", a => a.Type)
+                .AddAttribute("render", a => a.Render)
+                .AddAttribute("viewpointorigin", a => a.ViewpointOrigin)
+                .AddAttribute("viewpoint", a => a.Viewpoint)
+                .AddAttribute("skewangle", a => a.SkewAngle)
+                .AddAttribute("skewamt", a => a.SkewAmount)
+                .AddAttribute("foredepth", a => a.ForceDepth)
+                .AddAttribute("backdepth", a => a.BackDepth)
+                .AddAttribute("orientation", a => a.Orientation)
+                .AddAttribute("orientationangle", a => a.OrientationAngle)
+                .AddAttribute("lockrotationcenter", a => a.LockRotationCenter)
+                .AddAttribute("autorotationcenter", a => a.AutoRotationCenter)
+                .AddAttribute("rotationcenter", a => a.RotationCenter)
+                .AddAttribute("rotationangle", a => a.RotationAngle)
+                .AddAttribute("color", a => a.Color)
+                .AddAttribute("shininess", a => a.Shininess)
+                .AddAttribute("specularity", a => a.Specularity)
+                .AddAttribute("diffusity", a => a.Diffusity)
+                .AddAttribute("metal", a => a.Metal)
+                .AddAttribute("edge", a => a.Edge)
+                .AddAttribute("facet", a => a.Facet)
+                .AddAttribute("lightface", a => a.LightFace)
+                .AddAttribute("brightness", a => a.Brightness)
+                .AddAttribute("lightposition", a => a.LightPosition)
+                .AddAttribute("lightlevel", a => a.LightLevel)
+                .AddAttribute("lightharsh", a => a.LightHarsh)
+                .AddAttribute("lightposition2", a => a.LightPosition2)
+                .AddAttribute("lightlevel2", a => a.LightLevel2)
+                .AddAttribute("lightharsh2", a => a.LightHarsh2);
             builder.AddConstraint(new AttributeValueRangeConstraint("ovml:facet", true, 1, true, 65536, true));
             builder.AddConstraint(new AttributeValuePatternConstraint("ovml:edge", @"(\d{1,5}|1[0-6][0-8]\d{3}|1690[0-8]\d|16909[0-3])pt"));
             builder.AddConstraint(new AttributeValueRangeConstraint("ovml:orientationangle", true, -32767, true, 32767, true));
@@ -1636,20 +1636,20 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema("o:callout");
             builder.AddElement<Callout>()
-.AddAttribute("v:ext", a => a.Extension)
-.AddAttribute("on", a => a.On)
-.AddAttribute("type", a => a.Type)
-.AddAttribute("gap", a => a.Gap)
-.AddAttribute("angle", a => a.Angle)
-.AddAttribute("dropauto", a => a.DropAuto)
-.AddAttribute("drop", a => a.Drop)
-.AddAttribute("distance", a => a.Distance)
-.AddAttribute("lengthspecified", a => a.LengthSpecified)
-.AddAttribute("length", a => a.Length)
-.AddAttribute("accentbar", a => a.AccentBar)
-.AddAttribute("textborder", a => a.TextBorder)
-.AddAttribute("minusx", a => a.MinusX)
-.AddAttribute("minusy", a => a.MinusY);
+                .AddAttribute("v:ext", a => a.Extension)
+                .AddAttribute("on", a => a.On)
+                .AddAttribute("type", a => a.Type)
+                .AddAttribute("gap", a => a.Gap)
+                .AddAttribute("angle", a => a.Angle)
+                .AddAttribute("dropauto", a => a.DropAuto)
+                .AddAttribute("drop", a => a.Drop)
+                .AddAttribute("distance", a => a.Distance)
+                .AddAttribute("lengthspecified", a => a.LengthSpecified)
+                .AddAttribute("length", a => a.Length)
+                .AddAttribute("accentbar", a => a.AccentBar)
+                .AddAttribute("textborder", a => a.TextBorder)
+                .AddAttribute("minusx", a => a.MinusX)
+                .AddAttribute("minusy", a => a.MinusY);
             builder.AddConstraint(new AttributeValueSetConstraint("ovml:type", true, new string[] { "rightAngle", "oneSegment", "twoSegment", "threeSegment" }));
         }
 
@@ -1812,18 +1812,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema("o:lock");
             builder.AddElement<Lock>()
-.AddAttribute("v:ext", a => a.Extension)
-.AddAttribute("position", a => a.Position)
-.AddAttribute("selection", a => a.Selection)
-.AddAttribute("grouping", a => a.Grouping)
-.AddAttribute("ungrouping", a => a.Ungrouping)
-.AddAttribute("rotation", a => a.Rotation)
-.AddAttribute("cropping", a => a.Cropping)
-.AddAttribute("verticies", a => a.Verticies)
-.AddAttribute("adjusthandles", a => a.AdjustHandles)
-.AddAttribute("text", a => a.TextLock)
-.AddAttribute("aspectratio", a => a.AspectRatio)
-.AddAttribute("shapetype", a => a.ShapeType);
+                .AddAttribute("v:ext", a => a.Extension)
+                .AddAttribute("position", a => a.Position)
+                .AddAttribute("selection", a => a.Selection)
+                .AddAttribute("grouping", a => a.Grouping)
+                .AddAttribute("ungrouping", a => a.Ungrouping)
+                .AddAttribute("rotation", a => a.Rotation)
+                .AddAttribute("cropping", a => a.Cropping)
+                .AddAttribute("verticies", a => a.Verticies)
+                .AddAttribute("adjusthandles", a => a.AdjustHandles)
+                .AddAttribute("text", a => a.TextLock)
+                .AddAttribute("aspectratio", a => a.AspectRatio)
+                .AddAttribute("shapetype", a => a.ShapeType);
         }
 
         /// <inheritdoc/>
@@ -1965,13 +1965,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.LockedField>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.FieldCodes>();
             builder.AddElement<OleObject>()
-.AddAttribute("Type", a => a.Type)
-.AddAttribute("ProgID", a => a.ProgId)
-.AddAttribute("ShapeID", a => a.ShapeId)
-.AddAttribute("DrawAspect", a => a.DrawAspect)
-.AddAttribute("ObjectID", a => a.ObjectId)
-.AddAttribute("r:id", a => a.Id)
-.AddAttribute("UpdateMode", a => a.UpdateMode);
+                .AddAttribute("Type", a => a.Type)
+                .AddAttribute("ProgID", a => a.ProgId)
+                .AddAttribute("ShapeID", a => a.ShapeId)
+                .AddAttribute("DrawAspect", a => a.DrawAspect)
+                .AddAttribute("ObjectID", a => a.ObjectId)
+                .AddAttribute("r:id", a => a.Id)
+                .AddAttribute("UpdateMode", a => a.UpdateMode);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.LinkType), 0, 1),
@@ -2059,7 +2059,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema("o:complex");
             builder.AddElement<Complex>()
-.AddAttribute("v:ext", a => a.Extension);
+                .AddAttribute("v:ext", a => a.Extension);
         }
 
         /// <inheritdoc/>
@@ -2524,33 +2524,33 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<StrokeChildType>()
-                           .AddAttribute("v:ext", a => a.Extension)
-                           .AddAttribute("on", a => a.On)
-                           .AddAttribute("weight", a => a.Weight)
-                           .AddAttribute("color", a => a.Color)
-                           .AddAttribute("color2", a => a.Color2)
-                           .AddAttribute("opacity", a => a.Opacity)
-                           .AddAttribute("linestyle", a => a.LineStyle)
-                           .AddAttribute("miterlimit", a => a.MiterLimit)
-                           .AddAttribute("joinstyle", a => a.JoinStyle)
-                           .AddAttribute("endcap", a => a.EndCap)
-                           .AddAttribute("dashstyle", a => a.DashStyle)
-                           .AddAttribute("insetpen", a => a.InsetPen)
-                           .AddAttribute("filltype", a => a.FillType)
-                           .AddAttribute("src", a => a.Source)
-                           .AddAttribute("imageaspect", a => a.ImageAspect)
-                           .AddAttribute("imagesize", a => a.ImageSize)
-                           .AddAttribute("imagealignshape", a => a.ImageAlignShape)
-                           .AddAttribute("startarrow", a => a.StartArrow)
-                           .AddAttribute("startarrowwidth", a => a.StartArrowWidth)
-                           .AddAttribute("startarrowlength", a => a.StartArrowLength)
-                           .AddAttribute("endarrow", a => a.EndArrow)
-                           .AddAttribute("endarrowwidth", a => a.EndArrowWidth)
-                           .AddAttribute("endarrowlength", a => a.EndArrowLength)
-                           .AddAttribute("o:href", a => a.Href)
-                           .AddAttribute("o:althref", a => a.AlternateImageReference)
-                           .AddAttribute("o:title", a => a.Title)
-                           .AddAttribute("o:forcedash", a => a.ForceDash);
+                .AddAttribute("v:ext", a => a.Extension)
+                .AddAttribute("on", a => a.On)
+                .AddAttribute("weight", a => a.Weight)
+                .AddAttribute("color", a => a.Color)
+                .AddAttribute("color2", a => a.Color2)
+                .AddAttribute("opacity", a => a.Opacity)
+                .AddAttribute("linestyle", a => a.LineStyle)
+                .AddAttribute("miterlimit", a => a.MiterLimit)
+                .AddAttribute("joinstyle", a => a.JoinStyle)
+                .AddAttribute("endcap", a => a.EndCap)
+                .AddAttribute("dashstyle", a => a.DashStyle)
+                .AddAttribute("insetpen", a => a.InsetPen)
+                .AddAttribute("filltype", a => a.FillType)
+                .AddAttribute("src", a => a.Source)
+                .AddAttribute("imageaspect", a => a.ImageAspect)
+                .AddAttribute("imagesize", a => a.ImageSize)
+                .AddAttribute("imagealignshape", a => a.ImageAlignShape)
+                .AddAttribute("startarrow", a => a.StartArrow)
+                .AddAttribute("startarrowwidth", a => a.StartArrowWidth)
+                .AddAttribute("startarrowlength", a => a.StartArrowLength)
+                .AddAttribute("endarrow", a => a.EndArrow)
+                .AddAttribute("endarrowwidth", a => a.EndArrowWidth)
+                .AddAttribute("endarrowlength", a => a.EndArrowLength)
+                .AddAttribute("o:href", a => a.Href)
+                .AddAttribute("o:althref", a => a.AlternateImageReference)
+                .AddAttribute("o:title", a => a.Title)
+                .AddAttribute("o:forcedash", a => a.ForceDash);
         }
     }
 
@@ -2588,10 +2588,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema("o:clippath");
             builder.AddElement<ClipPath>()
-.AddAttribute("o:v", a => a.Value, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("o:v", a => a.Value, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -2643,8 +2643,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("o:fill");
             builder.AddElement<FillExtendedProperties>()
-.AddAttribute("v:ext", a => a.Extension)
-.AddAttribute("type", a => a.Type);
+                .AddAttribute("v:ext", a => a.Extension)
+                .AddAttribute("type", a => a.Type);
         }
 
         /// <inheritdoc/>
@@ -2696,8 +2696,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("o:idmap");
             builder.AddElement<ShapeIdMap>()
-.AddAttribute("v:ext", a => a.Extension)
-.AddAttribute("data", a => a.Data);
+                .AddAttribute("v:ext", a => a.Extension)
+                .AddAttribute("data", a => a.Data);
         }
 
         /// <inheritdoc/>
@@ -2769,7 +2769,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("o:regrouptable");
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Entry>();
             builder.AddElement<RegroupTable>()
-.AddAttribute("v:ext", a => a.Extension);
+                .AddAttribute("v:ext", a => a.Extension);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Entry), 0, 0)
@@ -2845,7 +2845,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("o:rules");
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Rule>();
             builder.AddElement<Rules>()
-.AddAttribute("v:ext", a => a.Extension);
+                .AddAttribute("v:ext", a => a.Extension);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Rule), 0, 0)
@@ -2898,8 +2898,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("o:entry");
             builder.AddElement<Entry>()
-.AddAttribute("new", a => a.New)
-.AddAttribute("old", a => a.Old);
+                .AddAttribute("new", a => a.New)
+                .AddAttribute("old", a => a.Old);
         }
 
         /// <inheritdoc/>
@@ -3001,16 +3001,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("o:r");
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Proxy>();
             builder.AddElement<Rule>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("type", a => a.Type)
-.AddAttribute("how", a => a.How)
-.AddAttribute("idref", a => a.ShapeReference, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("type", a => a.Type)
+                .AddAttribute("how", a => a.How)
+                .AddAttribute("idref", a => a.ShapeReference, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Proxy), 0, 0)
@@ -3086,7 +3086,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("o:relationtable");
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Relation>();
             builder.AddElement<RelationTable>()
-.AddAttribute("v:ext", a => a.Extension);
+                .AddAttribute("v:ext", a => a.Extension);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Relation), 0, 0)
@@ -3164,19 +3164,19 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("o:rel");
             builder.AddElement<Relation>()
-.AddAttribute("v:ext", a => a.Extension)
-.AddAttribute("idsrc", a => a.SourceId, aBuilder =>
-{
-    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("iddest", a => a.DestinationId, aBuilder =>
-{
-    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("idcntr", a => a.CenterShapeId, aBuilder =>
-{
-    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("v:ext", a => a.Extension)
+                .AddAttribute("idsrc", a => a.SourceId, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("iddest", a => a.DestinationId, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("idcntr", a => a.CenterShapeId, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
 
         /// <inheritdoc/>
@@ -3363,17 +3363,17 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("o:proxy");
             builder.AddElement<Proxy>()
-.AddAttribute("start", a => a.Start)
-.AddAttribute("end", a => a.End)
-.AddAttribute("idref", a => a.ShapeReference, aBuilder =>
-{
-  aBuilder.AddValidator(RequiredValidator.Instance);
-  aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("connectloc", a => a.ConnectionLocation, aBuilder =>
-{
-  aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("start", a => a.Start)
+                .AddAttribute("end", a => a.End)
+                .AddAttribute("idref", a => a.ShapeReference, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("connectloc", a => a.ConnectionLocation, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -3425,8 +3425,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("o:colormru");
             builder.AddElement<ColorMostRecentlyUsed>()
-.AddAttribute("v:ext", a => a.Extension)
-.AddAttribute("colors", a => a.Colors);
+                .AddAttribute("v:ext", a => a.Extension)
+                .AddAttribute("colors", a => a.Colors);
         }
 
         /// <inheritdoc/>
@@ -3511,11 +3511,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("o:colormenu");
             builder.AddElement<ColorMenu>()
-.AddAttribute("v:ext", a => a.Extension)
-.AddAttribute("strokecolor", a => a.StrokeColor)
-.AddAttribute("fillcolor", a => a.FillColor)
-.AddAttribute("shadowcolor", a => a.ShadowColor)
-.AddAttribute("extrusioncolor", a => a.ExtrusionColor);
+                .AddAttribute("v:ext", a => a.Extension)
+                .AddAttribute("strokecolor", a => a.StrokeColor)
+                .AddAttribute("fillcolor", a => a.FillColor)
+                .AddAttribute("shadowcolor", a => a.ShadowColor)
+                .AddAttribute("extrusioncolor", a => a.ExtrusionColor);
         }
 
         /// <inheritdoc/>

@@ -48,11 +48,11 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor
             builder.SetSchema("ahyp:hlinkClr");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<HyperlinkColor>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
 
         /// <inheritdoc/>

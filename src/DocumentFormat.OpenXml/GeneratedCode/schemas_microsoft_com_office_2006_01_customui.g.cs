@@ -322,98 +322,98 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema("mso:control");
             builder.AddElement<UnsizedControlClone>()
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idMso", a => a.IdMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("tag", a => a.Tag, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("image", a => a.Image, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getImage", a => a.GetImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("screentip", a => a.Screentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("supertip", a => a.Supertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("enabled", a => a.Enabled)
-.AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("label", a => a.Label, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("visible", a => a.Visible)
-.AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("keytip", a => a.Keytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-})
-.AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showLabel", a => a.ShowLabel)
-.AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showImage", a => a.ShowImage)
-.AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idMso", a => a.IdMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("tag", a => a.Tag, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("image", a => a.Image, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getImage", a => a.GetImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("screentip", a => a.Screentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("supertip", a => a.Supertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("enabled", a => a.Enabled)
+                .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("label", a => a.Label, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("visible", a => a.Visible)
+                .AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("keytip", a => a.Keytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                })
+                .AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showLabel", a => a.ShowLabel)
+                .AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showImage", a => a.ShowImage)
+                .AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -770,114 +770,114 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema("mso:button");
             builder.AddElement<UnsizedButton>()
-.AddAttribute("onAction", a => a.OnAction, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("enabled", a => a.Enabled)
-.AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("description", a => a.Description, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
-})
-.AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("image", a => a.Image, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getImage", a => a.GetImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idMso", a => a.IdMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("tag", a => a.Tag, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("screentip", a => a.Screentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("supertip", a => a.Supertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("label", a => a.Label, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("visible", a => a.Visible)
-.AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("keytip", a => a.Keytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-})
-.AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showLabel", a => a.ShowLabel)
-.AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showImage", a => a.ShowImage)
-.AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("onAction", a => a.OnAction, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("enabled", a => a.Enabled)
+                .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("description", a => a.Description, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
+                })
+                .AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("image", a => a.Image, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getImage", a => a.GetImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idMso", a => a.IdMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("tag", a => a.Tag, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("screentip", a => a.Screentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("supertip", a => a.Supertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("label", a => a.Label, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("visible", a => a.Visible)
+                .AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("keytip", a => a.Keytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                })
+                .AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showLabel", a => a.ShowLabel)
+                .AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showImage", a => a.ShowImage)
+                .AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -1168,96 +1168,96 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema("mso:checkBox");
             builder.AddElement<CheckBox>()
-.AddAttribute("getPressed", a => a.GetPressed, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("onAction", a => a.OnAction, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("enabled", a => a.Enabled)
-.AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("description", a => a.Description, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
-})
-.AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idMso", a => a.IdMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("tag", a => a.Tag, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("screentip", a => a.Screentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("supertip", a => a.Supertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("label", a => a.Label, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("visible", a => a.Visible)
-.AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("keytip", a => a.Keytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-})
-.AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("getPressed", a => a.GetPressed, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("onAction", a => a.OnAction, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("enabled", a => a.Enabled)
+                .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("description", a => a.Description, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
+                })
+                .AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idMso", a => a.IdMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("tag", a => a.Tag, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("screentip", a => a.Screentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("supertip", a => a.Supertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("label", a => a.Label, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("visible", a => a.Visible)
+                .AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("keytip", a => a.Keytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                })
+                .AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -1845,177 +1845,177 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Item>();
             builder.AddElement<UnsizedGallery>()
-.AddAttribute("description", a => a.Description, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
-})
-.AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("invalidateContentOnDrop", a => a.InvalidateContentOnDrop)
-.AddAttribute("columns", a => a.Columns, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
-})
-.AddAttribute("rows", a => a.Rows, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
-})
-.AddAttribute("itemWidth", a => a.ItemWidth, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (4096L), IsPositive = (true) });
-})
-.AddAttribute("itemHeight", a => a.ItemHeight, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (4096L), IsPositive = (true) });
-})
-.AddAttribute("getItemWidth", a => a.GetItemWidth, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getItemHeight", a => a.GetItemHeight, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showItemLabel", a => a.ShowItemLabel)
-.AddAttribute("onAction", a => a.OnAction, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("enabled", a => a.Enabled)
-.AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("image", a => a.Image, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getImage", a => a.GetImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showItemImage", a => a.ShowItemImage)
-.AddAttribute("getItemCount", a => a.GetItemCount, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getItemLabel", a => a.GetItemLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getItemScreentip", a => a.GetItemScreentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getItemSupertip", a => a.GetItemSupertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getItemImage", a => a.GetItemImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getItemID", a => a.GetItemID, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("sizeString", a => a.SizeString, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getSelectedItemID", a => a.GetSelectedItemID, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getSelectedItemIndex", a => a.GetSelectedItemIndex, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idMso", a => a.IdMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("tag", a => a.Tag, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("screentip", a => a.Screentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("supertip", a => a.Supertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("label", a => a.Label, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("visible", a => a.Visible)
-.AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("keytip", a => a.Keytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-})
-.AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showLabel", a => a.ShowLabel)
-.AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showImage", a => a.ShowImage)
-.AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("description", a => a.Description, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
+                })
+                .AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("invalidateContentOnDrop", a => a.InvalidateContentOnDrop)
+                .AddAttribute("columns", a => a.Columns, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
+                })
+                .AddAttribute("rows", a => a.Rows, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
+                })
+                .AddAttribute("itemWidth", a => a.ItemWidth, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (4096L), IsPositive = (true) });
+                })
+                .AddAttribute("itemHeight", a => a.ItemHeight, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (4096L), IsPositive = (true) });
+                })
+                .AddAttribute("getItemWidth", a => a.GetItemWidth, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getItemHeight", a => a.GetItemHeight, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showItemLabel", a => a.ShowItemLabel)
+                .AddAttribute("onAction", a => a.OnAction, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("enabled", a => a.Enabled)
+                .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("image", a => a.Image, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getImage", a => a.GetImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showItemImage", a => a.ShowItemImage)
+                .AddAttribute("getItemCount", a => a.GetItemCount, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getItemLabel", a => a.GetItemLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getItemScreentip", a => a.GetItemScreentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getItemSupertip", a => a.GetItemSupertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getItemImage", a => a.GetItemImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getItemID", a => a.GetItemID, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("sizeString", a => a.SizeString, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getSelectedItemID", a => a.GetSelectedItemID, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getSelectedItemIndex", a => a.GetSelectedItemIndex, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idMso", a => a.IdMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("tag", a => a.Tag, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("screentip", a => a.Screentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("supertip", a => a.Supertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("label", a => a.Label, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("visible", a => a.Visible)
+                .AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("keytip", a => a.Keytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                })
+                .AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showLabel", a => a.ShowLabel)
+                .AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showImage", a => a.ShowImage)
+                .AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -2394,118 +2394,118 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema("mso:toggleButton");
             builder.AddElement<UnsizedToggleButton>()
-.AddAttribute("getPressed", a => a.GetPressed, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("onAction", a => a.OnAction, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("enabled", a => a.Enabled)
-.AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("description", a => a.Description, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
-})
-.AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("image", a => a.Image, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getImage", a => a.GetImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idMso", a => a.IdMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("tag", a => a.Tag, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("screentip", a => a.Screentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("supertip", a => a.Supertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("label", a => a.Label, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("visible", a => a.Visible)
-.AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("keytip", a => a.Keytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-})
-.AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showLabel", a => a.ShowLabel)
-.AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showImage", a => a.ShowImage)
-.AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("getPressed", a => a.GetPressed, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("onAction", a => a.OnAction, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("enabled", a => a.Enabled)
+                .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("description", a => a.Description, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
+                })
+                .AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("image", a => a.Image, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getImage", a => a.GetImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idMso", a => a.IdMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("tag", a => a.Tag, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("screentip", a => a.Screentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("supertip", a => a.Supertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("label", a => a.Label, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("visible", a => a.Visible)
+                .AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("keytip", a => a.Keytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                })
+                .AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showLabel", a => a.ShowLabel)
+                .AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showImage", a => a.ShowImage)
+                .AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -2620,38 +2620,38 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema("mso:menuSeparator");
             builder.AddElement<MenuSeparator>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("title", a => a.Title, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getTitle", a => a.GetTitle, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("title", a => a.Title, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getTitle", a => a.GetTitle, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -2889,61 +2889,61 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.VisibleButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton>();
             builder.AddElement<UnsizedSplitButton>()
-.AddAttribute("enabled", a => a.Enabled)
-.AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idMso", a => a.IdMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("tag", a => a.Tag, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("visible", a => a.Visible)
-.AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("keytip", a => a.Keytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-})
-.AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showLabel", a => a.ShowLabel)
-.AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("enabled", a => a.Enabled)
+                .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idMso", a => a.IdMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("tag", a => a.Tag, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("visible", a => a.Visible)
+                .AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("keytip", a => a.Keytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                })
+                .AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showLabel", a => a.ShowLabel)
+                .AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
@@ -3359,111 +3359,111 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton>();
             builder.AddElement<UnsizedMenu>()
-.AddAttribute("itemSize", a => a.ItemSize)
-.AddAttribute("description", a => a.Description, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
-})
-.AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idMso", a => a.IdMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("tag", a => a.Tag, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("image", a => a.Image, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getImage", a => a.GetImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("screentip", a => a.Screentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("supertip", a => a.Supertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("enabled", a => a.Enabled)
-.AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("label", a => a.Label, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("visible", a => a.Visible)
-.AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("keytip", a => a.Keytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-})
-.AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showLabel", a => a.ShowLabel)
-.AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showImage", a => a.ShowImage)
-.AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("itemSize", a => a.ItemSize)
+                .AddAttribute("description", a => a.Description, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
+                })
+                .AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idMso", a => a.IdMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("tag", a => a.Tag, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("image", a => a.Image, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getImage", a => a.GetImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("screentip", a => a.Screentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("supertip", a => a.Supertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("enabled", a => a.Enabled)
+                .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("label", a => a.Label, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("visible", a => a.Visible)
+                .AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("keytip", a => a.Keytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                })
+                .AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showLabel", a => a.ShowLabel)
+                .AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showImage", a => a.ShowImage)
+                .AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -3861,116 +3861,116 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema("mso:dynamicMenu");
             builder.AddElement<UnsizedDynamicMenu>()
-.AddAttribute("description", a => a.Description, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
-})
-.AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idMso", a => a.IdMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("tag", a => a.Tag, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getContent", a => a.GetContent, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("invalidateContentOnDrop", a => a.InvalidateContentOnDrop)
-.AddAttribute("image", a => a.Image, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getImage", a => a.GetImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("screentip", a => a.Screentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("supertip", a => a.Supertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("enabled", a => a.Enabled)
-.AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("label", a => a.Label, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("visible", a => a.Visible)
-.AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("keytip", a => a.Keytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-})
-.AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showLabel", a => a.ShowLabel)
-.AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showImage", a => a.ShowImage)
-.AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("description", a => a.Description, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
+                })
+                .AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idMso", a => a.IdMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("tag", a => a.Tag, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getContent", a => a.GetContent, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("invalidateContentOnDrop", a => a.InvalidateContentOnDrop)
+                .AddAttribute("image", a => a.Image, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getImage", a => a.GetImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("screentip", a => a.Screentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("supertip", a => a.Supertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("enabled", a => a.Enabled)
+                .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("label", a => a.Label, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("visible", a => a.Visible)
+                .AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("keytip", a => a.Keytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                })
+                .AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showLabel", a => a.ShowLabel)
+                .AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showImage", a => a.ShowImage)
+                .AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -4208,61 +4208,61 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.VisibleButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton>();
             builder.AddElement<SplitButtonWithTitle>()
-.AddAttribute("enabled", a => a.Enabled)
-.AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idMso", a => a.IdMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("tag", a => a.Tag, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("visible", a => a.Visible)
-.AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("keytip", a => a.Keytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-})
-.AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showLabel", a => a.ShowLabel)
-.AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("enabled", a => a.Enabled)
+                .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idMso", a => a.IdMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("tag", a => a.Tag, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("visible", a => a.Visible)
+                .AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("keytip", a => a.Keytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                })
+                .AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showLabel", a => a.ShowLabel)
+                .AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
@@ -4678,111 +4678,111 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.SplitButtonWithTitle>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton>();
             builder.AddElement<MenuWithTitle>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idMso", a => a.IdMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("tag", a => a.Tag, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("itemSize", a => a.ItemSize)
-.AddAttribute("title", a => a.Title, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getTitle", a => a.GetTitle, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("image", a => a.Image, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getImage", a => a.GetImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("screentip", a => a.Screentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("supertip", a => a.Supertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("enabled", a => a.Enabled)
-.AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("label", a => a.Label, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("visible", a => a.Visible)
-.AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("keytip", a => a.Keytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-})
-.AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showLabel", a => a.ShowLabel)
-.AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showImage", a => a.ShowImage)
-.AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idMso", a => a.IdMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("tag", a => a.Tag, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("itemSize", a => a.ItemSize)
+                .AddAttribute("title", a => a.Title, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getTitle", a => a.GetTitle, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("image", a => a.Image, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getImage", a => a.GetImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("screentip", a => a.Screentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("supertip", a => a.Supertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("enabled", a => a.Enabled)
+                .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("label", a => a.Label, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("visible", a => a.Visible)
+                .AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("keytip", a => a.Keytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                })
+                .AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showLabel", a => a.ShowLabel)
+                .AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showImage", a => a.ShowImage)
+                .AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -5169,111 +5169,111 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema("mso:control");
             builder.AddElement<ControlClone>()
-.AddAttribute("size", a => a.Size)
-.AddAttribute("getSize", a => a.GetSize, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("enabled", a => a.Enabled)
-.AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("description", a => a.Description, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
-})
-.AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("image", a => a.Image, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getImage", a => a.GetImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idMso", a => a.IdMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("tag", a => a.Tag, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("screentip", a => a.Screentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("supertip", a => a.Supertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("label", a => a.Label, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("visible", a => a.Visible)
-.AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("keytip", a => a.Keytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-})
-.AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showLabel", a => a.ShowLabel)
-.AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showImage", a => a.ShowImage)
-.AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("size", a => a.Size)
+                .AddAttribute("getSize", a => a.GetSize, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("enabled", a => a.Enabled)
+                .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("description", a => a.Description, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
+                })
+                .AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("image", a => a.Image, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getImage", a => a.GetImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idMso", a => a.IdMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("tag", a => a.Tag, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("screentip", a => a.Screentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("supertip", a => a.Supertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("label", a => a.Label, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("visible", a => a.Visible)
+                .AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("keytip", a => a.Keytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                })
+                .AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showLabel", a => a.ShowLabel)
+                .AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showImage", a => a.ShowImage)
+                .AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -5520,77 +5520,77 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema("mso:labelControl");
             builder.AddElement<TextLabel>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idMso", a => a.IdMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("tag", a => a.Tag, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("screentip", a => a.Screentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("supertip", a => a.Supertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("enabled", a => a.Enabled)
-.AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("label", a => a.Label, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("visible", a => a.Visible)
-.AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showLabel", a => a.ShowLabel)
-.AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idMso", a => a.IdMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("tag", a => a.Tag, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("screentip", a => a.Screentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("supertip", a => a.Supertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("enabled", a => a.Enabled)
+                .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("label", a => a.Label, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("visible", a => a.Visible)
+                .AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showLabel", a => a.ShowLabel)
+                .AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -5969,119 +5969,119 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema("mso:button");
             builder.AddElement<Button>()
-.AddAttribute("size", a => a.Size)
-.AddAttribute("getSize", a => a.GetSize, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("onAction", a => a.OnAction, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("enabled", a => a.Enabled)
-.AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("description", a => a.Description, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
-})
-.AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("image", a => a.Image, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getImage", a => a.GetImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idMso", a => a.IdMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("tag", a => a.Tag, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("screentip", a => a.Screentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("supertip", a => a.Supertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("label", a => a.Label, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("visible", a => a.Visible)
-.AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("keytip", a => a.Keytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-})
-.AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showLabel", a => a.ShowLabel)
-.AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showImage", a => a.ShowImage)
-.AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("size", a => a.Size)
+                .AddAttribute("getSize", a => a.GetSize, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("onAction", a => a.OnAction, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("enabled", a => a.Enabled)
+                .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("description", a => a.Description, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
+                })
+                .AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("image", a => a.Image, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getImage", a => a.GetImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idMso", a => a.IdMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("tag", a => a.Tag, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("screentip", a => a.Screentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("supertip", a => a.Supertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("label", a => a.Label, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("visible", a => a.Visible)
+                .AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("keytip", a => a.Keytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                })
+                .AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showLabel", a => a.ShowLabel)
+                .AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showImage", a => a.ShowImage)
+                .AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -6471,123 +6471,123 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema("mso:toggleButton");
             builder.AddElement<ToggleButton>()
-.AddAttribute("size", a => a.Size)
-.AddAttribute("getSize", a => a.GetSize, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getPressed", a => a.GetPressed, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("onAction", a => a.OnAction, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("enabled", a => a.Enabled)
-.AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("description", a => a.Description, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
-})
-.AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("image", a => a.Image, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getImage", a => a.GetImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idMso", a => a.IdMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("tag", a => a.Tag, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("screentip", a => a.Screentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("supertip", a => a.Supertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("label", a => a.Label, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("visible", a => a.Visible)
-.AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("keytip", a => a.Keytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-})
-.AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showLabel", a => a.ShowLabel)
-.AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showImage", a => a.ShowImage)
-.AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("size", a => a.Size)
+                .AddAttribute("getSize", a => a.GetSize, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getPressed", a => a.GetPressed, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("onAction", a => a.OnAction, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("enabled", a => a.Enabled)
+                .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("description", a => a.Description, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
+                })
+                .AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("image", a => a.Image, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getImage", a => a.GetImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idMso", a => a.IdMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("tag", a => a.Tag, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("screentip", a => a.Screentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("supertip", a => a.Supertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("label", a => a.Label, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("visible", a => a.Visible)
+                .AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("keytip", a => a.Keytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                })
+                .AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showLabel", a => a.ShowLabel)
+                .AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showImage", a => a.ShowImage)
+                .AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -6955,118 +6955,118 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema("mso:editBox");
             builder.AddElement<EditBox>()
-.AddAttribute("enabled", a => a.Enabled)
-.AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("image", a => a.Image, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getImage", a => a.GetImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("maxLength", a => a.MaxLength, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
-})
-.AddAttribute("getText", a => a.GetText, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("onChange", a => a.OnChange, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("sizeString", a => a.SizeString, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idMso", a => a.IdMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("tag", a => a.Tag, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("screentip", a => a.Screentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("supertip", a => a.Supertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("label", a => a.Label, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("visible", a => a.Visible)
-.AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("keytip", a => a.Keytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-})
-.AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showLabel", a => a.ShowLabel)
-.AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showImage", a => a.ShowImage)
-.AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("enabled", a => a.Enabled)
+                .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("image", a => a.Image, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getImage", a => a.GetImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("maxLength", a => a.MaxLength, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
+                })
+                .AddAttribute("getText", a => a.GetText, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("onChange", a => a.OnChange, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("sizeString", a => a.SizeString, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idMso", a => a.IdMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("tag", a => a.Tag, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("screentip", a => a.Screentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("supertip", a => a.Supertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("label", a => a.Label, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("visible", a => a.Visible)
+                .AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("keytip", a => a.Keytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                })
+                .AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showLabel", a => a.ShowLabel)
+                .AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showImage", a => a.ShowImage)
+                .AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -7553,144 +7553,144 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             builder.SetSchema("mso:comboBox");
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Item>();
             builder.AddElement<ComboBox>()
-.AddAttribute("showItemImage", a => a.ShowItemImage)
-.AddAttribute("getItemCount", a => a.GetItemCount, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getItemLabel", a => a.GetItemLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getItemScreentip", a => a.GetItemScreentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getItemSupertip", a => a.GetItemSupertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getItemImage", a => a.GetItemImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getItemID", a => a.GetItemID, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("sizeString", a => a.SizeString, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("invalidateContentOnDrop", a => a.InvalidateContentOnDrop)
-.AddAttribute("enabled", a => a.Enabled)
-.AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("image", a => a.Image, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getImage", a => a.GetImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("maxLength", a => a.MaxLength, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
-})
-.AddAttribute("getText", a => a.GetText, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("onChange", a => a.OnChange, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idMso", a => a.IdMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("tag", a => a.Tag, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("screentip", a => a.Screentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("supertip", a => a.Supertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("label", a => a.Label, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("visible", a => a.Visible)
-.AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("keytip", a => a.Keytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-})
-.AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showLabel", a => a.ShowLabel)
-.AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showImage", a => a.ShowImage)
-.AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("showItemImage", a => a.ShowItemImage)
+                .AddAttribute("getItemCount", a => a.GetItemCount, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getItemLabel", a => a.GetItemLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getItemScreentip", a => a.GetItemScreentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getItemSupertip", a => a.GetItemSupertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getItemImage", a => a.GetItemImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getItemID", a => a.GetItemID, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("sizeString", a => a.SizeString, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("invalidateContentOnDrop", a => a.InvalidateContentOnDrop)
+                .AddAttribute("enabled", a => a.Enabled)
+                .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("image", a => a.Image, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getImage", a => a.GetImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("maxLength", a => a.MaxLength, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
+                })
+                .AddAttribute("getText", a => a.GetText, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("onChange", a => a.OnChange, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idMso", a => a.IdMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("tag", a => a.Tag, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("screentip", a => a.Screentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("supertip", a => a.Supertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("label", a => a.Label, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("visible", a => a.Visible)
+                .AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("keytip", a => a.Keytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                })
+                .AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showLabel", a => a.ShowLabel)
+                .AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showImage", a => a.ShowImage)
+                .AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -8186,144 +8186,144 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Item>();
             builder.AddElement<DropDown>()
-.AddAttribute("onAction", a => a.OnAction, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("enabled", a => a.Enabled)
-.AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("image", a => a.Image, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getImage", a => a.GetImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showItemImage", a => a.ShowItemImage)
-.AddAttribute("getItemCount", a => a.GetItemCount, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getItemLabel", a => a.GetItemLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getItemScreentip", a => a.GetItemScreentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getItemSupertip", a => a.GetItemSupertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getItemImage", a => a.GetItemImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getItemID", a => a.GetItemID, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("sizeString", a => a.SizeString, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getSelectedItemID", a => a.GetSelectedItemID, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getSelectedItemIndex", a => a.GetSelectedItemIndex, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showItemLabel", a => a.ShowItemLabel)
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idMso", a => a.IdMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("tag", a => a.Tag, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("screentip", a => a.Screentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("supertip", a => a.Supertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("label", a => a.Label, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("visible", a => a.Visible)
-.AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("keytip", a => a.Keytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-})
-.AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showLabel", a => a.ShowLabel)
-.AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showImage", a => a.ShowImage)
-.AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("onAction", a => a.OnAction, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("enabled", a => a.Enabled)
+                .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("image", a => a.Image, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getImage", a => a.GetImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showItemImage", a => a.ShowItemImage)
+                .AddAttribute("getItemCount", a => a.GetItemCount, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getItemLabel", a => a.GetItemLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getItemScreentip", a => a.GetItemScreentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getItemSupertip", a => a.GetItemSupertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getItemImage", a => a.GetItemImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getItemID", a => a.GetItemID, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("sizeString", a => a.SizeString, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getSelectedItemID", a => a.GetSelectedItemID, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getSelectedItemIndex", a => a.GetSelectedItemIndex, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showItemLabel", a => a.ShowItemLabel)
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idMso", a => a.IdMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("tag", a => a.Tag, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("screentip", a => a.Screentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("supertip", a => a.Supertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("label", a => a.Label, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("visible", a => a.Visible)
+                .AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("keytip", a => a.Keytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                })
+                .AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showLabel", a => a.ShowLabel)
+                .AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showImage", a => a.ShowImage)
+                .AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -8941,182 +8941,182 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Item>();
             builder.AddElement<Gallery>()
-.AddAttribute("size", a => a.Size)
-.AddAttribute("getSize", a => a.GetSize, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("description", a => a.Description, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
-})
-.AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("invalidateContentOnDrop", a => a.InvalidateContentOnDrop)
-.AddAttribute("columns", a => a.Columns, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
-})
-.AddAttribute("rows", a => a.Rows, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
-})
-.AddAttribute("itemWidth", a => a.ItemWidth, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (4096L), IsPositive = (true) });
-})
-.AddAttribute("itemHeight", a => a.ItemHeight, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (4096L), IsPositive = (true) });
-})
-.AddAttribute("getItemWidth", a => a.GetItemWidth, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getItemHeight", a => a.GetItemHeight, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showItemLabel", a => a.ShowItemLabel)
-.AddAttribute("onAction", a => a.OnAction, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("enabled", a => a.Enabled)
-.AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("image", a => a.Image, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getImage", a => a.GetImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showItemImage", a => a.ShowItemImage)
-.AddAttribute("getItemCount", a => a.GetItemCount, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getItemLabel", a => a.GetItemLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getItemScreentip", a => a.GetItemScreentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getItemSupertip", a => a.GetItemSupertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getItemImage", a => a.GetItemImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getItemID", a => a.GetItemID, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("sizeString", a => a.SizeString, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getSelectedItemID", a => a.GetSelectedItemID, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getSelectedItemIndex", a => a.GetSelectedItemIndex, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idMso", a => a.IdMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("tag", a => a.Tag, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("screentip", a => a.Screentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("supertip", a => a.Supertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("label", a => a.Label, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("visible", a => a.Visible)
-.AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("keytip", a => a.Keytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-})
-.AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showLabel", a => a.ShowLabel)
-.AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showImage", a => a.ShowImage)
-.AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("size", a => a.Size)
+                .AddAttribute("getSize", a => a.GetSize, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("description", a => a.Description, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
+                })
+                .AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("invalidateContentOnDrop", a => a.InvalidateContentOnDrop)
+                .AddAttribute("columns", a => a.Columns, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
+                })
+                .AddAttribute("rows", a => a.Rows, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (1024L), IsPositive = (true) });
+                })
+                .AddAttribute("itemWidth", a => a.ItemWidth, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (4096L), IsPositive = (true) });
+                })
+                .AddAttribute("itemHeight", a => a.ItemHeight, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (4096L), IsPositive = (true) });
+                })
+                .AddAttribute("getItemWidth", a => a.GetItemWidth, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getItemHeight", a => a.GetItemHeight, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showItemLabel", a => a.ShowItemLabel)
+                .AddAttribute("onAction", a => a.OnAction, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("enabled", a => a.Enabled)
+                .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("image", a => a.Image, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getImage", a => a.GetImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showItemImage", a => a.ShowItemImage)
+                .AddAttribute("getItemCount", a => a.GetItemCount, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getItemLabel", a => a.GetItemLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getItemScreentip", a => a.GetItemScreentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getItemSupertip", a => a.GetItemSupertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getItemImage", a => a.GetItemImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getItemID", a => a.GetItemID, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("sizeString", a => a.SizeString, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getSelectedItemID", a => a.GetSelectedItemID, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getSelectedItemIndex", a => a.GetSelectedItemIndex, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idMso", a => a.IdMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("tag", a => a.Tag, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("screentip", a => a.Screentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("supertip", a => a.Supertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("label", a => a.Label, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("visible", a => a.Visible)
+                .AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("keytip", a => a.Keytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                })
+                .AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showLabel", a => a.ShowLabel)
+                .AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showImage", a => a.ShowImage)
+                .AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -9556,116 +9556,116 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton>();
             builder.AddElement<Menu>()
-.AddAttribute("size", a => a.Size)
-.AddAttribute("getSize", a => a.GetSize, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("itemSize", a => a.ItemSize)
-.AddAttribute("description", a => a.Description, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
-})
-.AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idMso", a => a.IdMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("tag", a => a.Tag, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("image", a => a.Image, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getImage", a => a.GetImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("screentip", a => a.Screentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("supertip", a => a.Supertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("enabled", a => a.Enabled)
-.AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("label", a => a.Label, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("visible", a => a.Visible)
-.AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("keytip", a => a.Keytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-})
-.AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showLabel", a => a.ShowLabel)
-.AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showImage", a => a.ShowImage)
-.AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("size", a => a.Size)
+                .AddAttribute("getSize", a => a.GetSize, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("itemSize", a => a.ItemSize)
+                .AddAttribute("description", a => a.Description, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
+                })
+                .AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idMso", a => a.IdMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("tag", a => a.Tag, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("image", a => a.Image, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getImage", a => a.GetImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("screentip", a => a.Screentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("supertip", a => a.Supertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("enabled", a => a.Enabled)
+                .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("label", a => a.Label, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("visible", a => a.Visible)
+                .AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("keytip", a => a.Keytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                })
+                .AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showLabel", a => a.ShowLabel)
+                .AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showImage", a => a.ShowImage)
+                .AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -10088,121 +10088,121 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema("mso:dynamicMenu");
             builder.AddElement<DynamicMenu>()
-.AddAttribute("size", a => a.Size)
-.AddAttribute("getSize", a => a.GetSize, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("description", a => a.Description, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
-})
-.AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idMso", a => a.IdMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("tag", a => a.Tag, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getContent", a => a.GetContent, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("invalidateContentOnDrop", a => a.InvalidateContentOnDrop)
-.AddAttribute("image", a => a.Image, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getImage", a => a.GetImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("screentip", a => a.Screentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("supertip", a => a.Supertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("enabled", a => a.Enabled)
-.AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("label", a => a.Label, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("visible", a => a.Visible)
-.AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("keytip", a => a.Keytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-})
-.AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showLabel", a => a.ShowLabel)
-.AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showImage", a => a.ShowImage)
-.AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("size", a => a.Size)
+                .AddAttribute("getSize", a => a.GetSize, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("description", a => a.Description, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
+                })
+                .AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idMso", a => a.IdMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("tag", a => a.Tag, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getContent", a => a.GetContent, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("invalidateContentOnDrop", a => a.InvalidateContentOnDrop)
+                .AddAttribute("image", a => a.Image, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getImage", a => a.GetImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("screentip", a => a.Screentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("supertip", a => a.Supertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("enabled", a => a.Enabled)
+                .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("label", a => a.Label, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("visible", a => a.Visible)
+                .AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("keytip", a => a.Keytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                })
+                .AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showLabel", a => a.ShowLabel)
+                .AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showImage", a => a.ShowImage)
+                .AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -10462,66 +10462,66 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.VisibleButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton>();
             builder.AddElement<SplitButton>()
-.AddAttribute("size", a => a.Size)
-.AddAttribute("getSize", a => a.GetSize, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("enabled", a => a.Enabled)
-.AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idMso", a => a.IdMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("tag", a => a.Tag, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("visible", a => a.Visible)
-.AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("keytip", a => a.Keytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-})
-.AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showLabel", a => a.ShowLabel)
-.AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("size", a => a.Size)
+                .AddAttribute("getSize", a => a.GetSize, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("enabled", a => a.Enabled)
+                .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idMso", a => a.IdMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("tag", a => a.Tag, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("visible", a => a.Visible)
+                .AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("keytip", a => a.Keytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                })
+                .AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showLabel", a => a.ShowLabel)
+                .AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -10719,36 +10719,36 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.SplitButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.ToggleButton>();
             builder.AddElement<Box>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("visible", a => a.Visible)
-.AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("boxStyle", a => a.BoxStyle);
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("visible", a => a.Visible)
+                .AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("boxStyle", a => a.BoxStyle);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 1000)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -10926,35 +10926,35 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton>();
             builder.AddElement<ButtonGroup>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("visible", a => a.Visible)
-.AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("visible", a => a.Visible)
+                .AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
@@ -11074,15 +11074,15 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton>();
             builder.AddElement<MenuRoot>()
-.AddAttribute("title", a => a.Title, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getTitle", a => a.GetTitle, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("itemSize", a => a.ItemSize);
+                .AddAttribute("title", a => a.Title, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getTitle", a => a.GetTitle, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("itemSize", a => a.ItemSize);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
@@ -11191,14 +11191,14 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommands>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Ribbon>();
             builder.AddElement<CustomUI>()
-.AddAttribute("onLoad", a => a.OnLoad, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("loadImage", a => a.LoadImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("onLoad", a => a.OnLoad, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("loadImage", a => a.LoadImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommands), 0, 1),
@@ -11322,30 +11322,30 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema("mso:item");
             builder.AddElement<Item>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
- aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("label", a => a.Label, aBuilder =>
-{
- aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("image", a => a.Image, aBuilder =>
-{
- aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
-{
- aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("screentip", a => a.Screentip, aBuilder =>
-{
- aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("supertip", a => a.Supertip, aBuilder =>
-{
- aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("label", a => a.Label, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("image", a => a.Image, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("screentip", a => a.Screentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("supertip", a => a.Supertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -11680,109 +11680,109 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema("mso:button");
             builder.AddElement<VisibleButton>()
-.AddAttribute("onAction", a => a.OnAction, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("enabled", a => a.Enabled)
-.AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("description", a => a.Description, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
-})
-.AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("image", a => a.Image, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getImage", a => a.GetImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idMso", a => a.IdMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("tag", a => a.Tag, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("screentip", a => a.Screentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("supertip", a => a.Supertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("label", a => a.Label, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("keytip", a => a.Keytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-})
-.AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showLabel", a => a.ShowLabel)
-.AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showImage", a => a.ShowImage)
-.AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("onAction", a => a.OnAction, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("enabled", a => a.Enabled)
+                .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("description", a => a.Description, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
+                })
+                .AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("image", a => a.Image, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getImage", a => a.GetImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idMso", a => a.IdMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("tag", a => a.Tag, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("screentip", a => a.Screentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("supertip", a => a.Supertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("label", a => a.Label, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("keytip", a => a.Keytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                })
+                .AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showLabel", a => a.ShowLabel)
+                .AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showImage", a => a.ShowImage)
+                .AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -12128,113 +12128,113 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema("mso:toggleButton");
             builder.AddElement<VisibleToggleButton>()
-.AddAttribute("getPressed", a => a.GetPressed, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("onAction", a => a.OnAction, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("enabled", a => a.Enabled)
-.AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("description", a => a.Description, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
-})
-.AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("image", a => a.Image, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getImage", a => a.GetImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idMso", a => a.IdMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("tag", a => a.Tag, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("screentip", a => a.Screentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("supertip", a => a.Supertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("label", a => a.Label, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("keytip", a => a.Keytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-})
-.AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showLabel", a => a.ShowLabel)
-.AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showImage", a => a.ShowImage)
-.AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("getPressed", a => a.GetPressed, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("onAction", a => a.OnAction, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("enabled", a => a.Enabled)
+                .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("description", a => a.Description, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
+                })
+                .AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("image", a => a.Image, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getImage", a => a.GetImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idMso", a => a.IdMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("tag", a => a.Tag, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("screentip", a => a.Screentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("supertip", a => a.Supertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("label", a => a.Label, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("keytip", a => a.Keytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                })
+                .AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showLabel", a => a.ShowLabel)
+                .AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showImage", a => a.ShowImage)
+                .AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -12349,35 +12349,35 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema("mso:separator");
             builder.AddElement<VerticalSeparator>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("visible", a => a.Visible)
-.AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("visible", a => a.Visible)
+                .AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -12769,87 +12769,87 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.SplitButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.ToggleButton>();
             builder.AddElement<Group>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idMso", a => a.IdMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("tag", a => a.Tag, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("label", a => a.Label, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("image", a => a.Image, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getImage", a => a.GetImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("screentip", a => a.Screentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("supertip", a => a.Supertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("visible", a => a.Visible)
-.AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("keytip", a => a.Keytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-})
-.AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idMso", a => a.IdMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("tag", a => a.Tag, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("label", a => a.Label, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("image", a => a.Image, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getImage", a => a.GetImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("screentip", a => a.Screentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("supertip", a => a.Supertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("visible", a => a.Visible)
+                .AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("keytip", a => a.Keytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                })
+                .AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -13237,111 +13237,111 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema("mso:control");
             builder.AddElement<QuickAccessToolbarControlClone>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idMso", a => a.IdMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("description", a => a.Description, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
-})
-.AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("size", a => a.Size)
-.AddAttribute("getSize", a => a.GetSize, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("image", a => a.Image, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getImage", a => a.GetImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("screentip", a => a.Screentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("supertip", a => a.Supertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("enabled", a => a.Enabled)
-.AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("label", a => a.Label, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("visible", a => a.Visible)
-.AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("keytip", a => a.Keytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-})
-.AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showLabel", a => a.ShowLabel)
-.AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("showImage", a => a.ShowImage)
-.AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idMso", a => a.IdMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("description", a => a.Description, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (4096L) });
+                })
+                .AddAttribute("getDescription", a => a.GetDescription, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("size", a => a.Size)
+                .AddAttribute("getSize", a => a.GetSize, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("image", a => a.Image, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("imageMso", a => a.ImageMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getImage", a => a.GetImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("screentip", a => a.Screentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getScreentip", a => a.GetScreentip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("supertip", a => a.Supertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getSupertip", a => a.GetSupertip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("enabled", a => a.Enabled)
+                .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("label", a => a.Label, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("visible", a => a.Visible)
+                .AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("keytip", a => a.Keytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                })
+                .AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showLabel", a => a.ShowLabel)
+                .AddAttribute("getShowLabel", a => a.GetShowLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("showImage", a => a.ShowImage)
+                .AddAttribute("getShowImage", a => a.GetShowImage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -13740,59 +13740,59 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             builder.SetSchema("mso:tab");
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Group>();
             builder.AddElement<Tab>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idQ", a => a.IdQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idMso", a => a.IdMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("tag", a => a.Tag, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("label", a => a.Label, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("visible", a => a.Visible)
-.AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("keytip", a => a.Keytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
-})
-.AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idQ", a => a.IdQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idMso", a => a.IdMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("tag", a => a.Tag, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("label", a => a.Label, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("getLabel", a => a.GetLabel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterMso", a => a.InsertAfterMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeMso", a => a.InsertBeforeMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertAfterQ", a => a.InsertAfterQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("insertBeforeQ", a => a.InsertBeforeQ, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("visible", a => a.Visible)
+                .AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("keytip", a => a.Keytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L), MaxLength = (3L) });
+                })
+                .AddAttribute("getKeytip", a => a.GetKeytip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 100)
@@ -13890,16 +13890,16 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             builder.SetSchema("mso:tabSet");
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Tab>();
             builder.AddElement<ContextualTabSet>()
-.AddAttribute("idMso", a => a.IdMso, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("visible", a => a.Visible)
-.AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("idMso", a => a.IdMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("visible", a => a.Visible)
+                .AddAttribute("getVisible", a => a.GetVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Tab), 0, 50)
@@ -13974,19 +13974,19 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema("mso:command");
             builder.AddElement<RepurposedCommand>()
-.AddAttribute("onAction", a => a.OnAction, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("enabled", a => a.Enabled)
-.AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
-})
-.AddAttribute("idMso", a => a.IdMso, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
-});
+                .AddAttribute("onAction", a => a.OnAction, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("enabled", a => a.Enabled)
+                .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
+                })
+                .AddAttribute("idMso", a => a.IdMso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -14429,7 +14429,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbar>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Tabs>();
             builder.AddElement<Ribbon>()
-.AddAttribute("startFromScratch", a => a.StartFromScratch);
+                .AddAttribute("startFromScratch", a => a.StartFromScratch);
             builder.Particle = new CompositeParticle.Builder(ParticleType.All, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.OfficeMenu), 0, 1),

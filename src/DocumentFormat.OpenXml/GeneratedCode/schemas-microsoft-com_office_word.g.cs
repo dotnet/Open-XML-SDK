@@ -167,12 +167,12 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<BorderType>()
-                           .AddAttribute("type", a => a.Type)
-                           .AddAttribute("width", a => a.Width, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidator() { IsPositive = (true) });
-                           })
-                           .AddAttribute("shadow", a => a.Shadow);
+                .AddAttribute("type", a => a.Type)
+                .AddAttribute("width", a => a.Width, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { IsPositive = (true) });
+                })
+                .AddAttribute("shadow", a => a.Shadow);
         }
     }
 
@@ -240,10 +240,10 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
             base.ConfigureMetadata(builder);
             builder.SetSchema("w10:wrap");
             builder.AddElement<TextWrap>()
-.AddAttribute("type", a => a.Type)
-.AddAttribute("side", a => a.Side)
-.AddAttribute("anchorx", a => a.AnchorX)
-.AddAttribute("anchory", a => a.AnchorY);
+                .AddAttribute("type", a => a.Type)
+                .AddAttribute("side", a => a.Side)
+                .AddAttribute("anchorx", a => a.AnchorX)
+                .AddAttribute("anchory", a => a.AnchorY);
         }
 
         /// <inheritdoc/>

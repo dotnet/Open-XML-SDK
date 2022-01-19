@@ -159,8 +159,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
             builder.AddChild<DocumentFormat.OpenXml.Drawing.CharacterBullet>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NoBullet>();
             builder.AddElement<DiagramAutoBullet>()
-.AddAttribute("prefix", a => a.AutoBulletPrefix)
-.AddAttribute("leadZeros", a => a.LeadZeros);
+                .AddAttribute("prefix", a => a.AutoBulletPrefix)
+                .AddAttribute("leadZeros", a => a.LeadZeros);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -303,15 +303,15 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet>();
             builder.AddElement<NumberDiagramInfo>()
-.AddAttribute("lvl", a => a.Lvl, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("ptType", a => a.PtType, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("lvl", a => a.Lvl, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("ptType", a => a.PtType, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet), 1, 1, version: FileFormatVersions.Office2019)

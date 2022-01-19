@@ -82,22 +82,22 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
             builder.SetSchema("a15:backgroundPr");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<BackgroundProperties>()
-.AddAttribute("bwMode", a => a.Mode, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("bwPure", a => a.Pure, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("bwNormal", a => a.Normal, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("targetScreenSize", a => a.TargetScreenSize, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("bwMode", a => a.Mode, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("bwPure", a => a.Pure, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("bwNormal", a => a.Normal, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("targetScreenSize", a => a.TargetScreenSize, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
 
         /// <inheritdoc/>
@@ -136,7 +136,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("a15:nonVisualGroupProps");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<NonVisualGroupProperties>()
-.AddAttribute("isLegacyGroup", a => a.IsLegacyGroup);
+                .AddAttribute("isLegacyGroup", a => a.IsLegacyGroup);
         }
 
         /// <inheritdoc/>
@@ -197,9 +197,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("a15:objectPr");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<ObjectProperties>()
-.AddAttribute("objectId", a => a.Id)
-.AddAttribute("isActiveX", a => a.IsActiveX)
-.AddAttribute("linkType", a => a.LinkType);
+                .AddAttribute("objectId", a => a.Id)
+                .AddAttribute("isActiveX", a => a.IsActiveX)
+                .AddAttribute("linkType", a => a.LinkType);
         }
 
         /// <inheritdoc/>
@@ -359,24 +359,24 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("a15:signatureLine");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<SignatureLine>()
-.AddAttribute("isSignatureLine", a => a.IsSignatureLine)
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("provId", a => a.ProviderId, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("signingInstructionsSet", a => a.SigningInstructionsSet)
-.AddAttribute("allowComments", a => a.AllowComments)
-.AddAttribute("showSignDate", a => a.ShowSignDate)
-.AddAttribute("suggestedSigner", a => a.SuggestedSigner)
-.AddAttribute("suggestedSigner2", a => a.SuggestedSigner2)
-.AddAttribute("suggestedSignerEmail", a => a.SuggestedSignerEmail)
-.AddAttribute("signingInstructions", a => a.SigningInstructions)
-.AddAttribute("addlXml", a => a.AdditionalXml)
-.AddAttribute("sigProvUrl", a => a.SignatureProviderUrl);
+                .AddAttribute("isSignatureLine", a => a.IsSignatureLine)
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("provId", a => a.ProviderId, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("signingInstructionsSet", a => a.SigningInstructionsSet)
+                .AddAttribute("allowComments", a => a.AllowComments)
+                .AddAttribute("showSignDate", a => a.ShowSignDate)
+                .AddAttribute("suggestedSigner", a => a.SuggestedSigner)
+                .AddAttribute("suggestedSigner2", a => a.SuggestedSigner2)
+                .AddAttribute("suggestedSignerEmail", a => a.SuggestedSignerEmail)
+                .AddAttribute("signingInstructions", a => a.SigningInstructions)
+                .AddAttribute("addlXml", a => a.AdditionalXml)
+                .AddAttribute("sigProvUrl", a => a.SignatureProviderUrl);
         }
 
         /// <inheritdoc/>

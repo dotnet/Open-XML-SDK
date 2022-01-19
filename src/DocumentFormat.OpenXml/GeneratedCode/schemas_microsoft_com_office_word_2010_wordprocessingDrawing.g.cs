@@ -160,11 +160,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth>();
             builder.AddElement<RelativeWidth>()
-.AddAttribute("relativeFrom", a => a.ObjectId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("relativeFrom", a => a.ObjectId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth), 1, 1, version: FileFormatVersions.Office2010)
@@ -251,11 +251,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight>();
             builder.AddElement<RelativeHeight>()
-.AddAttribute("relativeFrom", a => a.RelativeFrom, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("relativeFrom", a => a.RelativeFrom, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight), 1, 1, version: FileFormatVersions.Office2010)

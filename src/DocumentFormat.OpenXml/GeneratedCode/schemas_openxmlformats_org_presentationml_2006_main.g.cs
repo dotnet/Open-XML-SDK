@@ -482,14 +482,14 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<IndexRangeType>()
-                           .AddAttribute("st", a => a.Start, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           })
-                           .AddAttribute("end", a => a.End, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           });
+                .AddAttribute("st", a => a.Start, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("end", a => a.End, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
     }
 
@@ -524,10 +524,10 @@ namespace DocumentFormat.OpenXml.Presentation
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:custShow");
             builder.AddElement<CustomShowReference>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new UniqueAttributeValueConstraint("p:id", false, null) { Application = ApplicationType.PowerPoint });
         }
 
@@ -590,11 +590,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:ext");
             builder.AddElement<Extension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new AnyParticle(1, 1)
@@ -636,7 +636,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:browse");
             builder.AddElement<BrowseSlideMode>()
-.AddAttribute("showScrollbar", a => a.ShowScrollbar);
+                .AddAttribute("showScrollbar", a => a.ShowScrollbar);
         }
 
         /// <inheritdoc/>
@@ -674,7 +674,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:kiosk");
             builder.AddElement<KioskSlideMode>()
-.AddAttribute("restart", a => a.Restart);
+                .AddAttribute("restart", a => a.Restart);
         }
 
         /// <inheritdoc/>
@@ -864,66 +864,66 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("p:clrMap");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.AddElement<ColorMap>()
-.AddAttribute("bg1", a => a.Background1, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("tx1", a => a.Text1, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("bg2", a => a.Background2, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("tx2", a => a.Text2, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("accent1", a => a.Accent1, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("accent2", a => a.Accent2, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("accent3", a => a.Accent3, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("accent4", a => a.Accent4, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("accent5", a => a.Accent5, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("accent6", a => a.Accent6, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("hlink", a => a.Hyperlink, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("folHlink", a => a.FollowedHyperlink, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("bg1", a => a.Background1, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("tx1", a => a.Text1, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("bg2", a => a.Background2, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("tx2", a => a.Text2, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("accent1", a => a.Accent1, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("accent2", a => a.Accent2, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("accent3", a => a.Accent3, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("accent4", a => a.Accent4, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("accent5", a => a.Accent5, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("accent6", a => a.Accent6, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("hlink", a => a.Hyperlink, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("folHlink", a => a.FollowedHyperlink, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
@@ -1115,7 +1115,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
             builder.AddElement<BackgroundProperties>()
-.AddAttribute("shadeToTitle", a => a.ShadeToTitle);
+                .AddAttribute("shadeToTitle", a => a.ShadeToTitle);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -1217,10 +1217,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
             builder.AddElement<BackgroundStyleReference>()
-.AddAttribute("idx", a => a.Index, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("idx", a => a.Index, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -1637,22 +1637,22 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Presentation.OleObjectLink>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Picture>();
             builder.AddElement<OleObject>()
-.AddAttribute("spid", a => a.ShapeId, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("name", a => a.Name)
-.AddAttribute("showAsIcon", a => a.ShowAsIcon)
-.AddAttribute("r:id", a => a.Id)
-.AddAttribute("imgW", a => a.ImageWidth, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
-})
-.AddAttribute("imgH", a => a.ImageHeight, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
-})
-.AddAttribute("progId", a => a.ProgId);
+                .AddAttribute("spid", a => a.ShapeId, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("showAsIcon", a => a.ShowAsIcon)
+                .AddAttribute("r:id", a => a.Id)
+                .AddAttribute("imgW", a => a.ImageWidth, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
+                })
+                .AddAttribute("imgH", a => a.ImageHeight, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
+                })
+                .AddAttribute("progId", a => a.ProgId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -1878,21 +1878,21 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
             builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideMasterIdList>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideSize>();
             builder.AddElement<Presentation>()
-.AddAttribute("serverZoom", a => a.ServerZoom)
-.AddAttribute("firstSlideNum", a => a.FirstSlideNum)
-.AddAttribute("showSpecialPlsOnTitleSld", a => a.ShowSpecialPlaceholderOnTitleSlide)
-.AddAttribute("rtl", a => a.RightToLeft)
-.AddAttribute("removePersonalInfoOnSave", a => a.RemovePersonalInfoOnSave)
-.AddAttribute("compatMode", a => a.CompatibilityMode)
-.AddAttribute("strictFirstAndLastChars", a => a.StrictFirstAndLastChars)
-.AddAttribute("embedTrueTypeFonts", a => a.EmbedTrueTypeFonts)
-.AddAttribute("saveSubsetFonts", a => a.SaveSubsetFonts)
-.AddAttribute("autoCompressPictures", a => a.AutoCompressPictures)
-.AddAttribute("bookmarkIdSeed", a => a.BookmarkIdSeed, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinInclusive = (1L) });
-})
-.AddAttribute("conformance", a => a.Conformance);
+                .AddAttribute("serverZoom", a => a.ServerZoom)
+                .AddAttribute("firstSlideNum", a => a.FirstSlideNum)
+                .AddAttribute("showSpecialPlsOnTitleSld", a => a.ShowSpecialPlaceholderOnTitleSlide)
+                .AddAttribute("rtl", a => a.RightToLeft)
+                .AddAttribute("removePersonalInfoOnSave", a => a.RemovePersonalInfoOnSave)
+                .AddAttribute("compatMode", a => a.CompatibilityMode)
+                .AddAttribute("strictFirstAndLastChars", a => a.StrictFirstAndLastChars)
+                .AddAttribute("embedTrueTypeFonts", a => a.EmbedTrueTypeFonts)
+                .AddAttribute("saveSubsetFonts", a => a.SaveSubsetFonts)
+                .AddAttribute("autoCompressPictures", a => a.AutoCompressPictures)
+                .AddAttribute("bookmarkIdSeed", a => a.BookmarkIdSeed, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinInclusive = (1L) });
+                })
+                .AddAttribute("conformance", a => a.Conformance);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideMasterIdList), 0, 1),
@@ -2406,9 +2406,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Timing>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Transition>();
             builder.AddElement<Slide>()
-.AddAttribute("showMasterSp", a => a.ShowMasterShapes)
-.AddAttribute("showMasterPhAnim", a => a.ShowMasterPlaceholderAnimations)
-.AddAttribute("show", a => a.Show);
+                .AddAttribute("showMasterSp", a => a.ShowMasterShapes)
+                .AddAttribute("showMasterPhAnim", a => a.ShowMasterPlaceholderAnimations)
+                .AddAttribute("show", a => a.Show);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
@@ -2653,15 +2653,15 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Timing>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Transition>();
             builder.AddElement<SlideLayout>()
-.AddAttribute("showMasterSp", a => a.ShowMasterShapes)
-.AddAttribute("showMasterPhAnim", a => a.ShowMasterPlaceholderAnimations)
-.AddAttribute("matchingName", a => a.MatchingName)
-.AddAttribute("type", a => a.Type, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("preserve", a => a.Preserve)
-.AddAttribute("userDrawn", a => a.UserDrawn);
+                .AddAttribute("showMasterSp", a => a.ShowMasterShapes)
+                .AddAttribute("showMasterPhAnim", a => a.ShowMasterPlaceholderAnimations)
+                .AddAttribute("matchingName", a => a.MatchingName)
+                .AddAttribute("type", a => a.Type, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("preserve", a => a.Preserve)
+                .AddAttribute("userDrawn", a => a.UserDrawn);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
@@ -2868,7 +2868,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Timing>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Transition>();
             builder.AddElement<SlideMaster>()
-.AddAttribute("preserve", a => a.Preserve);
+                .AddAttribute("preserve", a => a.Preserve);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
@@ -3436,8 +3436,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
             builder.AddElement<NotesSlide>()
-.AddAttribute("showMasterSp", a => a.ShowMasterShapes)
-.AddAttribute("showMasterPhAnim", a => a.ShowMasterPlaceholderAnimations);
+                .AddAttribute("showMasterSp", a => a.ShowMasterShapes)
+                .AddAttribute("showMasterPhAnim", a => a.ShowMasterPlaceholderAnimations);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
@@ -3610,18 +3610,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("p:sldSyncPr");
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
             builder.AddElement<SlideSyncProperties>()
-.AddAttribute("serverSldId", a => a.ServerSlideId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("serverSldModifiedTime", a => a.ServerSlideModifiedTime, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("clientInsertedTime", a => a.ClientInsertedTime, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("serverSldId", a => a.ServerSlideId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("serverSldModifiedTime", a => a.ServerSlideModifiedTime, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("clientInsertedTime", a => a.ClientInsertedTime, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
@@ -3854,11 +3854,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Presentation.SorterViewProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideViewProperties>();
             builder.AddElement<ViewProperties>()
-.AddAttribute("lastView", a => a.LastView, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("showComments", a => a.ShowComments);
+                .AddAttribute("lastView", a => a.LastView, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("showComments", a => a.ShowComments);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NormalViewProperties), 0, 1),
@@ -4095,14 +4095,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionListModify>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualContentPartProperties>();
             builder.AddElement<ContentPart>()
-.AddAttribute("p14:bwMode", a => a.BwMode, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("p14:bwMode", a => a.BwMode, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualContentPartProperties), 0, 1, version: FileFormatVersions.Office2010),
@@ -4259,12 +4259,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<EmbeddedWavAudioFileType>()
-                           .AddAttribute("r:embed", a => a.Embed, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           })
-                           .AddAttribute("name", a => a.Name)
-                           .AddAttribute("builtIn", a => a.BuiltIn);
+                .AddAttribute("r:embed", a => a.Embed, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("builtIn", a => a.BuiltIn);
         }
     }
 
@@ -4330,7 +4330,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("p:stSnd");
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Sound>();
             builder.AddElement<StartSoundAction>()
-.AddAttribute("loop", a => a.Loop);
+                .AddAttribute("loop", a => a.Loop);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Sound), 1, 1)
@@ -4385,20 +4385,20 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:tmAbs");
             builder.AddElement<TimeAbsolute>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-  aBuilder.AddValidator(RequiredValidator.Instance);
-  aBuilder.AddUnion(union =>
-  {
-      union.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-      union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidator() { Version = (FileFormatVersions.Office2007) });
-  });
-  aBuilder.AddUnion(union =>
-  {
-      union.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-      union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-  });
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidator() { Version = (FileFormatVersions.Office2007) });
+                    });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                    });
+                });
         }
 
         /// <inheritdoc/>
@@ -4436,11 +4436,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:tmPct");
             builder.AddElement<TimePercentage>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-  aBuilder.AddValidator(RequiredValidator.Instance);
-  aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
+                });
             builder.AddConstraint(new AttributeValueRangeConstraint("p:val", true, double.NegativeInfinity, true, 2147483625, true) { Application = ApplicationType.PowerPoint });
         }
 
@@ -4616,10 +4616,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:tn");
             builder.AddElement<TimeNode>()
- .AddAttribute("val", a => a.Val, aBuilder =>
- {
-     aBuilder.AddValidator(RequiredValidator.Instance);
- });
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -4657,11 +4657,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:rtn");
             builder.AddElement<RuntimeNodeTrigger>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
 
         /// <inheritdoc/>
@@ -4869,23 +4869,23 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Presentation.RuntimeNodeTrigger>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.TimeNode>();
             builder.AddElement<TimeListConditionalType>()
-.AddAttribute("evt", a => a.Event, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("delay", a => a.Delay, aBuilder =>
-{
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidator() { Version = (FileFormatVersions.Office2007) });
-});
-aBuilder.AddUnion(union =>
-{
-union.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-});
-});
+                .AddAttribute("evt", a => a.Event, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("delay", a => a.Delay, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidator() { Version = (FileFormatVersions.Office2007) });
+                    });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                    });
+                });
         }
 
         /// <summary>
@@ -5089,15 +5089,15 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeD
             builder.AddChild<DocumentFormat.OpenXml.Presentation.PreviousConditionList>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.NextConditionList>();
             builder.AddElement<SequenceTimeNode>()
-.AddAttribute("concurrent", a => a.Concurrent)
-.AddAttribute("prevAc", a => a.PreviousAction, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("nextAc", a => a.NextAction, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("concurrent", a => a.Concurrent)
+                .AddAttribute("prevAc", a => a.PreviousAction, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("nextAc", a => a.NextAction, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), 1, 1),
@@ -5344,22 +5344,22 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.TimeAnimateValueList>();
             builder.AddElement<Animate>()
-.AddAttribute("by", a => a.By)
-.AddAttribute("from", a => a.From)
-.AddAttribute("to", a => a.To)
-.AddAttribute("calcmode", a => a.CalculationMode, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("valueType", a => a.ValueType, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("p14:bounceEnd", a => a.BounceEnd, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-});
+                .AddAttribute("by", a => a.By)
+                .AddAttribute("from", a => a.From)
+                .AddAttribute("to", a => a.To)
+                .AddAttribute("calcmode", a => a.CalculationMode, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("valueType", a => a.ValueType, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("p14:bounceEnd", a => a.BounceEnd, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1),
@@ -5476,14 +5476,14 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ByColor>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
             builder.AddElement<AnimateColor>()
-.AddAttribute("clrSpc", a => a.ColorSpace, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("dir", a => a.Direction, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("clrSpc", a => a.ColorSpace, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("dir", a => a.Direction, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1),
@@ -5635,12 +5635,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Progress>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
             builder.AddElement<AnimateEffect>()
-.AddAttribute("transition", a => a.Transition, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("filter", a => a.Filter)
-.AddAttribute("prLst", a => a.PropertyList);
+                .AddAttribute("transition", a => a.Transition, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("filter", a => a.Filter)
+                .AddAttribute("prLst", a => a.PropertyList);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1),
@@ -5806,22 +5806,22 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ToPosition>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.RotationCenter>();
             builder.AddElement<AnimateMotion>()
-.AddAttribute("origin", a => a.Origin, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("path", a => a.Path)
-.AddAttribute("pathEditMode", a => a.PathEditMode, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("rAng", a => a.RelativeAngle)
-.AddAttribute("ptsTypes", a => a.PointTypes)
-.AddAttribute("p14:bounceEnd", a => a.BounceEnd, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-});
+                .AddAttribute("origin", a => a.Origin, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("path", a => a.Path)
+                .AddAttribute("pathEditMode", a => a.PathEditMode, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("rAng", a => a.RelativeAngle)
+                .AddAttribute("ptsTypes", a => a.PointTypes)
+                .AddAttribute("p14:bounceEnd", a => a.BounceEnd, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1),
@@ -6000,14 +6000,14 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("p:animRot");
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
             builder.AddElement<AnimateRotation>()
-.AddAttribute("by", a => a.By)
-.AddAttribute("from", a => a.From)
-.AddAttribute("to", a => a.To)
-.AddAttribute("p14:bounceEnd", a => a.BounceEnd, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-});
+                .AddAttribute("by", a => a.By)
+                .AddAttribute("from", a => a.From)
+                .AddAttribute("to", a => a.To)
+                .AddAttribute("p14:bounceEnd", a => a.BounceEnd, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1)
@@ -6116,12 +6116,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddChild<DocumentFormat.OpenXml.Presentation.FromPosition>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ToPosition>();
             builder.AddElement<AnimateScale>()
-.AddAttribute("zoomContents", a => a.ZoomContents)
-.AddAttribute("p14:bounceEnd", a => a.BounceEnd, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-});
+                .AddAttribute("zoomContents", a => a.ZoomContents)
+                .AddAttribute("p14:bounceEnd", a => a.BounceEnd, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1),
@@ -6260,11 +6260,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("p:cmd");
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
             builder.AddElement<Command>()
-.AddAttribute("type", a => a.Type, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("cmd", a => a.CommandName);
+                .AddAttribute("type", a => a.Type, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("cmd", a => a.CommandName);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1)
@@ -6439,7 +6439,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("p:audio");
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonMediaNode>();
             builder.AddElement<Audio>()
-.AddAttribute("isNarration", a => a.IsNarration);
+                .AddAttribute("isNarration", a => a.IsNarration);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonMediaNode), 1, 1)
@@ -6525,7 +6525,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("p:video");
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonMediaNode>();
             builder.AddElement<Video>()
-.AddAttribute("fullScrn", a => a.FullScreen);
+                .AddAttribute("fullScrn", a => a.FullScreen);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonMediaNode), 1, 1)
@@ -6877,58 +6877,58 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Presentation.StartConditionList>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.EndConditionList>();
             builder.AddElement<CommonTimeNode>()
-.AddAttribute("id", a => a.Id)
-.AddAttribute("presetID", a => a.PresetId)
-.AddAttribute("presetClass", a => a.PresetClass, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("presetSubtype", a => a.PresetSubtype)
-.AddAttribute("dur", a => a.Duration)
-.AddAttribute("repeatCount", a => a.RepeatCount)
-.AddAttribute("repeatDur", a => a.RepeatDuration)
-.AddAttribute("spd", a => a.Speed)
-.AddAttribute("accel", a => a.Acceleration, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("decel", a => a.Deceleration, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("autoRev", a => a.AutoReverse)
-.AddAttribute("restart", a => a.Restart, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("fill", a => a.Fill, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("syncBehavior", a => a.SyncBehavior, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("tmFilter", a => a.TimeFilter)
-.AddAttribute("evtFilter", a => a.EventFilter)
-.AddAttribute("display", a => a.Display)
-.AddAttribute("masterRel", a => a.MasterRelation, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("bldLvl", a => a.BuildLevel)
-.AddAttribute("grpId", a => a.GroupId)
-.AddAttribute("afterEffect", a => a.AfterEffect)
-.AddAttribute("nodeType", a => a.NodeType, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("nodePh", a => a.NodePlaceholder)
-.AddAttribute("p14:presetBounceEnd", a => a.PresetBounceEnd, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-});
+                .AddAttribute("id", a => a.Id)
+                .AddAttribute("presetID", a => a.PresetId)
+                .AddAttribute("presetClass", a => a.PresetClass, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("presetSubtype", a => a.PresetSubtype)
+                .AddAttribute("dur", a => a.Duration)
+                .AddAttribute("repeatCount", a => a.RepeatCount)
+                .AddAttribute("repeatDur", a => a.RepeatDuration)
+                .AddAttribute("spd", a => a.Speed)
+                .AddAttribute("accel", a => a.Acceleration, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("decel", a => a.Deceleration, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("autoRev", a => a.AutoReverse)
+                .AddAttribute("restart", a => a.Restart, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("fill", a => a.Fill, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("syncBehavior", a => a.SyncBehavior, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("tmFilter", a => a.TimeFilter)
+                .AddAttribute("evtFilter", a => a.EventFilter)
+                .AddAttribute("display", a => a.Display)
+                .AddAttribute("masterRel", a => a.MasterRelation, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("bldLvl", a => a.BuildLevel)
+                .AddAttribute("grpId", a => a.GroupId)
+                .AddAttribute("afterEffect", a => a.AfterEffect)
+                .AddAttribute("nodeType", a => a.NodeType, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("nodePh", a => a.NodePlaceholder)
+                .AddAttribute("p14:presetBounceEnd", a => a.PresetBounceEnd, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.StartConditionList), 0, 1),
@@ -7477,10 +7477,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:boolVal");
             builder.AddElement<BooleanVariantValue>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -7518,10 +7518,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:intVal");
             builder.AddElement<IntegerVariantValue>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
- aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -7559,10 +7559,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:fltVal");
             builder.AddElement<FloatVariantValue>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
- aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -7600,10 +7600,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:strVal");
             builder.AddElement<StringVariantValue>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
- aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -7972,15 +7972,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("p:tav");
             builder.AddChild<DocumentFormat.OpenXml.Presentation.VariantValue>();
             builder.AddElement<TimeAnimateValue>()
-.AddAttribute("tm", a => a.Time, aBuilder =>
-{
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(EnumValidator.Instance);
-});
-})
-.AddAttribute("fmla", a => a.Fomula);
+                .AddAttribute("tm", a => a.Time, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(EnumValidator.Instance);
+                    });
+                })
+                .AddAttribute("fmla", a => a.Fomula);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.VariantValue), 0, 1)
@@ -8057,21 +8057,21 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeD
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:rgb");
             builder.AddElement<RgbColor>()
-.AddAttribute("r", a => a.Red, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
-})
-.AddAttribute("g", a => a.Green, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
-})
-.AddAttribute("b", a => a.Blue, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
-});
+                .AddAttribute("r", a => a.Red, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("g", a => a.Green, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("b", a => a.Blue, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -8131,20 +8131,20 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeD
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:hsl");
             builder.AddElement<HslColor>()
-.AddAttribute("h", a => a.Hue, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("s", a => a.Saturation, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
-})
-.AddAttribute("l", a => a.Lightness, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
-});
+                .AddAttribute("h", a => a.Hue, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("s", a => a.Saturation, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("l", a => a.Lightness, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -8294,26 +8294,26 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeD
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonTimeNode>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.TargetElement>();
             builder.AddElement<CommonBehavior>()
-.AddAttribute("additive", a => a.Additive, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("accumulate", a => a.Accumulate, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("xfrmType", a => a.TransformType, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("from", a => a.From)
-.AddAttribute("to", a => a.To)
-.AddAttribute("by", a => a.By)
-.AddAttribute("rctx", a => a.RuntimeContext)
-.AddAttribute("override", a => a.Override, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("additive", a => a.Additive, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("accumulate", a => a.Accumulate, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("xfrmType", a => a.TransformType, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("from", a => a.From)
+                .AddAttribute("to", a => a.To)
+                .AddAttribute("by", a => a.By)
+                .AddAttribute("rctx", a => a.RuntimeContext)
+                .AddAttribute("override", a => a.Override, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), 1, 1),
@@ -8793,13 +8793,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonTimeNode>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.TargetElement>();
             builder.AddElement<CommonMediaNode>()
-.AddAttribute("vol", a => a.Volume, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("mute", a => a.Mute)
-.AddAttribute("numSld", a => a.SlideCount)
-.AddAttribute("showWhenStopped", a => a.ShowWhenStopped);
+                .AddAttribute("vol", a => a.Volume, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("mute", a => a.Mute)
+                .AddAttribute("numSld", a => a.SlideCount)
+                .AddAttribute("showWhenStopped", a => a.ShowWhenStopped);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), 1, 1),
@@ -8972,7 +8972,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("p:tmpl");
             builder.AddChild<DocumentFormat.OpenXml.Presentation.TimeNodeList>();
             builder.AddElement<Template>()
-.AddAttribute("lvl", a => a.Level);
+                .AddAttribute("lvl", a => a.Level);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeNodeList), 1, 1)
@@ -9297,39 +9297,39 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("p:bldP");
             builder.AddChild<DocumentFormat.OpenXml.Presentation.TemplateList>();
             builder.AddElement<BuildParagraph>()
-.AddAttribute("spid", a => a.ShapeId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2010) });
-aBuilder.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2013) });
-})
-.AddAttribute("grpId", a => a.GroupId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("uiExpand", a => a.UiExpand)
-.AddAttribute("build", a => a.Build, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("bldLvl", a => a.BuildLevel)
-.AddAttribute("animBg", a => a.AnimateBackground)
-.AddAttribute("autoUpdateAnimBg", a => a.AutoAnimateBackground)
-.AddAttribute("rev", a => a.Reverse)
-.AddAttribute("advAuto", a => a.AutoAdvance, aBuilder =>
-{
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidator() { Version = (FileFormatVersions.Office2007) });
-});
-aBuilder.AddUnion(union =>
-{
-union.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-});
-});
+                .AddAttribute("spid", a => a.ShapeId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2010) });
+                    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2013) });
+                })
+                .AddAttribute("grpId", a => a.GroupId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("uiExpand", a => a.UiExpand)
+                .AddAttribute("build", a => a.Build, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("bldLvl", a => a.BuildLevel)
+                .AddAttribute("animBg", a => a.AnimateBackground)
+                .AddAttribute("autoUpdateAnimBg", a => a.AutoAnimateBackground)
+                .AddAttribute("rev", a => a.Reverse)
+                .AddAttribute("advAuto", a => a.AutoAdvance, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidator() { Version = (FileFormatVersions.Office2007) });
+                    });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                    });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TemplateList), 0, 1)
@@ -9418,22 +9418,22 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeD
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:bldDgm");
             builder.AddElement<BuildDiagram>()
-.AddAttribute("spid", a => a.ShapeId, aBuilder =>
-{
- aBuilder.AddValidator(RequiredValidator.Instance);
- aBuilder.AddValidator(new StringValidator() { Version = (FileFormatVersions.Office2007) });
- aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2010) });
- aBuilder.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2013) });
-})
-.AddAttribute("grpId", a => a.GroupId, aBuilder =>
-{
- aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("uiExpand", a => a.UiExpand)
-.AddAttribute("bld", a => a.Build, aBuilder =>
-{
- aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("spid", a => a.ShapeId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2010) });
+                    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2013) });
+                })
+                .AddAttribute("grpId", a => a.GroupId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("uiExpand", a => a.UiExpand)
+                .AddAttribute("bld", a => a.Build, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.AddConstraint(new ReferenceExistConstraint("p:grpId", ".", "p:cTn", "p:cTn", "p:grpId") { Application = ApplicationType.PowerPoint });
             builder.AddConstraint(new ReferenceExistConstraint("p:spid", ".", "p:cNvPr", "p:cNvPr", "p:id") { Application = ApplicationType.PowerPoint });
         }
@@ -9517,23 +9517,23 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeD
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:bldOleChart");
             builder.AddElement<BuildOleChart>()
-.AddAttribute("spid", a => a.ShapeId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2010) });
-aBuilder.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2013) });
-})
-.AddAttribute("grpId", a => a.GroupId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("uiExpand", a => a.UiExpand)
-.AddAttribute("bld", a => a.Build, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("animBg", a => a.AnimateBackground);
+                .AddAttribute("spid", a => a.ShapeId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2010) });
+                    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2013) });
+                })
+                .AddAttribute("grpId", a => a.GroupId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("uiExpand", a => a.UiExpand)
+                .AddAttribute("bld", a => a.Build, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("animBg", a => a.AnimateBackground);
             builder.AddConstraint(new ReferenceExistConstraint("p:spid", ".", "p:cNvPr", "p:cNvPr", "p:id") { Application = ApplicationType.PowerPoint });
             builder.AddConstraint(new ReferenceExistConstraint("p:grpId", ".", "p:cTn", "p:cTn", "p:grpId") { Application = ApplicationType.PowerPoint });
         }
@@ -9628,18 +9628,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Presentation.BuildSubElement>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.BuildAsOne>();
             builder.AddElement<BuildGraphics>()
-.AddAttribute("spid", a => a.ShapeId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2010) });
-aBuilder.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2013) });
-})
-.AddAttribute("grpId", a => a.GroupId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("uiExpand", a => a.UiExpand);
+                .AddAttribute("spid", a => a.ShapeId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2010) });
+                    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2013) });
+                })
+                .AddAttribute("grpId", a => a.GroupId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("uiExpand", a => a.UiExpand);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildAsOne), 1, 1),
@@ -9810,7 +9810,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("p:extLst");
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
             builder.AddElement<ExtensionListWithModification>()
-.AddAttribute("mod", a => a.Modify);
+                .AddAttribute("mod", a => a.Modify);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -10227,10 +10227,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:sld");
             builder.AddElement<SlideListEntry>()
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new RelationshipExistConstraint("r:id"));
         }
 
@@ -10272,10 +10272,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:custData");
             builder.AddElement<CustomerData>()
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -10316,10 +10316,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:tags");
             builder.AddElement<CustomerDataTags>()
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -10432,26 +10432,26 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("p:cmAuthor");
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CommentAuthorExtensionList>();
             builder.AddElement<CommentAuthor>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("initials", a => a.Initials, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("lastIdx", a => a.LastIndex, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("clrIdx", a => a.ColorIndex, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("initials", a => a.Initials, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("lastIdx", a => a.LastIndex, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("clrIdx", a => a.ColorIndex, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommentAuthorExtensionList), 0, 1)
@@ -10566,15 +10566,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CommentExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Text>();
             builder.AddElement<Comment>()
-.AddAttribute("authorId", a => a.AuthorId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("dt", a => a.DateTime)
-.AddAttribute("idx", a => a.Index, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("authorId", a => a.AuthorId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("dt", a => a.DateTime)
+                .AddAttribute("idx", a => a.Index, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Position), 1, 1),
@@ -10814,21 +10814,21 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Picture>();
             builder.AddElement<Control>()
-.AddAttribute("spid", a => a.ShapeId, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("name", a => a.Name)
-.AddAttribute("showAsIcon", a => a.ShowAsIcon)
-.AddAttribute("r:id", a => a.Id)
-.AddAttribute("imgW", a => a.ImageWidth, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
-})
-.AddAttribute("imgH", a => a.ImageHeight, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
-});
+                .AddAttribute("spid", a => a.ShapeId, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("showAsIcon", a => a.ShowAsIcon)
+                .AddAttribute("r:id", a => a.Id)
+                .AddAttribute("imgW", a => a.ImageWidth, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
+                })
+                .AddAttribute("imgH", a => a.ImageHeight, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1),
@@ -10942,15 +10942,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
             builder.SetSchema("p:sldId");
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
             builder.AddElement<SlideId>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinInclusive = (256L) });
-})
-.AddAttribute("r:id", a => a.RelationshipId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinInclusive = (256L) });
+                })
+                .AddAttribute("r:id", a => a.RelationshipId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
@@ -11052,14 +11052,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("p:sldMasterId");
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
             builder.AddElement<SlideMasterId>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2147483648L) });
-})
-.AddAttribute("r:id", a => a.RelationshipId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2147483648L) });
+                })
+                .AddAttribute("r:id", a => a.RelationshipId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
@@ -11150,10 +11150,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("p:notesMasterId");
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
             builder.AddElement<NotesMasterId>()
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
@@ -11243,10 +11243,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("p:handoutMasterId");
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
             builder.AddElement<HandoutMasterId>()
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
@@ -11335,13 +11335,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:font");
             builder.AddElement<Font>()
-.AddAttribute("typeface", a => a.Typeface)
-.AddAttribute("panose", a => a.Panose, aBuilder =>
-{
-   aBuilder.AddValidator(new StringValidator() { Length = (10L) });
-})
-.AddAttribute("pitchFamily", a => a.PitchFamily)
-.AddAttribute("charset", a => a.CharacterSet);
+                .AddAttribute("typeface", a => a.Typeface)
+                .AddAttribute("panose", a => a.Panose, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (10L) });
+                })
+                .AddAttribute("pitchFamily", a => a.PitchFamily)
+                .AddAttribute("charset", a => a.CharacterSet);
         }
 
         /// <inheritdoc/>
@@ -11480,10 +11480,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<EmbeddedFontDataIdType>()
-                           .AddAttribute("r:id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           });
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
     }
 
@@ -11759,14 +11759,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideList>();
             builder.AddElement<CustomShow>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideList), 1, 1),
@@ -11915,17 +11915,17 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
             builder.AddElement<NonVisualDrawingProperties>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("descr", a => a.Description)
-.AddAttribute("hidden", a => a.Hidden)
-.AddAttribute("title", a => a.Title);
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("descr", a => a.Description)
+                .AddAttribute("hidden", a => a.Hidden)
+                .AddAttribute("title", a => a.Title);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
@@ -12041,7 +12041,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapeLocks>();
             builder.AddElement<NonVisualShapeDrawingProperties>()
-.AddAttribute("txBox", a => a.TextBox);
+                .AddAttribute("txBox", a => a.TextBox);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeLocks), 0, 1),
@@ -12166,8 +12166,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomerDataList>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.PlaceholderShape>();
             builder.AddElement<ApplicationNonVisualDrawingProperties>()
-.AddAttribute("isPhoto", a => a.IsPhoto)
-.AddAttribute("userDrawn", a => a.UserDrawn);
+                .AddAttribute("isPhoto", a => a.IsPhoto)
+                .AddAttribute("userDrawn", a => a.UserDrawn);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PlaceholderShape), 0, 1),
@@ -12399,10 +12399,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddElement<ShapeProperties>()
-.AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
@@ -12961,7 +12961,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.PictureLocks>();
             builder.AddElement<NonVisualPictureDrawingProperties>()
-.AddAttribute("preferRelativeResize", a => a.PreferRelativeResize);
+                .AddAttribute("preferRelativeResize", a => a.PreferRelativeResize);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PictureLocks), 0, 1),
@@ -13183,8 +13183,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Stretch>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Tile>();
             builder.AddElement<BlipFill>()
-.AddAttribute("dpi", a => a.Dpi)
-.AddAttribute("rotWithShape", a => a.RotateWithShape);
+                .AddAttribute("dpi", a => a.Dpi)
+                .AddAttribute("rotWithShape", a => a.RotateWithShape);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Blip), 0, 1),
@@ -13510,9 +13510,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
             builder.AddElement<Transform>()
-.AddAttribute("rot", a => a.Rotation)
-.AddAttribute("flipH", a => a.HorizontalFlip)
-.AddAttribute("flipV", a => a.VerticalFlip);
+                .AddAttribute("rot", a => a.Rotation)
+                .AddAttribute("flipH", a => a.HorizontalFlip)
+                .AddAttribute("flipV", a => a.VerticalFlip);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0, 1),
@@ -14324,14 +14324,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("p:sldLayoutId");
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
             builder.AddElement<SlideLayoutId>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2147483648L) });
-})
-.AddAttribute("r:id", a => a.RelationshipId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2147483648L) });
+                })
+                .AddAttribute("r:id", a => a.RelationshipId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
@@ -14427,7 +14427,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomerDataList>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ShapeTree>();
             builder.AddElement<CommonSlideData>()
-.AddAttribute("name", a => a.Name);
+                .AddAttribute("name", a => a.Name);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Background), 0, 1),
@@ -14549,14 +14549,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:tag");
             builder.AddElement<Tag>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new UniqueAttributeValueConstraint("p:name", false, "p:tagLst") { Application = ApplicationType.PowerPoint });
         }
 
@@ -14654,12 +14654,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<NormalViewPortionType>()
-                           .AddAttribute("sz", a => a.Size, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-                           })
-                           .AddAttribute("autoAdjust", a => a.AutoAdjust);
+                .AddAttribute("sz", a => a.Size, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("autoAdjust", a => a.AutoAdjust);
         }
     }
 
@@ -14842,16 +14842,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<Point2DType>()
-                           .AddAttribute("x", a => a.X, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-                           })
-                           .AddAttribute("y", a => a.Y, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-                           });
+                .AddAttribute("x", a => a.X, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                })
+                .AddAttribute("y", a => a.Y, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                });
         }
     }
 
@@ -14919,7 +14919,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Origin>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ScaleFactor>();
             builder.AddElement<CommonViewProperties>()
-.AddAttribute("varScale", a => a.VariableScale);
+                .AddAttribute("varScale", a => a.VariableScale);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ScaleFactor), 1, 1),
@@ -15002,11 +15002,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:sld");
             builder.AddElement<OutlineViewSlideListEntry>()
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("collapse", a => a.Collapse);
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("collapse", a => a.Collapse);
             builder.AddConstraint(new RelationshipExistConstraint("r:id"));
         }
 
@@ -15116,11 +15116,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:guide");
             builder.AddElement<Guide>()
-.AddAttribute("orient", a => a.Orientation, aBuilder =>
-{
-  aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("pos", a => a.Position);
+                .AddAttribute("orient", a => a.Orientation, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("pos", a => a.Position);
         }
 
         /// <inheritdoc/>
@@ -15273,9 +15273,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonViewProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.GuideList>();
             builder.AddElement<CommonSlideViewProperties>()
-.AddAttribute("snapToGrid", a => a.SnapToGrid)
-.AddAttribute("snapToObjects", a => a.SnapToObjects)
-.AddAttribute("showGuides", a => a.ShowGuides);
+                .AddAttribute("snapToGrid", a => a.SnapToGrid)
+                .AddAttribute("snapToObjects", a => a.SnapToObjects)
+                .AddAttribute("showGuides", a => a.ShowGuides);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonViewProperties), 1, 1),
@@ -15423,17 +15423,17 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Presentation.RestoredLeft>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.RestoredTop>();
             builder.AddElement<NormalViewProperties>()
-.AddAttribute("showOutlineIcons", a => a.ShowOutlineIcons)
-.AddAttribute("snapVertSplitter", a => a.SnapVerticalSplitter)
-.AddAttribute("vertBarState", a => a.VerticalBarState, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("horzBarState", a => a.HorizontalBarState, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("preferSingleView", a => a.PreferSingleView);
+                .AddAttribute("showOutlineIcons", a => a.ShowOutlineIcons)
+                .AddAttribute("snapVertSplitter", a => a.SnapVerticalSplitter)
+                .AddAttribute("vertBarState", a => a.VerticalBarState, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("horzBarState", a => a.HorizontalBarState, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("preferSingleView", a => a.PreferSingleView);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RestoredLeft), 1, 1),
@@ -15832,7 +15832,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonViewProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
             builder.AddElement<SorterViewProperties>()
-.AddAttribute("showFormatting", a => a.ShowFormatting);
+                .AddAttribute("showFormatting", a => a.ShowFormatting);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonViewProperties), 1, 1),
@@ -16049,16 +16049,16 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<PositiveSize2DType>()
-                           .AddAttribute("cx", a => a.Cx, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
-                           })
-                           .AddAttribute("cy", a => a.Cy, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
-                           });
+                .AddAttribute("cx", a => a.Cx, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+                })
+                .AddAttribute("cy", a => a.Cy, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+                });
         }
     }
 
@@ -16126,11 +16126,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.LaserTraceList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ShowEventRecordList>();
             builder.AddElement<SlideExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.LaserTraceList), 1, 1, version: FileFormatVersions.Office2010),
@@ -16205,11 +16205,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("p:ext");
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.CreationId>();
             builder.AddElement<CommonSlideDataExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.CreationId), 1, 1, version: FileFormatVersions.Office2010),
@@ -16287,11 +16287,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.BrowseMode>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ShowMediaControls>();
             builder.AddElement<ShowPropertiesExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.BrowseMode), 1, 1, version: FileFormatVersions.Office2010),
@@ -16504,10 +16504,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("p:embed");
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
             builder.AddElement<OleObjectEmbed>()
-.AddAttribute("followColorScheme", a => a.FollowColorScheme, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("followColorScheme", a => a.FollowColorScheme, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
@@ -16593,7 +16593,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("p:link");
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
             builder.AddElement<OleObjectLink>()
-.AddAttribute("updateAutomatic", a => a.AutoUpdate);
+                .AddAttribute("updateAutomatic", a => a.AutoUpdate);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
@@ -16799,21 +16799,21 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ShredTransition>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.PresetTransition>();
             builder.AddElement<Transition>()
-.AddAttribute("spd", a => a.Speed, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("p14:dur", a => a.Duration, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("advClick", a => a.AdvanceOnClick)
-.AddAttribute("advTm", a => a.AdvanceAfterTime, aBuilder =>
-{
-aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator(new StringValidator() { Version = (FileFormatVersions.Office2010) });
-aBuilder.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersions.Office2013) });
-});
+                .AddAttribute("spd", a => a.Speed, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("p14:dur", a => a.Duration, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("advClick", a => a.AdvanceOnClick)
+                .AddAttribute("advTm", a => a.AdvanceAfterTime, aBuilder =>
+                {
+                    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddValidator(new StringValidator() { Version = (FileFormatVersions.Office2010) });
+                    aBuilder.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersions.Office2013) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
@@ -17099,10 +17099,10 @@ aBuilder.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersio
             builder.AddChild<DocumentFormat.OpenXml.Presentation.BackgroundStyleReference>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.BackgroundProperties>();
             builder.AddElement<Background>()
-.AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -17765,10 +17765,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddElement<GroupShapeProperties>()
-.AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TransformGroup), 0, 1),
@@ -17884,7 +17884,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualShapeProperties>();
             builder.AddElement<Shape>()
-.AddAttribute("useBgFill", a => a.UseBackgroundFill);
+                .AddAttribute("useBgFill", a => a.UseBackgroundFill);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualShapeProperties), 1, 1),
@@ -18336,13 +18336,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Presentation.SubShape>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.TextElement>();
             builder.AddElement<ShapeTarget>()
-.AddAttribute("spid", a => a.ShapeId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2010) });
-aBuilder.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2013) });
-});
+                .AddAttribute("spid", a => a.ShapeId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2010) });
+                    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2013) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BackgroundAnimation), 1, 1),
@@ -18501,11 +18501,11 @@ aBuilder.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (Fil
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<TimeListSubShapeIdType>()
-                           .AddAttribute("spid", a => a.ShapeId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                           });
+                .AddAttribute("spid", a => a.ShapeId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
     }
 
@@ -18571,11 +18571,11 @@ aBuilder.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (Fil
             builder.SetSchema("p:ext");
             builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.PresenceInfo>();
             builder.AddElement<CommentAuthorExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.PresenceInfo), 1, 1, version: FileFormatVersions.Office2013),
@@ -18649,11 +18649,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("p:ext");
             builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.ThreadingInfo>();
             builder.AddElement<CommentExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ThreadingInfo), 1, 1, version: FileFormatVersions.Office2013),
@@ -18727,11 +18727,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("p:ext");
             builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList>();
             builder.AddElement<SlideLayoutExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList), 1, 1, version: FileFormatVersions.Office2013),
@@ -18805,11 +18805,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("p:ext");
             builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList>();
             builder.AddElement<SlideMasterExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList), 1, 1, version: FileFormatVersions.Office2013),
@@ -18883,11 +18883,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("p:ext");
             builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList>();
             builder.AddElement<HandoutMasterExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList), 1, 1, version: FileFormatVersions.Office2013),
@@ -18961,11 +18961,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("p:ext");
             builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList>();
             builder.AddElement<NotesMasterExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList), 1, 1, version: FileFormatVersions.Office2013),
@@ -19083,20 +19083,20 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("p:ph");
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
             builder.AddElement<PlaceholderShape>()
-.AddAttribute("type", a => a.Type, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("orient", a => a.Orientation, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("sz", a => a.Size, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("idx", a => a.Index)
-.AddAttribute("hasCustomPrompt", a => a.HasCustomPrompt);
+                .AddAttribute("type", a => a.Type, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("orient", a => a.Orientation, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("sz", a => a.Size, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("idx", a => a.Index)
+                .AddAttribute("hasCustomPrompt", a => a.HasCustomPrompt);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
@@ -19244,11 +19244,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.Media>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ModificationId>();
             builder.AddElement<ApplicationNonVisualDrawingPropertiesExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.Media), 1, 1, version: FileFormatVersions.Office2010),
@@ -19336,11 +19336,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Presentation.TimePercentage>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.TimeAbsolute>();
             builder.AddElement<Iterate>()
-.AddAttribute("type", a => a.Type, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("backwards", a => a.Backwards);
+                .AddAttribute("type", a => a.Type, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("backwards", a => a.Backwards);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeAbsolute), 1, 1),
@@ -19819,14 +19819,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<TimeListType>()
-                           .AddAttribute("x", a => a.X, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           })
-                           .AddAttribute("y", a => a.Y, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           });
+                .AddAttribute("x", a => a.X, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("y", a => a.Y, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
     }
 
@@ -20269,20 +20269,20 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:sldSz");
             builder.AddElement<SlideSize>()
-.AddAttribute("cx", a => a.Cx, aBuilder =>
-{
-  aBuilder.AddValidator(RequiredValidator.Instance);
-  aBuilder.AddValidator(new NumberValidator() { MinInclusive = (914400L), MaxInclusive = (51206400L) });
-})
-.AddAttribute("cy", a => a.Cy, aBuilder =>
-{
-  aBuilder.AddValidator(RequiredValidator.Instance);
-  aBuilder.AddValidator(new NumberValidator() { MinInclusive = (914400L), MaxInclusive = (51206400L) });
-})
-.AddAttribute("type", a => a.Type, aBuilder =>
-{
-  aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("cx", a => a.Cx, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (914400L), MaxInclusive = (51206400L) });
+                })
+                .AddAttribute("cy", a => a.Cy, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (914400L), MaxInclusive = (51206400L) });
+                })
+                .AddAttribute("type", a => a.Type, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
 
         /// <inheritdoc/>
@@ -20504,16 +20504,16 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("p:photoAlbum");
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
             builder.AddElement<PhotoAlbum>()
-.AddAttribute("bw", a => a.BlackWhite)
-.AddAttribute("showCaptions", a => a.ShowCaptions)
-.AddAttribute("layout", a => a.Layout, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("frame", a => a.Frame, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("bw", a => a.BlackWhite)
+                .AddAttribute("showCaptions", a => a.ShowCaptions)
+                .AddAttribute("layout", a => a.Layout, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("frame", a => a.Frame, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
@@ -20590,15 +20590,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:kinsoku");
             builder.AddElement<Kinsoku>()
-.AddAttribute("lang", a => a.Language)
-.AddAttribute("invalStChars", a => a.InvalidStartChars, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("invalEndChars", a => a.InvalidEndChars, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("lang", a => a.Language)
+                .AddAttribute("invalStChars", a => a.InvalidStartChars, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("invalEndChars", a => a.InvalidEndChars, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -20801,62 +20801,62 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:modifyVerifier");
             builder.AddElement<ModificationVerifier>()
-.AddAttribute("cryptProviderType", a => a.CryptographicProviderType, aBuilder =>
-{
-aBuilder.AddValidator(new RequiredValidator() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
-})
-.AddAttribute("cryptAlgorithmClass", a => a.CryptographicAlgorithmClass, aBuilder =>
-{
-aBuilder.AddValidator(new RequiredValidator() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
-})
-.AddAttribute("cryptAlgorithmType", a => a.CryptographicAlgorithmType, aBuilder =>
-{
-aBuilder.AddValidator(new RequiredValidator() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
-})
-.AddAttribute("cryptAlgorithmSid", a => a.CryptographicAlgorithmSid, aBuilder =>
-{
-aBuilder.AddValidator(new RequiredValidator() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
-})
-.AddAttribute("spinCount", a => a.SpinCount, aBuilder =>
-{
-aBuilder.AddValidator(new RequiredValidator() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
-})
-.AddAttribute("saltData", a => a.SaltData, aBuilder =>
-{
-aBuilder.AddValidator(new RequiredValidator() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
-})
-.AddAttribute("hashData", a => a.HashData, aBuilder =>
-{
-aBuilder.AddValidator(new RequiredValidator() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
-})
-.AddAttribute("cryptProvider", a => a.CryptographicProvider)
-.AddAttribute("algIdExt", a => a.ExtendedCryptographicAlgorithm)
-.AddAttribute("algIdExtSource", a => a.ExtendedCryptographicAlgorithmSource)
-.AddAttribute("cryptProviderTypeExt", a => a.CryptographicProviderTypeExtensibility)
-.AddAttribute("cryptProviderTypeExtSource", a => a.CryptographicProviderTypeExtensibilitySource)
-.AddAttribute("algorithmName", a => a.AlgorithmName, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("hashValue", a => a.HashValue, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("saltValue", a => a.SaltValue, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("spinValue", a => a.SpinValue, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-});
+                .AddAttribute("cryptProviderType", a => a.CryptographicProviderType, aBuilder =>
+                {
+                    aBuilder.AddValidator(new RequiredValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+                })
+                .AddAttribute("cryptAlgorithmClass", a => a.CryptographicAlgorithmClass, aBuilder =>
+                {
+                    aBuilder.AddValidator(new RequiredValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+                })
+                .AddAttribute("cryptAlgorithmType", a => a.CryptographicAlgorithmType, aBuilder =>
+                {
+                    aBuilder.AddValidator(new RequiredValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+                })
+                .AddAttribute("cryptAlgorithmSid", a => a.CryptographicAlgorithmSid, aBuilder =>
+                {
+                    aBuilder.AddValidator(new RequiredValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+                })
+                .AddAttribute("spinCount", a => a.SpinCount, aBuilder =>
+                {
+                    aBuilder.AddValidator(new RequiredValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+                })
+                .AddAttribute("saltData", a => a.SaltData, aBuilder =>
+                {
+                    aBuilder.AddValidator(new RequiredValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+                })
+                .AddAttribute("hashData", a => a.HashData, aBuilder =>
+                {
+                    aBuilder.AddValidator(new RequiredValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+                })
+                .AddAttribute("cryptProvider", a => a.CryptographicProvider)
+                .AddAttribute("algIdExt", a => a.ExtendedCryptographicAlgorithm)
+                .AddAttribute("algIdExtSource", a => a.ExtendedCryptographicAlgorithmSource)
+                .AddAttribute("cryptProviderTypeExt", a => a.CryptographicProviderTypeExtensibility)
+                .AddAttribute("cryptProviderTypeExtSource", a => a.CryptographicProviderTypeExtensibilitySource)
+                .AddAttribute("algorithmName", a => a.AlgorithmName, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("hashValue", a => a.HashValue, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("saltValue", a => a.SaltValue, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("spinValue", a => a.SpinValue, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                });
             builder.AddConstraint(new AttributeValueSetConstraint("p:cryptAlgorithmSid", true, new string[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14" }) { Application = ApplicationType.Word | ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueSetConstraint("p:cryptAlgorithmSid", true, new string[] { "1", "2", "3", "4", "12", "13", "14" }) { Application = ApplicationType.PowerPoint });
             builder.AddConstraint(new AttributeValueSetConstraint("p:cryptProviderTypeExtSource", true, new string[] { "wincrypt", "" }) { Application = ApplicationType.PowerPoint });
@@ -20995,11 +20995,11 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.NotesGuideList>();
             builder.AddElement<PresentationExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionProperties), 1, 1, version: FileFormatVersions.Office2010),
@@ -21107,15 +21107,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideRange>();
             builder.AddElement<HtmlPublishProperties>()
-.AddAttribute("showSpeakerNotes", a => a.ShowSpeakerNotes)
-.AddAttribute("pubBrowser", a => a.TargetBrowser, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("showSpeakerNotes", a => a.ShowSpeakerNotes)
+                .AddAttribute("pubBrowser", a => a.TargetBrowser, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -21285,21 +21285,21 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("p:webPr");
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
             builder.AddElement<WebProperties>()
-.AddAttribute("showAnimation", a => a.ShowAnimation)
-.AddAttribute("resizeGraphics", a => a.ResizeGraphics)
-.AddAttribute("allowPng", a => a.AllowPng)
-.AddAttribute("relyOnVml", a => a.RelyOnVml)
-.AddAttribute("organizeInFolders", a => a.OrganizeInFolders)
-.AddAttribute("useLongFilenames", a => a.UseLongFilenames)
-.AddAttribute("imgSz", a => a.ImageSize, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("encoding", a => a.Encoding)
-.AddAttribute("clr", a => a.Color, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("showAnimation", a => a.ShowAnimation)
+                .AddAttribute("resizeGraphics", a => a.ResizeGraphics)
+                .AddAttribute("allowPng", a => a.AllowPng)
+                .AddAttribute("relyOnVml", a => a.RelyOnVml)
+                .AddAttribute("organizeInFolders", a => a.OrganizeInFolders)
+                .AddAttribute("useLongFilenames", a => a.UseLongFilenames)
+                .AddAttribute("imgSz", a => a.ImageSize, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("encoding", a => a.Encoding)
+                .AddAttribute("clr", a => a.Color, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
@@ -21429,17 +21429,17 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("p:prnPr");
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
             builder.AddElement<PrintingProperties>()
-.AddAttribute("prnWhat", a => a.PrintWhat, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("clrMode", a => a.ColorMode, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("hiddenSlides", a => a.HiddenSlides)
-.AddAttribute("scaleToFitPaper", a => a.ScaleToFitPaper)
-.AddAttribute("frameSlides", a => a.FrameSlides);
+                .AddAttribute("prnWhat", a => a.PrintWhat, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("clrMode", a => a.ColorMode, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("hiddenSlides", a => a.HiddenSlides)
+                .AddAttribute("scaleToFitPaper", a => a.ScaleToFitPaper)
+                .AddAttribute("frameSlides", a => a.FrameSlides);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
@@ -21572,10 +21572,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Presentation.KioskSlideMode>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ShowPropertiesExtensionList>();
             builder.AddElement<ShowProperties>()
-.AddAttribute("loop", a => a.Loop)
-.AddAttribute("showNarration", a => a.ShowNarration)
-.AddAttribute("showAnimation", a => a.ShowAnimation)
-.AddAttribute("useTimings", a => a.UseTimings);
+                .AddAttribute("loop", a => a.Loop)
+                .AddAttribute("showNarration", a => a.ShowNarration)
+                .AddAttribute("showAnimation", a => a.ShowAnimation)
+                .AddAttribute("useTimings", a => a.UseTimings);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -21826,11 +21826,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.DiscardImageEditData>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.ChartTrackingReferenceBased>();
             builder.AddElement<PresentationPropertiesExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.DiscardImageEditData), 1, 1, version: FileFormatVersions.Office2010),
@@ -21940,10 +21940,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("p:hf");
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
             builder.AddElement<HeaderFooter>()
-.AddAttribute("sldNum", a => a.SlideNumber)
-.AddAttribute("hdr", a => a.Header)
-.AddAttribute("ftr", a => a.Footer)
-.AddAttribute("dt", a => a.DateTime);
+                .AddAttribute("sldNum", a => a.SlideNumber)
+                .AddAttribute("hdr", a => a.Header)
+                .AddAttribute("ftr", a => a.Footer)
+                .AddAttribute("dt", a => a.DateTime);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
@@ -22430,12 +22430,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:oleChartEl");
             builder.AddElement<OleChartElement>()
-.AddAttribute("type", a => a.Type, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("lvl", a => a.Level);
+                .AddAttribute("type", a => a.Type, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("lvl", a => a.Level);
         }
 
         /// <inheritdoc/>
@@ -22749,10 +22749,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<OrientationTransitionType>()
-                           .AddAttribute("dir", a => a.Direction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                           });
+                .AddAttribute("dir", a => a.Direction, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
     }
 
@@ -22835,14 +22835,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<EightDirectionTransitionType>()
-                           .AddAttribute("dir", a => a.Direction, aBuilder =>
-                           {
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>>(EnumValidator.Instance);
-                                   union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionCornerDirectionValues>>(EnumValidator.Instance);
-                               });
-                           });
+                .AddAttribute("dir", a => a.Direction, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionCornerDirectionValues>>(EnumValidator.Instance);
+                    });
+                });
         }
     }
 
@@ -22925,7 +22925,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<OptionalBlackTransitionType>()
-                           .AddAttribute("thruBlk", a => a.ThroughBlack);
+                .AddAttribute("thruBlk", a => a.ThroughBlack);
         }
     }
 
@@ -23008,10 +23008,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<SideDirectionTransitionType>()
-                           .AddAttribute("dir", a => a.Direction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                           });
+                .AddAttribute("dir", a => a.Direction, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
     }
 
@@ -23057,14 +23057,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:split");
             builder.AddElement<SplitTransition>()
-.AddAttribute("orient", a => a.Orientation, aBuilder =>
-{
-  aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("dir", a => a.Direction, aBuilder =>
-{
-  aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("orient", a => a.Orientation, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("dir", a => a.Direction, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
 
         /// <inheritdoc/>
@@ -23102,10 +23102,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:strips");
             builder.AddElement<StripsTransition>()
-.AddAttribute("dir", a => a.Direction, aBuilder =>
-{
- aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("dir", a => a.Direction, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
 
         /// <inheritdoc/>
@@ -23143,7 +23143,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:wheel");
             builder.AddElement<WheelTransition>()
-.AddAttribute("spokes", a => a.Spokes);
+                .AddAttribute("spokes", a => a.Spokes);
         }
 
         /// <inheritdoc/>
@@ -23181,10 +23181,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("p:zoom");
             builder.AddElement<ZoomTransition>()
-.AddAttribute("dir", a => a.Direction, aBuilder =>
-{
-   aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("dir", a => a.Direction, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
 
         /// <inheritdoc/>

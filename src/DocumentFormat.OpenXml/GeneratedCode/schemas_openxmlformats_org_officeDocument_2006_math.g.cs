@@ -51,10 +51,10 @@ namespace DocumentFormat.OpenXml.Math
             base.ConfigureMetadata(builder);
             builder.SetSchema("m:scr");
             builder.AddElement<Script>()
-.AddAttribute("m:val", a => a.Val, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("m:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -95,10 +95,10 @@ namespace DocumentFormat.OpenXml.Math
             base.ConfigureMetadata(builder);
             builder.SetSchema("m:sty");
             builder.AddElement<Style>()
-.AddAttribute("m:val", a => a.Val, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("m:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -3784,7 +3784,7 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<OnOffType>()
-                           .AddAttribute("m:val", a => a.Val);
+                .AddAttribute("m:val", a => a.Val);
         }
     }
 
@@ -3836,14 +3836,14 @@ namespace DocumentFormat.OpenXml.Math
             base.ConfigureMetadata(builder);
             builder.SetSchema("m:brk");
             builder.AddElement<Break>()
-.AddAttribute("m:alnAt", a => a.AlignAt, aBuilder =>
-{
-    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (255L) });
-})
-.AddAttribute("m:val", a => a.Val, aBuilder =>
-{
-    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (255L) });
-});
+                .AddAttribute("m:alnAt", a => a.AlignAt, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (255L) });
+                })
+                .AddAttribute("m:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (255L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -3997,7 +3997,7 @@ namespace DocumentFormat.OpenXml.Math
             base.ConfigureMetadata(builder);
             builder.SetSchema("m:t");
             builder.AddElement<Text>()
-  .AddAttribute("xml:space", a => a.Space);
+                .AddAttribute("xml:space", a => a.Space);
         }
 
         /// <inheritdoc/>
@@ -4136,11 +4136,11 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<CharType>()
-                           .AddAttribute("m:val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddValidator(new StringValidator() { MaxLength = (1L) });
-                           });
+                .AddAttribute("m:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (1L) });
+                });
         }
     }
 
@@ -6901,10 +6901,10 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<TopBottomType>()
-                           .AddAttribute("m:val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           });
+                .AddAttribute("m:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
     }
 
@@ -7385,10 +7385,10 @@ namespace DocumentFormat.OpenXml.Math
             base.ConfigureMetadata(builder);
             builder.SetSchema("m:shp");
             builder.AddElement<Shape>()
-.AddAttribute("m:val", a => a.Val, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("m:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -7582,10 +7582,10 @@ namespace DocumentFormat.OpenXml.Math
             base.ConfigureMetadata(builder);
             builder.SetSchema("m:baseJc");
             builder.AddElement<BaseJustification>()
-.AddAttribute("m:val", a => a.Val, aBuilder =>
-{
- aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("m:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -7674,11 +7674,11 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<SpacingRuleType>()
-                           .AddAttribute("m:val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (4L) });
-                           });
+                .AddAttribute("m:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (4L) });
+                });
         }
     }
 
@@ -7764,10 +7764,10 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<UnsignedShortType>()
-                           .AddAttribute("m:val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           });
+                .AddAttribute("m:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
     }
 
@@ -7958,10 +7958,10 @@ namespace DocumentFormat.OpenXml.Math
             base.ConfigureMetadata(builder);
             builder.SetSchema("m:type");
             builder.AddElement<FractionType>()
-.AddAttribute("m:val", a => a.Val, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("m:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -8431,11 +8431,11 @@ namespace DocumentFormat.OpenXml.Math
             base.ConfigureMetadata(builder);
             builder.SetSchema("m:count");
             builder.AddElement<MatrixColumnCount>()
-.AddAttribute("m:val", a => a.Val, aBuilder =>
-{
-  aBuilder.AddValidator(RequiredValidator.Instance);
-  aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (64L) });
-});
+                .AddAttribute("m:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (64L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -8476,10 +8476,10 @@ namespace DocumentFormat.OpenXml.Math
             base.ConfigureMetadata(builder);
             builder.SetSchema("m:mcJc");
             builder.AddElement<MatrixColumnJustification>()
-.AddAttribute("m:val", a => a.Val, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("m:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -8880,11 +8880,11 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<TwipsMeasureType>()
-                           .AddAttribute("m:val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
-                           });
+                .AddAttribute("m:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
+                });
         }
     }
 
@@ -9316,10 +9316,10 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<LimitLocationType>()
-                           .AddAttribute("m:val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           });
+                .AddAttribute("m:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
     }
 
@@ -10060,11 +10060,11 @@ namespace DocumentFormat.OpenXml.Math
             base.ConfigureMetadata(builder);
             builder.SetSchema("m:argSz");
             builder.AddElement<ArgumentSize>()
-.AddAttribute("m:val", a => a.Val, aBuilder =>
-{
-  aBuilder.AddValidator(RequiredValidator.Instance);
-  aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-2L), MaxInclusive = (2L) });
-});
+                .AddAttribute("m:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-2L), MaxInclusive = (2L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -10226,10 +10226,10 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<OfficeMathJustificationType>()
-                           .AddAttribute("m:val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           });
+                .AddAttribute("m:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
     }
 
@@ -10267,11 +10267,11 @@ namespace DocumentFormat.OpenXml.Math
             base.ConfigureMetadata(builder);
             builder.SetSchema("m:mathFont");
             builder.AddElement<MathFont>()
-.AddAttribute("m:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
-});
+                .AddAttribute("m:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -10312,7 +10312,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("m:brkBin");
             builder.AddElement<BreakBinary>()
-.AddAttribute("m:val", a => a.Val);
+                .AddAttribute("m:val", a => a.Val);
         }
 
         /// <inheritdoc/>
@@ -10353,11 +10353,11 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("m:brkBinSub");
             builder.AddElement<BreakBinarySubtraction>()
-.AddAttribute("m:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(new RequiredValidator() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
-});
+                .AddAttribute("m:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(new RequiredValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+                });
         }
 
         /// <inheritdoc/>

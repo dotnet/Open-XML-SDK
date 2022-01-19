@@ -163,18 +163,18 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.ExcelAc.CalculatedTimeColumn>();
             builder.AddElement<ModelTimeGrouping>()
-.AddAttribute("tableName", a => a.TableName, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("columnName", a => a.ColumnName, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("columnId", a => a.ColumnId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("tableName", a => a.TableName, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("columnName", a => a.ColumnName, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("columnId", a => a.ColumnId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.ExcelAc.CalculatedTimeColumn), 1, 0, version: FileFormatVersions.Office2016)
@@ -250,22 +250,22 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x16:calculatedTimeColumn");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<CalculatedTimeColumn>()
-.AddAttribute("columnName", a => a.ColumnName, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("columnId", a => a.ColumnId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("contentType", a => a.ContentType, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("isSelected", a => a.IsSelected, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("columnName", a => a.ColumnName, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("columnId", a => a.ColumnId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("contentType", a => a.ContentType, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("isSelected", a => a.IsSelected, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>

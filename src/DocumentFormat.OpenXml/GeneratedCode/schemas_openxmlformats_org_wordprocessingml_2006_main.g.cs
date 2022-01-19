@@ -344,21 +344,21 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<TrackChangeType>()
-                           .AddAttribute("w:author", a => a.Author, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
-                           })
-                           .AddAttribute("w:date", a => a.Date)
-                           .AddAttribute("w:id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
-                                   union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
-                               });
-                           });
+                .AddAttribute("w:author", a => a.Author, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
+                })
+                .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
+                    });
+                });
         }
     }
 
@@ -452,23 +452,23 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:cellMerge");
             builder.AddElement<CellMerge>()
-.AddAttribute("w:vMerge", a => a.VerticalMerge)
-.AddAttribute("w:vMergeOrig", a => a.VerticalMergeOriginal)
-.AddAttribute("w:author", a => a.Author, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
-})
-.AddAttribute("w:date", a => a.Date)
-.AddAttribute("w:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddUnion(union =>
-{
-  union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
-  union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
-});
-});
+                .AddAttribute("w:vMerge", a => a.VerticalMerge)
+                .AddAttribute("w:vMergeOrig", a => a.VerticalMergeOriginal)
+                .AddAttribute("w:author", a => a.Author, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
+                })
+                .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
+                    });
+                });
             builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
@@ -566,23 +566,23 @@ aBuilder.AddUnion(union =>
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:bookmarkStart");
             builder.AddElement<BookmarkStart>()
-.AddAttribute("w:name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { MaxLength = (40L) });
-})
-.AddAttribute("w:colFirst", a => a.ColumnFirst)
-.AddAttribute("w:colLast", a => a.ColumnLast)
-.AddAttribute("w:displacedByCustomXml", a => a.DisplacedByCustomXml)
-.AddAttribute("w:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
-union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
-});
-});
+                .AddAttribute("w:name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (40L) });
+                })
+                .AddAttribute("w:colFirst", a => a.ColumnFirst)
+                .AddAttribute("w:colLast", a => a.ColumnLast)
+                .AddAttribute("w:displacedByCustomXml", a => a.DisplacedByCustomXml)
+                .AddAttribute("w:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
+                    });
+                });
             builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
@@ -768,16 +768,16 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<MarkupRangeType>()
-                           .AddAttribute("w:displacedByCustomXml", a => a.DisplacedByCustomXml)
-                           .AddAttribute("w:id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
-                                   union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
-                               });
-                           });
+                .AddAttribute("w:displacedByCustomXml", a => a.DisplacedByCustomXml)
+                .AddAttribute("w:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
+                    });
+                });
         }
     }
 
@@ -949,31 +949,31 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<MoveBookmarkType>()
-                           .AddAttribute("w:author", a => a.Author, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           })
-                           .AddAttribute("w:date", a => a.Date, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           })
-                           .AddAttribute("w:name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddValidator(new StringValidator() { MaxLength = (40L) });
-                           })
-                           .AddAttribute("w:colFirst", a => a.ColumnFirst)
-                           .AddAttribute("w:colLast", a => a.ColumnLast)
-                           .AddAttribute("w:displacedByCustomXml", a => a.DisplacedByCustomXml)
-                           .AddAttribute("w:id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
-                                   union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
-                               });
-                           });
+                .AddAttribute("w:author", a => a.Author, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("w:date", a => a.Date, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("w:name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (40L) });
+                })
+                .AddAttribute("w:colFirst", a => a.ColumnFirst)
+                .AddAttribute("w:colLast", a => a.ColumnLast)
+                .AddAttribute("w:displacedByCustomXml", a => a.DisplacedByCustomXml)
+                .AddAttribute("w:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
+                    });
+                });
         }
     }
 
@@ -1139,15 +1139,15 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<MarkupType>()
-                           .AddAttribute("w:id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
-                                   union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
-                               });
-                           });
+                .AddAttribute("w:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
+                    });
+                });
         }
     }
 
@@ -1840,10 +1840,10 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<StringType>()
-                           .AddAttribute("w:val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           });
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
     }
 
@@ -6529,7 +6529,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<OnOffType>()
-                           .AddAttribute("w:val", a => a.Val);
+                .AddAttribute("w:val", a => a.Val);
         }
     }
 
@@ -6763,67 +6763,67 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:framePr");
             builder.AddElement<FrameProperties>()
-.AddAttribute("w:dropCap", a => a.DropCap)
-.AddAttribute("w:lines", a => a.Lines, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (10L) });
-})
-.AddAttribute("w:w", a => a.Width, aBuilder =>
-{
-aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddUnion(union =>
-{
-    union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-    union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
-});
-})
-.AddAttribute("w:h", a => a.Height, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
-})
-.AddAttribute("w:vSpace", a => a.VerticalSpace, aBuilder =>
-{
-aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddUnion(union =>
-{
-    union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-    union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
-});
-})
-.AddAttribute("w:hSpace", a => a.HorizontalSpace, aBuilder =>
-{
-aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddUnion(union =>
-{
-    union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-    union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
-});
-})
-.AddAttribute("w:wrap", a => a.Wrap)
-.AddAttribute("w:hAnchor", a => a.HorizontalPosition)
-.AddAttribute("w:vAnchor", a => a.VerticalPosition)
-.AddAttribute("w:x", a => a.X, aBuilder =>
-{
-aBuilder.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddUnion(union =>
-{
-    union.AddValidator<IntegerValue>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-    union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
-});
-})
-.AddAttribute("w:xAlign", a => a.XAlign)
-.AddAttribute("w:y", a => a.Y, aBuilder =>
-{
-aBuilder.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddUnion(union =>
-{
-    union.AddValidator<IntegerValue>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-    union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
-});
-})
-.AddAttribute("w:yAlign", a => a.YAlign)
-.AddAttribute("w:hRule", a => a.HeightType)
-.AddAttribute("w:anchorLock", a => a.AnchorLock);
+                .AddAttribute("w:dropCap", a => a.DropCap)
+                .AddAttribute("w:lines", a => a.Lines, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (10L) });
+                })
+                .AddAttribute("w:w", a => a.Width, aBuilder =>
+                {
+                    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                        union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
+                    });
+                })
+                .AddAttribute("w:h", a => a.Height, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
+                })
+                .AddAttribute("w:vSpace", a => a.VerticalSpace, aBuilder =>
+                {
+                    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                        union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
+                    });
+                })
+                .AddAttribute("w:hSpace", a => a.HorizontalSpace, aBuilder =>
+                {
+                    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                        union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
+                    });
+                })
+                .AddAttribute("w:wrap", a => a.Wrap)
+                .AddAttribute("w:hAnchor", a => a.HorizontalPosition)
+                .AddAttribute("w:vAnchor", a => a.VerticalPosition)
+                .AddAttribute("w:x", a => a.X, aBuilder =>
+                {
+                    aBuilder.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<IntegerValue>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                        union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
+                    });
+                })
+                .AddAttribute("w:xAlign", a => a.XAlign)
+                .AddAttribute("w:y", a => a.Y, aBuilder =>
+                {
+                    aBuilder.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<IntegerValue>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                        union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
+                    });
+                })
+                .AddAttribute("w:yAlign", a => a.YAlign)
+                .AddAttribute("w:hRule", a => a.HeightType)
+                .AddAttribute("w:anchorLock", a => a.AnchorLock);
         }
 
         /// <inheritdoc/>
@@ -7250,44 +7250,44 @@ aBuilder.AddUnion(union =>
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:shd");
             builder.AddElement<Shading>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("w:color", a => a.Color, aBuilder =>
-{
-    aBuilder.AddUnion(union =>
-    {
-        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(EnumValidator.Instance);
-        union.AddValidator<HexBinaryValue>(new StringValidator() { Length = (3L) });
-    });
-})
-.AddAttribute("w:themeColor", a => a.ThemeColor)
-.AddAttribute("w:themeTint", a => a.ThemeTint, aBuilder =>
-{
-    aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
-})
-.AddAttribute("w:themeShade", a => a.ThemeShade, aBuilder =>
-{
-    aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
-})
-.AddAttribute("w:fill", a => a.Fill, aBuilder =>
-{
-    aBuilder.AddUnion(union =>
-    {
-        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(EnumValidator.Instance);
-        union.AddValidator<HexBinaryValue>(new StringValidator() { Length = (3L) });
-    });
-})
-.AddAttribute("w:themeFill", a => a.ThemeFill)
-.AddAttribute("w:themeFillTint", a => a.ThemeFillTint, aBuilder =>
-{
-    aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
-})
-.AddAttribute("w:themeFillShade", a => a.ThemeFillShade, aBuilder =>
-{
-    aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("w:color", a => a.Color, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(EnumValidator.Instance);
+                        union.AddValidator<HexBinaryValue>(new StringValidator() { Length = (3L) });
+                    });
+                })
+                .AddAttribute("w:themeColor", a => a.ThemeColor)
+                .AddAttribute("w:themeTint", a => a.ThemeTint, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+                })
+                .AddAttribute("w:themeShade", a => a.ThemeShade, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+                })
+                .AddAttribute("w:fill", a => a.Fill, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(EnumValidator.Instance);
+                        union.AddValidator<HexBinaryValue>(new StringValidator() { Length = (3L) });
+                    });
+                })
+                .AddAttribute("w:themeFill", a => a.ThemeFill)
+                .AddAttribute("w:themeFillTint", a => a.ThemeFillTint, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+                })
+                .AddAttribute("w:themeFillShade", a => a.ThemeFillShade, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -7486,38 +7486,38 @@ aBuilder.AddUnion(union =>
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:spacing");
             builder.AddElement<SpacingBetweenLines>()
-.AddAttribute("w:before", a => a.Before, aBuilder =>
-{
-aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddUnion(union =>
-{
-    union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-    union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
-});
-})
-.AddAttribute("w:beforeLines", a => a.BeforeLines)
-.AddAttribute("w:beforeAutospacing", a => a.BeforeAutoSpacing)
-.AddAttribute("w:after", a => a.After, aBuilder =>
-{
-aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddUnion(union =>
-{
-    union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-    union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
-});
-})
-.AddAttribute("w:afterLines", a => a.AfterLines)
-.AddAttribute("w:afterAutospacing", a => a.AfterAutoSpacing)
-.AddAttribute("w:line", a => a.Line, aBuilder =>
-{
-aBuilder.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddUnion(union =>
-{
-    union.AddValidator<IntegerValue>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-    union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
-});
-})
-.AddAttribute("w:lineRule", a => a.LineRule);
+                .AddAttribute("w:before", a => a.Before, aBuilder =>
+                {
+                    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                        union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
+                    });
+                })
+                .AddAttribute("w:beforeLines", a => a.BeforeLines)
+                .AddAttribute("w:beforeAutospacing", a => a.BeforeAutoSpacing)
+                .AddAttribute("w:after", a => a.After, aBuilder =>
+                {
+                    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                        union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
+                    });
+                })
+                .AddAttribute("w:afterLines", a => a.AfterLines)
+                .AddAttribute("w:afterAutospacing", a => a.AfterAutoSpacing)
+                .AddAttribute("w:line", a => a.Line, aBuilder =>
+                {
+                    aBuilder.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<IntegerValue>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                        union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
+                    });
+                })
+                .AddAttribute("w:lineRule", a => a.LineRule);
         }
 
         /// <inheritdoc/>
@@ -7712,74 +7712,74 @@ aBuilder.AddUnion(union =>
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:ind");
             builder.AddElement<Indentation>()
-.AddAttribute("w:left", a => a.Left, aBuilder =>
-{
-    aBuilder.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-    aBuilder.AddUnion(union =>
-    {
-        union.AddValidator<IntegerValue>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-        union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
-    });
-})
-.AddAttribute("w:start", a => a.Start, aBuilder =>
-{
-    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-    aBuilder.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-    aBuilder.AddUnion(union =>
-    {
-        union.AddValidator<IntegerValue>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-        union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
-    });
-})
-.AddAttribute("w:leftChars", a => a.LeftChars)
-.AddAttribute("w:startChars", a => a.StartCharacters, aBuilder =>
-{
-    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:right", a => a.Right, aBuilder =>
-{
-    aBuilder.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-    aBuilder.AddUnion(union =>
-    {
-        union.AddValidator<IntegerValue>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-        union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
-    });
-})
-.AddAttribute("w:end", a => a.End, aBuilder =>
-{
-    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-    aBuilder.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-    aBuilder.AddUnion(union =>
-    {
-        union.AddValidator<IntegerValue>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-        union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
-    });
-})
-.AddAttribute("w:rightChars", a => a.RightChars)
-.AddAttribute("w:endChars", a => a.EndCharacters, aBuilder =>
-{
-    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:hanging", a => a.Hanging, aBuilder =>
-{
-    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-    aBuilder.AddUnion(union =>
-    {
-        union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-        union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
-    });
-})
-.AddAttribute("w:hangingChars", a => a.HangingChars)
-.AddAttribute("w:firstLine", a => a.FirstLine, aBuilder =>
-{
-    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-    aBuilder.AddUnion(union =>
-    {
-        union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-        union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
-    });
-})
-.AddAttribute("w:firstLineChars", a => a.FirstLineChars);
+                .AddAttribute("w:left", a => a.Left, aBuilder =>
+                {
+                    aBuilder.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<IntegerValue>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                        union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
+                    });
+                })
+                .AddAttribute("w:start", a => a.Start, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                    aBuilder.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<IntegerValue>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                        union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
+                    });
+                })
+                .AddAttribute("w:leftChars", a => a.LeftChars)
+                .AddAttribute("w:startChars", a => a.StartCharacters, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:right", a => a.Right, aBuilder =>
+                {
+                    aBuilder.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<IntegerValue>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                        union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
+                    });
+                })
+                .AddAttribute("w:end", a => a.End, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                    aBuilder.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<IntegerValue>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                        union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
+                    });
+                })
+                .AddAttribute("w:rightChars", a => a.RightChars)
+                .AddAttribute("w:endChars", a => a.EndCharacters, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:hanging", a => a.Hanging, aBuilder =>
+                {
+                    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                        union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
+                    });
+                })
+                .AddAttribute("w:hangingChars", a => a.HangingChars)
+                .AddAttribute("w:firstLine", a => a.FirstLine, aBuilder =>
+                {
+                    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                        union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
+                    });
+                })
+                .AddAttribute("w:firstLineChars", a => a.FirstLineChars);
         }
 
         /// <inheritdoc/>
@@ -7820,10 +7820,10 @@ aBuilder.AddUnion(union =>
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:jc");
             builder.AddElement<Justification>()
- .AddAttribute("w:val", a => a.Val, aBuilder =>
- {
-     aBuilder.AddValidator(RequiredValidator.Instance);
- });
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -7864,10 +7864,10 @@ aBuilder.AddUnion(union =>
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:textDirection");
             builder.AddElement<TextDirection>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -7908,10 +7908,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:textAlignment");
             builder.AddElement<TextAlignment>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -7952,10 +7952,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:textboxTightWrap");
             builder.AddElement<TextBoxTightWrap>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -8320,10 +8320,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<DecimalNumberType>()
-                           .AddAttribute("w:val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           });
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
     }
 
@@ -8420,21 +8420,21 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("w:pPrChange");
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesExtended>();
             builder.AddElement<ParagraphPropertiesChange>()
-.AddAttribute("w:author", a => a.Author, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
-})
-.AddAttribute("w:date", a => a.Date)
-.AddAttribute("w:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
-union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
-});
-});
+                .AddAttribute("w:author", a => a.Author, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
+                })
+                .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
+                    });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -8562,14 +8562,14 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<HeaderFooterReferenceType>()
-                           .AddAttribute("w:type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           })
-                           .AddAttribute("r:id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           });
+                .AddAttribute("w:type", a => a.Type, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
     }
 
@@ -8621,8 +8621,8 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:br");
             builder.AddElement<Break>()
- .AddAttribute("w:type", a => a.Type)
- .AddAttribute("w:clear", a => a.Clear);
+                .AddAttribute("w:type", a => a.Type)
+                .AddAttribute("w:clear", a => a.Clear);
         }
 
         /// <inheritdoc/>
@@ -8826,7 +8826,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<TextType>()
-                           .AddAttribute("xml:space", a => a.Space);
+                .AddAttribute("xml:space", a => a.Space);
         }
     }
 
@@ -9498,14 +9498,14 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:sym");
             builder.AddElement<SymbolChar>()
-.AddAttribute("w:font", a => a.Font, aBuilder =>
-{
-    aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
-})
-.AddAttribute("w:char", a => a.Char, aBuilder =>
-{
-    aBuilder.AddValidator(new StringValidator() { Length = (2L) });
-});
+                .AddAttribute("w:font", a => a.Font, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
+                })
+                .AddAttribute("w:char", a => a.Char, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (2L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -9635,13 +9635,13 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ObjectEmbed>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ObjectLink>();
             builder.AddElement<EmbeddedObject>()
-.AddAttribute("w:dxaOrig", a => a.DxaOriginal)
-.AddAttribute("w:dyaOrig", a => a.DyaOriginal)
-.AddAttribute("w14:anchorId", a => a.AnchorId, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-});
+                .AddAttribute("w:dxaOrig", a => a.DxaOriginal)
+                .AddAttribute("w:dyaOrig", a => a.DyaOriginal)
+                .AddAttribute("w14:anchorId", a => a.AnchorId, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
@@ -9773,11 +9773,11 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Control>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MovieReference>();
             builder.AddElement<Picture>()
-.AddAttribute("w14:anchorId", a => a.AnchorId, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-});
+                .AddAttribute("w14:anchorId", a => a.AnchorId, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
@@ -9910,12 +9910,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FormFieldData>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingChange>();
             builder.AddElement<FieldChar>()
-.AddAttribute("w:fldCharType", a => a.FieldCharType, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("w:fldLock", a => a.FieldLock)
-.AddAttribute("w:dirty", a => a.Dirty);
+                .AddAttribute("w:fldCharType", a => a.FieldCharType, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("w:fldLock", a => a.FieldLock)
+                .AddAttribute("w:dirty", a => a.Dirty);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FieldData), 0, 1),
@@ -10169,12 +10169,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<FootnoteEndnoteReferenceType>()
-                           .AddAttribute("w:customMarkFollows", a => a.CustomMarkFollows)
-                           .AddAttribute("w:id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-2147483648L), MaxInclusive = (32767L) });
-                           });
+                .AddAttribute("w:customMarkFollows", a => a.CustomMarkFollows)
+                .AddAttribute("w:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-2147483648L), MaxInclusive = (32767L) });
+                });
         }
     }
 
@@ -10329,18 +10329,18 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:ptab");
             builder.AddElement<PositionalTab>()
-.AddAttribute("w:alignment", a => a.Alignment, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("w:relativeTo", a => a.RelativeTo, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("w:leader", a => a.Leader, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:alignment", a => a.Alignment, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("w:relativeTo", a => a.RelativeTo, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("w:leader", a => a.Leader, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -10681,11 +10681,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<String253Type>()
-                           .AddAttribute("w:val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
-                           });
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
+                });
         }
     }
 
@@ -10835,27 +10835,27 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:rFonts");
             builder.AddElement<RunFonts>()
-.AddAttribute("w:hint", a => a.Hint)
-.AddAttribute("w:ascii", a => a.Ascii, aBuilder =>
-{
- aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
-})
-.AddAttribute("w:hAnsi", a => a.HighAnsi, aBuilder =>
-{
- aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
-})
-.AddAttribute("w:eastAsia", a => a.EastAsia, aBuilder =>
-{
- aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
-})
-.AddAttribute("w:cs", a => a.ComplexScript, aBuilder =>
-{
- aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
-})
-.AddAttribute("w:asciiTheme", a => a.AsciiTheme)
-.AddAttribute("w:hAnsiTheme", a => a.HighAnsiTheme)
-.AddAttribute("w:eastAsiaTheme", a => a.EastAsiaTheme)
-.AddAttribute("w:cstheme", a => a.ComplexScriptTheme);
+                .AddAttribute("w:hint", a => a.Hint)
+                .AddAttribute("w:ascii", a => a.Ascii, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
+                })
+                .AddAttribute("w:hAnsi", a => a.HighAnsi, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
+                })
+                .AddAttribute("w:eastAsia", a => a.EastAsia, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
+                })
+                .AddAttribute("w:cs", a => a.ComplexScript, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
+                })
+                .AddAttribute("w:asciiTheme", a => a.AsciiTheme)
+                .AddAttribute("w:hAnsiTheme", a => a.HighAnsiTheme)
+                .AddAttribute("w:eastAsiaTheme", a => a.EastAsiaTheme)
+                .AddAttribute("w:cstheme", a => a.ComplexScriptTheme);
         }
 
         /// <inheritdoc/>
@@ -10938,24 +10938,24 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:color");
             builder.AddElement<Color>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-  aBuilder.AddValidator(RequiredValidator.Instance);
-  aBuilder.AddUnion(union =>
-  {
-      union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(EnumValidator.Instance);
-      union.AddValidator<HexBinaryValue>(new StringValidator() { Length = (3L) });
-  });
-})
-.AddAttribute("w:themeColor", a => a.ThemeColor)
-.AddAttribute("w:themeTint", a => a.ThemeTint, aBuilder =>
-{
-  aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
-})
-.AddAttribute("w:themeShade", a => a.ThemeShade, aBuilder =>
-{
-  aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(EnumValidator.Instance);
+                        union.AddValidator<HexBinaryValue>(new StringValidator() { Length = (3L) });
+                    });
+                })
+                .AddAttribute("w:themeColor", a => a.ThemeColor)
+                .AddAttribute("w:themeTint", a => a.ThemeTint, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+                })
+                .AddAttribute("w:themeShade", a => a.ThemeShade, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -10996,11 +10996,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:spacing");
             builder.AddElement<Spacing>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-31680L), MaxInclusive = (31680L) });
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-31680L), MaxInclusive = (31680L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -11041,10 +11041,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-31680L), MaxInclu
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:w");
             builder.AddElement<CharacterScale>()
-  .AddAttribute("w:val", a => a.Val, aBuilder =>
-  {
-      aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (600L) });
-  });
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (600L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -11085,11 +11085,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-31680L), MaxInclu
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:kern");
             builder.AddElement<Kern>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-   aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (3277L) });
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (3277L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -11130,16 +11130,16 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-31680L), MaxInclu
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:position");
             builder.AddElement<Position>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddUnion(union =>
-{
-   union.AddValidator<IntegerValue>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-   union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
-});
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<IntegerValue>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                        union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
+                    });
+                });
         }
 
         /// <inheritdoc/>
@@ -11303,16 +11303,16 @@ aBuilder.AddUnion(union =>
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<HpsMeasureType>()
-                           .AddAttribute("w:val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddValidator<UInt32Value>(new NumberValidator() { MinInclusive = (2L), MaxInclusive = (3277L), Version = (FileFormatVersions.Office2007) });
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-                                   union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
-                               });
-                           });
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { MinInclusive = (2L), MaxInclusive = (3277L), Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                        union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
+                    });
+                });
         }
     }
 
@@ -11350,10 +11350,10 @@ aBuilder.AddUnion(union =>
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:highlight");
             builder.AddElement<Highlight>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -11450,24 +11450,24 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:u");
             builder.AddElement<Underline>()
-  .AddAttribute("w:val", a => a.Val)
-  .AddAttribute("w:color", a => a.Color, aBuilder =>
-  {
-      aBuilder.AddUnion(union =>
-      {
-          union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(EnumValidator.Instance);
-          union.AddValidator<HexBinaryValue>(new StringValidator() { Length = (3L) });
-      });
-  })
-  .AddAttribute("w:themeColor", a => a.ThemeColor)
-  .AddAttribute("w:themeTint", a => a.ThemeTint, aBuilder =>
-  {
-      aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
-  })
-  .AddAttribute("w:themeShade", a => a.ThemeShade, aBuilder =>
-  {
-      aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
-  });
+                .AddAttribute("w:val", a => a.Val)
+                .AddAttribute("w:color", a => a.Color, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(EnumValidator.Instance);
+                        union.AddValidator<HexBinaryValue>(new StringValidator() { Length = (3L) });
+                    });
+                })
+                .AddAttribute("w:themeColor", a => a.ThemeColor)
+                .AddAttribute("w:themeTint", a => a.ThemeTint, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+                })
+                .AddAttribute("w:themeShade", a => a.ThemeShade, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -11508,10 +11508,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:effect");
             builder.AddElement<TextEffect>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
- aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -11991,34 +11991,34 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<BorderType>()
-                           .AddAttribute("w:val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           })
-                           .AddAttribute("w:color", a => a.Color, aBuilder =>
-                           {
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(EnumValidator.Instance);
-                                   union.AddValidator<HexBinaryValue>(new StringValidator() { Length = (3L) });
-                               });
-                           })
-                           .AddAttribute("w:themeColor", a => a.ThemeColor)
-                           .AddAttribute("w:themeTint", a => a.ThemeTint, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
-                           })
-                           .AddAttribute("w:themeShade", a => a.ThemeShade, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
-                           })
-                           .AddAttribute("w:sz", a => a.Size)
-                           .AddAttribute("w:space", a => a.Space, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (31L) });
-                           })
-                           .AddAttribute("w:shadow", a => a.Shadow)
-                           .AddAttribute("w:frame", a => a.Frame);
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("w:color", a => a.Color, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(EnumValidator.Instance);
+                        union.AddValidator<HexBinaryValue>(new StringValidator() { Length = (3L) });
+                    });
+                })
+                .AddAttribute("w:themeColor", a => a.ThemeColor)
+                .AddAttribute("w:themeTint", a => a.ThemeTint, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+                })
+                .AddAttribute("w:themeShade", a => a.ThemeShade, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+                })
+                .AddAttribute("w:sz", a => a.Size)
+                .AddAttribute("w:space", a => a.Space, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (31L) });
+                })
+                .AddAttribute("w:shadow", a => a.Shadow)
+                .AddAttribute("w:frame", a => a.Frame);
         }
     }
 
@@ -12070,12 +12070,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:fitText");
             builder.AddElement<FitText>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
-})
-.AddAttribute("w:id", a => a.Id);
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
+                })
+                .AddAttribute("w:id", a => a.Id);
         }
 
         /// <inheritdoc/>
@@ -12116,10 +12116,10 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:vertAlign");
             builder.AddElement<VerticalTextAlignment>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -12160,10 +12160,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:em");
             builder.AddElement<Emphasis>()
- .AddAttribute("w:val", a => a.Val, aBuilder =>
- {
-     aBuilder.AddValidator(RequiredValidator.Instance);
- });
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -12280,18 +12280,18 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<LanguageType>()
-                           .AddAttribute("w:val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidator() { MaxLength = (84L) });
-                           })
-                           .AddAttribute("w:eastAsia", a => a.EastAsia, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidator() { MaxLength = (84L) });
-                           })
-                           .AddAttribute("w:bidi", a => a.Bidi, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidator() { MaxLength = (84L) });
-                           });
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (84L) });
+                })
+                .AddAttribute("w:eastAsia", a => a.EastAsia, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (84L) });
+                })
+                .AddAttribute("w:bidi", a => a.Bidi, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (84L) });
+                });
         }
     }
 
@@ -12385,11 +12385,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:eastAsianLayout");
             builder.AddElement<EastAsianLayout>()
-.AddAttribute("w:id", a => a.Id)
-.AddAttribute("w:combine", a => a.Combine)
-.AddAttribute("w:combineBrackets", a => a.CombineBrackets)
-.AddAttribute("w:vert", a => a.Vertical)
-.AddAttribute("w:vertCompress", a => a.VerticalCompress);
+                .AddAttribute("w:id", a => a.Id)
+                .AddAttribute("w:combine", a => a.Combine)
+                .AddAttribute("w:combineBrackets", a => a.CombineBrackets)
+                .AddAttribute("w:vert", a => a.Vertical)
+                .AddAttribute("w:vertCompress", a => a.VerticalCompress);
         }
 
         /// <inheritdoc/>
@@ -12489,21 +12489,21 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("w:rPrChange");
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PreviousRunProperties>();
             builder.AddElement<RunPropertiesChange>()
-.AddAttribute("w:author", a => a.Author, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
-})
-.AddAttribute("w:date", a => a.Date)
-.AddAttribute("w:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
-union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
-});
-});
+                .AddAttribute("w:author", a => a.Author, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
+                })
+                .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
+                    });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -13565,21 +13565,21 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedMathControl>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunProperties>();
             builder.AddElement<InsertedMathControl>()
-.AddAttribute("w:author", a => a.Author, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
-})
-.AddAttribute("w:date", a => a.Date)
-.AddAttribute("w:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
-union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
-});
-});
+                .AddAttribute("w:author", a => a.Author, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
+                })
+                .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
+                    });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
@@ -13700,21 +13700,21 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             builder.SetSchema("w:del");
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunProperties>();
             builder.AddElement<DeletedMathControl>()
-.AddAttribute("w:author", a => a.Author, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
-})
-.AddAttribute("w:date", a => a.Date)
-.AddAttribute("w:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
-union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
-});
-});
+                .AddAttribute("w:author", a => a.Author, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
+                })
+                .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
+                    });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
@@ -14000,21 +14000,21 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedMathControl>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunProperties>();
             builder.AddElement<MathControlMoveType>()
-.AddAttribute("w:author", a => a.Author, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
-})
-.AddAttribute("w:date", a => a.Date)
-.AddAttribute("w:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
-union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
-});
-});
+                .AddAttribute("w:author", a => a.Author, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
+                })
+                .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
+                    });
+                });
         }
     }
 
@@ -14522,12 +14522,12 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
             builder.AddElement<SimpleFieldRuby>()
-.AddAttribute("w:instr", a => a.Instruction, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("w:fldLock", a => a.FieldLock)
-.AddAttribute("w:dirty", a => a.Dirty);
+                .AddAttribute("w:instr", a => a.Instruction, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("w:fldLock", a => a.FieldLock)
+                .AddAttribute("w:dirty", a => a.Dirty);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FieldData), 0, 1),
@@ -14921,24 +14921,24 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
             builder.AddElement<HyperlinkRuby>()
-.AddAttribute("w:tgtFrame", a => a.TargetFrame, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
-})
-.AddAttribute("w:tooltip", a => a.Tooltip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MaxLength = (260L) });
-})
-.AddAttribute("w:docLocation", a => a.DocLocation, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
-})
-.AddAttribute("w:history", a => a.History)
-.AddAttribute("w:anchor", a => a.Anchor, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
-})
-.AddAttribute("r:id", a => a.Id);
+                .AddAttribute("w:tgtFrame", a => a.TargetFrame, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
+                })
+                .AddAttribute("w:tooltip", a => a.Tooltip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (260L) });
+                })
+                .AddAttribute("w:docLocation", a => a.DocLocation, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
+                })
+                .AddAttribute("w:history", a => a.History)
+                .AddAttribute("w:anchor", a => a.Anchor, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
+                })
+                .AddAttribute("r:id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -15226,18 +15226,18 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FieldCode>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedFieldCode>();
             builder.AddElement<Run>()
-.AddAttribute("w:rsidRPr", a => a.RsidRunProperties, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w:rsidDel", a => a.RsidRunDeletion, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w:rsidR", a => a.RsidRunAddition, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-});
+                .AddAttribute("w:rsidRPr", a => a.RsidRunProperties, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w:rsidDel", a => a.RsidRunDeletion, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w:rsidR", a => a.RsidRunAddition, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -15496,10 +15496,10 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:proofErr");
             builder.AddElement<ProofError>()
-.AddAttribute("w:type", a => a.Type, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:type", a => a.Type, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -15610,21 +15610,21 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:permStart");
             builder.AddElement<PermStart>()
-.AddAttribute("w:edGrp", a => a.EditorGroup)
-.AddAttribute("w:ed", a => a.Ed)
-.AddAttribute("w:colFirst", a => a.ColumnFirst, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
-})
-.AddAttribute("w:colLast", a => a.ColumnLast, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
-})
-.AddAttribute("w:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("w:displacedByCustomXml", a => a.DisplacedByCustomXml);
+                .AddAttribute("w:edGrp", a => a.EditorGroup)
+                .AddAttribute("w:ed", a => a.Ed)
+                .AddAttribute("w:colFirst", a => a.ColumnFirst, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
+                })
+                .AddAttribute("w:colLast", a => a.ColumnLast, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
+                })
+                .AddAttribute("w:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("w:displacedByCustomXml", a => a.DisplacedByCustomXml);
             builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
@@ -15680,11 +15680,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:permEnd");
             builder.AddElement<PermEnd>()
-.AddAttribute("w:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("w:displacedByCustomXml", a => a.DisplacedByCustomXml);
+                .AddAttribute("w:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("w:displacedByCustomXml", a => a.DisplacedByCustomXml);
             builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
         }
 
@@ -16897,21 +16897,21 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
             builder.AddElement<RunTrackChangeType>()
-.AddAttribute("w:author", a => a.Author, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
-})
-.AddAttribute("w:date", a => a.Date)
-.AddAttribute("w:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
-union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
-});
-});
+                .AddAttribute("w:author", a => a.Author, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
+                })
+                .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
+                    });
+                });
         }
     }
 
@@ -16950,10 +16950,10 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             builder.SetSchema("w:contentPart");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ContentPart>()
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -17767,40 +17767,40 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
             builder.AddElement<Paragraph>()
-.AddAttribute("w:rsidRPr", a => a.RsidParagraphMarkRevision, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w:rsidR", a => a.RsidParagraphAddition, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w:rsidDel", a => a.RsidParagraphDeletion, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w:rsidP", a => a.RsidParagraphProperties, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w:rsidRDefault", a => a.RsidRunAdditionDefault, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w14:paraId", a => a.ParagraphId, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w14:textId", a => a.TextId, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w14:noSpellErr", a => a.NoSpellError, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-});
+                .AddAttribute("w:rsidRPr", a => a.RsidParagraphMarkRevision, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w:rsidR", a => a.RsidParagraphAddition, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w:rsidDel", a => a.RsidParagraphDeletion, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w:rsidP", a => a.RsidParagraphProperties, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w:rsidRDefault", a => a.RsidRunAdditionDefault, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w14:paraId", a => a.ParagraphId, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w14:textId", a => a.TextId, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w14:noSpellErr", a => a.NoSpellError, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ParagraphProperties), 0, 1),
@@ -18421,32 +18421,32 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableRowProperties>();
             builder.AddElement<TableRow>()
-.AddAttribute("w:rsidRPr", a => a.RsidTableRowMarkRevision, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w:rsidR", a => a.RsidTableRowAddition, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w:rsidDel", a => a.RsidTableRowDeletion, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w:rsidTr", a => a.RsidTableRowProperties, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w14:paraId", a => a.ParagraphId, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w14:textId", a => a.TextId, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-});
+                .AddAttribute("w:rsidRPr", a => a.RsidTableRowMarkRevision, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w:rsidR", a => a.RsidTableRowAddition, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w:rsidDel", a => a.RsidTableRowDeletion, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w:rsidTr", a => a.RsidTableRowProperties, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w14:paraId", a => a.ParagraphId, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w14:textId", a => a.TextId, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TablePropertyExceptions), 0, 1),
@@ -20064,12 +20064,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
             builder.AddElement<SimpleField>()
-.AddAttribute("w:instr", a => a.Instruction, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("w:fldLock", a => a.FieldLock)
-.AddAttribute("w:dirty", a => a.Dirty);
+                .AddAttribute("w:instr", a => a.Instruction, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("w:fldLock", a => a.FieldLock)
+                .AddAttribute("w:dirty", a => a.Dirty);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FieldData), 0, 1),
@@ -20496,24 +20496,24 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
             builder.AddElement<Hyperlink>()
-.AddAttribute("w:tgtFrame", a => a.TargetFrame, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
-})
-.AddAttribute("w:tooltip", a => a.Tooltip, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MaxLength = (260L) });
-})
-.AddAttribute("w:docLocation", a => a.DocLocation, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
-})
-.AddAttribute("w:history", a => a.History)
-.AddAttribute("w:anchor", a => a.Anchor, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
-})
-.AddAttribute("r:id", a => a.Id);
+                .AddAttribute("w:tgtFrame", a => a.TargetFrame, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
+                })
+                .AddAttribute("w:tooltip", a => a.Tooltip, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (260L) });
+                })
+                .AddAttribute("w:docLocation", a => a.DocLocation, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
+                })
+                .AddAttribute("w:history", a => a.History)
+                .AddAttribute("w:anchor", a => a.Anchor, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
+                })
+                .AddAttribute("r:id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -20855,7 +20855,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
             builder.AddElement<BidirectionalOverride>()
-.AddAttribute("w:val", a => a.Val);
+                .AddAttribute("w:val", a => a.Val);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -21196,7 +21196,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
             builder.AddElement<BidirectionalEmbedding>()
-.AddAttribute("w:val", a => a.Val);
+                .AddAttribute("w:val", a => a.Val);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -21618,10 +21618,10 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<RelationshipType>()
-                           .AddAttribute("r:id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           });
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
     }
 
@@ -21827,61 +21827,61 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:cnfStyle");
             builder.AddElement<ConditionalFormatStyle>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(new RequiredValidator() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), Version = (FileFormatVersions.Office2010) });
-aBuilder.AddValidator(new RequiredValidator() { InitialVersion = (FileFormatVersions.Office2013) });
-aBuilder.AddValidator(new StringValidator() { Pattern = ("[01]*"), Length = (12L) });
-})
-.AddAttribute("w:firstRow", a => a.FirstRow, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:lastRow", a => a.LastRow, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:firstColumn", a => a.FirstColumn, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:lastColumn", a => a.LastColumn, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:oddVBand", a => a.OddVerticalBand, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:evenVBand", a => a.EvenVerticalBand, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:oddHBand", a => a.OddHorizontalBand, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:evenHBand", a => a.EvenHorizontalBand, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:firstRowFirstColumn", a => a.FirstRowFirstColumn, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:firstRowLastColumn", a => a.FirstRowLastColumn, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:lastRowFirstColumn", a => a.LastRowFirstColumn, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:lastRowLastColumn", a => a.LastRowLastColumn, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(new RequiredValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), Version = (FileFormatVersions.Office2010) });
+                    aBuilder.AddValidator(new RequiredValidator() { InitialVersion = (FileFormatVersions.Office2013) });
+                    aBuilder.AddValidator(new StringValidator() { Pattern = ("[01]*"), Length = (12L) });
+                })
+                .AddAttribute("w:firstRow", a => a.FirstRow, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:lastRow", a => a.LastRow, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:firstColumn", a => a.FirstColumn, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:lastColumn", a => a.LastColumn, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:oddVBand", a => a.OddVerticalBand, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:evenVBand", a => a.EvenVerticalBand, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:oddHBand", a => a.OddHorizontalBand, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:evenHBand", a => a.EvenHorizontalBand, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:firstRowFirstColumn", a => a.FirstRowFirstColumn, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:firstRowLastColumn", a => a.FirstRowLastColumn, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:lastRowFirstColumn", a => a.LastRowFirstColumn, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:lastRowLastColumn", a => a.LastRowLastColumn, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                });
         }
 
         /// <inheritdoc/>
@@ -22213,21 +22213,21 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<TableWidthType>()
-                           .AddAttribute("w:w", a => a.Width, aBuilder =>
-                           {
-                               aBuilder.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), Version = (FileFormatVersions.Office2010) });
-                                   union.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2010) });
-                               });
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), InitialVersion = (FileFormatVersions.Office2013) });
-                                   union.AddValidator<Int32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2013) });
-                               });
-                           })
-                           .AddAttribute("w:type", a => a.Type);
+                .AddAttribute("w:w", a => a.Width, aBuilder =>
+                {
+                    aBuilder.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), Version = (FileFormatVersions.Office2010) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2010) });
+                    });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), InitialVersion = (FileFormatVersions.Office2013) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2013) });
+                    });
+                })
+                .AddAttribute("w:type", a => a.Type);
         }
     }
 
@@ -22265,7 +22265,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:hMerge");
             builder.AddElement<HorizontalMerge>()
-.AddAttribute("w:val", a => a.Val);
+                .AddAttribute("w:val", a => a.Val);
         }
 
         /// <inheritdoc/>
@@ -22306,7 +22306,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:vMerge");
             builder.AddElement<VerticalMerge>()
-.AddAttribute("w:val", a => a.Val);
+                .AddAttribute("w:val", a => a.Val);
         }
 
         /// <inheritdoc/>
@@ -23037,7 +23037,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<OnOffOnlyType>()
-                           .AddAttribute("w:val", a => a.Val);
+                .AddAttribute("w:val", a => a.Val);
         }
     }
 
@@ -23228,10 +23228,10 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:vAlign");
             builder.AddElement<TableCellVerticalAlignment>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
- aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -23272,15 +23272,15 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:divId");
             builder.AddElement<DivId>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-  aBuilder.AddValidator(RequiredValidator.Instance);
-  aBuilder.AddUnion(union =>
-  {
-      union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (1L) });
-      union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-1L) });
-  });
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (1L) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-1L) });
+                    });
+                });
             builder.AddConstraint(new AttributeValueSetConstraint("w:val", false, new string[] { "0" }) { Application = ApplicationType.Word });
         }
 
@@ -23336,11 +23336,11 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:trHeight");
             builder.AddElement<TableRowHeight>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
-})
-.AddAttribute("w:hRule", a => a.HeightType);
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
+                })
+                .AddAttribute("w:hRule", a => a.HeightType);
         }
 
         /// <inheritdoc/>
@@ -23381,10 +23381,10 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:jc");
             builder.AddElement<TableJustification>()
- .AddAttribute("w:val", a => a.Val, aBuilder =>
- {
-     aBuilder.AddValidator(RequiredValidator.Instance);
- });
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -23551,34 +23551,34 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:tblpPr");
             builder.AddElement<TablePositionProperties>()
-.AddAttribute("w:leftFromText", a => a.LeftFromText, aBuilder =>
-{
- aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
-})
-.AddAttribute("w:rightFromText", a => a.RightFromText, aBuilder =>
-{
- aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
-})
-.AddAttribute("w:topFromText", a => a.TopFromText, aBuilder =>
-{
- aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
-})
-.AddAttribute("w:bottomFromText", a => a.BottomFromText, aBuilder =>
-{
- aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
-})
-.AddAttribute("w:vertAnchor", a => a.VerticalAnchor)
-.AddAttribute("w:horzAnchor", a => a.HorizontalAnchor)
-.AddAttribute("w:tblpXSpec", a => a.TablePositionXAlignment)
-.AddAttribute("w:tblpX", a => a.TablePositionX, aBuilder =>
-{
- aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-31680L), MaxInclusive = (31680L) });
-})
-.AddAttribute("w:tblpYSpec", a => a.TablePositionYAlignment)
-.AddAttribute("w:tblpY", a => a.TablePositionY, aBuilder =>
-{
- aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-31680L), MaxInclusive = (31680L) });
-});
+                .AddAttribute("w:leftFromText", a => a.LeftFromText, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
+                })
+                .AddAttribute("w:rightFromText", a => a.RightFromText, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
+                })
+                .AddAttribute("w:topFromText", a => a.TopFromText, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
+                })
+                .AddAttribute("w:bottomFromText", a => a.BottomFromText, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
+                })
+                .AddAttribute("w:vertAnchor", a => a.VerticalAnchor)
+                .AddAttribute("w:horzAnchor", a => a.HorizontalAnchor)
+                .AddAttribute("w:tblpXSpec", a => a.TablePositionXAlignment)
+                .AddAttribute("w:tblpX", a => a.TablePositionX, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-31680L), MaxInclusive = (31680L) });
+                })
+                .AddAttribute("w:tblpYSpec", a => a.TablePositionYAlignment)
+                .AddAttribute("w:tblpY", a => a.TablePositionY, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-31680L), MaxInclusive = (31680L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -23619,10 +23619,10 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:tblOverlap");
             builder.AddElement<TableOverlap>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -23711,11 +23711,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<UnsignedDecimalNumberMax3Type>()
-                           .AddAttribute("w:val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (3L) });
-                           });
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (3L) });
+                });
         }
     }
 
@@ -23767,8 +23767,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:tblInd");
             builder.AddElement<TableIndentation>()
-.AddAttribute("w:w", a => a.Width)
-.AddAttribute("w:type", a => a.Type);
+                .AddAttribute("w:w", a => a.Width)
+                .AddAttribute("w:type", a => a.Type);
         }
 
         /// <inheritdoc/>
@@ -23994,7 +23994,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:tblLayout");
             builder.AddElement<TableLayout>()
-.AddAttribute("w:type", a => a.Type);
+                .AddAttribute("w:type", a => a.Type);
         }
 
         /// <inheritdoc/>
@@ -24188,10 +24188,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:numStart");
             builder.AddElement<NumberingStart>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -24232,10 +24232,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:numRestart");
             builder.AddElement<NumberingRestart>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -24307,7 +24307,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("w:altChunk");
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AltChunkProperties>();
             builder.AddElement<AltChunk>()
-.AddAttribute("r:id", a => a.Id);
+                .AddAttribute("r:id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.AltChunkProperties), 0, 1)
@@ -24451,34 +24451,34 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:tblLook");
             builder.AddElement<TableLook>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (2L) });
-})
-.AddAttribute("w:firstRow", a => a.FirstRow, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:lastRow", a => a.LastRow, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:firstColumn", a => a.FirstColumn, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:lastColumn", a => a.LastColumn, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:noHBand", a => a.NoHorizontalBand, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:noVBand", a => a.NoVerticalBand, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (2L) });
+                })
+                .AddAttribute("w:firstRow", a => a.FirstRow, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:lastRow", a => a.LastRow, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:firstColumn", a => a.FirstColumn, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:lastColumn", a => a.LastColumn, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:noHBand", a => a.NoHorizontalBand, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:noVBand", a => a.NoVerticalBand, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                });
         }
 
         /// <inheritdoc/>
@@ -24773,10 +24773,10 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:type");
             builder.AddElement<SectionType>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -24859,16 +24859,16 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:pgSz");
             builder.AddElement<PageSize>()
-.AddAttribute("w:w", a => a.Width, aBuilder =>
-{
-   aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
-})
-.AddAttribute("w:h", a => a.Height, aBuilder =>
-{
-   aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
-})
-.AddAttribute("w:orient", a => a.Orient)
-.AddAttribute("w:code", a => a.Code);
+                .AddAttribute("w:w", a => a.Width, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
+                })
+                .AddAttribute("w:h", a => a.Height, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
+                })
+                .AddAttribute("w:orient", a => a.Orient)
+                .AddAttribute("w:code", a => a.Code);
         }
 
         /// <inheritdoc/>
@@ -24993,34 +24993,34 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:pgMar");
             builder.AddElement<PageMargin>()
-.AddAttribute("w:top", a => a.Top, aBuilder =>
-{
-  aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-31680L), MaxInclusive = (31680L) });
-})
-.AddAttribute("w:right", a => a.Right, aBuilder =>
-{
-  aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
-})
-.AddAttribute("w:bottom", a => a.Bottom, aBuilder =>
-{
-  aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-31680L), MaxInclusive = (31680L) });
-})
-.AddAttribute("w:left", a => a.Left, aBuilder =>
-{
-  aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
-})
-.AddAttribute("w:header", a => a.Header, aBuilder =>
-{
-  aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
-})
-.AddAttribute("w:footer", a => a.Footer, aBuilder =>
-{
-  aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
-})
-.AddAttribute("w:gutter", a => a.Gutter, aBuilder =>
-{
-  aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
-});
+                .AddAttribute("w:top", a => a.Top, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-31680L), MaxInclusive = (31680L) });
+                })
+                .AddAttribute("w:right", a => a.Right, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
+                })
+                .AddAttribute("w:bottom", a => a.Bottom, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-31680L), MaxInclusive = (31680L) });
+                })
+                .AddAttribute("w:left", a => a.Left, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
+                })
+                .AddAttribute("w:header", a => a.Header, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
+                })
+                .AddAttribute("w:footer", a => a.Footer, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
+                })
+                .AddAttribute("w:gutter", a => a.Gutter, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -25075,8 +25075,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:paperSrc");
             builder.AddElement<PaperSource>()
-.AddAttribute("w:first", a => a.First)
-.AddAttribute("w:other", a => a.Other);
+                .AddAttribute("w:first", a => a.First)
+                .AddAttribute("w:other", a => a.Other);
         }
 
         /// <inheritdoc/>
@@ -25182,9 +25182,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BottomBorder>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RightBorder>();
             builder.AddElement<PageBorders>()
-.AddAttribute("w:zOrder", a => a.ZOrder)
-.AddAttribute("w:display", a => a.Display)
-.AddAttribute("w:offsetFrom", a => a.OffsetFrom);
+                .AddAttribute("w:zOrder", a => a.ZOrder)
+                .AddAttribute("w:display", a => a.Display)
+                .AddAttribute("w:offsetFrom", a => a.OffsetFrom);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TopBorder), 0, 1),
@@ -25326,24 +25326,24 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:lnNumType");
             builder.AddElement<LineNumberType>()
-.AddAttribute("w:countBy", a => a.CountBy, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (100L) });
-})
-.AddAttribute("w:start", a => a.Start, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
-})
-.AddAttribute("w:distance", a => a.Distance, aBuilder =>
-{
-aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddUnion(union =>
-{
-  union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-  union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
-});
-})
-.AddAttribute("w:restart", a => a.Restart);
+                .AddAttribute("w:countBy", a => a.CountBy, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (100L) });
+                })
+                .AddAttribute("w:start", a => a.Start, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
+                })
+                .AddAttribute("w:distance", a => a.Distance, aBuilder =>
+                {
+                    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                        union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
+                    });
+                })
+                .AddAttribute("w:restart", a => a.Restart);
         }
 
         /// <inheritdoc/>
@@ -25426,13 +25426,13 @@ aBuilder.AddUnion(union =>
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:pgNumType");
             builder.AddElement<PageNumberType>()
-.AddAttribute("w:fmt", a => a.Format)
-.AddAttribute("w:start", a => a.Start, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
-})
-.AddAttribute("w:chapStyle", a => a.ChapterStyle)
-.AddAttribute("w:chapSep", a => a.ChapterSeparator);
+                .AddAttribute("w:fmt", a => a.Format)
+                .AddAttribute("w:start", a => a.Start, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
+                })
+                .AddAttribute("w:chapStyle", a => a.ChapterStyle)
+                .AddAttribute("w:chapSep", a => a.ChapterSeparator);
         }
 
         /// <inheritdoc/>
@@ -25546,21 +25546,21 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
             builder.SetSchema("w:cols");
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Column>();
             builder.AddElement<Columns>()
-.AddAttribute("w:equalWidth", a => a.EqualWidth)
-.AddAttribute("w:space", a => a.Space, aBuilder =>
-{
-aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
-});
-})
-.AddAttribute("w:num", a => a.ColumnCount, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (45L) });
-})
-.AddAttribute("w:sep", a => a.Separator);
+                .AddAttribute("w:equalWidth", a => a.EqualWidth)
+                .AddAttribute("w:space", a => a.Space, aBuilder =>
+                {
+                    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                        union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
+                    });
+                })
+                .AddAttribute("w:num", a => a.ColumnCount, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (45L) });
+                })
+                .AddAttribute("w:sep", a => a.Separator);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Column), 1, 45)
@@ -25605,10 +25605,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:vAlign");
             builder.AddElement<VerticalTextAlignmentOnPage>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
- aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -25677,9 +25677,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:docGrid");
             builder.AddElement<DocGrid>()
-.AddAttribute("w:type", a => a.Type)
-.AddAttribute("w:linePitch", a => a.LinePitch)
-.AddAttribute("w:charSpace", a => a.CharacterSpace);
+                .AddAttribute("w:type", a => a.Type)
+                .AddAttribute("w:linePitch", a => a.LinePitch)
+                .AddAttribute("w:charSpace", a => a.CharacterSpace);
         }
 
         /// <inheritdoc/>
@@ -28175,7 +28175,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DocumentBackground>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Body>();
             builder.AddElement<Document>()
-.AddAttribute("w:conformance", a => a.Conformance);
+                .AddAttribute("w:conformance", a => a.Conformance);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -29482,22 +29482,22 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextDirection>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentOnPage>();
             builder.AddElement<PreviousSectionProperties>()
-.AddAttribute("w:rsidRPr", a => a.RsidRPr, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w:rsidDel", a => a.RsidDel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w:rsidR", a => a.RsidR, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w:rsidSect", a => a.RsidSect, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-});
+                .AddAttribute("w:rsidRPr", a => a.RsidRPr, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w:rsidDel", a => a.RsidDel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w:rsidR", a => a.RsidR, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w:rsidSect", a => a.RsidSect, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -31043,11 +31043,11 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:ilvl");
             builder.AddElement<NumberingLevelReference>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-   aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (255L) });
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (255L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -31161,11 +31161,11 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<NonNegativeDecimalNumberType>()
-                           .AddAttribute("w:val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
-                           });
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
+                });
         }
     }
 
@@ -31245,22 +31245,22 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:numberingChange");
             builder.AddElement<NumberingChange>()
-.AddAttribute("w:original", a => a.Original)
-.AddAttribute("w:author", a => a.Author, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
-})
-.AddAttribute("w:date", a => a.Date)
-.AddAttribute("w:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
-union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
-});
-});
+                .AddAttribute("w:original", a => a.Original)
+                .AddAttribute("w:author", a => a.Author, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
+                })
+                .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
+                    });
+                });
             builder.AddConstraint(new UniqueAttributeValueConstraint("w:id", true, null));
             builder.AddConstraint(new AttributeValueLengthConstraint("w:original", 0, 15));
         }
@@ -31331,16 +31331,16 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:tab");
             builder.AddElement<TabStop>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("w:leader", a => a.Leader)
-.AddAttribute("w:pos", a => a.Position, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-31680L), MaxInclusive = (31680L) });
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("w:leader", a => a.Leader)
+                .AddAttribute("w:pos", a => a.Position, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-31680L), MaxInclusive = (31680L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -31853,22 +31853,22 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextDirection>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentOnPage>();
             builder.AddElement<SectionProperties>()
-.AddAttribute("w:rsidRPr", a => a.RsidRPr, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w:rsidDel", a => a.RsidDel, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w:rsidR", a => a.RsidR, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w:rsidSect", a => a.RsidSect, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-});
+                .AddAttribute("w:rsidRPr", a => a.RsidRPr, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w:rsidDel", a => a.RsidDel, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w:rsidR", a => a.RsidR, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w:rsidSect", a => a.RsidSect, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 6)
@@ -32075,10 +32075,10 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:name");
             builder.AddElement<FormFieldName>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-   aBuilder.AddValidator(new StringValidator() { MaxLength = (20L) });
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (20L) });
+                });
             builder.AddConstraint(new AttributeValuePatternConstraint("w:val", @"[^,]*") { Application = ApplicationType.Word });
         }
 
@@ -32168,11 +32168,11 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<MacroNameType>()
-                           .AddAttribute("w:val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddValidator(new StringValidator() { MaxLength = (33L) });
-                           });
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (33L) });
+                });
         }
     }
 
@@ -32224,11 +32224,11 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:helpText");
             builder.AddElement<HelpText>()
-.AddAttribute("w:type", a => a.Type)
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
-});
+                .AddAttribute("w:type", a => a.Type)
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -32283,12 +32283,12 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:statusText");
             builder.AddElement<StatusText>()
-.AddAttribute("w:type", a => a.Type)
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MaxLength = (138L), Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator(new StringValidator() { MaxLength = (140L), InitialVersion = (FileFormatVersions.Office2010) });
-});
+                .AddAttribute("w:type", a => a.Type)
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (138L), Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (140L), InitialVersion = (FileFormatVersions.Office2010) });
+                });
         }
 
         /// <inheritdoc/>
@@ -32614,11 +32614,11 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (140L), InitialVersion
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:default");
             builder.AddElement<DefaultDropDownListItemIndex>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (24L) });
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (24L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -32733,11 +32733,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<String255Type>()
-                           .AddAttribute("w:val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
-                           });
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
+                });
         }
     }
 
@@ -32775,10 +32775,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:type");
             builder.AddElement<TextBoxFormFieldType>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -32819,11 +32819,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:maxLength");
             builder.AddElement<MaxLength>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L) });
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -32864,11 +32864,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:format");
             builder.AddElement<Format>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
- aBuilder.AddValidator(RequiredValidator.Instance);
- aBuilder.AddValidator(new StringValidator() { MaxLength = (64L) });
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (64L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -32923,24 +32923,24 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:col");
             builder.AddElement<Column>()
-.AddAttribute("w:w", a => a.Width, aBuilder =>
-{
-    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-    aBuilder.AddUnion(union =>
-    {
-        union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-        union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
-    });
-})
-.AddAttribute("w:space", a => a.Space, aBuilder =>
-{
-    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-    aBuilder.AddUnion(union =>
-    {
-        union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-        union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
-    });
-});
+                .AddAttribute("w:w", a => a.Width, aBuilder =>
+                {
+                    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                        union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
+                    });
+                })
+                .AddAttribute("w:space", a => a.Space, aBuilder =>
+                {
+                    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                        union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
+                    });
+                });
         }
 
         /// <inheritdoc/>
@@ -33040,21 +33040,21 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L) });
             builder.SetSchema("w:sectPrChange");
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PreviousSectionProperties>();
             builder.AddElement<SectionPropertiesChange>()
-.AddAttribute("w:author", a => a.Author, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
-})
-.AddAttribute("w:date", a => a.Date)
-.AddAttribute("w:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
-union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
-});
-});
+                .AddAttribute("w:author", a => a.Author, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
+                })
+                .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
+                    });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -33175,21 +33175,21 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             builder.SetSchema("w:rPrChange");
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PreviousParagraphMarkRunProperties>();
             builder.AddElement<ParagraphMarkRunPropertiesChange>()
-.AddAttribute("w:author", a => a.Author, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
-})
-.AddAttribute("w:date", a => a.Date)
-.AddAttribute("w:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
-union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
-});
-});
+                .AddAttribute("w:author", a => a.Author, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
+                })
+                .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
+                    });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -33324,10 +33324,10 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:rubyAlign");
             builder.AddElement<RubyAlign>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -33368,10 +33368,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:hpsRaise");
             builder.AddElement<PhoneticGuideRaise>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -33412,11 +33412,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:lid");
             builder.AddElement<LanguageId>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-    aBuilder.AddValidator(new StringValidator() { MaxLength = (84L) });
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (84L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -34241,7 +34241,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:storeMappedDataAs");
             builder.AddElement<SdtDateMappingType>()
-.AddAttribute("w:val", a => a.Val);
+                .AddAttribute("w:val", a => a.Val);
         }
 
         /// <inheritdoc/>
@@ -34282,7 +34282,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:calendar");
             builder.AddElement<Calendar>()
-.AddAttribute("w:val", a => a.Val);
+                .AddAttribute("w:val", a => a.Val);
         }
 
         /// <inheritdoc/>
@@ -34337,8 +34337,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:listItem");
             builder.AddElement<ListItem>()
-.AddAttribute("w:displayText", a => a.DisplayText)
-.AddAttribute("w:value", a => a.Value);
+                .AddAttribute("w:displayText", a => a.DisplayText)
+                .AddAttribute("w:value", a => a.Value);
         }
 
         /// <inheritdoc/>
@@ -35915,16 +35915,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:attr");
             builder.AddElement<CustomXmlAttribute>()
-.AddAttribute("w:uri", a => a.Uri)
-.AddAttribute("w:name", a => a.Name, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-   aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MaxLength = (255L) });
-})
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:uri", a => a.Uri)
+                .AddAttribute("w:name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MaxLength = (255L) });
+                })
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -35965,15 +35965,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:gridCol");
             builder.AddElement<GridColumn>()
-.AddAttribute("w:w", a => a.Width, aBuilder =>
-{
-aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddUnion(union =>
-{
-    union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-    union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
-});
-});
+                .AddAttribute("w:w", a => a.Width, aBuilder =>
+                {
+                    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                        union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
+                    });
+                });
         }
 
         /// <inheritdoc/>
@@ -36045,15 +36045,15 @@ aBuilder.AddUnion(union =>
             builder.SetSchema("w:tblGridChange");
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PreviousTableGrid>();
             builder.AddElement<TableGridChange>()
-.AddAttribute("w:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
-union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
-});
-});
+                .AddAttribute("w:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
+                    });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -36175,21 +36175,21 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             builder.SetSchema("w:tcPrChange");
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PreviousTableCellProperties>();
             builder.AddElement<TableCellPropertiesChange>()
-.AddAttribute("w:author", a => a.Author, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
-})
-.AddAttribute("w:date", a => a.Date)
-.AddAttribute("w:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
-union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
-});
-});
+                .AddAttribute("w:author", a => a.Author, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
+                })
+                .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
+                    });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -36641,21 +36641,21 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             builder.SetSchema("w:tblPrChange");
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PreviousTableProperties>();
             builder.AddElement<TablePropertiesChange>()
-.AddAttribute("w:author", a => a.Author, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
-})
-.AddAttribute("w:date", a => a.Date)
-.AddAttribute("w:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
-union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
-});
-});
+                .AddAttribute("w:author", a => a.Author, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
+                })
+                .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
+                    });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -36776,21 +36776,21 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             builder.SetSchema("w:tblPrExChange");
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PreviousTablePropertyExceptions>();
             builder.AddElement<TablePropertyExceptionsChange>()
-.AddAttribute("w:author", a => a.Author, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
-})
-.AddAttribute("w:date", a => a.Date)
-.AddAttribute("w:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
-union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
-});
-});
+                .AddAttribute("w:author", a => a.Author, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
+                })
+                .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
+                    });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -37276,10 +37276,10 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:pos");
             builder.AddElement<FootnotePosition>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -37334,14 +37334,14 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:numFmt");
             builder.AddElement<NumberingFormat>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
- aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("w:format", a => a.Format, aBuilder =>
-{
- aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("w:format", a => a.Format, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                });
         }
 
         /// <inheritdoc/>
@@ -37382,10 +37382,10 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:pos");
             builder.AddElement<EndnotePosition>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -37478,11 +37478,11 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<FootnoteEndnoteSeparatorReferenceType>()
-                           .AddAttribute("w:id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-2147483648L), MaxInclusive = (32767L) });
-                           });
+                .AddAttribute("w:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-2147483648L), MaxInclusive = (32767L) });
+                });
         }
     }
 
@@ -37568,10 +37568,10 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<UnsignedDecimalNumberType>()
-                           .AddAttribute("w:val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           });
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
     }
 
@@ -37609,10 +37609,10 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:uniqueTag");
             builder.AddElement<UniqueTag>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -37759,10 +37759,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:type");
             builder.AddElement<MailMergeFieldType>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -37803,10 +37803,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:type");
             builder.AddElement<MailMergeSource>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -38000,10 +38000,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:mainDocumentType");
             builder.AddElement<MainDocumentType>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -38044,10 +38044,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:dataType");
             builder.AddElement<DataType>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -38088,10 +38088,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:destination");
             builder.AddElement<Destination>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -38305,16 +38305,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:docVar");
             builder.AddElement<DocumentVariable>()
-.AddAttribute("w:name", a => a.Name, aBuilder =>
-{
- aBuilder.AddValidator(RequiredValidator.Instance);
- aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (255L) });
-})
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
- aBuilder.AddValidator(RequiredValidator.Instance);
- aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (65280L) });
-});
+                .AddAttribute("w:name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (255L) });
+                })
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (65280L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -38453,11 +38453,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<LongHexNumberType>()
-                           .AddAttribute("w:val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-                           });
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                });
         }
     }
 
@@ -39857,10 +39857,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<PixelsMeasureType>()
-                           .AddAttribute("w:val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           });
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
     }
 
@@ -39898,10 +39898,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:scrollbar");
             builder.AddElement<ScrollbarVisibility>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -40090,16 +40090,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<TwipsMeasureType>()
-                           .AddAttribute("w:val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-                                   union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
-                               });
-                           });
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                        union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
+                    });
+                });
         }
     }
 
@@ -40258,10 +40258,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:frameLayout");
             builder.AddElement<FrameLayout>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -40604,10 +40604,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:suff");
             builder.AddElement<LevelSuffix>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -40662,8 +40662,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:lvlText");
             builder.AddElement<LevelText>()
-.AddAttribute("w:val", a => a.Val)
-.AddAttribute("w:null", a => a.Null);
+                .AddAttribute("w:val", a => a.Val)
+                .AddAttribute("w:null", a => a.Null);
         }
 
         /// <inheritdoc/>
@@ -40732,25 +40732,25 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:legacy");
             builder.AddElement<LegacyNumbering>()
-.AddAttribute("w:legacy", a => a.Legacy)
-.AddAttribute("w:legacySpace", a => a.LegacySpace, aBuilder =>
-{
- aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
- aBuilder.AddUnion(union =>
- {
-     union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-     union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
- });
-})
-.AddAttribute("w:legacyIndent", a => a.LegacyIndent, aBuilder =>
-{
- aBuilder.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
- aBuilder.AddUnion(union =>
- {
-     union.AddValidator<IntegerValue>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-     union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
- });
-});
+                .AddAttribute("w:legacy", a => a.Legacy)
+                .AddAttribute("w:legacySpace", a => a.LegacySpace, aBuilder =>
+                {
+                    aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                        union.AddValidator(new StringValidator() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
+                    });
+                })
+                .AddAttribute("w:legacyIndent", a => a.LegacyIndent, aBuilder =>
+                {
+                    aBuilder.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<IntegerValue>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                        union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
+                    });
+                });
         }
 
         /// <inheritdoc/>
@@ -40791,10 +40791,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:lvlJc");
             builder.AddElement<LevelJustification>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-  aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -42057,10 +42057,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:multiLevelType");
             builder.AddElement<MultiLevelType>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -42182,15 +42182,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingSymbolRunProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleIdInLevel>();
             builder.AddElement<Level>()
-.AddAttribute("w:ilvl", a => a.LevelIndex, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("w:tplc", a => a.TemplateCode, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w:tentative", a => a.Tentative);
+                .AddAttribute("w:ilvl", a => a.LevelIndex, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("w:tplc", a => a.TemplateCode, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w:tentative", a => a.Tentative);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.StartNumberingValue), 0, 1),
@@ -42435,10 +42435,10 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.StartOverrideNumberingValue>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Level>();
             builder.AddElement<LevelOverride>()
-.AddAttribute("w:ilvl", a => a.LevelIndex, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:ilvl", a => a.LevelIndex, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.StartOverrideNumberingValue), 0, 1),
@@ -42543,10 +42543,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Drawing>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PictureBulletBase>();
             builder.AddElement<NumberingPictureBullet>()
-.AddAttribute("w:numPicBulletId", a => a.NumberingPictureBulletId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:numPicBulletId", a => a.NumberingPictureBulletId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -42665,11 +42665,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.StyleLink>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingStyleLink>();
             builder.AddElement<AbstractNum>()
-.AddAttribute("w:abstractNumId", a => a.AbstractNumberId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
-});
+                .AddAttribute("w:abstractNumId", a => a.AbstractNumberId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Nsid), 0, 1),
@@ -42832,10 +42832,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AbstractNumId>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LevelOverride>();
             builder.AddElement<NumberingInstance>()
-.AddAttribute("w:numId", a => a.NumberID, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:numId", a => a.NumberID, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.AbstractNumId), 1, 1),
@@ -43864,11 +43864,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:name");
             builder.AddElement<StyleName>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-   aBuilder.AddValidator(new StringValidator() { Pattern = ("[^,]*") });
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { Pattern = ("[^,]*") });
+                });
             builder.AddConstraint(new AttributeValuePatternConstraint("w:val", @"[^,]*") { Application = ApplicationType.Word });
         }
 
@@ -43910,11 +43910,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:uiPriority");
             builder.AddElement<UIPriority>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (99L) });
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (99L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -44983,10 +44983,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableCellProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableRowProperties>();
             builder.AddElement<TableStyleProperties>()
-.AddAttribute("w:type", a => a.Type, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:type", a => a.Type, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.StyleParagraphProperties), 0, 1),
@@ -45170,18 +45170,18 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:lsdException");
             builder.AddElement<LatentStyleExceptionInfo>()
-.AddAttribute("w:name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("w:locked", a => a.Locked)
-.AddAttribute("w:uiPriority", a => a.UiPriority, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (99L) });
-})
-.AddAttribute("w:semiHidden", a => a.SemiHidden)
-.AddAttribute("w:unhideWhenUsed", a => a.UnhideWhenUsed)
-.AddAttribute("w:qFormat", a => a.PrimaryStyle);
+                .AddAttribute("w:name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("w:locked", a => a.Locked)
+                .AddAttribute("w:uiPriority", a => a.UiPriority, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (99L) });
+                })
+                .AddAttribute("w:semiHidden", a => a.SemiHidden)
+                .AddAttribute("w:unhideWhenUsed", a => a.UnhideWhenUsed)
+                .AddAttribute("w:qFormat", a => a.PrimaryStyle);
         }
 
         /// <inheritdoc/>
@@ -45412,15 +45412,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("w:latentStyles");
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LatentStyleExceptionInfo>();
             builder.AddElement<LatentStyles>()
-.AddAttribute("w:defLockedState", a => a.DefaultLockedState)
-.AddAttribute("w:defUIPriority", a => a.DefaultUiPriority, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (99L) });
-})
-.AddAttribute("w:defSemiHidden", a => a.DefaultSemiHidden)
-.AddAttribute("w:defUnhideWhenUsed", a => a.DefaultUnhideWhenUsed)
-.AddAttribute("w:defQFormat", a => a.DefaultPrimaryStyle)
-.AddAttribute("w:count", a => a.Count);
+                .AddAttribute("w:defLockedState", a => a.DefaultLockedState)
+                .AddAttribute("w:defUIPriority", a => a.DefaultUiPriority, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (99L) });
+                })
+                .AddAttribute("w:defSemiHidden", a => a.DefaultSemiHidden)
+                .AddAttribute("w:defUnhideWhenUsed", a => a.DefaultUnhideWhenUsed)
+                .AddAttribute("w:defQFormat", a => a.DefaultPrimaryStyle)
+                .AddAttribute("w:count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.LatentStyleExceptionInfo), 0, 0)
@@ -45580,13 +45580,13 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableRowProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.UIPriority>();
             builder.AddElement<Style>()
-.AddAttribute("w:type", a => a.Type)
-.AddAttribute("w:styleId", a => a.StyleId, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
-})
-.AddAttribute("w:default", a => a.Default)
-.AddAttribute("w:customStyle", a => a.CustomStyle);
+                .AddAttribute("w:type", a => a.Type)
+                .AddAttribute("w:styleId", a => a.StyleId, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
+                })
+                .AddAttribute("w:default", a => a.Default)
+                .AddAttribute("w:customStyle", a => a.CustomStyle);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.StyleName), 0, 1),
@@ -45977,10 +45977,10 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (253L) });
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Pitch>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AltName>();
             builder.AddElement<Font>()
-.AddAttribute("w:name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.AltName), 0, 1),
@@ -46276,16 +46276,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<SignedTwipsMeasureType>()
-                           .AddAttribute("w:val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator<IntegerValue>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-                                   union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
-                               });
-                           });
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<IntegerValue>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                        union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
+                    });
+                });
         }
     }
 
@@ -46658,15 +46658,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TopMarginDiv>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BottomMarginDiv>();
             builder.AddElement<Div>()
-.AddAttribute("w:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (1L) });
-union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-1L) });
-});
-});
+                .AddAttribute("w:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (1L) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-1L) });
+                    });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BlockQuote), 0, 1),
@@ -46905,25 +46905,25 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-1L) });
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtBlock>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Table>();
             builder.AddElement<Comment>()
-.AddAttribute("w:initials", a => a.Initials, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MaxLength = (9L) });
-})
-.AddAttribute("w:author", a => a.Author, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
-})
-.AddAttribute("w:date", a => a.Date)
-.AddAttribute("w:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
-union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
-});
-});
+                .AddAttribute("w:initials", a => a.Initials, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (9L) });
+                })
+                .AddAttribute("w:author", a => a.Author, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
+                })
+                .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
+                    });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -47532,12 +47532,12 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
             builder.AddElement<FootnoteEndnoteType>()
-.AddAttribute("w:type", a => a.Type)
-.AddAttribute("w:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-2147483648L), MaxInclusive = (32767L) });
-});
+                .AddAttribute("w:type", a => a.Type)
+                .AddAttribute("w:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-2147483648L), MaxInclusive = (32767L) });
+                });
         }
     }
 
@@ -47575,10 +47575,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-2147483648L), Max
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:behavior");
             builder.AddElement<Behavior>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -47619,10 +47619,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:type");
             builder.AddElement<DocPartType>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -47663,10 +47663,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:gallery");
             builder.AddElement<Gallery>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -47721,16 +47721,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:autoCaption");
             builder.AddElement<AutoCaption>()
-.AddAttribute("w:name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
-})
-.AddAttribute("w:caption", a => a.Caption, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
-});
+                .AddAttribute("w:name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
+                })
+                .AddAttribute("w:caption", a => a.Caption, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
+                });
             builder.AddConstraint(new UniqueAttributeValueConstraint("w:name", true, null));
         }
 
@@ -47856,17 +47856,17 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:caption");
             builder.AddElement<Caption>()
-.AddAttribute("w:name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
-})
-.AddAttribute("w:pos", a => a.Position)
-.AddAttribute("w:chapNum", a => a.ChapterNumber)
-.AddAttribute("w:heading", a => a.Heading)
-.AddAttribute("w:noLabel", a => a.NoLabel)
-.AddAttribute("w:numFmt", a => a.NumberFormat)
-.AddAttribute("w:sep", a => a.Separator);
+                .AddAttribute("w:name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
+                })
+                .AddAttribute("w:pos", a => a.Position)
+                .AddAttribute("w:chapNum", a => a.ChapterNumber)
+                .AddAttribute("w:heading", a => a.Heading)
+                .AddAttribute("w:noLabel", a => a.NoLabel)
+                .AddAttribute("w:numFmt", a => a.NumberFormat)
+                .AddAttribute("w:sep", a => a.Separator);
         }
 
         /// <inheritdoc/>
@@ -48040,23 +48040,23 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
             builder.SetSchema("w:background");
             builder.AddChild<DocumentFormat.OpenXml.Vml.Background>();
             builder.AddElement<DocumentBackground>()
-.AddAttribute("w:color", a => a.Color, aBuilder =>
-{
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(EnumValidator.Instance);
-union.AddValidator<HexBinaryValue>(new StringValidator() { Length = (3L) });
-});
-})
-.AddAttribute("w:themeColor", a => a.ThemeColor)
-.AddAttribute("w:themeTint", a => a.ThemeTint, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
-})
-.AddAttribute("w:themeShade", a => a.ThemeShade, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
-});
+                .AddAttribute("w:color", a => a.Color, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(EnumValidator.Instance);
+                        union.AddValidator<HexBinaryValue>(new StringValidator() { Length = (3L) });
+                    });
+                })
+                .AddAttribute("w:themeColor", a => a.ThemeColor)
+                .AddAttribute("w:themeTint", a => a.ThemeTint, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+                })
+                .AddAttribute("w:themeShade", a => a.ThemeShade, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Background), 1, 1)
@@ -48189,11 +48189,11 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:name");
             builder.AddElement<DocPartName>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("w:decorated", a => a.Decorated);
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("w:decorated", a => a.Decorated);
             builder.AddConstraint(new AttributeValuePatternConstraint("w:val", @"[^,]*") { Application = ApplicationType.Word });
         }
 
@@ -48355,7 +48355,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
             builder.SetSchema("w:types");
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DocPartType>();
             builder.AddElement<DocPartTypes>()
-.AddAttribute("w:all", a => a.All);
+                .AddAttribute("w:all", a => a.All);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPartType), 1, 0)
@@ -48460,10 +48460,10 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:guid");
             builder.AddElement<DocPartId>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-   aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                });
             builder.AddConstraint(new UniqueAttributeValueConstraint("w:val", false, null));
         }
 
@@ -49302,18 +49302,18 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:compatSetting");
             builder.AddElement<CompatibilitySetting>()
-.AddAttribute("w:name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("w:uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("w:uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new AttributeValueConditionToAnother("w:val", "w:name", new string[] { "11", "12", "14", "15" }, new string[] { "compatibilityMode" }) { Version = FileFormatVersions.Office2010 });
         }
 
@@ -49417,15 +49417,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<TableWidthDxaNilType>()
-                           .AddAttribute("w:w", a => a.Width, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
-                           })
-                           .AddAttribute("w:type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           });
+                .AddAttribute("w:w", a => a.Width, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
+                })
+                .AddAttribute("w:type", a => a.Type, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
     }
 
@@ -49877,21 +49877,21 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("w:trPrChange");
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PreviousTableRowProperties>();
             builder.AddElement<TableRowPropertiesChange>()
-.AddAttribute("w:author", a => a.Author, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
-})
-.AddAttribute("w:date", a => a.Date)
-.AddAttribute("w:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
-union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
-});
-});
+                .AddAttribute("w:author", a => a.Author, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
+                })
+                .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
+                    });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -50644,12 +50644,12 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:control");
             builder.AddElement<Control>()
-.AddAttribute("w:name", a => a.Name)
-.AddAttribute("w:shapeid", a => a.ShapeId, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MaxLength = (254L) });
-})
-.AddAttribute("r:id", a => a.Id);
+                .AddAttribute("w:name", a => a.Name)
+                .AddAttribute("w:shapeid", a => a.ShapeId, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (254L) });
+                })
+                .AddAttribute("r:id", a => a.Id);
             builder.AddConstraint(new RelationshipTypeConstraint("w:id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control"));
             builder.AddConstraint(new UniqueAttributeValueConstraint("w:name", true, null));
         }
@@ -50808,14 +50808,14 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (254L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:objectEmbed");
             builder.AddElement<ObjectEmbed>()
-.AddAttribute("w:drawAspect", a => a.drawAspect)
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("w:progId", a => a.ProgId)
-.AddAttribute("w:shapeId", a => a.ShapeId)
-.AddAttribute("w:fieldCodes", a => a.FieldCodes);
+                .AddAttribute("w:drawAspect", a => a.drawAspect)
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("w:progId", a => a.ProgId)
+                .AddAttribute("w:shapeId", a => a.ShapeId)
+                .AddAttribute("w:fieldCodes", a => a.FieldCodes);
         }
 
         /// <inheritdoc/>
@@ -50940,19 +50940,19 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:objectLink");
             builder.AddElement<ObjectLink>()
-.AddAttribute("w:updateMode", a => a.UpdateMode, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("w:lockedField", a => a.LockedField)
-.AddAttribute("w:drawAspect", a => a.drawAspect)
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("w:progId", a => a.ProgId)
-.AddAttribute("w:shapeId", a => a.ShapeId)
-.AddAttribute("w:fieldCodes", a => a.FieldCodes);
+                .AddAttribute("w:updateMode", a => a.UpdateMode, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("w:lockedField", a => a.LockedField)
+                .AddAttribute("w:drawAspect", a => a.drawAspect)
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("w:progId", a => a.ProgId)
+                .AddAttribute("w:shapeId", a => a.ShapeId)
+                .AddAttribute("w:fieldCodes", a => a.FieldCodes);
         }
 
         /// <inheritdoc/>
@@ -50993,7 +50993,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:lock");
             builder.AddElement<Lock>()
-.AddAttribute("w:val", a => a.Val);
+                .AddAttribute("w:val", a => a.Val);
         }
 
         /// <inheritdoc/>
@@ -51135,15 +51135,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:dataBinding");
             builder.AddElement<DataBinding>()
-.AddAttribute("w:prefixMappings", a => a.PrefixMappings)
-.AddAttribute("w:xpath", a => a.XPath, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("w:storeItemID", a => a.StoreItemId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:prefixMappings", a => a.PrefixMappings)
+                .AddAttribute("w:xpath", a => a.XPath, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("w:storeItemID", a => a.StoreItemId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -51215,7 +51215,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("w:comboBox");
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ListItem>();
             builder.AddElement<SdtContentComboBox>()
-.AddAttribute("w:lastValue", a => a.LastValue);
+                .AddAttribute("w:lastValue", a => a.LastValue);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ListItem), 0, 0)
@@ -51297,7 +51297,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtDateMappingType>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DateFormat>();
             builder.AddElement<SdtContentDate>()
-.AddAttribute("w:fullDate", a => a.FullDate);
+                .AddAttribute("w:fullDate", a => a.FullDate);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DateFormat), 0, 1),
@@ -51648,7 +51648,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("w:dropDownList");
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ListItem>();
             builder.AddElement<SdtContentDropDownList>()
-.AddAttribute("w:lastValue", a => a.LastValue);
+                .AddAttribute("w:lastValue", a => a.LastValue);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ListItem), 0, 0)
@@ -51693,7 +51693,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:text");
             builder.AddElement<SdtContentText>()
-.AddAttribute("w:multiLine", a => a.MultiLine);
+                .AddAttribute("w:multiLine", a => a.MultiLine);
         }
 
         /// <inheritdoc/>
@@ -51958,44 +51958,44 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:writeProtection");
             builder.AddElement<WriteProtection>()
-.AddAttribute("w:recommended", a => a.Recommended)
-.AddAttribute("w:cryptProviderType", a => a.CryptographicProviderType)
-.AddAttribute("w:cryptAlgorithmClass", a => a.CryptographicAlgorithmClass)
-.AddAttribute("w:cryptAlgorithmType", a => a.CryptographicAlgorithmType)
-.AddAttribute("w:cryptAlgorithmSid", a => a.CryptographicAlgorithmSid)
-.AddAttribute("w:cryptSpinCount", a => a.CryptographicSpinCount, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (5000000L) });
-})
-.AddAttribute("w:cryptProvider", a => a.CryptographicProvider)
-.AddAttribute("w:algIdExt", a => a.AlgorithmIdExtensibility, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w:algIdExtSource", a => a.AlgorithmIdExtensibilitySource)
-.AddAttribute("w:cryptProviderTypeExt", a => a.CryptographicProviderTypeExtensibility, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w:cryptProviderTypeExtSource", a => a.CryptographicProviderTypeExtSource)
-.AddAttribute("w:hash", a => a.Hash)
-.AddAttribute("w:salt", a => a.Salt)
-.AddAttribute("w:algorithmName", a => a.AlgorithmName, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:hashValue", a => a.HashValue, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:saltValue", a => a.SaltValue, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:spinCount", a => a.SpinCount, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-});
+                .AddAttribute("w:recommended", a => a.Recommended)
+                .AddAttribute("w:cryptProviderType", a => a.CryptographicProviderType)
+                .AddAttribute("w:cryptAlgorithmClass", a => a.CryptographicAlgorithmClass)
+                .AddAttribute("w:cryptAlgorithmType", a => a.CryptographicAlgorithmType)
+                .AddAttribute("w:cryptAlgorithmSid", a => a.CryptographicAlgorithmSid)
+                .AddAttribute("w:cryptSpinCount", a => a.CryptographicSpinCount, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (5000000L) });
+                })
+                .AddAttribute("w:cryptProvider", a => a.CryptographicProvider)
+                .AddAttribute("w:algIdExt", a => a.AlgorithmIdExtensibility, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w:algIdExtSource", a => a.AlgorithmIdExtensibilitySource)
+                .AddAttribute("w:cryptProviderTypeExt", a => a.CryptographicProviderTypeExtensibility, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w:cryptProviderTypeExtSource", a => a.CryptographicProviderTypeExtSource)
+                .AddAttribute("w:hash", a => a.Hash)
+                .AddAttribute("w:salt", a => a.Salt)
+                .AddAttribute("w:algorithmName", a => a.AlgorithmName, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:hashValue", a => a.HashValue, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:saltValue", a => a.SaltValue, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:spinCount", a => a.SpinCount, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                });
         }
 
         /// <inheritdoc/>
@@ -52036,10 +52036,10 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:view");
             builder.AddElement<View>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -52094,21 +52094,21 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:zoom");
             builder.AddElement<Zoom>()
-.AddAttribute("w:val", a => a.Val)
-.AddAttribute("w:percent", a => a.Percent, aBuilder =>
-{
-   aBuilder.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-   aBuilder.AddUnion(union =>
-   {
-       union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), Version = (FileFormatVersions.Office2010) });
-       union.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2010) });
-   });
-   aBuilder.AddUnion(union =>
-   {
-       union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), InitialVersion = (FileFormatVersions.Office2013) });
-       union.AddValidator<Int32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2013) });
-   });
-});
+                .AddAttribute("w:val", a => a.Val)
+                .AddAttribute("w:percent", a => a.Percent, aBuilder =>
+                {
+                    aBuilder.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), Version = (FileFormatVersions.Office2010) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2010) });
+                    });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), InitialVersion = (FileFormatVersions.Office2013) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2013) });
+                    });
+                });
         }
 
         /// <inheritdoc/>
@@ -52219,29 +52219,29 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:activeWritingStyle");
             builder.AddElement<ActiveWritingStyle>()
-.AddAttribute("w:lang", a => a.Language, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { MaxLength = (84L) });
-})
-.AddAttribute("w:vendorID", a => a.VendorID, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("w:dllVersion", a => a.DllVersion, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
-})
-.AddAttribute("w:nlCheck", a => a.NaturalLanguageGrammarCheck)
-.AddAttribute("w:checkStyle", a => a.CheckStyle, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("w:appName", a => a.ApplicationName, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:lang", a => a.Language, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (84L) });
+                })
+                .AddAttribute("w:vendorID", a => a.VendorID, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("w:dllVersion", a => a.DllVersion, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
+                })
+                .AddAttribute("w:nlCheck", a => a.NaturalLanguageGrammarCheck)
+                .AddAttribute("w:checkStyle", a => a.CheckStyle, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("w:appName", a => a.ApplicationName, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -52296,8 +52296,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:proofState");
             builder.AddElement<ProofState>()
-.AddAttribute("w:spelling", a => a.Spelling)
-.AddAttribute("w:grammar", a => a.Grammar);
+                .AddAttribute("w:spelling", a => a.Spelling)
+                .AddAttribute("w:grammar", a => a.Grammar);
         }
 
         /// <inheritdoc/>
@@ -52548,70 +52548,70 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:stylePaneFormatFilter");
             builder.AddElement<StylePaneFormatFilter>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (2L) });
-})
-.AddAttribute("w:allStyles", a => a.AllStyles, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:customStyles", a => a.CustomStyles, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:latentStyles", a => a.LatentStyles, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:stylesInUse", a => a.StylesInUse, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:headingStyles", a => a.HeadingStyles, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:numberingStyles", a => a.NumberingStyles, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:tableStyles", a => a.TableStyles, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:directFormattingOnRuns", a => a.DirectFormattingOnRuns, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:directFormattingOnParagraphs", a => a.DirectFormattingOnParagraphs, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:directFormattingOnNumbering", a => a.DirectFormattingOnNumbering, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:directFormattingOnTables", a => a.DirectFormattingOnTables, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:clearFormatting", a => a.ClearFormatting, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:top3HeadingStyles", a => a.Top3HeadingStyles, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:visibleStyles", a => a.VisibleStyles, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:alternateStyleNames", a => a.AlternateStyleNames, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (2L) });
+                })
+                .AddAttribute("w:allStyles", a => a.AllStyles, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:customStyles", a => a.CustomStyles, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:latentStyles", a => a.LatentStyles, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:stylesInUse", a => a.StylesInUse, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:headingStyles", a => a.HeadingStyles, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:numberingStyles", a => a.NumberingStyles, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:tableStyles", a => a.TableStyles, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:directFormattingOnRuns", a => a.DirectFormattingOnRuns, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:directFormattingOnParagraphs", a => a.DirectFormattingOnParagraphs, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:directFormattingOnNumbering", a => a.DirectFormattingOnNumbering, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:directFormattingOnTables", a => a.DirectFormattingOnTables, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:clearFormatting", a => a.ClearFormatting, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:top3HeadingStyles", a => a.Top3HeadingStyles, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:visibleStyles", a => a.VisibleStyles, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:alternateStyleNames", a => a.AlternateStyleNames, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                });
             builder.AddConstraint(new AttributeValueSetConstraint("w:val", false, new string[] { "0x0040", "0x0080", "0x0800" }) { Application = ApplicationType.Word });
         }
 
@@ -52653,12 +52653,12 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:stylePaneSortMethod");
             builder.AddElement<StylePaneSortMethods>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator<HexBinaryValue>(new StringValidator() { Length = (2L), Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.StylePaneSortMethodsValues>>(new EnumValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator<HexBinaryValue>(new StringValidator() { Length = (2L), Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.StylePaneSortMethodsValues>>(new EnumValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+                });
         }
 
         /// <inheritdoc/>
@@ -52699,10 +52699,10 @@ aBuilder.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.StylePaneS
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:documentType");
             builder.AddElement<DocumentType>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -53112,11 +53112,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:revisionView");
             builder.AddElement<RevisionView>()
-.AddAttribute("w:markup", a => a.Markup)
-.AddAttribute("w:comments", a => a.Comments)
-.AddAttribute("w:insDel", a => a.DisplayRevision)
-.AddAttribute("w:formatting", a => a.Formatting)
-.AddAttribute("w:inkAnnotations", a => a.InkAnnotations);
+                .AddAttribute("w:markup", a => a.Markup)
+                .AddAttribute("w:comments", a => a.Comments)
+                .AddAttribute("w:insDel", a => a.DisplayRevision)
+                .AddAttribute("w:formatting", a => a.Formatting)
+                .AddAttribute("w:inkAnnotations", a => a.InkAnnotations);
         }
 
         /// <inheritdoc/>
@@ -53409,46 +53409,46 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:documentProtection");
             builder.AddElement<DocumentProtection>()
-.AddAttribute("w:edit", a => a.Edit)
-.AddAttribute("w:formatting", a => a.Formatting)
-.AddAttribute("w:enforcement", a => a.Enforcement)
-.AddAttribute("w:cryptProviderType", a => a.CryptographicProviderType)
-.AddAttribute("w:cryptAlgorithmClass", a => a.CryptographicAlgorithmClass)
-.AddAttribute("w:cryptAlgorithmType", a => a.CryptographicAlgorithmType)
-.AddAttribute("w:cryptAlgorithmSid", a => a.CryptographicAlgorithmSid)
-.AddAttribute("w:cryptSpinCount", a => a.CryptographicSpinCount, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (5000000L) });
-})
-.AddAttribute("w:cryptProvider", a => a.CryptographicProvider)
-.AddAttribute("w:algIdExt", a => a.AlgorithmIdExtensibility, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w:algIdExtSource", a => a.AlgorithmIdExtensibilitySource)
-.AddAttribute("w:cryptProviderTypeExt", a => a.CryptographicProviderTypeExtensibility, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w:cryptProviderTypeExtSource", a => a.CryptographicProviderTypeExtSource)
-.AddAttribute("w:hash", a => a.Hash)
-.AddAttribute("w:salt", a => a.Salt)
-.AddAttribute("w:algorithmName", a => a.AlgorithmName, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:hashValue", a => a.HashValue, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:saltValue", a => a.SaltValue, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("w:spinCount", a => a.SpinCount, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-});
+                .AddAttribute("w:edit", a => a.Edit)
+                .AddAttribute("w:formatting", a => a.Formatting)
+                .AddAttribute("w:enforcement", a => a.Enforcement)
+                .AddAttribute("w:cryptProviderType", a => a.CryptographicProviderType)
+                .AddAttribute("w:cryptAlgorithmClass", a => a.CryptographicAlgorithmClass)
+                .AddAttribute("w:cryptAlgorithmType", a => a.CryptographicAlgorithmType)
+                .AddAttribute("w:cryptAlgorithmSid", a => a.CryptographicAlgorithmSid)
+                .AddAttribute("w:cryptSpinCount", a => a.CryptographicSpinCount, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (5000000L) });
+                })
+                .AddAttribute("w:cryptProvider", a => a.CryptographicProvider)
+                .AddAttribute("w:algIdExt", a => a.AlgorithmIdExtensibility, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w:algIdExtSource", a => a.AlgorithmIdExtensibilitySource)
+                .AddAttribute("w:cryptProviderTypeExt", a => a.CryptographicProviderTypeExtensibility, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w:cryptProviderTypeExtSource", a => a.CryptographicProviderTypeExtSource)
+                .AddAttribute("w:hash", a => a.Hash)
+                .AddAttribute("w:salt", a => a.Salt)
+                .AddAttribute("w:algorithmName", a => a.AlgorithmName, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:hashValue", a => a.HashValue, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:saltValue", a => a.SaltValue, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("w:spinCount", a => a.SpinCount, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                });
             builder.AddConstraint(new AttributeValueSetConstraint("w:cryptAlgorithmSid", true, new string[] { "1", "2", "3", "4", "12", "13", "14" }));
         }
 
@@ -53538,11 +53538,11 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<NonNegativeShortType>()
-                           .AddAttribute("w:val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
-                           });
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
+                });
         }
     }
 
@@ -53580,10 +53580,10 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:consecutiveHyphenLimit");
             builder.AddElement<ConsecutiveHyphenLimit>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -53624,11 +53624,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:summaryLength");
             builder.AddElement<SummaryLength>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -53717,11 +53717,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<UnsignedInt7Type>()
-                           .AddAttribute("w:val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (127L) });
-                           });
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (127L) });
+                });
         }
     }
 
@@ -53759,10 +53759,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:characterSpacingControl");
             builder.AddElement<CharacterSpacingControl>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -53817,16 +53817,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:noLineBreaksAfter");
             builder.AddElement<NoLineBreaksAfterKinsoku>()
-.AddAttribute("w:lang", a => a.Language, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { MaxLength = (84L) });
-})
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { MaxLength = (50L) });
-});
+                .AddAttribute("w:lang", a => a.Language, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (84L) });
+                })
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (50L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -53881,16 +53881,16 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (50L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:noLineBreaksBefore");
             builder.AddElement<NoLineBreaksBeforeKinsoku>()
-.AddAttribute("w:lang", a => a.Language, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { MaxLength = (84L) });
-})
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
-});
+                .AddAttribute("w:lang", a => a.Language, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (84L) });
+                })
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -53945,8 +53945,8 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:saveThroughXslt");
             builder.AddElement<SaveThroughXslt>()
-.AddAttribute("r:id", a => a.Id)
-.AddAttribute("w:solutionID", a => a.SolutionId);
+                .AddAttribute("r:id", a => a.Id)
+                .AddAttribute("w:solutionID", a => a.SolutionId);
             builder.AddConstraint(new RelationshipTypeConstraint(":id", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/transform"));
         }
 
@@ -55825,18 +55825,18 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:clrSchemeMapping");
             builder.AddElement<ColorSchemeMapping>()
-.AddAttribute("w:bg1", a => a.Background1)
-.AddAttribute("w:t1", a => a.Text1)
-.AddAttribute("w:bg2", a => a.Background2)
-.AddAttribute("w:t2", a => a.Text2)
-.AddAttribute("w:accent1", a => a.Accent1)
-.AddAttribute("w:accent2", a => a.Accent2)
-.AddAttribute("w:accent3", a => a.Accent3)
-.AddAttribute("w:accent4", a => a.Accent4)
-.AddAttribute("w:accent5", a => a.Accent5)
-.AddAttribute("w:accent6", a => a.Accent6)
-.AddAttribute("w:hyperlink", a => a.Hyperlink)
-.AddAttribute("w:followedHyperlink", a => a.FollowedHyperlink);
+                .AddAttribute("w:bg1", a => a.Background1)
+                .AddAttribute("w:t1", a => a.Text1)
+                .AddAttribute("w:bg2", a => a.Background2)
+                .AddAttribute("w:t2", a => a.Text2)
+                .AddAttribute("w:accent1", a => a.Accent1)
+                .AddAttribute("w:accent2", a => a.Accent2)
+                .AddAttribute("w:accent3", a => a.Accent3)
+                .AddAttribute("w:accent4", a => a.Accent4)
+                .AddAttribute("w:accent5", a => a.Accent5)
+                .AddAttribute("w:accent6", a => a.Accent6)
+                .AddAttribute("w:hyperlink", a => a.Hyperlink)
+                .AddAttribute("w:followedHyperlink", a => a.FollowedHyperlink);
         }
 
         /// <inheritdoc/>
@@ -55982,30 +55982,30 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (100L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:readModeInkLockDown");
             builder.AddElement<ReadModeInkLockDown>()
-.AddAttribute("w:actualPg", a => a.UseActualPages)
-.AddAttribute("w:w", a => a.Width, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("w:h", a => a.Height, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("w:fontSz", a => a.FontSize, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddUnion(union =>
-{
-union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), Version = (FileFormatVersions.Office2010) });
-union.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2010) });
-});
-aBuilder.AddUnion(union =>
-{
-union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), InitialVersion = (FileFormatVersions.Office2013) });
-union.AddValidator<Int32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2013) });
-});
-});
+                .AddAttribute("w:actualPg", a => a.UseActualPages)
+                .AddAttribute("w:w", a => a.Width, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("w:h", a => a.Height, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("w:fontSz", a => a.FontSize, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), Version = (FileFormatVersions.Office2010) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2010) });
+                    });
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), InitialVersion = (FileFormatVersions.Office2013) });
+                        union.AddValidator<Int32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2013) });
+                    });
+                });
         }
 
         /// <inheritdoc/>
@@ -56046,10 +56046,10 @@ union.AddValidator<Int32Value>(new NumberValidator() { InitialVersion = (FileFor
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:targetScreenSz");
             builder.AddElement<TargetScreenSize>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -56180,11 +56180,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:panose1");
             builder.AddElement<Panose1Number>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { Length = (10L) });
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { Length = (10L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -56239,11 +56239,11 @@ aBuilder.AddValidator(new StringValidator() { Length = (10L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:charset");
             builder.AddElement<FontCharSet>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
-})
-.AddAttribute("w:characterSet", a => a.StrictCharacterSet);
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+                })
+                .AddAttribute("w:characterSet", a => a.StrictCharacterSet);
         }
 
         /// <inheritdoc/>
@@ -56284,10 +56284,10 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:family");
             builder.AddElement<FontFamily>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
- aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -56328,10 +56328,10 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:pitch");
             builder.AddElement<Pitch>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-  aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -56442,36 +56442,36 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:sig");
             builder.AddElement<FontSignature>()
-.AddAttribute("w:usb0", a => a.UnicodeSignature0, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w:usb1", a => a.UnicodeSignature1, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w:usb2", a => a.UnicodeSignature2, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w:usb3", a => a.UnicodeSignature3, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w:csb0", a => a.CodePageSignature0, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w:csb1", a => a.CodePageSignature1, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-});
+                .AddAttribute("w:usb0", a => a.UnicodeSignature0, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w:usb1", a => a.UnicodeSignature1, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w:usb2", a => a.UnicodeSignature2, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w:usb3", a => a.UnicodeSignature3, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w:csb0", a => a.CodePageSignature0, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w:csb1", a => a.CodePageSignature1, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                });
             builder.AddConstraint(new AttributeValuePatternConstraint("w:csb0", @"[0-9a-fA-F]{8}") { Version = FileFormatVersions.Office2010 });
             builder.AddConstraint(new AttributeValuePatternConstraint("w:csb1", @"[0-9a-fA-F]{8}") { Version = FileFormatVersions.Office2010 });
         }
@@ -56645,15 +56645,15 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<FontRelationshipType>()
-                           .AddAttribute("w:fontKey", a => a.FontKey, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute("w:subsetted", a => a.Subsetted)
-                           .AddAttribute("r:id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           });
+                .AddAttribute("w:fontKey", a => a.FontKey, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("w:subsetted", a => a.Subsetted)
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
     }
 

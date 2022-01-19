@@ -315,10 +315,10 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             builder.SetSchema("cx:ext");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<Extension2>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new AnyParticle(1, 1)
@@ -374,10 +374,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("cx:pt");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ChartStringValue>()
-.AddAttribute("idx", a => a.Index, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("idx", a => a.Index, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -429,10 +429,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("cx:pt");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<NumericValue>()
-.AddAttribute("idx", a => a.Idx, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("idx", a => a.Idx, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -504,10 +504,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Formula>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericLevel>();
             builder.AddElement<NumericDimension>()
-.AddAttribute("type", a => a.Type, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("type", a => a.Type, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -587,10 +587,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Formula>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringLevel>();
             builder.AddElement<StringDimension>()
-.AddAttribute("type", a => a.Type, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("type", a => a.Type, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -715,14 +715,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("cx:externalData");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ExternalData>()
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("cx:autoUpdate", a => a.AutoUpdate, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2016));
-});
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("cx:autoUpdate", a => a.AutoUpdate, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2016));
+                });
         }
 
         /// <inheritdoc/>
@@ -796,10 +796,10 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2016))
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericDimension>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringDimension>();
             builder.AddElement<Data>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
@@ -1275,10 +1275,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddElement<ShapeProperties>()
-.AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
@@ -1488,14 +1488,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("cx:catScaling");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<CategoryAxisScaling>()
-.AddAttribute("gapWidth", a => a.GapWidth, aBuilder =>
-{
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<DoubleValue>(new NumberValidator() { MinInclusive = (0L) });
-union.AddValidator(StringValidator.Instance);
-});
-});
+                .AddAttribute("gapWidth", a => a.GapWidth, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<DoubleValue>(new NumberValidator() { MinInclusive = (0L) });
+                        union.AddValidator(StringValidator.Instance);
+                    });
+                });
         }
 
         /// <inheritdoc/>
@@ -1567,38 +1567,38 @@ union.AddValidator(StringValidator.Instance);
             builder.SetSchema("cx:valScaling");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ValueAxisScaling>()
-.AddAttribute("max", a => a.Max, aBuilder =>
-{
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<DoubleValue>(NumberValidator.Instance);
-union.AddValidator(StringValidator.Instance);
-});
-})
-.AddAttribute("min", a => a.Min, aBuilder =>
-{
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<DoubleValue>(NumberValidator.Instance);
-union.AddValidator(StringValidator.Instance);
-});
-})
-.AddAttribute("majorUnit", a => a.MajorUnit, aBuilder =>
-{
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<DoubleValue>(new NumberValidator() { MinExclusive = (0L) });
-union.AddValidator(StringValidator.Instance);
-});
-})
-.AddAttribute("minorUnit", a => a.MinorUnit, aBuilder =>
-{
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<DoubleValue>(new NumberValidator() { MinExclusive = (0L) });
-union.AddValidator(StringValidator.Instance);
-});
-});
+                .AddAttribute("max", a => a.Max, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<DoubleValue>(NumberValidator.Instance);
+                        union.AddValidator(StringValidator.Instance);
+                    });
+                })
+                .AddAttribute("min", a => a.Min, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<DoubleValue>(NumberValidator.Instance);
+                        union.AddValidator(StringValidator.Instance);
+                    });
+                })
+                .AddAttribute("majorUnit", a => a.MajorUnit, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<DoubleValue>(new NumberValidator() { MinExclusive = (0L) });
+                        union.AddValidator(StringValidator.Instance);
+                    });
+                })
+                .AddAttribute("minorUnit", a => a.MinorUnit, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<DoubleValue>(new NumberValidator() { MinExclusive = (0L) });
+                        union.AddValidator(StringValidator.Instance);
+                    });
+                });
         }
 
         /// <inheritdoc/>
@@ -1792,7 +1792,7 @@ union.AddValidator(StringValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnitsLabel>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             builder.AddElement<AxisUnits>()
-.AddAttribute("unit", a => a.Unit);
+                .AddAttribute("unit", a => a.Unit);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnitsLabel), 0, 1, version: FileFormatVersions.Office2016),
@@ -2213,7 +2213,7 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             builder.AddElement<OpenXmlTickMarksElement>()
-.AddAttribute("type", a => a.Type);
+                .AddAttribute("type", a => a.Type);
         }
 
         /// <summary>
@@ -2347,11 +2347,11 @@ union.AddValidator(StringValidator.Instance);
             builder.SetSchema("cx:numFmt");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<NumberFormat>()
-.AddAttribute("formatCode", a => a.FormatCode, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("sourceLinked", a => a.SourceLinked);
+                .AddAttribute("formatCode", a => a.FormatCode, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("sourceLinked", a => a.SourceLinked);
         }
 
         /// <inheritdoc/>
@@ -2430,10 +2430,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("cx:parentLabelLayout");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ParentLabelLayout>()
-.AddAttribute("val", a => a.ParentLabelLayoutVal, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("val", a => a.ParentLabelLayoutVal, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -2516,11 +2516,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("cx:visibility");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<SeriesElementVisibilities>()
-.AddAttribute("connectorLines", a => a.ConnectorLines)
-.AddAttribute("meanLine", a => a.MeanLine)
-.AddAttribute("meanMarker", a => a.MeanMarker)
-.AddAttribute("nonoutliers", a => a.Nonoutliers)
-.AddAttribute("outliers", a => a.Outliers);
+                .AddAttribute("connectorLines", a => a.ConnectorLines)
+                .AddAttribute("meanLine", a => a.MeanLine)
+                .AddAttribute("meanMarker", a => a.MeanMarker)
+                .AddAttribute("nonoutliers", a => a.Nonoutliers)
+                .AddAttribute("outliers", a => a.Outliers);
         }
 
         /// <inheritdoc/>
@@ -2640,23 +2640,23 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Xsddouble>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.BinCountXsdunsignedInt>();
             builder.AddElement<Binning>()
-.AddAttribute("intervalClosed", a => a.IntervalClosed)
-.AddAttribute("underflow", a => a.Underflow, aBuilder =>
-{
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<DoubleValue>(NumberValidator.Instance);
-union.AddValidator(StringValidator.Instance);
-});
-})
-.AddAttribute("overflow", a => a.Overflow, aBuilder =>
-{
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<DoubleValue>(NumberValidator.Instance);
-union.AddValidator(StringValidator.Instance);
-});
-});
+                .AddAttribute("intervalClosed", a => a.IntervalClosed)
+                .AddAttribute("underflow", a => a.Underflow, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<DoubleValue>(NumberValidator.Instance);
+                        union.AddValidator(StringValidator.Instance);
+                    });
+                })
+                .AddAttribute("overflow", a => a.Overflow, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<DoubleValue>(NumberValidator.Instance);
+                        union.AddValidator(StringValidator.Instance);
+                    });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Xsddouble), 1, 1, version: FileFormatVersions.Office2016),
@@ -2726,7 +2726,7 @@ union.AddValidator(StringValidator.Instance);
             builder.SetSchema("cx:statistics");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<Statistics>()
-.AddAttribute("quartileMethod", a => a.QuartileMethod);
+                .AddAttribute("quartileMethod", a => a.QuartileMethod);
         }
 
         /// <inheritdoc/>
@@ -2848,9 +2848,9 @@ union.AddValidator(StringValidator.Instance);
             builder.SetSchema("cx:visibility");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<DataLabelVisibilities>()
-.AddAttribute("seriesName", a => a.SeriesName)
-.AddAttribute("categoryName", a => a.CategoryName)
-.AddAttribute("value", a => a.Value);
+                .AddAttribute("seriesName", a => a.SeriesName)
+                .AddAttribute("categoryName", a => a.CategoryName)
+                .AddAttribute("value", a => a.Value);
         }
 
         /// <inheritdoc/>
@@ -3253,11 +3253,11 @@ union.AddValidator(StringValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeparatorXsdstring>();
             builder.AddElement<DataLabel>()
-.AddAttribute("idx", a => a.Idx, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("pos", a => a.Pos);
+                .AddAttribute("idx", a => a.Idx, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("pos", a => a.Pos);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat), 0, 1, version: FileFormatVersions.Office2016),
@@ -3383,10 +3383,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("cx:dataLabelHidden");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<DataLabelHidden>()
-.AddAttribute("idx", a => a.Idx, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("idx", a => a.Idx, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -3458,10 +3458,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             builder.AddElement<DataPoint>()
-.AddAttribute("idx", a => a.Idx, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("idx", a => a.Idx, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties), 0, 1, version: FileFormatVersions.Office2016),
@@ -3576,7 +3576,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeparatorXsdstring>();
             builder.AddElement<DataLabels>()
-.AddAttribute("pos", a => a.Pos);
+                .AddAttribute("pos", a => a.Pos);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat), 0, 1, version: FileFormatVersions.Office2016),
@@ -3691,10 +3691,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("cx:dataId");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<DataId>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -4060,14 +4060,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisId>();
             builder.AddElement<Series>()
-.AddAttribute("layoutId", a => a.LayoutId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("hidden", a => a.Hidden)
-.AddAttribute("ownerIdx", a => a.OwnerIdx)
-.AddAttribute("uniqueId", a => a.UniqueId)
-.AddAttribute("formatIdx", a => a.FormatIdx);
+                .AddAttribute("layoutId", a => a.LayoutId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("hidden", a => a.Hidden)
+                .AddAttribute("ownerIdx", a => a.OwnerIdx)
+                .AddAttribute("uniqueId", a => a.UniqueId)
+                .AddAttribute("formatIdx", a => a.FormatIdx);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text), 0, 1, version: FileFormatVersions.Office2016),
@@ -4289,11 +4289,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinorTickMarksTickMarks>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueAxisScaling>();
             builder.AddElement<Axis>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("hidden", a => a.Hidden);
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("hidden", a => a.Hidden);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -4410,9 +4410,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text>();
             builder.AddElement<ChartTitle>()
-.AddAttribute("pos", a => a.Pos)
-.AddAttribute("align", a => a.Align)
-.AddAttribute("overlay", a => a.Overlay);
+                .AddAttribute("pos", a => a.Pos)
+                .AddAttribute("align", a => a.Align)
+                .AddAttribute("overlay", a => a.Overlay);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text), 0, 1, version: FileFormatVersions.Office2016),
@@ -4650,9 +4650,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
             builder.AddElement<Legend>()
-.AddAttribute("pos", a => a.Pos)
-.AddAttribute("align", a => a.Align)
-.AddAttribute("overlay", a => a.Overlay);
+                .AddAttribute("pos", a => a.Pos)
+                .AddAttribute("align", a => a.Align)
+                .AddAttribute("overlay", a => a.Overlay);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties), 0, 1, version: FileFormatVersions.Office2016),
@@ -4799,9 +4799,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FirstHeaderXsdstring>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FirstFooterXsdstring>();
             builder.AddElement<HeaderFooter>()
-.AddAttribute("alignWithMargins", a => a.AlignWithMargins)
-.AddAttribute("differentOddEven", a => a.DifferentOddEven)
-.AddAttribute("differentFirst", a => a.DifferentFirst);
+                .AddAttribute("alignWithMargins", a => a.AlignWithMargins)
+                .AddAttribute("differentOddEven", a => a.DifferentOddEven)
+                .AddAttribute("differentFirst", a => a.DifferentFirst);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.OddHeaderXsdstring), 0, 1, version: FileFormatVersions.Office2016),
@@ -4982,30 +4982,30 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("cx:pageMargins");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<PageMargins>()
-.AddAttribute("l", a => a.L, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("r", a => a.R, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("t", a => a.T, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("b", a => a.B, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("header", a => a.Header, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("footer", a => a.Footer, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("l", a => a.L, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("r", a => a.R, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("t", a => a.T, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("b", a => a.B, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("header", a => a.Header, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("footer", a => a.Footer, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -5132,15 +5132,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("cx:pageSetup");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<PageSetup>()
-.AddAttribute("paperSize", a => a.PaperSize)
-.AddAttribute("firstPageNumber", a => a.FirstPageNumber)
-.AddAttribute("orientation", a => a.Orientation)
-.AddAttribute("blackAndWhite", a => a.BlackAndWhite)
-.AddAttribute("draft", a => a.Draft)
-.AddAttribute("useFirstPageNumber", a => a.UseFirstPageNumber)
-.AddAttribute("horizontalDpi", a => a.HorizontalDpi)
-.AddAttribute("verticalDpi", a => a.VerticalDpi)
-.AddAttribute("copies", a => a.Copies);
+                .AddAttribute("paperSize", a => a.PaperSize)
+                .AddAttribute("firstPageNumber", a => a.FirstPageNumber)
+                .AddAttribute("orientation", a => a.Orientation)
+                .AddAttribute("blackAndWhite", a => a.BlackAndWhite)
+                .AddAttribute("draft", a => a.Draft)
+                .AddAttribute("useFirstPageNumber", a => a.UseFirstPageNumber)
+                .AddAttribute("horizontalDpi", a => a.HorizontalDpi)
+                .AddAttribute("verticalDpi", a => a.VerticalDpi)
+                .AddAttribute("copies", a => a.Copies);
         }
 
         /// <inheritdoc/>
@@ -5533,66 +5533,66 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.AddElement<ColorMappingType>()
-.AddAttribute("bg1", a => a.Background1, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("tx1", a => a.Text1, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("bg2", a => a.Background2, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("tx2", a => a.Text2, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("accent1", a => a.Accent1, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("accent2", a => a.Accent2, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("accent3", a => a.Accent3, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("accent4", a => a.Accent4, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("accent5", a => a.Accent5, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("accent6", a => a.Accent6, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("hlink", a => a.Hyperlink, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("folHlink", a => a.FollowedHyperlink, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("bg1", a => a.Background1, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("tx1", a => a.Text1, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("bg2", a => a.Background2, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("tx2", a => a.Text2, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("accent1", a => a.Accent1, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("accent2", a => a.Accent2, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("accent3", a => a.Accent3, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("accent4", a => a.Accent4, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("accent5", a => a.Accent5, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("accent6", a => a.Accent6, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("hlink", a => a.Hyperlink, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("folHlink", a => a.FollowedHyperlink, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
@@ -5767,7 +5767,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("cx:f");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<Formula>()
-.AddAttribute("dir", a => a.Dir);
+                .AddAttribute("dir", a => a.Dir);
         }
 
         /// <inheritdoc/>
@@ -5837,10 +5837,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartStringValue>();
             builder.AddElement<StringLevel>()
-.AddAttribute("ptCount", a => a.PtCount, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("ptCount", a => a.PtCount, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartStringValue), 0, 0, version: FileFormatVersions.Office2016)
@@ -5925,11 +5925,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericValue>();
             builder.AddElement<NumericLevel>()
-.AddAttribute("ptCount", a => a.PtCount, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("formatCode", a => a.FormatCode);
+                .AddAttribute("ptCount", a => a.PtCount, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("formatCode", a => a.FormatCode);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericValue), 0, 0, version: FileFormatVersions.Office2016)
@@ -5972,10 +5972,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("cx:idx");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<UnsignedIntegerType>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>

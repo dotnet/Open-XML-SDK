@@ -223,29 +223,29 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
             base.ConfigureMetadata(builder);
             builder.SetSchema("ma:DummyContentTypeElement");
             builder.AddElement<Dummy>()
-.AddAttribute("decimals", a => a.Decimals)
-.AddAttribute("default", a => a.Default)
-.AddAttribute("description", a => a.Description)
-.AddAttribute("displayName", a => a.DisplayName)
-.AddAttribute("fieldsID", a => a.FieldsID)
-.AddAttribute("format", a => a.Format)
-.AddAttribute("hidden", a => a.Hidden)
-.AddAttribute("index", a => a.Index, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
-})
-.AddAttribute("internalName", a => a.InternalName)
-.AddAttribute("LCID", a => a.LCID)
-.AddAttribute("list", a => a.List)
-.AddAttribute("percentage", a => a.Percentage)
-.AddAttribute("readOnly", a => a.ReadOnly)
-.AddAttribute("requiredMultiChoice", a => a.RequiredMultiChoice)
-.AddAttribute("root", a => a.Root)
-.AddAttribute("showField", a => a.ShowField)
-.AddAttribute("web", a => a.Web, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}") });
-});
+                .AddAttribute("decimals", a => a.Decimals)
+                .AddAttribute("default", a => a.Default)
+                .AddAttribute("description", a => a.Description)
+                .AddAttribute("displayName", a => a.DisplayName)
+                .AddAttribute("fieldsID", a => a.FieldsID)
+                .AddAttribute("format", a => a.Format)
+                .AddAttribute("hidden", a => a.Hidden)
+                .AddAttribute("index", a => a.Index, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
+                })
+                .AddAttribute("internalName", a => a.InternalName)
+                .AddAttribute("LCID", a => a.LCID)
+                .AddAttribute("list", a => a.List)
+                .AddAttribute("percentage", a => a.Percentage)
+                .AddAttribute("readOnly", a => a.ReadOnly)
+                .AddAttribute("requiredMultiChoice", a => a.RequiredMultiChoice)
+                .AddAttribute("root", a => a.Root)
+                .AddAttribute("showField", a => a.ShowField)
+                .AddAttribute("web", a => a.Web, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}") });
+                });
         }
 
         /// <inheritdoc/>

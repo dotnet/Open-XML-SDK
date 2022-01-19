@@ -60,12 +60,12 @@ namespace DocumentFormat.OpenXml.EMMA
             base.ConfigureMetadata(builder);
             builder.SetSchema("emma:derived-from");
             builder.AddElement<DerivedFrom>()
-.AddAttribute("resource", a => a.Resource, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-})
-.AddAttribute("composite", a => a.Composite);
+                .AddAttribute("resource", a => a.Resource, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                })
+                .AddAttribute("composite", a => a.Composite);
         }
 
         /// <inheritdoc/>
@@ -127,10 +127,10 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("emma:info");
             builder.AddElement<Info>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new AnyParticle(XsdAny.Other, 0, 0)
@@ -244,17 +244,17 @@ aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), I
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Arc>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Node>();
             builder.AddElement<Lattice>()
-.AddAttribute("initial", a => a.Initial, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { IsNonNegative = (true) });
-})
-.AddAttribute("final", a => a.Final, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("emma:time-ref-uri", a => a.TimeReference)
-.AddAttribute("emma:time-ref-anchor-point", a => a.TimeReferenceAnchorPoint);
+                .AddAttribute("initial", a => a.Initial, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { IsNonNegative = (true) });
+                })
+                .AddAttribute("final", a => a.Final, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("emma:time-ref-uri", a => a.TimeReference)
+                .AddAttribute("emma:time-ref-anchor-point", a => a.TimeReferenceAnchorPoint);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Arc), 1, 1),
@@ -724,42 +724,42 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Literal>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Ink.ContextNode>();
             builder.AddElement<Interpretation>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
-})
-.AddAttribute("emma:tokens", a => a.Tokens)
-.AddAttribute("emma:process", a => a.Process)
-.AddAttribute("emma:lang", a => a.Language)
-.AddAttribute("emma:signal", a => a.Signal)
-.AddAttribute("emma:signal-size", a => a.SignalSize)
-.AddAttribute("emma:media-type", a => a.MediaType)
-.AddAttribute("emma:confidence", a => a.Confidence, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (1L) });
-})
-.AddAttribute("emma:source", a => a.Source)
-.AddAttribute("emma:start", a => a.Start)
-.AddAttribute("emma:end", a => a.End)
-.AddAttribute("emma:time-ref-uri", a => a.TimeReference)
-.AddAttribute("emma:time-ref-anchor-point", a => a.TimeReferenceAnchorPoint)
-.AddAttribute("emma:offset-to-start", a => a.OffsetToStart)
-.AddAttribute("emma:duration", a => a.Duration)
-.AddAttribute("emma:medium", a => a.Medium)
-.AddAttribute("emma:mode", a => a.Mode)
-.AddAttribute("emma:function", a => a.Function)
-.AddAttribute("emma:verbal", a => a.Verbal)
-.AddAttribute("emma:cost", a => a.Cost, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10000000L) });
-})
-.AddAttribute("emma:grammar-ref", a => a.GrammarRef)
-.AddAttribute("emma:endpoint-info-ref", a => a.EndpointInfoRef)
-.AddAttribute("emma:model-ref", a => a.ModelRef)
-.AddAttribute("emma:dialog-turn", a => a.DialogTurn)
-.AddAttribute("emma:no-input", a => a.NoInput)
-.AddAttribute("emma:uninterpreted", a => a.Uninterpreted);
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
+                })
+                .AddAttribute("emma:tokens", a => a.Tokens)
+                .AddAttribute("emma:process", a => a.Process)
+                .AddAttribute("emma:lang", a => a.Language)
+                .AddAttribute("emma:signal", a => a.Signal)
+                .AddAttribute("emma:signal-size", a => a.SignalSize)
+                .AddAttribute("emma:media-type", a => a.MediaType)
+                .AddAttribute("emma:confidence", a => a.Confidence, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (1L) });
+                })
+                .AddAttribute("emma:source", a => a.Source)
+                .AddAttribute("emma:start", a => a.Start)
+                .AddAttribute("emma:end", a => a.End)
+                .AddAttribute("emma:time-ref-uri", a => a.TimeReference)
+                .AddAttribute("emma:time-ref-anchor-point", a => a.TimeReferenceAnchorPoint)
+                .AddAttribute("emma:offset-to-start", a => a.OffsetToStart)
+                .AddAttribute("emma:duration", a => a.Duration)
+                .AddAttribute("emma:medium", a => a.Medium)
+                .AddAttribute("emma:mode", a => a.Mode)
+                .AddAttribute("emma:function", a => a.Function)
+                .AddAttribute("emma:verbal", a => a.Verbal)
+                .AddAttribute("emma:cost", a => a.Cost, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10000000L) });
+                })
+                .AddAttribute("emma:grammar-ref", a => a.GrammarRef)
+                .AddAttribute("emma:endpoint-info-ref", a => a.EndpointInfoRef)
+                .AddAttribute("emma:model-ref", a => a.ModelRef)
+                .AddAttribute("emma:dialog-turn", a => a.DialogTurn)
+                .AddAttribute("emma:no-input", a => a.NoInput)
+                .AddAttribute("emma:uninterpreted", a => a.Uninterpreted);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -1184,41 +1184,41 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddChild<DocumentFormat.OpenXml.EMMA.OneOf>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Sequence>();
             builder.AddElement<OneOf>()
-.AddAttribute("disjunction-type", a => a.DisjunctionType)
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
-})
-.AddAttribute("emma:tokens", a => a.Tokens)
-.AddAttribute("emma:process", a => a.Process)
-.AddAttribute("emma:lang", a => a.Language)
-.AddAttribute("emma:signal", a => a.Signal)
-.AddAttribute("emma:signal-size", a => a.SignalSize)
-.AddAttribute("emma:media-type", a => a.MediaType)
-.AddAttribute("emma:confidence", a => a.Confidence, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (1L) });
-})
-.AddAttribute("emma:source", a => a.Source)
-.AddAttribute("emma:start", a => a.Start)
-.AddAttribute("emma:end", a => a.End)
-.AddAttribute("emma:time-ref-uri", a => a.TimeReference)
-.AddAttribute("emma:time-ref-anchor-point", a => a.TimeReferenceAnchorPoint)
-.AddAttribute("emma:offset-to-start", a => a.OffsetToStart)
-.AddAttribute("emma:duration", a => a.Duration)
-.AddAttribute("emma:medium", a => a.Medium)
-.AddAttribute("emma:mode", a => a.Mode)
-.AddAttribute("emma:function", a => a.Function)
-.AddAttribute("emma:verbal", a => a.Verbal)
-.AddAttribute("emma:cost", a => a.Cost, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10000000L) });
-})
-.AddAttribute("emma:grammar-ref", a => a.GrammarRef)
-.AddAttribute("emma:endpoint-info-ref", a => a.EndpointInfoRef)
-.AddAttribute("emma:model-ref", a => a.ModelRef)
-.AddAttribute("emma:dialog-turn", a => a.DialogTurn);
+                .AddAttribute("disjunction-type", a => a.DisjunctionType)
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
+                })
+                .AddAttribute("emma:tokens", a => a.Tokens)
+                .AddAttribute("emma:process", a => a.Process)
+                .AddAttribute("emma:lang", a => a.Language)
+                .AddAttribute("emma:signal", a => a.Signal)
+                .AddAttribute("emma:signal-size", a => a.SignalSize)
+                .AddAttribute("emma:media-type", a => a.MediaType)
+                .AddAttribute("emma:confidence", a => a.Confidence, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (1L) });
+                })
+                .AddAttribute("emma:source", a => a.Source)
+                .AddAttribute("emma:start", a => a.Start)
+                .AddAttribute("emma:end", a => a.End)
+                .AddAttribute("emma:time-ref-uri", a => a.TimeReference)
+                .AddAttribute("emma:time-ref-anchor-point", a => a.TimeReferenceAnchorPoint)
+                .AddAttribute("emma:offset-to-start", a => a.OffsetToStart)
+                .AddAttribute("emma:duration", a => a.Duration)
+                .AddAttribute("emma:medium", a => a.Medium)
+                .AddAttribute("emma:mode", a => a.Mode)
+                .AddAttribute("emma:function", a => a.Function)
+                .AddAttribute("emma:verbal", a => a.Verbal)
+                .AddAttribute("emma:cost", a => a.Cost, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10000000L) });
+                })
+                .AddAttribute("emma:grammar-ref", a => a.GrammarRef)
+                .AddAttribute("emma:endpoint-info-ref", a => a.EndpointInfoRef)
+                .AddAttribute("emma:model-ref", a => a.ModelRef)
+                .AddAttribute("emma:dialog-turn", a => a.DialogTurn);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -1634,40 +1634,40 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddChild<DocumentFormat.OpenXml.EMMA.OneOf>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Sequence>();
             builder.AddElement<Group>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
-})
-.AddAttribute("emma:tokens", a => a.Tokens)
-.AddAttribute("emma:process", a => a.Process)
-.AddAttribute("emma:lang", a => a.Language)
-.AddAttribute("emma:signal", a => a.Signal)
-.AddAttribute("emma:signal-size", a => a.SignalSize)
-.AddAttribute("emma:media-type", a => a.MediaType)
-.AddAttribute("emma:confidence", a => a.Confidence, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (1L) });
-})
-.AddAttribute("emma:source", a => a.Source)
-.AddAttribute("emma:start", a => a.Start)
-.AddAttribute("emma:end", a => a.End)
-.AddAttribute("emma:time-ref-uri", a => a.TimeReference)
-.AddAttribute("emma:time-ref-anchor-point", a => a.TimeReferenceAnchorPoint)
-.AddAttribute("emma:offset-to-start", a => a.OffsetToStart)
-.AddAttribute("emma:duration", a => a.Duration)
-.AddAttribute("emma:medium", a => a.Medium)
-.AddAttribute("emma:mode", a => a.Mode)
-.AddAttribute("emma:function", a => a.Function)
-.AddAttribute("emma:verbal", a => a.Verbal)
-.AddAttribute("emma:cost", a => a.Cost, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10000000L) });
-})
-.AddAttribute("emma:grammar-ref", a => a.GrammarRef)
-.AddAttribute("emma:endpoint-info-ref", a => a.EndpointInfoRef)
-.AddAttribute("emma:model-ref", a => a.ModelRef)
-.AddAttribute("emma:dialog-turn", a => a.DialogTurn);
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
+                })
+                .AddAttribute("emma:tokens", a => a.Tokens)
+                .AddAttribute("emma:process", a => a.Process)
+                .AddAttribute("emma:lang", a => a.Language)
+                .AddAttribute("emma:signal", a => a.Signal)
+                .AddAttribute("emma:signal-size", a => a.SignalSize)
+                .AddAttribute("emma:media-type", a => a.MediaType)
+                .AddAttribute("emma:confidence", a => a.Confidence, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (1L) });
+                })
+                .AddAttribute("emma:source", a => a.Source)
+                .AddAttribute("emma:start", a => a.Start)
+                .AddAttribute("emma:end", a => a.End)
+                .AddAttribute("emma:time-ref-uri", a => a.TimeReference)
+                .AddAttribute("emma:time-ref-anchor-point", a => a.TimeReferenceAnchorPoint)
+                .AddAttribute("emma:offset-to-start", a => a.OffsetToStart)
+                .AddAttribute("emma:duration", a => a.Duration)
+                .AddAttribute("emma:medium", a => a.Medium)
+                .AddAttribute("emma:mode", a => a.Mode)
+                .AddAttribute("emma:function", a => a.Function)
+                .AddAttribute("emma:verbal", a => a.Verbal)
+                .AddAttribute("emma:cost", a => a.Cost, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10000000L) });
+                })
+                .AddAttribute("emma:grammar-ref", a => a.GrammarRef)
+                .AddAttribute("emma:endpoint-info-ref", a => a.EndpointInfoRef)
+                .AddAttribute("emma:model-ref", a => a.ModelRef)
+                .AddAttribute("emma:dialog-turn", a => a.DialogTurn);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -2081,40 +2081,40 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddChild<DocumentFormat.OpenXml.EMMA.OneOf>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Sequence>();
             builder.AddElement<Sequence>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
-})
-.AddAttribute("emma:tokens", a => a.Tokens)
-.AddAttribute("emma:process", a => a.Process)
-.AddAttribute("emma:lang", a => a.Language)
-.AddAttribute("emma:signal", a => a.Signal)
-.AddAttribute("emma:signal-size", a => a.SignalSize)
-.AddAttribute("emma:media-type", a => a.MediaType)
-.AddAttribute("emma:confidence", a => a.Confidence, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (1L) });
-})
-.AddAttribute("emma:source", a => a.Source)
-.AddAttribute("emma:start", a => a.Start)
-.AddAttribute("emma:end", a => a.End)
-.AddAttribute("emma:time-ref-uri", a => a.TimeReference)
-.AddAttribute("emma:time-ref-anchor-point", a => a.TimeReferenceAnchorPoint)
-.AddAttribute("emma:offset-to-start", a => a.OffsetToStart)
-.AddAttribute("emma:duration", a => a.Duration)
-.AddAttribute("emma:medium", a => a.Medium)
-.AddAttribute("emma:mode", a => a.Mode)
-.AddAttribute("emma:function", a => a.Function)
-.AddAttribute("emma:verbal", a => a.Verbal)
-.AddAttribute("emma:cost", a => a.Cost, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10000000L) });
-})
-.AddAttribute("emma:grammar-ref", a => a.GrammarRef)
-.AddAttribute("emma:endpoint-info-ref", a => a.EndpointInfoRef)
-.AddAttribute("emma:model-ref", a => a.ModelRef)
-.AddAttribute("emma:dialog-turn", a => a.DialogTurn);
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
+                })
+                .AddAttribute("emma:tokens", a => a.Tokens)
+                .AddAttribute("emma:process", a => a.Process)
+                .AddAttribute("emma:lang", a => a.Language)
+                .AddAttribute("emma:signal", a => a.Signal)
+                .AddAttribute("emma:signal-size", a => a.SignalSize)
+                .AddAttribute("emma:media-type", a => a.MediaType)
+                .AddAttribute("emma:confidence", a => a.Confidence, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (1L) });
+                })
+                .AddAttribute("emma:source", a => a.Source)
+                .AddAttribute("emma:start", a => a.Start)
+                .AddAttribute("emma:end", a => a.End)
+                .AddAttribute("emma:time-ref-uri", a => a.TimeReference)
+                .AddAttribute("emma:time-ref-anchor-point", a => a.TimeReferenceAnchorPoint)
+                .AddAttribute("emma:offset-to-start", a => a.OffsetToStart)
+                .AddAttribute("emma:duration", a => a.Duration)
+                .AddAttribute("emma:medium", a => a.Medium)
+                .AddAttribute("emma:mode", a => a.Mode)
+                .AddAttribute("emma:function", a => a.Function)
+                .AddAttribute("emma:verbal", a => a.Verbal)
+                .AddAttribute("emma:cost", a => a.Cost, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10000000L) });
+                })
+                .AddAttribute("emma:grammar-ref", a => a.GrammarRef)
+                .AddAttribute("emma:endpoint-info-ref", a => a.EndpointInfoRef)
+                .AddAttribute("emma:model-ref", a => a.ModelRef)
+                .AddAttribute("emma:dialog-turn", a => a.DialogTurn);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -2188,10 +2188,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             base.ConfigureMetadata(builder);
             builder.SetSchema("emma:group-info");
             builder.AddElement<GroupInfo>()
-.AddAttribute("ref", a => a.Reference, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-});
+                .AddAttribute("ref", a => a.Reference, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new AnyParticle(XsdAny.Other, 0, 0)
@@ -2313,16 +2313,16 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("emma:grammar");
             builder.AddElement<Grammar>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
-})
-.AddAttribute("ref", a => a.Reference, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
+                })
+                .AddAttribute("ref", a => a.Reference, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                });
         }
 
         /// <inheritdoc/>
@@ -2395,15 +2395,15 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("emma:model");
             builder.AddElement<Model>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
-})
-.AddAttribute("ref", a => a.Reference, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
+                })
+                .AddAttribute("ref", a => a.Reference, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new AnyParticle(XsdAny.Other, 0, 0)
@@ -2476,11 +2476,11 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             builder.SetSchema("emma:endpoint-info");
             builder.AddChild<DocumentFormat.OpenXml.EMMA.EndPoint>();
             builder.AddElement<EndPointInfo>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.EndPoint), 1, 1)
@@ -2686,21 +2686,21 @@ aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), I
             base.ConfigureMetadata(builder);
             builder.SetSchema("emma:endpoint");
             builder.AddElement<EndPoint>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
-})
-.AddAttribute("emma:endpoint-role", a => a.EndpointRole)
-.AddAttribute("emma:endpoint-address", a => a.EndPointAddress)
-.AddAttribute("emma:message-id", a => a.MessageId)
-.AddAttribute("emma:port-num", a => a.PortNumber)
-.AddAttribute("emma:port-type", a => a.PortType)
-.AddAttribute("emma:endpoint-pair-ref", a => a.EndpointPairRef)
-.AddAttribute("emma:service-name", a => a.ServiceName)
-.AddAttribute("emma:media-type", a => a.MediaType)
-.AddAttribute("emma:medium", a => a.Medium)
-.AddAttribute("emma:mode", a => a.Mode);
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
+                })
+                .AddAttribute("emma:endpoint-role", a => a.EndpointRole)
+                .AddAttribute("emma:endpoint-address", a => a.EndPointAddress)
+                .AddAttribute("emma:message-id", a => a.MessageId)
+                .AddAttribute("emma:port-num", a => a.PortNumber)
+                .AddAttribute("emma:port-type", a => a.PortType)
+                .AddAttribute("emma:endpoint-pair-ref", a => a.EndpointPairRef)
+                .AddAttribute("emma:service-name", a => a.ServiceName)
+                .AddAttribute("emma:media-type", a => a.MediaType)
+                .AddAttribute("emma:medium", a => a.Medium)
+                .AddAttribute("emma:mode", a => a.Mode);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new AnyParticle(XsdAny.Other, 0, 0)
@@ -2801,19 +2801,19 @@ aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), I
             builder.SetSchema("emma:node");
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Info>();
             builder.AddElement<Node>()
-.AddAttribute("node-number", a => a.NodeNumber, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { IsNonNegative = (true) });
-})
-.AddAttribute("emma:confidence", a => a.Confidence, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (1L) });
-})
-.AddAttribute("emma:cost", a => a.Cost, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10000000L) });
-});
+                .AddAttribute("node-number", a => a.NodeNumber, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { IsNonNegative = (true) });
+                })
+                .AddAttribute("emma:confidence", a => a.Confidence, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (1L) });
+                })
+                .AddAttribute("emma:cost", a => a.Cost, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10000000L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1)
@@ -3037,32 +3037,32 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("emma:arc");
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Info>();
             builder.AddElement<Arc>()
-.AddAttribute("from", a => a.From, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { IsNonNegative = (true) });
-})
-.AddAttribute("to", a => a.To, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { IsNonNegative = (true) });
-})
-.AddAttribute("emma:start", a => a.Start)
-.AddAttribute("emma:end", a => a.End)
-.AddAttribute("emma:offset-to-start", a => a.OffsetToStart)
-.AddAttribute("emma:duration", a => a.Duration)
-.AddAttribute("emma:confidence", a => a.Confidence, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (1L) });
-})
-.AddAttribute("emma:cost", a => a.Cost, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10000000L) });
-})
-.AddAttribute("emma:lang", a => a.Language)
-.AddAttribute("emma:medium", a => a.Medium)
-.AddAttribute("emma:mode", a => a.Mode)
-.AddAttribute("emma:source", a => a.Source);
+                .AddAttribute("from", a => a.From, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { IsNonNegative = (true) });
+                })
+                .AddAttribute("to", a => a.To, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { IsNonNegative = (true) });
+                })
+                .AddAttribute("emma:start", a => a.Start)
+                .AddAttribute("emma:end", a => a.End)
+                .AddAttribute("emma:offset-to-start", a => a.OffsetToStart)
+                .AddAttribute("emma:duration", a => a.Duration)
+                .AddAttribute("emma:confidence", a => a.Confidence, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (1L) });
+                })
+                .AddAttribute("emma:cost", a => a.Cost, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10000000L) });
+                })
+                .AddAttribute("emma:lang", a => a.Language)
+                .AddAttribute("emma:medium", a => a.Medium)
+                .AddAttribute("emma:mode", a => a.Mode)
+                .AddAttribute("emma:source", a => a.Source);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1)
@@ -3151,10 +3151,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddChild<DocumentFormat.OpenXml.EMMA.OneOf>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Sequence>();
             builder.AddElement<Emma>()
-.AddAttribute("version", a => a.Version, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("version", a => a.Version, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
