@@ -213,9 +213,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
             builder.AddElement<Transform2D>()
-.AddAttribute("rot", a => a.Rotation)
-.AddAttribute("flipH", a => a.HorizontalFlip)
-.AddAttribute("flipV", a => a.VerticalFlip);
+                .AddAttribute("rot", a => a.Rotation)
+                .AddAttribute("flipH", a => a.HorizontalFlip)
+                .AddAttribute("flipV", a => a.VerticalFlip);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0, 1),
@@ -316,7 +316,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
             builder.AddElement<ExtensionListModify>()
-.AddAttribute("mod", a => a.Modify);
+                .AddAttribute("mod", a => a.Modify);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -419,8 +419,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaFade>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaTrim>();
             builder.AddElement<Media>()
-.AddAttribute("r:embed", a => a.Embed)
-.AddAttribute("r:link", a => a.Link);
+                .AddAttribute("r:embed", a => a.Embed)
+                .AddAttribute("r:link", a => a.Link);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaTrim), 0, 1, version: FileFormatVersions.Office2010),
@@ -569,10 +569,10 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<SideDirectionTransitionType>()
-                           .AddAttribute("dir", a => a.Direction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                           });
+                .AddAttribute("dir", a => a.Direction, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
     }
 
@@ -735,10 +735,10 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<LeftRightDirectionTransitionType>()
-                           .AddAttribute("dir", a => a.Direction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                           });
+                .AddAttribute("dir", a => a.Direction, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
     }
 
@@ -774,14 +774,14 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             builder.SetSchema("p14:ripple");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<RippleTransition>()
-.AddAttribute("dir", a => a.Direction, aBuilder =>
-{
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionCornerDirectionValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionCenterDirectionTypeValues>>(EnumValidator.Instance);
-});
-});
+                .AddAttribute("dir", a => a.Direction, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionCornerDirectionValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionCenterDirectionTypeValues>>(EnumValidator.Instance);
+                    });
+                });
         }
 
         /// <inheritdoc/>
@@ -914,12 +914,12 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.Transi
             builder.SetSchema("p14:prism");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<PrismTransition>()
-.AddAttribute("dir", a => a.Direction, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("isContent", a => a.IsContent)
-.AddAttribute("isInverted", a => a.IsInverted);
+                .AddAttribute("dir", a => a.Direction, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("isContent", a => a.IsContent)
+                .AddAttribute("isInverted", a => a.IsInverted);
         }
 
         /// <inheritdoc/>
@@ -1007,10 +1007,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<OrientationTransitionType>()
-                           .AddAttribute("dir", a => a.Direction, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                           });
+                .AddAttribute("dir", a => a.Direction, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
     }
 
@@ -1057,14 +1057,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("p14:glitter");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<GlitterTransition>()
-.AddAttribute("dir", a => a.Direction, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("pattern", a => a.Pattern, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("dir", a => a.Direction, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("pattern", a => a.Pattern, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
 
         /// <inheritdoc/>
@@ -1103,10 +1103,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("p14:warp");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<WarpTransition>()
-.AddAttribute("dir", a => a.Direction, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("dir", a => a.Direction, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
 
         /// <inheritdoc/>
@@ -1156,11 +1156,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("p14:flythrough");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<FlythroughTransition>()
-.AddAttribute("dir", a => a.Direction, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("hasBounce", a => a.HasBounce);
+                .AddAttribute("dir", a => a.Direction, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("hasBounce", a => a.HasBounce);
         }
 
         /// <inheritdoc/>
@@ -1210,14 +1210,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("p14:shred");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ShredTransition>()
-.AddAttribute("pattern", a => a.Pattern, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("dir", a => a.Direction, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("pattern", a => a.Pattern, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("dir", a => a.Direction, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
 
         /// <inheritdoc/>
@@ -1267,11 +1267,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("p14:reveal");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<RevealTransition>()
-.AddAttribute("thruBlk", a => a.ThroughBlack)
-.AddAttribute("dir", a => a.Direction, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("thruBlk", a => a.ThroughBlack)
+                .AddAttribute("dir", a => a.Direction, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
 
         /// <inheritdoc/>
@@ -1310,7 +1310,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("p14:wheelReverse");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<WheelReverseTransition>()
-.AddAttribute("spokes", a => a.Spokes);
+                .AddAttribute("spokes", a => a.Spokes);
         }
 
         /// <inheritdoc/>
@@ -1360,14 +1360,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("p14:bmkTgt");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<BookmarkTarget>()
-.AddAttribute("spid", a => a.ShapeId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("bmkName", a => a.BookmarkName, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("spid", a => a.ShapeId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("bmkName", a => a.BookmarkName, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -1528,7 +1528,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("p14:browseMode");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<BrowseMode>()
-.AddAttribute("showStatus", a => a.ShowStatus);
+                .AddAttribute("showStatus", a => a.ShowStatus);
         }
 
         /// <inheritdoc/>
@@ -1727,10 +1727,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("p14:defaultImageDpi");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<DefaultImageDpi>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -1769,10 +1769,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("p14:discardImageEditData");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<DiscardImageEditData>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -1811,10 +1811,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("p14:showMediaCtrls");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ShowMediaControls>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -1963,10 +1963,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<RandomIdType>()
-                           .AddAttribute("val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           });
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
     }
 
@@ -2254,17 +2254,17 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
             builder.AddElement<NonVisualDrawingProperties>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("descr", a => a.Description)
-.AddAttribute("hidden", a => a.Hidden)
-.AddAttribute("title", a => a.Title);
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("descr", a => a.Description)
+                .AddAttribute("hidden", a => a.Hidden)
+                .AddAttribute("title", a => a.Title);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
@@ -2381,7 +2381,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>();
             builder.AddElement<NonVisualInkContentPartProperties>()
-.AddAttribute("isComment", a => a.IsComment);
+                .AddAttribute("isComment", a => a.IsComment);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks), 0, 1, version: FileFormatVersions.Office2010),
@@ -2507,8 +2507,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomerDataList>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.PlaceholderShape>();
             builder.AddElement<ApplicationNonVisualDrawingProperties>()
-.AddAttribute("isPhoto", a => a.IsPhoto)
-.AddAttribute("userDrawn", a => a.UserDrawn);
+                .AddAttribute("isPhoto", a => a.IsPhoto)
+                .AddAttribute("userDrawn", a => a.UserDrawn);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PlaceholderShape), 0, 1),
@@ -2588,8 +2588,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("p14:bmk");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<MediaBookmark>()
-.AddAttribute("name", a => a.Name)
-.AddAttribute("time", a => a.Time);
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("time", a => a.Time);
             builder.AddConstraint(new UniqueAttributeValueConstraint("p14:name", true, "p14:bmkLst") { Version = FileFormatVersions.Office2010 });
             builder.AddConstraint(new UniqueAttributeValueConstraint("p14:time", true, "p14:bmkLst") { Version = FileFormatVersions.Office2010 });
         }
@@ -2641,8 +2641,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("p14:trim");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<MediaTrim>()
-.AddAttribute("st", a => a.Start)
-.AddAttribute("end", a => a.End);
+                .AddAttribute("st", a => a.Start)
+                .AddAttribute("end", a => a.End);
         }
 
         /// <inheritdoc/>
@@ -2692,8 +2692,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("p14:fade");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<MediaFade>()
-.AddAttribute("in", a => a.InDuration)
-.AddAttribute("out", a => a.OutDuration);
+                .AddAttribute("in", a => a.InDuration)
+                .AddAttribute("out", a => a.OutDuration);
         }
 
         /// <inheritdoc/>
@@ -2913,15 +2913,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList>();
             builder.AddElement<SectionOld>()
-.AddAttribute("name", a => a.Name)
-.AddAttribute("slideIdLst", a => a.SlideIdList, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinInclusive = (256L) });
-})
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-});
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("slideIdLst", a => a.SlideIdList, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinInclusive = (256L) });
+                })
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList), 0, 1, version: FileFormatVersions.Office2010)
@@ -2977,11 +2977,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.SetSchema("p14:sldId");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<SectionSlideIdListEntry>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinInclusive = (256L) });
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinInclusive = (256L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -3125,11 +3125,11 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList>();
             builder.AddElement<Section>()
-.AddAttribute("name", a => a.Name)
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-});
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList), 1, 1, version: FileFormatVersions.Office2010),
@@ -3221,20 +3221,20 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.SetSchema("p14:tracePt");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<TracePoint>()
-.AddAttribute("t", a => a.Time, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("x", a => a.XCoordinate, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-})
-.AddAttribute("y", a => a.YCoordinate, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-});
+                .AddAttribute("t", a => a.Time, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("x", a => a.XCoordinate, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                })
+                .AddAttribute("y", a => a.YCoordinate, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -3356,19 +3356,19 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
             builder.SetSchema("p14:triggerEvt");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<TriggerEventRecord>()
-.AddAttribute("type", a => a.Type, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("time", a => a.Time, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("objId", a => a.ObjectId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("type", a => a.Type, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("time", a => a.Time, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("objId", a => a.ObjectId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -3519,14 +3519,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<MediaPlaybackEventRecordType>()
-                           .AddAttribute("time", a => a.Time, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           })
-                           .AddAttribute("objId", a => a.ObjectId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           });
+                .AddAttribute("time", a => a.Time, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("objId", a => a.ObjectId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
     }
 
@@ -3584,18 +3584,18 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("p14:seekEvt");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<SeekEventRecord>()
-.AddAttribute("time", a => a.Time, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("objId", a => a.ObjectId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("seek", a => a.Seek, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("time", a => a.Time, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("objId", a => a.ObjectId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("seek", a => a.Seek, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -3645,14 +3645,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("p14:nullEvt");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<NullEventRecord>()
-.AddAttribute("time", a => a.Time, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("objId", a => a.ObjectId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("time", a => a.Time, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("objId", a => a.ObjectId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>

@@ -123,16 +123,16 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
             builder.SetSchema("ax:ocx");
             builder.AddChild<DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty>();
             builder.AddElement<ActiveXControlData>()
-.AddAttribute("ax:classid", a => a.ActiveXControlClassId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("ax:license", a => a.License)
-.AddAttribute("r:id", a => a.Id)
-.AddAttribute("ax:persistence", a => a.Persistence, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("ax:classid", a => a.ActiveXControlClassId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("ax:license", a => a.License)
+                .AddAttribute("r:id", a => a.Id)
+                .AddAttribute("ax:persistence", a => a.Persistence, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty), 0, 0)
@@ -224,11 +224,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office.ActiveX.SharedComFont>();
             builder.AddChild<DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture>();
             builder.AddElement<ActiveXObjectProperty>()
-.AddAttribute("ax:name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("ax:value", a => a.Value);
+                .AddAttribute("ax:name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("ax:value", a => a.Value);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -348,8 +348,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("ax:font");
             builder.AddChild<DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty>();
             builder.AddElement<SharedComFont>()
-.AddAttribute("ax:persistence", a => a.Persistence)
-.AddAttribute("r:id", a => a.Id);
+                .AddAttribute("ax:persistence", a => a.Persistence)
+                .AddAttribute("r:id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty), 0, 0)
@@ -394,7 +394,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("ax:picture");
             builder.AddElement<SharedComPicture>()
-.AddAttribute("r:id", a => a.Id);
+                .AddAttribute("r:id", a => a.Id);
         }
 
         /// <inheritdoc/>

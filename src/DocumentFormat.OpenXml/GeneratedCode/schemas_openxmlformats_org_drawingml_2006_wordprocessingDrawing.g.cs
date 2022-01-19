@@ -150,15 +150,15 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
             builder.SetSchema("wp:wrapSquare");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent>();
             builder.AddElement<WrapSquare>()
-.AddAttribute("wrapText", a => a.WrapText, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("distT", a => a.DistanceFromTop)
-.AddAttribute("distB", a => a.DistanceFromBottom)
-.AddAttribute("distL", a => a.DistanceFromLeft)
-.AddAttribute("distR", a => a.DistanceFromRight);
+                .AddAttribute("wrapText", a => a.WrapText, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("distT", a => a.DistanceFromTop)
+                .AddAttribute("distB", a => a.DistanceFromBottom)
+                .AddAttribute("distL", a => a.DistanceFromLeft)
+                .AddAttribute("distR", a => a.DistanceFromRight);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent), 0, 1)
@@ -266,13 +266,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("wp:wrapTight");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon>();
             builder.AddElement<WrapTight>()
-.AddAttribute("wrapText", a => a.WrapText, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("distL", a => a.DistanceFromLeft)
-.AddAttribute("distR", a => a.DistanceFromRight);
+                .AddAttribute("wrapText", a => a.WrapText, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("distL", a => a.DistanceFromLeft)
+                .AddAttribute("distR", a => a.DistanceFromRight);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon), 1, 1)
@@ -380,13 +380,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("wp:wrapThrough");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon>();
             builder.AddElement<WrapThrough>()
-.AddAttribute("wrapText", a => a.WrapText, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("distL", a => a.DistanceFromLeft)
-.AddAttribute("distR", a => a.DistanceFromRight);
+                .AddAttribute("wrapText", a => a.WrapText, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("distL", a => a.DistanceFromLeft)
+                .AddAttribute("distR", a => a.DistanceFromRight);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon), 1, 1)
@@ -483,8 +483,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("wp:wrapTopAndBottom");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent>();
             builder.AddElement<WrapTopBottom>()
-.AddAttribute("distT", a => a.DistanceFromTop)
-.AddAttribute("distB", a => a.DistanceFromBottom);
+                .AddAttribute("distT", a => a.DistanceFromTop)
+                .AddAttribute("distB", a => a.DistanceFromBottom);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent), 0, 1)
@@ -639,20 +639,20 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent>();
             builder.AddElement<Inline>()
-.AddAttribute("distT", a => a.DistanceFromTop)
-.AddAttribute("distB", a => a.DistanceFromBottom)
-.AddAttribute("distL", a => a.DistanceFromLeft)
-.AddAttribute("distR", a => a.DistanceFromRight)
-.AddAttribute("wp14:anchorId", a => a.AnchorId, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("wp14:editId", a => a.EditId, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-});
+                .AddAttribute("distT", a => a.DistanceFromTop)
+                .AddAttribute("distB", a => a.DistanceFromBottom)
+                .AddAttribute("distL", a => a.DistanceFromLeft)
+                .AddAttribute("distR", a => a.DistanceFromRight)
+                .AddAttribute("wp14:anchorId", a => a.AnchorId, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("wp14:editId", a => a.EditId, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent), 1, 1),
@@ -960,42 +960,42 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeWidth>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight>();
             builder.AddElement<Anchor>()
-.AddAttribute("distT", a => a.DistanceFromTop)
-.AddAttribute("distB", a => a.DistanceFromBottom)
-.AddAttribute("distL", a => a.DistanceFromLeft)
-.AddAttribute("distR", a => a.DistanceFromRight)
-.AddAttribute("simplePos", a => a.SimplePos)
-.AddAttribute("relativeHeight", a => a.RelativeHeight, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("behindDoc", a => a.BehindDoc, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("locked", a => a.Locked, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("layoutInCell", a => a.LayoutInCell, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("hidden", a => a.Hidden)
-.AddAttribute("allowOverlap", a => a.AllowOverlap, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("wp14:editId", a => a.EditId, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("wp14:anchorId", a => a.AnchorId, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-});
+                .AddAttribute("distT", a => a.DistanceFromTop)
+                .AddAttribute("distB", a => a.DistanceFromBottom)
+                .AddAttribute("distL", a => a.DistanceFromLeft)
+                .AddAttribute("distR", a => a.DistanceFromRight)
+                .AddAttribute("simplePos", a => a.SimplePos)
+                .AddAttribute("relativeHeight", a => a.RelativeHeight, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("behindDoc", a => a.BehindDoc, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("locked", a => a.Locked, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("layoutInCell", a => a.LayoutInCell, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("hidden", a => a.Hidden)
+                .AddAttribute("allowOverlap", a => a.AllowOverlap, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("wp14:editId", a => a.EditId, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("wp14:anchorId", a => a.AnchorId, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.SimplePosition), 1, 1),
@@ -1209,16 +1209,16 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<Point2DType>()
-                           .AddAttribute("x", a => a.X, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-                           })
-                           .AddAttribute("y", a => a.Y, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                               aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-                           });
+                .AddAttribute("x", a => a.X, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                })
+                .AddAttribute("y", a => a.Y, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                });
         }
     }
 
@@ -1286,26 +1286,26 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("wp:effectExtent");
             builder.AddElement<EffectExtent>()
-.AddAttribute("l", a => a.LeftEdge, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-})
-.AddAttribute("t", a => a.TopEdge, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-})
-.AddAttribute("r", a => a.RightEdge, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-})
-.AddAttribute("b", a => a.BottomEdge, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-});
+                .AddAttribute("l", a => a.LeftEdge, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                })
+                .AddAttribute("t", a => a.TopEdge, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                })
+                .AddAttribute("r", a => a.RightEdge, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                })
+                .AddAttribute("b", a => a.BottomEdge, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -1376,7 +1376,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.StartPoint>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.LineTo>();
             builder.AddElement<WrapPolygon>()
-.AddAttribute("edited", a => a.Edited);
+                .AddAttribute("edited", a => a.Edited);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.StartPoint), 1, 1),
@@ -1467,11 +1467,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignment>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset>();
             builder.AddElement<HorizontalPosition>()
-.AddAttribute("relativeFrom", a => a.RelativeFrom, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("relativeFrom", a => a.RelativeFrom, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -1592,11 +1592,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignment>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset>();
             builder.AddElement<VerticalPosition>()
-.AddAttribute("relativeFrom", a => a.RelativeFrom, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("relativeFrom", a => a.RelativeFrom, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -1693,16 +1693,16 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("wp:extent");
             builder.AddElement<Extent>()
-.AddAttribute("cx", a => a.Cx, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
-})
-.AddAttribute("cy", a => a.Cy, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
-});
+                .AddAttribute("cx", a => a.Cx, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+                })
+                .AddAttribute("cy", a => a.Cy, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -1819,17 +1819,17 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
             builder.AddElement<DocProperties>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("descr", a => a.Description)
-.AddAttribute("hidden", a => a.Hidden)
-.AddAttribute("title", a => a.Title);
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("descr", a => a.Description)
+                .AddAttribute("hidden", a => a.Hidden)
+                .AddAttribute("title", a => a.Title);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),

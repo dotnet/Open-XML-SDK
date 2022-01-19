@@ -100,18 +100,18 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:Sources");
             builder.AddChild<DocumentFormat.OpenXml.Bibliography.Source>();
             builder.AddElement<Sources>()
-.AddAttribute("SelectedStyle", a => a.SelectedStyle, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-})
-.AddAttribute("StyleName", a => a.StyleName, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-})
-.AddAttribute("URI", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-});
+                .AddAttribute("SelectedStyle", a => a.SelectedStyle, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
+                })
+                .AddAttribute("StyleName", a => a.StyleName, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
+                })
+                .AddAttribute("URI", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Source), 0, 0)

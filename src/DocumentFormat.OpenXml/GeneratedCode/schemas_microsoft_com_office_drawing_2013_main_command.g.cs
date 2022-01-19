@@ -60,14 +60,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             builder.SetSchema("oac:spMk");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ShapeMoniker>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("creationId", a => a.CreationId, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("creationId", a => a.CreationId, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                });
         }
 
         /// <inheritdoc/>
@@ -117,14 +117,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.SetSchema("oac:grpSpMk");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<GroupShapeMoniker>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("creationId", a => a.CreationId, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("creationId", a => a.CreationId, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                });
         }
 
         /// <inheritdoc/>
@@ -174,14 +174,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.SetSchema("oac:graphicFrameMk");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<GraphicFrameMoniker>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("creationId", a => a.CreationId, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("creationId", a => a.CreationId, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                });
         }
 
         /// <inheritdoc/>
@@ -231,14 +231,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.SetSchema("oac:cxnSpMk");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ConnectorMoniker>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("creationId", a => a.CreationId, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("creationId", a => a.CreationId, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                });
         }
 
         /// <inheritdoc/>
@@ -288,14 +288,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.SetSchema("oac:picMk");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<PictureMoniker>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("creationId", a => a.CreationId, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("creationId", a => a.CreationId, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                });
         }
 
         /// <inheritdoc/>
@@ -345,14 +345,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.SetSchema("oac:inkMk");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<InkMoniker>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("creationId", a => a.CreationId, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("creationId", a => a.CreationId, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                });
         }
 
         /// <inheritdoc/>
@@ -500,9 +500,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
             builder.AddElement<Transform2D>()
-.AddAttribute("rot", a => a.Rotation)
-.AddAttribute("flipH", a => a.HorizontalFlip)
-.AddAttribute("flipV", a => a.VerticalFlip);
+                .AddAttribute("rot", a => a.Rotation)
+                .AddAttribute("flipH", a => a.HorizontalFlip)
+                .AddAttribute("flipV", a => a.VerticalFlip);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0, 1),
@@ -1073,14 +1073,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.SetSchema("oac:imgUrl");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ResourceUrl>()
-.AddAttribute("src", a => a.Src, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-})
-.AddAttribute("linkage", a => a.Linkage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("src", a => a.Src, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                })
+                .AddAttribute("linkage", a => a.Linkage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
 
         /// <inheritdoc/>
@@ -1216,9 +1216,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.PictureMoniker>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.ShapeMoniker>();
             builder.AddElement<GroupCommand>()
-.AddAttribute("verId", a => a.VerId)
-.AddAttribute("preventRegroup", a => a.PreventRegroup)
-.AddAttribute("grpId", a => a.GrpId);
+                .AddAttribute("verId", a => a.VerId)
+                .AddAttribute("preventRegroup", a => a.PreventRegroup)
+                .AddAttribute("grpId", a => a.GrpId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.DrawingMonikerList), 1, 1, version: FileFormatVersions.Office2016),
@@ -1289,11 +1289,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("oac:imgLink");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ImgLink>()
-.AddAttribute("tgt", a => a.Tgt, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-});
+                .AddAttribute("tgt", a => a.Tgt, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                });
         }
 
         /// <inheritdoc/>
@@ -2359,12 +2359,12 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             builder.SetSchema("oac:cNvPr");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ModifyNonVisualDrawingProps>()
-.AddAttribute("name", a => a.Name)
-.AddAttribute("descr", a => a.Descr)
-.AddAttribute("hidden", a => a.Hidden)
-.AddAttribute("title", a => a.Title)
-.AddAttribute("decor", a => a.Decor)
-.AddAttribute("scriptLink", a => a.ScriptLink);
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("descr", a => a.Descr)
+                .AddAttribute("hidden", a => a.Hidden)
+                .AddAttribute("title", a => a.Title)
+                .AddAttribute("decor", a => a.Decor)
+                .AddAttribute("scriptLink", a => a.ScriptLink);
         }
 
         /// <inheritdoc/>
@@ -2469,25 +2469,25 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             builder.SetSchema("oac:xfrm");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ModifyTransformProps>()
-.AddAttribute("x", a => a.X, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-})
-.AddAttribute("y", a => a.Y, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-})
-.AddAttribute("cx", a => a.Cx, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
-})
-.AddAttribute("cy", a => a.Cy, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
-})
-.AddAttribute("rot", a => a.Rot)
-.AddAttribute("flipH", a => a.FlipH)
-.AddAttribute("flipV", a => a.FlipV);
+                .AddAttribute("x", a => a.X, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                })
+                .AddAttribute("y", a => a.Y, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                })
+                .AddAttribute("cx", a => a.Cx, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+                })
+                .AddAttribute("cy", a => a.Cy, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+                })
+                .AddAttribute("rot", a => a.Rot)
+                .AddAttribute("flipH", a => a.FlipH)
+                .AddAttribute("flipV", a => a.FlipV);
         }
 
         /// <inheritdoc/>
@@ -2537,16 +2537,16 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("oac:off");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<Point2DType>()
-.AddAttribute("x", a => a.X, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-})
-.AddAttribute("y", a => a.Y, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-});
+                .AddAttribute("x", a => a.X, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                })
+                .AddAttribute("y", a => a.Y, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -2758,35 +2758,35 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SpaceAfter>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.TabStopList>();
             builder.AddElement<TextParagraphPropertiesType>()
-.AddAttribute("marL", a => a.LeftMargin, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (51206400L) });
-})
-.AddAttribute("marR", a => a.RightMargin, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (51206400L) });
-})
-.AddAttribute("lvl", a => a.Level, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (8L) });
-})
-.AddAttribute("indent", a => a.Indent, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-51206400L), MaxInclusive = (51206400L) });
-})
-.AddAttribute("algn", a => a.Alignment, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("defTabSz", a => a.DefaultTabSize)
-.AddAttribute("rtl", a => a.RightToLeft)
-.AddAttribute("eaLnBrk", a => a.EastAsianLineBreak)
-.AddAttribute("fontAlgn", a => a.FontAlignment, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("latinLnBrk", a => a.LatinLineBreak)
-.AddAttribute("hangingPunct", a => a.Height);
+                .AddAttribute("marL", a => a.LeftMargin, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (51206400L) });
+                })
+                .AddAttribute("marR", a => a.RightMargin, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (51206400L) });
+                })
+                .AddAttribute("lvl", a => a.Level, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (8L) });
+                })
+                .AddAttribute("indent", a => a.Indent, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-51206400L), MaxInclusive = (51206400L) });
+                })
+                .AddAttribute("algn", a => a.Alignment, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("defTabSz", a => a.DefaultTabSize)
+                .AddAttribute("rtl", a => a.RightToLeft)
+                .AddAttribute("eaLnBrk", a => a.EastAsianLineBreak)
+                .AddAttribute("fontAlgn", a => a.FontAlignment, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("latinLnBrk", a => a.LatinLineBreak)
+                .AddAttribute("hangingPunct", a => a.Height);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineSpacing), 0, 1),
@@ -3151,46 +3151,46 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NormalAutoFit>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapeAutoFit>();
             builder.AddElement<TextBodyProperties>()
-.AddAttribute("rot", a => a.Rotation)
-.AddAttribute("spcFirstLastPara", a => a.UseParagraphSpacing)
-.AddAttribute("vertOverflow", a => a.VerticalOverflow, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("horzOverflow", a => a.HorizontalOverflow, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("vert", a => a.Vertical, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("wrap", a => a.Wrap, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("lIns", a => a.LeftInset)
-.AddAttribute("tIns", a => a.TopInset)
-.AddAttribute("rIns", a => a.RightInset)
-.AddAttribute("bIns", a => a.BottomInset)
-.AddAttribute("numCol", a => a.ColumnCount, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (16L) });
-})
-.AddAttribute("spcCol", a => a.ColumnSpacing, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
-})
-.AddAttribute("rtlCol", a => a.RightToLeftColumns)
-.AddAttribute("fromWordArt", a => a.FromWordArt)
-.AddAttribute("anchor", a => a.Anchor, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("anchorCtr", a => a.AnchorCenter)
-.AddAttribute("forceAA", a => a.ForceAntiAlias)
-.AddAttribute("upright", a => a.UpRight)
-.AddAttribute("compatLnSpc", a => a.CompatibleLineSpacing);
+                .AddAttribute("rot", a => a.Rotation)
+                .AddAttribute("spcFirstLastPara", a => a.UseParagraphSpacing)
+                .AddAttribute("vertOverflow", a => a.VerticalOverflow, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("horzOverflow", a => a.HorizontalOverflow, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("vert", a => a.Vertical, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("wrap", a => a.Wrap, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("lIns", a => a.LeftInset)
+                .AddAttribute("tIns", a => a.TopInset)
+                .AddAttribute("rIns", a => a.RightInset)
+                .AddAttribute("bIns", a => a.BottomInset)
+                .AddAttribute("numCol", a => a.ColumnCount, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (16L) });
+                })
+                .AddAttribute("spcCol", a => a.ColumnSpacing, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
+                })
+                .AddAttribute("rtlCol", a => a.RightToLeftColumns)
+                .AddAttribute("fromWordArt", a => a.FromWordArt)
+                .AddAttribute("anchor", a => a.Anchor, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("anchorCtr", a => a.AnchorCenter)
+                .AddAttribute("forceAA", a => a.ForceAntiAlias)
+                .AddAttribute("upright", a => a.UpRight)
+                .AddAttribute("compatLnSpc", a => a.CompatibleLineSpacing);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetTextWrap), 0, 1),
@@ -3386,18 +3386,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("oac:cNvSpPr");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ModifyNonVisualDrawingShapeProps>()
-.AddAttribute("noGrp", a => a.NoGrp)
-.AddAttribute("noSelect", a => a.NoSelect)
-.AddAttribute("noRot", a => a.NoRot)
-.AddAttribute("noChangeAspect", a => a.NoChangeAspect)
-.AddAttribute("noMove", a => a.NoMove)
-.AddAttribute("noResize", a => a.NoResize)
-.AddAttribute("noEditPoints", a => a.NoEditPoints)
-.AddAttribute("noAdjustHandles", a => a.NoAdjustHandles)
-.AddAttribute("noChangeArrowheads", a => a.NoChangeArrowheads)
-.AddAttribute("noChangeShapeType", a => a.NoChangeShapeType)
-.AddAttribute("noTextEdit", a => a.NoTextEdit)
-.AddAttribute("txBox", a => a.TxBox);
+                .AddAttribute("noGrp", a => a.NoGrp)
+                .AddAttribute("noSelect", a => a.NoSelect)
+                .AddAttribute("noRot", a => a.NoRot)
+                .AddAttribute("noChangeAspect", a => a.NoChangeAspect)
+                .AddAttribute("noMove", a => a.NoMove)
+                .AddAttribute("noResize", a => a.NoResize)
+                .AddAttribute("noEditPoints", a => a.NoEditPoints)
+                .AddAttribute("noAdjustHandles", a => a.NoAdjustHandles)
+                .AddAttribute("noChangeArrowheads", a => a.NoChangeArrowheads)
+                .AddAttribute("noChangeShapeType", a => a.NoChangeShapeType)
+                .AddAttribute("noTextEdit", a => a.NoTextEdit)
+                .AddAttribute("txBox", a => a.TxBox);
         }
 
         /// <inheritdoc/>
@@ -3549,10 +3549,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddElement<ShapeProperties>()
-.AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
@@ -4856,10 +4856,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
             builder.AddElement<StyleMatrixReferenceType>()
-.AddAttribute("idx", a => a.Index, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("idx", a => a.Index, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <summary>
@@ -5014,11 +5014,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
             builder.AddElement<FontReference>()
-.AddAttribute("idx", a => a.Index, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("idx", a => a.Index, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -5400,8 +5400,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Stretch>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Tile>();
             builder.AddElement<BlipFillProperties>()
-.AddAttribute("dpi", a => a.Dpi)
-.AddAttribute("rotWithShape", a => a.RotateWithShape);
+                .AddAttribute("dpi", a => a.Dpi)
+                .AddAttribute("rotWithShape", a => a.RotateWithShape);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Blip), 0, 1),
@@ -5561,10 +5561,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<OpenXmlRelativeRectPropsElement>()
-                           .AddAttribute("l", a => a.L)
-                           .AddAttribute("t", a => a.T)
-                           .AddAttribute("r", a => a.R)
-                           .AddAttribute("b", a => a.B);
+                .AddAttribute("l", a => a.L)
+                .AddAttribute("t", a => a.T)
+                .AddAttribute("r", a => a.R)
+                .AddAttribute("b", a => a.B);
         }
     }
 
@@ -5788,13 +5788,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("oac:cNvGrpSpPr");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ModifyNonVisualGroupDrawingShapeProps>()
-.AddAttribute("noGrp", a => a.NoGrp)
-.AddAttribute("noUngrp", a => a.NoUngrp)
-.AddAttribute("noSelect", a => a.NoSelect)
-.AddAttribute("noRot", a => a.NoRot)
-.AddAttribute("noChangeAspect", a => a.NoChangeAspect)
-.AddAttribute("noMove", a => a.NoMove)
-.AddAttribute("noResize", a => a.NoResize);
+                .AddAttribute("noGrp", a => a.NoGrp)
+                .AddAttribute("noUngrp", a => a.NoUngrp)
+                .AddAttribute("noSelect", a => a.NoSelect)
+                .AddAttribute("noRot", a => a.NoRot)
+                .AddAttribute("noChangeAspect", a => a.NoChangeAspect)
+                .AddAttribute("noMove", a => a.NoMove)
+                .AddAttribute("noResize", a => a.NoResize);
         }
 
         /// <inheritdoc/>
@@ -5884,10 +5884,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddElement<GroupShapeProperties>()
-.AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TransformGroup), 0, 1),
@@ -6198,17 +6198,17 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
             builder.AddElement<NonVisualDrawingProps>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("descr", a => a.Description)
-.AddAttribute("hidden", a => a.Hidden)
-.AddAttribute("title", a => a.Title);
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("descr", a => a.Description)
+                .AddAttribute("hidden", a => a.Hidden)
+                .AddAttribute("title", a => a.Title);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
@@ -6437,12 +6437,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("oac:cNvGraphicFramePr");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ModifyNonVisualGraphicFrameProps>()
-.AddAttribute("noGrp", a => a.NoGrp)
-.AddAttribute("noDrilldown", a => a.NoDrilldown)
-.AddAttribute("noSelect", a => a.NoSelect)
-.AddAttribute("noChangeAspect", a => a.NoChangeAspect)
-.AddAttribute("noMove", a => a.NoMove)
-.AddAttribute("noResize", a => a.NoResize);
+                .AddAttribute("noGrp", a => a.NoGrp)
+                .AddAttribute("noDrilldown", a => a.NoDrilldown)
+                .AddAttribute("noSelect", a => a.NoSelect)
+                .AddAttribute("noChangeAspect", a => a.NoChangeAspect)
+                .AddAttribute("noMove", a => a.NoMove)
+                .AddAttribute("noResize", a => a.NoResize);
         }
 
         /// <inheritdoc/>
@@ -6541,14 +6541,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<ConnectionType>()
-                           .AddAttribute("id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           })
-                           .AddAttribute("idx", a => a.Index, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           });
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("idx", a => a.Index, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
     }
 
@@ -6716,16 +6716,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnConnection>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnConnection>();
             builder.AddElement<ModifyNonVisualConnectorProps>()
-.AddAttribute("noGrp", a => a.NoGrp)
-.AddAttribute("noSelect", a => a.NoSelect)
-.AddAttribute("noRot", a => a.NoRot)
-.AddAttribute("noChangeAspect", a => a.NoChangeAspect)
-.AddAttribute("noMove", a => a.NoMove)
-.AddAttribute("noResize", a => a.NoResize)
-.AddAttribute("noEditPoints", a => a.NoEditPoints)
-.AddAttribute("noAdjustHandles", a => a.NoAdjustHandles)
-.AddAttribute("noChangeArrowheads", a => a.NoChangeArrowheads)
-.AddAttribute("noChangeShapeType", a => a.NoChangeShapeType);
+                .AddAttribute("noGrp", a => a.NoGrp)
+                .AddAttribute("noSelect", a => a.NoSelect)
+                .AddAttribute("noRot", a => a.NoRot)
+                .AddAttribute("noChangeAspect", a => a.NoChangeAspect)
+                .AddAttribute("noMove", a => a.NoMove)
+                .AddAttribute("noResize", a => a.NoResize)
+                .AddAttribute("noEditPoints", a => a.NoEditPoints)
+                .AddAttribute("noAdjustHandles", a => a.NoAdjustHandles)
+                .AddAttribute("noChangeArrowheads", a => a.NoChangeArrowheads)
+                .AddAttribute("noChangeShapeType", a => a.NoChangeShapeType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnConnection), 0, 1, version: FileFormatVersions.Office2016),
@@ -7067,12 +7067,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("oac:compressPicPr");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<CompressPictureProps>()
-.AddAttribute("removeCrop", a => a.RemoveCrop)
-.AddAttribute("useLocalDpi", a => a.UseLocalDpi)
-.AddAttribute("cstate", a => a.Cstate, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("removeCrop", a => a.RemoveCrop)
+                .AddAttribute("useLocalDpi", a => a.UseLocalDpi)
+                .AddAttribute("cstate", a => a.Cstate, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
 
         /// <inheritdoc/>
@@ -7232,18 +7232,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("oac:cNvPicPr");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ModifyNonVisualPictureProps>()
-.AddAttribute("noGrp", a => a.NoGrp)
-.AddAttribute("noSelect", a => a.NoSelect)
-.AddAttribute("noRot", a => a.NoRot)
-.AddAttribute("noChangeAspect", a => a.NoChangeAspect)
-.AddAttribute("noMove", a => a.NoMove)
-.AddAttribute("noResize", a => a.NoResize)
-.AddAttribute("noEditPoints", a => a.NoEditPoints)
-.AddAttribute("noAdjustHandles", a => a.NoAdjustHandles)
-.AddAttribute("noChangeArrowheads", a => a.NoChangeArrowheads)
-.AddAttribute("noChangeShapeType", a => a.NoChangeShapeType)
-.AddAttribute("noCrop", a => a.NoCrop)
-.AddAttribute("preferRelativeResize", a => a.PreferRelativeResize);
+                .AddAttribute("noGrp", a => a.NoGrp)
+                .AddAttribute("noSelect", a => a.NoSelect)
+                .AddAttribute("noRot", a => a.NoRot)
+                .AddAttribute("noChangeAspect", a => a.NoChangeAspect)
+                .AddAttribute("noMove", a => a.NoMove)
+                .AddAttribute("noResize", a => a.NoResize)
+                .AddAttribute("noEditPoints", a => a.NoEditPoints)
+                .AddAttribute("noAdjustHandles", a => a.NoAdjustHandles)
+                .AddAttribute("noChangeArrowheads", a => a.NoChangeArrowheads)
+                .AddAttribute("noChangeShapeType", a => a.NoChangeShapeType)
+                .AddAttribute("noCrop", a => a.NoCrop)
+                .AddAttribute("preferRelativeResize", a => a.PreferRelativeResize);
         }
 
         /// <inheritdoc/>
@@ -7389,26 +7389,26 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("oac:bounds");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<BoundRect>()
-.AddAttribute("l", a => a.L, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-})
-.AddAttribute("t", a => a.T, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-})
-.AddAttribute("r", a => a.R, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-})
-.AddAttribute("b", a => a.B, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-});
+                .AddAttribute("l", a => a.L, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                })
+                .AddAttribute("t", a => a.T, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                })
+                .AddAttribute("r", a => a.R, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                })
+                .AddAttribute("b", a => a.B, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -7587,22 +7587,22 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
             builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetDash>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddElement<LinePropertiesType>()
-.AddAttribute("w", a => a.Width, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (20116800L) });
-})
-.AddAttribute("cap", a => a.CapType, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("cmpd", a => a.CompoundLineType, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("algn", a => a.Alignment, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("w", a => a.Width, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (20116800L) });
+                })
+                .AddAttribute("cap", a => a.CapType, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("cmpd", a => a.CompoundLineType, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("algn", a => a.Alignment, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -7784,17 +7784,17 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("oac:cNvInkPr");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ModifyNonVisualInkProps>()
-.AddAttribute("noGrp", a => a.NoGrp)
-.AddAttribute("noSelect", a => a.NoSelect)
-.AddAttribute("noRot", a => a.NoRot)
-.AddAttribute("noChangeAspect", a => a.NoChangeAspect)
-.AddAttribute("noMove", a => a.NoMove)
-.AddAttribute("noResize", a => a.NoResize)
-.AddAttribute("noEditPoints", a => a.NoEditPoints)
-.AddAttribute("noAdjustHandles", a => a.NoAdjustHandles)
-.AddAttribute("noChangeArrowheads", a => a.NoChangeArrowheads)
-.AddAttribute("noChangeShapeType", a => a.NoChangeShapeType)
-.AddAttribute("isComment", a => a.IsComment);
+                .AddAttribute("noGrp", a => a.NoGrp)
+                .AddAttribute("noSelect", a => a.NoSelect)
+                .AddAttribute("noRot", a => a.NoRot)
+                .AddAttribute("noChangeAspect", a => a.NoChangeAspect)
+                .AddAttribute("noMove", a => a.NoMove)
+                .AddAttribute("noResize", a => a.NoResize)
+                .AddAttribute("noEditPoints", a => a.NoEditPoints)
+                .AddAttribute("noAdjustHandles", a => a.NoAdjustHandles)
+                .AddAttribute("noChangeArrowheads", a => a.NoChangeArrowheads)
+                .AddAttribute("noChangeShapeType", a => a.NoChangeShapeType)
+                .AddAttribute("isComment", a => a.IsComment);
         }
 
         /// <inheritdoc/>
@@ -8047,13 +8047,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData>();
             builder.AddElement<OpenXmlHyperlinkPropsElement>()
-.AddAttribute("source", a => a.Source)
-.AddAttribute("action", a => a.Action)
-.AddAttribute("tgtFrame", a => a.TgtFrame)
-.AddAttribute("tooltip", a => a.Tooltip)
-.AddAttribute("highlightClick", a => a.HighlightClick)
-.AddAttribute("endSnd", a => a.EndSnd)
-.AddAttribute("sndName", a => a.SndName);
+                .AddAttribute("source", a => a.Source)
+                .AddAttribute("action", a => a.Action)
+                .AddAttribute("tgtFrame", a => a.TgtFrame)
+                .AddAttribute("tooltip", a => a.Tooltip)
+                .AddAttribute("highlightClick", a => a.HighlightClick)
+                .AddAttribute("endSnd", a => a.EndSnd)
+                .AddAttribute("sndName", a => a.SndName);
         }
 
         /// <summary>
@@ -8293,11 +8293,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("oac:context");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<TextCharRangeContext>()
-.AddAttribute("len", a => a.Len)
-.AddAttribute("hash", a => a.Hash, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("len", a => a.Len)
+                .AddAttribute("hash", a => a.Hash, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>

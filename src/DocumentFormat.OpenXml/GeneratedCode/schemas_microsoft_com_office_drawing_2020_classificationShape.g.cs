@@ -49,10 +49,10 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.DocumentClassification
             builder.SetSchema("aclsh:classification");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<ClassificationOutcome>()
-.AddAttribute("classificationOutcomeType", a => a.ClassificationOutcomeType, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("classificationOutcomeType", a => a.ClassificationOutcomeType, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
 
         /// <inheritdoc/>

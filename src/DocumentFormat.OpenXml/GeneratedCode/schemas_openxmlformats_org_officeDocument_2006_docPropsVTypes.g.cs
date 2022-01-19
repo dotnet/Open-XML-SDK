@@ -747,14 +747,14 @@ namespace DocumentFormat.OpenXml.VariantTypes
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64>();
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort>();
             builder.AddElement<VTVector>()
-.AddAttribute("baseType", a => a.BaseType, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("size", a => a.Size, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("baseType", a => a.BaseType, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("size", a => a.Size, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.Variant), 1, 1),
@@ -901,18 +901,18 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger>();
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort>();
             builder.AddElement<VTArray>()
-.AddAttribute("lBound", a => a.LowerBounds, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("uBound", a => a.UpperBounds, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("baseType", a => a.BaseType, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("lBound", a => a.LowerBounds, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("uBound", a => a.UpperBounds, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("baseType", a => a.BaseType, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.Variant), 1, 1),
@@ -2083,11 +2083,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("vt:vstream");
             builder.AddElement<VTVStreamData>()
-.AddAttribute("version", a => a.Version, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}\\s*") });
-});
+                .AddAttribute("version", a => a.Version, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}\\s*") });
+                });
             builder.AddConstraint(new UniqueAttributeValueConstraint("vt:version", true, null));
         }
 
@@ -2189,14 +2189,14 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-
             base.ConfigureMetadata(builder);
             builder.SetSchema("vt:cf");
             builder.AddElement<VTClipboardData>()
-.AddAttribute("format", a => a.Format, aBuilder =>
-{
-    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-3L) });
-})
-.AddAttribute("size", a => a.Size, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("format", a => a.Format, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-3L) });
+                })
+                .AddAttribute("size", a => a.Size, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>

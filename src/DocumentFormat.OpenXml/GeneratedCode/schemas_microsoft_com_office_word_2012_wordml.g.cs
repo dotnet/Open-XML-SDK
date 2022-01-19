@@ -95,24 +95,24 @@ namespace DocumentFormat.OpenXml.Office2013.Word
             builder.SetSchema("w15:color");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<Color>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(EnumValidator.Instance);
-union.AddValidator<HexBinaryValue>(new StringValidator() { Length = (3L) });
-});
-})
-.AddAttribute("w:themeColor", a => a.ThemeColor)
-.AddAttribute("w:themeTint", a => a.ThemeTint, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
-})
-.AddAttribute("w:themeShade", a => a.ThemeShade, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(EnumValidator.Instance);
+                        union.AddValidator<HexBinaryValue>(new StringValidator() { Length = (3L) });
+                    });
+                })
+                .AddAttribute("w:themeColor", a => a.ThemeColor)
+                .AddAttribute("w:themeTint", a => a.ThemeTint, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+                })
+                .AddAttribute("w:themeShade", a => a.ThemeShade, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -182,15 +182,15 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
             builder.SetSchema("w15:dataBinding");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<DataBinding>()
-.AddAttribute("w:prefixMappings", a => a.PrefixMappings)
-.AddAttribute("w:xpath", a => a.XPath, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("w:storeItemID", a => a.StoreItemId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:prefixMappings", a => a.PrefixMappings)
+                .AddAttribute("w:xpath", a => a.XPath, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("w:storeItemID", a => a.StoreItemId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -232,10 +232,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("w15:appearance");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<Appearance>()
-.AddAttribute("w15:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
-});
+                .AddAttribute("w15:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
+                });
         }
 
         /// <inheritdoc/>
@@ -704,7 +704,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<OnOffType>()
-                           .AddAttribute("w:val", a => a.Val);
+                .AddAttribute("w:val", a => a.Val);
         }
     }
 
@@ -743,11 +743,11 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
             builder.SetSchema("w15:docId");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<PersistentDocumentId>()
-.AddAttribute("w15:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-});
+                .AddAttribute("w15:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                });
         }
 
         /// <inheritdoc/>
@@ -789,10 +789,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.SetSchema("w15:footnoteColumns");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<FootnoteColumns>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -862,21 +862,21 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("w15:commentEx");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<CommentEx>()
-.AddAttribute("w15:paraId", a => a.ParaId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w15:paraIdParent", a => a.ParaIdParent, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w15:done", a => a.Done, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
-});
+                .AddAttribute("w15:paraId", a => a.ParaId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w15:paraIdParent", a => a.ParaIdParent, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w15:done", a => a.Done, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
+                });
             builder.AddConstraint(new AttributeValuePatternConstraint("w15:paraId", @"[0-9a-fA-F]{8}") { Application = ApplicationType.Word, Version = FileFormatVersions.Office2013 });
             builder.AddConstraint(new AttributeValueLengthConstraint("w15:done", 1, int.MaxValue) { Application = ApplicationType.Word, Version = FileFormatVersions.Office2013 });
         }
@@ -951,11 +951,11 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.PresenceInfo>();
             builder.AddElement<Person>()
-.AddAttribute("w15:author", a => a.Author, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
-});
+                .AddAttribute("w15:author", a => a.Author, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.PresenceInfo), 0, 1, version: FileFormatVersions.Office2013)
@@ -1028,16 +1028,16 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
             builder.SetSchema("w15:presenceInfo");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<PresenceInfo>()
-.AddAttribute("w15:providerId", a => a.ProviderId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
-})
-.AddAttribute("w15:userId", a => a.UserId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
-});
+                .AddAttribute("w15:providerId", a => a.ProviderId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
+                })
+                .AddAttribute("w15:userId", a => a.UserId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
+                });
             builder.AddConstraint(new AttributeValueLengthConstraint("w15:providerId", 1, 100) { Application = ApplicationType.Word, Version = FileFormatVersions.Office2013 });
             builder.AddConstraint(new AttributeValueLengthConstraint("w15:userId", 1, 300) { Application = ApplicationType.Word, Version = FileFormatVersions.Office2013 });
         }
@@ -1081,10 +1081,10 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
             builder.SetSchema("w15:sectionTitle");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<SectionTitle>()
-.AddAttribute("w:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("w:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>

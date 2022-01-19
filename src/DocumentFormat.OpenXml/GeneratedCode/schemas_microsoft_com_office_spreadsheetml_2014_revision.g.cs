@@ -117,22 +117,22 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExHeader>();
             builder.AddElement<RevExHeaders>()
-.AddAttribute("minRev", a => a.MinRev, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("maxRev", a => a.MaxRev, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("docId", a => a.DocId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("endpointId", a => a.EndpointId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("minRev", a => a.MinRev, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("maxRev", a => a.MaxRev, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("docId", a => a.DocId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("endpointId", a => a.EndpointId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExHeader), 0, 0, version: FileFormatVersions.Office2016)
@@ -456,14 +456,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("xr:revisionPtr");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevisionPtr>()
-.AddAttribute("revIDLastSave", a => a.RevIDLastSave, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("documentId", a => a.DocumentId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("revIDLastSave", a => a.RevIDLastSave, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("documentId", a => a.DocumentId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -692,16 +692,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("xr:hdr");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevExHeader>()
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("minRev", a => a.MinRev)
-.AddAttribute("maxRev", a => a.MaxRev)
-.AddAttribute("time", a => a.Time, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("minRev", a => a.MinRev)
+                .AddAttribute("maxRev", a => a.MaxRev)
+                .AddAttribute("time", a => a.Time, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -826,26 +826,26 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExTest>();
             builder.AddElement<RevExFuture>()
-.AddAttribute("rev", a => a.Rev, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("sh", a => a.Sh, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("uidp", a => a.Uidp, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("ctx", a => a.Ctx)
-.AddAttribute("sti", a => a.Sti);
+                .AddAttribute("rev", a => a.Rev, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("uid", a => a.Uid, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("sh", a => a.Sh, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("uidp", a => a.Uidp, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("ctx", a => a.Ctx)
+                .AddAttribute("sti", a => a.Sti);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExTest), 0, 0, version: FileFormatVersions.Office2016)
@@ -932,25 +932,25 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.SetSchema("xr:xrrUspt");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevExUnsupported>()
-.AddAttribute("rev", a => a.Rev, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("sh", a => a.Sh, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("uidp", a => a.Uidp, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("ctx", a => a.Ctx);
+                .AddAttribute("rev", a => a.Rev, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("uid", a => a.Uid, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("sh", a => a.Sh, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("uidp", a => a.Uidp, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("ctx", a => a.Ctx);
         }
 
         /// <inheritdoc/>
@@ -1033,25 +1033,25 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.SetSchema("xr:xrrTrim");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevExTrimmed>()
-.AddAttribute("rev", a => a.Rev, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("sh", a => a.Sh, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("uidp", a => a.Uidp, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("ctx", a => a.Ctx);
+                .AddAttribute("rev", a => a.Rev, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("uid", a => a.Uid, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("sh", a => a.Sh, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("uidp", a => a.Uidp, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("ctx", a => a.Ctx);
         }
 
         /// <inheritdoc/>
@@ -1167,34 +1167,34 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.SetSchema("xr:xrrrc");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevExRowColumn>()
-.AddAttribute("rev", a => a.Rev, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("sh", a => a.Sh, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("uidp", a => a.Uidp, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("ctx", a => a.Ctx)
-.AddAttribute("eol", a => a.Eol)
-.AddAttribute("ref", a => a.Ref, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("action", a => a.Action, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("rev", a => a.Rev, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("uid", a => a.Uid, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("sh", a => a.Sh, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("uidp", a => a.Uidp, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("ctx", a => a.Ctx)
+                .AddAttribute("eol", a => a.Eol)
+                .AddAttribute("ref", a => a.Ref, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("action", a => a.Action, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -1310,37 +1310,37 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("xr:xrrm");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevExMove>()
-.AddAttribute("rev", a => a.Rev, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("sh", a => a.Sh, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("uidp", a => a.Uidp, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("ctx", a => a.Ctx)
-.AddAttribute("src", a => a.Src, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("dst", a => a.Dst, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("srcSh", a => a.SrcSh, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-});
+                .AddAttribute("rev", a => a.Rev, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("uid", a => a.Uid, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("sh", a => a.Sh, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("uidp", a => a.Uidp, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("ctx", a => a.Ctx)
+                .AddAttribute("src", a => a.Src, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("dst", a => a.Dst, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("srcSh", a => a.SrcSh, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                });
         }
 
         /// <inheritdoc/>
@@ -1511,36 +1511,36 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.ChangeCellSubEdit>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevCell>();
             builder.AddElement<RevExChangeCell>()
-.AddAttribute("listUid", a => a.ListUid, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("rev", a => a.Rev, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("sh", a => a.Sh, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("uidp", a => a.Uidp, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("ctx", a => a.Ctx)
-.AddAttribute("r", a => a.R, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("t", a => a.T)
-.AddAttribute("x", a => a.X)
-.AddAttribute("w", a => a.W);
+                .AddAttribute("listUid", a => a.ListUid, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("rev", a => a.Rev, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("uid", a => a.Uid, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("sh", a => a.Sh, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("uidp", a => a.Uidp, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("ctx", a => a.Ctx)
+                .AddAttribute("r", a => a.R, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("t", a => a.T)
+                .AddAttribute("x", a => a.X)
+                .AddAttribute("w", a => a.W);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevCell), 1, 0, version: FileFormatVersions.Office2016),
@@ -1815,45 +1815,45 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.ExtensionList>();
             builder.AddElement<RevExFormatting>()
-.AddAttribute("rev", a => a.Rev, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("sh", a => a.Sh, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("uidp", a => a.Uidp, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("ctx", a => a.Ctx)
-.AddAttribute("numFmtId", a => a.NumFmtId)
-.AddAttribute("xfDxf", a => a.XfDxf)
-.AddAttribute("style", a => a.Style)
-.AddAttribute("sqref", a => a.Sqref, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("start", a => a.Start)
-.AddAttribute("length", a => a.Length)
-.AddAttribute("styleUid", a => a.StyleUid, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("fBlankCell", a => a.FBlankCell)
-.AddAttribute("applyNumberFormat", a => a.ApplyNumberFormat)
-.AddAttribute("applyFont", a => a.ApplyFont)
-.AddAttribute("applyFill", a => a.ApplyFill)
-.AddAttribute("applyBorder", a => a.ApplyBorder)
-.AddAttribute("applyAlignment", a => a.ApplyAlignment)
-.AddAttribute("applyProtection", a => a.ApplyProtection);
+                .AddAttribute("rev", a => a.Rev, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("uid", a => a.Uid, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("sh", a => a.Sh, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("uidp", a => a.Uidp, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("ctx", a => a.Ctx)
+                .AddAttribute("numFmtId", a => a.NumFmtId)
+                .AddAttribute("xfDxf", a => a.XfDxf)
+                .AddAttribute("style", a => a.Style)
+                .AddAttribute("sqref", a => a.Sqref, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("start", a => a.Start)
+                .AddAttribute("length", a => a.Length)
+                .AddAttribute("styleUid", a => a.StyleUid, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("fBlankCell", a => a.FBlankCell)
+                .AddAttribute("applyNumberFormat", a => a.ApplyNumberFormat)
+                .AddAttribute("applyFont", a => a.ApplyFont)
+                .AddAttribute("applyFill", a => a.ApplyFill)
+                .AddAttribute("applyBorder", a => a.ApplyBorder)
+                .AddAttribute("applyAlignment", a => a.ApplyAlignment)
+                .AddAttribute("applyProtection", a => a.ApplyProtection);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType), 0, 1, version: FileFormatVersions.Office2016),
@@ -2121,39 +2121,39 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula>();
             builder.AddElement<RevExDefinedName>()
-.AddAttribute("rev", a => a.Rev, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("sh", a => a.Sh, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("uidp", a => a.Uidp, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("ctx", a => a.Ctx)
-.AddAttribute("customView", a => a.CustomView)
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("function", a => a.Function)
-.AddAttribute("functionGroupId", a => a.FunctionGroupId)
-.AddAttribute("shortcutKey", a => a.ShortcutKey)
-.AddAttribute("hidden", a => a.Hidden)
-.AddAttribute("customMenu", a => a.CustomMenu)
-.AddAttribute("description", a => a.Description)
-.AddAttribute("help", a => a.Help)
-.AddAttribute("statusBar", a => a.StatusBar)
-.AddAttribute("comment", a => a.Comment);
+                .AddAttribute("rev", a => a.Rev, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("uid", a => a.Uid, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("sh", a => a.Sh, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("uidp", a => a.Uidp, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("ctx", a => a.Ctx)
+                .AddAttribute("customView", a => a.CustomView)
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("function", a => a.Function)
+                .AddAttribute("functionGroupId", a => a.FunctionGroupId)
+                .AddAttribute("shortcutKey", a => a.ShortcutKey)
+                .AddAttribute("hidden", a => a.Hidden)
+                .AddAttribute("customMenu", a => a.CustomMenu)
+                .AddAttribute("description", a => a.Description)
+                .AddAttribute("help", a => a.Help)
+                .AddAttribute("statusBar", a => a.StatusBar)
+                .AddAttribute("comment", a => a.Comment);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula), 0, 1, version: FileFormatVersions.Office2016),
@@ -2298,25 +2298,25 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader>();
             builder.AddElement<RevExDelObj>()
-.AddAttribute("rev", a => a.Rev, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("sh", a => a.Sh, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("uidp", a => a.Uidp, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("ctx", a => a.Ctx);
+                .AddAttribute("rev", a => a.Rev, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("uid", a => a.Uid, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("sh", a => a.Sh, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("uidp", a => a.Uidp, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("ctx", a => a.Ctx);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader), 1, 1, version: FileFormatVersions.Office2016)
@@ -2451,25 +2451,25 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevisionStateLink>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader>();
             builder.AddElement<RevExChgObj>()
-.AddAttribute("rev", a => a.Rev, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("sh", a => a.Sh, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("uidp", a => a.Uidp, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("ctx", a => a.Ctx);
+                .AddAttribute("rev", a => a.Rev, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("uid", a => a.Uid, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("sh", a => a.Sh, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("uidp", a => a.Uidp, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("ctx", a => a.Ctx);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader), 1, 1, version: FileFormatVersions.Office2016),
@@ -2618,32 +2618,32 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.SetSchema("xr:xrrSheet");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevExSheetOp>()
-.AddAttribute("rev", a => a.Rev, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("sh", a => a.Sh, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("uidp", a => a.Uidp, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("ctx", a => a.Ctx)
-.AddAttribute("op", a => a.Op, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("name", a => a.Name)
-.AddAttribute("idOrig", a => a.IdOrig)
-.AddAttribute("idNew", a => a.IdNew);
+                .AddAttribute("rev", a => a.Rev, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("uid", a => a.Uid, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("sh", a => a.Sh, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("uidp", a => a.Uidp, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("ctx", a => a.Ctx)
+                .AddAttribute("op", a => a.Op, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("idOrig", a => a.IdOrig)
+                .AddAttribute("idNew", a => a.IdNew);
         }
 
         /// <inheritdoc/>
@@ -2814,39 +2814,39 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("xr:xrrList");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevisionList>()
-.AddAttribute("rev", a => a.Rev, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("sh", a => a.Sh, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("uidp", a => a.Uidp, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("ctx", a => a.Ctx)
-.AddAttribute("Data", a => a.Data)
-.AddAttribute("Formatting", a => a.Formatting)
-.AddAttribute("RangeBased", a => a.RangeBased)
-.AddAttribute("Fake", a => a.Fake)
-.AddAttribute("ref", a => a.Ref, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("Headers", a => a.Headers)
-.AddAttribute("InsDelHeaders", a => a.InsDelHeaders)
-.AddAttribute("rId", a => a.RId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("rev", a => a.Rev, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("uid", a => a.Uid, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("sh", a => a.Sh, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("uidp", a => a.Uidp, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("ctx", a => a.Ctx)
+                .AddAttribute("Data", a => a.Data)
+                .AddAttribute("Formatting", a => a.Formatting)
+                .AddAttribute("RangeBased", a => a.RangeBased)
+                .AddAttribute("Fake", a => a.Fake)
+                .AddAttribute("ref", a => a.Ref, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("Headers", a => a.Headers)
+                .AddAttribute("InsDelHeaders", a => a.InsDelHeaders)
+                .AddAttribute("rId", a => a.RId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -2951,34 +2951,34 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("xr:xrrListExpR");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevListAutoExpandRw>()
-.AddAttribute("rev", a => a.Rev, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("sh", a => a.Sh, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("uidp", a => a.Uidp, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("ctx", a => a.Ctx)
-.AddAttribute("refAdded", a => a.RefAdded, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("listGuid", a => a.ListGuid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-});
+                .AddAttribute("rev", a => a.Rev, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("uid", a => a.Uid, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("sh", a => a.Sh, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("uidp", a => a.Uidp, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("ctx", a => a.Ctx)
+                .AddAttribute("refAdded", a => a.RefAdded, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("listGuid", a => a.ListGuid, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                });
         }
 
         /// <inheritdoc/>
@@ -3116,25 +3116,25 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevisionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevListAutoExpandRw>();
             builder.AddElement<RevGroup>()
-.AddAttribute("rev", a => a.Rev, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("sh", a => a.Sh, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("uidp", a => a.Uidp, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("ctx", a => a.Ctx);
+                .AddAttribute("rev", a => a.Rev, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("uid", a => a.Uid, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("sh", a => a.Sh, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("uidp", a => a.Uidp, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("ctx", a => a.Ctx);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExFuture), 0, 0, version: FileFormatVersions.Office2016),
@@ -3283,10 +3283,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.FFormula>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.Xstring>();
             builder.AddElement<RevCell>()
-.AddAttribute("t", a => a.T)
-.AddAttribute("nop", a => a.Nop)
-.AddAttribute("tick", a => a.Tick)
-.AddAttribute("rep", a => a.Rep);
+                .AddAttribute("t", a => a.T)
+                .AddAttribute("nop", a => a.Nop)
+                .AddAttribute("tick", a => a.Tick)
+                .AddAttribute("rep", a => a.Rep);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.FFormula), 0, 1, version: FileFormatVersions.Office2016),
@@ -3434,13 +3434,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevCell>();
             builder.AddElement<ChangeCellSubEdit>()
-.AddAttribute("r", a => a.R, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("t", a => a.T)
-.AddAttribute("x", a => a.X)
-.AddAttribute("w", a => a.W);
+                .AddAttribute("r", a => a.R, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("t", a => a.T)
+                .AddAttribute("x", a => a.X)
+                .AddAttribute("w", a => a.W);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevCell), 1, 0, version: FileFormatVersions.Office2016)
@@ -3703,18 +3703,18 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RefMap>();
             builder.AddElement<StateBasedHeader>()
-.AddAttribute("uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("eft", a => a.Eft, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("eftx", a => a.Eftx)
-.AddAttribute("seft", a => a.Seft)
-.AddAttribute("seftx", a => a.Seftx);
+                .AddAttribute("uid", a => a.Uid, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("eft", a => a.Eft, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("eftx", a => a.Eftx)
+                .AddAttribute("seft", a => a.Seft)
+                .AddAttribute("seftx", a => a.Seftx);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RefMap), 0, 1, version: FileFormatVersions.Office2016)
@@ -3773,10 +3773,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("xr:link");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevisionStateLink>()
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -4059,16 +4059,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("xr:rowColVisualOps");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RowColVisualOps>()
-.AddAttribute("action", a => a.Action, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("isRow", a => a.IsRow, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("size", a => a.Size)
-.AddAttribute("userSized", a => a.UserSized);
+                .AddAttribute("action", a => a.Action, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("isRow", a => a.IsRow, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("size", a => a.Size)
+                .AddAttribute("userSized", a => a.UserSized);
         }
 
         /// <inheritdoc/>
@@ -4107,10 +4107,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("xr:hideUnhideSheet");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<HideUnhideSheet>()
-.AddAttribute("hide", a => a.Hide, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("hide", a => a.Hide, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -4160,14 +4160,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("xr:showGridlinesHeadings");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ShowGridlinesHeadings>()
-.AddAttribute("showGridLines", a => a.ShowGridLines, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("showRowCol", a => a.ShowRowCol, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("showGridLines", a => a.ShowGridLines, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("showRowCol", a => a.ShowRowCol, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -4206,10 +4206,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("xr:freezePanes");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<FreezePanes>()
-.AddAttribute("sheetViewUid", a => a.SheetViewUid, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-});
+                .AddAttribute("sheetViewUid", a => a.SheetViewUid, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                });
         }
 
         /// <inheritdoc/>
@@ -4279,10 +4279,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.Outline>();
             builder.AddElement<Outlines>()
-.AddAttribute("isRow", a => a.IsRow, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("isRow", a => a.IsRow, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.Outline), 0, 0, version: FileFormatVersions.Office2016)
@@ -4336,14 +4336,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("xr:outline");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<Outline>()
-.AddAttribute("isCollapsed", a => a.IsCollapsed, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("level", a => a.Level, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("isCollapsed", a => a.IsCollapsed, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("level", a => a.Level, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -4570,28 +4570,28 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("xr:ref");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RefCell>()
-.AddAttribute("n", a => a.N, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("ajt", a => a.Ajt, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("ajtx", a => a.Ajtx)
-.AddAttribute("homeRef", a => a.HomeRef)
-.AddAttribute("r", a => a.R, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("uidLast", a => a.UidLast, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-});
+                .AddAttribute("n", a => a.N, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("ajt", a => a.Ajt, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("ajtx", a => a.Ajtx)
+                .AddAttribute("homeRef", a => a.HomeRef)
+                .AddAttribute("r", a => a.R, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("uid", a => a.Uid, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("uidLast", a => a.UidLast, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                });
         }
 
         /// <inheritdoc/>
@@ -4674,21 +4674,21 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.SetSchema("xr:sheetUid");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<SheetXluid>()
-.AddAttribute("n", a => a.N, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("ajt", a => a.Ajt, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("ajtx", a => a.Ajtx)
-.AddAttribute("homeRef", a => a.HomeRef)
-.AddAttribute("uid", a => a.Uid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-});
+                .AddAttribute("n", a => a.N, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("ajt", a => a.Ajt, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("ajtx", a => a.Ajtx)
+                .AddAttribute("homeRef", a => a.HomeRef)
+                .AddAttribute("uid", a => a.Uid, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                });
         }
 
         /// <inheritdoc/>
@@ -4870,53 +4870,53 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.SetSchema("xr:oartAnchor");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RefOartAnchor>()
-.AddAttribute("n", a => a.N, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("ajt", a => a.Ajt, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("ajtx", a => a.Ajtx)
-.AddAttribute("homeRef", a => a.HomeRef)
-.AddAttribute("r", a => a.R)
-.AddAttribute("fromRowOff", a => a.FromRowOff, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-})
-.AddAttribute("fromColOff", a => a.FromColOff, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-})
-.AddAttribute("toRowOff", a => a.ToRowOff, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-})
-.AddAttribute("toColOff", a => a.ToColOff, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-})
-.AddAttribute("cx", a => a.Cx, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
-})
-.AddAttribute("cy", a => a.Cy, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
-})
-.AddAttribute("x", a => a.X, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-})
-.AddAttribute("y", a => a.Y, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-})
-.AddAttribute("oat", a => a.Oat, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("n", a => a.N, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("ajt", a => a.Ajt, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("ajtx", a => a.Ajtx)
+                .AddAttribute("homeRef", a => a.HomeRef)
+                .AddAttribute("r", a => a.R)
+                .AddAttribute("fromRowOff", a => a.FromRowOff, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                })
+                .AddAttribute("fromColOff", a => a.FromColOff, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                })
+                .AddAttribute("toRowOff", a => a.ToRowOff, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                })
+                .AddAttribute("toColOff", a => a.ToColOff, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                })
+                .AddAttribute("cx", a => a.Cx, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+                })
+                .AddAttribute("cy", a => a.Cy, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+                })
+                .AddAttribute("x", a => a.X, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                })
+                .AddAttribute("y", a => a.Y, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                })
+                .AddAttribute("oat", a => a.Oat, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -5014,16 +5014,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("xr:test");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RefTest>()
-.AddAttribute("n", a => a.N, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("ajt", a => a.Ajt, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("ajtx", a => a.Ajtx)
-.AddAttribute("homeRef", a => a.HomeRef);
+                .AddAttribute("n", a => a.N, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("ajt", a => a.Ajt, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("ajtx", a => a.Ajtx)
+                .AddAttribute("homeRef", a => a.HomeRef);
         }
 
         /// <inheritdoc/>
@@ -5229,22 +5229,22 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formula2>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.ExcelAc.List>();
             builder.AddElement<DataValidation>()
-.AddAttribute("type", a => a.Type)
-.AddAttribute("errorStyle", a => a.ErrorStyle)
-.AddAttribute("imeMode", a => a.ImeMode)
-.AddAttribute("operator", a => a.Operator)
-.AddAttribute("allowBlank", a => a.AllowBlank)
-.AddAttribute("showDropDown", a => a.ShowDropDown)
-.AddAttribute("showInputMessage", a => a.ShowInputMessage)
-.AddAttribute("showErrorMessage", a => a.ShowErrorMessage)
-.AddAttribute("errorTitle", a => a.ErrorTitle)
-.AddAttribute("error", a => a.Error)
-.AddAttribute("promptTitle", a => a.PromptTitle)
-.AddAttribute("prompt", a => a.Prompt)
-.AddAttribute("sqref", a => a.SequenceOfReferences, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("type", a => a.Type)
+                .AddAttribute("errorStyle", a => a.ErrorStyle)
+                .AddAttribute("imeMode", a => a.ImeMode)
+                .AddAttribute("operator", a => a.Operator)
+                .AddAttribute("allowBlank", a => a.AllowBlank)
+                .AddAttribute("showDropDown", a => a.ShowDropDown)
+                .AddAttribute("showInputMessage", a => a.ShowInputMessage)
+                .AddAttribute("showErrorMessage", a => a.ShowErrorMessage)
+                .AddAttribute("errorTitle", a => a.ErrorTitle)
+                .AddAttribute("error", a => a.Error)
+                .AddAttribute("promptTitle", a => a.PromptTitle)
+                .AddAttribute("prompt", a => a.Prompt)
+                .AddAttribute("sqref", a => a.SequenceOfReferences, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.ExcelAc.List), 0, 1, version: FileFormatVersions.Office2013),
@@ -5375,14 +5375,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("xr:hyperlink");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<Hyperlink>()
-.AddAttribute("ref", a => a.Reference, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("r:id", a => a.Id)
-.AddAttribute("location", a => a.Location)
-.AddAttribute("tooltip", a => a.Tooltip)
-.AddAttribute("display", a => a.Display);
+                .AddAttribute("ref", a => a.Reference, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("r:id", a => a.Id)
+                .AddAttribute("location", a => a.Location)
+                .AddAttribute("tooltip", a => a.Tooltip)
+                .AddAttribute("display", a => a.Display);
         }
 
         /// <inheritdoc/>
@@ -5646,23 +5646,23 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Sparklines>();
             builder.AddElement<SparklineGroup>()
-.AddAttribute("manualMax", a => a.ManualMax)
-.AddAttribute("manualMin", a => a.ManualMin)
-.AddAttribute("lineWeight", a => a.LineWeight)
-.AddAttribute("type", a => a.Type)
-.AddAttribute("dateAxis", a => a.DateAxis)
-.AddAttribute("displayEmptyCellsAs", a => a.DisplayEmptyCellsAs)
-.AddAttribute("markers", a => a.Markers)
-.AddAttribute("high", a => a.High)
-.AddAttribute("low", a => a.Low)
-.AddAttribute("first", a => a.First)
-.AddAttribute("last", a => a.Last)
-.AddAttribute("negative", a => a.Negative)
-.AddAttribute("displayXAxis", a => a.DisplayXAxis)
-.AddAttribute("displayHidden", a => a.DisplayHidden)
-.AddAttribute("minAxisType", a => a.MinAxisType)
-.AddAttribute("maxAxisType", a => a.MaxAxisType)
-.AddAttribute("rightToLeft", a => a.RightToLeft);
+                .AddAttribute("manualMax", a => a.ManualMax)
+                .AddAttribute("manualMin", a => a.ManualMin)
+                .AddAttribute("lineWeight", a => a.LineWeight)
+                .AddAttribute("type", a => a.Type)
+                .AddAttribute("dateAxis", a => a.DateAxis)
+                .AddAttribute("displayEmptyCellsAs", a => a.DisplayEmptyCellsAs)
+                .AddAttribute("markers", a => a.Markers)
+                .AddAttribute("high", a => a.High)
+                .AddAttribute("low", a => a.Low)
+                .AddAttribute("first", a => a.First)
+                .AddAttribute("last", a => a.Last)
+                .AddAttribute("negative", a => a.Negative)
+                .AddAttribute("displayXAxis", a => a.DisplayXAxis)
+                .AddAttribute("displayHidden", a => a.DisplayHidden)
+                .AddAttribute("minAxisType", a => a.MinAxisType)
+                .AddAttribute("maxAxisType", a => a.MaxAxisType)
+                .AddAttribute("rightToLeft", a => a.RightToLeft);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SeriesColor), 0, 1, version: FileFormatVersions.Office2010),
@@ -5985,7 +5985,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FilterColumn>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortState>();
             builder.AddElement<AutoFilter>()
-.AddAttribute("ref", a => a.Reference);
+                .AddAttribute("ref", a => a.Reference);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FilterColumn), 0, 0),
@@ -6830,83 +6830,83 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowItems>();
             builder.AddElement<pivotTableDefinition>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("cacheId", a => a.CacheId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("dataOnRows", a => a.DataOnRows)
-.AddAttribute("dataPosition", a => a.DataPosition)
-.AddAttribute("autoFormatId", a => a.AutoFormatId)
-.AddAttribute("applyNumberFormats", a => a.ApplyNumberFormats)
-.AddAttribute("applyBorderFormats", a => a.ApplyBorderFormats)
-.AddAttribute("applyFontFormats", a => a.ApplyFontFormats)
-.AddAttribute("applyPatternFormats", a => a.ApplyPatternFormats)
-.AddAttribute("applyAlignmentFormats", a => a.ApplyAlignmentFormats)
-.AddAttribute("applyWidthHeightFormats", a => a.ApplyWidthHeightFormats)
-.AddAttribute("dataCaption", a => a.DataCaption, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("grandTotalCaption", a => a.GrandTotalCaption)
-.AddAttribute("errorCaption", a => a.ErrorCaption)
-.AddAttribute("showError", a => a.ShowError)
-.AddAttribute("missingCaption", a => a.MissingCaption)
-.AddAttribute("showMissing", a => a.ShowMissing)
-.AddAttribute("pageStyle", a => a.PageStyle)
-.AddAttribute("pivotTableStyle", a => a.PivotTableStyleName)
-.AddAttribute("vacatedStyle", a => a.VacatedStyle)
-.AddAttribute("tag", a => a.Tag)
-.AddAttribute("updatedVersion", a => a.UpdatedVersion)
-.AddAttribute("minRefreshableVersion", a => a.MinRefreshableVersion)
-.AddAttribute("asteriskTotals", a => a.AsteriskTotals)
-.AddAttribute("showItems", a => a.ShowItems)
-.AddAttribute("editData", a => a.EditData)
-.AddAttribute("disableFieldList", a => a.DisableFieldList)
-.AddAttribute("showCalcMbrs", a => a.ShowCalculatedMembers)
-.AddAttribute("visualTotals", a => a.VisualTotals)
-.AddAttribute("showMultipleLabel", a => a.ShowMultipleLabel)
-.AddAttribute("showDataDropDown", a => a.ShowDataDropDown)
-.AddAttribute("showDrill", a => a.ShowDrill)
-.AddAttribute("printDrill", a => a.PrintDrill)
-.AddAttribute("showMemberPropertyTips", a => a.ShowMemberPropertyTips)
-.AddAttribute("showDataTips", a => a.ShowDataTips)
-.AddAttribute("enableWizard", a => a.EnableWizard)
-.AddAttribute("enableDrill", a => a.EnableDrill)
-.AddAttribute("enableFieldProperties", a => a.EnableFieldProperties)
-.AddAttribute("preserveFormatting", a => a.PreserveFormatting)
-.AddAttribute("useAutoFormatting", a => a.UseAutoFormatting)
-.AddAttribute("pageWrap", a => a.PageWrap)
-.AddAttribute("pageOverThenDown", a => a.PageOverThenDown)
-.AddAttribute("subtotalHiddenItems", a => a.SubtotalHiddenItems)
-.AddAttribute("rowGrandTotals", a => a.RowGrandTotals)
-.AddAttribute("colGrandTotals", a => a.ColumnGrandTotals)
-.AddAttribute("fieldPrintTitles", a => a.FieldPrintTitles)
-.AddAttribute("itemPrintTitles", a => a.ItemPrintTitles)
-.AddAttribute("mergeItem", a => a.MergeItem)
-.AddAttribute("showDropZones", a => a.ShowDropZones)
-.AddAttribute("createdVersion", a => a.CreatedVersion)
-.AddAttribute("indent", a => a.Indent)
-.AddAttribute("showEmptyRow", a => a.ShowEmptyRow)
-.AddAttribute("showEmptyCol", a => a.ShowEmptyColumn)
-.AddAttribute("showHeaders", a => a.ShowHeaders)
-.AddAttribute("compact", a => a.Compact)
-.AddAttribute("outline", a => a.Outline)
-.AddAttribute("outlineData", a => a.OutlineData)
-.AddAttribute("compactData", a => a.CompactData)
-.AddAttribute("published", a => a.Published)
-.AddAttribute("gridDropZones", a => a.GridDropZones)
-.AddAttribute("immersive", a => a.StopImmersiveUi)
-.AddAttribute("multipleFieldFilters", a => a.MultipleFieldFilters)
-.AddAttribute("chartFormat", a => a.ChartFormat)
-.AddAttribute("rowHeaderCaption", a => a.RowHeaderCaption)
-.AddAttribute("colHeaderCaption", a => a.ColumnHeaderCaption)
-.AddAttribute("fieldListSortAscending", a => a.FieldListSortAscending)
-.AddAttribute("mdxSubqueries", a => a.MdxSubqueries)
-.AddAttribute("customListSort", a => a.CustomListSort);
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("cacheId", a => a.CacheId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("dataOnRows", a => a.DataOnRows)
+                .AddAttribute("dataPosition", a => a.DataPosition)
+                .AddAttribute("autoFormatId", a => a.AutoFormatId)
+                .AddAttribute("applyNumberFormats", a => a.ApplyNumberFormats)
+                .AddAttribute("applyBorderFormats", a => a.ApplyBorderFormats)
+                .AddAttribute("applyFontFormats", a => a.ApplyFontFormats)
+                .AddAttribute("applyPatternFormats", a => a.ApplyPatternFormats)
+                .AddAttribute("applyAlignmentFormats", a => a.ApplyAlignmentFormats)
+                .AddAttribute("applyWidthHeightFormats", a => a.ApplyWidthHeightFormats)
+                .AddAttribute("dataCaption", a => a.DataCaption, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("grandTotalCaption", a => a.GrandTotalCaption)
+                .AddAttribute("errorCaption", a => a.ErrorCaption)
+                .AddAttribute("showError", a => a.ShowError)
+                .AddAttribute("missingCaption", a => a.MissingCaption)
+                .AddAttribute("showMissing", a => a.ShowMissing)
+                .AddAttribute("pageStyle", a => a.PageStyle)
+                .AddAttribute("pivotTableStyle", a => a.PivotTableStyleName)
+                .AddAttribute("vacatedStyle", a => a.VacatedStyle)
+                .AddAttribute("tag", a => a.Tag)
+                .AddAttribute("updatedVersion", a => a.UpdatedVersion)
+                .AddAttribute("minRefreshableVersion", a => a.MinRefreshableVersion)
+                .AddAttribute("asteriskTotals", a => a.AsteriskTotals)
+                .AddAttribute("showItems", a => a.ShowItems)
+                .AddAttribute("editData", a => a.EditData)
+                .AddAttribute("disableFieldList", a => a.DisableFieldList)
+                .AddAttribute("showCalcMbrs", a => a.ShowCalculatedMembers)
+                .AddAttribute("visualTotals", a => a.VisualTotals)
+                .AddAttribute("showMultipleLabel", a => a.ShowMultipleLabel)
+                .AddAttribute("showDataDropDown", a => a.ShowDataDropDown)
+                .AddAttribute("showDrill", a => a.ShowDrill)
+                .AddAttribute("printDrill", a => a.PrintDrill)
+                .AddAttribute("showMemberPropertyTips", a => a.ShowMemberPropertyTips)
+                .AddAttribute("showDataTips", a => a.ShowDataTips)
+                .AddAttribute("enableWizard", a => a.EnableWizard)
+                .AddAttribute("enableDrill", a => a.EnableDrill)
+                .AddAttribute("enableFieldProperties", a => a.EnableFieldProperties)
+                .AddAttribute("preserveFormatting", a => a.PreserveFormatting)
+                .AddAttribute("useAutoFormatting", a => a.UseAutoFormatting)
+                .AddAttribute("pageWrap", a => a.PageWrap)
+                .AddAttribute("pageOverThenDown", a => a.PageOverThenDown)
+                .AddAttribute("subtotalHiddenItems", a => a.SubtotalHiddenItems)
+                .AddAttribute("rowGrandTotals", a => a.RowGrandTotals)
+                .AddAttribute("colGrandTotals", a => a.ColumnGrandTotals)
+                .AddAttribute("fieldPrintTitles", a => a.FieldPrintTitles)
+                .AddAttribute("itemPrintTitles", a => a.ItemPrintTitles)
+                .AddAttribute("mergeItem", a => a.MergeItem)
+                .AddAttribute("showDropZones", a => a.ShowDropZones)
+                .AddAttribute("createdVersion", a => a.CreatedVersion)
+                .AddAttribute("indent", a => a.Indent)
+                .AddAttribute("showEmptyRow", a => a.ShowEmptyRow)
+                .AddAttribute("showEmptyCol", a => a.ShowEmptyColumn)
+                .AddAttribute("showHeaders", a => a.ShowHeaders)
+                .AddAttribute("compact", a => a.Compact)
+                .AddAttribute("outline", a => a.Outline)
+                .AddAttribute("outlineData", a => a.OutlineData)
+                .AddAttribute("compactData", a => a.CompactData)
+                .AddAttribute("published", a => a.Published)
+                .AddAttribute("gridDropZones", a => a.GridDropZones)
+                .AddAttribute("immersive", a => a.StopImmersiveUi)
+                .AddAttribute("multipleFieldFilters", a => a.MultipleFieldFilters)
+                .AddAttribute("chartFormat", a => a.ChartFormat)
+                .AddAttribute("rowHeaderCaption", a => a.RowHeaderCaption)
+                .AddAttribute("colHeaderCaption", a => a.ColumnHeaderCaption)
+                .AddAttribute("fieldListSortAscending", a => a.FieldListSortAscending)
+                .AddAttribute("mdxSubqueries", a => a.MdxSubqueries)
+                .AddAttribute("customListSort", a => a.CustomListSort);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Location), 1, 1),

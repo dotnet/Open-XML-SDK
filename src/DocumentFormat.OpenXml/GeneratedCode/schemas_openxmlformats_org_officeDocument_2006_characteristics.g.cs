@@ -140,22 +140,22 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
             base.ConfigureMetadata(builder);
             builder.SetSchema("ac:characteristic");
             builder.AddElement<Characteristic>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("relation", a => a.Relation, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("vocabulary", a => a.Vocabulary, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-});
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("relation", a => a.Relation, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("vocabulary", a => a.Vocabulary, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                });
         }
 
         /// <inheritdoc/>

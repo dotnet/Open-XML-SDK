@@ -48,10 +48,10 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
             builder.SetSchema("p184:classification");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<ClassificationOutcome>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
 
         /// <inheritdoc/>

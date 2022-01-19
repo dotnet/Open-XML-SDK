@@ -146,23 +146,23 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList>();
             builder.AddElement<AnimationProperties>()
-.AddAttribute("name", a => a.Name)
-.AddAttribute("length", a => a.Length, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("count", a => a.Count, aBuilder =>
-{
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<UInt32Value>(NumberValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Indefinite>>(EnumValidator.Instance);
-});
-})
-.AddAttribute("auto", a => a.Auto)
-.AddAttribute("offset", a => a.Offset)
-.AddAttribute("st", a => a.St)
-.AddAttribute("end", a => a.End);
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("length", a => a.Length, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("count", a => a.Count, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<UInt32Value>(NumberValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Indefinite>>(EnumValidator.Instance);
+                    });
+                })
+                .AddAttribute("auto", a => a.Auto)
+                .AddAttribute("offset", a => a.Offset)
+                .AddAttribute("st", a => a.St)
+                .AddAttribute("end", a => a.End);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2019)

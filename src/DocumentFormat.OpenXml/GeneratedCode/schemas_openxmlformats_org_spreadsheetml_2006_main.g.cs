@@ -77,11 +77,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:ext");
             builder.AddElement<Extension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new AnyParticle(0, 1)
@@ -386,10 +386,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Map>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Schema>();
             builder.AddElement<MapInfo>()
-.AddAttribute("SelectionNamespaces", a => a.SelectionNamespaces, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("SelectionNamespaces", a => a.SelectionNamespaces, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Schema), 1, 0),
@@ -806,25 +806,25 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TupleCache>();
             builder.AddElement<PivotCacheDefinition>()
-.AddAttribute("r:id", a => a.Id)
-.AddAttribute("invalid", a => a.Invalid)
-.AddAttribute("saveData", a => a.SaveData)
-.AddAttribute("refreshOnLoad", a => a.RefreshOnLoad)
-.AddAttribute("optimizeMemory", a => a.OptimizeMemory)
-.AddAttribute("enableRefresh", a => a.EnableRefresh)
-.AddAttribute("refreshedBy", a => a.RefreshedBy)
-.AddAttribute("refreshedDateIso", a => a.LastRefreshedDateIso)
-.AddAttribute("refreshedDate", a => a.RefreshedDate)
-.AddAttribute("backgroundQuery", a => a.BackgroundQuery)
-.AddAttribute("missingItemsLimit", a => a.MissingItemsLimit)
-.AddAttribute("createdVersion", a => a.CreatedVersion)
-.AddAttribute("refreshedVersion", a => a.RefreshedVersion)
-.AddAttribute("minRefreshableVersion", a => a.MinRefreshableVersion)
-.AddAttribute("recordCount", a => a.RecordCount)
-.AddAttribute("upgradeOnRefresh", a => a.UpgradeOnRefresh)
-.AddAttribute("tupleCache", a => a.IsTupleCache)
-.AddAttribute("supportSubquery", a => a.SupportSubquery)
-.AddAttribute("supportAdvancedDrill", a => a.SupportAdvancedDrill);
+                .AddAttribute("r:id", a => a.Id)
+                .AddAttribute("invalid", a => a.Invalid)
+                .AddAttribute("saveData", a => a.SaveData)
+                .AddAttribute("refreshOnLoad", a => a.RefreshOnLoad)
+                .AddAttribute("optimizeMemory", a => a.OptimizeMemory)
+                .AddAttribute("enableRefresh", a => a.EnableRefresh)
+                .AddAttribute("refreshedBy", a => a.RefreshedBy)
+                .AddAttribute("refreshedDateIso", a => a.LastRefreshedDateIso)
+                .AddAttribute("refreshedDate", a => a.RefreshedDate)
+                .AddAttribute("backgroundQuery", a => a.BackgroundQuery)
+                .AddAttribute("missingItemsLimit", a => a.MissingItemsLimit)
+                .AddAttribute("createdVersion", a => a.CreatedVersion)
+                .AddAttribute("refreshedVersion", a => a.RefreshedVersion)
+                .AddAttribute("minRefreshableVersion", a => a.MinRefreshableVersion)
+                .AddAttribute("recordCount", a => a.RecordCount)
+                .AddAttribute("upgradeOnRefresh", a => a.UpgradeOnRefresh)
+                .AddAttribute("tupleCache", a => a.IsTupleCache)
+                .AddAttribute("supportSubquery", a => a.SupportSubquery)
+                .AddAttribute("supportAdvancedDrill", a => a.SupportAdvancedDrill);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheSource), 1, 1),
@@ -1084,7 +1084,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotCacheRecord>();
             builder.AddElement<PivotCacheRecords>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCacheRecord), 0, 0),
@@ -1958,83 +1958,83 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowItems>();
             builder.AddElement<PivotTableDefinition>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("cacheId", a => a.CacheId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("dataOnRows", a => a.DataOnRows)
-.AddAttribute("dataPosition", a => a.DataPosition)
-.AddAttribute("autoFormatId", a => a.AutoFormatId)
-.AddAttribute("applyNumberFormats", a => a.ApplyNumberFormats)
-.AddAttribute("applyBorderFormats", a => a.ApplyBorderFormats)
-.AddAttribute("applyFontFormats", a => a.ApplyFontFormats)
-.AddAttribute("applyPatternFormats", a => a.ApplyPatternFormats)
-.AddAttribute("applyAlignmentFormats", a => a.ApplyAlignmentFormats)
-.AddAttribute("applyWidthHeightFormats", a => a.ApplyWidthHeightFormats)
-.AddAttribute("dataCaption", a => a.DataCaption, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("grandTotalCaption", a => a.GrandTotalCaption)
-.AddAttribute("errorCaption", a => a.ErrorCaption)
-.AddAttribute("showError", a => a.ShowError)
-.AddAttribute("missingCaption", a => a.MissingCaption)
-.AddAttribute("showMissing", a => a.ShowMissing)
-.AddAttribute("pageStyle", a => a.PageStyle)
-.AddAttribute("pivotTableStyle", a => a.PivotTableStyleName)
-.AddAttribute("vacatedStyle", a => a.VacatedStyle)
-.AddAttribute("tag", a => a.Tag)
-.AddAttribute("updatedVersion", a => a.UpdatedVersion)
-.AddAttribute("minRefreshableVersion", a => a.MinRefreshableVersion)
-.AddAttribute("asteriskTotals", a => a.AsteriskTotals)
-.AddAttribute("showItems", a => a.ShowItems)
-.AddAttribute("editData", a => a.EditData)
-.AddAttribute("disableFieldList", a => a.DisableFieldList)
-.AddAttribute("showCalcMbrs", a => a.ShowCalculatedMembers)
-.AddAttribute("visualTotals", a => a.VisualTotals)
-.AddAttribute("showMultipleLabel", a => a.ShowMultipleLabel)
-.AddAttribute("showDataDropDown", a => a.ShowDataDropDown)
-.AddAttribute("showDrill", a => a.ShowDrill)
-.AddAttribute("printDrill", a => a.PrintDrill)
-.AddAttribute("showMemberPropertyTips", a => a.ShowMemberPropertyTips)
-.AddAttribute("showDataTips", a => a.ShowDataTips)
-.AddAttribute("enableWizard", a => a.EnableWizard)
-.AddAttribute("enableDrill", a => a.EnableDrill)
-.AddAttribute("enableFieldProperties", a => a.EnableFieldProperties)
-.AddAttribute("preserveFormatting", a => a.PreserveFormatting)
-.AddAttribute("useAutoFormatting", a => a.UseAutoFormatting)
-.AddAttribute("pageWrap", a => a.PageWrap)
-.AddAttribute("pageOverThenDown", a => a.PageOverThenDown)
-.AddAttribute("subtotalHiddenItems", a => a.SubtotalHiddenItems)
-.AddAttribute("rowGrandTotals", a => a.RowGrandTotals)
-.AddAttribute("colGrandTotals", a => a.ColumnGrandTotals)
-.AddAttribute("fieldPrintTitles", a => a.FieldPrintTitles)
-.AddAttribute("itemPrintTitles", a => a.ItemPrintTitles)
-.AddAttribute("mergeItem", a => a.MergeItem)
-.AddAttribute("showDropZones", a => a.ShowDropZones)
-.AddAttribute("createdVersion", a => a.CreatedVersion)
-.AddAttribute("indent", a => a.Indent)
-.AddAttribute("showEmptyRow", a => a.ShowEmptyRow)
-.AddAttribute("showEmptyCol", a => a.ShowEmptyColumn)
-.AddAttribute("showHeaders", a => a.ShowHeaders)
-.AddAttribute("compact", a => a.Compact)
-.AddAttribute("outline", a => a.Outline)
-.AddAttribute("outlineData", a => a.OutlineData)
-.AddAttribute("compactData", a => a.CompactData)
-.AddAttribute("published", a => a.Published)
-.AddAttribute("gridDropZones", a => a.GridDropZones)
-.AddAttribute("immersive", a => a.StopImmersiveUi)
-.AddAttribute("multipleFieldFilters", a => a.MultipleFieldFilters)
-.AddAttribute("chartFormat", a => a.ChartFormat)
-.AddAttribute("rowHeaderCaption", a => a.RowHeaderCaption)
-.AddAttribute("colHeaderCaption", a => a.ColumnHeaderCaption)
-.AddAttribute("fieldListSortAscending", a => a.FieldListSortAscending)
-.AddAttribute("mdxSubqueries", a => a.MdxSubqueries)
-.AddAttribute("customListSort", a => a.CustomListSort);
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("cacheId", a => a.CacheId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("dataOnRows", a => a.DataOnRows)
+                .AddAttribute("dataPosition", a => a.DataPosition)
+                .AddAttribute("autoFormatId", a => a.AutoFormatId)
+                .AddAttribute("applyNumberFormats", a => a.ApplyNumberFormats)
+                .AddAttribute("applyBorderFormats", a => a.ApplyBorderFormats)
+                .AddAttribute("applyFontFormats", a => a.ApplyFontFormats)
+                .AddAttribute("applyPatternFormats", a => a.ApplyPatternFormats)
+                .AddAttribute("applyAlignmentFormats", a => a.ApplyAlignmentFormats)
+                .AddAttribute("applyWidthHeightFormats", a => a.ApplyWidthHeightFormats)
+                .AddAttribute("dataCaption", a => a.DataCaption, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("grandTotalCaption", a => a.GrandTotalCaption)
+                .AddAttribute("errorCaption", a => a.ErrorCaption)
+                .AddAttribute("showError", a => a.ShowError)
+                .AddAttribute("missingCaption", a => a.MissingCaption)
+                .AddAttribute("showMissing", a => a.ShowMissing)
+                .AddAttribute("pageStyle", a => a.PageStyle)
+                .AddAttribute("pivotTableStyle", a => a.PivotTableStyleName)
+                .AddAttribute("vacatedStyle", a => a.VacatedStyle)
+                .AddAttribute("tag", a => a.Tag)
+                .AddAttribute("updatedVersion", a => a.UpdatedVersion)
+                .AddAttribute("minRefreshableVersion", a => a.MinRefreshableVersion)
+                .AddAttribute("asteriskTotals", a => a.AsteriskTotals)
+                .AddAttribute("showItems", a => a.ShowItems)
+                .AddAttribute("editData", a => a.EditData)
+                .AddAttribute("disableFieldList", a => a.DisableFieldList)
+                .AddAttribute("showCalcMbrs", a => a.ShowCalculatedMembers)
+                .AddAttribute("visualTotals", a => a.VisualTotals)
+                .AddAttribute("showMultipleLabel", a => a.ShowMultipleLabel)
+                .AddAttribute("showDataDropDown", a => a.ShowDataDropDown)
+                .AddAttribute("showDrill", a => a.ShowDrill)
+                .AddAttribute("printDrill", a => a.PrintDrill)
+                .AddAttribute("showMemberPropertyTips", a => a.ShowMemberPropertyTips)
+                .AddAttribute("showDataTips", a => a.ShowDataTips)
+                .AddAttribute("enableWizard", a => a.EnableWizard)
+                .AddAttribute("enableDrill", a => a.EnableDrill)
+                .AddAttribute("enableFieldProperties", a => a.EnableFieldProperties)
+                .AddAttribute("preserveFormatting", a => a.PreserveFormatting)
+                .AddAttribute("useAutoFormatting", a => a.UseAutoFormatting)
+                .AddAttribute("pageWrap", a => a.PageWrap)
+                .AddAttribute("pageOverThenDown", a => a.PageOverThenDown)
+                .AddAttribute("subtotalHiddenItems", a => a.SubtotalHiddenItems)
+                .AddAttribute("rowGrandTotals", a => a.RowGrandTotals)
+                .AddAttribute("colGrandTotals", a => a.ColumnGrandTotals)
+                .AddAttribute("fieldPrintTitles", a => a.FieldPrintTitles)
+                .AddAttribute("itemPrintTitles", a => a.ItemPrintTitles)
+                .AddAttribute("mergeItem", a => a.MergeItem)
+                .AddAttribute("showDropZones", a => a.ShowDropZones)
+                .AddAttribute("createdVersion", a => a.CreatedVersion)
+                .AddAttribute("indent", a => a.Indent)
+                .AddAttribute("showEmptyRow", a => a.ShowEmptyRow)
+                .AddAttribute("showEmptyCol", a => a.ShowEmptyColumn)
+                .AddAttribute("showHeaders", a => a.ShowHeaders)
+                .AddAttribute("compact", a => a.Compact)
+                .AddAttribute("outline", a => a.Outline)
+                .AddAttribute("outlineData", a => a.OutlineData)
+                .AddAttribute("compactData", a => a.CompactData)
+                .AddAttribute("published", a => a.Published)
+                .AddAttribute("gridDropZones", a => a.GridDropZones)
+                .AddAttribute("immersive", a => a.StopImmersiveUi)
+                .AddAttribute("multipleFieldFilters", a => a.MultipleFieldFilters)
+                .AddAttribute("chartFormat", a => a.ChartFormat)
+                .AddAttribute("rowHeaderCaption", a => a.RowHeaderCaption)
+                .AddAttribute("colHeaderCaption", a => a.ColumnHeaderCaption)
+                .AddAttribute("fieldListSortAscending", a => a.FieldListSortAscending)
+                .AddAttribute("mdxSubqueries", a => a.MdxSubqueries)
+                .AddAttribute("customListSort", a => a.CustomListSort);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Location), 1, 1),
@@ -2621,34 +2621,34 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.QueryTableExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.QueryTableRefresh>();
             builder.AddElement<QueryTable>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("headers", a => a.Headers)
-.AddAttribute("rowNumbers", a => a.RowNumbers)
-.AddAttribute("disableRefresh", a => a.DisableRefresh)
-.AddAttribute("backgroundRefresh", a => a.BackgroundRefresh)
-.AddAttribute("firstBackgroundRefresh", a => a.FirstBackgroundRefresh)
-.AddAttribute("refreshOnLoad", a => a.RefreshOnLoad)
-.AddAttribute("growShrinkType", a => a.GrowShrinkType)
-.AddAttribute("fillFormulas", a => a.FillFormulas)
-.AddAttribute("removeDataOnSave", a => a.RemoveDataOnSave)
-.AddAttribute("disableEdit", a => a.DisableEdit)
-.AddAttribute("preserveFormatting", a => a.PreserveFormatting)
-.AddAttribute("adjustColumnWidth", a => a.AdjustColumnWidth)
-.AddAttribute("intermediate", a => a.Intermediate)
-.AddAttribute("connectionId", a => a.ConnectionId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("autoFormatId", a => a.AutoFormatId)
-.AddAttribute("applyNumberFormats", a => a.ApplyNumberFormats)
-.AddAttribute("applyBorderFormats", a => a.ApplyBorderFormats)
-.AddAttribute("applyFontFormats", a => a.ApplyFontFormats)
-.AddAttribute("applyPatternFormats", a => a.ApplyPatternFormats)
-.AddAttribute("applyAlignmentFormats", a => a.ApplyAlignmentFormats)
-.AddAttribute("applyWidthHeightFormats", a => a.ApplyWidthHeightFormats);
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("headers", a => a.Headers)
+                .AddAttribute("rowNumbers", a => a.RowNumbers)
+                .AddAttribute("disableRefresh", a => a.DisableRefresh)
+                .AddAttribute("backgroundRefresh", a => a.BackgroundRefresh)
+                .AddAttribute("firstBackgroundRefresh", a => a.FirstBackgroundRefresh)
+                .AddAttribute("refreshOnLoad", a => a.RefreshOnLoad)
+                .AddAttribute("growShrinkType", a => a.GrowShrinkType)
+                .AddAttribute("fillFormulas", a => a.FillFormulas)
+                .AddAttribute("removeDataOnSave", a => a.RemoveDataOnSave)
+                .AddAttribute("disableEdit", a => a.DisableEdit)
+                .AddAttribute("preserveFormatting", a => a.PreserveFormatting)
+                .AddAttribute("adjustColumnWidth", a => a.AdjustColumnWidth)
+                .AddAttribute("intermediate", a => a.Intermediate)
+                .AddAttribute("connectionId", a => a.ConnectionId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("autoFormatId", a => a.AutoFormatId)
+                .AddAttribute("applyNumberFormats", a => a.ApplyNumberFormats)
+                .AddAttribute("applyBorderFormats", a => a.ApplyBorderFormats)
+                .AddAttribute("applyFontFormats", a => a.ApplyFontFormats)
+                .AddAttribute("applyPatternFormats", a => a.ApplyPatternFormats)
+                .AddAttribute("applyAlignmentFormats", a => a.ApplyAlignmentFormats)
+                .AddAttribute("applyWidthHeightFormats", a => a.ApplyWidthHeightFormats);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryTableRefresh), 0, 1),
@@ -2796,8 +2796,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SharedStringItem>();
             builder.AddElement<SharedStringTable>()
-.AddAttribute("count", a => a.Count)
-.AddAttribute("uniqueCount", a => a.UniqueCount);
+                .AddAttribute("count", a => a.Count)
+                .AddAttribute("uniqueCount", a => a.UniqueCount);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SharedStringItem), 0, 0),
@@ -3025,25 +3025,25 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:headers");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Header>();
             builder.AddElement<Headers>()
-.AddAttribute("guid", a => a.Guid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("lastGuid", a => a.LastGuid, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("shared", a => a.Shared)
-.AddAttribute("diskRevisions", a => a.DiskRevisions)
-.AddAttribute("history", a => a.History)
-.AddAttribute("trackRevisions", a => a.TrackRevisions)
-.AddAttribute("exclusive", a => a.Exclusive)
-.AddAttribute("revisionId", a => a.RevisionId)
-.AddAttribute("version", a => a.Version)
-.AddAttribute("keepChangeHistory", a => a.KeepChangeHistory)
-.AddAttribute("protected", a => a.Protected)
-.AddAttribute("preserveHistory", a => a.PreserveHistory);
+                .AddAttribute("guid", a => a.Guid, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("lastGuid", a => a.LastGuid, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("shared", a => a.Shared)
+                .AddAttribute("diskRevisions", a => a.DiskRevisions)
+                .AddAttribute("history", a => a.History)
+                .AddAttribute("trackRevisions", a => a.TrackRevisions)
+                .AddAttribute("exclusive", a => a.Exclusive)
+                .AddAttribute("revisionId", a => a.RevisionId)
+                .AddAttribute("version", a => a.Version)
+                .AddAttribute("keepChangeHistory", a => a.KeepChangeHistory)
+                .AddAttribute("protected", a => a.Protected)
+                .AddAttribute("preserveHistory", a => a.PreserveHistory);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Header), 1, 0)
@@ -3275,7 +3275,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.SetSchema("x:users");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.UserInfo>();
             builder.AddElement<Users>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.UserInfo), 0, 256)
@@ -5135,37 +5135,37 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableStyleInfo>();
             builder.AddElement<Table>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("name", a => a.Name)
-.AddAttribute("displayName", a => a.DisplayName, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("comment", a => a.Comment)
-.AddAttribute("ref", a => a.Reference, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("tableType", a => a.TableType)
-.AddAttribute("headerRowCount", a => a.HeaderRowCount)
-.AddAttribute("insertRow", a => a.InsertRow)
-.AddAttribute("insertRowShift", a => a.InsertRowShift)
-.AddAttribute("totalsRowCount", a => a.TotalsRowCount)
-.AddAttribute("totalsRowShown", a => a.TotalsRowShown)
-.AddAttribute("published", a => a.Published)
-.AddAttribute("headerRowDxfId", a => a.HeaderRowFormatId)
-.AddAttribute("dataDxfId", a => a.DataFormatId)
-.AddAttribute("totalsRowDxfId", a => a.TotalsRowFormatId)
-.AddAttribute("headerRowBorderDxfId", a => a.HeaderRowBorderFormatId)
-.AddAttribute("tableBorderDxfId", a => a.BorderFormatId)
-.AddAttribute("totalsRowBorderDxfId", a => a.TotalsRowBorderFormatId)
-.AddAttribute("headerRowCellStyle", a => a.HeaderRowCellStyle)
-.AddAttribute("dataCellStyle", a => a.DataCellStyle)
-.AddAttribute("totalsRowCellStyle", a => a.TotalsRowCellStyle)
-.AddAttribute("connectionId", a => a.ConnectionId);
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("displayName", a => a.DisplayName, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("comment", a => a.Comment)
+                .AddAttribute("ref", a => a.Reference, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("tableType", a => a.TableType)
+                .AddAttribute("headerRowCount", a => a.HeaderRowCount)
+                .AddAttribute("insertRow", a => a.InsertRow)
+                .AddAttribute("insertRowShift", a => a.InsertRowShift)
+                .AddAttribute("totalsRowCount", a => a.TotalsRowCount)
+                .AddAttribute("totalsRowShown", a => a.TotalsRowShown)
+                .AddAttribute("published", a => a.Published)
+                .AddAttribute("headerRowDxfId", a => a.HeaderRowFormatId)
+                .AddAttribute("dataDxfId", a => a.DataFormatId)
+                .AddAttribute("totalsRowDxfId", a => a.TotalsRowFormatId)
+                .AddAttribute("headerRowBorderDxfId", a => a.HeaderRowBorderFormatId)
+                .AddAttribute("tableBorderDxfId", a => a.BorderFormatId)
+                .AddAttribute("totalsRowBorderDxfId", a => a.TotalsRowBorderFormatId)
+                .AddAttribute("headerRowCellStyle", a => a.HeaderRowCellStyle)
+                .AddAttribute("dataCellStyle", a => a.DataCellStyle)
+                .AddAttribute("totalsRowCellStyle", a => a.TotalsRowCellStyle)
+                .AddAttribute("connectionId", a => a.ConnectionId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.AutoFilter), 0, 1),
@@ -5481,7 +5481,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorkbookProtection>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath>();
             builder.AddElement<Workbook>()
-.AddAttribute("conformance", a => a.Conformance);
+                .AddAttribute("conformance", a => a.Conformance);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FileVersion), 0, 1),
@@ -5835,12 +5835,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.CustomFilters>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.IconFilter>();
             builder.AddElement<FilterColumn>()
-.AddAttribute("colId", a => a.ColumnId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("hiddenButton", a => a.HiddenButton)
-.AddAttribute("showButton", a => a.ShowButton);
+                .AddAttribute("colId", a => a.ColumnId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("hiddenButton", a => a.HiddenButton)
+                .AddAttribute("showButton", a => a.ShowButton);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Filters), 0, 1),
@@ -6075,13 +6075,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortCondition>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SortCondition>();
             builder.AddElement<SortState>()
-.AddAttribute("columnSort", a => a.ColumnSort)
-.AddAttribute("caseSensitive", a => a.CaseSensitive)
-.AddAttribute("sortMethod", a => a.SortMethod)
-.AddAttribute("ref", a => a.Reference, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("columnSort", a => a.ColumnSort)
+                .AddAttribute("caseSensitive", a => a.CaseSensitive)
+                .AddAttribute("sortMethod", a => a.SortMethod)
+                .AddAttribute("ref", a => a.Reference, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -6205,8 +6205,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:customFilter");
             builder.AddElement<CustomFilter>()
-.AddAttribute("operator", a => a.Operator)
-.AddAttribute("val", a => a.Val);
+                .AddAttribute("operator", a => a.Operator)
+                .AddAttribute("val", a => a.Val);
         }
 
         /// <inheritdoc/>
@@ -6299,15 +6299,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:c");
             builder.AddElement<CalculationCell>()
-  .AddAttribute("r", a => a.CellReference, aBuilder =>
-  {
-      aBuilder.AddValidator(RequiredValidator.Instance);
-  })
-  .AddAttribute("i", a => a.SheetId)
-  .AddAttribute("s", a => a.InChildChain)
-  .AddAttribute("l", a => a.NewLevel)
-  .AddAttribute("t", a => a.NewThread)
-  .AddAttribute("a", a => a.Array);
+                .AddAttribute("r", a => a.CellReference, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("i", a => a.SheetId)
+                .AddAttribute("s", a => a.InChildChain)
+                .AddAttribute("l", a => a.NewLevel)
+                .AddAttribute("t", a => a.NewThread)
+                .AddAttribute("a", a => a.Array);
             builder.AddConstraint(new AttributeValueRangeConstraint("x:cm", true, double.NegativeInfinity, true, 2147483647, true));
             builder.AddConstraint(new IndexReferenceConstraint("x:cm", "/WorkbookPart/CellMetadataPart", "x:cellMetadata", "x:bk", "x:bk", 1));
             builder.AddConstraint(new AttributeValueRangeConstraint("x:vm", true, double.NegativeInfinity, true, 2147483648, true));
@@ -6540,22 +6540,22 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CommentProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CommentText>();
             builder.AddElement<Comment>()
-.AddAttribute("ref", a => a.Reference, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("authorId", a => a.AuthorId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("guid", a => a.Guid, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("shapeId", a => a.ShapeId, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-});
+                .AddAttribute("ref", a => a.Reference, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("authorId", a => a.AuthorId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("guid", a => a.Guid, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("shapeId", a => a.ShapeId, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CommentText), 1, 1),
@@ -7214,7 +7214,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<XstringType>()
-                           .AddAttribute("xml:space", a => a.Space);
+                .AddAttribute("xml:space", a => a.Space);
         }
     }
 
@@ -7295,12 +7295,12 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:Schema");
             builder.AddElement<Schema>()
-.AddAttribute("ID", a => a.Id, aBuilder =>
-{
- aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("SchemaRef", a => a.SchemaReference)
-.AddAttribute("Namespace", a => a.Namespace);
+                .AddAttribute("ID", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("SchemaRef", a => a.SchemaReference)
+                .AddAttribute("Namespace", a => a.Namespace);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new AnyParticle(0, 1)
@@ -7465,42 +7465,42 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.SetSchema("x:Map");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataBinding>();
             builder.AddElement<Map>()
-.AddAttribute("ID", a => a.ID, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("Name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("RootElement", a => a.RootElement, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("SchemaID", a => a.SchemaId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("ShowImportExportValidationErrors", a => a.ShowImportExportErrors, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("AutoFit", a => a.AutoFit, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("Append", a => a.AppendData, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("PreserveSortAFLayout", a => a.PreserveAutoFilterState, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("PreserveFormat", a => a.PreserveFormat, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("ID", a => a.ID, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("Name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("RootElement", a => a.RootElement, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("SchemaID", a => a.SchemaId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("ShowImportExportValidationErrors", a => a.ShowImportExportErrors, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("AutoFit", a => a.AutoFit, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("Append", a => a.AppendData, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("PreserveSortAFLayout", a => a.PreserveAutoFilterState, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("PreserveFormat", a => a.PreserveFormat, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataBinding), 0, 1)
@@ -7627,14 +7627,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:DataBinding");
             builder.AddElement<DataBinding>()
-.AddAttribute("DataBindingName", a => a.DataBindingName)
-.AddAttribute("FileBinding", a => a.FileBinding)
-.AddAttribute("ConnectionID", a => a.ConnectionId)
-.AddAttribute("FileBindingName", a => a.FileBindingName)
-.AddAttribute("DataBindingLoadMode", a => a.DataBindingLoadMode, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("DataBindingName", a => a.DataBindingName)
+                .AddAttribute("FileBinding", a => a.FileBinding)
+                .AddAttribute("ConnectionID", a => a.ConnectionId)
+                .AddAttribute("FileBindingName", a => a.FileBindingName)
+                .AddAttribute("DataBindingLoadMode", a => a.DataBindingLoadMode, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new AnyParticle(0, 1)
@@ -7643,7 +7643,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddConstraint(new UniqueAttributeValueConstraint("x:FileBindingName", true, null));
             builder.AddConstraint(new AttributeValueRangeConstraint("x:DataBindingLoadMode", true, 0, true, 4, true));
             builder.AddConstraint(new AttributeAbsentConditionToValue("x:ConnectionID", "x:FileBinding", "false"));
-            builder.AddConstraint(new AttributeRequiredConditionToValue("x:ConnectionID", "x:FileBinding", "true"));
+            builder.AddConstraint(new AttributeRequiredConditionToValue("x:ConnectionID", "x:FileBinding" , "true"));
             builder.AddConstraint(new AttributeValueLengthConstraint("x:DataBindingName", 0, 65535) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueLengthConstraint("x:FileBindingName", 0, 65535) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueRangeConstraint("x:ConnectionID", true, double.NegativeInfinity, true, 2147483647, true) { Application = ApplicationType.Excel });
@@ -7935,32 +7935,32 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TextProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WebQueryProperties>();
             builder.AddElement<Connection>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("sourceFile", a => a.SourceFile)
-.AddAttribute("odcFile", a => a.ConnectionFile)
-.AddAttribute("keepAlive", a => a.KeepAlive)
-.AddAttribute("interval", a => a.Interval)
-.AddAttribute("name", a => a.Name)
-.AddAttribute("description", a => a.Description)
-.AddAttribute("type", a => a.Type)
-.AddAttribute("reconnectionMethod", a => a.ReconnectionMethod)
-.AddAttribute("refreshedVersion", a => a.RefreshedVersion, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("minRefreshableVersion", a => a.MinRefreshableVersion)
-.AddAttribute("savePassword", a => a.SavePassword)
-.AddAttribute("new", a => a.New)
-.AddAttribute("deleted", a => a.Deleted)
-.AddAttribute("onlyUseConnectionFile", a => a.OnlyUseConnectionFile)
-.AddAttribute("background", a => a.Background)
-.AddAttribute("refreshOnLoad", a => a.RefreshOnLoad)
-.AddAttribute("saveData", a => a.SaveData)
-.AddAttribute("credentials", a => a.Credentials)
-.AddAttribute("singleSignOnId", a => a.SingleSignOnId);
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("sourceFile", a => a.SourceFile)
+                .AddAttribute("odcFile", a => a.ConnectionFile)
+                .AddAttribute("keepAlive", a => a.KeepAlive)
+                .AddAttribute("interval", a => a.Interval)
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("description", a => a.Description)
+                .AddAttribute("type", a => a.Type)
+                .AddAttribute("reconnectionMethod", a => a.ReconnectionMethod)
+                .AddAttribute("refreshedVersion", a => a.RefreshedVersion, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("minRefreshableVersion", a => a.MinRefreshableVersion)
+                .AddAttribute("savePassword", a => a.SavePassword)
+                .AddAttribute("new", a => a.New)
+                .AddAttribute("deleted", a => a.Deleted)
+                .AddAttribute("onlyUseConnectionFile", a => a.OnlyUseConnectionFile)
+                .AddAttribute("background", a => a.Background)
+                .AddAttribute("refreshOnLoad", a => a.RefreshOnLoad)
+                .AddAttribute("saveData", a => a.SaveData)
+                .AddAttribute("credentials", a => a.Credentials)
+                .AddAttribute("singleSignOnId", a => a.SingleSignOnId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DatabaseProperties), 0, 1),
@@ -8129,7 +8129,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MissingTable>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CharacterValue>();
             builder.AddElement<Tables>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MissingTable), 1, 1),
@@ -8272,20 +8272,20 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:parameter");
             builder.AddElement<Parameter>()
-.AddAttribute("name", a => a.Name)
-.AddAttribute("sqlType", a => a.SqlType)
-.AddAttribute("parameterType", a => a.ParameterType)
-.AddAttribute("refreshOnChange", a => a.RefreshOnChange)
-.AddAttribute("prompt", a => a.Prompt)
-.AddAttribute("boolean", a => a.Boolean)
-.AddAttribute("double", a => a.Double)
-.AddAttribute("integer", a => a.Integer)
-.AddAttribute("string", a => a.String)
-.AddAttribute("cell", a => a.Cell);
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("sqlType", a => a.SqlType)
+                .AddAttribute("parameterType", a => a.ParameterType)
+                .AddAttribute("refreshOnChange", a => a.RefreshOnChange)
+                .AddAttribute("prompt", a => a.Prompt)
+                .AddAttribute("boolean", a => a.Boolean)
+                .AddAttribute("double", a => a.Double)
+                .AddAttribute("integer", a => a.Integer)
+                .AddAttribute("string", a => a.String)
+                .AddAttribute("cell", a => a.Cell);
             builder.AddConstraint(new AttributeValueLengthConstraint("x:name", 0, 255));
             builder.AddConstraint(new AttributeValueSetConstraint("x:sqlType", true, new string[] { "-22", "-20", "-11", "-10", "-9", "-8", "-7", "-6", "-5", "-4", "-3", "-2", "-1", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "111", "112", "113" }));
             builder.AddConstraint(new AttributeValueLengthConstraint("x:string", 0, 255));
-            builder.AddConstraint(new AttributeRequiredConditionToValue("x:cell", "x:parameterType", "cell"));
+            builder.AddConstraint(new AttributeRequiredConditionToValue("x:cell", "x:parameterType" , "cell"));
             builder.AddConstraint(new AttributeValueLengthConstraint("x:prompt", 0, 65535));
         }
 
@@ -8351,10 +8351,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:s");
             builder.AddElement<CharacterValue>()
-  .AddAttribute("v", a => a.Val, aBuilder =>
-  {
-      aBuilder.AddValidator(RequiredValidator.Instance);
-  });
+                .AddAttribute("v", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new IndexReferenceConstraint("x:in", ".", null, "x:serverFormat", "x:serverFormat", 0));
             builder.AddConstraint(new AttributeValueLengthConstraint("x:c", 0, 65535) { Application = ApplicationType.Excel });
         }
@@ -8394,10 +8394,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:x");
             builder.AddElement<FieldItem>()
-  .AddAttribute("v", a => a.Val, aBuilder =>
-  {
-      aBuilder.AddValidator(RequiredValidator.Instance);
-  });
+                .AddAttribute("v", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -8446,8 +8446,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:textField");
             builder.AddElement<TextField>()
-.AddAttribute("type", a => a.Type)
-.AddAttribute("position", a => a.Position);
+                .AddAttribute("type", a => a.Type)
+                .AddAttribute("position", a => a.Position);
             builder.AddConstraint(new AttributeValueRangeConstraint("x:position", true, 0, true, 2147483647, true));
         }
 
@@ -8655,22 +8655,22 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SharedItems>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberPropertiesMap>();
             builder.AddElement<CacheField>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("caption", a => a.Caption)
-.AddAttribute("propertyName", a => a.PropertyName)
-.AddAttribute("serverField", a => a.ServerField)
-.AddAttribute("uniqueList", a => a.UniqueList)
-.AddAttribute("numFmtId", a => a.NumberFormatId)
-.AddAttribute("formula", a => a.Formula)
-.AddAttribute("sqlType", a => a.SqlType)
-.AddAttribute("hierarchy", a => a.Hierarchy)
-.AddAttribute("level", a => a.Level)
-.AddAttribute("databaseField", a => a.DatabaseField)
-.AddAttribute("mappingCount", a => a.MappingCount)
-.AddAttribute("memberPropertyField", a => a.MemberPropertyField);
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("caption", a => a.Caption)
+                .AddAttribute("propertyName", a => a.PropertyName)
+                .AddAttribute("serverField", a => a.ServerField)
+                .AddAttribute("uniqueList", a => a.UniqueList)
+                .AddAttribute("numFmtId", a => a.NumberFormatId)
+                .AddAttribute("formula", a => a.Formula)
+                .AddAttribute("sqlType", a => a.SqlType)
+                .AddAttribute("hierarchy", a => a.Hierarchy)
+                .AddAttribute("level", a => a.Level)
+                .AddAttribute("databaseField", a => a.DatabaseField)
+                .AddAttribute("mappingCount", a => a.MappingCount)
+                .AddAttribute("memberPropertyField", a => a.MemberPropertyField);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SharedItems), 0, 1),
@@ -8773,7 +8773,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:pages");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Page>();
             builder.AddElement<Pages>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Page), 1, 4)
@@ -8846,7 +8846,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:rangeSets");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RangeSet>();
             builder.AddElement<RangeSets>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RangeSet), 1, 0)
@@ -8919,7 +8919,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:page");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageItem>();
             builder.AddElement<Page>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageItem), 0, 0)
@@ -8961,10 +8961,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:pageItem");
             builder.AddElement<PageItem>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -9082,14 +9082,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:rangeSet");
             builder.AddElement<RangeSet>()
-.AddAttribute("i1", a => a.FieldItemIndexPage1)
-.AddAttribute("i2", a => a.FieldItemIndexPage2)
-.AddAttribute("i3", a => a.FieldItemIndexPage3)
-.AddAttribute("i4", a => a.FieldItemIndexPage4)
-.AddAttribute("ref", a => a.Reference)
-.AddAttribute("name", a => a.Name)
-.AddAttribute("sheet", a => a.Sheet)
-.AddAttribute("r:id", a => a.Id);
+                .AddAttribute("i1", a => a.FieldItemIndexPage1)
+                .AddAttribute("i2", a => a.FieldItemIndexPage2)
+                .AddAttribute("i3", a => a.FieldItemIndexPage3)
+                .AddAttribute("i4", a => a.FieldItemIndexPage4)
+                .AddAttribute("ref", a => a.Reference)
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("sheet", a => a.Sheet)
+                .AddAttribute("r:id", a => a.Id);
             builder.AddConstraint(new AttributeMutualExclusive("x:name", "x:ref"));
             builder.AddConstraint(new AttributeValueLengthConstraint("x:sheet", 1, 31));
         }
@@ -9272,23 +9272,23 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Tuples>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex>();
             builder.AddElement<MissingItem>()
-.AddAttribute("u", a => a.Unused)
-.AddAttribute("f", a => a.Calculated)
-.AddAttribute("c", a => a.Caption)
-.AddAttribute("cp", a => a.PropertyCount)
-.AddAttribute("in", a => a.FormatIndex)
-.AddAttribute("bc", a => a.BackgroundColor, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("fc", a => a.ForegroundColor, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("i", a => a.Italic)
-.AddAttribute("un", a => a.Underline)
-.AddAttribute("st", a => a.Strikethrough)
-.AddAttribute("b", a => a.Bold);
+                .AddAttribute("u", a => a.Unused)
+                .AddAttribute("f", a => a.Calculated)
+                .AddAttribute("c", a => a.Caption)
+                .AddAttribute("cp", a => a.PropertyCount)
+                .AddAttribute("in", a => a.FormatIndex)
+                .AddAttribute("bc", a => a.BackgroundColor, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("fc", a => a.ForegroundColor, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("i", a => a.Italic)
+                .AddAttribute("un", a => a.Underline)
+                .AddAttribute("st", a => a.Strikethrough)
+                .AddAttribute("b", a => a.Bold);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 0),
@@ -9487,27 +9487,27 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Tuples>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex>();
             builder.AddElement<NumberItem>()
-.AddAttribute("v", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("u", a => a.Unused)
-.AddAttribute("f", a => a.Calculated)
-.AddAttribute("c", a => a.Caption)
-.AddAttribute("cp", a => a.PropertyCount)
-.AddAttribute("in", a => a.FormatIndex)
-.AddAttribute("bc", a => a.BackgroundColor, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("fc", a => a.ForegroundColor, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("i", a => a.Italic)
-.AddAttribute("un", a => a.Underline)
-.AddAttribute("st", a => a.Strikethrough)
-.AddAttribute("b", a => a.Bold);
+                .AddAttribute("v", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("u", a => a.Unused)
+                .AddAttribute("f", a => a.Calculated)
+                .AddAttribute("c", a => a.Caption)
+                .AddAttribute("cp", a => a.PropertyCount)
+                .AddAttribute("in", a => a.FormatIndex)
+                .AddAttribute("bc", a => a.BackgroundColor, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("fc", a => a.ForegroundColor, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("i", a => a.Italic)
+                .AddAttribute("un", a => a.Underline)
+                .AddAttribute("st", a => a.Strikethrough)
+                .AddAttribute("b", a => a.Bold);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 0),
@@ -9630,14 +9630,14 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
             builder.SetSchema("x:b");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex>();
             builder.AddElement<BooleanItem>()
-.AddAttribute("v", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("u", a => a.Unused)
-.AddAttribute("f", a => a.Calculated)
-.AddAttribute("c", a => a.Caption)
-.AddAttribute("cp", a => a.PropertyCount);
+                .AddAttribute("v", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("u", a => a.Unused)
+                .AddAttribute("f", a => a.Calculated)
+                .AddAttribute("c", a => a.Caption)
+                .AddAttribute("cp", a => a.PropertyCount);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
@@ -9834,27 +9834,27 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Tuples>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex>();
             builder.AddElement<ErrorItem>()
-.AddAttribute("v", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("u", a => a.Unused)
-.AddAttribute("f", a => a.Calculated)
-.AddAttribute("c", a => a.Caption)
-.AddAttribute("cp", a => a.PropertyCount)
-.AddAttribute("in", a => a.FormatIndex)
-.AddAttribute("bc", a => a.BackgroundColor, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("fc", a => a.ForegroundColor, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("i", a => a.Italic)
-.AddAttribute("un", a => a.Underline)
-.AddAttribute("st", a => a.Strikethrough)
-.AddAttribute("b", a => a.Bold);
+                .AddAttribute("v", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("u", a => a.Unused)
+                .AddAttribute("f", a => a.Calculated)
+                .AddAttribute("c", a => a.Caption)
+                .AddAttribute("cp", a => a.PropertyCount)
+                .AddAttribute("in", a => a.FormatIndex)
+                .AddAttribute("bc", a => a.BackgroundColor, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("fc", a => a.ForegroundColor, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("i", a => a.Italic)
+                .AddAttribute("un", a => a.Underline)
+                .AddAttribute("st", a => a.Strikethrough)
+                .AddAttribute("b", a => a.Bold);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 1),
@@ -10066,27 +10066,27 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Tuples>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex>();
             builder.AddElement<StringItem>()
-.AddAttribute("v", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("u", a => a.Unused)
-.AddAttribute("f", a => a.Calculated)
-.AddAttribute("c", a => a.Caption)
-.AddAttribute("cp", a => a.PropertyCount)
-.AddAttribute("in", a => a.FormatIndex)
-.AddAttribute("bc", a => a.BackgroundColor, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("fc", a => a.ForegroundColor, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("i", a => a.Italic)
-.AddAttribute("un", a => a.Underline)
-.AddAttribute("st", a => a.Strikethrough)
-.AddAttribute("b", a => a.Bold);
+                .AddAttribute("v", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("u", a => a.Unused)
+                .AddAttribute("f", a => a.Calculated)
+                .AddAttribute("c", a => a.Caption)
+                .AddAttribute("cp", a => a.PropertyCount)
+                .AddAttribute("in", a => a.FormatIndex)
+                .AddAttribute("bc", a => a.BackgroundColor, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("fc", a => a.ForegroundColor, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("i", a => a.Italic)
+                .AddAttribute("un", a => a.Underline)
+                .AddAttribute("st", a => a.Strikethrough)
+                .AddAttribute("b", a => a.Bold);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 0),
@@ -10206,14 +10206,14 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
             builder.SetSchema("x:d");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex>();
             builder.AddElement<DateTimeItem>()
-.AddAttribute("v", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("u", a => a.Unused)
-.AddAttribute("f", a => a.Calculated)
-.AddAttribute("c", a => a.Caption)
-.AddAttribute("cp", a => a.PropertyCount);
+                .AddAttribute("v", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("u", a => a.Unused)
+                .AddAttribute("f", a => a.Calculated)
+                .AddAttribute("c", a => a.Caption)
+                .AddAttribute("cp", a => a.PropertyCount);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
@@ -10403,7 +10403,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Tuple>();
             builder.AddElement<TuplesType>()
-.AddAttribute("c", a => a.MemberNameCount);
+                .AddAttribute("c", a => a.MemberNameCount);
         }
     }
 
@@ -10487,7 +10487,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<XType>()
-                           .AddAttribute("v", a => a.Val);
+                .AddAttribute("v", a => a.Val);
         }
     }
 
@@ -10699,25 +10699,25 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:kpi");
             builder.AddElement<Kpi>()
-.AddAttribute("uniqueName", a => a.UniqueName, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("caption", a => a.Caption, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("displayFolder", a => a.DisplayFolder)
-.AddAttribute("measureGroup", a => a.MeasureGroup)
-.AddAttribute("parent", a => a.ParentKpi)
-.AddAttribute("value", a => a.Value, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("goal", a => a.Goal)
-.AddAttribute("status", a => a.Status)
-.AddAttribute("trend", a => a.Trend)
-.AddAttribute("weight", a => a.Weight);
+                .AddAttribute("uniqueName", a => a.UniqueName, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("caption", a => a.Caption, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("displayFolder", a => a.DisplayFolder)
+                .AddAttribute("measureGroup", a => a.MeasureGroup)
+                .AddAttribute("parent", a => a.ParentKpi)
+                .AddAttribute("value", a => a.Value, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("goal", a => a.Goal)
+                .AddAttribute("status", a => a.Status)
+                .AddAttribute("trend", a => a.Trend)
+                .AddAttribute("weight", a => a.Weight);
             builder.AddConstraint(new UniqueAttributeValueConstraint("x:goal", true, null));
             builder.AddConstraint(new UniqueAttributeValueConstraint("x:status", true, null));
             builder.AddConstraint(new UniqueAttributeValueConstraint("x:trend", true, null));
@@ -10765,10 +10765,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:fieldUsage");
             builder.AddElement<FieldUsage>()
-.AddAttribute("x", a => a.Index, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("x", a => a.Index, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new IndexReferenceConstraint("x:x", ".", null, "x:cacheField", "x:cacheField", 0));
             builder.AddConstraint(new AttributeValueRangeConstraint("x:x", true, -1, true, double.PositiveInfinity, true));
         }
@@ -10874,16 +10874,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Groups>();
             builder.AddElement<GroupLevel>()
-.AddAttribute("uniqueName", a => a.UniqueName, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("caption", a => a.Caption, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("user", a => a.User)
-.AddAttribute("customRollUp", a => a.CustomRollUp);
+                .AddAttribute("uniqueName", a => a.UniqueName, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("caption", a => a.Caption, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("user", a => a.User)
+                .AddAttribute("customRollUp", a => a.CustomRollUp);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Groups), 0, 1),
@@ -10984,7 +10984,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:groups");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Group>();
             builder.AddElement<Groups>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Group), 1, 0)
@@ -11101,20 +11101,20 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:group");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.GroupMembers>();
             builder.AddElement<Group>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("uniqueName", a => a.UniqueName, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("caption", a => a.Caption, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("uniqueParent", a => a.UniqueParent)
-.AddAttribute("id", a => a.Id);
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("uniqueName", a => a.UniqueName, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("caption", a => a.Caption, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("uniqueParent", a => a.UniqueParent)
+                .AddAttribute("id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GroupMembers), 1, 1)
@@ -11204,7 +11204,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:groupMembers");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.GroupMember>();
             builder.AddElement<GroupMembers>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GroupMember), 1, 0)
@@ -11257,11 +11257,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:groupMember");
             builder.AddElement<GroupMember>()
-.AddAttribute("uniqueName", a => a.UniqueName, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("group", a => a.Group);
+                .AddAttribute("uniqueName", a => a.UniqueName, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("group", a => a.Group);
             builder.AddConstraint(new UniqueAttributeValueConstraint("x:uniqueName", true, null));
             builder.AddConstraint(new AttributeValueLengthConstraint("x:uniqueName", 1, 65535) { Application = ApplicationType.Excel });
         }
@@ -11338,7 +11338,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberItem>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.StringItem>();
             builder.AddElement<Entries>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MissingItem), 1, 1),
@@ -11414,7 +11414,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:sets");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TupleSet>();
             builder.AddElement<Sets>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TupleSet), 1, 0)
@@ -11487,7 +11487,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:queryCache");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Query>();
             builder.AddElement<QueryCache>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Query), 1, 0)
@@ -11560,7 +11560,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:serverFormats");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ServerFormat>();
             builder.AddElement<ServerFormats>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ServerFormat), 0, 0)
@@ -11613,8 +11613,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:serverFormat");
             builder.AddElement<ServerFormat>()
-.AddAttribute("culture", a => a.Culture)
-.AddAttribute("format", a => a.Format);
+                .AddAttribute("culture", a => a.Culture)
+                .AddAttribute("format", a => a.Format);
             builder.AddConstraint(new AttributeMutualExclusive("x:culture", "x:format"));
             builder.AddConstraint(new AttributeValueLengthConstraint("x:culture", 0, 31));
             builder.AddConstraint(new AttributeValueLengthConstraint("x:format", 0, 65535));
@@ -11677,12 +11677,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:tpl");
             builder.AddElement<Tuple>()
-.AddAttribute("fld", a => a.Field)
-.AddAttribute("hier", a => a.Hierarchy)
-.AddAttribute("item", a => a.Item, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("fld", a => a.Field)
+                .AddAttribute("hier", a => a.Hierarchy)
+                .AddAttribute("item", a => a.Item, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new IndexReferenceConstraint("x:fld", ".", null, "x:cacheField", "x:cacheField", 0));
             builder.AddConstraint(new IndexReferenceConstraint("x:hier", ".", null, "x:cacheHierarchy", "x:cacheHierarchy", 0));
             builder.AddConstraint(new AttributeMutualExclusive("x:fld", "x:hier") { Application = ApplicationType.Excel });
@@ -11800,17 +11800,17 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Tuples>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortByTuple>();
             builder.AddElement<TupleSet>()
-.AddAttribute("count", a => a.Count)
-.AddAttribute("maxRank", a => a.MaxRank, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("setDefinition", a => a.SetDefinition, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("sortType", a => a.SortType)
-.AddAttribute("queryFailed", a => a.QueryFailed);
+                .AddAttribute("count", a => a.Count)
+                .AddAttribute("maxRank", a => a.MaxRank, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("setDefinition", a => a.SetDefinition, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("sortType", a => a.SortType)
+                .AddAttribute("queryFailed", a => a.QueryFailed);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 0),
@@ -11886,10 +11886,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:query");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Tuples>();
             builder.AddElement<Query>()
-.AddAttribute("mdx", a => a.Mdx, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("mdx", a => a.Mdx, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 1)
@@ -11989,8 +11989,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
             builder.AddElement<CalculatedItem>()
-.AddAttribute("field", a => a.Field)
-.AddAttribute("formula", a => a.Formula);
+                .AddAttribute("field", a => a.Field)
+                .AddAttribute("formula", a => a.Formula);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 1, 1),
@@ -12213,18 +12213,18 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences>();
             builder.AddElement<PivotArea>()
-.AddAttribute("field", a => a.Field)
-.AddAttribute("type", a => a.Type)
-.AddAttribute("dataOnly", a => a.DataOnly)
-.AddAttribute("labelOnly", a => a.LabelOnly)
-.AddAttribute("grandRow", a => a.GrandRow)
-.AddAttribute("grandCol", a => a.GrandColumn)
-.AddAttribute("cacheIndex", a => a.CacheIndex)
-.AddAttribute("outline", a => a.Outline)
-.AddAttribute("offset", a => a.Offset)
-.AddAttribute("collapsedLevelsAreSubtotals", a => a.CollapsedLevelsAreSubtotals)
-.AddAttribute("axis", a => a.Axis)
-.AddAttribute("fieldPosition", a => a.FieldPosition);
+                .AddAttribute("field", a => a.Field)
+                .AddAttribute("type", a => a.Type)
+                .AddAttribute("dataOnly", a => a.DataOnly)
+                .AddAttribute("labelOnly", a => a.LabelOnly)
+                .AddAttribute("grandRow", a => a.GrandRow)
+                .AddAttribute("grandCol", a => a.GrandColumn)
+                .AddAttribute("cacheIndex", a => a.CacheIndex)
+                .AddAttribute("outline", a => a.Outline)
+                .AddAttribute("offset", a => a.Offset)
+                .AddAttribute("collapsedLevelsAreSubtotals", a => a.CollapsedLevelsAreSubtotals)
+                .AddAttribute("axis", a => a.Axis)
+                .AddAttribute("fieldPosition", a => a.FieldPosition);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences), 0, 1),
@@ -12391,29 +12391,29 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:calculatedMember");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtensionList>();
             builder.AddElement<CalculatedMember>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("mdx", a => a.Mdx, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("memberName", a => a.MemberName)
-.AddAttribute("hierarchy", a => a.Hierarchy)
-.AddAttribute("parent", a => a.ParentName)
-.AddAttribute("solveOrder", a => a.SolveOrder)
-.AddAttribute("set", a => a.Set);
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("mdx", a => a.Mdx, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("memberName", a => a.MemberName)
+                .AddAttribute("hierarchy", a => a.Hierarchy)
+                .AddAttribute("parent", a => a.ParentName)
+                .AddAttribute("solveOrder", a => a.SolveOrder)
+                .AddAttribute("set", a => a.Set);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtensionList), 0, 1)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint("x:name", 1, 63999));
             builder.AddConstraint(new AttributeAbsentConditionToValue("x:hierarchy", "x:set", "1"));
-            builder.AddConstraint(new AttributeRequiredConditionToValue("x:hierarchy", "x:set", "0"));
+            builder.AddConstraint(new AttributeRequiredConditionToValue("x:hierarchy", "x:set" , "0"));
             builder.AddConstraint(new AttributeAbsentConditionToValue("x:parent", "x:set", "1"));
             builder.AddConstraint(new AttributeAbsentConditionToValue("x:memberName", "x:set", "1"));
-            builder.AddConstraint(new AttributeRequiredConditionToValue("x:memberName", "x:set", "0"));
+            builder.AddConstraint(new AttributeRequiredConditionToValue("x:memberName", "x:set" , "0"));
             builder.AddConstraint(new AttributeValueLengthConstraint("x:memberName", 1, 65535) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueLengthConstraint("x:hierarchy", 1, 65535) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueLengthConstraint("x:parent", 1, 65535) { Application = ApplicationType.Excel });
@@ -13019,54 +13019,54 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Items>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtensionList>();
             builder.AddElement<PivotField>()
-.AddAttribute("name", a => a.Name)
-.AddAttribute("axis", a => a.Axis)
-.AddAttribute("dataField", a => a.DataField)
-.AddAttribute("subtotalCaption", a => a.SubtotalCaption)
-.AddAttribute("showDropDowns", a => a.ShowDropDowns)
-.AddAttribute("hiddenLevel", a => a.HiddenLevel)
-.AddAttribute("uniqueMemberProperty", a => a.UniqueMemberProperty)
-.AddAttribute("compact", a => a.Compact)
-.AddAttribute("allDrilled", a => a.AllDrilled)
-.AddAttribute("numFmtId", a => a.NumberFormatId)
-.AddAttribute("outline", a => a.Outline)
-.AddAttribute("subtotalTop", a => a.SubtotalTop)
-.AddAttribute("dragToRow", a => a.DragToRow)
-.AddAttribute("dragToCol", a => a.DragToColumn)
-.AddAttribute("multipleItemSelectionAllowed", a => a.MultipleItemSelectionAllowed)
-.AddAttribute("dragToPage", a => a.DragToPage)
-.AddAttribute("dragToData", a => a.DragToData)
-.AddAttribute("dragOff", a => a.DragOff)
-.AddAttribute("showAll", a => a.ShowAll)
-.AddAttribute("insertBlankRow", a => a.InsertBlankRow)
-.AddAttribute("serverField", a => a.ServerField)
-.AddAttribute("insertPageBreak", a => a.InsertPageBreak)
-.AddAttribute("autoShow", a => a.AutoShow)
-.AddAttribute("topAutoShow", a => a.TopAutoShow)
-.AddAttribute("hideNewItems", a => a.HideNewItems)
-.AddAttribute("measureFilter", a => a.MeasureFilter)
-.AddAttribute("includeNewItemsInFilter", a => a.IncludeNewItemsInFilter)
-.AddAttribute("itemPageCount", a => a.ItemPageCount)
-.AddAttribute("sortType", a => a.SortType)
-.AddAttribute("dataSourceSort", a => a.DataSourceSort)
-.AddAttribute("nonAutoSortDefault", a => a.NonAutoSortDefault)
-.AddAttribute("rankBy", a => a.RankBy)
-.AddAttribute("defaultSubtotal", a => a.DefaultSubtotal)
-.AddAttribute("sumSubtotal", a => a.SumSubtotal)
-.AddAttribute("countASubtotal", a => a.CountASubtotal)
-.AddAttribute("avgSubtotal", a => a.AverageSubTotal)
-.AddAttribute("maxSubtotal", a => a.MaxSubtotal)
-.AddAttribute("minSubtotal", a => a.MinSubtotal)
-.AddAttribute("productSubtotal", a => a.ApplyProductInSubtotal)
-.AddAttribute("countSubtotal", a => a.CountSubtotal)
-.AddAttribute("stdDevSubtotal", a => a.ApplyStandardDeviationInSubtotal)
-.AddAttribute("stdDevPSubtotal", a => a.ApplyStandardDeviationPInSubtotal)
-.AddAttribute("varSubtotal", a => a.ApplyVarianceInSubtotal)
-.AddAttribute("varPSubtotal", a => a.ApplyVariancePInSubtotal)
-.AddAttribute("showPropCell", a => a.ShowPropCell)
-.AddAttribute("showPropTip", a => a.ShowPropertyTooltip)
-.AddAttribute("showPropAsCaption", a => a.ShowPropAsCaption)
-.AddAttribute("defaultAttributeDrillState", a => a.DefaultAttributeDrillState);
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("axis", a => a.Axis)
+                .AddAttribute("dataField", a => a.DataField)
+                .AddAttribute("subtotalCaption", a => a.SubtotalCaption)
+                .AddAttribute("showDropDowns", a => a.ShowDropDowns)
+                .AddAttribute("hiddenLevel", a => a.HiddenLevel)
+                .AddAttribute("uniqueMemberProperty", a => a.UniqueMemberProperty)
+                .AddAttribute("compact", a => a.Compact)
+                .AddAttribute("allDrilled", a => a.AllDrilled)
+                .AddAttribute("numFmtId", a => a.NumberFormatId)
+                .AddAttribute("outline", a => a.Outline)
+                .AddAttribute("subtotalTop", a => a.SubtotalTop)
+                .AddAttribute("dragToRow", a => a.DragToRow)
+                .AddAttribute("dragToCol", a => a.DragToColumn)
+                .AddAttribute("multipleItemSelectionAllowed", a => a.MultipleItemSelectionAllowed)
+                .AddAttribute("dragToPage", a => a.DragToPage)
+                .AddAttribute("dragToData", a => a.DragToData)
+                .AddAttribute("dragOff", a => a.DragOff)
+                .AddAttribute("showAll", a => a.ShowAll)
+                .AddAttribute("insertBlankRow", a => a.InsertBlankRow)
+                .AddAttribute("serverField", a => a.ServerField)
+                .AddAttribute("insertPageBreak", a => a.InsertPageBreak)
+                .AddAttribute("autoShow", a => a.AutoShow)
+                .AddAttribute("topAutoShow", a => a.TopAutoShow)
+                .AddAttribute("hideNewItems", a => a.HideNewItems)
+                .AddAttribute("measureFilter", a => a.MeasureFilter)
+                .AddAttribute("includeNewItemsInFilter", a => a.IncludeNewItemsInFilter)
+                .AddAttribute("itemPageCount", a => a.ItemPageCount)
+                .AddAttribute("sortType", a => a.SortType)
+                .AddAttribute("dataSourceSort", a => a.DataSourceSort)
+                .AddAttribute("nonAutoSortDefault", a => a.NonAutoSortDefault)
+                .AddAttribute("rankBy", a => a.RankBy)
+                .AddAttribute("defaultSubtotal", a => a.DefaultSubtotal)
+                .AddAttribute("sumSubtotal", a => a.SumSubtotal)
+                .AddAttribute("countASubtotal", a => a.CountASubtotal)
+                .AddAttribute("avgSubtotal", a => a.AverageSubTotal)
+                .AddAttribute("maxSubtotal", a => a.MaxSubtotal)
+                .AddAttribute("minSubtotal", a => a.MinSubtotal)
+                .AddAttribute("productSubtotal", a => a.ApplyProductInSubtotal)
+                .AddAttribute("countSubtotal", a => a.CountSubtotal)
+                .AddAttribute("stdDevSubtotal", a => a.ApplyStandardDeviationInSubtotal)
+                .AddAttribute("stdDevPSubtotal", a => a.ApplyStandardDeviationPInSubtotal)
+                .AddAttribute("varSubtotal", a => a.ApplyVarianceInSubtotal)
+                .AddAttribute("varPSubtotal", a => a.ApplyVariancePInSubtotal)
+                .AddAttribute("showPropCell", a => a.ShowPropCell)
+                .AddAttribute("showPropTip", a => a.ShowPropertyTooltip)
+                .AddAttribute("showPropAsCaption", a => a.ShowPropAsCaption)
+                .AddAttribute("defaultAttributeDrillState", a => a.DefaultAttributeDrillState);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Items), 0, 1),
@@ -13260,20 +13260,20 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:item");
             builder.AddElement<Item>()
-.AddAttribute("n", a => a.ItemName)
-.AddAttribute("t", a => a.ItemType)
-.AddAttribute("h", a => a.Hidden)
-.AddAttribute("s", a => a.HasStringVlue)
-.AddAttribute("sd", a => a.HideDetails)
-.AddAttribute("f", a => a.Calculated)
-.AddAttribute("m", a => a.Missing)
-.AddAttribute("c", a => a.ChildItems)
-.AddAttribute("x", a => a.Index)
-.AddAttribute("d", a => a.Expanded)
-.AddAttribute("e", a => a.DrillAcrossAttributes);
+                .AddAttribute("n", a => a.ItemName)
+                .AddAttribute("t", a => a.ItemType)
+                .AddAttribute("h", a => a.Hidden)
+                .AddAttribute("s", a => a.HasStringVlue)
+                .AddAttribute("sd", a => a.HideDetails)
+                .AddAttribute("f", a => a.Calculated)
+                .AddAttribute("m", a => a.Missing)
+                .AddAttribute("c", a => a.ChildItems)
+                .AddAttribute("x", a => a.Index)
+                .AddAttribute("d", a => a.Expanded)
+                .AddAttribute("e", a => a.DrillAcrossAttributes);
             builder.AddConstraint(new UniqueAttributeValueConstraint("x:n", true, "x:pivotField"));
             builder.AddConstraint(new AttributeValueSetConstraint("x:t", false, new string[] { "blank", "grand" }));
-            builder.AddConstraint(new AttributeRequiredConditionToValue("x:x", "x:t", "data") { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeRequiredConditionToValue("x:x", "x:t" , "data") { Application = ApplicationType.Excel });
         }
 
         /// <inheritdoc/>
@@ -13408,16 +13408,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:dataField");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataFieldExtensionList>();
             builder.AddElement<DataField>()
-.AddAttribute("name", a => a.Name)
-.AddAttribute("fld", a => a.Field, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("subtotal", a => a.Subtotal)
-.AddAttribute("showDataAs", a => a.ShowDataAs)
-.AddAttribute("baseField", a => a.BaseField)
-.AddAttribute("baseItem", a => a.BaseItem)
-.AddAttribute("numFmtId", a => a.NumberFormatId);
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("fld", a => a.Field, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("subtotal", a => a.Subtotal)
+                .AddAttribute("showDataAs", a => a.ShowDataAs)
+                .AddAttribute("baseField", a => a.BaseField)
+                .AddAttribute("baseItem", a => a.BaseItem)
+                .AddAttribute("numFmtId", a => a.NumberFormatId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataFieldExtensionList), 0, 1)
@@ -13526,9 +13526,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:i");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex>();
             builder.AddElement<RowItem>()
-.AddAttribute("t", a => a.ItemType)
-.AddAttribute("r", a => a.RepeatedItemCount)
-.AddAttribute("i", a => a.Index);
+                .AddAttribute("t", a => a.ItemType)
+                .AddAttribute("r", a => a.RepeatedItemCount)
+                .AddAttribute("i", a => a.Index);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
@@ -13571,10 +13571,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:field");
             builder.AddElement<Field>()
-.AddAttribute("x", a => a.Index, aBuilder =>
-{
-  aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("x", a => a.Index, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new UniqueAttributeValueConstraint("x:x", true, "x:colFields"));
         }
 
@@ -13657,8 +13657,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
             builder.AddElement<Format>()
-.AddAttribute("action", a => a.Action)
-.AddAttribute("dxfId", a => a.FormatId);
+                .AddAttribute("action", a => a.Action)
+                .AddAttribute("dxfId", a => a.FormatId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 1, 1),
@@ -13783,12 +13783,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotAreas>();
             builder.AddElement<ConditionalFormat>()
-.AddAttribute("scope", a => a.Scope)
-.AddAttribute("type", a => a.Type)
-.AddAttribute("priority", a => a.Priority, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("scope", a => a.Scope)
+                .AddAttribute("type", a => a.Type)
+                .AddAttribute("priority", a => a.Priority, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotAreas), 1, 1),
@@ -13889,7 +13889,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:pivotAreas");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
             builder.AddElement<PivotAreas>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 0, 0)
@@ -13984,15 +13984,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:chartFormat");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
             builder.AddElement<ChartFormat>()
-.AddAttribute("chart", a => a.Chart, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("format", a => a.Format, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("series", a => a.Series);
+                .AddAttribute("chart", a => a.Chart, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("format", a => a.Format, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("series", a => a.Series);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 1, 1)
@@ -14192,17 +14192,17 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Members>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotHierarchyExtensionList>();
             builder.AddElement<PivotHierarchy>()
-.AddAttribute("outline", a => a.Outline)
-.AddAttribute("multipleItemSelectionAllowed", a => a.MultipleItemSelectionAllowed)
-.AddAttribute("subtotalTop", a => a.SubtotalTop)
-.AddAttribute("showInFieldList", a => a.ShowInFieldList)
-.AddAttribute("dragToRow", a => a.DragToRow)
-.AddAttribute("dragToCol", a => a.DragToColumn)
-.AddAttribute("dragToPage", a => a.DragToPage)
-.AddAttribute("dragToData", a => a.DragToData)
-.AddAttribute("dragOff", a => a.DragOff)
-.AddAttribute("includeNewItemsInFilter", a => a.IncludeNewItemsInFilter)
-.AddAttribute("caption", a => a.Caption);
+                .AddAttribute("outline", a => a.Outline)
+                .AddAttribute("multipleItemSelectionAllowed", a => a.MultipleItemSelectionAllowed)
+                .AddAttribute("subtotalTop", a => a.SubtotalTop)
+                .AddAttribute("showInFieldList", a => a.ShowInFieldList)
+                .AddAttribute("dragToRow", a => a.DragToRow)
+                .AddAttribute("dragToCol", a => a.DragToColumn)
+                .AddAttribute("dragToPage", a => a.DragToPage)
+                .AddAttribute("dragToData", a => a.DragToData)
+                .AddAttribute("dragOff", a => a.DragOff)
+                .AddAttribute("includeNewItemsInFilter", a => a.IncludeNewItemsInFilter)
+                .AddAttribute("caption", a => a.Caption);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberProperties), 0, 1),
@@ -14308,10 +14308,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<HierarchyUsageType>()
-                           .AddAttribute("hierarchyUsage", a => a.Value, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           });
+                .AddAttribute("hierarchyUsage", a => a.Value, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
     }
 
@@ -14434,18 +14434,18 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:mp");
             builder.AddElement<MemberProperty>()
- .AddAttribute("name", a => a.Name)
- .AddAttribute("showCell", a => a.ShowCell)
- .AddAttribute("showTip", a => a.ShowTip)
- .AddAttribute("showAsCaption", a => a.ShowAsCaption)
- .AddAttribute("nameLen", a => a.NameLength)
- .AddAttribute("pPos", a => a.PropertyNamePosition)
- .AddAttribute("pLen", a => a.PropertyNameLength)
- .AddAttribute("level", a => a.Level)
- .AddAttribute("field", a => a.Field, aBuilder =>
- {
-     aBuilder.AddValidator(RequiredValidator.Instance);
- });
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("showCell", a => a.ShowCell)
+                .AddAttribute("showTip", a => a.ShowTip)
+                .AddAttribute("showAsCaption", a => a.ShowAsCaption)
+                .AddAttribute("nameLen", a => a.NameLength)
+                .AddAttribute("pPos", a => a.PropertyNamePosition)
+                .AddAttribute("pLen", a => a.PropertyNameLength)
+                .AddAttribute("level", a => a.Level)
+                .AddAttribute("field", a => a.Field, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new IndexReferenceConstraint("x:field", "PivotTableCacheDefinitionPart", null, "x:cacheField", "x:cacheField", 0));
         }
 
@@ -14484,10 +14484,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:member");
             builder.AddElement<Member>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
- aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -14558,19 +14558,19 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:dimension");
             builder.AddElement<Dimension>()
-.AddAttribute("measure", a => a.Measure)
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("uniqueName", a => a.UniqueName, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("caption", a => a.Caption, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("measure", a => a.Measure)
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("uniqueName", a => a.UniqueName, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("caption", a => a.Caption, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new UniqueAttributeValueConstraint("x:uniqueName", true, null));
             builder.AddConstraint(new AttributeValueLengthConstraint("x:caption", 1, 65535) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueLengthConstraint("x:name", 1, 65535) { Application = ApplicationType.Excel });
@@ -14623,14 +14623,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:measureGroup");
             builder.AddElement<MeasureGroup>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("caption", a => a.Caption, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("caption", a => a.Caption, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new AttributeValueLengthConstraint("x:caption", 1, 65535) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueLengthConstraint("x:name", 1, 65535) { Application = ApplicationType.Excel });
         }
@@ -14681,14 +14681,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:map");
             builder.AddElement<MeasureDimensionMap>()
-.AddAttribute("measureGroup", a => a.MeasureGroup, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("dimension", a => a.Dimension, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("measureGroup", a => a.MeasureGroup, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("dimension", a => a.Dimension, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -14869,26 +14869,26 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.AutoFilter>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtensionList>();
             builder.AddElement<PivotFilter>()
-.AddAttribute("fld", a => a.Field, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("mpFld", a => a.MemberPropertyFieldId)
-.AddAttribute("type", a => a.Type, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("evalOrder", a => a.EvaluationOrder)
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("iMeasureHier", a => a.MeasureHierarchy)
-.AddAttribute("iMeasureFld", a => a.MeasureField)
-.AddAttribute("name", a => a.Name)
-.AddAttribute("description", a => a.Description)
-.AddAttribute("stringValue1", a => a.StringValue1)
-.AddAttribute("stringValue2", a => a.StringValue2);
+                .AddAttribute("fld", a => a.Field, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("mpFld", a => a.MemberPropertyFieldId)
+                .AddAttribute("type", a => a.Type, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("evalOrder", a => a.EvaluationOrder)
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("iMeasureHier", a => a.MeasureHierarchy)
+                .AddAttribute("iMeasureFld", a => a.MeasureField)
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("description", a => a.Description)
+                .AddAttribute("stringValue1", a => a.StringValue1)
+                .AddAttribute("stringValue2", a => a.StringValue2);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.AutoFilter), 1, 1),
@@ -15227,34 +15227,34 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FieldsUsage>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.GroupLevels>();
             builder.AddElement<CacheHierarchy>()
-.AddAttribute("uniqueName", a => a.UniqueName, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("caption", a => a.Caption)
-.AddAttribute("measure", a => a.Measure)
-.AddAttribute("set", a => a.Set)
-.AddAttribute("parentSet", a => a.ParentSet)
-.AddAttribute("iconSet", a => a.IconSet)
-.AddAttribute("attribute", a => a.Attribute)
-.AddAttribute("time", a => a.Time)
-.AddAttribute("keyAttribute", a => a.KeyAttribute)
-.AddAttribute("defaultMemberUniqueName", a => a.DefaultMemberUniqueName)
-.AddAttribute("allUniqueName", a => a.AllUniqueName)
-.AddAttribute("allCaption", a => a.AllCaption)
-.AddAttribute("dimensionUniqueName", a => a.DimensionUniqueName)
-.AddAttribute("displayFolder", a => a.DisplayFolder)
-.AddAttribute("measureGroup", a => a.MeasureGroup)
-.AddAttribute("measures", a => a.Measures)
-.AddAttribute("count", a => a.Count, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("oneField", a => a.OneField)
-.AddAttribute("memberValueDatatype", a => a.MemberValueDatatype)
-.AddAttribute("unbalanced", a => a.Unbalanced)
-.AddAttribute("unbalancedGroup", a => a.UnbalancedGroup)
-.AddAttribute("hidden", a => a.Hidden);
+                .AddAttribute("uniqueName", a => a.UniqueName, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("caption", a => a.Caption)
+                .AddAttribute("measure", a => a.Measure)
+                .AddAttribute("set", a => a.Set)
+                .AddAttribute("parentSet", a => a.ParentSet)
+                .AddAttribute("iconSet", a => a.IconSet)
+                .AddAttribute("attribute", a => a.Attribute)
+                .AddAttribute("time", a => a.Time)
+                .AddAttribute("keyAttribute", a => a.KeyAttribute)
+                .AddAttribute("defaultMemberUniqueName", a => a.DefaultMemberUniqueName)
+                .AddAttribute("allUniqueName", a => a.AllUniqueName)
+                .AddAttribute("allCaption", a => a.AllCaption)
+                .AddAttribute("dimensionUniqueName", a => a.DimensionUniqueName)
+                .AddAttribute("displayFolder", a => a.DisplayFolder)
+                .AddAttribute("measureGroup", a => a.MeasureGroup)
+                .AddAttribute("measures", a => a.Measures)
+                .AddAttribute("count", a => a.Count, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("oneField", a => a.OneField)
+                .AddAttribute("memberValueDatatype", a => a.MemberValueDatatype)
+                .AddAttribute("unbalanced", a => a.Unbalanced)
+                .AddAttribute("unbalancedGroup", a => a.UnbalancedGroup)
+                .AddAttribute("hidden", a => a.Hidden);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FieldsUsage), 0, 1),
@@ -15420,14 +15420,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:rangePr");
             builder.AddElement<RangeProperties>()
-.AddAttribute("autoStart", a => a.AutoStart)
-.AddAttribute("autoEnd", a => a.AutoEnd)
-.AddAttribute("groupBy", a => a.GroupBy)
-.AddAttribute("startNum", a => a.StartNumber)
-.AddAttribute("endNum", a => a.EndNum)
-.AddAttribute("startDate", a => a.StartDate)
-.AddAttribute("endDate", a => a.EndDate)
-.AddAttribute("groupInterval", a => a.GroupInterval);
+                .AddAttribute("autoStart", a => a.AutoStart)
+                .AddAttribute("autoEnd", a => a.AutoEnd)
+                .AddAttribute("groupBy", a => a.GroupBy)
+                .AddAttribute("startNum", a => a.StartNumber)
+                .AddAttribute("endNum", a => a.EndNum)
+                .AddAttribute("startDate", a => a.StartDate)
+                .AddAttribute("endDate", a => a.EndDate)
+                .AddAttribute("groupInterval", a => a.GroupInterval);
             builder.AddConstraint(new AttributeValueLessEqualToAnother("x:startNum", "x:endNum", false));
         }
 
@@ -15497,7 +15497,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:discretePr");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FieldItem>();
             builder.AddElement<DiscreteProperties>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FieldItem), 1, 0)
@@ -15580,7 +15580,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberItem>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.StringItem>();
             builder.AddElement<GroupItems>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MissingItem), 1, 1),
@@ -15702,14 +15702,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:pageField");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<PageField>()
-.AddAttribute("fld", a => a.Field, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("item", a => a.Item)
-.AddAttribute("hier", a => a.Hierarchy)
-.AddAttribute("name", a => a.Name)
-.AddAttribute("cap", a => a.Caption);
+                .AddAttribute("fld", a => a.Field, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("item", a => a.Item)
+                .AddAttribute("hier", a => a.Hierarchy)
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("cap", a => a.Caption);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -15797,7 +15797,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:references");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotAreaReference>();
             builder.AddElement<PivotAreaReferences>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotAreaReference), 1, 0)
@@ -16048,23 +16048,23 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FieldItem>();
             builder.AddElement<PivotAreaReference>()
-.AddAttribute("field", a => a.Field)
-.AddAttribute("count", a => a.Count)
-.AddAttribute("selected", a => a.Selected)
-.AddAttribute("byPosition", a => a.ByPosition)
-.AddAttribute("relative", a => a.Relative)
-.AddAttribute("defaultSubtotal", a => a.DefaultSubtotal)
-.AddAttribute("sumSubtotal", a => a.SumSubtotal)
-.AddAttribute("countASubtotal", a => a.CountASubtotal)
-.AddAttribute("avgSubtotal", a => a.AverageSubtotal)
-.AddAttribute("maxSubtotal", a => a.MaxSubtotal)
-.AddAttribute("minSubtotal", a => a.MinSubtotal)
-.AddAttribute("productSubtotal", a => a.ApplyProductInSubtotal)
-.AddAttribute("countSubtotal", a => a.CountSubtotal)
-.AddAttribute("stdDevSubtotal", a => a.ApplyStandardDeviationInSubtotal)
-.AddAttribute("stdDevPSubtotal", a => a.ApplyStandardDeviationPInSubtotal)
-.AddAttribute("varSubtotal", a => a.ApplyVarianceInSubtotal)
-.AddAttribute("varPSubtotal", a => a.ApplyVariancePInSubtotal);
+                .AddAttribute("field", a => a.Field)
+                .AddAttribute("count", a => a.Count)
+                .AddAttribute("selected", a => a.Selected)
+                .AddAttribute("byPosition", a => a.ByPosition)
+                .AddAttribute("relative", a => a.Relative)
+                .AddAttribute("defaultSubtotal", a => a.DefaultSubtotal)
+                .AddAttribute("sumSubtotal", a => a.SumSubtotal)
+                .AddAttribute("countASubtotal", a => a.CountASubtotal)
+                .AddAttribute("avgSubtotal", a => a.AverageSubtotal)
+                .AddAttribute("maxSubtotal", a => a.MaxSubtotal)
+                .AddAttribute("minSubtotal", a => a.MinSubtotal)
+                .AddAttribute("productSubtotal", a => a.ApplyProductInSubtotal)
+                .AddAttribute("countSubtotal", a => a.CountSubtotal)
+                .AddAttribute("stdDevSubtotal", a => a.ApplyStandardDeviationInSubtotal)
+                .AddAttribute("stdDevPSubtotal", a => a.ApplyStandardDeviationPInSubtotal)
+                .AddAttribute("varSubtotal", a => a.ApplyVarianceInSubtotal)
+                .AddAttribute("varPSubtotal", a => a.ApplyVariancePInSubtotal);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FieldItem), 0, 0),
@@ -16138,7 +16138,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:queryTableFields");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.QueryTableField>();
             builder.AddElement<QueryTableFields>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryTableField), 0, 0)
@@ -16211,7 +16211,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:queryTableDeletedFields");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DeletedField>();
             builder.AddElement<QueryTableDeletedFields>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DeletedField), 1, 0)
@@ -16253,10 +16253,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:deletedField");
             builder.AddElement<DeletedField>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new AttributeValueLengthConstraint("x:name", 1, 255) { Application = ApplicationType.Excel });
         }
 
@@ -16392,16 +16392,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:queryTableField");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<QueryTableField>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("name", a => a.Name)
-.AddAttribute("dataBound", a => a.DataBound)
-.AddAttribute("rowNumbers", a => a.RowNumbers)
-.AddAttribute("fillFormulas", a => a.FillFormulas)
-.AddAttribute("clipped", a => a.Clipped)
-.AddAttribute("tableColumnId", a => a.TableColumnId);
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("dataBound", a => a.DataBound)
+                .AddAttribute("rowNumbers", a => a.RowNumbers)
+                .AddAttribute("fillFormulas", a => a.FillFormulas)
+                .AddAttribute("clipped", a => a.Clipped)
+                .AddAttribute("tableColumnId", a => a.TableColumnId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -16902,7 +16902,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<BooleanPropertyType>()
-                           .AddAttribute("val", a => a.Val);
+                .AddAttribute("val", a => a.Val);
         }
     }
 
@@ -16937,7 +16937,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:u");
             builder.AddElement<Underline>()
-  .AddAttribute("val", a => a.Val);
+                .AddAttribute("val", a => a.Val);
         }
 
         /// <inheritdoc/>
@@ -16975,10 +16975,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:vertAlign");
             builder.AddElement<VerticalTextAlignment>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -17016,10 +17016,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:sz");
             builder.AddElement<FontSize>()
- .AddAttribute("val", a => a.Val, aBuilder =>
- {
-     aBuilder.AddValidator(RequiredValidator.Instance);
- });
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new AttributeValueRangeConstraint("x:val", true, 1, true, 409.55, true));
         }
 
@@ -17207,14 +17207,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<ColorType>()
-                           .AddAttribute("auto", a => a.Auto)
-                           .AddAttribute("indexed", a => a.Indexed)
-                           .AddAttribute("rgb", a => a.Rgb, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-                           })
-                           .AddAttribute("theme", a => a.Theme)
-                           .AddAttribute("tint", a => a.Tint);
+                .AddAttribute("auto", a => a.Auto)
+                .AddAttribute("indexed", a => a.Indexed)
+                .AddAttribute("rgb", a => a.Rgb, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("theme", a => a.Theme)
+                .AddAttribute("tint", a => a.Tint);
         }
     }
 
@@ -17249,10 +17249,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:rFont");
             builder.AddElement<RunFont>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-  aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new AttributeValueLengthConstraint("x:val", 0, 31));
         }
 
@@ -17341,10 +17341,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<InternationalPropertyType>()
-                           .AddAttribute("val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           });
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
     }
 
@@ -17379,10 +17379,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:scheme");
             builder.AddElement<FontScheme>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
- aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -17653,14 +17653,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:rPh");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Text>();
             builder.AddElement<PhoneticRun>()
-.AddAttribute("sb", a => a.BaseTextStartIndex, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("eb", a => a.EndingBaseIndex, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("sb", a => a.BaseTextStartIndex, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("eb", a => a.EndingBaseIndex, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Text), 1, 1)
@@ -17738,12 +17738,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:phoneticPr");
             builder.AddElement<PhoneticProperties>()
-.AddAttribute("fontId", a => a.FontId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("type", a => a.Type)
-.AddAttribute("alignment", a => a.Alignment);
+                .AddAttribute("fontId", a => a.FontId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("type", a => a.Type)
+                .AddAttribute("alignment", a => a.Alignment);
             builder.AddConstraint(new IndexReferenceConstraint("x:fontId", "/WorkbookPart/WorkbookStylesPart", null, "x:font", "x:font", 0));
         }
 
@@ -17886,29 +17886,29 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ReviewedList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetIdMap>();
             builder.AddElement<Header>()
-.AddAttribute("guid", a => a.Guid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("dateTime", a => a.DateTime, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("maxSheetId", a => a.MaxSheetId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("userName", a => a.UserName, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("minRId", a => a.MinRevisionId)
-.AddAttribute("maxRId", a => a.MaxRevisionId);
+                .AddAttribute("guid", a => a.Guid, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("dateTime", a => a.DateTime, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("maxSheetId", a => a.MaxSheetId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("userName", a => a.UserName, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("minRId", a => a.MinRevisionId)
+                .AddAttribute("maxRId", a => a.MaxRevisionId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetIdMap), 1, 1),
@@ -18106,26 +18106,26 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionFormat>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Undo>();
             builder.AddElement<RevisionRowColumn>()
-.AddAttribute("rId", a => a.RevisionId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("ua", a => a.Ua)
-.AddAttribute("ra", a => a.Ra)
-.AddAttribute("sId", a => a.SheetId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("eol", a => a.EndOfList)
-.AddAttribute("ref", a => a.Reference, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("action", a => a.Action, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("edge", a => a.Edge);
+                .AddAttribute("rId", a => a.RevisionId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("ua", a => a.Ua)
+                .AddAttribute("ra", a => a.Ra)
+                .AddAttribute("sId", a => a.SheetId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("eol", a => a.EndOfList)
+                .AddAttribute("ref", a => a.Reference, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("action", a => a.Action, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("edge", a => a.Edge);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Undo), 0, 0),
@@ -18271,25 +18271,25 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionFormat>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Undo>();
             builder.AddElement<RevisionMove>()
-.AddAttribute("rId", a => a.RevisionId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("ua", a => a.Ua)
-.AddAttribute("ra", a => a.Ra)
-.AddAttribute("sheetId", a => a.SheetId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("source", a => a.Source, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("destination", a => a.Destination, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("sourceSheetId", a => a.SourceSheetId);
+                .AddAttribute("rId", a => a.RevisionId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("ua", a => a.Ua)
+                .AddAttribute("ra", a => a.Ra)
+                .AddAttribute("sheetId", a => a.SheetId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("source", a => a.Source, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("destination", a => a.Destination, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("sourceSheetId", a => a.SourceSheetId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Undo), 0, 0),
@@ -18346,15 +18346,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:rcv");
             builder.AddElement<RevisionCustomView>()
-.AddAttribute("guid", a => a.Guid, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("action", a => a.Action, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("guid", a => a.Guid, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("action", a => a.Action, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -18478,24 +18478,24 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:rsnm");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<RevisionSheetName>()
-.AddAttribute("rId", a => a.RevisionId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("ua", a => a.Ua)
-.AddAttribute("ra", a => a.Ra)
-.AddAttribute("sheetId", a => a.SheetId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("oldName", a => a.OldName, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("newName", a => a.NewName, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("rId", a => a.RevisionId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("ua", a => a.Ua)
+                .AddAttribute("ra", a => a.Ra)
+                .AddAttribute("sheetId", a => a.SheetId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("oldName", a => a.OldName, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("newName", a => a.NewName, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -18606,24 +18606,24 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:ris");
             builder.AddElement<RevisionInsertSheet>()
-.AddAttribute("rId", a => a.RevisionId, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("ua", a => a.Ua)
-.AddAttribute("ra", a => a.Ra)
-.AddAttribute("sheetId", a => a.SheetId, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("sheetPosition", a => a.SheetPosition, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("rId", a => a.RevisionId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("ua", a => a.Ua)
+                .AddAttribute("ra", a => a.Ra)
+                .AddAttribute("sheetId", a => a.SheetId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("sheetPosition", a => a.SheetPosition, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new AttributeValueRangeConstraint("x:sheetId", true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueRangeConstraint("x:sheetPosition", true, double.NegativeInfinity, true, 65533, true) { Application = ApplicationType.Excel });
         }
@@ -18845,26 +18845,26 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NewCell>();
             builder.AddElement<RevisionCellChange>()
-.AddAttribute("rId", a => a.RevisionId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("ua", a => a.Ua)
-.AddAttribute("ra", a => a.Ra)
-.AddAttribute("sId", a => a.SheetId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("odxf", a => a.OldFormatting)
-.AddAttribute("xfDxf", a => a.RowColumnFormattingAffected)
-.AddAttribute("s", a => a.StyleRevision)
-.AddAttribute("dxf", a => a.Format)
-.AddAttribute("numFmtId", a => a.NumberFormatId)
-.AddAttribute("quotePrefix", a => a.QuotePrefix)
-.AddAttribute("oldQuotePrefix", a => a.OldQuotePrefix)
-.AddAttribute("ph", a => a.HasPhoneticText)
-.AddAttribute("oldPh", a => a.OldPhoneticText)
-.AddAttribute("endOfListFormulaUpdate", a => a.EndOfListFormulaUpdate);
+                .AddAttribute("rId", a => a.RevisionId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("ua", a => a.Ua)
+                .AddAttribute("ra", a => a.Ra)
+                .AddAttribute("sId", a => a.SheetId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("odxf", a => a.OldFormatting)
+                .AddAttribute("xfDxf", a => a.RowColumnFormattingAffected)
+                .AddAttribute("s", a => a.StyleRevision)
+                .AddAttribute("dxf", a => a.Format)
+                .AddAttribute("numFmtId", a => a.NumberFormatId)
+                .AddAttribute("quotePrefix", a => a.QuotePrefix)
+                .AddAttribute("oldQuotePrefix", a => a.OldQuotePrefix)
+                .AddAttribute("ph", a => a.HasPhoneticText)
+                .AddAttribute("oldPh", a => a.OldPhoneticText)
+                .AddAttribute("endOfListFormulaUpdate", a => a.EndOfListFormulaUpdate);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OldCell), 0, 1),
@@ -19064,18 +19064,18 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<RevisionFormat>()
-.AddAttribute("sheetId", a => a.SheetId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("xfDxf", a => a.RowOrColumnAffected)
-.AddAttribute("s", a => a.StyleAffected)
-.AddAttribute("sqref", a => a.SequenceOfReferences, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("start", a => a.Start)
-.AddAttribute("length", a => a.Length);
+                .AddAttribute("sheetId", a => a.SheetId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("xfDxf", a => a.RowOrColumnAffected)
+                .AddAttribute("s", a => a.StyleAffected)
+                .AddAttribute("sqref", a => a.SequenceOfReferences, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("start", a => a.Start)
+                .AddAttribute("length", a => a.Length);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), 0, 1),
@@ -19233,21 +19233,21 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:raf");
             builder.AddElement<RevisionAutoFormat>()
-.AddAttribute("sheetId", a => a.SheetId, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("autoFormatId", a => a.AutoFormatId)
-.AddAttribute("applyNumberFormats", a => a.ApplyNumberFormats)
-.AddAttribute("applyBorderFormats", a => a.ApplyBorderFormats)
-.AddAttribute("applyFontFormats", a => a.ApplyFontFormats)
-.AddAttribute("applyPatternFormats", a => a.ApplyPatternFormats)
-.AddAttribute("applyAlignmentFormats", a => a.ApplyAlignmentFormats)
-.AddAttribute("applyWidthHeightFormats", a => a.ApplyWidthHeightFormats)
-.AddAttribute("ref", a => a.Reference, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("sheetId", a => a.SheetId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("autoFormatId", a => a.AutoFormatId)
+                .AddAttribute("applyNumberFormats", a => a.ApplyNumberFormats)
+                .AddAttribute("applyBorderFormats", a => a.ApplyBorderFormats)
+                .AddAttribute("applyFontFormats", a => a.ApplyFontFormats)
+                .AddAttribute("applyPatternFormats", a => a.ApplyPatternFormats)
+                .AddAttribute("applyAlignmentFormats", a => a.ApplyAlignmentFormats)
+                .AddAttribute("applyWidthHeightFormats", a => a.ApplyWidthHeightFormats)
+                .AddAttribute("ref", a => a.Reference, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new AttributeValueRangeConstraint("x:autoFormatId", true, 0, true, 16, true));
             builder.AddConstraint(new AttributeValueRangeConstraint("x:sheetId", true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel });
         }
@@ -19575,36 +19575,36 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formula>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OldFormula>();
             builder.AddElement<RevisionDefinedName>()
-.AddAttribute("rId", a => a.RevisionId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("ua", a => a.Ua)
-.AddAttribute("ra", a => a.Ra)
-.AddAttribute("localSheetId", a => a.LocalSheetId)
-.AddAttribute("customView", a => a.CustomView)
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("function", a => a.Function)
-.AddAttribute("oldFunction", a => a.OldFunction)
-.AddAttribute("functionGroupId", a => a.FunctionGroupId)
-.AddAttribute("oldFunctionGroupId", a => a.OldFunctionGroupId)
-.AddAttribute("shortcutKey", a => a.ShortcutKey)
-.AddAttribute("oldShortcutKey", a => a.OldShortcutKey)
-.AddAttribute("hidden", a => a.Hidden)
-.AddAttribute("oldHidden", a => a.OldHidden)
-.AddAttribute("customMenu", a => a.CustomMenu)
-.AddAttribute("oldCustomMenu", a => a.OldCustomMenu)
-.AddAttribute("description", a => a.Description)
-.AddAttribute("oldDescription", a => a.OldDescription)
-.AddAttribute("help", a => a.Help)
-.AddAttribute("oldHelp", a => a.OldHelp)
-.AddAttribute("statusBar", a => a.StatusBar)
-.AddAttribute("oldStatusBar", a => a.OldStatusBar)
-.AddAttribute("comment", a => a.Comment)
-.AddAttribute("oldComment", a => a.OldComment);
+                .AddAttribute("rId", a => a.RevisionId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("ua", a => a.Ua)
+                .AddAttribute("ra", a => a.Ra)
+                .AddAttribute("localSheetId", a => a.LocalSheetId)
+                .AddAttribute("customView", a => a.CustomView)
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("function", a => a.Function)
+                .AddAttribute("oldFunction", a => a.OldFunction)
+                .AddAttribute("functionGroupId", a => a.FunctionGroupId)
+                .AddAttribute("oldFunctionGroupId", a => a.OldFunctionGroupId)
+                .AddAttribute("shortcutKey", a => a.ShortcutKey)
+                .AddAttribute("oldShortcutKey", a => a.OldShortcutKey)
+                .AddAttribute("hidden", a => a.Hidden)
+                .AddAttribute("oldHidden", a => a.OldHidden)
+                .AddAttribute("customMenu", a => a.CustomMenu)
+                .AddAttribute("oldCustomMenu", a => a.OldCustomMenu)
+                .AddAttribute("description", a => a.Description)
+                .AddAttribute("oldDescription", a => a.OldDescription)
+                .AddAttribute("help", a => a.Help)
+                .AddAttribute("oldHelp", a => a.OldHelp)
+                .AddAttribute("statusBar", a => a.StatusBar)
+                .AddAttribute("oldStatusBar", a => a.OldStatusBar)
+                .AddAttribute("comment", a => a.Comment)
+                .AddAttribute("oldComment", a => a.OldComment);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula), 0, 1),
@@ -19812,30 +19812,30 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:rcmt");
             builder.AddElement<RevisionComment>()
-.AddAttribute("sheetId", a => a.SheetId, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("cell", a => a.Cell, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("guid", a => a.Guid, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-   aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("action", a => a.Action)
-.AddAttribute("alwaysShow", a => a.AlwaysShow)
-.AddAttribute("old", a => a.Old)
-.AddAttribute("hiddenRow", a => a.HiddenRow)
-.AddAttribute("hiddenColumn", a => a.HiddenColumn)
-.AddAttribute("author", a => a.Author, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("oldLength", a => a.OldLength)
-.AddAttribute("newLength", a => a.NewLength);
+                .AddAttribute("sheetId", a => a.SheetId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("cell", a => a.Cell, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("guid", a => a.Guid, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("action", a => a.Action)
+                .AddAttribute("alwaysShow", a => a.AlwaysShow)
+                .AddAttribute("old", a => a.Old)
+                .AddAttribute("hiddenRow", a => a.HiddenRow)
+                .AddAttribute("hiddenColumn", a => a.HiddenColumn)
+                .AddAttribute("author", a => a.Author, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("oldLength", a => a.OldLength)
+                .AddAttribute("newLength", a => a.NewLength);
             builder.AddConstraint(new AttributeValueLengthConstraint("x:author", 1, 52));
         }
 
@@ -19896,18 +19896,18 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:rqt");
             builder.AddElement<RevisionQueryTable>()
-.AddAttribute("sheetId", a => a.SheetId, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("ref", a => a.Reference, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("fieldId", a => a.FieldId, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("sheetId", a => a.SheetId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("ref", a => a.Reference, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("fieldId", a => a.FieldId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -19978,13 +19978,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:rcft");
             builder.AddElement<RevisionConflict>()
-.AddAttribute("rId", a => a.RevisionId, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("ua", a => a.Ua)
-.AddAttribute("ra", a => a.Ra)
-.AddAttribute("sheetId", a => a.SheetId);
+                .AddAttribute("rId", a => a.RevisionId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("ua", a => a.Ua)
+                .AddAttribute("ra", a => a.Ra)
+                .AddAttribute("sheetId", a => a.SheetId);
             builder.AddConstraint(new AttributeValueRangeConstraint("x:sheetId", true, 0, true, 32767, true));
         }
 
@@ -20054,7 +20054,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:sheetIdMap");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetId>();
             builder.AddElement<SheetIdMap>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetId), 1, 65535)
@@ -20127,7 +20127,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:reviewedList");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Reviewed>();
             builder.AddElement<ReviewedList>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Reviewed), 1, 0)
@@ -20169,10 +20169,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:reviewed");
             builder.AddElement<Reviewed>()
-.AddAttribute("rId", a => a.RevisionId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("rId", a => a.RevisionId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new AttributeValueRangeConstraint("x:rId", true, double.NegativeInfinity, true, 2147483647, true));
         }
 
@@ -20321,26 +20321,26 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:undo");
             builder.AddElement<Undo>()
-.AddAttribute("index", a => a.Index, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("exp", a => a.Expression, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("ref3D", a => a.Reference3D)
-.AddAttribute("array", a => a.Array)
-.AddAttribute("v", a => a.Val)
-.AddAttribute("nf", a => a.DefinedNameFormula)
-.AddAttribute("cs", a => a.CrossSheetMove)
-.AddAttribute("dr", a => a.DeletedRange, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("dn", a => a.DefinedName)
-.AddAttribute("r", a => a.CellReference)
-.AddAttribute("sId", a => a.SheetId);
+                .AddAttribute("index", a => a.Index, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("exp", a => a.Expression, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("ref3D", a => a.Reference3D)
+                .AddAttribute("array", a => a.Array)
+                .AddAttribute("v", a => a.Val)
+                .AddAttribute("nf", a => a.DefinedNameFormula)
+                .AddAttribute("cs", a => a.CrossSheetMove)
+                .AddAttribute("dr", a => a.DeletedRange, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("dn", a => a.DefinedName)
+                .AddAttribute("r", a => a.CellReference)
+                .AddAttribute("sId", a => a.SheetId);
             builder.AddConstraint(new AttributeValueRangeConstraint("x:sId", true, double.NegativeInfinity, true, 32767, true));
             builder.AddConstraint(new AttributeValueConditionToAnother("x:ref3D", "x:nf", new string[] { "false" }, new string[] { "true" }));
             builder.AddConstraint(new AttributeMutualExclusive("x:dn", "x:r"));
@@ -20614,12 +20614,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.InlineString>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellValue>();
             builder.AddElement<CellType>()
-.AddAttribute("r", a => a.CellReference)
-.AddAttribute("s", a => a.StyleIndex)
-.AddAttribute("t", a => a.DataType)
-.AddAttribute("cm", a => a.CellMetaIndex)
-.AddAttribute("vm", a => a.ValueMetaIndex)
-.AddAttribute("ph", a => a.ShowPhonetic);
+                .AddAttribute("r", a => a.CellReference)
+                .AddAttribute("s", a => a.StyleIndex)
+                .AddAttribute("t", a => a.DataType)
+                .AddAttribute("cm", a => a.CellMetaIndex)
+                .AddAttribute("vm", a => a.ValueMetaIndex)
+                .AddAttribute("ph", a => a.ShowPhonetic);
         }
 
         /// <summary>
@@ -20798,15 +20798,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.InlineString>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellValue>();
             builder.AddElement<NewCell>()
-.AddAttribute("r", a => a.CellReference, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("s", a => a.StyleIndex)
-.AddAttribute("t", a => a.DataType)
-.AddAttribute("cm", a => a.CellMetaIndex)
-.AddAttribute("vm", a => a.ValueMetaIndex)
-.AddAttribute("ph", a => a.ShowPhonetic);
+                .AddAttribute("r", a => a.CellReference, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("s", a => a.StyleIndex)
+                .AddAttribute("t", a => a.DataType)
+                .AddAttribute("cm", a => a.CellMetaIndex)
+                .AddAttribute("vm", a => a.ValueMetaIndex)
+                .AddAttribute("ph", a => a.ShowPhonetic);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormula), 0, 1),
@@ -21273,10 +21273,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:sheetId");
             builder.AddElement<SheetId>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new AttributeValueRangeConstraint("x:val", true, double.NegativeInfinity, true, 65535, true));
         }
 
@@ -21463,21 +21463,21 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:f");
             builder.AddElement<CellFormula>()
-  .AddAttribute("t", a => a.FormulaType)
-  .AddAttribute("aca", a => a.AlwaysCalculateArray)
-  .AddAttribute("ref", a => a.Reference)
-  .AddAttribute("dt2D", a => a.DataTable2D)
-  .AddAttribute("dtr", a => a.DataTableRow)
-  .AddAttribute("del1", a => a.Input1Deleted)
-  .AddAttribute("del2", a => a.Input2Deleted)
-  .AddAttribute("r1", a => a.R1)
-  .AddAttribute("r2", a => a.R2)
-  .AddAttribute("ca", a => a.CalculateCell)
-  .AddAttribute("si", a => a.SharedIndex)
-  .AddAttribute("bx", a => a.Bx)
-  .AddAttribute("xml:space", a => a.Space);
+                .AddAttribute("t", a => a.FormulaType)
+                .AddAttribute("aca", a => a.AlwaysCalculateArray)
+                .AddAttribute("ref", a => a.Reference)
+                .AddAttribute("dt2D", a => a.DataTable2D)
+                .AddAttribute("dtr", a => a.DataTableRow)
+                .AddAttribute("del1", a => a.Input1Deleted)
+                .AddAttribute("del2", a => a.Input2Deleted)
+                .AddAttribute("r1", a => a.R1)
+                .AddAttribute("r2", a => a.R2)
+                .AddAttribute("ca", a => a.CalculateCell)
+                .AddAttribute("si", a => a.SharedIndex)
+                .AddAttribute("bx", a => a.Bx)
+                .AddAttribute("xml:space", a => a.Space);
             builder.AddConstraint(new AttributeValueSetConstraint("x:bx", true, new string[] { "false" }));
-            builder.AddConstraint(new AttributeRequiredConditionToValue("x:si", "x:t", "shared"));
+            builder.AddConstraint(new AttributeRequiredConditionToValue("x:si", "x:t" , "shared"));
         }
 
         /// <inheritdoc/>
@@ -21579,23 +21579,23 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:userInfo");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<UserInfo>()
-.AddAttribute("guid", a => a.Guid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("dateTime", a => a.DateTime, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("guid", a => a.Guid, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("dateTime", a => a.DateTime, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -21818,22 +21818,22 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Cell>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<Row>()
-.AddAttribute("r", a => a.RowIndex)
-.AddAttribute("spans", a => a.Spans)
-.AddAttribute("s", a => a.StyleIndex)
-.AddAttribute("customFormat", a => a.CustomFormat)
-.AddAttribute("ht", a => a.Height)
-.AddAttribute("hidden", a => a.Hidden)
-.AddAttribute("customHeight", a => a.CustomHeight)
-.AddAttribute("outlineLevel", a => a.OutlineLevel)
-.AddAttribute("collapsed", a => a.Collapsed)
-.AddAttribute("thickTop", a => a.ThickTop)
-.AddAttribute("thickBot", a => a.ThickBot)
-.AddAttribute("ph", a => a.ShowPhonetic)
-.AddAttribute("x14ac:dyDescent", a => a.DyDescent, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-});
+                .AddAttribute("r", a => a.RowIndex)
+                .AddAttribute("spans", a => a.Spans)
+                .AddAttribute("s", a => a.StyleIndex)
+                .AddAttribute("customFormat", a => a.CustomFormat)
+                .AddAttribute("ht", a => a.Height)
+                .AddAttribute("hidden", a => a.Hidden)
+                .AddAttribute("customHeight", a => a.CustomHeight)
+                .AddAttribute("outlineLevel", a => a.OutlineLevel)
+                .AddAttribute("collapsed", a => a.Collapsed)
+                .AddAttribute("thickTop", a => a.ThickTop)
+                .AddAttribute("thickBot", a => a.ThickBot)
+                .AddAttribute("ph", a => a.ShowPhonetic)
+                .AddAttribute("x14ac:dyDescent", a => a.DyDescent, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Cell), 0, 0),
@@ -21979,22 +21979,22 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:col");
             builder.AddElement<Column>()
-.AddAttribute("min", a => a.Min, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("max", a => a.Max, aBuilder =>
-{
-    aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("width", a => a.Width)
-.AddAttribute("style", a => a.Style)
-.AddAttribute("hidden", a => a.Hidden)
-.AddAttribute("bestFit", a => a.BestFit)
-.AddAttribute("customWidth", a => a.CustomWidth)
-.AddAttribute("phonetic", a => a.Phonetic)
-.AddAttribute("outlineLevel", a => a.OutlineLevel)
-.AddAttribute("collapsed", a => a.Collapsed);
+                .AddAttribute("min", a => a.Min, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("max", a => a.Max, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("width", a => a.Width)
+                .AddAttribute("style", a => a.Style)
+                .AddAttribute("hidden", a => a.Hidden)
+                .AddAttribute("bestFit", a => a.BestFit)
+                .AddAttribute("customWidth", a => a.CustomWidth)
+                .AddAttribute("phonetic", a => a.Phonetic)
+                .AddAttribute("outlineLevel", a => a.OutlineLevel)
+                .AddAttribute("collapsed", a => a.Collapsed);
             builder.AddConstraint(new AttributeValueRangeConstraint("x:outlineLevel", true, 0, true, 7, true));
             builder.AddConstraint(new AttributeValueRangeConstraint("x:min", true, 1, true, 16384, true));
             builder.AddConstraint(new AttributeValueRangeConstraint("x:max", true, 1, true, 16384, true));
@@ -22072,10 +22072,10 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:outlinePr");
             builder.AddElement<OutlineProperties>()
-.AddAttribute("applyStyles", a => a.ApplyStyles)
-.AddAttribute("summaryBelow", a => a.SummaryBelow)
-.AddAttribute("summaryRight", a => a.SummaryRight)
-.AddAttribute("showOutlineSymbols", a => a.ShowOutlineSymbols);
+                .AddAttribute("applyStyles", a => a.ApplyStyles)
+                .AddAttribute("summaryBelow", a => a.SummaryBelow)
+                .AddAttribute("summaryRight", a => a.SummaryRight)
+                .AddAttribute("showOutlineSymbols", a => a.ShowOutlineSymbols);
         }
 
         /// <inheritdoc/>
@@ -22124,8 +22124,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:pageSetUpPr");
             builder.AddElement<PageSetupProperties>()
-.AddAttribute("autoPageBreaks", a => a.AutoPageBreaks)
-.AddAttribute("fitToPage", a => a.FitToPage);
+                .AddAttribute("autoPageBreaks", a => a.AutoPageBreaks)
+                .AddAttribute("fitToPage", a => a.FitToPage);
         }
 
         /// <inheritdoc/>
@@ -22207,11 +22207,11 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:pane");
             builder.AddElement<Pane>()
-.AddAttribute("xSplit", a => a.HorizontalSplit)
-.AddAttribute("ySplit", a => a.VerticalSplit)
-.AddAttribute("topLeftCell", a => a.TopLeftCell)
-.AddAttribute("activePane", a => a.ActivePane)
-.AddAttribute("state", a => a.State);
+                .AddAttribute("xSplit", a => a.HorizontalSplit)
+                .AddAttribute("ySplit", a => a.VerticalSplit)
+                .AddAttribute("topLeftCell", a => a.TopLeftCell)
+                .AddAttribute("activePane", a => a.ActivePane)
+                .AddAttribute("state", a => a.State);
         }
 
         /// <inheritdoc/>
@@ -22282,10 +22282,10 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:selection");
             builder.AddElement<Selection>()
-.AddAttribute("pane", a => a.Pane)
-.AddAttribute("activeCell", a => a.ActiveCell)
-.AddAttribute("activeCellId", a => a.ActiveCellId)
-.AddAttribute("sqref", a => a.SequenceOfReferences);
+                .AddAttribute("pane", a => a.Pane)
+                .AddAttribute("activeCell", a => a.ActiveCell)
+                .AddAttribute("activeCellId", a => a.ActiveCellId)
+                .AddAttribute("sqref", a => a.SequenceOfReferences);
             builder.AddConstraint(new AttributeValueRangeConstraint("x:activeCell", true, double.NegativeInfinity, true, 8191, true) { Application = ApplicationType.Excel });
         }
 
@@ -22534,26 +22534,26 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.SetSchema("x:pivotSelection");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
             builder.AddElement<PivotSelection>()
-.AddAttribute("pane", a => a.Pane)
-.AddAttribute("showHeader", a => a.ShowHeader)
-.AddAttribute("label", a => a.Label)
-.AddAttribute("data", a => a.Data)
-.AddAttribute("extendable", a => a.Extendable)
-.AddAttribute("count", a => a.Count)
-.AddAttribute("axis", a => a.Axis)
-.AddAttribute("dimension", a => a.Dimension)
-.AddAttribute("start", a => a.Start)
-.AddAttribute("min", a => a.Min)
-.AddAttribute("max", a => a.Max)
-.AddAttribute("activeRow", a => a.ActiveRow)
-.AddAttribute("activeCol", a => a.ActiveColumn)
-.AddAttribute("previousRow", a => a.PreviousRow)
-.AddAttribute("previousCol", a => a.PreviousColumn)
-.AddAttribute("click", a => a.Click)
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("pane", a => a.Pane)
+                .AddAttribute("showHeader", a => a.ShowHeader)
+                .AddAttribute("label", a => a.Label)
+                .AddAttribute("data", a => a.Data)
+                .AddAttribute("extendable", a => a.Extendable)
+                .AddAttribute("count", a => a.Count)
+                .AddAttribute("axis", a => a.Axis)
+                .AddAttribute("dimension", a => a.Dimension)
+                .AddAttribute("start", a => a.Start)
+                .AddAttribute("min", a => a.Min)
+                .AddAttribute("max", a => a.Max)
+                .AddAttribute("activeRow", a => a.ActiveRow)
+                .AddAttribute("activeCol", a => a.ActiveColumn)
+                .AddAttribute("previousRow", a => a.PreviousRow)
+                .AddAttribute("previousCol", a => a.PreviousColumn)
+                .AddAttribute("click", a => a.Click)
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 1, 1)
@@ -22655,11 +22655,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:brk");
             builder.AddElement<Break>()
-.AddAttribute("id", a => a.Id)
-.AddAttribute("min", a => a.Min)
-.AddAttribute("max", a => a.Max)
-.AddAttribute("man", a => a.ManualPageBreak)
-.AddAttribute("pt", a => a.PivotTablePageBreak);
+                .AddAttribute("id", a => a.Id)
+                .AddAttribute("min", a => a.Min)
+                .AddAttribute("max", a => a.Max)
+                .AddAttribute("man", a => a.ManualPageBreak)
+                .AddAttribute("pt", a => a.PivotTablePageBreak);
             builder.AddConstraint(new AttributeValueRangeConstraint("x:min", true, double.NegativeInfinity, true, 1048576, true) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueRangeConstraint("x:id", true, 1, true, 1048576, true) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueRangeConstraint("x:max", true, 1, true, 1048576, true) { Application = ApplicationType.Excel });
@@ -22736,10 +22736,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:dataRef");
             builder.AddElement<DataReference>()
-.AddAttribute("ref", a => a.Reference)
-.AddAttribute("name", a => a.Name)
-.AddAttribute("sheet", a => a.Sheet)
-.AddAttribute("r:id", a => a.Id);
+                .AddAttribute("ref", a => a.Reference)
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("sheet", a => a.Sheet)
+                .AddAttribute("r:id", a => a.Id);
         }
 
         /// <inheritdoc/>
@@ -22939,8 +22939,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Break>();
             builder.AddElement<PageBreakType>()
-.AddAttribute("count", a => a.Count)
-.AddAttribute("manualBreakCount", a => a.ManualBreakCount);
+                .AddAttribute("count", a => a.Count)
+                .AddAttribute("manualBreakCount", a => a.ManualBreakCount);
         }
     }
 
@@ -23030,30 +23030,30 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:pageMargins");
             builder.AddElement<PageMargins>()
-.AddAttribute("left", a => a.Left, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("right", a => a.Right, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("top", a => a.Top, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("bottom", a => a.Bottom, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("header", a => a.Header, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("footer", a => a.Footer, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("left", a => a.Left, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("right", a => a.Right, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("top", a => a.Top, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("bottom", a => a.Bottom, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("header", a => a.Header, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("footer", a => a.Footer, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new AttributeValueRangeConstraint("x:left", true, 0, true, 49, false));
             builder.AddConstraint(new AttributeValueRangeConstraint("x:right", true, 0, true, 49, false));
             builder.AddConstraint(new AttributeValueRangeConstraint("x:top", true, 0, true, 49, false));
@@ -23141,11 +23141,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:printOptions");
             builder.AddElement<PrintOptions>()
-.AddAttribute("horizontalCentered", a => a.HorizontalCentered)
-.AddAttribute("verticalCentered", a => a.VerticalCentered)
-.AddAttribute("headings", a => a.Headings)
-.AddAttribute("gridLines", a => a.GridLines)
-.AddAttribute("gridLinesSet", a => a.GridLinesSet);
+                .AddAttribute("horizontalCentered", a => a.HorizontalCentered)
+                .AddAttribute("verticalCentered", a => a.VerticalCentered)
+                .AddAttribute("headings", a => a.Headings)
+                .AddAttribute("gridLines", a => a.GridLines)
+                .AddAttribute("gridLinesSet", a => a.GridLinesSet);
         }
 
         /// <inheritdoc/>
@@ -23362,23 +23362,23 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:pageSetup");
             builder.AddElement<PageSetup>()
-.AddAttribute("paperSize", a => a.PaperSize)
-.AddAttribute("scale", a => a.Scale)
-.AddAttribute("firstPageNumber", a => a.FirstPageNumber)
-.AddAttribute("fitToWidth", a => a.FitToWidth)
-.AddAttribute("fitToHeight", a => a.FitToHeight)
-.AddAttribute("pageOrder", a => a.PageOrder)
-.AddAttribute("orientation", a => a.Orientation)
-.AddAttribute("usePrinterDefaults", a => a.UsePrinterDefaults)
-.AddAttribute("blackAndWhite", a => a.BlackAndWhite)
-.AddAttribute("draft", a => a.Draft)
-.AddAttribute("cellComments", a => a.CellComments)
-.AddAttribute("useFirstPageNumber", a => a.UseFirstPageNumber)
-.AddAttribute("errors", a => a.Errors)
-.AddAttribute("horizontalDpi", a => a.HorizontalDpi)
-.AddAttribute("verticalDpi", a => a.VerticalDpi)
-.AddAttribute("copies", a => a.Copies)
-.AddAttribute("r:id", a => a.Id);
+                .AddAttribute("paperSize", a => a.PaperSize)
+                .AddAttribute("scale", a => a.Scale)
+                .AddAttribute("firstPageNumber", a => a.FirstPageNumber)
+                .AddAttribute("fitToWidth", a => a.FitToWidth)
+                .AddAttribute("fitToHeight", a => a.FitToHeight)
+                .AddAttribute("pageOrder", a => a.PageOrder)
+                .AddAttribute("orientation", a => a.Orientation)
+                .AddAttribute("usePrinterDefaults", a => a.UsePrinterDefaults)
+                .AddAttribute("blackAndWhite", a => a.BlackAndWhite)
+                .AddAttribute("draft", a => a.Draft)
+                .AddAttribute("cellComments", a => a.CellComments)
+                .AddAttribute("useFirstPageNumber", a => a.UseFirstPageNumber)
+                .AddAttribute("errors", a => a.Errors)
+                .AddAttribute("horizontalDpi", a => a.HorizontalDpi)
+                .AddAttribute("verticalDpi", a => a.VerticalDpi)
+                .AddAttribute("copies", a => a.Copies)
+                .AddAttribute("r:id", a => a.Id);
             builder.AddConstraint(new AttributeValueRangeConstraint("x:fitToWidth", true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueRangeConstraint("x:fitToHeight", true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueRangeConstraint("x:copies", true, 1, true, 32767, true) { Application = ApplicationType.Excel });
@@ -23495,10 +23495,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FirstHeader>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FirstFooter>();
             builder.AddElement<HeaderFooter>()
-.AddAttribute("differentOddEven", a => a.DifferentOddEven)
-.AddAttribute("differentFirst", a => a.DifferentFirst)
-.AddAttribute("scaleWithDoc", a => a.ScaleWithDoc)
-.AddAttribute("alignWithMargins", a => a.AlignWithMargins);
+                .AddAttribute("differentOddEven", a => a.DifferentOddEven)
+                .AddAttribute("differentFirst", a => a.DifferentFirst)
+                .AddAttribute("scaleWithDoc", a => a.ScaleWithDoc)
+                .AddAttribute("alignWithMargins", a => a.AlignWithMargins);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OddHeader), 0, 1),
@@ -23658,7 +23658,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FilterColumn>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortState>();
             builder.AddElement<AutoFilter>()
-.AddAttribute("ref", a => a.Reference);
+                .AddAttribute("ref", a => a.Reference);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FilterColumn), 0, 0),
@@ -23873,25 +23873,25 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.IconSet>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formula>();
             builder.AddElement<ConditionalFormattingRule>()
-.AddAttribute("type", a => a.Type, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("dxfId", a => a.FormatId)
-.AddAttribute("priority", a => a.Priority, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("stopIfTrue", a => a.StopIfTrue)
-.AddAttribute("aboveAverage", a => a.AboveAverage)
-.AddAttribute("percent", a => a.Percent)
-.AddAttribute("bottom", a => a.Bottom)
-.AddAttribute("operator", a => a.Operator)
-.AddAttribute("text", a => a.Text)
-.AddAttribute("timePeriod", a => a.TimePeriod)
-.AddAttribute("rank", a => a.Rank)
-.AddAttribute("stdDev", a => a.StdDev)
-.AddAttribute("equalAverage", a => a.EqualAverage);
+                .AddAttribute("type", a => a.Type, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("dxfId", a => a.FormatId)
+                .AddAttribute("priority", a => a.Priority, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("stopIfTrue", a => a.StopIfTrue)
+                .AddAttribute("aboveAverage", a => a.AboveAverage)
+                .AddAttribute("percent", a => a.Percent)
+                .AddAttribute("bottom", a => a.Bottom)
+                .AddAttribute("operator", a => a.Operator)
+                .AddAttribute("text", a => a.Text)
+                .AddAttribute("timePeriod", a => a.TimePeriod)
+                .AddAttribute("rank", a => a.Rank)
+                .AddAttribute("stdDev", a => a.StdDev)
+                .AddAttribute("equalAverage", a => a.EqualAverage);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula), 0, 3),
@@ -23900,8 +23900,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.IconSet), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRuleExtensionList), 0, 1)
             };
-            builder.AddConstraint(new AttributeRequiredConditionToValue("x:operator", "x:type", "cells"));
-            builder.AddConstraint(new AttributeRequiredConditionToValue("x:timePeriod", "x:type", "timePeriod"));
+            builder.AddConstraint(new AttributeRequiredConditionToValue("x:operator", "x:type" , "cells"));
+            builder.AddConstraint(new AttributeRequiredConditionToValue("x:timePeriod", "x:type" , "timePeriod"));
             builder.AddConstraint(new IndexReferenceConstraint("x:dxfId", "/WorkbookPart/WorkbookStylesPart", null, "x:dxf", "x:dxf", 0));
         }
 
@@ -23987,14 +23987,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:hyperlink");
             builder.AddElement<Hyperlink>()
-.AddAttribute("ref", a => a.Reference, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("r:id", a => a.Id)
-.AddAttribute("location", a => a.Location)
-.AddAttribute("tooltip", a => a.Tooltip)
-.AddAttribute("display", a => a.Display);
+                .AddAttribute("ref", a => a.Reference, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("r:id", a => a.Id)
+                .AddAttribute("location", a => a.Location)
+                .AddAttribute("tooltip", a => a.Tooltip)
+                .AddAttribute("display", a => a.Display);
             builder.AddConstraint(new AttributeValueLengthConstraint("x:location", 0, 2084));
             builder.AddConstraint(new AttributeValueLengthConstraint("x:display", 0, 2084));
             builder.AddConstraint(new AttributeValueLengthConstraint("x:tooltip", 0, 255));
@@ -24089,12 +24089,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:cfvo");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<ConditionalFormatValueObject>()
-.AddAttribute("type", a => a.Type, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("val", a => a.Val)
-.AddAttribute("gte", a => a.GreaterThanOrEqual);
+                .AddAttribute("type", a => a.Type, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("val", a => a.Val)
+                .AddAttribute("gte", a => a.GreaterThanOrEqual);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -24235,15 +24235,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:scenario");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.InputCells>();
             builder.AddElement<Scenario>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("locked", a => a.Locked)
-.AddAttribute("hidden", a => a.Hidden)
-.AddAttribute("count", a => a.Count)
-.AddAttribute("user", a => a.User)
-.AddAttribute("comment", a => a.Comment);
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("locked", a => a.Locked)
+                .AddAttribute("hidden", a => a.Hidden)
+                .AddAttribute("count", a => a.Count)
+                .AddAttribute("user", a => a.User)
+                .AddAttribute("comment", a => a.Comment);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.InputCells), 1, 32)
@@ -24367,23 +24367,23 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:protectedRange");
             builder.AddElement<ProtectedRange>()
-.AddAttribute("password", a => a.Password, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (2L) });
-})
-.AddAttribute("algorithmName", a => a.AlgorithmName)
-.AddAttribute("hashValue", a => a.HashValue)
-.AddAttribute("saltValue", a => a.SaltValue)
-.AddAttribute("spinCount", a => a.SpinCount)
-.AddAttribute("sqref", a => a.SequenceOfReferences, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("securityDescriptor", a => a.SecurityDescriptor);
+                .AddAttribute("password", a => a.Password, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (2L) });
+                })
+                .AddAttribute("algorithmName", a => a.AlgorithmName)
+                .AddAttribute("hashValue", a => a.HashValue)
+                .AddAttribute("saltValue", a => a.SaltValue)
+                .AddAttribute("spinCount", a => a.SpinCount)
+                .AddAttribute("sqref", a => a.SequenceOfReferences, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("securityDescriptor", a => a.SecurityDescriptor);
             builder.AddConstraint(new UniqueAttributeValueConstraint("x:name", true, "x:protectedRanges"));
             builder.AddConstraint(new AttributeValueLengthConstraint("x:name", 1, 255) { Application = ApplicationType.Word });
             builder.AddConstraint(new AttributeValueRangeConstraint("x:sqref", true, 1, true, double.PositiveInfinity, true));
@@ -24424,10 +24424,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:cellWatch");
             builder.AddElement<CellWatch>()
-.AddAttribute("r", a => a.CellReference, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("r", a => a.CellReference, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new UniqueAttributeValueConstraint("x:r", true, "x:cellWatches"));
         }
 
@@ -24579,17 +24579,17 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:pageSetup");
             builder.AddElement<ChartSheetPageSetup>()
-.AddAttribute("paperSize", a => a.PaperSize)
-.AddAttribute("firstPageNumber", a => a.FirstPageNumber)
-.AddAttribute("orientation", a => a.Orientation)
-.AddAttribute("usePrinterDefaults", a => a.UsePrinterDefaults)
-.AddAttribute("blackAndWhite", a => a.BlackAndWhite)
-.AddAttribute("draft", a => a.Draft)
-.AddAttribute("useFirstPageNumber", a => a.UseFirstPageNumber)
-.AddAttribute("horizontalDpi", a => a.HorizontalDpi)
-.AddAttribute("verticalDpi", a => a.VerticalDpi)
-.AddAttribute("copies", a => a.Copies)
-.AddAttribute("r:id", a => a.Id);
+                .AddAttribute("paperSize", a => a.PaperSize)
+                .AddAttribute("firstPageNumber", a => a.FirstPageNumber)
+                .AddAttribute("orientation", a => a.Orientation)
+                .AddAttribute("usePrinterDefaults", a => a.UsePrinterDefaults)
+                .AddAttribute("blackAndWhite", a => a.BlackAndWhite)
+                .AddAttribute("draft", a => a.Draft)
+                .AddAttribute("useFirstPageNumber", a => a.UseFirstPageNumber)
+                .AddAttribute("horizontalDpi", a => a.HorizontalDpi)
+                .AddAttribute("verticalDpi", a => a.VerticalDpi)
+                .AddAttribute("copies", a => a.Copies)
+                .AddAttribute("r:id", a => a.Id);
             builder.AddConstraint(new AttributeValueRangeConstraint("x:fitToWidth", true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueRangeConstraint("x:fitToHeight", true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueRangeConstraint("x:copies", true, 1, true, 32767, true) { Application = ApplicationType.Excel });
@@ -24646,14 +24646,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:customPr");
             builder.AddElement<CustomProperty>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new UniqueAttributeValueConstraint("x:name", false, null));
         }
 
@@ -24769,32 +24769,32 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:webPublishItem");
             builder.AddElement<WebPublishItem>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("divId", a => a.DivId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("sourceType", a => a.SourceType, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("sourceRef", a => a.SourceRef)
-.AddAttribute("sourceObject", a => a.SourceObject)
-.AddAttribute("destinationFile", a => a.DestinationFile, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("title", a => a.Title)
-.AddAttribute("autoRepublish", a => a.AutoRepublish);
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("divId", a => a.DivId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("sourceType", a => a.SourceType, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("sourceRef", a => a.SourceRef)
+                .AddAttribute("sourceObject", a => a.SourceObject)
+                .AddAttribute("destinationFile", a => a.DestinationFile, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("title", a => a.Title)
+                .AddAttribute("autoRepublish", a => a.AutoRepublish);
             builder.AddConstraint(new AttributeValueLengthConstraint("x:title", 0, 255));
             builder.AddConstraint(new AttributeValueLengthConstraint("x:destinationFile", 1, 255));
             builder.AddConstraint(new AttributeValueLengthConstraint("x:divId", 1, 255));
             builder.AddConstraint(new AttributeValueRangeConstraint("x:id", true, 1, true, 2147483647, true));
             builder.AddConstraint(new UniqueAttributeValueConstraint("x:id", true, null));
-            builder.AddConstraint(new AttributeRequiredConditionToValue("x:sourceRef", "x:sourceType", "range"));
+            builder.AddConstraint(new AttributeRequiredConditionToValue("x:sourceRef", "x:sourceType" , "range"));
             builder.AddConstraint(new AttributeAbsentConditionToNonValue("x:sourceRef", "x:sourceType", "range"));
         }
 
@@ -24836,10 +24836,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:tablePart");
             builder.AddElement<TablePart>()
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -24941,13 +24941,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:sheetView");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<ChartSheetView>()
-.AddAttribute("tabSelected", a => a.TabSelected)
-.AddAttribute("zoomScale", a => a.ZoomScale)
-.AddAttribute("workbookViewId", a => a.WorkbookViewId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("zoomToFit", a => a.ZoomToFit);
+                .AddAttribute("tabSelected", a => a.TabSelected)
+                .AddAttribute("zoomScale", a => a.ZoomScale)
+                .AddAttribute("workbookViewId", a => a.WorkbookViewId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("zoomToFit", a => a.ZoomToFit);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -25076,14 +25076,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageMargins>();
             builder.AddElement<CustomChartsheetView>()
-.AddAttribute("guid", a => a.Guid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("scale", a => a.Scale)
-.AddAttribute("state", a => a.State)
-.AddAttribute("zoomToFit", a => a.ZoomToFit);
+                .AddAttribute("guid", a => a.Guid, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("scale", a => a.Scale)
+                .AddAttribute("state", a => a.State)
+                .AddAttribute("zoomToFit", a => a.ZoomToFit);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageMargins), 0, 1),
@@ -25213,17 +25213,17 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:inputCells");
             builder.AddElement<InputCells>()
-.AddAttribute("r", a => a.CellReference, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("deleted", a => a.Deleted)
-.AddAttribute("undone", a => a.Undone)
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("numFmtId", a => a.NumberFormatId);
+                .AddAttribute("r", a => a.CellReference, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("deleted", a => a.Deleted)
+                .AddAttribute("undone", a => a.Undone)
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("numFmtId", a => a.NumberFormatId);
             builder.AddConstraint(new AttributeValueLengthConstraint("x:val", 0, 255) { Application = ApplicationType.Excel });
         }
 
@@ -25318,15 +25318,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:control");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ControlProperties>();
             builder.AddElement<Control>()
-.AddAttribute("shapeId", a => a.ShapeId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("name", a => a.Name);
+                .AddAttribute("shapeId", a => a.ShapeId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("name", a => a.Name);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ControlProperties), 0, 1, version: FileFormatVersions.Office2010)
@@ -25483,19 +25483,19 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:ignoredError");
             builder.AddElement<IgnoredError>()
-.AddAttribute("sqref", a => a.SequenceOfReferences, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("evalError", a => a.EvalError)
-.AddAttribute("twoDigitTextYear", a => a.TwoDigitTextYear)
-.AddAttribute("numberStoredAsText", a => a.NumberStoredAsText)
-.AddAttribute("formula", a => a.Formula)
-.AddAttribute("formulaRange", a => a.FormulaRange)
-.AddAttribute("unlockedFormula", a => a.UnlockedFormula)
-.AddAttribute("emptyCellReference", a => a.EmptyCellReference)
-.AddAttribute("listDataValidation", a => a.ListDataValidation)
-.AddAttribute("calculatedColumn", a => a.CalculatedColumn);
+                .AddAttribute("sqref", a => a.SequenceOfReferences, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("evalError", a => a.EvalError)
+                .AddAttribute("twoDigitTextYear", a => a.TwoDigitTextYear)
+                .AddAttribute("numberStoredAsText", a => a.NumberStoredAsText)
+                .AddAttribute("formula", a => a.Formula)
+                .AddAttribute("formulaRange", a => a.FormulaRange)
+                .AddAttribute("unlockedFormula", a => a.UnlockedFormula)
+                .AddAttribute("emptyCellReference", a => a.EmptyCellReference)
+                .AddAttribute("listDataValidation", a => a.ListDataValidation)
+                .AddAttribute("calculatedColumn", a => a.CalculatedColumn);
             builder.AddConstraint(new AttributeValueRangeConstraint("x:sqref", true, double.NegativeInfinity, true, 2147483647, true));
         }
 
@@ -25534,10 +25534,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:mergeCell");
             builder.AddElement<MergeCell>()
-.AddAttribute("ref", a => a.Reference, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("ref", a => a.Reference, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -25742,22 +25742,22 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formula2>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.ExcelAc.List>();
             builder.AddElement<DataValidation>()
-.AddAttribute("type", a => a.Type)
-.AddAttribute("errorStyle", a => a.ErrorStyle)
-.AddAttribute("imeMode", a => a.ImeMode)
-.AddAttribute("operator", a => a.Operator)
-.AddAttribute("allowBlank", a => a.AllowBlank)
-.AddAttribute("showDropDown", a => a.ShowDropDown)
-.AddAttribute("showInputMessage", a => a.ShowInputMessage)
-.AddAttribute("showErrorMessage", a => a.ShowErrorMessage)
-.AddAttribute("errorTitle", a => a.ErrorTitle)
-.AddAttribute("error", a => a.Error)
-.AddAttribute("promptTitle", a => a.PromptTitle)
-.AddAttribute("prompt", a => a.Prompt)
-.AddAttribute("sqref", a => a.SequenceOfReferences, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("type", a => a.Type)
+                .AddAttribute("errorStyle", a => a.ErrorStyle)
+                .AddAttribute("imeMode", a => a.ImeMode)
+                .AddAttribute("operator", a => a.Operator)
+                .AddAttribute("allowBlank", a => a.AllowBlank)
+                .AddAttribute("showDropDown", a => a.ShowDropDown)
+                .AddAttribute("showInputMessage", a => a.ShowInputMessage)
+                .AddAttribute("showErrorMessage", a => a.ShowErrorMessage)
+                .AddAttribute("errorTitle", a => a.ErrorTitle)
+                .AddAttribute("error", a => a.Error)
+                .AddAttribute("promptTitle", a => a.PromptTitle)
+                .AddAttribute("prompt", a => a.Prompt)
+                .AddAttribute("sqref", a => a.SequenceOfReferences, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.ExcelAc.List), 0, 1, version: FileFormatVersions.Office2013),
@@ -26078,28 +26078,28 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotSelection>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Selection>();
             builder.AddElement<SheetView>()
-.AddAttribute("windowProtection", a => a.WindowProtection)
-.AddAttribute("showFormulas", a => a.ShowFormulas)
-.AddAttribute("showGridLines", a => a.ShowGridLines)
-.AddAttribute("showRowColHeaders", a => a.ShowRowColHeaders)
-.AddAttribute("showZeros", a => a.ShowZeros)
-.AddAttribute("rightToLeft", a => a.RightToLeft)
-.AddAttribute("tabSelected", a => a.TabSelected)
-.AddAttribute("showRuler", a => a.ShowRuler)
-.AddAttribute("showOutlineSymbols", a => a.ShowOutlineSymbols)
-.AddAttribute("defaultGridColor", a => a.DefaultGridColor)
-.AddAttribute("showWhiteSpace", a => a.ShowWhiteSpace)
-.AddAttribute("view", a => a.View)
-.AddAttribute("topLeftCell", a => a.TopLeftCell)
-.AddAttribute("colorId", a => a.ColorId)
-.AddAttribute("zoomScale", a => a.ZoomScale)
-.AddAttribute("zoomScaleNormal", a => a.ZoomScaleNormal)
-.AddAttribute("zoomScaleSheetLayoutView", a => a.ZoomScaleSheetLayoutView)
-.AddAttribute("zoomScalePageLayoutView", a => a.ZoomScalePageLayoutView)
-.AddAttribute("workbookViewId", a => a.WorkbookViewId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("windowProtection", a => a.WindowProtection)
+                .AddAttribute("showFormulas", a => a.ShowFormulas)
+                .AddAttribute("showGridLines", a => a.ShowGridLines)
+                .AddAttribute("showRowColHeaders", a => a.ShowRowColHeaders)
+                .AddAttribute("showZeros", a => a.ShowZeros)
+                .AddAttribute("rightToLeft", a => a.RightToLeft)
+                .AddAttribute("tabSelected", a => a.TabSelected)
+                .AddAttribute("showRuler", a => a.ShowRuler)
+                .AddAttribute("showOutlineSymbols", a => a.ShowOutlineSymbols)
+                .AddAttribute("defaultGridColor", a => a.DefaultGridColor)
+                .AddAttribute("showWhiteSpace", a => a.ShowWhiteSpace)
+                .AddAttribute("view", a => a.View)
+                .AddAttribute("topLeftCell", a => a.TopLeftCell)
+                .AddAttribute("colorId", a => a.ColorId)
+                .AddAttribute("zoomScale", a => a.ZoomScale)
+                .AddAttribute("zoomScaleNormal", a => a.ZoomScaleNormal)
+                .AddAttribute("zoomScaleSheetLayoutView", a => a.ZoomScaleSheetLayoutView)
+                .AddAttribute("zoomScalePageLayoutView", a => a.ZoomScalePageLayoutView)
+                .AddAttribute("workbookViewId", a => a.WorkbookViewId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Pane), 0, 1),
@@ -26421,30 +26421,30 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PrintOptions>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Selection>();
             builder.AddElement<CustomSheetView>()
-.AddAttribute("guid", a => a.Guid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("scale", a => a.Scale)
-.AddAttribute("colorId", a => a.ColorId)
-.AddAttribute("showPageBreaks", a => a.ShowPageBreaks)
-.AddAttribute("showFormulas", a => a.ShowFormulas)
-.AddAttribute("showGridLines", a => a.ShowGridLines)
-.AddAttribute("showRowCol", a => a.ShowRowColumn)
-.AddAttribute("outlineSymbols", a => a.OutlineSymbols)
-.AddAttribute("zeroValues", a => a.ZeroValues)
-.AddAttribute("fitToPage", a => a.FitToPage)
-.AddAttribute("printArea", a => a.PrintArea)
-.AddAttribute("filter", a => a.Filter)
-.AddAttribute("showAutoFilter", a => a.ShowAutoFilter)
-.AddAttribute("hiddenRows", a => a.HiddenRows)
-.AddAttribute("hiddenColumns", a => a.HiddenColumns)
-.AddAttribute("state", a => a.State)
-.AddAttribute("filterUnique", a => a.FilterUnique)
-.AddAttribute("view", a => a.View)
-.AddAttribute("showRuler", a => a.ShowRuler)
-.AddAttribute("topLeftCell", a => a.TopLeftCell);
+                .AddAttribute("guid", a => a.Guid, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("scale", a => a.Scale)
+                .AddAttribute("colorId", a => a.ColorId)
+                .AddAttribute("showPageBreaks", a => a.ShowPageBreaks)
+                .AddAttribute("showFormulas", a => a.ShowFormulas)
+                .AddAttribute("showGridLines", a => a.ShowGridLines)
+                .AddAttribute("showRowCol", a => a.ShowRowColumn)
+                .AddAttribute("outlineSymbols", a => a.OutlineSymbols)
+                .AddAttribute("zeroValues", a => a.ZeroValues)
+                .AddAttribute("fitToPage", a => a.FitToPage)
+                .AddAttribute("printArea", a => a.PrintArea)
+                .AddAttribute("filter", a => a.Filter)
+                .AddAttribute("showAutoFilter", a => a.ShowAutoFilter)
+                .AddAttribute("hiddenRows", a => a.HiddenRows)
+                .AddAttribute("hiddenColumns", a => a.HiddenColumns)
+                .AddAttribute("state", a => a.State)
+                .AddAttribute("filterUnique", a => a.FilterUnique)
+                .AddAttribute("view", a => a.View)
+                .AddAttribute("showRuler", a => a.ShowRuler)
+                .AddAttribute("topLeftCell", a => a.TopLeftCell);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Pane), 0, 1),
@@ -26728,16 +26728,16 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.SetSchema("x:oleObject");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.EmbeddedObjectProperties>();
             builder.AddElement<OleObject>()
-.AddAttribute("progId", a => a.ProgId)
-.AddAttribute("dvAspect", a => a.DataOrViewAspect)
-.AddAttribute("link", a => a.Link)
-.AddAttribute("oleUpdate", a => a.OleUpdate)
-.AddAttribute("autoLoad", a => a.AutoLoad)
-.AddAttribute("shapeId", a => a.ShapeId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("r:id", a => a.Id);
+                .AddAttribute("progId", a => a.ProgId)
+                .AddAttribute("dvAspect", a => a.DataOrViewAspect)
+                .AddAttribute("link", a => a.Link)
+                .AddAttribute("oleUpdate", a => a.OleUpdate)
+                .AddAttribute("autoLoad", a => a.AutoLoad)
+                .AddAttribute("shapeId", a => a.ShapeId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("r:id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.EmbeddedObjectProperties), 0, 1, version: FileFormatVersions.Office2010)
@@ -26826,7 +26826,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:metadataTypes");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MetadataType>();
             builder.AddElement<MetadataTypes>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataType), 1, 0)
@@ -26900,7 +26900,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:metadataStrings");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CharacterValue>();
             builder.AddElement<MetadataStrings>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), 1, 0)
@@ -26974,7 +26974,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:mdxMetadata");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Mdx>();
             builder.AddElement<MdxMetadata>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Mdx), 1, 0)
@@ -27061,11 +27061,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FutureMetadataBlock>();
             builder.AddElement<FutureMetadata>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FutureMetadataBlock), 0, 0),
@@ -27261,7 +27261,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MetadataBlock>();
             builder.AddElement<MetadataBlocksType>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
         }
     }
 
@@ -27593,40 +27593,40 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:metadataType");
             builder.AddElement<MetadataType>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("minSupportedVersion", a => a.MinSupportedVersion, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("ghostRow", a => a.GhostRow)
-.AddAttribute("ghostCol", a => a.GhostColumn)
-.AddAttribute("edit", a => a.Edit)
-.AddAttribute("delete", a => a.Delete)
-.AddAttribute("copy", a => a.Copy)
-.AddAttribute("pasteAll", a => a.PasteAll)
-.AddAttribute("pasteFormulas", a => a.PasteFormulas)
-.AddAttribute("pasteValues", a => a.PasteValues)
-.AddAttribute("pasteFormats", a => a.PasteFormats)
-.AddAttribute("pasteComments", a => a.PasteComments)
-.AddAttribute("pasteDataValidation", a => a.PasteDataValidation)
-.AddAttribute("pasteBorders", a => a.PasteBorders)
-.AddAttribute("pasteColWidths", a => a.PasteColWidths)
-.AddAttribute("pasteNumberFormats", a => a.PasteNumberFormats)
-.AddAttribute("merge", a => a.Merge)
-.AddAttribute("splitFirst", a => a.SplitFirst)
-.AddAttribute("splitAll", a => a.SplitAll)
-.AddAttribute("rowColShift", a => a.RowColumnShift)
-.AddAttribute("clearAll", a => a.ClearAll)
-.AddAttribute("clearFormats", a => a.ClearFormats)
-.AddAttribute("clearContents", a => a.ClearContents)
-.AddAttribute("clearComments", a => a.ClearComments)
-.AddAttribute("assign", a => a.Assign)
-.AddAttribute("coerce", a => a.Coerce)
-.AddAttribute("adjust", a => a.Adjust)
-.AddAttribute("cellMeta", a => a.CellMeta);
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("minSupportedVersion", a => a.MinSupportedVersion, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("ghostRow", a => a.GhostRow)
+                .AddAttribute("ghostCol", a => a.GhostColumn)
+                .AddAttribute("edit", a => a.Edit)
+                .AddAttribute("delete", a => a.Delete)
+                .AddAttribute("copy", a => a.Copy)
+                .AddAttribute("pasteAll", a => a.PasteAll)
+                .AddAttribute("pasteFormulas", a => a.PasteFormulas)
+                .AddAttribute("pasteValues", a => a.PasteValues)
+                .AddAttribute("pasteFormats", a => a.PasteFormats)
+                .AddAttribute("pasteComments", a => a.PasteComments)
+                .AddAttribute("pasteDataValidation", a => a.PasteDataValidation)
+                .AddAttribute("pasteBorders", a => a.PasteBorders)
+                .AddAttribute("pasteColWidths", a => a.PasteColWidths)
+                .AddAttribute("pasteNumberFormats", a => a.PasteNumberFormats)
+                .AddAttribute("merge", a => a.Merge)
+                .AddAttribute("splitFirst", a => a.SplitFirst)
+                .AddAttribute("splitAll", a => a.SplitAll)
+                .AddAttribute("rowColShift", a => a.RowColumnShift)
+                .AddAttribute("clearAll", a => a.ClearAll)
+                .AddAttribute("clearFormats", a => a.ClearFormats)
+                .AddAttribute("clearContents", a => a.ClearContents)
+                .AddAttribute("clearComments", a => a.ClearComments)
+                .AddAttribute("assign", a => a.Assign)
+                .AddAttribute("coerce", a => a.Coerce)
+                .AddAttribute("adjust", a => a.Adjust)
+                .AddAttribute("cellMeta", a => a.CellMeta);
             builder.AddConstraint(new UniqueAttributeValueConstraint("x:name", true, "x:metadataTypes"));
             builder.AddConstraint(new AttributeValueLengthConstraint("x:name", 1, 65535));
         }
@@ -27737,14 +27737,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:rc");
             builder.AddElement<MetadataRecord>()
- .AddAttribute("t", a => a.TypeIndex, aBuilder =>
- {
-     aBuilder.AddValidator(RequiredValidator.Instance);
- })
- .AddAttribute("v", a => a.Val, aBuilder =>
- {
-     aBuilder.AddValidator(RequiredValidator.Instance);
- });
+                .AddAttribute("t", a => a.TypeIndex, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("v", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new IndexReferenceConstraint("x:t", ".", null, "x:metadataType", "x:metadataType", 1));
             builder.AddConstraint(new AttributeValueRangeConstraint("x:t", true, double.NegativeInfinity, true, 2147483647, true));
         }
@@ -27905,14 +27905,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MdxSet>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MdxTuple>();
             builder.AddElement<Mdx>()
-.AddAttribute("n", a => a.NameIndex, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("f", a => a.CubeFunction, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("n", a => a.NameIndex, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("f", a => a.CubeFunction, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MdxTuple), 1, 1),
@@ -28141,22 +28141,22 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:t");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NameIndex>();
             builder.AddElement<MdxTuple>()
-.AddAttribute("c", a => a.MemberIndexCount)
-.AddAttribute("ct", a => a.CultureCurrency)
-.AddAttribute("si", a => a.FormattingStringIndex)
-.AddAttribute("fi", a => a.FormatIndex)
-.AddAttribute("bc", a => a.BackgroundColor, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("fc", a => a.ForegroundColor, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("i", a => a.Italic)
-.AddAttribute("u", a => a.Underline)
-.AddAttribute("st", a => a.Strikethrough)
-.AddAttribute("b", a => a.Bold);
+                .AddAttribute("c", a => a.MemberIndexCount)
+                .AddAttribute("ct", a => a.CultureCurrency)
+                .AddAttribute("si", a => a.FormattingStringIndex)
+                .AddAttribute("fi", a => a.FormatIndex)
+                .AddAttribute("bc", a => a.BackgroundColor, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("fc", a => a.ForegroundColor, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("i", a => a.Italic)
+                .AddAttribute("u", a => a.Underline)
+                .AddAttribute("st", a => a.Strikethrough)
+                .AddAttribute("b", a => a.Bold);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NameIndex), 0, 0)
@@ -28255,12 +28255,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
             builder.SetSchema("x:ms");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NameIndex>();
             builder.AddElement<MdxSet>()
-.AddAttribute("ns", a => a.SetDefinitionIndex, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("c", a => a.MemberIndexCount)
-.AddAttribute("o", a => a.SortingOrder);
+                .AddAttribute("ns", a => a.SetDefinitionIndex, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("c", a => a.MemberIndexCount)
+                .AddAttribute("o", a => a.SortingOrder);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NameIndex), 0, 0)
@@ -28316,14 +28316,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:p");
             builder.AddElement<MdxMemberProp>()
-  .AddAttribute("n", a => a.NameIndex, aBuilder =>
-  {
-      aBuilder.AddValidator(RequiredValidator.Instance);
-  })
-  .AddAttribute("np", a => a.PropertyNameIndex, aBuilder =>
-  {
-      aBuilder.AddValidator(RequiredValidator.Instance);
-  });
+                .AddAttribute("n", a => a.NameIndex, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("np", a => a.PropertyNameIndex, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new IndexReferenceConstraint("x:n", "/WorkbookPart/CellMetadataPart", "x:metadataStrings", "x:s", "x:s", 0));
             builder.AddConstraint(new AttributeValueRangeConstraint("x:n", true, double.NegativeInfinity, true, 2147483647, true));
             builder.AddConstraint(new IndexReferenceConstraint("x:np", "/WorkbookPart/CellMetadataPart", "x:metadataStrings", "x:s", "x:s", 0));
@@ -28387,18 +28387,18 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:k");
             builder.AddElement<MdxKpi>()
-  .AddAttribute("n", a => a.NameIndex, aBuilder =>
-  {
-      aBuilder.AddValidator(RequiredValidator.Instance);
-  })
-  .AddAttribute("np", a => a.KpiIndex, aBuilder =>
-  {
-      aBuilder.AddValidator(RequiredValidator.Instance);
-  })
-  .AddAttribute("p", a => a.KpiProperty, aBuilder =>
-  {
-      aBuilder.AddValidator(RequiredValidator.Instance);
-  });
+                .AddAttribute("n", a => a.NameIndex, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("np", a => a.KpiIndex, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("p", a => a.KpiProperty, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new IndexReferenceConstraint("x:n", ".", "x:metadataStrings", "x:s", "x:s", 0));
             builder.AddConstraint(new AttributeValueRangeConstraint("x:n", true, double.NegativeInfinity, true, 2147483647, true));
             builder.AddConstraint(new IndexReferenceConstraint("x:np", "/WorkbookPart/CellMetadataPart", "x:metadataStrings", "x:s", "x:s", 0));
@@ -28451,11 +28451,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:n");
             builder.AddElement<NameIndex>()
-  .AddAttribute("x", a => a.Index, aBuilder =>
-  {
-      aBuilder.AddValidator(RequiredValidator.Instance);
-  })
-  .AddAttribute("s", a => a.IsASet);
+                .AddAttribute("x", a => a.Index, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("s", a => a.IsASet);
             builder.AddConstraint(new AttributeValueRangeConstraint("x:x", true, 0, true, double.PositiveInfinity, true));
             builder.AddConstraint(new AttributeValueRangeConstraint("x:x", true, double.NegativeInfinity, true, 2147483647, true));
             builder.AddConstraint(new IndexReferenceConstraint("x:in", ".", null, "x:serverFormat", "x:serverFormat", 0));
@@ -28553,18 +28553,18 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.XmlCellProperties>();
             builder.AddElement<SingleXmlCell>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("r", a => a.CellReference, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("connectionId", a => a.ConnectionId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("r", a => a.CellReference, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("connectionId", a => a.ConnectionId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.XmlCellProperties), 1, 1),
@@ -28680,14 +28680,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.XmlProperties>();
             builder.AddElement<XmlCellProperties>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("uniqueName", a => a.UniqueName, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("uniqueName", a => a.UniqueName, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.XmlProperties), 1, 1),
@@ -28812,18 +28812,18 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:xmlPr");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<XmlProperties>()
-.AddAttribute("mapId", a => a.MapId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("xpath", a => a.XPath, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("xmlDataType", a => a.XmlDataType, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("mapId", a => a.MapId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("xpath", a => a.XPath, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("xmlDataType", a => a.XmlDataType, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -28913,7 +28913,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ForegroundColor>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.BackgroundColor>();
             builder.AddElement<PatternFill>()
-.AddAttribute("patternType", a => a.PatternType);
+                .AddAttribute("patternType", a => a.PatternType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ForegroundColor), 0, 1),
@@ -29068,12 +29068,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:gradientFill");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.GradientStop>();
             builder.AddElement<GradientFill>()
-.AddAttribute("type", a => a.Type)
-.AddAttribute("degree", a => a.Degree)
-.AddAttribute("left", a => a.Left)
-.AddAttribute("right", a => a.Right)
-.AddAttribute("top", a => a.Top)
-.AddAttribute("bottom", a => a.Bottom);
+                .AddAttribute("type", a => a.Type)
+                .AddAttribute("degree", a => a.Degree)
+                .AddAttribute("left", a => a.Left)
+                .AddAttribute("right", a => a.Right)
+                .AddAttribute("top", a => a.Top)
+                .AddAttribute("bottom", a => a.Bottom);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GradientStop), 0, 0)
@@ -29151,10 +29151,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:stop");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
             builder.AddElement<GradientStop>()
-.AddAttribute("position", a => a.Position, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("position", a => a.Position, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 1, 1)
@@ -29221,14 +29221,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:numFmt");
             builder.AddElement<NumberingFormat>()
-.AddAttribute("numFmtId", a => a.NumberFormatId, aBuilder =>
-{
- aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("formatCode", a => a.FormatCode, aBuilder =>
-{
- aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("numFmtId", a => a.NumberFormatId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("formatCode", a => a.FormatCode, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new AttributeValueLengthConstraint("x:formatCode", 0, 255));
         }
 
@@ -29366,16 +29366,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:alignment");
             builder.AddElement<Alignment>()
-.AddAttribute("horizontal", a => a.Horizontal)
-.AddAttribute("vertical", a => a.Vertical)
-.AddAttribute("textRotation", a => a.TextRotation)
-.AddAttribute("wrapText", a => a.WrapText)
-.AddAttribute("indent", a => a.Indent)
-.AddAttribute("relativeIndent", a => a.RelativeIndent)
-.AddAttribute("justifyLastLine", a => a.JustifyLastLine)
-.AddAttribute("shrinkToFit", a => a.ShrinkToFit)
-.AddAttribute("readingOrder", a => a.ReadingOrder)
-.AddAttribute("mergeCell", a => a.MergeCell);
+                .AddAttribute("horizontal", a => a.Horizontal)
+                .AddAttribute("vertical", a => a.Vertical)
+                .AddAttribute("textRotation", a => a.TextRotation)
+                .AddAttribute("wrapText", a => a.WrapText)
+                .AddAttribute("indent", a => a.Indent)
+                .AddAttribute("relativeIndent", a => a.RelativeIndent)
+                .AddAttribute("justifyLastLine", a => a.JustifyLastLine)
+                .AddAttribute("shrinkToFit", a => a.ShrinkToFit)
+                .AddAttribute("readingOrder", a => a.ReadingOrder)
+                .AddAttribute("mergeCell", a => a.MergeCell);
             builder.AddConstraint(new AttributeValueRangeConstraint("x:readingOrder", true, 0, true, 2, true));
             builder.AddConstraint(new AttributeValueRangeConstraint("x:indent", true, double.NegativeInfinity, true, 255, true) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueSetConstraint("x:readingOrder", true, new string[] { "0", "1", "2" }) { Application = ApplicationType.Excel });
@@ -29427,8 +29427,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:protection");
             builder.AddElement<Protection>()
-.AddAttribute("locked", a => a.Locked)
-.AddAttribute("hidden", a => a.Hidden);
+                .AddAttribute("locked", a => a.Locked)
+                .AddAttribute("hidden", a => a.Hidden);
         }
 
         /// <inheritdoc/>
@@ -29921,9 +29921,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.VerticalBorder>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.HorizontalBorder>();
             builder.AddElement<Border>()
-.AddAttribute("diagonalUp", a => a.DiagonalUp)
-.AddAttribute("diagonalDown", a => a.DiagonalDown)
-.AddAttribute("outline", a => a.Outline);
+                .AddAttribute("diagonalUp", a => a.DiagonalUp)
+                .AddAttribute("diagonalDown", a => a.DiagonalDown)
+                .AddAttribute("outline", a => a.Outline);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.StartBorder), 0, 1, version: FileFormatVersions.Office2010),
@@ -30274,13 +30274,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:tableStyle");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableStyleElement>();
             builder.AddElement<TableStyle>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("pivot", a => a.Pivot)
-.AddAttribute("table", a => a.Table)
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("pivot", a => a.Pivot)
+                .AddAttribute("table", a => a.Table)
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableStyleElement), 0, 28)
@@ -30323,10 +30323,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:rgbColor");
             builder.AddElement<RgbColor>()
-.AddAttribute("rgb", a => a.Rgb, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-});
+                .AddAttribute("rgb", a => a.Rgb, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -30450,15 +30450,15 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
             builder.SetSchema("x:cellStyle");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<CellStyle>()
-.AddAttribute("name", a => a.Name)
-.AddAttribute("xfId", a => a.FormatId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("builtinId", a => a.BuiltinId)
-.AddAttribute("iLevel", a => a.OutlineLevel)
-.AddAttribute("hidden", a => a.Hidden)
-.AddAttribute("customBuiltin", a => a.CustomBuiltin);
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("xfId", a => a.FormatId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("builtinId", a => a.BuiltinId)
+                .AddAttribute("iLevel", a => a.OutlineLevel)
+                .AddAttribute("hidden", a => a.Hidden)
+                .AddAttribute("customBuiltin", a => a.CustomBuiltin);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -30685,19 +30685,19 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Protection>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<CellFormat>()
-.AddAttribute("numFmtId", a => a.NumberFormatId)
-.AddAttribute("fontId", a => a.FontId)
-.AddAttribute("fillId", a => a.FillId)
-.AddAttribute("borderId", a => a.BorderId)
-.AddAttribute("xfId", a => a.FormatId)
-.AddAttribute("quotePrefix", a => a.QuotePrefix)
-.AddAttribute("pivotButton", a => a.PivotButton)
-.AddAttribute("applyNumberFormat", a => a.ApplyNumberFormat)
-.AddAttribute("applyFont", a => a.ApplyFont)
-.AddAttribute("applyFill", a => a.ApplyFill)
-.AddAttribute("applyBorder", a => a.ApplyBorder)
-.AddAttribute("applyAlignment", a => a.ApplyAlignment)
-.AddAttribute("applyProtection", a => a.ApplyProtection);
+                .AddAttribute("numFmtId", a => a.NumberFormatId)
+                .AddAttribute("fontId", a => a.FontId)
+                .AddAttribute("fillId", a => a.FillId)
+                .AddAttribute("borderId", a => a.BorderId)
+                .AddAttribute("xfId", a => a.FormatId)
+                .AddAttribute("quotePrefix", a => a.QuotePrefix)
+                .AddAttribute("pivotButton", a => a.PivotButton)
+                .AddAttribute("applyNumberFormat", a => a.ApplyNumberFormat)
+                .AddAttribute("applyFont", a => a.ApplyFont)
+                .AddAttribute("applyFill", a => a.ApplyFill)
+                .AddAttribute("applyBorder", a => a.ApplyBorder)
+                .AddAttribute("applyAlignment", a => a.ApplyAlignment)
+                .AddAttribute("applyProtection", a => a.ApplyProtection);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Alignment), 0, 1),
@@ -30785,11 +30785,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:name");
             builder.AddElement<FontName>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-   aBuilder.AddValidator(new StringValidator() { MinLength = (1L) });
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { MinLength = (1L) });
+                });
             builder.AddConstraint(new AttributeValueLengthConstraint("x:val", 1, 31) { Application = ApplicationType.Excel });
         }
 
@@ -30828,11 +30828,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:family");
             builder.AddElement<FontFamilyNumbering>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
- aBuilder.AddValidator(RequiredValidator.Instance);
- aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (5L) });
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (5L) });
+                });
             builder.AddConstraint(new AttributeValueRangeConstraint("x:val", true, 0, true, 5, true) { Application = ApplicationType.Excel });
         }
 
@@ -30871,11 +30871,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:charset");
             builder.AddElement<FontCharSet>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (255L) });
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (255L) });
+                });
             builder.AddConstraint(new AttributeValueRangeConstraint("x:val", true, 0, true, 255, true));
         }
 
@@ -30936,12 +30936,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:tableStyleElement");
             builder.AddElement<TableStyleElement>()
-.AddAttribute("type", a => a.Type, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("size", a => a.Size)
-.AddAttribute("dxfId", a => a.FormatId);
+                .AddAttribute("type", a => a.Type, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("size", a => a.Size)
+                .AddAttribute("dxfId", a => a.FormatId);
             builder.AddConstraint(new AttributeValueRangeConstraint("x:size", true, 1, true, 9, true));
             builder.AddConstraint(new IndexReferenceConstraint("x:dxfId", "/WorkbookPart/WorkbookStylesPart", null, "x:dxf", "x:dxf", 0));
         }
@@ -31183,12 +31183,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:definedName");
             builder.AddElement<ExternalDefinedName>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("refersTo", a => a.RefersTo)
-.AddAttribute("sheetId", a => a.SheetId);
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("refersTo", a => a.RefersTo)
+                .AddAttribute("sheetId", a => a.SheetId);
             builder.AddConstraint(new AttributeValueRangeConstraint("x:sheetId", true, 0, true, 65533, true));
             builder.AddConstraint(new AttributeValueLengthConstraint("x:comment", 0, 255) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueLengthConstraint("x:name", 1, 255) { Application = ApplicationType.Excel });
@@ -31272,11 +31272,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:sheetData");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExternalRow>();
             builder.AddElement<ExternalSheetData>()
-.AddAttribute("sheetId", a => a.SheetId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("refreshError", a => a.RefreshError);
+                .AddAttribute("sheetId", a => a.SheetId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("refreshError", a => a.RefreshError);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalRow), 0, 0)
@@ -31350,10 +31350,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:row");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExternalCell>();
             builder.AddElement<ExternalRow>()
-.AddAttribute("r", a => a.RowIndex, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("r", a => a.RowIndex, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalCell), 0, 0)
@@ -31452,12 +31452,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:cell");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Xstring>();
             builder.AddElement<ExternalCell>()
-.AddAttribute("r", a => a.CellReference, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("t", a => a.DataType)
-.AddAttribute("vm", a => a.ValueMetaIndex);
+                .AddAttribute("r", a => a.CellReference, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("t", a => a.DataType)
+                .AddAttribute("vm", a => a.ValueMetaIndex);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Xstring), 0, 1)
@@ -31638,10 +31638,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:ddeItem");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Values>();
             builder.AddElement<DdeItem>()
-.AddAttribute("name", a => a.Name)
-.AddAttribute("ole", a => a.UseOle)
-.AddAttribute("advise", a => a.Advise)
-.AddAttribute("preferPic", a => a.PreferPicture);
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("ole", a => a.UseOle)
+                .AddAttribute("advise", a => a.Advise)
+                .AddAttribute("preferPic", a => a.PreferPicture);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Values), 0, 1)
@@ -31740,8 +31740,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:values");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Value>();
             builder.AddElement<Values>()
-.AddAttribute("rows", a => a.Rows)
-.AddAttribute("cols", a => a.Columns);
+                .AddAttribute("rows", a => a.Rows)
+                .AddAttribute("cols", a => a.Columns);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Value), 1, 0)
@@ -31816,7 +31816,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:value");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DdeLinkValue>();
             builder.AddElement<Value>()
-.AddAttribute("t", a => a.ValueType);
+                .AddAttribute("t", a => a.ValueType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DdeLinkValue), 1, 1)
@@ -31972,10 +31972,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetDataSet>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetNames>();
             builder.AddElement<ExternalBook>()
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetNames), 0, 1),
@@ -32100,14 +32100,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:ddeLink");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DdeItems>();
             builder.AddElement<DdeLink>()
-.AddAttribute("ddeService", a => a.DdeService, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("ddeTopic", a => a.DdeTopic, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("ddeService", a => a.DdeService, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("ddeTopic", a => a.DdeTopic, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DdeItems), 0, 1)
@@ -32209,14 +32209,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:oleLink");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OleItems>();
             builder.AddElement<OleLink>()
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("progId", a => a.ProgId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("progId", a => a.ProgId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleItems), 0, 1)
@@ -32272,7 +32272,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:sheetName");
             builder.AddElement<SheetName>()
-.AddAttribute("val", a => a.Val);
+                .AddAttribute("val", a => a.Val);
             builder.AddConstraint(new AttributeValueLengthConstraint("x:val", 0, 31));
         }
 
@@ -32507,24 +32507,24 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TotalsRowFormula>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.XmlColumnProperties>();
             builder.AddElement<TableColumn>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("uniqueName", a => a.UniqueName)
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("totalsRowFunction", a => a.TotalsRowFunction)
-.AddAttribute("totalsRowLabel", a => a.TotalsRowLabel)
-.AddAttribute("queryTableFieldId", a => a.QueryTableFieldId)
-.AddAttribute("headerRowDxfId", a => a.HeaderRowDifferentialFormattingId)
-.AddAttribute("dataDxfId", a => a.DataFormatId)
-.AddAttribute("totalsRowDxfId", a => a.TotalsRowDifferentialFormattingId)
-.AddAttribute("headerRowCellStyle", a => a.HeaderRowCellStyle)
-.AddAttribute("dataCellStyle", a => a.DataCellStyle)
-.AddAttribute("totalsRowCellStyle", a => a.TotalsRowCellStyle);
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("uniqueName", a => a.UniqueName)
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("totalsRowFunction", a => a.TotalsRowFunction)
+                .AddAttribute("totalsRowLabel", a => a.TotalsRowLabel)
+                .AddAttribute("queryTableFieldId", a => a.QueryTableFieldId)
+                .AddAttribute("headerRowDxfId", a => a.HeaderRowDifferentialFormattingId)
+                .AddAttribute("dataDxfId", a => a.DataFormatId)
+                .AddAttribute("totalsRowDxfId", a => a.TotalsRowDifferentialFormattingId)
+                .AddAttribute("headerRowCellStyle", a => a.HeaderRowCellStyle)
+                .AddAttribute("dataCellStyle", a => a.DataCellStyle)
+                .AddAttribute("totalsRowCellStyle", a => a.TotalsRowCellStyle);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedColumnFormula), 0, 1),
@@ -32736,8 +32736,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<TableFormulaType>()
-                           .AddAttribute("array", a => a.Array)
-                           .AddAttribute("xml:space", a => a.Space);
+                .AddAttribute("array", a => a.Array)
+                .AddAttribute("xml:space", a => a.Space);
         }
     }
 
@@ -32836,19 +32836,19 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:xmlColumnPr");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<XmlColumnProperties>()
-.AddAttribute("mapId", a => a.MapId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("xpath", a => a.XPath, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("denormalized", a => a.Denormalized)
-.AddAttribute("xmlDataType", a => a.XmlDataType, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("mapId", a => a.MapId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("xpath", a => a.XPath, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("denormalized", a => a.Denormalized)
+                .AddAttribute("xmlDataType", a => a.XmlDataType, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -32937,10 +32937,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:volType");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Main>();
             builder.AddElement<VolatileType>()
-.AddAttribute("type", a => a.Type, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("type", a => a.Type, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Main), 1, 0)
@@ -33013,10 +33013,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:main");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Topic>();
             builder.AddElement<Main>()
-.AddAttribute("first", a => a.First, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("first", a => a.First, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Topic), 1, 0)
@@ -33094,7 +33094,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Subtopic>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Xstring>();
             builder.AddElement<Topic>()
-.AddAttribute("t", a => a.ValueType);
+                .AddAttribute("t", a => a.ValueType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Xstring), 1, 1),
@@ -33162,14 +33162,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:tr");
             builder.AddElement<TopicReferences>()
- .AddAttribute("r", a => a.CellReference, aBuilder =>
- {
-     aBuilder.AddValidator(RequiredValidator.Instance);
- })
- .AddAttribute("s", a => a.SheetId, aBuilder =>
- {
-     aBuilder.AddValidator(RequiredValidator.Instance);
- });
+                .AddAttribute("r", a => a.CellReference, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("s", a => a.SheetId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new AttributeValueRangeConstraint("x:s", true, 1, true, 65534, true) { Application = ApplicationType.Excel });
         }
 
@@ -33222,14 +33222,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:pivotCache");
             builder.AddElement<PivotCache>()
-.AddAttribute("cacheId", a => a.CacheId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("cacheId", a => a.CacheId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new UniqueAttributeValueConstraint("x:cacheId", true, "x:pivotCaches"));
             builder.AddConstraint(new RelationshipExistConstraint("r:id"));
         }
@@ -33324,21 +33324,21 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:webPublishObject");
             builder.AddElement<WebPublishObject>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("divId", a => a.DivId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("sourceObject", a => a.SourceObject)
-.AddAttribute("destinationFile", a => a.DestinationFile, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("title", a => a.Title)
-.AddAttribute("autoRepublish", a => a.AutoRepublish);
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("divId", a => a.DivId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("sourceObject", a => a.SourceObject)
+                .AddAttribute("destinationFile", a => a.DestinationFile, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("title", a => a.Title)
+                .AddAttribute("autoRepublish", a => a.AutoRepublish);
             builder.AddConstraint(new AttributeValueLengthConstraint("x:title", 0, 255) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueLengthConstraint("x:sourceObject", 0, 255) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueLengthConstraint("x:destinationFile", 1, 255) { Application = ApplicationType.Excel });
@@ -33384,10 +33384,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:externalReference");
             builder.AddElement<ExternalReference>()
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -33709,40 +33709,40 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:customWorkbookView");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<CustomWorkbookView>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("guid", a => a.Guid, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("autoUpdate", a => a.AutoUpdate)
-.AddAttribute("mergeInterval", a => a.MergeInterval)
-.AddAttribute("changesSavedWin", a => a.ChangesSavedWin)
-.AddAttribute("onlySync", a => a.OnlySync)
-.AddAttribute("personalView", a => a.PersonalView)
-.AddAttribute("includePrintSettings", a => a.IncludePrintSettings)
-.AddAttribute("includeHiddenRowCol", a => a.IncludeHiddenRowColumn)
-.AddAttribute("maximized", a => a.Maximized)
-.AddAttribute("minimized", a => a.Minimized)
-.AddAttribute("showHorizontalScroll", a => a.ShowHorizontalScroll)
-.AddAttribute("showVerticalScroll", a => a.ShowVerticalScroll)
-.AddAttribute("showSheetTabs", a => a.ShowSheetTabs)
-.AddAttribute("xWindow", a => a.XWindow)
-.AddAttribute("yWindow", a => a.YWindow)
-.AddAttribute("windowWidth", a => a.WindowWidth)
-.AddAttribute("windowHeight", a => a.WindowHeight)
-.AddAttribute("tabRatio", a => a.TabRatio)
-.AddAttribute("activeSheetId", a => a.ActiveSheetId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("showFormulaBar", a => a.ShowFormulaBar)
-.AddAttribute("showStatusbar", a => a.ShowStatusbar)
-.AddAttribute("showComments", a => a.ShowComments)
-.AddAttribute("showObjects", a => a.ShowObjects);
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("guid", a => a.Guid, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("autoUpdate", a => a.AutoUpdate)
+                .AddAttribute("mergeInterval", a => a.MergeInterval)
+                .AddAttribute("changesSavedWin", a => a.ChangesSavedWin)
+                .AddAttribute("onlySync", a => a.OnlySync)
+                .AddAttribute("personalView", a => a.PersonalView)
+                .AddAttribute("includePrintSettings", a => a.IncludePrintSettings)
+                .AddAttribute("includeHiddenRowCol", a => a.IncludeHiddenRowColumn)
+                .AddAttribute("maximized", a => a.Maximized)
+                .AddAttribute("minimized", a => a.Minimized)
+                .AddAttribute("showHorizontalScroll", a => a.ShowHorizontalScroll)
+                .AddAttribute("showVerticalScroll", a => a.ShowVerticalScroll)
+                .AddAttribute("showSheetTabs", a => a.ShowSheetTabs)
+                .AddAttribute("xWindow", a => a.XWindow)
+                .AddAttribute("yWindow", a => a.YWindow)
+                .AddAttribute("windowWidth", a => a.WindowWidth)
+                .AddAttribute("windowHeight", a => a.WindowHeight)
+                .AddAttribute("tabRatio", a => a.TabRatio)
+                .AddAttribute("activeSheetId", a => a.ActiveSheetId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("showFormulaBar", a => a.ShowFormulaBar)
+                .AddAttribute("showStatusbar", a => a.ShowStatusbar)
+                .AddAttribute("showComments", a => a.ShowComments)
+                .AddAttribute("showObjects", a => a.ShowObjects);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -33838,19 +33838,19 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:sheet");
             builder.AddElement<Sheet>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-  aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("sheetId", a => a.SheetId, aBuilder =>
-{
-  aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("state", a => a.State)
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-  aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("sheetId", a => a.SheetId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("state", a => a.State)
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new AttributeValuePatternConstraint("x:name", @"[^'*\[\]/\\:?]{1}[^*\[\]/\\:?]*"));
             builder.AddConstraint(new AttributeValueLengthConstraint("x:name", 1, 31));
             builder.AddConstraint(new UniqueAttributeValueConstraint("x:name", false, null));
@@ -34058,19 +34058,19 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:workbookView");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<WorkbookView>()
-.AddAttribute("visibility", a => a.Visibility)
-.AddAttribute("minimized", a => a.Minimized)
-.AddAttribute("showHorizontalScroll", a => a.ShowHorizontalScroll)
-.AddAttribute("showVerticalScroll", a => a.ShowVerticalScroll)
-.AddAttribute("showSheetTabs", a => a.ShowSheetTabs)
-.AddAttribute("xWindow", a => a.XWindow)
-.AddAttribute("yWindow", a => a.YWindow)
-.AddAttribute("windowWidth", a => a.WindowWidth)
-.AddAttribute("windowHeight", a => a.WindowHeight)
-.AddAttribute("tabRatio", a => a.TabRatio)
-.AddAttribute("firstSheet", a => a.FirstSheet)
-.AddAttribute("activeTab", a => a.ActiveTab)
-.AddAttribute("autoFilterDateGrouping", a => a.AutoFilterDateGrouping);
+                .AddAttribute("visibility", a => a.Visibility)
+                .AddAttribute("minimized", a => a.Minimized)
+                .AddAttribute("showHorizontalScroll", a => a.ShowHorizontalScroll)
+                .AddAttribute("showVerticalScroll", a => a.ShowVerticalScroll)
+                .AddAttribute("showSheetTabs", a => a.ShowSheetTabs)
+                .AddAttribute("xWindow", a => a.XWindow)
+                .AddAttribute("yWindow", a => a.YWindow)
+                .AddAttribute("windowWidth", a => a.WindowWidth)
+                .AddAttribute("windowHeight", a => a.WindowHeight)
+                .AddAttribute("tabRatio", a => a.TabRatio)
+                .AddAttribute("firstSheet", a => a.FirstSheet)
+                .AddAttribute("activeTab", a => a.ActiveTab)
+                .AddAttribute("autoFilterDateGrouping", a => a.AutoFilterDateGrouping);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -34296,24 +34296,24 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:definedName");
             builder.AddElement<DefinedName>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("comment", a => a.Comment)
-.AddAttribute("customMenu", a => a.CustomMenu)
-.AddAttribute("description", a => a.Description)
-.AddAttribute("help", a => a.Help)
-.AddAttribute("statusBar", a => a.StatusBar)
-.AddAttribute("localSheetId", a => a.LocalSheetId)
-.AddAttribute("hidden", a => a.Hidden)
-.AddAttribute("function", a => a.Function)
-.AddAttribute("vbProcedure", a => a.VbProcedure)
-.AddAttribute("xlm", a => a.Xlm)
-.AddAttribute("functionGroupId", a => a.FunctionGroupId)
-.AddAttribute("shortcutKey", a => a.ShortcutKey)
-.AddAttribute("publishToServer", a => a.PublishToServer)
-.AddAttribute("workbookParameter", a => a.WorkbookParameter);
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("comment", a => a.Comment)
+                .AddAttribute("customMenu", a => a.CustomMenu)
+                .AddAttribute("description", a => a.Description)
+                .AddAttribute("help", a => a.Help)
+                .AddAttribute("statusBar", a => a.StatusBar)
+                .AddAttribute("localSheetId", a => a.LocalSheetId)
+                .AddAttribute("hidden", a => a.Hidden)
+                .AddAttribute("function", a => a.Function)
+                .AddAttribute("vbProcedure", a => a.VbProcedure)
+                .AddAttribute("xlm", a => a.Xlm)
+                .AddAttribute("functionGroupId", a => a.FunctionGroupId)
+                .AddAttribute("shortcutKey", a => a.ShortcutKey)
+                .AddAttribute("publishToServer", a => a.PublishToServer)
+                .AddAttribute("workbookParameter", a => a.WorkbookParameter);
             builder.AddConstraint(new AttributeValueRangeConstraint("x:sheetId", true, 0, true, 65533, true));
             builder.AddConstraint(new AttributeValueLengthConstraint("x:comment", 0, 255) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueLengthConstraint("x:name", 1, 255) { Application = ApplicationType.Excel });
@@ -34355,10 +34355,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:functionGroup");
             builder.AddElement<FunctionGroup>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new AttributeValueLengthConstraint("x:name", 0, 32) { Application = ApplicationType.Excel });
         }
 
@@ -34428,11 +34428,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:ext");
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Table>();
             builder.AddElement<TableExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Table), 1, 1, version: FileFormatVersions.Office2010),
@@ -34531,9 +34531,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FromMarker>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ToMarker>();
             builder.AddElement<ObjectAnchor>()
-.AddAttribute("moveWithCells", a => a.MoveWithCells)
-.AddAttribute("sizeWithCells", a => a.SizeWithCells)
-.AddAttribute("z-order", a => a.ZOrder);
+                .AddAttribute("moveWithCells", a => a.MoveWithCells)
+                .AddAttribute("sizeWithCells", a => a.SizeWithCells)
+                .AddAttribute("z-order", a => a.ZOrder);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FromMarker), 1, 1, version: FileFormatVersions.Office2010),
@@ -34874,11 +34874,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("x:ext");
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Id>();
             builder.AddElement<ConditionalFormattingRuleExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Id), 1, 1, version: FileFormatVersions.Office2010),
@@ -34952,11 +34952,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("x:ext");
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotHierarchy>();
             builder.AddElement<PivotHierarchyExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotHierarchy), 1, 1, version: FileFormatVersions.Office2010),
@@ -35030,11 +35030,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("x:ext");
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotField>();
             builder.AddElement<PivotFieldExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotField), 1, 1, version: FileFormatVersions.Office2010),
@@ -35108,11 +35108,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("x:ext");
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SourceConnection>();
             builder.AddElement<CacheSourceExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SourceConnection), 1, 1, version: FileFormatVersions.Office2010),
@@ -35186,7 +35186,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("x:tableColumns");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableColumn>();
             builder.AddElement<TableColumns>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableColumn), 1, 0)
@@ -35272,11 +35272,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:tableStyleInfo");
             builder.AddElement<TableStyleInfo>()
-.AddAttribute("name", a => a.Name)
-.AddAttribute("showFirstColumn", a => a.ShowFirstColumn)
-.AddAttribute("showLastColumn", a => a.ShowLastColumn)
-.AddAttribute("showRowStripes", a => a.ShowRowStripes)
-.AddAttribute("showColumnStripes", a => a.ShowColumnStripes);
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("showFirstColumn", a => a.ShowFirstColumn)
+                .AddAttribute("showLastColumn", a => a.ShowLastColumn)
+                .AddAttribute("showRowStripes", a => a.ShowRowStripes)
+                .AddAttribute("showColumnStripes", a => a.ShowColumnStripes);
             builder.AddConstraint(new AttributeValueLengthConstraint("x:name", 1, 255) { Application = ApplicationType.Excel });
         }
 
@@ -35408,13 +35408,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:oleItem");
             builder.AddElement<OleItem>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("icon", a => a.Icon)
-.AddAttribute("advise", a => a.Advise)
-.AddAttribute("preferPic", a => a.PreferPicture);
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("icon", a => a.Icon)
+                .AddAttribute("advise", a => a.Advise)
+                .AddAttribute("preferPic", a => a.PreferPicture);
             builder.AddConstraint(new AttributeValueLengthConstraint("x:name", 0, 255));
             builder.AddConstraint(new AttributeValueLengthConstraint("x:name", 1, int.MaxValue));
         }
@@ -36016,7 +36016,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
             builder.AddElement<BorderPropertiesType>()
-.AddAttribute("style", a => a.Style);
+                .AddAttribute("style", a => a.Style);
         }
 
         /// <summary>
@@ -36253,21 +36253,21 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor>();
             builder.AddElement<ControlProperties>()
-.AddAttribute("locked", a => a.Locked)
-.AddAttribute("defaultSize", a => a.DefaultSize)
-.AddAttribute("print", a => a.Print)
-.AddAttribute("disabled", a => a.Disabled)
-.AddAttribute("recalcAlways", a => a.RecalcAlways)
-.AddAttribute("uiObject", a => a.UiObject)
-.AddAttribute("autoFill", a => a.AutoFill)
-.AddAttribute("autoLine", a => a.AutoLine)
-.AddAttribute("autoPict", a => a.AutoPict)
-.AddAttribute("macro", a => a.Macro)
-.AddAttribute("altText", a => a.AltText)
-.AddAttribute("linkedCell", a => a.LinkedCell)
-.AddAttribute("listFillRange", a => a.ListFillRange)
-.AddAttribute("cf", a => a.Cf)
-.AddAttribute("r:id", a => a.Id);
+                .AddAttribute("locked", a => a.Locked)
+                .AddAttribute("defaultSize", a => a.DefaultSize)
+                .AddAttribute("print", a => a.Print)
+                .AddAttribute("disabled", a => a.Disabled)
+                .AddAttribute("recalcAlways", a => a.RecalcAlways)
+                .AddAttribute("uiObject", a => a.UiObject)
+                .AddAttribute("autoFill", a => a.AutoFill)
+                .AddAttribute("autoLine", a => a.AutoLine)
+                .AddAttribute("autoPict", a => a.AutoPict)
+                .AddAttribute("macro", a => a.Macro)
+                .AddAttribute("altText", a => a.AltText)
+                .AddAttribute("linkedCell", a => a.LinkedCell)
+                .AddAttribute("listFillRange", a => a.ListFillRange)
+                .AddAttribute("cf", a => a.Cf)
+                .AddAttribute("r:id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor), 1, 1, version: FileFormatVersions.Office2010)
@@ -36478,18 +36478,18 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor>();
             builder.AddElement<EmbeddedObjectProperties>()
-.AddAttribute("locked", a => a.Locked)
-.AddAttribute("defaultSize", a => a.DefaultSize)
-.AddAttribute("print", a => a.Print)
-.AddAttribute("disabled", a => a.Disabled)
-.AddAttribute("uiObject", a => a.UiObject)
-.AddAttribute("autoFill", a => a.AutoFill)
-.AddAttribute("autoLine", a => a.AutoLine)
-.AddAttribute("autoPict", a => a.AutoPict)
-.AddAttribute("macro", a => a.Macro)
-.AddAttribute("altText", a => a.AltText)
-.AddAttribute("dde", a => a.Dde)
-.AddAttribute("r:id", a => a.Id);
+                .AddAttribute("locked", a => a.Locked)
+                .AddAttribute("defaultSize", a => a.DefaultSize)
+                .AddAttribute("print", a => a.Print)
+                .AddAttribute("disabled", a => a.Disabled)
+                .AddAttribute("uiObject", a => a.UiObject)
+                .AddAttribute("autoFill", a => a.AutoFill)
+                .AddAttribute("autoLine", a => a.AutoLine)
+                .AddAttribute("autoPict", a => a.AutoPict)
+                .AddAttribute("macro", a => a.Macro)
+                .AddAttribute("altText", a => a.AltText)
+                .AddAttribute("dde", a => a.Dde)
+                .AddAttribute("r:id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor), 1, 1, version: FileFormatVersions.Office2010)
@@ -36586,8 +36586,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:sheetPr");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TabColor>();
             builder.AddElement<ChartSheetProperties>()
-.AddAttribute("published", a => a.Published)
-.AddAttribute("codeName", a => a.CodeName);
+                .AddAttribute("published", a => a.Published)
+                .AddAttribute("codeName", a => a.CodeName);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TabColor), 0, 1)
@@ -36773,16 +36773,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:sheetProtection");
             builder.AddElement<ChartSheetProtection>()
-.AddAttribute("password", a => a.Password, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (2L) });
-})
-.AddAttribute("algorithmName", a => a.AlgorithmName)
-.AddAttribute("hashValue", a => a.HashValue)
-.AddAttribute("saltValue", a => a.SaltValue)
-.AddAttribute("spinCount", a => a.SpinCount)
-.AddAttribute("content", a => a.Content)
-.AddAttribute("objects", a => a.Objects);
+                .AddAttribute("password", a => a.Password, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (2L) });
+                })
+                .AddAttribute("algorithmName", a => a.AlgorithmName)
+                .AddAttribute("hashValue", a => a.HashValue)
+                .AddAttribute("saltValue", a => a.SaltValue)
+                .AddAttribute("spinCount", a => a.SpinCount)
+                .AddAttribute("content", a => a.Content)
+                .AddAttribute("objects", a => a.Objects);
         }
 
         /// <inheritdoc/>
@@ -36883,10 +36883,10 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:drawing");
             builder.AddElement<Drawing>()
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new RelationshipExistConstraint("r:id"));
         }
 
@@ -36977,10 +36977,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<LegacyDrawingType>()
-                           .AddAttribute("r:id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           });
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
     }
 
@@ -37216,28 +37216,28 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:drawingHF");
             builder.AddElement<DrawingHeaderFooter>()
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("lho", a => a.Lho)
-.AddAttribute("lhe", a => a.Lhe)
-.AddAttribute("lhf", a => a.Lhf)
-.AddAttribute("cho", a => a.Cho)
-.AddAttribute("che", a => a.Che)
-.AddAttribute("chf", a => a.Chf)
-.AddAttribute("rho", a => a.Rho)
-.AddAttribute("rhe", a => a.Rhe)
-.AddAttribute("rhf", a => a.Rhf)
-.AddAttribute("lfo", a => a.Lfo)
-.AddAttribute("lfe", a => a.Lfe)
-.AddAttribute("lff", a => a.Lff)
-.AddAttribute("cfo", a => a.Cfo)
-.AddAttribute("cfe", a => a.Cfe)
-.AddAttribute("cff", a => a.Cff)
-.AddAttribute("rfo", a => a.Rfo)
-.AddAttribute("rfe", a => a.Rfe)
-.AddAttribute("rff", a => a.Rff);
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("lho", a => a.Lho)
+                .AddAttribute("lhe", a => a.Lhe)
+                .AddAttribute("lhf", a => a.Lhf)
+                .AddAttribute("cho", a => a.Cho)
+                .AddAttribute("che", a => a.Che)
+                .AddAttribute("chf", a => a.Chf)
+                .AddAttribute("rho", a => a.Rho)
+                .AddAttribute("rhe", a => a.Rhe)
+                .AddAttribute("rhf", a => a.Rhf)
+                .AddAttribute("lfo", a => a.Lfo)
+                .AddAttribute("lfe", a => a.Lfe)
+                .AddAttribute("lff", a => a.Lff)
+                .AddAttribute("cfo", a => a.Cfo)
+                .AddAttribute("cfe", a => a.Cfe)
+                .AddAttribute("cff", a => a.Cff)
+                .AddAttribute("rfo", a => a.Rfo)
+                .AddAttribute("rfe", a => a.Rfe)
+                .AddAttribute("rff", a => a.Rff);
         }
 
         /// <inheritdoc/>
@@ -37278,10 +37278,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:picture");
             builder.AddElement<Picture>()
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -37350,7 +37350,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:webPublishItems");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WebPublishItem>();
             builder.AddElement<WebPublishItems>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WebPublishItem), 1, 0)
@@ -37510,9 +37510,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
             builder.AddElement<DataBar>()
-.AddAttribute("minLength", a => a.MinLength)
-.AddAttribute("maxLength", a => a.MaxLength)
-.AddAttribute("showValue", a => a.ShowValue);
+                .AddAttribute("minLength", a => a.MinLength)
+                .AddAttribute("maxLength", a => a.MaxLength)
+                .AddAttribute("showValue", a => a.ShowValue);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject), 2, 2),
@@ -37621,10 +37621,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:iconSet");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject>();
             builder.AddElement<IconSet>()
-.AddAttribute("iconSet", a => a.IconSetValue)
-.AddAttribute("showValue", a => a.ShowValue)
-.AddAttribute("percent", a => a.Percent)
-.AddAttribute("reverse", a => a.Reverse);
+                .AddAttribute("iconSet", a => a.IconSetValue)
+                .AddAttribute("showValue", a => a.ShowValue)
+                .AddAttribute("percent", a => a.Percent)
+                .AddAttribute("reverse", a => a.Reverse);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject), 2, 0)
@@ -37757,7 +37757,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:dataRefs");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataReference>();
             builder.AddElement<DataReferences>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataReference), 0, 0)
@@ -37922,15 +37922,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OutlineProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageSetupProperties>();
             builder.AddElement<SheetProperties>()
-.AddAttribute("syncHorizontal", a => a.SyncHorizontal)
-.AddAttribute("syncVertical", a => a.SyncVertical)
-.AddAttribute("syncRef", a => a.SyncReference)
-.AddAttribute("transitionEvaluation", a => a.TransitionEvaluation)
-.AddAttribute("transitionEntry", a => a.TransitionEntry)
-.AddAttribute("published", a => a.Published)
-.AddAttribute("codeName", a => a.CodeName)
-.AddAttribute("filterMode", a => a.FilterMode)
-.AddAttribute("enableFormatConditionsCalculation", a => a.EnableFormatConditionsCalculation);
+                .AddAttribute("syncHorizontal", a => a.SyncHorizontal)
+                .AddAttribute("syncVertical", a => a.SyncVertical)
+                .AddAttribute("syncRef", a => a.SyncReference)
+                .AddAttribute("transitionEvaluation", a => a.TransitionEvaluation)
+                .AddAttribute("transitionEntry", a => a.TransitionEntry)
+                .AddAttribute("published", a => a.Published)
+                .AddAttribute("codeName", a => a.CodeName)
+                .AddAttribute("filterMode", a => a.FilterMode)
+                .AddAttribute("enableFormatConditionsCalculation", a => a.EnableFormatConditionsCalculation);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TabColor), 0, 1),
@@ -38180,22 +38180,22 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:sheetFormatPr");
             builder.AddElement<SheetFormatProperties>()
-.AddAttribute("baseColWidth", a => a.BaseColumnWidth)
-.AddAttribute("defaultColWidth", a => a.DefaultColumnWidth)
-.AddAttribute("defaultRowHeight", a => a.DefaultRowHeight, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("customHeight", a => a.CustomHeight)
-.AddAttribute("zeroHeight", a => a.ZeroHeight)
-.AddAttribute("thickTop", a => a.ThickTop)
-.AddAttribute("thickBottom", a => a.ThickBottom)
-.AddAttribute("outlineLevelRow", a => a.OutlineLevelRow)
-.AddAttribute("outlineLevelCol", a => a.OutlineLevelColumn)
-.AddAttribute("x14ac:dyDescent", a => a.DyDescent, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-});
+                .AddAttribute("baseColWidth", a => a.BaseColumnWidth)
+                .AddAttribute("defaultColWidth", a => a.DefaultColumnWidth)
+                .AddAttribute("defaultRowHeight", a => a.DefaultRowHeight, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("customHeight", a => a.CustomHeight)
+                .AddAttribute("zeroHeight", a => a.ZeroHeight)
+                .AddAttribute("thickTop", a => a.ThickTop)
+                .AddAttribute("thickBottom", a => a.ThickBottom)
+                .AddAttribute("outlineLevelRow", a => a.OutlineLevelRow)
+                .AddAttribute("outlineLevelCol", a => a.OutlineLevelColumn)
+                .AddAttribute("x14ac:dyDescent", a => a.DyDescent, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                });
             builder.AddConstraint(new AttributeValueRangeConstraint("x:outlineLevelCol", true, 0, true, 7, true));
             builder.AddConstraint(new AttributeValueRangeConstraint("x:outlineLevelRow", true, 0, true, 7, true));
             builder.AddConstraint(new AttributeValueRangeConstraint("x:baseColWidth", true, double.NegativeInfinity, true, 255, true));
@@ -38457,30 +38457,30 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:sheetProtection");
             builder.AddElement<SheetProtection>()
-.AddAttribute("password", a => a.Password, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (2L) });
-})
-.AddAttribute("algorithmName", a => a.AlgorithmName)
-.AddAttribute("hashValue", a => a.HashValue)
-.AddAttribute("saltValue", a => a.SaltValue)
-.AddAttribute("spinCount", a => a.SpinCount)
-.AddAttribute("sheet", a => a.Sheet)
-.AddAttribute("objects", a => a.Objects)
-.AddAttribute("scenarios", a => a.Scenarios)
-.AddAttribute("formatCells", a => a.FormatCells)
-.AddAttribute("formatColumns", a => a.FormatColumns)
-.AddAttribute("formatRows", a => a.FormatRows)
-.AddAttribute("insertColumns", a => a.InsertColumns)
-.AddAttribute("insertRows", a => a.InsertRows)
-.AddAttribute("insertHyperlinks", a => a.InsertHyperlinks)
-.AddAttribute("deleteColumns", a => a.DeleteColumns)
-.AddAttribute("deleteRows", a => a.DeleteRows)
-.AddAttribute("selectLockedCells", a => a.SelectLockedCells)
-.AddAttribute("sort", a => a.Sort)
-.AddAttribute("autoFilter", a => a.AutoFilter)
-.AddAttribute("pivotTables", a => a.PivotTables)
-.AddAttribute("selectUnlockedCells", a => a.SelectUnlockedCells);
+                .AddAttribute("password", a => a.Password, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (2L) });
+                })
+                .AddAttribute("algorithmName", a => a.AlgorithmName)
+                .AddAttribute("hashValue", a => a.HashValue)
+                .AddAttribute("saltValue", a => a.SaltValue)
+                .AddAttribute("spinCount", a => a.SpinCount)
+                .AddAttribute("sheet", a => a.Sheet)
+                .AddAttribute("objects", a => a.Objects)
+                .AddAttribute("scenarios", a => a.Scenarios)
+                .AddAttribute("formatCells", a => a.FormatCells)
+                .AddAttribute("formatColumns", a => a.FormatColumns)
+                .AddAttribute("formatRows", a => a.FormatRows)
+                .AddAttribute("insertColumns", a => a.InsertColumns)
+                .AddAttribute("insertRows", a => a.InsertRows)
+                .AddAttribute("insertHyperlinks", a => a.InsertHyperlinks)
+                .AddAttribute("deleteColumns", a => a.DeleteColumns)
+                .AddAttribute("deleteRows", a => a.DeleteRows)
+                .AddAttribute("selectLockedCells", a => a.SelectLockedCells)
+                .AddAttribute("sort", a => a.Sort)
+                .AddAttribute("autoFilter", a => a.AutoFilter)
+                .AddAttribute("pivotTables", a => a.PivotTables)
+                .AddAttribute("selectUnlockedCells", a => a.SelectUnlockedCells);
         }
 
         /// <inheritdoc/>
@@ -38698,10 +38698,10 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:dimension");
             builder.AddElement<SheetDimension>()
-.AddAttribute("ref", a => a.Reference, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("ref", a => a.Reference, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new UniqueAttributeValueConstraint("x:uniqueName", true, null));
             builder.AddConstraint(new AttributeValueLengthConstraint("x:caption", 1, 65535) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueLengthConstraint("x:name", 1, 65535) { Application = ApplicationType.Excel });
@@ -38939,14 +38939,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:dataConsolidate");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataReferences>();
             builder.AddElement<DataConsolidate>()
-.AddAttribute("function", a => a.Function)
-.AddAttribute("leftLabels", a => a.LeftLabels)
-.AddAttribute("startLabels", a => a.StartLabels, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("topLabels", a => a.TopLabels)
-.AddAttribute("link", a => a.Link);
+                .AddAttribute("function", a => a.Function)
+                .AddAttribute("leftLabels", a => a.LeftLabels)
+                .AddAttribute("startLabels", a => a.StartLabels, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("topLabels", a => a.TopLabels)
+                .AddAttribute("link", a => a.Link);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataReferences), 0, 1)
@@ -39045,8 +39045,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRule>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<ConditionalFormatting>()
-.AddAttribute("pivot", a => a.Pivot)
-.AddAttribute("sqref", a => a.SequenceOfReferences);
+                .AddAttribute("pivot", a => a.Pivot)
+                .AddAttribute("sqref", a => a.SequenceOfReferences);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRule), 1, 0),
@@ -39181,7 +39181,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.SetSchema("x:mps");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberProperty>();
             builder.AddElement<MemberProperties>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberProperty), 1, 0)
@@ -39265,8 +39265,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.SetSchema("x:members");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Member>();
             builder.AddElement<Members>()
-.AddAttribute("count", a => a.Count)
-.AddAttribute("level", a => a.Level);
+                .AddAttribute("count", a => a.Count)
+                .AddAttribute("level", a => a.Level);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Member), 1, 0)
@@ -39399,7 +39399,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.SetSchema("x:items");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Item>();
             builder.AddElement<Items>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Item), 1, 0)
@@ -39610,10 +39610,10 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:worksheetSource");
             builder.AddElement<WorksheetSource>()
-.AddAttribute("ref", a => a.Reference)
-.AddAttribute("name", a => a.Name)
-.AddAttribute("sheet", a => a.Sheet)
-.AddAttribute("r:id", a => a.Id);
+                .AddAttribute("ref", a => a.Reference)
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("sheet", a => a.Sheet)
+                .AddAttribute("r:id", a => a.Id);
             builder.AddConstraint(new AttributeValueLengthConstraint("x:name", 1, 255));
             builder.AddConstraint(new AttributeValueLengthConstraint("x:sheet", 0, 31));
             builder.AddConstraint(new RelationshipExistConstraint("r:id"));
@@ -39687,7 +39687,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Pages>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RangeSets>();
             builder.AddElement<Consolidation>()
-.AddAttribute("autoPage", a => a.AutoPage);
+                .AddAttribute("autoPage", a => a.AutoPage);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Pages), 0, 1),
@@ -40002,21 +40002,21 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor>();
             builder.AddElement<CommentProperties>()
-.AddAttribute("locked", a => a.Locked)
-.AddAttribute("defaultSize", a => a.DefaultSize)
-.AddAttribute("print", a => a.Print)
-.AddAttribute("disabled", a => a.Disabled)
-.AddAttribute("uiObject", a => a.UiObject)
-.AddAttribute("autoFill", a => a.AutoFill)
-.AddAttribute("autoLine", a => a.AutoLine)
-.AddAttribute("altText", a => a.AltText)
-.AddAttribute("textHAlign", a => a.TextHAlign)
-.AddAttribute("textVAlign", a => a.TextVAlign)
-.AddAttribute("lockText", a => a.LockText)
-.AddAttribute("justLastX", a => a.JustLastX)
-.AddAttribute("autoScale", a => a.AutoScale)
-.AddAttribute("rowHidden", a => a.RowHidden)
-.AddAttribute("colHidden", a => a.ColHidden);
+                .AddAttribute("locked", a => a.Locked)
+                .AddAttribute("defaultSize", a => a.DefaultSize)
+                .AddAttribute("print", a => a.Print)
+                .AddAttribute("disabled", a => a.Disabled)
+                .AddAttribute("uiObject", a => a.UiObject)
+                .AddAttribute("autoFill", a => a.AutoFill)
+                .AddAttribute("autoLine", a => a.AutoLine)
+                .AddAttribute("altText", a => a.AltText)
+                .AddAttribute("textHAlign", a => a.TextHAlign)
+                .AddAttribute("textVAlign", a => a.TextVAlign)
+                .AddAttribute("lockText", a => a.LockText)
+                .AddAttribute("justLastX", a => a.JustLastX)
+                .AddAttribute("autoScale", a => a.AutoScale)
+                .AddAttribute("rowHidden", a => a.RowHidden)
+                .AddAttribute("colHidden", a => a.ColHidden);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor), 1, 1, version: FileFormatVersions.Office2010)
@@ -40137,16 +40137,16 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:sortCondition");
             builder.AddElement<SortCondition>()
-.AddAttribute("descending", a => a.Descending)
-.AddAttribute("sortBy", a => a.SortBy)
-.AddAttribute("ref", a => a.Reference, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("customList", a => a.CustomList)
-.AddAttribute("dxfId", a => a.FormatId)
-.AddAttribute("iconSet", a => a.IconSet)
-.AddAttribute("iconId", a => a.IconId);
+                .AddAttribute("descending", a => a.Descending)
+                .AddAttribute("sortBy", a => a.SortBy)
+                .AddAttribute("ref", a => a.Reference, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("customList", a => a.CustomList)
+                .AddAttribute("dxfId", a => a.FormatId)
+                .AddAttribute("iconSet", a => a.IconSet)
+                .AddAttribute("iconId", a => a.IconId);
         }
 
         /// <inheritdoc/>
@@ -40184,10 +40184,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:filter");
             builder.AddElement<Filter>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
- aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new IndexReferenceConstraint("x:fld", ".", null, "x:pivotField", "x:pivotField", 0));
             builder.AddConstraint(new UniqueAttributeValueConstraint("x:id", false, null));
             builder.AddConstraint(new IndexReferenceConstraint("x:iMeasureFld", ".", null, "x:pivotField", "x:pivotField", 0));
@@ -40295,19 +40295,19 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:dateGroupItem");
             builder.AddElement<DateGroupItem>()
-.AddAttribute("year", a => a.Year, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("month", a => a.Month)
-.AddAttribute("day", a => a.Day)
-.AddAttribute("hour", a => a.Hour)
-.AddAttribute("minute", a => a.Minute)
-.AddAttribute("second", a => a.Second)
-.AddAttribute("dateTimeGrouping", a => a.DateTimeGrouping, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("year", a => a.Year, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("month", a => a.Month)
+                .AddAttribute("day", a => a.Day)
+                .AddAttribute("hour", a => a.Hour)
+                .AddAttribute("minute", a => a.Minute)
+                .AddAttribute("second", a => a.Second)
+                .AddAttribute("dateTimeGrouping", a => a.DateTimeGrouping, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new AttributeValueRangeConstraint("x:day", true, 1, true, 31, true));
             builder.AddConstraint(new AttributeValueRangeConstraint("x:hour", true, 0, true, 23, true));
             builder.AddConstraint(new AttributeValueRangeConstraint("x:minute", true, 0, true, 59, true));
@@ -40397,8 +40397,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Filter>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Filter>();
             builder.AddElement<Filters>()
-.AddAttribute("blank", a => a.Blank)
-.AddAttribute("calendarType", a => a.CalendarType);
+                .AddAttribute("blank", a => a.Blank)
+                .AddAttribute("calendarType", a => a.CalendarType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Filter), 0, 0, version: FileFormatVersions.Office2010),
@@ -40475,13 +40475,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:top10");
             builder.AddElement<Top10>()
-.AddAttribute("top", a => a.Top)
-.AddAttribute("percent", a => a.Percent)
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-  aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("filterVal", a => a.FilterValue);
+                .AddAttribute("top", a => a.Top)
+                .AddAttribute("percent", a => a.Percent)
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("filterVal", a => a.FilterValue);
         }
 
         /// <inheritdoc/>
@@ -40550,7 +40550,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:customFilters");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomFilter>();
             builder.AddElement<CustomFilters>()
-.AddAttribute("and", a => a.And);
+                .AddAttribute("and", a => a.And);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomFilter), 1, 2)
@@ -40636,20 +40636,20 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:dynamicFilter");
             builder.AddElement<DynamicFilter>()
-.AddAttribute("type", a => a.Type, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("val", a => a.Val)
-.AddAttribute("maxVal", a => a.MaxVal)
-.AddAttribute("valIso", a => a.ValIso, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("maxValIso", a => a.MaxValIso, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-});
+                .AddAttribute("type", a => a.Type, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("val", a => a.Val)
+                .AddAttribute("maxVal", a => a.MaxVal)
+                .AddAttribute("valIso", a => a.ValIso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("maxValIso", a => a.MaxValIso, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                });
         }
 
         /// <inheritdoc/>
@@ -40698,11 +40698,11 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:colorFilter");
             builder.AddElement<ColorFilter>()
-.AddAttribute("dxfId", a => a.FormatId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("cellColor", a => a.CellColor);
+                .AddAttribute("dxfId", a => a.FormatId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("cellColor", a => a.CellColor);
             builder.AddConstraint(new IndexReferenceConstraint("x:dxfId", "/WorkbookPart/WorkbookStylesPart", null, "x:dxf", "x:dxf", 0));
         }
 
@@ -40752,11 +40752,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:iconFilter");
             builder.AddElement<IconFilter>()
-.AddAttribute("iconSet", a => a.IconSet, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("iconId", a => a.IconId);
+                .AddAttribute("iconSet", a => a.IconSet, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("iconId", a => a.IconId);
         }
 
         /// <inheritdoc/>
@@ -40829,11 +40829,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.SlicerCacheHideItemsWithNoData>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TableSlicerCache>();
             builder.AddElement<SlicerCacheDefinitionExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.SlicerCachePivotTables), 1, 1, version: FileFormatVersions.Office2013),
@@ -40911,11 +40911,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotFilter>();
             builder.AddElement<PivotFilterExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotFilter), 1, 1, version: FileFormatVersions.Office2013),
@@ -40990,11 +40990,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("x:ext");
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.QueryTable>();
             builder.AddElement<QueryTableExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.QueryTable), 1, 1, version: FileFormatVersions.Office2013),
@@ -41070,13 +41070,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:dbPr");
             builder.AddElement<DatabaseProperties>()
-.AddAttribute("connection", a => a.Connection, aBuilder =>
-{
-   aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("command", a => a.Command)
-.AddAttribute("serverCommand", a => a.ServerCommand)
-.AddAttribute("commandType", a => a.CommandType);
+                .AddAttribute("connection", a => a.Connection, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("command", a => a.Command)
+                .AddAttribute("serverCommand", a => a.ServerCommand)
+                .AddAttribute("commandType", a => a.CommandType);
             builder.AddConstraint(new AttributeValueRangeConstraint("x:commandType", true, 1, true, 5, true));
             builder.AddConstraint(new AttributeValueLengthConstraint("x:connection", 0, 65535) { Application = ApplicationType.Excel });
         }
@@ -41204,15 +41204,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:olapPr");
             builder.AddElement<OlapProperties>()
-.AddAttribute("local", a => a.Local)
-.AddAttribute("localConnection", a => a.LocalConnection)
-.AddAttribute("localRefresh", a => a.LocalRefresh)
-.AddAttribute("sendLocale", a => a.SendLocale)
-.AddAttribute("rowDrillCount", a => a.RowDrillCount)
-.AddAttribute("serverFill", a => a.ServerFill)
-.AddAttribute("serverNumberFormat", a => a.ServerNumberFormat)
-.AddAttribute("serverFont", a => a.ServerFont)
-.AddAttribute("serverFontColor", a => a.ServerFontColor);
+                .AddAttribute("local", a => a.Local)
+                .AddAttribute("localConnection", a => a.LocalConnection)
+                .AddAttribute("localRefresh", a => a.LocalRefresh)
+                .AddAttribute("sendLocale", a => a.SendLocale)
+                .AddAttribute("rowDrillCount", a => a.RowDrillCount)
+                .AddAttribute("serverFill", a => a.ServerFill)
+                .AddAttribute("serverNumberFormat", a => a.ServerNumberFormat)
+                .AddAttribute("serverFont", a => a.ServerFont)
+                .AddAttribute("serverFontColor", a => a.ServerFontColor);
             builder.AddConstraint(new AttributeValueRangeConstraint("x:rowDrillCount", true, 1, true, 1048576, true));
         }
 
@@ -41414,19 +41414,19 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("x:webPr");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Tables>();
             builder.AddElement<WebQueryProperties>()
-.AddAttribute("xml", a => a.XmlSource)
-.AddAttribute("sourceData", a => a.SourceData)
-.AddAttribute("parsePre", a => a.ParsePreTag)
-.AddAttribute("consecutive", a => a.Consecutive)
-.AddAttribute("firstRow", a => a.FirstRow)
-.AddAttribute("xl97", a => a.CreatedInExcel97)
-.AddAttribute("textDates", a => a.TextDates)
-.AddAttribute("xl2000", a => a.RefreshedInExcel2000)
-.AddAttribute("url", a => a.Url)
-.AddAttribute("post", a => a.Post)
-.AddAttribute("htmlTables", a => a.HtmlTables)
-.AddAttribute("htmlFormat", a => a.HtmlFormat)
-.AddAttribute("editPage", a => a.EditPage);
+                .AddAttribute("xml", a => a.XmlSource)
+                .AddAttribute("sourceData", a => a.SourceData)
+                .AddAttribute("parsePre", a => a.ParsePreTag)
+                .AddAttribute("consecutive", a => a.Consecutive)
+                .AddAttribute("firstRow", a => a.FirstRow)
+                .AddAttribute("xl97", a => a.CreatedInExcel97)
+                .AddAttribute("textDates", a => a.TextDates)
+                .AddAttribute("xl2000", a => a.RefreshedInExcel2000)
+                .AddAttribute("url", a => a.Url)
+                .AddAttribute("post", a => a.Post)
+                .AddAttribute("htmlTables", a => a.HtmlTables)
+                .AddAttribute("htmlFormat", a => a.HtmlFormat)
+                .AddAttribute("editPage", a => a.EditPage);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tables), 0, 1)
@@ -41678,22 +41678,22 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("x:textPr");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TextFields>();
             builder.AddElement<TextProperties>()
-.AddAttribute("prompt", a => a.Prompt)
-.AddAttribute("fileType", a => a.FileType)
-.AddAttribute("codePage", a => a.CodePage)
-.AddAttribute("characterSet", a => a.TextCharacterSet)
-.AddAttribute("firstRow", a => a.FirstRow)
-.AddAttribute("sourceFile", a => a.SourceFile)
-.AddAttribute("delimited", a => a.Delimited)
-.AddAttribute("decimal", a => a.Decimal)
-.AddAttribute("thousands", a => a.Thousands)
-.AddAttribute("tab", a => a.TabAsDelimiter)
-.AddAttribute("space", a => a.Space)
-.AddAttribute("comma", a => a.Comma)
-.AddAttribute("semicolon", a => a.Semicolon)
-.AddAttribute("consecutive", a => a.Consecutive)
-.AddAttribute("qualifier", a => a.Qualifier)
-.AddAttribute("delimiter", a => a.Delimiter);
+                .AddAttribute("prompt", a => a.Prompt)
+                .AddAttribute("fileType", a => a.FileType)
+                .AddAttribute("codePage", a => a.CodePage)
+                .AddAttribute("characterSet", a => a.TextCharacterSet)
+                .AddAttribute("firstRow", a => a.FirstRow)
+                .AddAttribute("sourceFile", a => a.SourceFile)
+                .AddAttribute("delimited", a => a.Delimited)
+                .AddAttribute("decimal", a => a.Decimal)
+                .AddAttribute("thousands", a => a.Thousands)
+                .AddAttribute("tab", a => a.TabAsDelimiter)
+                .AddAttribute("space", a => a.Space)
+                .AddAttribute("comma", a => a.Comma)
+                .AddAttribute("semicolon", a => a.Semicolon)
+                .AddAttribute("consecutive", a => a.Consecutive)
+                .AddAttribute("qualifier", a => a.Qualifier)
+                .AddAttribute("delimiter", a => a.Delimiter);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TextFields), 0, 1)
@@ -41702,7 +41702,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddConstraint(new AttributeValueLengthConstraint("x:thousands", 1, 255));
             builder.AddConstraint(new AttributeValueRangeConstraint("x:firstRow", true, double.NegativeInfinity, true, 2147483647, true) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueLengthConstraint("x:sourceFile", 1, 218) { Application = ApplicationType.Excel });
-            builder.AddConstraint(new AttributeRequiredConditionToValue("x:sourceFile", "x:prompt", "false") { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeRequiredConditionToValue("x:sourceFile", "x:prompt" , "false") { Application = ApplicationType.Excel });
         }
 
         /// <summary>
@@ -41784,7 +41784,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("x:parameters");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Parameter>();
             builder.AddElement<Parameters>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Parameter), 1, 0)
@@ -41919,11 +41919,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Connection>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.Connection>();
             builder.AddElement<ConnectionExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Connection), 1, 1, version: FileFormatVersions.Office2010),
@@ -41998,7 +41998,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("x:textFields");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TextField>();
             builder.AddElement<TextFields>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TextField), 1, 2001)
@@ -42086,11 +42086,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Consolidation>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorksheetSource>();
             builder.AddElement<CacheSource>()
-.AddAttribute("type", a => a.Type, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("connectionId", a => a.ConnectionId);
+                .AddAttribute("type", a => a.Type, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("connectionId", a => a.ConnectionId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorksheetSource), 1, 1),
@@ -42206,7 +42206,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:cacheFields");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CacheField>();
             builder.AddElement<CacheFields>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheField), 0, 0)
@@ -42279,7 +42279,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:cacheHierarchies");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CacheHierarchy>();
             builder.AddElement<CacheHierarchies>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheHierarchy), 1, 0)
@@ -42352,7 +42352,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:kpis");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Kpi>();
             builder.AddElement<Kpis>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Kpi), 0, 0)
@@ -42562,7 +42562,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:calculatedItems");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CalculatedItem>();
             builder.AddElement<CalculatedItems>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedItem), 1, 0)
@@ -42635,7 +42635,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:calculatedMembers");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CalculatedMember>();
             builder.AddElement<CalculatedMembers>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedMember), 1, 0)
@@ -42708,7 +42708,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:dimensions");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Dimension>();
             builder.AddElement<Dimensions>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Dimension), 0, 0)
@@ -42781,7 +42781,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:measureGroups");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MeasureGroup>();
             builder.AddElement<MeasureGroups>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MeasureGroup), 0, 0)
@@ -42854,7 +42854,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:maps");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MeasureDimensionMap>();
             builder.AddElement<Maps>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MeasureDimensionMap), 0, 0)
@@ -42993,11 +42993,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelinePivotCacheDefinition>();
             builder.AddElement<PivotCacheDefinitionExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotCacheDefinition), 1, 1, version: FileFormatVersions.Office2010),
@@ -43227,20 +43227,20 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberItem>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.StringItem>();
             builder.AddElement<SharedItems>()
-.AddAttribute("containsSemiMixedTypes", a => a.ContainsSemiMixedTypes)
-.AddAttribute("containsNonDate", a => a.ContainsNonDate)
-.AddAttribute("containsDate", a => a.ContainsDate)
-.AddAttribute("containsString", a => a.ContainsString)
-.AddAttribute("containsBlank", a => a.ContainsBlank)
-.AddAttribute("containsMixedTypes", a => a.ContainsMixedTypes)
-.AddAttribute("containsNumber", a => a.ContainsNumber)
-.AddAttribute("containsInteger", a => a.ContainsInteger)
-.AddAttribute("minValue", a => a.MinValue)
-.AddAttribute("maxValue", a => a.MaxValue)
-.AddAttribute("minDate", a => a.MinDate)
-.AddAttribute("maxDate", a => a.MaxDate)
-.AddAttribute("count", a => a.Count)
-.AddAttribute("longText", a => a.LongText);
+                .AddAttribute("containsSemiMixedTypes", a => a.ContainsSemiMixedTypes)
+                .AddAttribute("containsNonDate", a => a.ContainsNonDate)
+                .AddAttribute("containsDate", a => a.ContainsDate)
+                .AddAttribute("containsString", a => a.ContainsString)
+                .AddAttribute("containsBlank", a => a.ContainsBlank)
+                .AddAttribute("containsMixedTypes", a => a.ContainsMixedTypes)
+                .AddAttribute("containsNumber", a => a.ContainsNumber)
+                .AddAttribute("containsInteger", a => a.ContainsInteger)
+                .AddAttribute("minValue", a => a.MinValue)
+                .AddAttribute("maxValue", a => a.MaxValue)
+                .AddAttribute("minDate", a => a.MinDate)
+                .AddAttribute("maxDate", a => a.MaxDate)
+                .AddAttribute("count", a => a.Count)
+                .AddAttribute("longText", a => a.LongText);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MissingItem), 1, 1),
@@ -43336,8 +43336,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.GroupItems>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RangeProperties>();
             builder.AddElement<FieldGroup>()
-.AddAttribute("par", a => a.ParentId)
-.AddAttribute("base", a => a.Base);
+                .AddAttribute("par", a => a.ParentId)
+                .AddAttribute("base", a => a.Base);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -43477,11 +43477,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.CacheField>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueNames>();
             builder.AddElement<CacheFieldExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.CacheField), 1, 1, version: FileFormatVersions.Office2010),
@@ -43556,7 +43556,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("x:fieldsUsage");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FieldUsage>();
             builder.AddElement<FieldsUsage>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FieldUsage), 0, 0)
@@ -43629,7 +43629,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("x:groupLevels");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.GroupLevel>();
             builder.AddElement<GroupLevels>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GroupLevel), 1, 0)
@@ -43764,11 +43764,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.CacheHierarchy>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.CacheHierarchy>();
             builder.AddElement<CacheHierarchyExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.CacheHierarchy), 1, 1, version: FileFormatVersions.Office2010),
@@ -43905,11 +43905,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.CalculatedMember>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.CalculatedMember>();
             builder.AddElement<CalculatedMemberExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.CalculatedMember), 1, 1, version: FileFormatVersions.Office2010),
@@ -44008,24 +44008,24 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:location");
             builder.AddElement<Location>()
-.AddAttribute("ref", a => a.Reference, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("firstHeaderRow", a => a.FirstHeaderRow, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("firstDataRow", a => a.FirstDataRow, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("firstDataCol", a => a.FirstDataColumn, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("rowPageCount", a => a.RowPageCount)
-.AddAttribute("colPageCount", a => a.ColumnsPerPage);
+                .AddAttribute("ref", a => a.Reference, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("firstHeaderRow", a => a.FirstHeaderRow, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("firstDataRow", a => a.FirstDataRow, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("firstDataCol", a => a.FirstDataColumn, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("rowPageCount", a => a.RowPageCount)
+                .AddAttribute("colPageCount", a => a.ColumnsPerPage);
         }
 
         /// <inheritdoc/>
@@ -44094,7 +44094,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:pivotFields");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotField>();
             builder.AddElement<PivotFields>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotField), 1, 0)
@@ -44167,7 +44167,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:rowFields");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Field>();
             builder.AddElement<RowFields>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Field), 1, 0)
@@ -44240,7 +44240,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:rowItems");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowItem>();
             builder.AddElement<RowItems>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowItem), 1, 0)
@@ -44313,7 +44313,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:colFields");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Field>();
             builder.AddElement<ColumnFields>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Field), 1, 0)
@@ -44386,7 +44386,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:colItems");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowItem>();
             builder.AddElement<ColumnItems>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowItem), 1, 1048576)
@@ -44459,7 +44459,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:pageFields");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageField>();
             builder.AddElement<PageFields>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageField), 1, 256)
@@ -44532,7 +44532,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:dataFields");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataField>();
             builder.AddElement<DataFields>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataField), 1, 0)
@@ -44605,7 +44605,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:formats");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Format>();
             builder.AddElement<Formats>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Format), 1, 0)
@@ -44678,7 +44678,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:conditionalFormats");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormat>();
             builder.AddElement<ConditionalFormats>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormat), 1, 0)
@@ -44751,7 +44751,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:chartFormats");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ChartFormat>();
             builder.AddElement<ChartFormats>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ChartFormat), 1, 0)
@@ -44824,7 +44824,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:pivotHierarchies");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotHierarchy>();
             builder.AddElement<PivotHierarchies>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotHierarchy), 1, 0)
@@ -44921,12 +44921,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:pivotTableStyleInfo");
             builder.AddElement<PivotTableStyle>()
-.AddAttribute("name", a => a.Name)
-.AddAttribute("showRowHeaders", a => a.ShowRowHeaders)
-.AddAttribute("showColHeaders", a => a.ShowColumnHeaders)
-.AddAttribute("showRowStripes", a => a.ShowRowStripes)
-.AddAttribute("showColStripes", a => a.ShowColumnStripes)
-.AddAttribute("showLastColumn", a => a.ShowLastColumn);
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("showRowHeaders", a => a.ShowRowHeaders)
+                .AddAttribute("showColHeaders", a => a.ShowColumnHeaders)
+                .AddAttribute("showRowStripes", a => a.ShowRowStripes)
+                .AddAttribute("showColStripes", a => a.ShowColumnStripes)
+                .AddAttribute("showLastColumn", a => a.ShowLastColumn);
             builder.AddConstraint(new AttributeValueLengthConstraint("x:name", 0, 255) { Application = ApplicationType.Excel });
         }
 
@@ -44996,7 +44996,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:filters");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotFilter>();
             builder.AddElement<PivotFilters>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFilter), 0, 0)
@@ -45069,7 +45069,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:rowHierarchiesUsage");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowHierarchyUsage>();
             builder.AddElement<RowHierarchiesUsage>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowHierarchyUsage), 1, 0)
@@ -45142,7 +45142,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:colHierarchiesUsage");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchyUsage>();
             builder.AddElement<ColumnHierarchiesUsage>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchyUsage), 1, 16384)
@@ -45279,11 +45279,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotTableData>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotTableUISettings>();
             builder.AddElement<PivotTableDefinitionExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotTableDefinition), 1, 1, version: FileFormatVersions.Office2010),
@@ -45421,11 +45421,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DataField>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.DataField>();
             builder.AddElement<DataFieldExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DataField), 1, 1, version: FileFormatVersions.Office2010),
@@ -45632,13 +45632,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.QueryTableFields>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortState>();
             builder.AddElement<QueryTableRefresh>()
-.AddAttribute("preserveSortFilterLayout", a => a.PreserveSortFilterLayout)
-.AddAttribute("fieldIdWrapped", a => a.FieldIdWrapped)
-.AddAttribute("headersInLastRefresh", a => a.HeadersInLastRefresh)
-.AddAttribute("minimumVersion", a => a.MinimumVersion)
-.AddAttribute("nextId", a => a.NextId)
-.AddAttribute("unboundColumnsLeft", a => a.UnboundColumnsLeft)
-.AddAttribute("unboundColumnsRight", a => a.UnboundColumnsRight);
+                .AddAttribute("preserveSortFilterLayout", a => a.PreserveSortFilterLayout)
+                .AddAttribute("fieldIdWrapped", a => a.FieldIdWrapped)
+                .AddAttribute("headersInLastRefresh", a => a.HeadersInLastRefresh)
+                .AddAttribute("minimumVersion", a => a.MinimumVersion)
+                .AddAttribute("nextId", a => a.NextId)
+                .AddAttribute("unboundColumnsLeft", a => a.UnboundColumnsLeft)
+                .AddAttribute("unboundColumnsRight", a => a.UnboundColumnsRight);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryTableFields), 1, 1),
@@ -45799,7 +45799,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:sheetCalcPr");
             builder.AddElement<SheetCalculationProperties>()
-.AddAttribute("fullCalcOnLoad", a => a.FullCalculationOnLoad);
+                .AddAttribute("fullCalcOnLoad", a => a.FullCalculationOnLoad);
         }
 
         /// <inheritdoc/>
@@ -45950,9 +45950,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("x:scenarios");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Scenario>();
             builder.AddElement<Scenarios>()
-.AddAttribute("current", a => a.Current)
-.AddAttribute("show", a => a.Show)
-.AddAttribute("sqref", a => a.SequenceOfReferences);
+                .AddAttribute("current", a => a.Current)
+                .AddAttribute("show", a => a.Show)
+                .AddAttribute("sqref", a => a.SequenceOfReferences);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Scenario), 1, 0)
@@ -46025,7 +46025,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("x:mergeCells");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MergeCell>();
             builder.AddElement<MergeCells>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MergeCell), 1, 0)
@@ -46131,10 +46131,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("x:dataValidations");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataValidation>();
             builder.AddElement<DataValidations>()
-.AddAttribute("disablePrompts", a => a.DisablePrompts)
-.AddAttribute("xWindow", a => a.XWindow)
-.AddAttribute("yWindow", a => a.YWindow)
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("disablePrompts", a => a.DisablePrompts)
+                .AddAttribute("xWindow", a => a.XWindow)
+                .AddAttribute("yWindow", a => a.YWindow)
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataValidation), 1, 65534)
@@ -46393,7 +46393,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("x:tableParts");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TablePart>();
             builder.AddElement<TableParts>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TablePart), 0, 0)
@@ -46540,11 +46540,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineReferences>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.WebExtensions>();
             builder.AddElement<WorksheetExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattings), 1, 1, version: FileFormatVersions.Office2010),
@@ -46625,7 +46625,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("x:numFmts");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
             builder.AddElement<NumberingFormats>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat), 0, 0)
@@ -46712,11 +46712,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("x:fonts");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Font>();
             builder.AddElement<Fonts>()
-.AddAttribute("count", a => a.Count)
-.AddAttribute("x14ac:knownFonts", a => a.KnownFonts, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-});
+                .AddAttribute("count", a => a.Count)
+                .AddAttribute("x14ac:knownFonts", a => a.KnownFonts, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0, 65491)
@@ -46789,7 +46789,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.SetSchema("x:fills");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Fill>();
             builder.AddElement<Fills>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Fill), 1, 65430)
@@ -46862,7 +46862,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.SetSchema("x:borders");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Border>();
             builder.AddElement<Borders>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Border), 0, 65430)
@@ -46935,7 +46935,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.SetSchema("x:cellStyleXfs");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellFormat>();
             builder.AddElement<CellStyleFormats>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormat), 1, 65430)
@@ -47008,7 +47008,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.SetSchema("x:cellXfs");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellFormat>();
             builder.AddElement<CellFormats>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormat), 1, 65430)
@@ -47081,7 +47081,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.SetSchema("x:cellStyles");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellStyle>();
             builder.AddElement<CellStyles>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellStyle), 1, 65430)
@@ -47154,7 +47154,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.SetSchema("x:dxfs");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat>();
             builder.AddElement<DifferentialFormats>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), 0, 0)
@@ -47249,9 +47249,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.SetSchema("x:tableStyles");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableStyle>();
             builder.AddElement<TableStyles>()
-.AddAttribute("count", a => a.Count)
-.AddAttribute("defaultTableStyle", a => a.DefaultTableStyle)
-.AddAttribute("defaultPivotStyle", a => a.DefaultPivotStyle);
+                .AddAttribute("count", a => a.Count)
+                .AddAttribute("defaultTableStyle", a => a.DefaultTableStyle)
+                .AddAttribute("defaultPivotStyle", a => a.DefaultPivotStyle);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableStyle), 0, 0)
@@ -47480,11 +47480,11 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerStyles>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineStyles>();
             builder.AddElement<StylesheetExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DifferentialFormats), 1, 1, version: FileFormatVersions.Office2013),
@@ -47574,14 +47574,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:fileVersion");
             builder.AddElement<FileVersion>()
-.AddAttribute("appName", a => a.ApplicationName)
-.AddAttribute("lastEdited", a => a.LastEdited)
-.AddAttribute("lowestEdited", a => a.LowestEdited)
-.AddAttribute("rupBuild", a => a.BuildVersion)
-.AddAttribute("codeName", a => a.CodeName, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-});
+                .AddAttribute("appName", a => a.ApplicationName)
+                .AddAttribute("lastEdited", a => a.LastEdited)
+                .AddAttribute("lowestEdited", a => a.LowestEdited)
+                .AddAttribute("rupBuild", a => a.BuildVersion)
+                .AddAttribute("codeName", a => a.CodeName, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                });
             builder.AddConstraint(new AttributeValueLengthConstraint("x:appName", 0, 65535));
             builder.AddConstraint(new AttributeValueLengthConstraint("x:lastEdited", 0, 65535));
             builder.AddConstraint(new AttributeValueLengthConstraint("x:lowestEdited", 0, 65535));
@@ -47689,16 +47689,16 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:fileSharing");
             builder.AddElement<FileSharing>()
-.AddAttribute("readOnlyRecommended", a => a.ReadOnlyRecommended)
-.AddAttribute("userName", a => a.UserName)
-.AddAttribute("reservationPassword", a => a.ReservationPassword, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (2L) });
-})
-.AddAttribute("algorithmName", a => a.AlgorithmName)
-.AddAttribute("hashValue", a => a.HashValue)
-.AddAttribute("saltValue", a => a.SaltValue)
-.AddAttribute("spinCount", a => a.SpinCount);
+                .AddAttribute("readOnlyRecommended", a => a.ReadOnlyRecommended)
+                .AddAttribute("userName", a => a.UserName)
+                .AddAttribute("reservationPassword", a => a.ReservationPassword, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (2L) });
+                })
+                .AddAttribute("algorithmName", a => a.AlgorithmName)
+                .AddAttribute("hashValue", a => a.HashValue)
+                .AddAttribute("saltValue", a => a.SaltValue)
+                .AddAttribute("spinCount", a => a.SpinCount);
             builder.AddConstraint(new AttributeValueLengthConstraint("x:userName", 1, 54));
         }
 
@@ -47935,28 +47935,28 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:workbookPr");
             builder.AddElement<WorkbookProperties>()
-.AddAttribute("date1904", a => a.Date1904)
-.AddAttribute("dateCompatibility", a => a.DateCompatibility, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-})
-.AddAttribute("showObjects", a => a.ShowObjects)
-.AddAttribute("showBorderUnselectedTables", a => a.ShowBorderUnselectedTables)
-.AddAttribute("filterPrivacy", a => a.FilterPrivacy)
-.AddAttribute("promptedSolutions", a => a.PromptedSolutions)
-.AddAttribute("showInkAnnotation", a => a.ShowInkAnnotation)
-.AddAttribute("backupFile", a => a.BackupFile)
-.AddAttribute("saveExternalLinkValues", a => a.SaveExternalLinkValues)
-.AddAttribute("updateLinks", a => a.UpdateLinks)
-.AddAttribute("codeName", a => a.CodeName)
-.AddAttribute("hidePivotFieldList", a => a.HidePivotFieldList)
-.AddAttribute("showPivotChartFilter", a => a.ShowPivotChartFilter)
-.AddAttribute("allowRefreshQuery", a => a.AllowRefreshQuery)
-.AddAttribute("publishItems", a => a.PublishItems)
-.AddAttribute("checkCompatibility", a => a.CheckCompatibility)
-.AddAttribute("autoCompressPictures", a => a.AutoCompressPictures)
-.AddAttribute("refreshAllConnections", a => a.RefreshAllConnections)
-.AddAttribute("defaultThemeVersion", a => a.DefaultThemeVersion);
+                .AddAttribute("date1904", a => a.Date1904)
+                .AddAttribute("dateCompatibility", a => a.DateCompatibility, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("showObjects", a => a.ShowObjects)
+                .AddAttribute("showBorderUnselectedTables", a => a.ShowBorderUnselectedTables)
+                .AddAttribute("filterPrivacy", a => a.FilterPrivacy)
+                .AddAttribute("promptedSolutions", a => a.PromptedSolutions)
+                .AddAttribute("showInkAnnotation", a => a.ShowInkAnnotation)
+                .AddAttribute("backupFile", a => a.BackupFile)
+                .AddAttribute("saveExternalLinkValues", a => a.SaveExternalLinkValues)
+                .AddAttribute("updateLinks", a => a.UpdateLinks)
+                .AddAttribute("codeName", a => a.CodeName)
+                .AddAttribute("hidePivotFieldList", a => a.HidePivotFieldList)
+                .AddAttribute("showPivotChartFilter", a => a.ShowPivotChartFilter)
+                .AddAttribute("allowRefreshQuery", a => a.AllowRefreshQuery)
+                .AddAttribute("publishItems", a => a.PublishItems)
+                .AddAttribute("checkCompatibility", a => a.CheckCompatibility)
+                .AddAttribute("autoCompressPictures", a => a.AutoCompressPictures)
+                .AddAttribute("refreshAllConnections", a => a.RefreshAllConnections)
+                .AddAttribute("defaultThemeVersion", a => a.DefaultThemeVersion);
         }
 
         /// <inheritdoc/>
@@ -48126,25 +48126,25 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:workbookProtection");
             builder.AddElement<WorkbookProtection>()
-.AddAttribute("workbookPassword", a => a.WorkbookPassword, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (2L) });
-})
-.AddAttribute("revisionsPassword", a => a.RevisionsPassword, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (2L) });
-})
-.AddAttribute("lockStructure", a => a.LockStructure)
-.AddAttribute("lockWindows", a => a.LockWindows)
-.AddAttribute("lockRevision", a => a.LockRevision)
-.AddAttribute("revisionsAlgorithmName", a => a.RevisionsAlgorithmName)
-.AddAttribute("revisionsHashValue", a => a.RevisionsHashValue)
-.AddAttribute("revisionsSaltValue", a => a.RevisionsSaltValue)
-.AddAttribute("revisionsSpinCount", a => a.RevisionsSpinCount)
-.AddAttribute("workbookAlgorithmName", a => a.WorkbookAlgorithmName)
-.AddAttribute("workbookHashValue", a => a.WorkbookHashValue)
-.AddAttribute("workbookSaltValue", a => a.WorkbookSaltValue)
-.AddAttribute("workbookSpinCount", a => a.WorkbookSpinCount);
+                .AddAttribute("workbookPassword", a => a.WorkbookPassword, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (2L) });
+                })
+                .AddAttribute("revisionsPassword", a => a.RevisionsPassword, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (2L) });
+                })
+                .AddAttribute("lockStructure", a => a.LockStructure)
+                .AddAttribute("lockWindows", a => a.LockWindows)
+                .AddAttribute("lockRevision", a => a.LockRevision)
+                .AddAttribute("revisionsAlgorithmName", a => a.RevisionsAlgorithmName)
+                .AddAttribute("revisionsHashValue", a => a.RevisionsHashValue)
+                .AddAttribute("revisionsSaltValue", a => a.RevisionsSaltValue)
+                .AddAttribute("revisionsSpinCount", a => a.RevisionsSpinCount)
+                .AddAttribute("workbookAlgorithmName", a => a.WorkbookAlgorithmName)
+                .AddAttribute("workbookHashValue", a => a.WorkbookHashValue)
+                .AddAttribute("workbookSaltValue", a => a.WorkbookSaltValue)
+                .AddAttribute("workbookSpinCount", a => a.WorkbookSpinCount);
         }
 
         /// <inheritdoc/>
@@ -48333,7 +48333,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
             builder.SetSchema("x:functionGroups");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FunctionGroup>();
             builder.AddElement<FunctionGroups>()
-.AddAttribute("builtInGroupCount", a => a.BuiltInGroupCount);
+                .AddAttribute("builtInGroupCount", a => a.BuiltInGroupCount);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FunctionGroup), 0, 255)
@@ -48628,19 +48628,19 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:calcPr");
             builder.AddElement<CalculationProperties>()
-.AddAttribute("calcId", a => a.CalculationId)
-.AddAttribute("calcMode", a => a.CalculationMode)
-.AddAttribute("fullCalcOnLoad", a => a.FullCalculationOnLoad)
-.AddAttribute("refMode", a => a.ReferenceMode)
-.AddAttribute("iterate", a => a.Iterate)
-.AddAttribute("iterateCount", a => a.IterateCount)
-.AddAttribute("iterateDelta", a => a.IterateDelta)
-.AddAttribute("fullPrecision", a => a.FullPrecision)
-.AddAttribute("calcCompleted", a => a.CalculationCompleted)
-.AddAttribute("calcOnSave", a => a.CalculationOnSave)
-.AddAttribute("concurrentCalc", a => a.ConcurrentCalculation)
-.AddAttribute("concurrentManualCount", a => a.ConcurrentManualCount)
-.AddAttribute("forceFullCalc", a => a.ForceFullCalculation);
+                .AddAttribute("calcId", a => a.CalculationId)
+                .AddAttribute("calcMode", a => a.CalculationMode)
+                .AddAttribute("fullCalcOnLoad", a => a.FullCalculationOnLoad)
+                .AddAttribute("refMode", a => a.ReferenceMode)
+                .AddAttribute("iterate", a => a.Iterate)
+                .AddAttribute("iterateCount", a => a.IterateCount)
+                .AddAttribute("iterateDelta", a => a.IterateDelta)
+                .AddAttribute("fullPrecision", a => a.FullPrecision)
+                .AddAttribute("calcCompleted", a => a.CalculationCompleted)
+                .AddAttribute("calcOnSave", a => a.CalculationOnSave)
+                .AddAttribute("concurrentCalc", a => a.ConcurrentCalculation)
+                .AddAttribute("concurrentManualCount", a => a.ConcurrentManualCount)
+                .AddAttribute("forceFullCalc", a => a.ForceFullCalculation);
         }
 
         /// <inheritdoc/>
@@ -48678,10 +48678,10 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:oleSize");
             builder.AddElement<OleSize>()
-.AddAttribute("ref", a => a.Reference, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("ref", a => a.Reference, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -48927,15 +48927,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:webPublishing");
             builder.AddElement<WebPublishing>()
-.AddAttribute("css", a => a.UseCss)
-.AddAttribute("thicket", a => a.Thicket)
-.AddAttribute("longFileNames", a => a.LongFileNames)
-.AddAttribute("vml", a => a.UseVml)
-.AddAttribute("allowPng", a => a.AllowPng)
-.AddAttribute("targetScreenSize", a => a.TargetScreenSize)
-.AddAttribute("dpi", a => a.Dpi)
-.AddAttribute("codePage", a => a.CodePage)
-.AddAttribute("characterSet", a => a.CharacterSet);
+                .AddAttribute("css", a => a.UseCss)
+                .AddAttribute("thicket", a => a.Thicket)
+                .AddAttribute("longFileNames", a => a.LongFileNames)
+                .AddAttribute("vml", a => a.UseVml)
+                .AddAttribute("allowPng", a => a.AllowPng)
+                .AddAttribute("targetScreenSize", a => a.TargetScreenSize)
+                .AddAttribute("dpi", a => a.Dpi)
+                .AddAttribute("codePage", a => a.CodePage)
+                .AddAttribute("characterSet", a => a.CharacterSet);
         }
 
         /// <inheritdoc/>
@@ -49006,10 +49006,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:fileRecoveryPr");
             builder.AddElement<FileRecoveryProperties>()
-.AddAttribute("autoRecover", a => a.AutoRecover)
-.AddAttribute("crashSave", a => a.CrashSave)
-.AddAttribute("dataExtractLoad", a => a.DataExtractLoad)
-.AddAttribute("repairLoad", a => a.RepairLoad);
+                .AddAttribute("autoRecover", a => a.AutoRecover)
+                .AddAttribute("crashSave", a => a.CrashSave)
+                .AddAttribute("dataExtractLoad", a => a.DataExtractLoad)
+                .AddAttribute("repairLoad", a => a.RepairLoad);
         }
 
         /// <inheritdoc/>
@@ -49078,7 +49078,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("x:webPublishObjects");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WebPublishObject>();
             builder.AddElement<WebPublishObjects>()
-.AddAttribute("count", a => a.Count);
+                .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WebPublishObject), 1, 0)
@@ -49231,11 +49231,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReferences>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties>();
             builder.AddElement<WorkbookExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DefinedNames), 1, 1, version: FileFormatVersions.Office2010),

@@ -81,10 +81,10 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Presentation.TrackList>();
             builder.AddElement<TracksInfo>()
-.AddAttribute("displayLoc", a => a.DisplayLoc, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("displayLoc", a => a.DisplayLoc, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Presentation.TrackList), 0, 1, version: FileFormatVersions.Office2019)
@@ -190,18 +190,18 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("p173:track");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<Track>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("label", a => a.Label, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("lang", a => a.Lang)
-.AddAttribute("r:embed", a => a.Embed)
-.AddAttribute("r:link", a => a.Link);
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("label", a => a.Label, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("lang", a => a.Lang)
+                .AddAttribute("r:embed", a => a.Embed)
+                .AddAttribute("r:link", a => a.Link);
         }
 
         /// <inheritdoc/>

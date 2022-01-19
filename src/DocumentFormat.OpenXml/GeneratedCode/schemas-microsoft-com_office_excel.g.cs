@@ -211,10 +211,10 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.DdeObject>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.UIObject>();
             builder.AddElement<ClientData>()
-.AddAttribute("ObjectType", a => a.ObjectType, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("ObjectType", a => a.ObjectType, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.MoveWithCells), 1, 1),

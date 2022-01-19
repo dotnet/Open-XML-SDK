@@ -105,16 +105,16 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyleVariation>();
             builder.AddElement<ColorStyle>()
-.AddAttribute("meth", a => a.Method, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyleMethodEnum>>(EnumValidator.Instance);
-union.AddValidator(StringValidator.Instance);
-});
-})
-.AddAttribute("id", a => a.Id);
+                .AddAttribute("meth", a => a.Method, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyleMethodEnum>>(EnumValidator.Instance);
+                        union.AddValidator(StringValidator.Instance);
+                    });
+                })
+                .AddAttribute("id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 0)
@@ -294,7 +294,7 @@ union.AddValidator(StringValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ValueAxis>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Wall>();
             builder.AddElement<ChartStyle>()
-.AddAttribute("id", a => a.Id);
+                .AddAttribute("id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.AxisTitle), 1, 1, version: FileFormatVersions.Office2013),
@@ -1115,15 +1115,15 @@ union.AddValidator(StringValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaModulation>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HueModulation>();
             builder.AddElement<StyleColor>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<UInt32Value>(NumberValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColorEnum>>(EnumValidator.Instance);
-union.AddValidator(StringValidator.Instance);
-});
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<UInt32Value>(NumberValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColorEnum>>(EnumValidator.Instance);
+                        union.AddValidator(StringValidator.Instance);
+                    });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -1484,11 +1484,11 @@ union.AddValidator(StringValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor>();
             builder.AddElement<StyleReference>()
-.AddAttribute("idx", a => a.Index, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("mods", a => a.Modifiers);
+                .AddAttribute("idx", a => a.Index, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("mods", a => a.Modifiers);
         }
     }
 
@@ -1618,12 +1618,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor>();
             builder.AddElement<FontReference>()
-.AddAttribute("idx", a => a.Index, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("mods", a => a.Modifiers);
+                .AddAttribute("idx", a => a.Index, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("mods", a => a.Modifiers);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -1737,10 +1737,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddElement<ShapeProperties>()
-.AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
@@ -2099,43 +2099,43 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.UnderlineFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.UnderlineFollowsText>();
             builder.AddElement<TextCharacterPropertiesType>()
-.AddAttribute("kumimoji", a => a.Kumimoji)
-.AddAttribute("lang", a => a.Language)
-.AddAttribute("altLang", a => a.AlternativeLanguage)
-.AddAttribute("sz", a => a.FontSize, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (100L), MaxInclusive = (400000L) });
-})
-.AddAttribute("b", a => a.Bold)
-.AddAttribute("i", a => a.Italic)
-.AddAttribute("u", a => a.Underline, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("strike", a => a.Strike, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("kern", a => a.Kerning, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (400000L) });
-})
-.AddAttribute("cap", a => a.Capital, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("spc", a => a.Spacing, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxInclusive = (400000L) });
-})
-.AddAttribute("normalizeH", a => a.NormalizeHeight)
-.AddAttribute("baseline", a => a.Baseline)
-.AddAttribute("noProof", a => a.NoProof)
-.AddAttribute("dirty", a => a.Dirty)
-.AddAttribute("err", a => a.SpellingError)
-.AddAttribute("smtClean", a => a.SmartTagClean)
-.AddAttribute("smtId", a => a.SmartTagId)
-.AddAttribute("bmk", a => a.Bookmark);
+                .AddAttribute("kumimoji", a => a.Kumimoji)
+                .AddAttribute("lang", a => a.Language)
+                .AddAttribute("altLang", a => a.AlternativeLanguage)
+                .AddAttribute("sz", a => a.FontSize, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (100L), MaxInclusive = (400000L) });
+                })
+                .AddAttribute("b", a => a.Bold)
+                .AddAttribute("i", a => a.Italic)
+                .AddAttribute("u", a => a.Underline, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("strike", a => a.Strike, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("kern", a => a.Kerning, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (400000L) });
+                })
+                .AddAttribute("cap", a => a.Capital, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("spc", a => a.Spacing, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxInclusive = (400000L) });
+                })
+                .AddAttribute("normalizeH", a => a.NormalizeHeight)
+                .AddAttribute("baseline", a => a.Baseline)
+                .AddAttribute("noProof", a => a.NoProof)
+                .AddAttribute("dirty", a => a.Dirty)
+                .AddAttribute("err", a => a.SpellingError)
+                .AddAttribute("smtClean", a => a.SmartTagClean)
+                .AddAttribute("smtId", a => a.SmartTagId)
+                .AddAttribute("bmk", a => a.Bookmark);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
@@ -2479,46 +2479,46 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NormalAutoFit>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapeAutoFit>();
             builder.AddElement<TextBodyProperties>()
-.AddAttribute("rot", a => a.Rotation)
-.AddAttribute("spcFirstLastPara", a => a.UseParagraphSpacing)
-.AddAttribute("vertOverflow", a => a.VerticalOverflow, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("horzOverflow", a => a.HorizontalOverflow, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("vert", a => a.Vertical, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("wrap", a => a.Wrap, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("lIns", a => a.LeftInset)
-.AddAttribute("tIns", a => a.TopInset)
-.AddAttribute("rIns", a => a.RightInset)
-.AddAttribute("bIns", a => a.BottomInset)
-.AddAttribute("numCol", a => a.ColumnCount, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (16L) });
-})
-.AddAttribute("spcCol", a => a.ColumnSpacing, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
-})
-.AddAttribute("rtlCol", a => a.RightToLeftColumns)
-.AddAttribute("fromWordArt", a => a.FromWordArt)
-.AddAttribute("anchor", a => a.Anchor, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("anchorCtr", a => a.AnchorCenter)
-.AddAttribute("forceAA", a => a.ForceAntiAlias)
-.AddAttribute("upright", a => a.UpRight)
-.AddAttribute("compatLnSpc", a => a.CompatibleLineSpacing);
+                .AddAttribute("rot", a => a.Rotation)
+                .AddAttribute("spcFirstLastPara", a => a.UseParagraphSpacing)
+                .AddAttribute("vertOverflow", a => a.VerticalOverflow, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("horzOverflow", a => a.HorizontalOverflow, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("vert", a => a.Vertical, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("wrap", a => a.Wrap, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("lIns", a => a.LeftInset)
+                .AddAttribute("tIns", a => a.TopInset)
+                .AddAttribute("rIns", a => a.RightInset)
+                .AddAttribute("bIns", a => a.BottomInset)
+                .AddAttribute("numCol", a => a.ColumnCount, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (16L) });
+                })
+                .AddAttribute("spcCol", a => a.ColumnSpacing, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
+                })
+                .AddAttribute("rtlCol", a => a.RightToLeftColumns)
+                .AddAttribute("fromWordArt", a => a.FromWordArt)
+                .AddAttribute("anchor", a => a.Anchor, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("anchorCtr", a => a.AnchorCenter)
+                .AddAttribute("forceAA", a => a.ForceAntiAlias)
+                .AddAttribute("upright", a => a.UpRight)
+                .AddAttribute("compatLnSpc", a => a.CompatibleLineSpacing);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetTextWrap), 0, 1),
@@ -2734,34 +2734,34 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<AxisProperties>()
-                           .AddAttribute("visible", a => a.Visible, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                           })
-                           .AddAttribute("majorTick", a => a.MajorTick, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                           })
-                           .AddAttribute("minorTick", a => a.MinorTickProp, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                           })
-                           .AddAttribute("labelPosition", a => a.LabelPosition, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                           })
-                           .AddAttribute("majorGridlines", a => a.MajorGridlines, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                           })
-                           .AddAttribute("minorGridlines", a => a.MinorGridlinesProp, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                           })
-                           .AddAttribute("title", a => a.TitleProp, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                           });
+                .AddAttribute("visible", a => a.Visible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("majorTick", a => a.MajorTick, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("minorTick", a => a.MinorTickProp, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("labelPosition", a => a.LabelPosition, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("majorGridlines", a => a.MajorGridlines, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("minorGridlines", a => a.MinorGridlinesProp, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("title", a => a.TitleProp, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
     }
 
@@ -2874,38 +2874,38 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("cs:dataSeries");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<DataSeries>()
-.AddAttribute("overlap", a => a.Overlap, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100L), MaxInclusive = (100L) });
-})
-.AddAttribute("gapWidth", a => a.GapWidth, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (500L) });
-})
-.AddAttribute("gapDepth", a => a.GapDepth, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (500L) });
-})
-.AddAttribute("doughnutHoleSize", a => a.DoughnutHoleSize, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (10L), MaxInclusive = (90L) });
-})
-.AddAttribute("markerVisible", a => a.MarkerVisible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("hiloLines", a => a.HiloLines, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("dropLines", a => a.DropLines, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("seriesLines", a => a.SeriesLines, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("overlap", a => a.Overlap, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100L), MaxInclusive = (100L) });
+                })
+                .AddAttribute("gapWidth", a => a.GapWidth, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (500L) });
+                })
+                .AddAttribute("gapDepth", a => a.GapDepth, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (500L) });
+                })
+                .AddAttribute("doughnutHoleSize", a => a.DoughnutHoleSize, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (10L), MaxInclusive = (90L) });
+                })
+                .AddAttribute("markerVisible", a => a.MarkerVisible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("hiloLines", a => a.HiloLines, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("dropLines", a => a.DropLines, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("seriesLines", a => a.SeriesLines, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
 
         /// <inheritdoc/>
@@ -2999,30 +2999,30 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("cs:dataLabels");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<DataLabels>()
-.AddAttribute("position", a => a.Position, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("value", a => a.Value, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("seriesName", a => a.SeriesName, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("categoryName", a => a.CategoryName, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("legendKey", a => a.LegendKey, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("percentage", a => a.Percentage, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("position", a => a.Position, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("value", a => a.Value, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("seriesName", a => a.SeriesName, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("categoryName", a => a.CategoryName, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("legendKey", a => a.LegendKey, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("percentage", a => a.Percentage, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
 
         /// <inheritdoc/>
@@ -3094,22 +3094,22 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("cs:dataTable");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<DataTable>()
-.AddAttribute("legendKeys", a => a.LegendKeys, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("horizontalBorder", a => a.HorizontalBorder, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("verticalBorder", a => a.VerticalBorder, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("outlineBorder", a => a.OutlineBorder, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("legendKeys", a => a.LegendKeys, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("horizontalBorder", a => a.HorizontalBorder, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("verticalBorder", a => a.VerticalBorder, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("outlineBorder", a => a.OutlineBorder, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
 
         /// <inheritdoc/>
@@ -3170,18 +3170,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("cs:legend");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<Legend>()
-.AddAttribute("visible", a => a.Visible, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("includeInLayout", a => a.IncludeInLayout, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("position", a => a.Position, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("visible", a => a.Visible, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("includeInLayout", a => a.IncludeInLayout, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("position", a => a.Position, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
 
         /// <inheritdoc/>
@@ -3220,10 +3220,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("cs:title");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<Title>()
-.AddAttribute("position", a => a.Position, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("position", a => a.Position, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
 
         /// <inheritdoc/>
@@ -3284,18 +3284,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("cs:trendline");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<Trendline>()
-.AddAttribute("add", a => a.Add, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("equation", a => a.Equation, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("rsquared", a => a.RSquared, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("add", a => a.Add, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("equation", a => a.Equation, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("rsquared", a => a.RSquared, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
 
         /// <inheritdoc/>
@@ -3389,30 +3389,30 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("cs:view3D");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<View3DProperties>()
-.AddAttribute("rotX", a => a.RotX, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-90L), MaxInclusive = (90L) });
-})
-.AddAttribute("rotY", a => a.RotY, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (360L) });
-})
-.AddAttribute("rAngAx", a => a.RightAngleAxes, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("perspective", a => a.Perspective, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (240L) });
-})
-.AddAttribute("heightPercent", a => a.HeightPercent, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (5L), MaxInclusive = (500L) });
-})
-.AddAttribute("depthPercent", a => a.DepthPercent, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive = (2000L) });
-});
+                .AddAttribute("rotX", a => a.RotX, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-90L), MaxInclusive = (90L) });
+                })
+                .AddAttribute("rotY", a => a.RotY, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (360L) });
+                })
+                .AddAttribute("rAngAx", a => a.RightAngleAxes, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("perspective", a => a.Perspective, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (240L) });
+                })
+                .AddAttribute("heightPercent", a => a.HeightPercent, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (5L), MaxInclusive = (500L) });
+                })
+                .AddAttribute("depthPercent", a => a.DepthPercent, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive = (2000L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -5775,7 +5775,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale>();
             builder.AddElement<StyleEntry>()
-.AddAttribute("mods", a => a.Modifiers);
+                .AddAttribute("mods", a => a.Modifiers);
         }
 
         /// <summary>
@@ -5939,14 +5939,14 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             builder.SetSchema("cs:dataPointMarkerLayout");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<MarkerLayoutProperties>()
-.AddAttribute("symbol", a => a.Symbol, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("size", a => a.Size, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive = (72L) });
-});
+                .AddAttribute("symbol", a => a.Symbol, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("size", a => a.Size, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive = (72L) });
+                });
         }
 
         /// <inheritdoc/>

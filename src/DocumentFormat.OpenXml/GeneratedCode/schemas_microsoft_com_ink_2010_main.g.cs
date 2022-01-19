@@ -302,88 +302,88 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Ink.DestinationLink>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Ink.ContextNodeProperty>();
             builder.AddElement<ContextNode>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("type", a => a.Type, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2010.Ink.KnownContextNodeTypeValues>>(EnumValidator.Instance);
-union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-});
-})
-.AddAttribute("rotatedBoundingBox", a => a.RotatedBoundingBox, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+,-?[0-9]+") });
-})
-.AddAttribute("alignmentLevel", a => a.AlignmentLevel)
-.AddAttribute("contentType", a => a.ContentType)
-.AddAttribute("ascender", a => a.Ascender, aBuilder =>
-{
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<ListValue<StringValue>>(NumberValidator.Instance);
-union.AddValidator<Int32Value>(NumberValidator.Instance);
-});
-})
-.AddAttribute("descender", a => a.Descender, aBuilder =>
-{
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<ListValue<StringValue>>(NumberValidator.Instance);
-union.AddValidator<Int32Value>(NumberValidator.Instance);
-});
-})
-.AddAttribute("baseline", a => a.Baseline, aBuilder =>
-{
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<ListValue<StringValue>>(NumberValidator.Instance);
-union.AddValidator<Int32Value>(NumberValidator.Instance);
-});
-})
-.AddAttribute("midline", a => a.Midline, aBuilder =>
-{
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<ListValue<StringValue>>(NumberValidator.Instance);
-union.AddValidator<Int32Value>(NumberValidator.Instance);
-});
-})
-.AddAttribute("customRecognizerId", a => a.CustomRecognizerId, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("mathML", a => a.MathML)
-.AddAttribute("mathStruct", a => a.MathStruct)
-.AddAttribute("mathSymbol", a => a.MathSymbol)
-.AddAttribute("beginModifierType", a => a.BeginModifierType)
-.AddAttribute("endModifierType", a => a.EndModifierType)
-.AddAttribute("rotationAngle", a => a.RotationAngle)
-.AddAttribute("hotPoints", a => a.HotPoints, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+,-?[0-9]+") });
-})
-.AddAttribute("centroid", a => a.Centroid, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+,-?[0-9]+") });
-})
-.AddAttribute("semanticType", a => a.SemanticType, aBuilder =>
-{
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2010.Ink.KnownSemanticTypeValues>>(EnumValidator.Instance);
-union.AddValidator<UInt32Value>(NumberValidator.Instance);
-});
-})
-.AddAttribute("shapeName", a => a.ShapeName)
-.AddAttribute("shapeGeometry", a => a.ShapeGeometry, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+,-?[0-9]+") });
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("type", a => a.Type, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2010.Ink.KnownContextNodeTypeValues>>(EnumValidator.Instance);
+                        union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                    });
+                })
+                .AddAttribute("rotatedBoundingBox", a => a.RotatedBoundingBox, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+,-?[0-9]+") });
+                })
+                .AddAttribute("alignmentLevel", a => a.AlignmentLevel)
+                .AddAttribute("contentType", a => a.ContentType)
+                .AddAttribute("ascender", a => a.Ascender, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<ListValue<StringValue>>(NumberValidator.Instance);
+                        union.AddValidator<Int32Value>(NumberValidator.Instance);
+                    });
+                })
+                .AddAttribute("descender", a => a.Descender, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<ListValue<StringValue>>(NumberValidator.Instance);
+                        union.AddValidator<Int32Value>(NumberValidator.Instance);
+                    });
+                })
+                .AddAttribute("baseline", a => a.Baseline, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<ListValue<StringValue>>(NumberValidator.Instance);
+                        union.AddValidator<Int32Value>(NumberValidator.Instance);
+                    });
+                })
+                .AddAttribute("midline", a => a.Midline, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<ListValue<StringValue>>(NumberValidator.Instance);
+                        union.AddValidator<Int32Value>(NumberValidator.Instance);
+                    });
+                })
+                .AddAttribute("customRecognizerId", a => a.CustomRecognizerId, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("mathML", a => a.MathML)
+                .AddAttribute("mathStruct", a => a.MathStruct)
+                .AddAttribute("mathSymbol", a => a.MathSymbol)
+                .AddAttribute("beginModifierType", a => a.BeginModifierType)
+                .AddAttribute("endModifierType", a => a.EndModifierType)
+                .AddAttribute("rotationAngle", a => a.RotationAngle)
+                .AddAttribute("hotPoints", a => a.HotPoints, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+,-?[0-9]+") });
+                })
+                .AddAttribute("centroid", a => a.Centroid, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+,-?[0-9]+") });
+                })
+                .AddAttribute("semanticType", a => a.SemanticType, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2010.Ink.KnownSemanticTypeValues>>(EnumValidator.Instance);
+                        union.AddValidator<UInt32Value>(NumberValidator.Instance);
+                    });
+                })
+                .AddAttribute("shapeName", a => a.ShapeName)
+                .AddAttribute("shapeGeometry", a => a.ShapeGeometry, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+,-?[0-9]+") });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Ink.ContextNodeProperty), 0, 0),
@@ -440,10 +440,10 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+,-?[0-9]+") })
             base.ConfigureMetadata(builder);
             builder.SetSchema("msink:property");
             builder.AddElement<ContextNodeProperty>()
-.AddAttribute("type", a => a.Type, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-});
+                .AddAttribute("type", a => a.Type, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                });
         }
 
         /// <inheritdoc/>
@@ -540,15 +540,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<ContextLinkType>()
-                           .AddAttribute("direction", a => a.Direction)
-                           .AddAttribute("ref", a => a.Reference, aBuilder =>
-                           {
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                                   union.AddValidator<UInt32Value>(NumberValidator.Instance);
-                               });
-                           });
+                .AddAttribute("direction", a => a.Direction)
+                .AddAttribute("ref", a => a.Reference, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                        union.AddValidator<UInt32Value>(NumberValidator.Instance);
+                    });
+                });
         }
     }
 

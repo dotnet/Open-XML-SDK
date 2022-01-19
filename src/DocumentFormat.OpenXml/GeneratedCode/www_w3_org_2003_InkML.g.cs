@@ -91,10 +91,10 @@ namespace DocumentFormat.OpenXml.InkML
             builder.AddChild<DocumentFormat.OpenXml.InkML.TraceGroup>();
             builder.AddChild<DocumentFormat.OpenXml.InkML.TraceView>();
             builder.AddElement<Ink>()
-.AddAttribute("documentID", a => a.DocumentId, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-});
+                .AddAttribute("documentID", a => a.DocumentId, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
@@ -175,10 +175,10 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("inkml:bind");
             builder.AddElement<Bind>()
-.AddAttribute("source", a => a.Source)
-.AddAttribute("target", a => a.Target)
-.AddAttribute("column", a => a.Column)
-.AddAttribute("variable", a => a.Variable);
+                .AddAttribute("source", a => a.Source)
+                .AddAttribute("target", a => a.Target)
+                .AddAttribute("column", a => a.Column)
+                .AddAttribute("variable", a => a.Variable);
         }
 
         /// <inheritdoc/>
@@ -254,9 +254,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("inkml:table");
             builder.AddElement<Table>()
-.AddAttribute("xml:id", a => a.Id)
-.AddAttribute("apply", a => a.Apply)
-.AddAttribute("interpolation", a => a.Interpolation);
+                .AddAttribute("xml:id", a => a.Id)
+                .AddAttribute("apply", a => a.Apply)
+                .AddAttribute("interpolation", a => a.Interpolation);
         }
 
         /// <inheritdoc/>
@@ -310,7 +310,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("inkml:matrix");
             builder.AddElement<Matrix>()
-.AddAttribute("xml:id", a => a.Id);
+                .AddAttribute("xml:id", a => a.Id);
         }
 
         /// <inheritdoc/>
@@ -410,12 +410,12 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             builder.AddChild<DocumentFormat.OpenXml.InkML.Matrix>();
             builder.AddChild<DocumentFormat.OpenXml.InkML.Table>();
             builder.AddElement<Mapping>()
-.AddAttribute("xml:id", a => a.Id)
-.AddAttribute("type", a => a.Type)
-.AddAttribute("mappingRef", a => a.MappingRef, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-});
+                .AddAttribute("xml:id", a => a.Id)
+                .AddAttribute("type", a => a.Type)
+                .AddAttribute("mappingRef", a => a.MappingRef, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -591,49 +591,49 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             builder.SetSchema("inkml:channel");
             builder.AddChild<DocumentFormat.OpenXml.InkML.Mapping>();
             builder.AddElement<Channel>()
-.AddAttribute("xml:id", a => a.Id)
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardChannelNameValues>>(EnumValidator.Instance);
-union.AddValidator(StringValidator.Instance);
-});
-})
-.AddAttribute("type", a => a.Type)
-.AddAttribute("default", a => a.Default, aBuilder =>
-{
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<DecimalValue>(NumberValidator.Instance);
-union.AddValidator<BooleanValue>(NumberValidator.Instance);
-});
-})
-.AddAttribute("min", a => a.Min)
-.AddAttribute("max", a => a.Max)
-.AddAttribute("orientation", a => a.Orientation)
-.AddAttribute("respectTo", a => a.RespectTo, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-})
-.AddAttribute("units", a => a.Units, aBuilder =>
-{
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(EnumValidator.Instance);
-union.AddValidator(StringValidator.Instance);
-});
-});
+                .AddAttribute("xml:id", a => a.Id)
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardChannelNameValues>>(EnumValidator.Instance);
+                        union.AddValidator(StringValidator.Instance);
+                    });
+                })
+                .AddAttribute("type", a => a.Type)
+                .AddAttribute("default", a => a.Default, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<DecimalValue>(NumberValidator.Instance);
+                        union.AddValidator<BooleanValue>(NumberValidator.Instance);
+                    });
+                })
+                .AddAttribute("min", a => a.Min)
+                .AddAttribute("max", a => a.Max)
+                .AddAttribute("orientation", a => a.Orientation)
+                .AddAttribute("respectTo", a => a.RespectTo, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                })
+                .AddAttribute("units", a => a.Units, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator(StringValidator.Instance);
+                    });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, 0)
@@ -769,45 +769,45 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("inkml:channelProperty");
             builder.AddElement<ChannelProperty>()
-.AddAttribute("channel", a => a.Channel, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardChannelNameValues>>(EnumValidator.Instance);
-union.AddValidator(StringValidator.Instance);
-});
-})
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardChannelPropertyNameValues>>(EnumValidator.Instance);
-union.AddValidator(StringValidator.Instance);
-});
-})
-.AddAttribute("value", a => a.Value, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("units", a => a.Units, aBuilder =>
-{
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(EnumValidator.Instance);
-union.AddValidator(StringValidator.Instance);
-});
-});
+                .AddAttribute("channel", a => a.Channel, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardChannelNameValues>>(EnumValidator.Instance);
+                        union.AddValidator(StringValidator.Instance);
+                    });
+                })
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardChannelPropertyNameValues>>(EnumValidator.Instance);
+                        union.AddValidator(StringValidator.Instance);
+                    });
+                })
+                .AddAttribute("value", a => a.Value, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("units", a => a.Units, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator(StringValidator.Instance);
+                    });
+                });
             builder.AddConstraint(new AttributeValueSetConstraint("inkml:units", true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 });
         }
 
@@ -882,7 +882,7 @@ union.AddValidator(StringValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.InkML.Channel>();
             builder.AddChild<DocumentFormat.OpenXml.InkML.IntermittentChannels>();
             builder.AddElement<TraceFormat>()
-.AddAttribute("xml:id", a => a.Id);
+                .AddAttribute("xml:id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Channel), 0, 0),
@@ -936,11 +936,11 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("inkml:sampleRate");
             builder.AddElement<SampleRate>()
-.AddAttribute("uniform", a => a.Uniform)
-.AddAttribute("value", a => a.Value, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("uniform", a => a.Uniform)
+                .AddAttribute("value", a => a.Value, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -978,10 +978,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("inkml:latency");
             builder.AddElement<Latency>()
-.AddAttribute("value", a => a.Value, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("value", a => a.Value, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -1052,26 +1052,26 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("inkml:activeArea");
             builder.AddElement<ActiveArea>()
-.AddAttribute("size", a => a.Size)
-.AddAttribute("height", a => a.Height)
-.AddAttribute("width", a => a.Width)
-.AddAttribute("units", a => a.Units, aBuilder =>
-{
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(EnumValidator.Instance);
-union.AddValidator(StringValidator.Instance);
-});
-});
+                .AddAttribute("size", a => a.Size)
+                .AddAttribute("height", a => a.Height)
+                .AddAttribute("width", a => a.Width)
+                .AddAttribute("units", a => a.Units, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator(StringValidator.Instance);
+                    });
+                });
             builder.AddConstraint(new AttributeValueSetConstraint("inkml:units", true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 });
         }
 
@@ -1132,31 +1132,31 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("inkml:srcProperty");
             builder.AddElement<SourceProperty>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("value", a => a.Value, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("units", a => a.Units, aBuilder =>
-{
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(EnumValidator.Instance);
-union.AddValidator(StringValidator.Instance);
-});
-});
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("value", a => a.Value, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("units", a => a.Units, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator(StringValidator.Instance);
+                    });
+                });
             builder.AddConstraint(new AttributeValueSetConstraint("inkml:units", true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 });
         }
 
@@ -1279,8 +1279,8 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("inkml:annotation");
             builder.AddElement<Annotation>()
-.AddAttribute("type", a => a.Type)
-.AddAttribute("encoding", a => a.Encoding);
+                .AddAttribute("type", a => a.Type)
+                .AddAttribute("encoding", a => a.Encoding);
         }
 
         /// <inheritdoc/>
@@ -1371,12 +1371,12 @@ union.AddValidator(StringValidator.Instance);
             builder.SetSchema("inkml:annotationXML");
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Emma>();
             builder.AddElement<AnnotationXml>()
-.AddAttribute("type", a => a.Type)
-.AddAttribute("encoding", a => a.Encoding)
-.AddAttribute("href", a => a.Href, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-});
+                .AddAttribute("type", a => a.Type)
+                .AddAttribute("encoding", a => a.Encoding)
+                .AddAttribute("href", a => a.Href, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Emma), 0, 1)
@@ -1486,44 +1486,44 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             builder.AddChild<DocumentFormat.OpenXml.InkML.Annotation>();
             builder.AddChild<DocumentFormat.OpenXml.InkML.AnnotationXml>();
             builder.AddElement<BrushProperty>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardBrushPropertyNameValues>>(EnumValidator.Instance);
-union.AddValidator(StringValidator.Instance);
-});
-})
-.AddAttribute("value", a => a.Value, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<DecimalValue>(NumberValidator.Instance);
-union.AddValidator<BooleanValue>(NumberValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.PenTipShapeValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.RasterOperationValues>>(EnumValidator.Instance);
-union.AddValidator(StringValidator.Instance);
-});
-})
-.AddAttribute("units", a => a.Units, aBuilder =>
-{
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(EnumValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(EnumValidator.Instance);
-union.AddValidator(StringValidator.Instance);
-});
-});
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardBrushPropertyNameValues>>(EnumValidator.Instance);
+                        union.AddValidator(StringValidator.Instance);
+                    });
+                })
+                .AddAttribute("value", a => a.Value, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<DecimalValue>(NumberValidator.Instance);
+                        union.AddValidator<BooleanValue>(NumberValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.PenTipShapeValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.RasterOperationValues>>(EnumValidator.Instance);
+                        union.AddValidator(StringValidator.Instance);
+                    });
+                })
+                .AddAttribute("units", a => a.Units, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator(StringValidator.Instance);
+                    });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 0),
@@ -1612,11 +1612,11 @@ union.AddValidator(StringValidator.Instance);
             builder.SetSchema("inkml:canvas");
             builder.AddChild<DocumentFormat.OpenXml.InkML.TraceFormat>();
             builder.AddElement<Canvas>()
-.AddAttribute("xml:id", a => a.Id)
-.AddAttribute("traceFormatRef", a => a.TraceFormatRef, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-});
+                .AddAttribute("xml:id", a => a.Id)
+                .AddAttribute("traceFormatRef", a => a.TraceFormatRef, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 0, 1)
@@ -1716,8 +1716,8 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             builder.SetSchema("inkml:canvasTransform");
             builder.AddChild<DocumentFormat.OpenXml.InkML.Mapping>();
             builder.AddElement<CanvasTransform>()
-.AddAttribute("xml:id", a => a.Id)
-.AddAttribute("invertible", a => a.Invertible);
+                .AddAttribute("xml:id", a => a.Id)
+                .AddAttribute("invertible", a => a.Invertible);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 1, 2)
@@ -1858,18 +1858,18 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             builder.AddChild<DocumentFormat.OpenXml.InkML.SourceProperty>();
             builder.AddChild<DocumentFormat.OpenXml.InkML.TraceFormat>();
             builder.AddElement<InkSource>()
-.AddAttribute("xml:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("manufacturer", a => a.Manufacturer)
-.AddAttribute("model", a => a.Model)
-.AddAttribute("serialNo", a => a.SerialNo)
-.AddAttribute("specificationRef", a => a.SpecificationRef, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-})
-.AddAttribute("description", a => a.Description);
+                .AddAttribute("xml:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("manufacturer", a => a.Manufacturer)
+                .AddAttribute("model", a => a.Model)
+                .AddAttribute("serialNo", a => a.SerialNo)
+                .AddAttribute("specificationRef", a => a.SpecificationRef, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                })
+                .AddAttribute("description", a => a.Description);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 1, 1),
@@ -2017,11 +2017,11 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             builder.AddChild<DocumentFormat.OpenXml.InkML.AnnotationXml>();
             builder.AddChild<DocumentFormat.OpenXml.InkML.BrushProperty>();
             builder.AddElement<Brush>()
-.AddAttribute("xml:id", a => a.Id)
-.AddAttribute("brushRef", a => a.BrushRef, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-});
+                .AddAttribute("xml:id", a => a.Id)
+                .AddAttribute("brushRef", a => a.BrushRef, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 0),
@@ -2112,17 +2112,17 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("inkml:timestamp");
             builder.AddElement<Timestamp>()
-.AddAttribute("xml:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("time", a => a.Time)
-.AddAttribute("timestampRef", a => a.TimestampRef, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-})
-.AddAttribute("timeString", a => a.TimeString)
-.AddAttribute("timeOffset", a => a.TimeOffset);
+                .AddAttribute("xml:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("time", a => a.Time)
+                .AddAttribute("timestampRef", a => a.TimestampRef, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                })
+                .AddAttribute("timeString", a => a.TimeString)
+                .AddAttribute("timeOffset", a => a.TimeOffset);
         }
 
         /// <inheritdoc/>
@@ -2253,23 +2253,23 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("inkml:trace");
             builder.AddElement<Trace>()
-.AddAttribute("xml:id", a => a.Id)
-.AddAttribute("type", a => a.Type)
-.AddAttribute("continuation", a => a.Continuation)
-.AddAttribute("priorRef", a => a.PriorRef, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-})
-.AddAttribute("contextRef", a => a.ContextRef, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-})
-.AddAttribute("brushRef", a => a.BrushRef, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-})
-.AddAttribute("duration", a => a.Duration)
-.AddAttribute("timeOffset", a => a.TimeOffset);
+                .AddAttribute("xml:id", a => a.Id)
+                .AddAttribute("type", a => a.Type)
+                .AddAttribute("continuation", a => a.Continuation)
+                .AddAttribute("priorRef", a => a.PriorRef, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                })
+                .AddAttribute("contextRef", a => a.ContextRef, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                })
+                .AddAttribute("brushRef", a => a.BrushRef, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                })
+                .AddAttribute("duration", a => a.Duration)
+                .AddAttribute("timeOffset", a => a.TimeOffset);
         }
 
         /// <inheritdoc/>
@@ -2369,15 +2369,15 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             builder.AddChild<DocumentFormat.OpenXml.InkML.Trace>();
             builder.AddChild<DocumentFormat.OpenXml.InkML.TraceGroup>();
             builder.AddElement<TraceGroup>()
-.AddAttribute("xml:id", a => a.Id)
-.AddAttribute("contextRef", a => a.ContextRef, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-})
-.AddAttribute("brushRef", a => a.BrushRef, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-});
+                .AddAttribute("xml:id", a => a.Id)
+                .AddAttribute("contextRef", a => a.ContextRef, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                })
+                .AddAttribute("brushRef", a => a.BrushRef, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
@@ -2504,17 +2504,17 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             builder.AddChild<DocumentFormat.OpenXml.InkML.AnnotationXml>();
             builder.AddChild<DocumentFormat.OpenXml.InkML.TraceView>();
             builder.AddElement<TraceView>()
-.AddAttribute("xml:id", a => a.Id)
-.AddAttribute("contextRef", a => a.ContextRef, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-})
-.AddAttribute("traceDataRef", a => a.TraceDataRef, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-})
-.AddAttribute("from", a => a.From)
-.AddAttribute("to", a => a.To);
+                .AddAttribute("xml:id", a => a.Id)
+                .AddAttribute("contextRef", a => a.ContextRef, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                })
+                .AddAttribute("traceDataRef", a => a.TraceDataRef, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                })
+                .AddAttribute("from", a => a.From)
+                .AddAttribute("to", a => a.To);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
@@ -2679,35 +2679,35 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             builder.AddChild<DocumentFormat.OpenXml.InkML.Timestamp>();
             builder.AddChild<DocumentFormat.OpenXml.InkML.TraceFormat>();
             builder.AddElement<Context>()
-.AddAttribute("xml:id", a => a.Id)
-.AddAttribute("contextRef", a => a.ContextRef, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-})
-.AddAttribute("canvasRef", a => a.CanvasRef, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-})
-.AddAttribute("canvasTransformRef", a => a.CanvasTransformRef, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-})
-.AddAttribute("traceFormatRef", a => a.TraceFromatRef, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-})
-.AddAttribute("inkSourceRef", a => a.InkSourceRef, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-})
-.AddAttribute("brushRef", a => a.BrushRef, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-})
-.AddAttribute("timestampRef", a => a.TimestampRef, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-});
+                .AddAttribute("xml:id", a => a.Id)
+                .AddAttribute("contextRef", a => a.ContextRef, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                })
+                .AddAttribute("canvasRef", a => a.CanvasRef, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                })
+                .AddAttribute("canvasTransformRef", a => a.CanvasTransformRef, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                })
+                .AddAttribute("traceFormatRef", a => a.TraceFromatRef, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                })
+                .AddAttribute("inkSourceRef", a => a.InkSourceRef, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                })
+                .AddAttribute("brushRef", a => a.BrushRef, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                })
+                .AddAttribute("timestampRef", a => a.TimestampRef, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Canvas), 0, 1),
