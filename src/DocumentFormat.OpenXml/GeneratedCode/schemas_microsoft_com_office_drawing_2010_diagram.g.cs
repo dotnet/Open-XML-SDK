@@ -128,17 +128,17 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Diagram
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
             builder.AddElement<NonVisualDrawingProperties>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("descr", a => a.Description)
-.AddAttribute("hidden", a => a.Hidden)
-.AddAttribute("title", a => a.Title);
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("descr", a => a.Description)
+                .AddAttribute("hidden", a => a.Hidden)
+                .AddAttribute("title", a => a.Title);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
@@ -222,7 +222,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("dgm14:recolorImg");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<RecolorImages>()
-.AddAttribute("val", a => a.Val);
+                .AddAttribute("val", a => a.Val);
         }
 
         /// <inheritdoc/>

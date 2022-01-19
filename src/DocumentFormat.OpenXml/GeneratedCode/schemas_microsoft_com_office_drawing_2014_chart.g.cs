@@ -109,10 +109,10 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddElement<ShapeProperties>()
-.AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
@@ -200,10 +200,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("c16:explosion");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<UnsignedIntegerType>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -291,7 +291,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<BooleanType>()
-                           .AddAttribute("val", a => a.Val);
+                .AddAttribute("val", a => a.Val);
         }
     }
 
@@ -828,10 +828,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<UniqueIDChart>()
-                           .AddAttribute("val", a => a.Val, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           });
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
     }
 
@@ -1515,10 +1515,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("c16:literalDataChart");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<LiteralDataChart>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -1557,7 +1557,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("c16:showExpandCollapseFieldButtons");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<BooleanFalse>()
-.AddAttribute("val", a => a.Val);
+                .AddAttribute("val", a => a.Val);
         }
 
         /// <inheritdoc/>

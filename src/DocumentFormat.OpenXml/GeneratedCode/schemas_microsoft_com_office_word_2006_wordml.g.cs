@@ -419,15 +419,15 @@ namespace DocumentFormat.OpenXml.Office.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema("wne:fci");
             builder.AddElement<FixedCommandKeyboardCustomization>()
-.AddAttribute("wne:fciName", a => a.CommandName)
-.AddAttribute("wne:fciIndex", a => a.CommandIndex, aBuilder =>
-{
-  aBuilder.AddValidator(new StringValidator() { Length = (2L) });
-})
-.AddAttribute("wne:swArg", a => a.Argument, aBuilder =>
-{
-  aBuilder.AddValidator(new StringValidator() { Length = (2L) });
-});
+                .AddAttribute("wne:fciName", a => a.CommandName)
+                .AddAttribute("wne:fciIndex", a => a.CommandIndex, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (2L) });
+                })
+                .AddAttribute("wne:swArg", a => a.Argument, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (2L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -516,7 +516,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<MacroWllType>()
-                           .AddAttribute("wne:macroName", a => a.MacroName);
+                .AddAttribute("wne:macroName", a => a.MacroName);
         }
     }
 
@@ -602,7 +602,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<AcceleratorKeymapType>()
-                           .AddAttribute("wne:acdName", a => a.AcceleratorName);
+                .AddAttribute("wne:acdName", a => a.AcceleratorName);
         }
     }
 
@@ -640,11 +640,11 @@ namespace DocumentFormat.OpenXml.Office.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema("wne:wch");
             builder.AddElement<CharacterInsertion>()
-.AddAttribute("wne:val", a => a.Val, aBuilder =>
-{
-  aBuilder.AddValidator(RequiredValidator.Instance);
-  aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-});
+                .AddAttribute("wne:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -780,23 +780,23 @@ namespace DocumentFormat.OpenXml.Office.Word
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.MacroKeyboardCustomization>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.WllMacroKeyboardCustomization>();
             builder.AddElement<KeyMapEntry>()
-.AddAttribute("wne:chmPrimary", a => a.CharacterMapPrimary, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (2L) });
-})
-.AddAttribute("wne:chmSecondary", a => a.CharacterMapSecondary, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (2L) });
-})
-.AddAttribute("wne:kcmPrimary", a => a.KeyCodePrimary, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (2L) });
-})
-.AddAttribute("wne:kcmSecondary", a => a.KeyCodeSecondary, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Length = (2L) });
-})
-.AddAttribute("wne:mask", a => a.Mask);
+                .AddAttribute("wne:chmPrimary", a => a.CharacterMapPrimary, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (2L) });
+                })
+                .AddAttribute("wne:chmSecondary", a => a.CharacterMapSecondary, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (2L) });
+                })
+                .AddAttribute("wne:kcmPrimary", a => a.KeyCodePrimary, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (2L) });
+                })
+                .AddAttribute("wne:kcmSecondary", a => a.KeyCodeSecondary, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (2L) });
+                })
+                .AddAttribute("wne:mask", a => a.Mask);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.FixedCommandKeyboardCustomization), 1, 1),
@@ -952,13 +952,13 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("wne:acd");
             builder.AddElement<AllocatedCommand>()
-.AddAttribute("wne:argValue", a => a.ArgumentValue)
-.AddAttribute("wne:fciBasedOn", a => a.CommandBasedOn)
-.AddAttribute("wne:fciIndexBasedOn", a => a.CommandIndexBasedOn, aBuilder =>
-{
-  aBuilder.AddValidator(new StringValidator() { Length = (2L) });
-})
-.AddAttribute("wne:acdName", a => a.AcceleratorName);
+                .AddAttribute("wne:argValue", a => a.ArgumentValue)
+                .AddAttribute("wne:fciBasedOn", a => a.CommandBasedOn)
+                .AddAttribute("wne:fciIndexBasedOn", a => a.CommandIndexBasedOn, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (2L) });
+                })
+                .AddAttribute("wne:acdName", a => a.AcceleratorName);
         }
 
         /// <inheritdoc/>
@@ -1055,17 +1055,17 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("wne:mcd");
             builder.AddElement<Mcd>()
-.AddAttribute("wne:macroName", a => a.MacroName)
-.AddAttribute("wne:name", a => a.Name)
-.AddAttribute("wne:menuHelp", a => a.MenuHelp)
-.AddAttribute("wne:bEncrypt", a => a.BEncrypt, aBuilder =>
-{
-  aBuilder.AddValidator(new StringValidator() { Length = (1L) });
-})
-.AddAttribute("wne:cmg", a => a.Cmg, aBuilder =>
-{
-  aBuilder.AddValidator(new StringValidator() { Length = (1L) });
-});
+                .AddAttribute("wne:macroName", a => a.MacroName)
+                .AddAttribute("wne:name", a => a.Name)
+                .AddAttribute("wne:menuHelp", a => a.MenuHelp)
+                .AddAttribute("wne:bEncrypt", a => a.BEncrypt, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (1L) });
+                })
+                .AddAttribute("wne:cmg", a => a.Cmg, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (1L) });
+                });
             builder.AddConstraint(new AttributeValueLengthConstraint("wne:name", 0, 255) { Version = FileFormatVersions.Office2010 });
             builder.AddConstraint(new AttributeValueSetConstraint("wne:bEncrypt", true, new string[] { "0" }) { Version = FileFormatVersions.Office2010 });
             builder.AddConstraint(new AttributeValueSetConstraint("wne:cmg", true, new string[] { "56" }) { Version = FileFormatVersions.Office2010 });
@@ -1928,10 +1928,10 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema("wne:toolbarData");
             builder.AddElement<ToolbarData>()
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -2264,7 +2264,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("wne:active");
             builder.AddElement<RecordIncluded>()
-.AddAttribute("wne:val", a => a.Val);
+                .AddAttribute("wne:val", a => a.Val);
         }
 
         /// <inheritdoc/>
@@ -2305,10 +2305,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema("wne:hash");
             builder.AddElement<RecordHashCode>()
-.AddAttribute("wne:val", a => a.Val, aBuilder =>
-{
- aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("wne:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>

@@ -167,11 +167,11 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
             builder.SetSchema("clbl:ext");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<ClassificationExtension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new AnyParticle(1, 1)
@@ -302,31 +302,31 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("clbl:label");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<ClassificationLabel>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("enabled", a => a.Enabled, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("setDate", a => a.SetDate)
-.AddAttribute("method", a => a.Method, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("name", a => a.Name)
-.AddAttribute("siteId", a => a.SiteId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}\\}") });
-})
-.AddAttribute("actionId", a => a.ActionId)
-.AddAttribute("contentBits", a => a.ContentBits)
-.AddAttribute("removed", a => a.Removed, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("enabled", a => a.Enabled, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("setDate", a => a.SetDate)
+                .AddAttribute("method", a => a.Method, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("siteId", a => a.SiteId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}\\}") });
+                })
+                .AddAttribute("actionId", a => a.ActionId)
+                .AddAttribute("contentBits", a => a.ContentBits)
+                .AddAttribute("removed", a => a.Removed, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>

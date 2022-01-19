@@ -76,11 +76,11 @@ namespace DocumentFormat.OpenXml.Office2021.Word.ExtensionList
             builder.SetSchema("w16cur:ext");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<Extension>()
-.AddAttribute("w16cur:uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2021));
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("w16cur:uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2021));
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new AnyParticle(1, 1)

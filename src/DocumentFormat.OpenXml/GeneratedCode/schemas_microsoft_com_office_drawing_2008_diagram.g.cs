@@ -166,11 +166,11 @@ namespace DocumentFormat.OpenXml.Office.Drawing
             builder.SetSchema("dsp:dataModelExt");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<DataModelExtensionBlock>()
-.AddAttribute("relId", a => a.RelId)
-.AddAttribute("minVer", a => a.MinVer, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
-});
+                .AddAttribute("relId", a => a.RelId)
+                .AddAttribute("minVer", a => a.MinVer, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
+                });
         }
 
         /// <inheritdoc/>
@@ -288,17 +288,17 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
             builder.AddElement<NonVisualDrawingProperties>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("descr", a => a.Description)
-.AddAttribute("hidden", a => a.Hidden)
-.AddAttribute("title", a => a.Title);
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("descr", a => a.Description)
+                .AddAttribute("hidden", a => a.Hidden)
+                .AddAttribute("title", a => a.Title);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
@@ -415,7 +415,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapeLocks>();
             builder.AddElement<NonVisualDrawingShapeProperties>()
-.AddAttribute("txBox", a => a.TextBox);
+                .AddAttribute("txBox", a => a.TextBox);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeLocks), 0, 1),
@@ -634,10 +634,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddElement<ShapeProperties>()
-.AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
@@ -995,9 +995,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
             builder.AddElement<Transform2D>()
-.AddAttribute("rot", a => a.Rotation)
-.AddAttribute("flipH", a => a.HorizontalFlip)
-.AddAttribute("flipV", a => a.VerticalFlip);
+                .AddAttribute("rot", a => a.Rotation)
+                .AddAttribute("flipH", a => a.HorizontalFlip)
+                .AddAttribute("flipV", a => a.VerticalFlip);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0, 1),
@@ -1365,10 +1365,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddElement<GroupShapeProperties>()
-.AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TransformGroup), 0, 1),
@@ -1487,15 +1487,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Transform2D>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.ShapeNonVisualProperties>();
             builder.AddElement<Shape>()
-.AddAttribute("modelId", a => a.ModelId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<Int32Value>(NumberValidator.Instance);
-union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-});
-});
+                .AddAttribute("modelId", a => a.ModelId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<Int32Value>(NumberValidator.Instance);
+                        union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                    });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.ShapeNonVisualProperties), 1, 1, version: FileFormatVersions.Office2010),

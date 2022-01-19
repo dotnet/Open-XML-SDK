@@ -48,7 +48,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ExternalLinks
             builder.SetSchema("xxlnp:externalLinksPr");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<ExternalLinksPr>()
-.AddAttribute("autoRefresh", a => a.AutoRefresh);
+                .AddAttribute("autoRefresh", a => a.AutoRefresh);
         }
 
         /// <inheritdoc/>

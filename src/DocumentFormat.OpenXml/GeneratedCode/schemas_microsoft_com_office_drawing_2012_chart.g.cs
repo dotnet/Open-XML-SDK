@@ -167,11 +167,11 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
             builder.SetSchema("c15:numFmt");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<NumberingFormat>()
-.AddAttribute("formatCode", a => a.FormatCode, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("sourceLinked", a => a.SourceLinked);
+                .AddAttribute("formatCode", a => a.FormatCode, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("sourceLinked", a => a.SourceLinked);
         }
 
         /// <inheritdoc/>
@@ -269,10 +269,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddElement<ShapeProperties>()
-.AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
@@ -1777,7 +1777,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<BooleanType>()
-                           .AddAttribute("val", a => a.Val);
+                .AddAttribute("val", a => a.Val);
         }
     }
 
@@ -3896,10 +3896,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("c15:explosion");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<Explosion>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>

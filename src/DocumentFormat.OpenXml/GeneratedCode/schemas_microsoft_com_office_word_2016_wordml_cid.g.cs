@@ -158,18 +158,18 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
             builder.SetSchema("w16cid:commentId");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<CommentId>()
-.AddAttribute("w16cid:paraId", a => a.ParaId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2019));
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w16cid:durableId", a => a.DurableId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2019));
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-});
+                .AddAttribute("w16cid:paraId", a => a.ParaId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2019));
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w16cid:durableId", a => a.DurableId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2019));
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                });
         }
 
         /// <inheritdoc/>

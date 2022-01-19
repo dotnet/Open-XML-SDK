@@ -49,11 +49,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.LegacyCompatibility
             builder.SetSchema("com14:compatSp");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<CompatibilityShape>()
-.AddAttribute("spid", a => a.ShapeId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("spid", a => a.ShapeId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
         }
 
         /// <inheritdoc/>

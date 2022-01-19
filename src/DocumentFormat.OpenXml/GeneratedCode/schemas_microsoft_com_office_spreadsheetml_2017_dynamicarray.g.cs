@@ -91,8 +91,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList>();
             builder.AddElement<DynamicArrayProperties>()
-.AddAttribute("fDynamic", a => a.FDynamic)
-.AddAttribute("fCollapsed", a => a.FCollapsed);
+                .AddAttribute("fDynamic", a => a.FDynamic)
+                .AddAttribute("fCollapsed", a => a.FCollapsed);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)

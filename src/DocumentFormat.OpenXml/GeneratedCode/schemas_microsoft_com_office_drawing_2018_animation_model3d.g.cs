@@ -83,10 +83,10 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.OfficeArtExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties>();
             builder.AddElement<EmbeddedAnimation>()
-.AddAttribute("animId", a => a.AnimId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("animId", a => a.AnimId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties), 1, 1, version: FileFormatVersions.Office2019),
@@ -167,14 +167,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("a3danim:posterFrame");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<PosterFrame>()
-.AddAttribute("animId", a => a.AnimId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("frame", a => a.Frame, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-});
+                .AddAttribute("animId", a => a.AnimId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("frame", a => a.Frame, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -310,23 +310,23 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList>();
             builder.AddElement<AnimationProperties>()
-.AddAttribute("name", a => a.Name)
-.AddAttribute("length", a => a.Length, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("count", a => a.Count, aBuilder =>
-{
-aBuilder.AddUnion(union =>
-{
-union.AddValidator<UInt32Value>(NumberValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Indefinite>>(EnumValidator.Instance);
-});
-})
-.AddAttribute("auto", a => a.Auto)
-.AddAttribute("offset", a => a.Offset)
-.AddAttribute("st", a => a.St)
-.AddAttribute("end", a => a.End);
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("length", a => a.Length, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("count", a => a.Count, aBuilder =>
+                {
+                    aBuilder.AddUnion(union =>
+                    {
+                        union.AddValidator<UInt32Value>(NumberValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Indefinite>>(EnumValidator.Instance);
+                    });
+                })
+                .AddAttribute("auto", a => a.Auto)
+                .AddAttribute("offset", a => a.Offset)
+                .AddAttribute("st", a => a.St)
+                .AddAttribute("end", a => a.End);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2019)

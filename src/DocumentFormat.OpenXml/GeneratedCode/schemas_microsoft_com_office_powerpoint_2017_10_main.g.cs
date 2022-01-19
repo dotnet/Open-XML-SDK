@@ -48,10 +48,10 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
             builder.SetSchema("p1710:readonlyRecommended");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<ReadonlyRecommended>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>

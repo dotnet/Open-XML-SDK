@@ -126,10 +126,10 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
             builder.SetSchema("c16r3:dispNaAsBlank");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<BooleanFalse>()
-.AddAttribute("c16r3:val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2019));
-});
+                .AddAttribute("c16r3:val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2019));
+                });
         }
 
         /// <inheritdoc/>

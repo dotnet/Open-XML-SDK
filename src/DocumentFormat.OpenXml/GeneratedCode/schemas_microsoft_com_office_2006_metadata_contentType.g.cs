@@ -173,20 +173,20 @@ namespace DocumentFormat.OpenXml.Office.ContentType
             base.ConfigureMetadata(builder);
             builder.SetSchema("ct:contentTypeSchema");
             builder.AddElement<ContentTypeSchema>()
-.AddAttribute("ct:_", a => a.UnderScore)
-.AddAttribute("ma:_", a => a.ReservedAttributeString)
-.AddAttribute("ma:contentTypeName", a => a.ContentTypeName)
-.AddAttribute("ma:contentTypeID", a => a.ContentTypeID, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { Pattern = ("0x([0-9A-Fa-f][1-9A-Fa-f]|[1-9A-Fa-f][0-9A-Fa-f]|00[0-9A-Fa-f]{32})*"), MinLength = (2L), MaxLength = (1026L) });
-})
-.AddAttribute("ma:contentTypeVersion", a => a.ContentTypeVersion, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
-})
-.AddAttribute("ma:contentTypeDescription", a => a.ContentTypeDescription)
-.AddAttribute("ma:contentTypeScope", a => a.ContentTypeScope)
-.AddAttribute("ma:versionID", a => a.VersionID);
+                .AddAttribute("ct:_", a => a.UnderScore)
+                .AddAttribute("ma:_", a => a.ReservedAttributeString)
+                .AddAttribute("ma:contentTypeName", a => a.ContentTypeName)
+                .AddAttribute("ma:contentTypeID", a => a.ContentTypeID, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Pattern = ("0x([0-9A-Fa-f][1-9A-Fa-f]|[1-9A-Fa-f][0-9A-Fa-f]|00[0-9A-Fa-f]{32})*"), MinLength = (2L), MaxLength = (1026L) });
+                })
+                .AddAttribute("ma:contentTypeVersion", a => a.ContentTypeVersion, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
+                })
+                .AddAttribute("ma:contentTypeDescription", a => a.ContentTypeDescription)
+                .AddAttribute("ma:contentTypeScope", a => a.ContentTypeScope)
+                .AddAttribute("ma:versionID", a => a.VersionID);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new AnyParticle(XsdAny.Any, 1, 0)

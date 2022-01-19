@@ -207,20 +207,20 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList>();
             builder.AddElement<CommentExtensible>()
-.AddAttribute("w16cex:durableId", a => a.DurableId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2021));
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-})
-.AddAttribute("w16cex:dateUtc", a => a.DateUtc, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2021));
-})
-.AddAttribute("w16cex:intelligentPlaceholder", a => a.IntelligentPlaceholder, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2021));
-});
+                .AddAttribute("w16cex:durableId", a => a.DurableId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2021));
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                })
+                .AddAttribute("w16cex:dateUtc", a => a.DateUtc, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2021));
+                })
+                .AddAttribute("w16cex:intelligentPlaceholder", a => a.IntelligentPlaceholder, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2021));
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)

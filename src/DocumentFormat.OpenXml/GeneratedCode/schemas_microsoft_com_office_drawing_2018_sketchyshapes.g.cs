@@ -212,7 +212,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchTypeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchSeed>();
             builder.AddElement<LineSketchStyleProperties>()
-.AddAttribute("sd", a => a.Sd);
+                .AddAttribute("sd", a => a.Sd);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)

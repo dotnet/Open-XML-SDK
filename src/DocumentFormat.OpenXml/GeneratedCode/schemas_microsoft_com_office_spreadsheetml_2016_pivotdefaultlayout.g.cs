@@ -71,9 +71,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.PivotDefaultLayout
             builder.SetSchema("xpdl:pivotTableDefinition16");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<PivotTableDefinition16>()
-.AddAttribute("EnabledSubtotalsDefault", a => a.EnabledSubtotalsDefault)
-.AddAttribute("SubtotalsOnTopDefault", a => a.SubtotalsOnTopDefault)
-.AddAttribute("InsertBlankRowDefault", a => a.InsertBlankRowDefault);
+                .AddAttribute("EnabledSubtotalsDefault", a => a.EnabledSubtotalsDefault)
+                .AddAttribute("SubtotalsOnTopDefault", a => a.SubtotalsOnTopDefault)
+                .AddAttribute("InsertBlankRowDefault", a => a.InsertBlankRowDefault);
         }
 
         /// <inheritdoc/>

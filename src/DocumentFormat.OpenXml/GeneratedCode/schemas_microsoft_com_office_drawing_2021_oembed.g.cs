@@ -91,14 +91,14 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed.OfficeArtExtensionList>();
             builder.AddElement<OEmbedShared>()
-.AddAttribute("srcUrl", a => a.SrcUrl, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("type", a => a.Type, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("srcUrl", a => a.SrcUrl, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("type", a => a.Type, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)

@@ -89,10 +89,10 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.Pivot
             builder.SetSchema("xxpim:ignorableAfterVersion");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<Ignorable>()
-.AddAttribute("version", a => a.Version, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("version", a => a.Version, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -142,14 +142,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("xxpim:dataFieldFutureData");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<DataFieldFutureData>()
-.AddAttribute("version", a => a.Version, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("sourceField", a => a.SourceField, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("version", a => a.Version, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("sourceField", a => a.SourceField, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>

@@ -49,11 +49,11 @@ namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
             base.ConfigureMetadata(builder);
             builder.SetSchema("comp:legacyDrawing");
             builder.AddElement<LegacyDrawing>()
-.AddAttribute("spid", a => a.ShapeId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("spid", a => a.ShapeId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.AddConstraint(new UniqueAttributeValueConstraint("comp:spid", true, null));
         }
 

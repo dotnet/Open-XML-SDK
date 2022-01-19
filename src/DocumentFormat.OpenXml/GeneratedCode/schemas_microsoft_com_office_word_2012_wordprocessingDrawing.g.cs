@@ -71,9 +71,9 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
             builder.SetSchema("wp15:webVideoPr");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<WebVideoProperty>()
-.AddAttribute("embeddedHtml", a => a.EmbeddedHtml)
-.AddAttribute("h", a => a.Height)
-.AddAttribute("w", a => a.Width);
+                .AddAttribute("embeddedHtml", a => a.EmbeddedHtml)
+                .AddAttribute("h", a => a.Height)
+                .AddAttribute("w", a => a.Width);
         }
 
         /// <inheritdoc/>

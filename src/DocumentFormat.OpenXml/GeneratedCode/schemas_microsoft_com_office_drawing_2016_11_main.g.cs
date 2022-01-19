@@ -51,10 +51,10 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing
             builder.SetSchema("a1611:picAttrSrcUrl");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<PictureAttributionSourceURL>()
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>

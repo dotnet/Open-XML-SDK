@@ -97,7 +97,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.LinkedTextBox>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.TextBoxInfo2>();
             builder.AddElement<WordprocessingShape>()
-.AddAttribute("normalEastAsianFlow", a => a.NormalEastAsianFlow);
+                .AddAttribute("normalEastAsianFlow", a => a.NormalEastAsianFlow);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingProperties), 0, 1, version: FileFormatVersions.Office2010),
@@ -313,17 +313,17 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
             builder.AddElement<NonVisualDrawingProperties>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("descr", a => a.Description)
-.AddAttribute("hidden", a => a.Hidden)
-.AddAttribute("title", a => a.Title);
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("descr", a => a.Description)
+                .AddAttribute("hidden", a => a.Hidden)
+                .AddAttribute("title", a => a.Title);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
@@ -440,7 +440,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapeLocks>();
             builder.AddElement<NonVisualDrawingShapeProperties>()
-.AddAttribute("txBox", a => a.TextBox);
+                .AddAttribute("txBox", a => a.TextBox);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeLocks), 0, 1),
@@ -691,10 +691,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddElement<ShapeProperties>()
-.AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
@@ -937,7 +937,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextBoxContent>();
             builder.AddElement<TextBoxInfo2>()
-.AddAttribute("id", a => a.Id);
+                .AddAttribute("id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent), 0, 1),
@@ -1049,14 +1049,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList>();
             builder.AddElement<LinkedTextBox>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("seq", a => a.Sequence, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("seq", a => a.Sequence, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
@@ -1355,46 +1355,46 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NormalAutoFit>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapeAutoFit>();
             builder.AddElement<TextBodyProperties>()
-.AddAttribute("rot", a => a.Rotation)
-.AddAttribute("spcFirstLastPara", a => a.UseParagraphSpacing)
-.AddAttribute("vertOverflow", a => a.VerticalOverflow, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("horzOverflow", a => a.HorizontalOverflow, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("vert", a => a.Vertical, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("wrap", a => a.Wrap, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("lIns", a => a.LeftInset)
-.AddAttribute("tIns", a => a.TopInset)
-.AddAttribute("rIns", a => a.RightInset)
-.AddAttribute("bIns", a => a.BottomInset)
-.AddAttribute("numCol", a => a.ColumnCount, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (16L) });
-})
-.AddAttribute("spcCol", a => a.ColumnSpacing, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
-})
-.AddAttribute("rtlCol", a => a.RightToLeftColumns)
-.AddAttribute("fromWordArt", a => a.FromWordArt)
-.AddAttribute("anchor", a => a.Anchor, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("anchorCtr", a => a.AnchorCenter)
-.AddAttribute("forceAA", a => a.ForceAntiAlias)
-.AddAttribute("upright", a => a.UpRight)
-.AddAttribute("compatLnSpc", a => a.CompatibleLineSpacing);
+                .AddAttribute("rot", a => a.Rotation)
+                .AddAttribute("spcFirstLastPara", a => a.UseParagraphSpacing)
+                .AddAttribute("vertOverflow", a => a.VerticalOverflow, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("horzOverflow", a => a.HorizontalOverflow, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("vert", a => a.Vertical, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("wrap", a => a.Wrap, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("lIns", a => a.LeftInset)
+                .AddAttribute("tIns", a => a.TopInset)
+                .AddAttribute("rIns", a => a.RightInset)
+                .AddAttribute("bIns", a => a.BottomInset)
+                .AddAttribute("numCol", a => a.ColumnCount, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (16L) });
+                })
+                .AddAttribute("spcCol", a => a.ColumnSpacing, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
+                })
+                .AddAttribute("rtlCol", a => a.RightToLeftColumns)
+                .AddAttribute("fromWordArt", a => a.FromWordArt)
+                .AddAttribute("anchor", a => a.Anchor, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("anchorCtr", a => a.AnchorCenter)
+                .AddAttribute("forceAA", a => a.ForceAntiAlias)
+                .AddAttribute("upright", a => a.UpRight)
+                .AddAttribute("compatLnSpc", a => a.CompatibleLineSpacing);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetTextWrap), 0, 1),

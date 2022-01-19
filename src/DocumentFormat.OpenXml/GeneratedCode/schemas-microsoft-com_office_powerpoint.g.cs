@@ -72,7 +72,7 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
             base.ConfigureMetadata(builder);
             builder.SetSchema("pvml:textdata");
             builder.AddElement<TextData>()
-.AddAttribute("id", a => a.Id);
+                .AddAttribute("id", a => a.Id);
         }
 
         /// <inheritdoc/>

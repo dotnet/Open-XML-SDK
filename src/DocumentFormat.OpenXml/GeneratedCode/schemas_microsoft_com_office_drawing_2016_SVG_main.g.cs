@@ -66,8 +66,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.SVG
             builder.SetSchema("asvg:svgBlip");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<SVGBlip>()
-.AddAttribute("r:embed", a => a.Embed)
-.AddAttribute("r:link", a => a.Link);
+                .AddAttribute("r:embed", a => a.Embed)
+                .AddAttribute("r:link", a => a.Link);
         }
 
         /// <inheritdoc/>
