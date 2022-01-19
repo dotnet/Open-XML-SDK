@@ -353,11 +353,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
             builder.SetSchema("c14:style");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<Style>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (101L), MaxInclusive = (148L) });
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (101L), MaxInclusive = (148L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -455,10 +455,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (101L), MaxInclusiv
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddElement<ShapeProperties>()
-.AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
@@ -699,7 +699,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<BooleanFalseType>()
-                           .AddAttribute("val", a => a.Val);
+                .AddAttribute("val", a => a.Val);
         }
     }
 
@@ -735,7 +735,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("c14:showSketchBtn");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ShowSketchButton>()
-.AddAttribute("val", a => a.Val);
+                .AddAttribute("val", a => a.Val);
         }
 
         /// <inheritdoc/>

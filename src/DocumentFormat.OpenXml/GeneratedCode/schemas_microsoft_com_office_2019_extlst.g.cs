@@ -72,10 +72,10 @@ namespace DocumentFormat.OpenXml.Office2021.OfficeExtLst
             builder.SetSchema("oel:ext");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<Extension>()
-.AddAttribute("uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new AnyParticle(1, 1)

@@ -144,7 +144,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList>();
             builder.AddElement<DesignerDrawingProps>()
-.AddAttribute("edtDesignElem", a => a.EdtDesignElem);
+                .AddAttribute("edtDesignElem", a => a.EdtDesignElem);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList), 0, 1, version: FileFormatVersions.Office2021),
@@ -225,14 +225,14 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
             builder.SetSchema("p202:designTag");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<DesignerTag>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>

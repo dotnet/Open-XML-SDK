@@ -80,7 +80,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink.OfficeArtExtensionList>();
             builder.AddElement<ScriptLink>()
-.AddAttribute("val", a => a.Val);
+                .AddAttribute("val", a => a.Val);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)

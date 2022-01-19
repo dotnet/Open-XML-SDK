@@ -270,17 +270,17 @@ namespace DocumentFormat.OpenXml.CustomProperties
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64>();
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort>();
             builder.AddElement<CustomDocumentProperty>()
-.AddAttribute("fmtid", a => a.FormatId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}\\s*") });
-})
-.AddAttribute("pid", a => a.PropertyId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("name", a => a.Name)
-.AddAttribute("linkTarget", a => a.LinkTarget);
+                .AddAttribute("fmtid", a => a.FormatId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}\\s*") });
+                })
+                .AddAttribute("pid", a => a.PropertyId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("linkTarget", a => a.LinkTarget);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1, 1),

@@ -50,7 +50,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation
             builder.SetSchema("p16:designElem");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<DesignElement>()
-.AddAttribute("val", a => a.Val);
+                .AddAttribute("val", a => a.Val);
         }
 
         /// <inheritdoc/>

@@ -70,15 +70,15 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2020.OEmbed
             builder.SetSchema("woe:oembed");
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddElement<OEmbed>()
-.AddAttribute("oEmbedUrl", a => a.OEmbedUrl, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("mediaType", a => a.MediaType, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("picLocksAutoForOEmbed", a => a.PicLocksAutoForOEmbed);
+                .AddAttribute("oEmbedUrl", a => a.OEmbedUrl, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("mediaType", a => a.MediaType, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("picLocksAutoForOEmbed", a => a.PicLocksAutoForOEmbed);
         }
 
         /// <inheritdoc/>

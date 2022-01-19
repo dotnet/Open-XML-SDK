@@ -61,8 +61,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             builder.SetSchema("a14:cameraTool");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<CameraTool>()
-.AddAttribute("cellRange", a => a.CellRange)
-.AddAttribute("spid", a => a.ShapeId);
+                .AddAttribute("cellRange", a => a.CellRange)
+                .AddAttribute("spid", a => a.ShapeId);
             builder.AddConstraint(new AttributeValuePatternConstraint("a14:spid", @"_x0000_s(102[5-9]|10[3-9][0-9]|1[1-9][0-9]{2}|[1-9][0-9]{3,7}|1[0-9]{8}|2[0-5][0-9]{7}|26[0-7][0-9]{6}|268[0-3][0-9]{5}|2684[0-2][0-9]{4}|26843[0-4][0-9]{3}|268435[0-3][0-9]{2}|2684354[0-4][0-9]|26843545[0-6])") { Version = FileFormatVersions.Office2010 });
         }
 
@@ -102,7 +102,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             builder.SetSchema("a14:compatExt");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<CompatExtension>()
-.AddAttribute("spid", a => a.ShapeId);
+                .AddAttribute("spid", a => a.ShapeId);
             builder.AddConstraint(new AttributeValuePatternConstraint("a14:spid", @"_x0000_s(102[5-9]|10[3-9][0-9]|1[1-9][0-9]{2}|[1-9][0-9]{3,7}|1[0-9]{8}|2[0-5][0-9]{7}|26[0-7][0-9]{6}|268[0-3][0-9]{5}|2684[0-2][0-9]{4}|26843[0-4][0-9]{3}|268435[0-3][0-9]{2}|2684354[0-4][0-9]|26843545[0-6])") { Version = FileFormatVersions.Office2010 });
         }
 
@@ -142,10 +142,10 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             builder.SetSchema("a14:isCanvas");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<IsCanvas>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -233,14 +233,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Transform2D>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.NonVisualContentPartProperties>();
             builder.AddElement<GvmlContentPart>()
-.AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("r:id", a => a.RelationshipId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("r:id", a => a.RelationshipId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.NonVisualContentPartProperties), 0, 1, version: FileFormatVersions.Office2010),
@@ -324,7 +324,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("a14:shadowObscured");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ShadowObscured>()
-.AddAttribute("val", a => a.Val);
+                .AddAttribute("val", a => a.Val);
         }
 
         /// <inheritdoc/>
@@ -609,22 +609,22 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetDash>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddElement<HiddenLineProperties>()
-.AddAttribute("w", a => a.Width, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (20116800L) });
-})
-.AddAttribute("cap", a => a.CapType, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("cmpd", a => a.CompoundLineType, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("algn", a => a.Alignment, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("w", a => a.Width, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (20116800L) });
+                })
+                .AddAttribute("cap", a => a.CapType, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("cmpd", a => a.CompoundLineType, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("algn", a => a.Alignment, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -986,22 +986,22 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ContourColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.AddElement<HiddenShape3D>()
-.AddAttribute("z", a => a.Z, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-})
-.AddAttribute("extrusionH", a => a.ExtrusionHeight, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
-})
-.AddAttribute("contourW", a => a.ContourWidth, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
-})
-.AddAttribute("prstMaterial", a => a.PresetMaterial, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
+                .AddAttribute("z", a => a.Z, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                })
+                .AddAttribute("extrusionH", a => a.ExtrusionHeight, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+                })
+                .AddAttribute("contourW", a => a.ContourWidth, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+                })
+                .AddAttribute("prstMaterial", a => a.PresetMaterial, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BevelTop), 0, 1),
@@ -1187,7 +1187,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("a14:useLocalDpi");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<UseLocalDpi>()
-.AddAttribute("val", a => a.Val);
+                .AddAttribute("val", a => a.Val);
         }
 
         /// <inheritdoc/>
@@ -1449,16 +1449,16 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
             builder.AddElement<ContentPartLocks>()
-.AddAttribute("noGrp", a => a.NoGrouping)
-.AddAttribute("noSelect", a => a.NoSelection)
-.AddAttribute("noRot", a => a.NoRotation)
-.AddAttribute("noChangeAspect", a => a.NoChangeAspect)
-.AddAttribute("noMove", a => a.NoMove)
-.AddAttribute("noResize", a => a.NoResize)
-.AddAttribute("noEditPoints", a => a.NoEditPoints)
-.AddAttribute("noAdjustHandles", a => a.NoAdjustHandles)
-.AddAttribute("noChangeArrowheads", a => a.NoChangeArrowheads)
-.AddAttribute("noChangeShapeType", a => a.NoChangeShapeType);
+                .AddAttribute("noGrp", a => a.NoGrouping)
+                .AddAttribute("noSelect", a => a.NoSelection)
+                .AddAttribute("noRot", a => a.NoRotation)
+                .AddAttribute("noChangeAspect", a => a.NoChangeAspect)
+                .AddAttribute("noMove", a => a.NoMove)
+                .AddAttribute("noResize", a => a.NoResize)
+                .AddAttribute("noEditPoints", a => a.NoEditPoints)
+                .AddAttribute("noAdjustHandles", a => a.NoAdjustHandles)
+                .AddAttribute("noChangeArrowheads", a => a.NoChangeArrowheads)
+                .AddAttribute("noChangeShapeType", a => a.NoChangeShapeType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
@@ -1547,26 +1547,26 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema("a14:foregroundMark");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ForegroundMark>()
-.AddAttribute("x1", a => a.FirstXCoordinate, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("y1", a => a.FirstYCoordinate, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("x2", a => a.SecondXCoordinate, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("y2", a => a.SecondYCoordinate, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-});
+                .AddAttribute("x1", a => a.FirstXCoordinate, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("y1", a => a.FirstYCoordinate, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("x2", a => a.SecondXCoordinate, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("y2", a => a.SecondYCoordinate, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -1638,26 +1638,26 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("a14:backgroundMark");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<BackgroundMark>()
-.AddAttribute("x1", a => a.FirstXCoordinate, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("y1", a => a.FirstYCoordinate, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("x2", a => a.SecondXCoordinate, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("y2", a => a.SecondYCoordinate, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-});
+                .AddAttribute("x1", a => a.FirstXCoordinate, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("y1", a => a.FirstYCoordinate, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("x2", a => a.SecondXCoordinate, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("y2", a => a.SecondYCoordinate, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -1696,10 +1696,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("a14:artisticBlur");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticBlur>()
-.AddAttribute("radius", a => a.Radius, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
-});
+                .AddAttribute("radius", a => a.Radius, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -1749,14 +1749,14 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("a14:artisticCement");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticCement>()
-.AddAttribute("trans", a => a.Transparancy, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("crackSpacing", a => a.CrackSpacing, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
-});
+                .AddAttribute("trans", a => a.Transparancy, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("crackSpacing", a => a.CrackSpacing, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -1806,14 +1806,14 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("a14:artisticChalkSketch");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticChalkSketch>()
-.AddAttribute("trans", a => a.Transparancy, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("pressure", a => a.Pressure, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (4L) });
-});
+                .AddAttribute("trans", a => a.Transparancy, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("pressure", a => a.Pressure, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (4L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -1863,14 +1863,14 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("a14:artisticCrisscrossEtching");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticCrisscrossEtching>()
-.AddAttribute("trans", a => a.Transparancy, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("pressure", a => a.Pressure, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
-});
+                .AddAttribute("trans", a => a.Transparancy, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("pressure", a => a.Pressure, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -1920,14 +1920,14 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("a14:artisticCutout");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticCutout>()
-.AddAttribute("trans", a => a.Transparancy, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("numberOfShades", a => a.NumberOfShades, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (6L) });
-});
+                .AddAttribute("trans", a => a.Transparancy, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("numberOfShades", a => a.NumberOfShades, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (6L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -1977,14 +1977,14 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("a14:artisticFilmGrain");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticFilmGrain>()
-.AddAttribute("trans", a => a.Transparancy, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("grainSize", a => a.GrainSize, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
-});
+                .AddAttribute("trans", a => a.Transparancy, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("grainSize", a => a.GrainSize, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -2034,14 +2034,14 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("a14:artisticGlass");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticGlass>()
-.AddAttribute("trans", a => a.Transparancy, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("scaling", a => a.Scaling, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
-});
+                .AddAttribute("trans", a => a.Transparancy, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("scaling", a => a.Scaling, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -2091,14 +2091,14 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("a14:artisticGlowDiffused");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticGlowDiffused>()
-.AddAttribute("trans", a => a.Transparancy, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("intensity", a => a.Intensity, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10L) });
-});
+                .AddAttribute("trans", a => a.Transparancy, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("intensity", a => a.Intensity, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -2148,14 +2148,14 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("a14:artisticGlowEdges");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticGlowEdges>()
-.AddAttribute("trans", a => a.Transparancy, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("smoothness", a => a.Smoothness, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10L) });
-});
+                .AddAttribute("trans", a => a.Transparancy, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("smoothness", a => a.Smoothness, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -2205,14 +2205,14 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("a14:artisticLightScreen");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticLightScreen>()
-.AddAttribute("trans", a => a.Transparancy, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("gridSize", a => a.GridSize, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10L) });
-});
+                .AddAttribute("trans", a => a.Transparancy, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("gridSize", a => a.GridSize, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -2262,14 +2262,14 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("a14:artisticLineDrawing");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticLineDrawing>()
-.AddAttribute("trans", a => a.Transparancy, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("pencilSize", a => a.PencilSize, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
-});
+                .AddAttribute("trans", a => a.Transparancy, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("pencilSize", a => a.PencilSize, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -2319,14 +2319,14 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("a14:artisticMarker");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticMarker>()
-.AddAttribute("trans", a => a.Transparancy, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("size", a => a.Size, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
-});
+                .AddAttribute("trans", a => a.Transparancy, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("size", a => a.Size, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -2376,14 +2376,14 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("a14:artisticMosiaicBubbles");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticMosaicBubbles>()
-.AddAttribute("trans", a => a.Transparancy, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("pressure", a => a.Pressure, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
-});
+                .AddAttribute("trans", a => a.Transparancy, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("pressure", a => a.Pressure, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -2433,14 +2433,14 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("a14:artisticPaintStrokes");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticPaintStrokes>()
-.AddAttribute("trans", a => a.Transparancy, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("intensity", a => a.Intensity, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10L) });
-});
+                .AddAttribute("trans", a => a.Transparancy, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("intensity", a => a.Intensity, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -2490,14 +2490,14 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("a14:artisticPaintBrush");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticPaintBrush>()
-.AddAttribute("trans", a => a.Transparancy, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("brushSize", a => a.BrushSize, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10L) });
-});
+                .AddAttribute("trans", a => a.Transparancy, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("brushSize", a => a.BrushSize, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -2547,14 +2547,14 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("a14:artisticPastelsSmooth");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticPastelsSmooth>()
-.AddAttribute("trans", a => a.Transparancy, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("scaling", a => a.BrushSize, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
-});
+                .AddAttribute("trans", a => a.Transparancy, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("scaling", a => a.BrushSize, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -2604,14 +2604,14 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("a14:artisticPencilGrayscale");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticPencilGrayscale>()
-.AddAttribute("trans", a => a.Transparancy, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("pencilSize", a => a.BrushSize, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
-});
+                .AddAttribute("trans", a => a.Transparancy, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("pencilSize", a => a.BrushSize, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -2661,14 +2661,14 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("a14:artisticPencilSketch");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticPencilSketch>()
-.AddAttribute("trans", a => a.Transparancy, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("pressure", a => a.Pressure, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
-});
+                .AddAttribute("trans", a => a.Transparancy, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("pressure", a => a.Pressure, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -2718,14 +2718,14 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("a14:artisticPhotocopy");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticPhotocopy>()
-.AddAttribute("trans", a => a.Transparancy, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("detail", a => a.Detail, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10L) });
-});
+                .AddAttribute("trans", a => a.Transparancy, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("detail", a => a.Detail, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -2775,14 +2775,14 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("a14:artisticPlasticWrap");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticPlasticWrap>()
-.AddAttribute("trans", a => a.Transparancy, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("smoothness", a => a.Smoothness, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10L) });
-});
+                .AddAttribute("trans", a => a.Transparancy, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("smoothness", a => a.Smoothness, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -2832,14 +2832,14 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("a14:artisticTexturizer");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticTexturizer>()
-.AddAttribute("trans", a => a.Transparancy, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("scaling", a => a.Scaling, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
-});
+                .AddAttribute("trans", a => a.Transparancy, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("scaling", a => a.Scaling, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -2889,14 +2889,14 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("a14:artisticWatercolorSponge");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticWatercolorSponge>()
-.AddAttribute("trans", a => a.Transparancy, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("brushSize", a => a.BrushSize, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10L) });
-});
+                .AddAttribute("trans", a => a.Transparancy, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("brushSize", a => a.BrushSize, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -3001,26 +3001,26 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.BackgroundMark>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ForegroundMark>();
             builder.AddElement<BackgroundRemoval>()
-.AddAttribute("t", a => a.MarqueeTop, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("b", a => a.MarqueeBottom, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("l", a => a.MarqueeLeft, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute("r", a => a.MarqueeRight, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-});
+                .AddAttribute("t", a => a.MarqueeTop, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("b", a => a.MarqueeBottom, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("l", a => a.MarqueeLeft, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("r", a => a.MarqueeRight, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ForegroundMark), 0, 0, version: FileFormatVersions.Office2010),
@@ -3075,14 +3075,14 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("a14:brightnessContrast");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<BrightnessContrast>()
-.AddAttribute("bright", a => a.Bright, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
-})
-.AddAttribute("contrast", a => a.Contrast, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
-});
+                .AddAttribute("bright", a => a.Bright, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+                })
+                .AddAttribute("contrast", a => a.Contrast, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -3121,10 +3121,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
             builder.SetSchema("a14:colorTemperature");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ColorTemperature>()
-.AddAttribute("colorTemp", a => a.ColorTemperatureValue, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1500L), MaxInclusive = (11500L) });
-});
+                .AddAttribute("colorTemp", a => a.ColorTemperatureValue, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1500L), MaxInclusive = (11500L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -3163,10 +3163,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1500L), MaxInclusi
             builder.SetSchema("a14:saturation");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<Saturation>()
-.AddAttribute("sat", a => a.SaturationAmount, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (400000L) });
-});
+                .AddAttribute("sat", a => a.SaturationAmount, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (400000L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -3205,10 +3205,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("a14:sharpenSoften");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<SharpenSoften>()
-.AddAttribute("amount", a => a.Amount, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
-});
+                .AddAttribute("amount", a => a.Amount, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -3330,7 +3330,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticTexturizer>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticWatercolorSponge>();
             builder.AddElement<ImageEffect>()
-.AddAttribute("visible", a => a.Visible);
+                .AddAttribute("visible", a => a.Visible);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticBlur), 1, 1, version: FileFormatVersions.Office2010),
@@ -3784,7 +3784,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ImageEffect>();
             builder.AddElement<ImageLayer>()
-.AddAttribute("r:embed", a => a.Embed);
+                .AddAttribute("r:embed", a => a.Embed);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ImageEffect), 0, 0, version: FileFormatVersions.Office2010)
@@ -3906,17 +3906,17 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
             builder.AddElement<NonVisualDrawingProperties>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("descr", a => a.Description)
-.AddAttribute("hidden", a => a.Hidden)
-.AddAttribute("title", a => a.Title);
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("descr", a => a.Description)
+                .AddAttribute("hidden", a => a.Hidden)
+                .AddAttribute("title", a => a.Title);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
@@ -4033,7 +4033,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>();
             builder.AddElement<NonVisualInkContentPartProperties>()
-.AddAttribute("isComment", a => a.IsComment);
+                .AddAttribute("isComment", a => a.IsComment);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks), 0, 1, version: FileFormatVersions.Office2010),
@@ -4248,9 +4248,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
             builder.AddElement<Transform2D>()
-.AddAttribute("rot", a => a.Rotation)
-.AddAttribute("flipH", a => a.HorizontalFlip)
-.AddAttribute("flipV", a => a.VerticalFlip);
+                .AddAttribute("rot", a => a.Rotation)
+                .AddAttribute("flipH", a => a.HorizontalFlip)
+                .AddAttribute("flipV", a => a.VerticalFlip);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0, 1),

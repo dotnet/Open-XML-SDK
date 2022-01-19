@@ -510,14 +510,14 @@ namespace DocumentFormat.OpenXml.Office.Excel
             builder.SetSchema("xne:rowSortMap");
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.RowSortMapItem>();
             builder.AddElement<RowSortMap>()
-.AddAttribute("ref", a => a.Ref, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("count", a => a.Count, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
-});
+                .AddAttribute("ref", a => a.Ref, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("count", a => a.Count, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.RowSortMapItem), 1, 536870910)
@@ -601,14 +601,14 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
             builder.SetSchema("xne:colSortMap");
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ColumnSortMapItem>();
             builder.AddElement<ColumnSortMap>()
-.AddAttribute("ref", a => a.Ref, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("count", a => a.Count, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
-});
+                .AddAttribute("ref", a => a.Ref, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("count", a => a.Count, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.ColumnSortMapItem), 1, 536870910)
@@ -709,14 +709,14 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<SortMapItemType>()
-                           .AddAttribute("newVal", a => a.NewVal, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           })
-                           .AddAttribute("oldVal", a => a.OldVal, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           });
+                .AddAttribute("newVal", a => a.NewVal, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("oldVal", a => a.OldVal, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
     }
 }

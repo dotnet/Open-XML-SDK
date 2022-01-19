@@ -146,10 +146,10 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
             builder.SetSchema("wetp:webextensionref");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<WebExtensionPartReference>()
-.AddAttribute("r:id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new RelationshipExistConstraint("r:id") { Application = ApplicationType.Word | ApplicationType.Excel, Version = FileFormatVersions.Office2013 });
         }
 
@@ -333,23 +333,23 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtentionPane.OfficeArtExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionPartReference>();
             builder.AddElement<WebExtensionTaskpane>()
-.AddAttribute("dockstate", a => a.DockState, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("visibility", a => a.Visibility, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("width", a => a.Width, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("row", a => a.Row, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("locked", a => a.Locked);
+                .AddAttribute("dockstate", a => a.DockState, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("visibility", a => a.Visibility, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("width", a => a.Width, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("row", a => a.Row, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("locked", a => a.Locked);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionPartReference), 1, 1, version: FileFormatVersions.Office2013),

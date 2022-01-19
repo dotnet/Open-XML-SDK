@@ -120,7 +120,7 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
             base.ConfigureMetadata(builder);
             builder.SetSchema("lp:LongProp");
             builder.AddElement<LongProperty>()
-.AddAttribute("name", a => a.Name);
+                .AddAttribute("name", a => a.Name);
         }
 
         /// <inheritdoc/>

@@ -395,10 +395,10 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<OpenXmlWebImageSupportingRichDataRelationshipElement>()
-                           .AddAttribute("r:id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           });
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
     }
 }

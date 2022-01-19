@@ -73,9 +73,9 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
             builder.SetSchema("p15:prstTrans");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<PresetTransition>()
-.AddAttribute("prst", a => a.Preset)
-.AddAttribute("invX", a => a.InvX)
-.AddAttribute("invY", a => a.InvY);
+                .AddAttribute("prst", a => a.Preset)
+                .AddAttribute("invX", a => a.InvX)
+                .AddAttribute("invY", a => a.InvY);
         }
 
         /// <inheritdoc/>
@@ -125,14 +125,14 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
             builder.SetSchema("p15:presenceInfo");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<PresenceInfo>()
-.AddAttribute("userId", a => a.UserId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("providerId", a => a.ProviderId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("userId", a => a.UserId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("providerId", a => a.ProviderId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new AttributeValueLengthConstraint("p15:providerId", 1, 100) { Application = ApplicationType.PowerPoint, Version = FileFormatVersions.Office2013 });
             builder.AddConstraint(new AttributeValueLengthConstraint("p15:userId", 1, 300) { Application = ApplicationType.PowerPoint, Version = FileFormatVersions.Office2013 });
         }
@@ -204,7 +204,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier>();
             builder.AddElement<ThreadingInfo>()
-.AddAttribute("timeZoneBias", a => a.TimeZoneBias);
+                .AddAttribute("timeZoneBias", a => a.TimeZoneBias);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier), 0, 1, version: FileFormatVersions.Office2013)
@@ -437,10 +437,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("p15:chartTrackingRefBased");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<ChartTrackingReferenceBased>()
-.AddAttribute("val", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -490,8 +490,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("p15:parentCm");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<ParentCommentIdentifier>()
-.AddAttribute("authorId", a => a.AuthorId)
-.AddAttribute("idx", a => a.Index);
+                .AddAttribute("authorId", a => a.AuthorId)
+                .AddAttribute("idx", a => a.Index);
         }
 
         /// <inheritdoc/>
@@ -834,17 +834,17 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList>();
             builder.AddElement<ExtendedGuide>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("name", a => a.Name)
-.AddAttribute("orient", a => a.Orientation, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-})
-.AddAttribute("pos", a => a.Position)
-.AddAttribute("userDrawn", a => a.IsUserDrawn);
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("orient", a => a.Orientation, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("pos", a => a.Position)
+                .AddAttribute("userDrawn", a => a.IsUserDrawn);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType), 1, 1, version: FileFormatVersions.Office2013),

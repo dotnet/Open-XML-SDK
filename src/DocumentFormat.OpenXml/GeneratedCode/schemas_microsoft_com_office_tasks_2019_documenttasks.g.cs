@@ -179,11 +179,11 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
             builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistory>();
             builder.AddElement<Task>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor), 0, 1, version: FileFormatVersions.Office2021),
@@ -547,15 +547,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.AssignTaskUser>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.UnassignTaskUser>();
             builder.AddElement<TaskHistoryEvent>()
-.AddAttribute("time", a => a.Time, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-});
+                .AddAttribute("time", a => a.Time, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.AttributionTaskUser), 1, 1, version: FileFormatVersions.Office2021),
@@ -737,18 +737,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<OpenXmlTaskUserElement>()
-                           .AddAttribute("userId", a => a.UserId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           })
-                           .AddAttribute("userName", a => a.UserName, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           })
-                           .AddAttribute("userProvider", a => a.UserProvider, aBuilder =>
-                           {
-                               aBuilder.AddValidator(RequiredValidator.Instance);
-                           });
+                .AddAttribute("userId", a => a.UserId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("userName", a => a.UserName, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("userProvider", a => a.UserProvider, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
     }
 
@@ -810,10 +810,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.SetSchema("t:SetTitle");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<TaskTitleEventInfo>()
-.AddAttribute("title", a => a.Title, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("title", a => a.Title, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>
@@ -863,8 +863,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("t:Schedule");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<TaskScheduleEventInfo>()
-.AddAttribute("startDate", a => a.StartDate)
-.AddAttribute("dueDate", a => a.DueDate);
+                .AddAttribute("startDate", a => a.StartDate)
+                .AddAttribute("dueDate", a => a.DueDate);
         }
 
         /// <inheritdoc/>
@@ -903,11 +903,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("t:Progress");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<TaskProgressEventInfo>()
-.AddAttribute("percentComplete", a => a.PercentComplete, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
-});
+                .AddAttribute("percentComplete", a => a.PercentComplete, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -946,11 +946,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("t:Priority");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<TaskPriorityEventInfo>()
-.AddAttribute("value", a => a.Value, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10L) });
-});
+                .AddAttribute("value", a => a.Value, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10L) });
+                });
         }
 
         /// <inheritdoc/>
@@ -1067,11 +1067,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema("t:Undo");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<TaskUndo>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                });
         }
 
         /// <inheritdoc/>
@@ -1110,10 +1110,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.SetSchema("t:Comment");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<CommentAnchor>()
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>

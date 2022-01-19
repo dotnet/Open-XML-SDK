@@ -110,10 +110,10 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures
             builder.SetSchema("xcalcf:feature");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<CalcFeature>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>

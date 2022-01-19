@@ -50,10 +50,10 @@ namespace DocumentFormat.OpenXml.Office2013.ExcelAc
             builder.SetSchema("x15ac:absPath");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<AbsolutePath>()
-.AddAttribute("url", a => a.Url, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("url", a => a.Url, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
             builder.AddConstraint(new AttributeValueLengthConstraint("x15ac:url", 1, 1000) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2013 });
         }
 

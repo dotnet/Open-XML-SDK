@@ -190,15 +190,15 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NsvFilter>();
             builder.AddElement<NamedSheetView>()
-.AddAttribute("name", a => a.Name, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-});
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NsvFilter), 0, 0, version: FileFormatVersions.Office2021),
@@ -366,13 +366,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ColumnFilter>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRules>();
             builder.AddElement<NsvFilter>()
-.AddAttribute("filterId", a => a.FilterId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-})
-.AddAttribute("ref", a => a.Ref)
-.AddAttribute("tableId", a => a.TableId);
+                .AddAttribute("filterId", a => a.FilterId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                })
+                .AddAttribute("ref", a => a.Ref)
+                .AddAttribute("tableId", a => a.TableId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ColumnFilter), 0, 0, version: FileFormatVersions.Office2021),
@@ -463,14 +463,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.FilterColumn>();
             builder.AddElement<ColumnFilter>()
-.AddAttribute("colId", a => a.ColId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-});
+                .AddAttribute("colId", a => a.ColId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType), 0, 1, version: FileFormatVersions.Office2021),
@@ -572,8 +572,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRule>();
             builder.AddElement<SortRules>()
-.AddAttribute("sortMethod", a => a.SortMethod)
-.AddAttribute("caseSensitive", a => a.CaseSensitive);
+                .AddAttribute("sortMethod", a => a.SortMethod)
+                .AddAttribute("caseSensitive", a => a.CaseSensitive);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRule), 0, 64, version: FileFormatVersions.Office2021),
@@ -856,12 +856,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.CustomFilters>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.IconFilter>();
             builder.AddElement<FilterColumn>()
-.AddAttribute("colId", a => a.ColumnId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("hiddenButton", a => a.HiddenButton)
-.AddAttribute("showButton", a => a.ShowButton);
+                .AddAttribute("colId", a => a.ColumnId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("hiddenButton", a => a.HiddenButton)
+                .AddAttribute("showButton", a => a.ShowButton);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Filters), 0, 1),
@@ -1075,14 +1075,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortCondition>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.RichSortCondition>();
             builder.AddElement<SortRule>()
-.AddAttribute("colId", a => a.ColId, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("id", a => a.Id, aBuilder =>
-{
-aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-});
+                .AddAttribute("colId", a => a.ColId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType), 0, 1, version: FileFormatVersions.Office2021),
@@ -1209,16 +1209,16 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.SetSchema("xnsv:sortCondition");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<SortCondition>()
-.AddAttribute("descending", a => a.Descending)
-.AddAttribute("sortBy", a => a.SortBy)
-.AddAttribute("ref", a => a.Reference, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("customList", a => a.CustomList)
-.AddAttribute("dxfId", a => a.FormatId)
-.AddAttribute("iconSet", a => a.IconSet)
-.AddAttribute("iconId", a => a.IconId);
+                .AddAttribute("descending", a => a.Descending)
+                .AddAttribute("sortBy", a => a.SortBy)
+                .AddAttribute("ref", a => a.Reference, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("customList", a => a.CustomList)
+                .AddAttribute("dxfId", a => a.FormatId)
+                .AddAttribute("iconSet", a => a.IconSet)
+                .AddAttribute("iconId", a => a.IconId);
         }
 
         /// <inheritdoc/>
@@ -1334,17 +1334,17 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema("xnsv:richSortCondition");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<RichSortCondition>()
-.AddAttribute("richSortKey", a => a.RichSortKey)
-.AddAttribute("descending", a => a.Descending)
-.AddAttribute("sortBy", a => a.SortBy)
-.AddAttribute("ref", a => a.Reference, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-})
-.AddAttribute("customList", a => a.CustomList)
-.AddAttribute("dxfId", a => a.FormatId)
-.AddAttribute("iconSet", a => a.IconSet)
-.AddAttribute("iconId", a => a.IconId);
+                .AddAttribute("richSortKey", a => a.RichSortKey)
+                .AddAttribute("descending", a => a.Descending)
+                .AddAttribute("sortBy", a => a.SortBy)
+                .AddAttribute("ref", a => a.Reference, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("customList", a => a.CustomList)
+                .AddAttribute("dxfId", a => a.FormatId)
+                .AddAttribute("iconSet", a => a.IconSet)
+                .AddAttribute("iconId", a => a.IconId);
         }
 
         /// <inheritdoc/>

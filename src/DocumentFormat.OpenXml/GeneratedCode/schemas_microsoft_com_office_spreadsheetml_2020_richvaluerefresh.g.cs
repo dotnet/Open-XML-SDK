@@ -131,12 +131,12 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals
             builder.SetSchema("xlrvr:refreshInterval");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<RichValueRefreshInterval>()
-.AddAttribute("resourceIdInt", a => a.ResourceIdInt)
-.AddAttribute("resourceIdStr", a => a.ResourceIdStr)
-.AddAttribute("interval", a => a.Interval, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-});
+                .AddAttribute("resourceIdInt", a => a.ResourceIdInt)
+                .AddAttribute("resourceIdStr", a => a.ResourceIdStr)
+                .AddAttribute("interval", a => a.Interval, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
         }
 
         /// <inheritdoc/>

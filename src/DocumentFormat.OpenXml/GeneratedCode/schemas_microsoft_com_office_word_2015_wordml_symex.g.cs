@@ -66,15 +66,15 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
             builder.SetSchema("w16se:symEx");
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<SymEx>()
-.AddAttribute("w16se:font", a => a.Font, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2016));
-})
-.AddAttribute("w16se:char", a => a.Char, aBuilder =>
-{
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2016));
-aBuilder.AddValidator(new StringValidator() { Length = (4L) });
-});
+                .AddAttribute("w16se:font", a => a.Font, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2016));
+                })
+                .AddAttribute("w16se:char", a => a.Char, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2016));
+                    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
+                });
         }
 
         /// <inheritdoc/>

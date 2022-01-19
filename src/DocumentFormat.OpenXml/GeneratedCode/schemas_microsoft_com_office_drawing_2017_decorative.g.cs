@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing
             builder.SetSchema("adec:decorative");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<Decorative>()
-.AddAttribute("val", a => a.Val);
+                .AddAttribute("val", a => a.Val);
         }
 
         /// <inheritdoc/>

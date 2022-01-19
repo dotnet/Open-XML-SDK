@@ -139,9 +139,9 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
             base.ConfigureMetadata(builder);
             builder.SetSchema("sl:schema");
             builder.AddElement<Schema>()
-.AddAttribute("sl:uri", a => a.Uri)
-.AddAttribute("sl:manifestLocation", a => a.ManifestLocation)
-.AddAttribute("sl:schemaLocation", a => a.SchemaLocation);
+                .AddAttribute("sl:uri", a => a.Uri)
+                .AddAttribute("sl:manifestLocation", a => a.ManifestLocation)
+                .AddAttribute("sl:schemaLocation", a => a.SchemaLocation);
             builder.AddConstraint(new AttributeValueLengthConstraint("sl:manifestLocation", 0, 2083) { Application = ApplicationType.Word });
             builder.AddConstraint(new AttributeValueLengthConstraint("sl:schemaLocation", 0, 2083) { Application = ApplicationType.Word });
             builder.AddConstraint(new AttributeValueLengthConstraint("sl:uri", 0, 255) { Application = ApplicationType.Word });
