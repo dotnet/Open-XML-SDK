@@ -5,11 +5,12 @@ Below are the near term plans for the SDK. These are not set in stone and may be
 ## December 2021 - 2.15.0
 - Release support for latest Office schema updates
 - Release `DocumentFormat.OpenXml.Features` and `DocumentFormat.OpenXml.Features.Linq` libraries
+- Initial internal source generator support for generation of namespaces
 
 ## March 2022 - 2.16.0
 - Release support for latest Office schema updates
-- Initial internal source generator support for generation of Linq namespaces
 - Move source generation to SDK repo as source generator ([Project Board](https://github.com/OfficeDev/Open-XML-SDK/project/6))
+- Convert LINQ gneration to use source generator
 
 ## June 2022 - 2.17.0
 - Release support for latest Office schema updates
