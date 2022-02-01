@@ -64,9 +64,8 @@ namespace DocumentTaskSample
 
         private static void AddNewTask(MainDocumentPart mdp, string title, User assignee, User assigner)
         {
-            // TODO: userids, providers and names will have to be programmatically accessed via directory services.
-            // These are just examples to show what is expected.
             mdp.AddNewPart<DocumentTasksPart>();
+
             DocumentTasksPart taskPart = mdp.DocumentTasksPart;
             taskPart.Tasks = new Tasks();
             Tasks taskRoot = taskPart.Tasks;
@@ -105,18 +104,13 @@ namespace DocumentTaskSample
                 { Id = guidTaskId });
         }
 
-        private static void AddNewParagraphRunWithComment(MainDocumentPart mdp, string strCommentId, string strParagraphText)
-        {
-            mdp.Document.Body.AppendChild<Paragraph>(
+        private static void AddNewParagraphRunWithComment(MainDocumentPart mdp, string strCommentId, string strParagraphText) => mdp.Document.Body.AppendChild<Paragraph>(
                 new Paragraph(
-
-                // This id MUST be unique in the comments part.
-                new CommentRangeStart() { Id = strCommentId },
+                new CommentRangeStart() { Id = strCommentId }, // This id MUST be unique in the comments part.
                 new Run(
                     new Text(strParagraphText)),
                 new CommentRangeEnd() { Id = strCommentId },
                 new Run(new CommentReference() { Id = strCommentId })));
-        }
 
         private static void AddMentionComment(MainDocumentPart mdp, string strCommentId, string mention, string commentText, User mentioner, User mentionee)
         {
