@@ -30,4 +30,12 @@
     </Otherwise>
   </Choose>
 
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" />
+  </ItemGroup>
+
 </Project>
