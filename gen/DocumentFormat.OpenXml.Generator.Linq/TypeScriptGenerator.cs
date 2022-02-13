@@ -21,9 +21,8 @@ namespace DocumentFormat.OpenXml.Generator.Linq
 
         private static readonly HashSet<string> Prefixes = new(new[]
         {
-            "a", "a14", "a15", "a16", "m", "o", "p", "p14", "p15", "r", "sl", "v",
-            "w", "w10", "w14", "w15", "wp", "wpc", "wpg", "wps", "x", "x14", "x15",
-            "xml",
+            "a", "a14", "a15", "a16", "ds", "m", "o", "p", "p14", "p15", "r", "sl", "v",
+            "w", "w10", "w14", "w15", "wp", "wpc", "wpg", "wps", "x", "x14", "x15", "xml",
         });
 
         /// <summary>
