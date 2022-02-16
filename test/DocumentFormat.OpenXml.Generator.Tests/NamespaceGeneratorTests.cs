@@ -54,10 +54,10 @@ public enum FileFormatVersions
             const string Options = @"
 is_global = true
 
-[/namespaces.json]
-build_metadata.AdditionalFiles.OpenXml = Namespace
+build_property.DocumentFormat_OpenXml_GeneratorNamespaceLookup = true
 
-build_property.DocumentFormat_OpenXml_GeneratorNamespaceLookup = true";
+[/namespaces.json]
+build_metadata.AdditionalFiles.OpenXml = Namespace";
 
             await new VerifyCS.Test
             {
