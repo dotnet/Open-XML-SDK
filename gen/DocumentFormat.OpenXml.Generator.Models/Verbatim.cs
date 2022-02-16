@@ -3,7 +3,7 @@
 
 namespace DocumentFormat.OpenXml.Generator.Models;
 
-internal readonly struct Verbatim
+public readonly struct Verbatim
 {
     public Verbatim(string value)
     {
