@@ -1,20 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net6.0</TargetFrameworks>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <IncludeFrameworkShims>true</IncludeFrameworkShims>
     <IncludeInitShim>true</IncludeInitShim>
   </PropertyGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" PrivateAssets="all" />
-  </ItemGroup>
-
-  <!-- Workaround an issue that the tests are trying to load v12.0.3-->
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net6.0' ">
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" PrivateAssets="all" />
   </ItemGroup>
 
   <ItemGroup>
