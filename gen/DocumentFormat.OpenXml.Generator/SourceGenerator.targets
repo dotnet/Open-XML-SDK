@@ -1,11 +1,12 @@
 ﻿<Project>
 
-  <PropertyGroup>
-    <OoxGenerator>$(MSBuildThisFileDirectory)DocumentFormat.OpenXml.Generator.csproj</OoxGenerator>
-  </PropertyGroup>
+  <ItemGroup>
+    <OoxGenerator Include="$(MSBuildThisFileDirectory)DocumentFormat.OpenXml.Generator.csproj" />
+    <OoxGenerator Include="$(MSBuildThisFileDirectory)../DocumentFormat.OpenXml.Generator.Models/DocumentFormat.OpenXml.Generator.Models.csproj" />
+  </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="$(OoxGenerator)"
+    <ProjectReference Include="@(OoxGenerator)"
                       OutputItemType="Analyzer"
                       SkipGetTargetFrameworkProperties="true"
                       SetTargetFramework="TargetFramework=netstandard2.0"
@@ -18,6 +19,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory)../../data/namespaces.json" OpenXml="Namespace" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <CompilerVisibleItemMetadata Include="AdditionalFiles" MetadataName="OpenXml" />
     <CompilerVisibleProperty Include="DocumentFormat_OpenXml_GeneratorNamespaceLookup" />
   </ItemGroup>
 

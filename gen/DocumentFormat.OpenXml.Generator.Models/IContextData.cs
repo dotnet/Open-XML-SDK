@@ -3,12 +3,7 @@
 
 namespace DocumentFormat.OpenXml.Generator.Models;
 
-internal readonly struct TypeOf
+public interface IContextData
 {
-    public TypeOf(string type)
-    {
-        Type = type;
-    }
-
-    public string Type { get; }
+    string Namespaces { get; }
 }
