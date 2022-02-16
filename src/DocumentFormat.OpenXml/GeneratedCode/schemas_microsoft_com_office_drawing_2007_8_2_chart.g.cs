@@ -7,8 +7,6 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
-using DocumentFormat.OpenXml.Drawing.ChartDrawing;
-using DocumentFormat.OpenXml.Drawing.Charts;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;

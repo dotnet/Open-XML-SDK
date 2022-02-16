@@ -11,7 +11,6 @@ using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Office2021.Word.ExtensionList;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
-using DocumentFormat.OpenXml.Wordprocessing;
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
