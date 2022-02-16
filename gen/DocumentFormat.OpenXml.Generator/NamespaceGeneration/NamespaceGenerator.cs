@@ -19,10 +19,7 @@ public class NamespaceGenerator : ISourceGenerator
             {
                 var ooxmlContext = OpenXmlGeneratorContext.Load(new AdditionalFilesContextData(context));
 
-                if (!ooxmlContext.Namespaces.IsEmpty)
-                {
-                    context.AddSource("Namespaces", ooxmlContext.Namespaces.Generate());
-                }
+                context.AddSource("Namespaces", ooxmlContext.Namespaces.Generate());
             }
         }
         catch (Exception)

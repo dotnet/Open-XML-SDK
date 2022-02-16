@@ -8,9 +8,9 @@
   <ItemGroup>
     <ProjectReference Include="@(OoxGenerator)"
                       OutputItemType="Analyzer"
+                      ReferenceOutputAssembly="false"
                       SkipGetTargetFrameworkProperties="true"
-                      SetTargetFramework="TargetFramework=netstandard2.0"
-                      ReferenceOutputAssembly="false" />
+                      GlobalPropertiesToRemove="TargetFramework" />
   </ItemGroup>
 
   <ItemGroup>
