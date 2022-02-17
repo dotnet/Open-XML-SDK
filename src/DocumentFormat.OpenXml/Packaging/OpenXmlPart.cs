@@ -356,7 +356,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <returns>The unloaded RootElement</returns>
         /// <remarks>
-        /// Releases the DOM and so the memory can be GC'ed.
+        /// Releases the DOM so the memory can be GC'ed.
         /// </remarks>
         public OpenXmlPartRootElement? UnloadRootElement()
         {
