@@ -1,1 +1,2 @@
 ﻿#nullable enable
+DocumentFormat.OpenXml.Packaging.OpenXmlPart.UnloadRootElement() -> DocumentFormat.OpenXml.OpenXmlPartRootElement?

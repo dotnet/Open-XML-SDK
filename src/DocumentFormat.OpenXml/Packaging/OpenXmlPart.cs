@@ -351,6 +351,24 @@ namespace DocumentFormat.OpenXml.Packaging
             sourceStream.CopyTo(targetStream);
         }
 
+        /// <summary>
+        /// Unloads the RootElement.
+        /// </summary>
+        /// <returns>The unloaded RootElement</returns>
+        /// <remarks>
+        /// Releases the DOM and so the memory can be GC'ed.
+        /// </remarks>
+        public OpenXmlPartRootElement? UnloadRootElement()
+        {
+            var rootElement = InternalRootElement;
+            if (InternalRootElement is not null)
+            {
+                InternalRootElement = null;
+            }
+
+            return rootElement;
+        }
+
         #endregion
 
         #region public virtual methods / properties
@@ -597,24 +615,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         [MemberNotNullWhen(true, nameof(RootElement))]
         public bool IsRootElementLoaded => InternalRootElement is not null;
-
-        /// <summary>
-        /// Sets the PartRootElement to null.
-        /// </summary>
-        /// <returns></returns>
-        /// <remarks>
-        /// Used by validator. To release the DOM and so the memory can be GC'ed.
-        /// </remarks>
-        internal OpenXmlPartRootElement? SetPartRootElementToNull()
-        {
-            var rootElement = InternalRootElement;
-            if (InternalRootElement is not null)
-            {
-                InternalRootElement = null;
-            }
-
-            return rootElement;
-        }
 
         /// <summary>
         /// Load the DOM tree. And associate the DOM tree with this part.
