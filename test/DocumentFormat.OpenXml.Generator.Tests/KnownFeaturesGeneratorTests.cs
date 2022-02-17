@@ -6,7 +6,7 @@ using Microsoft.CodeAnalysis.Testing;
 using System.Threading.Tasks;
 using Xunit;
 
-using VerifyCS = DocumentFormat.OpenXml.Generator.Tests.OpenXmlSourceGeneratorVerifier<
+using VerifyCS = DocumentFormat.OpenXml.Generator.Tests.Verifiers.OpenXmlIncrementalSourceGeneratorVerifier<
     DocumentFormat.OpenXml.Generator.KnownFeatures.KnownFeaturesGenerator>;
 
 namespace DocumentFormat.OpenXml.Generator.Tests
@@ -139,7 +139,7 @@ public partial class Factory
             {
                 TestState =
                 {
-                    Sources = { test },
+                    Sources = { test, FeatureCollection },
                     GeneratedSources =
                     {
                         (typeof(KnownFeaturesGenerator), "KnownFeatureAttribute.cs", Attribute),
@@ -211,7 +211,7 @@ public partial class Factory
             {
                 TestState =
                 {
-                    Sources = { test },
+                    Sources = { test, FeatureCollection },
                     GeneratedSources =
                     {
                         (typeof(KnownFeaturesGenerator), "KnownFeatureAttribute.cs", Attribute),
@@ -275,7 +275,7 @@ public partial class Factory
             {
                 TestState =
                 {
-                    Sources = { test },
+                    Sources = { test, FeatureCollection },
                     GeneratedSources =
                     {
                         (typeof(KnownFeaturesGenerator), "KnownFeatureAttribute.cs", Attribute),
@@ -338,7 +338,7 @@ public partial class Factory
             {
                 TestState =
                 {
-                    Sources = { test },
+                    Sources = { test, FeatureCollection },
                     GeneratedSources =
                     {
                         (typeof(KnownFeaturesGenerator), "KnownFeatureAttribute.cs", Attribute),
@@ -411,7 +411,7 @@ public partial class Factory
             {
                 TestState =
                 {
-                    Sources = { test },
+                    Sources = { test, FeatureCollection },
                     GeneratedSources =
                     {
                         (typeof(KnownFeaturesGenerator), "KnownFeatureAttribute.cs", Attribute),
@@ -480,7 +480,7 @@ public partial class Factory
             {
                 TestState =
                 {
-                    Sources = { test },
+                    Sources = { test, FeatureCollection },
                     GeneratedSources =
                     {
                         (typeof(KnownFeaturesGenerator), "KnownFeatureAttribute.cs", Attribute),
@@ -567,7 +567,7 @@ public partial class Factory
             {
                 TestState =
                 {
-                    Sources = { test },
+                    Sources = { test, FeatureCollection },
                     GeneratedSources =
                     {
                         (typeof(KnownFeaturesGenerator), "KnownFeatureAttribute.cs", Attribute),
@@ -651,7 +651,7 @@ public partial class Factory
             {
                 TestState =
                 {
-                    Sources = { test },
+                    Sources = { test, FeatureCollection },
                     GeneratedSources =
                     {
                         (typeof(KnownFeaturesGenerator), "KnownFeatureAttribute.cs", Attribute),
@@ -737,7 +737,7 @@ public partial class Factory
             {
                 TestState =
                 {
-                    Sources = { test },
+                    Sources = { test, FeatureCollection },
                     GeneratedSources =
                     {
                         (typeof(KnownFeaturesGenerator), "KnownFeatureAttribute.cs", Attribute),

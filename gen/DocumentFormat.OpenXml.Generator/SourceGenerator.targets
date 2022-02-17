@@ -1,4 +1,5 @@
 ﻿<Project>
+  <Import Project="$(MSBuildThisFileDirectory)../../data/OpenXmlData.targets" />
 
   <ItemGroup>
     <OoxGenerator Include="$(MSBuildThisFileDirectory)DocumentFormat.OpenXml.Generator.csproj" />
@@ -19,7 +20,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <AdditionalFiles Include="$(MSBuildThisFileDirectory)../../data/namespaces.json" OpenXml="Namespace" />
+    <AdditionalFiles Include="@(OpenXmlDataNamespace)" OpenXml="Namespace" LinkBase="data" />
+    <AdditionalFiles Include="@(OpenXmlDataSchematron)" OpenXml="Schematron" LinkBase="data" />
+    <AdditionalFiles Include="@(OpenXmlDataPart)" OpenXml="Part" LinkBase="data/parts" />
+    <AdditionalFiles Include="@(OpenXmlDataSchema)" OpenXml="Schema" LinkBase="data/schema" />
+    <AdditionalFiles Include="@(OpenXmlDataTypedNamespace)" OpenXml="TypedNamespace" LinkBase="data/typed" />
+    <AdditionalFiles Include="@(OpenXmlDataTypedSchema)" OpenXml="TypedSchema" LinkBase="data/typed" />
   </ItemGroup>
 
   <ItemGroup>

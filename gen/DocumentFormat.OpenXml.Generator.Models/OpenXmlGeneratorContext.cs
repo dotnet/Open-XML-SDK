@@ -20,19 +20,13 @@ public record OpenXmlGeneratorContext
 
     public ImmutableArray<NamespaceInfo> Namespaces { get; init; } = ImmutableArray.Create<NamespaceInfo>();
 
-    public static OpenXmlGeneratorContext Load(IContextData data)
-        => new()
-        {
-            Namespaces = Load(data.Namespaces, Array.Empty<NamespaceInfo>()).ToImmutableArray(),
-        };
-
-    private static T Load<T>(string text, T defaultValue)
+    public static T? Load<T>(string? text)
     {
-        if (string.IsNullOrEmpty(text))
+        if (text is null)
         {
-            return defaultValue;
+            return default;
         }
 
-        return JsonConvert.DeserializeObject<T>(text) ?? defaultValue;
+        return JsonConvert.DeserializeObject<T>(text, _settings);
     }
 }
