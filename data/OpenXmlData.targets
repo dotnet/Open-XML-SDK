@@ -1,0 +1,5 @@
+<Project>
+  <ItemGroup>
+    <OpenXmlDataNamespace Include="$(MSBuildThisFileDirectory)namespaces.json" />
+  </ItemGroup>
+</Project>

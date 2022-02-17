@@ -2,12 +2,8 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Generator.Editor;
-using DocumentFormat.OpenXml.Generator.KnownFeatures;
 using Microsoft.CodeAnalysis;
-using System;
 using System.CodeDom.Compiler;
-using System.Collections.Generic;
-using System.IO;
 
 namespace DocumentFormat.OpenXml.Generator.KnownFeatures;
 

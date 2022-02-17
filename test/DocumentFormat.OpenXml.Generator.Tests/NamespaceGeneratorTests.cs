@@ -5,7 +5,7 @@ using DocumentFormat.OpenXml.Generator.NamespaceGeneration;
 using System.Threading.Tasks;
 using Xunit;
 
-using VerifyCS = DocumentFormat.OpenXml.Generator.Tests.OpenXmlSourceGeneratorVerifier<
+using VerifyCS = DocumentFormat.OpenXml.Generator.Tests.Verifiers.OpenXmlIncrementalSourceGeneratorVerifier<
     DocumentFormat.OpenXml.Generator.NamespaceGeneration.NamespaceGenerator>;
 
 namespace DocumentFormat.OpenXml.Generator.Tests

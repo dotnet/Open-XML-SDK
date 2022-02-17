@@ -4,9 +4,6 @@
 using DocumentFormat.OpenXml.Generator.Editor;
 using DocumentFormat.OpenXml.Generator.Models;
 using System.CodeDom.Compiler;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 
 namespace DocumentFormat.OpenXml.Generator.NamespaceGeneration;
 
