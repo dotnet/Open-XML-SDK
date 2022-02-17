@@ -1,6 +1,7 @@
 <Project>
   <PropertyGroup>
     <IncludeInitShim Condition=" '$(IncludeInitShim)' == '' ">false</IncludeInitShim>
+    <IncludeSpanShim Condition=" '$(IncludeSpanShim)' == '' ">true</IncludeSpanShim>
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net35' ">
@@ -61,6 +62,11 @@
 
   <ItemGroup Condition="$(IncludeInitShim)">
     <ShimFile Include="$(MSBuildThisFileDirectory)System\Runtime\CompilerServices\IsExternalInit.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition="!$(IncludeSpanShim)">
+    <ShimFile Remove="$(MSBuildThisFileDirectory)System\Span.cs" />
+    <ShimFile Remove="$(MSBuildThisFileDirectory)System\SpanExtensions.cs" />
   </ItemGroup>
 
   <ItemGroup>

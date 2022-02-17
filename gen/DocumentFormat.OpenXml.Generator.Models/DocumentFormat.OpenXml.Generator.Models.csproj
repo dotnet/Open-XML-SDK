@@ -6,6 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <IncludeFrameworkShims>true</IncludeFrameworkShims>
     <IncludeInitShim>true</IncludeInitShim>
+    <IncludeSpanShim>false</IncludeSpanShim>
+    <RootNamespace>DocumentFormat.OpenXml.Generator</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

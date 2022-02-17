@@ -6,8 +6,18 @@ using System.CodeDom.Compiler;
 
 namespace DocumentFormat.OpenXml.Generator.Editor;
 
-internal static class TextWriterExtensions
+public static class TextWriterExtensions
 {
+    internal static string ToFormattedString(this OfficeVersion version)
+    {
+        if (version == OfficeVersion.None)
+        {
+            return "None";
+        }
+
+        return (version == OfficeVersion.Microsoft365 ? string.Empty : "Office ") + version.ToString().Substring(version == OfficeVersion.Microsoft365 ? 0 : "Office".Length);
+    }
+
     public static void WriteFileHeader(this TextWriter writer)
     {
         const string Line1 = "// Copyright (c) Microsoft. All rights reserved.";
@@ -32,17 +42,6 @@ internal static class TextWriterExtensions
 
     public static Indentation AddIndent(this IndentedTextWriter writer, BlockOptions? options = null)
         => new(writer, options);
-
-    public record BlockOptions
-    {
-        public bool IncludeSemiColon { get; init; }
-
-        public string? FinalText { get; init; }
-
-        public bool AddNewLineBeforeClosing { get; internal set; }
-
-        public bool IncludeTrailingNewline { get; init; } = true;
-    }
 
     public static Indentation AddBlock(this IndentedTextWriter writer, BlockOptions? options = null)
     {
@@ -109,6 +108,10 @@ internal static class TextWriterExtensions
         {
             writer.WriteEnum("FileFormatVersions", (OfficeVersion)(object)item);
         }
+        else if (typeof(T) == typeof(QName))
+        {
+            writer.WriteString(item.ToString());
+        }
         else if (typeof(T) == typeof(string))
         {
             writer.WriteString((string)(object)item, isConstant);
@@ -146,84 +149,4 @@ internal static class TextWriterExtensions
 
     public static Delimiter TrackDelimiter(this IndentedTextWriter writer, string separator = ",", int newLineCount = 0)
         => new(writer, separator, newLineCount);
-
-    internal readonly struct Indentation : IDisposable
-    {
-        private static readonly BlockOptions _defaultOptions = new();
-
-        private readonly IndentedTextWriter _writer;
-        private readonly BlockOptions _options;
-
-        public Indentation(IndentedTextWriter writer, BlockOptions? options = null)
-        {
-            _writer = writer;
-            _writer.Indent++;
-            _options = options ?? _defaultOptions;
-        }
-
-        public void Dispose()
-        {
-            _writer.Indent--;
-
-            if (_options.AddNewLineBeforeClosing)
-            {
-                _writer.WriteLine();
-            }
-
-            if (_options.FinalText is not null)
-            {
-                _writer.Write(_options.FinalText);
-
-                if (_options.IncludeSemiColon)
-                {
-                    _writer.Write(";");
-                }
-            }
-
-            if (_options.IncludeTrailingNewline)
-            {
-                _writer.WriteLine();
-            }
-        }
-    }
-
-    internal struct Delimiter
-    {
-        private readonly IndentedTextWriter _writer;
-        private readonly int _newLineCount;
-        private readonly string _separator;
-
-        public Delimiter(IndentedTextWriter writer, string separator, int newLineCount = 0)
-        {
-            _writer = writer;
-            _newLineCount = newLineCount;
-            _separator = separator;
-            Count = 0;
-        }
-
-        public int Count { get; private set; }
-
-        public void AddDelimiter()
-        {
-            if (Count > 0)
-            {
-                _writer.Write(_separator);
-                if (_newLineCount > 0)
-                {
-                    for (int i = 0; i < _newLineCount - 1; i++)
-                    {
-                        _writer.WriteLineNoTabs();
-                    }
-
-                    _writer.WriteLine();
-                }
-                else
-                {
-                    _writer.Write(" ");
-                }
-            }
-
-            Count++;
-        }
-    }
 }

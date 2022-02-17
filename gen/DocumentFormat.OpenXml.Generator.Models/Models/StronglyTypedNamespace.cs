@@ -3,12 +3,9 @@
 
 namespace DocumentFormat.OpenXml.Generator.Models;
 
-public readonly struct TypeOf
+public class StronglyTypedNamespace
 {
-    public TypeOf(string type)
-    {
-        Type = type;
-    }
+    public string Prefix { get; set; } = null!;
 
-    public string Type { get; }
+    public string Namespace { get; set; } = null!;
 }

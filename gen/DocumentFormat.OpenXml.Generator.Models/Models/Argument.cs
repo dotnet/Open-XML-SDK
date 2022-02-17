@@ -3,12 +3,11 @@
 
 namespace DocumentFormat.OpenXml.Generator.Models;
 
-public readonly struct Verbatim
+public class Argument
 {
-    public Verbatim(string value)
-    {
-        Value = value;
-    }
+    public ArgumentType Type { get; set; }
 
-    public string Value { get; }
+    public string Name { get; set; } = null!;
+
+    public string Value { get; set; } = null!;
 }
