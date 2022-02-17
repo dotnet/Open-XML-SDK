@@ -306,5 +306,28 @@ namespace DocumentFormat.OpenXml.Tests
                 }
             }
         }
+
+        [Fact]
+        public void UnloadRootElementTest()
+        {
+            using (Stream stream = new MemoryStream())
+            {
+                using (var testDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
+                {
+                    var mainPart = testDocument.AddMainDocumentPart();
+                    mainPart.Document = new Document();
+                    mainPart.Document.AppendChild(new Body());
+
+                    var rootElement = mainPart.RootElement;
+                    Assert.NotNull(rootElement);
+
+                    var unloadedRootElement = mainPart.UnloadRootElement();
+                    var newRootElement = mainPart.RootElement;
+                    Assert.Null(newRootElement);
+                    Assert.NotNull(unloadedRootElement);
+                    Assert.Same(rootElement, unloadedRootElement);
+                }
+            }
+        }
     }
 }

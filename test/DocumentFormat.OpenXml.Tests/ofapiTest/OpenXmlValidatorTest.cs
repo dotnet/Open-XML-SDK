@@ -3147,7 +3147,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var errors = validator.Validate(commentsPart);
                     Assert.Equal(2, errors.Count());
 
-                    commentsPart.SetPartRootElementToNull();
+                    commentsPart.UnloadRootElement();
 
                     using (var sw = new StreamWriter(commentsPart.GetStream()))
                     {

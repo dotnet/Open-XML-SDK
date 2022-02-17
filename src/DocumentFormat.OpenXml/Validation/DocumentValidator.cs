@@ -98,7 +98,7 @@ namespace DocumentFormat.OpenXml.Validation
                     if (!partRootElementLoaded && context.Errors.Count == lastErrorCount)
                     {
                         // No new errors in this part. Release the DOM to GC memory.
-                        part.SetPartRootElementToNull();
+                        part.UnloadRootElement();
                     }
                 }
             }
