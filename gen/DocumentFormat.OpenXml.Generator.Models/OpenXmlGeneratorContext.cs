@@ -1,7 +1,9 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Generator.Converters;
 using DocumentFormat.OpenXml.Generator.Models;
+using DocumentFormat.OpenXml.Generator.Schematron;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Collections.Immutable;
@@ -12,21 +14,25 @@ public record OpenXmlGeneratorContext
 {
     private static readonly JsonSerializerSettings _settings = new()
     {
-        Converters = new[]
+        Converters =
         {
             new StringEnumConverter(),
+            new QualifiedNameConverter(),
+            new TypedQNameConverter(),
         },
     };
 
-    public ImmutableArray<NamespaceInfo> Namespaces { get; init; } = ImmutableArray.Create<NamespaceInfo>();
+    public static T? Deserialize<T>(string? content) => content is null ? default : JsonConvert.DeserializeObject<T>(content, _settings);
 
-    public static T? Load<T>(string? text)
-    {
-        if (text is null)
-        {
-            return default;
-        }
+    public ImmutableArray<NamespaceInfo> KnownNamespaces { get; init; } = ImmutableArray.Create<NamespaceInfo>();
 
-        return JsonConvert.DeserializeObject<T>(text, _settings);
-    }
+    public ImmutableArray<SchemaNamespace> Namespaces { get; init; } = ImmutableArray.Create<SchemaNamespace>();
+
+    public ImmutableArray<Part> Parts { get; init; } = ImmutableArray.Create<Part>();
+
+    public ImmutableArray<SchematronEntry> Schematrons { get; init; } = ImmutableArray.Create<SchematronEntry>();
+
+    public ImmutableArray<StronglyTypedNamespace> TypedNamespaces { get; init; } = ImmutableArray.Create<StronglyTypedNamespace>();
+
+    public ImmutableArray<StronglyTypedElement> TypedClasses { get; init; } = ImmutableArray.Create<StronglyTypedElement>();
 }
